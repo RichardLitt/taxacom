@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Taxacom Archive</title>
+  <meta name="description" content="Searchable archive of TAXACOM, the biological systematics discussion list, 1992–2025.">
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  <style>
+    :root { --bg: #fbfaf6; --fg: #1d1d1b; --muted: #5c5a52; --accent: #2f5d3a; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #161714; --fg: #e8e6df; --muted: #a29f94; --accent: #8cc49a;
+        --pagefind-ui-primary: #e8e6df; --pagefind-ui-text: #e8e6df;
+        --pagefind-ui-background: #22231f; --pagefind-ui-border: #3a3b35; --pagefind-ui-tag: #2b2c27; }
+    }
+    body { background: var(--bg); color: var(--fg); margin: 0;
+      font: 17px/1.55 Georgia, "Iowan Old Style", serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 48px 16px 80px; }
+    h1 { font-size: 2.1rem; margin: 0 0 .25rem; letter-spacing: -.01em; }
+    .lede { color: var(--muted); margin: 0 0 2rem; }
+    a { color: var(--accent); }
+    #search { margin-bottom: 2.5rem; --pagefind-ui-font: system-ui, sans-serif; }
+    footer { color: var(--muted); font-size: .9rem; border-top: 1px solid currentColor; padding-top: 1rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Taxacom Archive</h1>
+    <p class="lede">TAXACOM, the biological systematics discussion list, from 1992 to 2025.
+      Search every message below, or <a href="/pipermail/taxacom/">browse by month</a>.</p>
+    <div id="search"></div>
+    <footer>
+      <p>Taxacom was started by Drs. Patricia Eckel and Richard Zander on 12 January 1987 and was
+        hosted for many years at <code>lists.ku.edu</code>. That server no longer serves the archive.
+        This site keeps the original page paths: a link to
+        <code>lists.ku.edu/pipermail/taxacom/…</code> works here if you replace the domain.</p>
+      <p>Email addresses are obscured as they were in the original public archive.</p>
+    </footer>
+  </main>
+  <script src="/pagefind/pagefind-ui.js"></script>
+  <script>
+    new PagefindUI({ element: "#search", showSubResults: true, showImages: false,
+      pageSize: 10, resetStyles: false });
+  </script>
+</body>
+</html>
