@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] New Interactive Key to Wetland Monocots
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20New%20Interactive%20Key%20to%20Wetland%20Monocots&In-Reply-To=%3C7d0f5b4c859d4c92852f886aa394c7f0%40stingersplace.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="108223.html">
+   <LINK REL="Next"  HREF="108220.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2006-November/108225.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] New Interactive Key to Wetland Monocots</H1>
+    <B data-pagefind-meta="author">Stinger</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20New%20Interactive%20Key%20to%20Wetland%20Monocots&In-Reply-To=%3C7d0f5b4c859d4c92852f886aa394c7f0%40stingersplace.com%3E"
+       TITLE="[Taxacom] New Interactive Key to Wetland Monocots">Stinger at stingersplace.com
+       </A><BR>
+    <I data-pagefind-meta="date">Sat Nov 18 11:56:00 CST 2006</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="108223.html">[Taxacom] New Interactive Key to Wetland Monocots
+</A></li>
+        <LI>Next message: <A HREF="108220.html">[Taxacom] Hexapoda origins (and holophyly?)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#108225">[ date ]</a>
+              <a href="thread.html#108225">[ thread ]</a>
+              <a href="subject.html#108225">[ subject ]</a>
+              <a href="author.html#108225">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2006</span><!--beginarticle-->
+<PRE>Well I wrote a detailed response to  Dallwitz  yesterday but
+it doesn't seem to have made it here, probably for the best. There is
+no need for another long thread where we just don't agree.  I do
+agree that a &quot;Best&quot; characters algorithm is needed in SLIKS and it is
+on the todo list. There is a significant tradeoff in performance though
+and only  Dallwitz and now Watson have &quot;asked&quot; for it
+specifically.  The assertion of Dallwitz that it is impossible in
+a binary data structure is just wrong. It is actually much easier to
+optimize character  states because they are the base unit. There
+are no best characters in the real world, only best character
+states.  
+
+The assertions that SLIKS is only capable of using binary characters
+and giving one sided choices for binary characters applies only to the
+version released with the wetland monocots. Other versions 
+available for free at the website  can have up to 9999 
+character states for every character.  Binary data was used in the
+wetland monocot data because it is an order of magnitude easier to
+manage and curate on the back end, especially when numerous data sets
+need to have overlap and algorithms for keying any possible combination
+of taxa from different data sets have to be used. A more realistic
+example in front end keys would be that if a character has 11
+states,  in a character optimization paradigm, you would always
+have all 11 states to choose from while in a character state
+optimization paradigm, you would only have those that applied to the
+remaining taxa.  You always have to choose among character states,
+no matter how you optimize. LucID has gone much farther than IntKey in
+recognizing that and if you're really  bothered by the issue I
+suggest that you  transfer the data to LucID. It isn't difficult,
+and there is nothing stopping you from doing it. 
+
+That brings up the real issue here. SLIKS has never enjoyed paid staff
+time or marketing  of any kind and no one has ever paid a penny
+for any part of it. Yet the community is beginning to pick it up and
+improve it. Not because of ignorance. We all know about many
+keying  programs. I've distributed keys in 9 different keying
+evironments including several DeLTa based ones. As in herbarium
+databases, it is about the data not the program. The ignorance is in
+doggedly sticking to a single paradigm in the face of change. 
+Chris Meacham has a version of SLIKS and Greg Alexander wrote an
+entirly new implementation called SAIKS that I encourage you to look
+at. He used a data set for the prototype btw that has been through at
+least 5 keying environments over the last 37 years. As it says on the
+SLIKS web site, Intkey and LucID, especially LucID, are much more
+functional and mature but neither meets my basic criteria for a program
+that will have broad community acceptance. 
+
+1. Free - all parts. Any charge at all keeps it out of the majority of
+hands. It isn't the price, it's the fact that you have to buy it. 
+
+2. Open source  (in the broad sense) so that the community can
+make changes at will, creativity is encouraged, and a sustainable model
+for longevity is built through community ownership.  The data
+files should be open as well.
+
+3. Completely web enabled with absolutely no plugins or installation
+needed - it has to work like any other web page in your browser. 
+Any impediment to the click-and-use (e.g. a plugin) reduces usage by
+80%.   Many government and corporate computers are barred from
+installation of any plugins - even the JRE. 
+
+4. Extreme portability. It has to run on anything. 
+
+4a. This is provisional because I keep hoping something better will
+emerge but it almost has to be in javascript (not Java) for portability
+reasons and ease of modification. Every modern browser (even those on
+cell phones) supports javascript out of the box (although there are
+some differences in implementation). Java is much more powerful but
+won't initialize if conditions aren't right and has never really lived
+up to its goal of running everywhere.  Unfortunately, many
+advanced options (e.g. continuous character support and the best best
+algorithms have a large CPU overhead in it so  performance
+suffers.  It is a problem that hasn't been worked out yet. 
+
+SLIKS is free and open.  If you want some other feature, you are
+very welcome and strongly encouraged to make changes, many have, and I
+am quite willing to help.  If someone wants to put in a grant
+proposal to make a program that really meets ALL of the above criteria
+and has all of the versatility to allow people like Mike to be happy as
+well as everyone else. I'll help you write it and you can have the
+credit and the cash as long as you deliver.  
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="108223.html">[Taxacom] New Interactive Key to Wetland Monocots
+</A></li>
+	<LI>Next message: <A HREF="108220.html">[Taxacom] Hexapoda origins (and holophyly?)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#108225">[ date ]</a>
+              <a href="thread.html#108225">[ thread ]</a>
+              <a href="subject.html#108225">[ subject ]</a>
+              <a href="author.html#108225">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

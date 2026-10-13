@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom]  Language tags for scientific names
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2008-June/110588.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom]  Language tags for scientific names</H1>
+    <B data-pagefind-meta="author">Gregor Hagedorn</B>
+    g.m.hagedorn at gmail.com<BR>
+    <I data-pagefind-meta="date">Thu Jun 26 07:33:19 CDT 2008</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="110587.html">[Taxacom] Linking to the BHL
+</A></li>
+        <LI>Next message: <A HREF="110589.html">[Taxacom] POLIBOTANICA, New number(25), June 2008
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#110588">[ date ]</a>
+              <a href="thread.html#110588">[ thread ]</a>
+              <a href="subject.html#110588">[ subject ]</a>
+              <a href="author.html#110588">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2008</span><!--beginarticle-->
+<PRE>In the Key to Nature EU project and when using the TDWB-BIS SDD
+standard we have a need to define certain names are being scientific
+names of organisms. Scientific names not only occur as labels of an
+object, but also in comments and other free-form text. Most projects
+devise special markup for these, but we believe that many more
+purposes can be served (including when using scientific names in
+DublinCore based metadata schema) if a language tag were available. In
+practice &quot;la&quot; for latin is frequently abused for this purpose, but a
+more precise and correct tag seems desirable. The problem with &quot;la&quot;
+this is that real latin names do exist (monomials), but are ruled by
+latin grammar as opposed to the rules for scientific names. This could
+lead to confusion, at least when dealing with historic literature.
+Furthermore, &quot;la&quot; would make it impossible to mark-up a scientific
+name within a latin description of a new species (as required by
+ICBN).
+
+By definition, scientific names are language neutral, i.e. they have
+the same form in Chinese, German or Russian, and are always using the
+latin script. ISO 639-2
+(<A HREF="http://www.loc.gov/standards/iso639-2/ISO-639-2_utf-8.txt)">http://www.loc.gov/standards/iso639-2/ISO-639-2_utf-8.txt)</A> contains
+four special codes:
+    * mis, for &quot;miscellaneous languages&quot;;
+    * mul, for &quot;multiple languages&quot;;
+    * und, for &quot;undetermined language&quot;;
+    * zxx, for &quot;no linguistic content&quot;.
+
+The IETF language tag specification
+<A HREF="http://tools.ietf.org/rfc/bcp/bcp47.txt">http://tools.ietf.org/rfc/bcp/bcp47.txt</A> furthermore supports
+experimental tags starting with &quot;x-&quot;.
+
+In general, it seems desirable to have a generic form as well as forms
+specific to the codes of nomenclature (BC, ICVCN, ICBN, ICNCP, ICZN).
+Both specific and generic forms may not already be present in the list
+of country codes (ISO 3166-1 alpha-2 or alpha-3) which may be used to
+denote the culture of a language (as in en-UK, en-US, en-NZ etc.).
+This is currently the case for BC, the only code with 2 or 3 letters.
+The name for the generic form is perhaps most difficult to agree, my
+proposal would be to use TAX (for taxonomic community), but I welcome
+other proposals.
+
+Available options for denoting scientific names using standard
+xml:lang or html:lang attributes are thus:
+
+* Register a new basic language code like sc / stn (scientific taxon name)
+** Such a proposal was made in 2003 by Andy Mabbett
+   (see <A HREF="http://www.alvestrand.no/pipermail/ietf-languages/2003-February/000576.html)">http://www.alvestrand.no/pipermail/ietf-languages/2003-February/000576.html)</A>
+   and refuted on reasons that do not convince me.
+** Example name codes: sc-TAX, sc-ICVCN, sc-BC, sc-ICZN
+
+* Use zxx- for &quot;non-language dependent&quot;
+** Example name codes: zxx-TAX, zxx-ICVCN, zxx-BC, zxx-ICZN
+
+* Use x- for &quot;experimental or extension range&quot; (IETF only)
+** Example name codes: x-TAX, x-ICVCN, x-BC, x-ICZN
+
+My preference would be to use the zxx- range because it probably
+informs processors not knowing the specific codes best how to handle
+this information (i.e. that it would be appropriate in any linguistic
+context).
+
+I look forward for a good discussion, including the pointer to where
+someone else has already solved the problem and I have not found it
+:-)
+
+Gregor
+
+---------------------------------
+Gregor Hagedorn (G.M.Hagedorn at gmail.com)
+Institute for Epidemiology and Pathogen Diagnostics
+Julius K?hn-Institute, Federal Research Center for Cultivated Plants
+K?nigin-Luise-Str. 19 Tel: +49-30-8304-2220
+14195 Berlin, Germany Fax: +49-30-8304-2203
+
+The research sector of the Federal Ministry of Food, Agriculture
+and Consumer Protection has been restructured on 1. Jan. 2008.
+Several institutions are merged into the &quot;Julius K?hn-Institute,
+Federal Research Center for Cultivated Plants&quot;.
+
+Der Forschungsbereich des Bundesministeriums f?r Ern?hrung,
+Landwirtschaft und Verbraucherschutz (BMELV) hat seit dem 1. Jan.
+2008 eine neue Struktur. Die Biologische Bundesanstalt f?r Land- und
+Forstwirtschaft (BBA) wurde mit anderen Instituten zum &quot;Julius K?hn-Institut,
+Bundesforschungsinstitut f?r Kulturpflanzen&quot; zusammengeschlossen.
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="110587.html">[Taxacom] Linking to the BHL
+</A></li>
+        <LI>Next message: <A HREF="110589.html">[Taxacom] POLIBOTANICA, New number(25), June 2008
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#110588">[ date ]</a>
+              <a href="thread.html#110588">[ thread ]</a>
+              <a href="subject.html#110588">[ subject ]</a>
+              <a href="author.html#110588">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

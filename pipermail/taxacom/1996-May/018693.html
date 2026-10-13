@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> re  Geocoding Localities
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1996-May/018693.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">re  Geocoding Localities</H1>
+    <B data-pagefind-meta="author">Don Kirkup</B>
+    d.kirkup at LION.RBGKEW.ORG.UK<BR>
+    <I data-pagefind-meta="date">Tue May 21 13:48:44 CDT 1996</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="101851.html">Geocoding Localities
+</A></li>
+        <LI>Next message: <A HREF="054485.html">re  Geocoding Localities
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#018693">[ date ]</a>
+              <a href="thread.html#018693">[ thread ]</a>
+              <a href="subject.html#018693">[ subject ]</a>
+              <a href="author.html#018693">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1996</span><!--beginarticle-->
+<PRE>&gt; &gt;From: Chrissy van Hilst
+&gt; &gt;Subject: Geocoding Localities
+&gt; &gt;
+&gt; &gt;I am working on a geocoding project at USNM. We are in the process of
+&gt; &gt;working up protocols for enhancing specimen locality data by attaching
+&gt; &gt;latitude and longitude. The goal is to be able to use these data in GIS
+&gt; &gt;applications to look at everything from change over time to species
+&gt; &gt;distribution. I'm looking for feedback from other collections that may
+&gt; &gt;have done this or thought about it and other members of the community
+&gt; &gt;that may have thoughts and ideas. One of my concerns is augmenting
+&gt; &gt;imprecise localities with very precise lat/longs. We want this data to
+&gt; &gt;be meaningful and mappable but we do not want to imply more precision
+&gt; &gt;than we really have. Please email me with your comments at
+&gt; &gt;cvanhils at sivm.si.edu.
+&gt;
+
+We have c. 15,000 collections records in the Brunei Checklist database
+(MS ACCESS).
+Most of the records are georeferenced and each set of coordinates is
+assigned an error-code (in meters) depending on how they were derived.
+
+Our scale of errors varies from c. +/-100m for GPS derived coordinates,
+to locations given to the nearest minute, to gazetteer derived localities
+for which we assign an arbritary error of +/-2,500m.
+We also have some collections for which the only geographical information
+is 'Brunei', but thankfully not too many!
+
+For a pictorial representation of species ranges a map with different
+symbols for the different error codes is probably enough to convey the
+message.
+For analytical purposes however we felt that the georeference could not
+satisfactorally be treated as a point, but should be treated as a
+polygon.
+
+The first step of our approach was to simply draw a circle with a radius
+for each collection point equivalent to that of the error-code value in
+the database.
+
+The precision of a locality was then further refined by finding the
+intersection of the error-circle with graphical coverages related to
+observations in our database. For example, collection observations in the
+database includes forest and soil types. We also have graphical coverages
+for both of these. The refined locality is calculated by overlaying the
+error-circle with the forest type and soils coverages and finding the
+intersection between these three graphical layers and the tabulated
+values in the database.
+
+For collections along 'linear' features such as roads and rivers rather
+than draw an error-circle, we create a 50m buffer around the feature then
+overlay and link to the database in the same way..
+
+This involves a fair amount of work even though we have managed to
+semi-automate the process (using PC and Workstation ArcInfo).
+
+We felt that this was the best we could achieve and this was necessary if
+we were to incorporate as many collection observations as possible for
+the interpretation of our remote-sensed data.
+
+Don Kirkup
+Brunei Checklist Project
+Herbarium
+RBG Kew.
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="101851.html">Geocoding Localities
+</A></li>
+        <LI>Next message: <A HREF="054485.html">re  Geocoding Localities
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#018693">[ date ]</a>
+              <a href="thread.html#018693">[ thread ]</a>
+              <a href="subject.html#018693">[ subject ]</a>
+              <a href="author.html#018693">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

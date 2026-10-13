@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] base alignment
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20base%20alignment&In-Reply-To=%3C44F5A92E.5060306%40umc.br%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="107910.html">
+   <LINK REL="Next"  HREF="107912.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2006-August/107911.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] base alignment</H1>
+    <B data-pagefind-meta="author">Vitor Miranda</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20base%20alignment&In-Reply-To=%3C44F5A92E.5060306%40umc.br%3E"
+       TITLE="[Taxacom] base alignment">vmiranda at umc.br
+       </A><BR>
+    <I data-pagefind-meta="date">Wed Aug 30 10:05:18 CDT 2006</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="107910.html">[Taxacom] base alignment
+</A></li>
+        <LI>Next message: <A HREF="107912.html">[Taxacom] Pasimony and base alignment
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#107911">[ date ]</a>
+              <a href="thread.html#107911">[ thread ]</a>
+              <a href="subject.html#107911">[ subject ]</a>
+              <a href="author.html#107911">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2006</span><!--beginarticle-->
+<PRE>Dear Pierre and all,
+
+    I am not sure about some ideas. I guess some of the questions here 
+in discussion lie on a different field than semantic comparisons between 
+&quot;phenetic&quot; vs. &quot;phyllogenetic&quot; concepts.
+    Primary homology (using or not embriology, ontogenic studies, 
+&quot;hypothetical ancestors&quot;, etc.) is always inferred by overall similarity 
+(be nucleic bases, morphology, etc.).  Always the first (but not only) 
+evidence will be the similarity. So the primary question is, when using 
+molecular data like bases, how to infer similarity? That's a very 
+important point, in my opinion so ignored considering the the 
+computational methods. I am not so sure if most of them, but some of the 
+computing aplicatives (very in use) are as a &quot;Pandora box&quot;. Once they 
+use a distance matrix as a start point, the problem is the sensitivity 
+to the order of the sequences (taxa). If sequences with to much possible 
+gaps or with low similarity (below 70%)  were aligned, the pairwise 
+method used to several programs can return a computational problem: if 
+the same sequences were offered to the aplicative in differents 
+positions (to a test matrix with 10 taxa, try to invert the sequences 
+positions, in one matrix using the sequences 1,2, 3 to 10 and another 
+matrix inverting the same sequences in 10, 9, 8 to 1), defferents 
+alignments can be produced.
+    So, I think that's a great reason to try using parsimony methods to 
+make alignments. If different alignments (primary homology) could be 
+construct using the same data, why not choose the most parsimonious one? 
+Of course if one also uses the parsimony view to create the cladogram.
+    Just my two cents.
+    All the best,
+    Vítor.
+
+
+pierre deleporte wrote:
+
+&gt;<i>A 12:28 29/08/2006 -0400, John Grehan wrote:
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>&gt;&gt;<i>I am just giving my impression of what I have
+</I>&gt;&gt;<i>read so far. For example, one paper I read stated that alignment uses
+</I>&gt;&gt;<i>distance measures which to my understanding is not cladistic.
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>Alignment can effectively be done on the basis of overall similarity. But 
+</I>&gt;<i>please note that this is not data analysis, just primary homology 
+</I>&gt;<i>assessment, and also please read other papers, and check for &quot;alignment 
+</I>&gt;<i>corrected by hand&quot;, or other more or less sophisticated alignment methods.
+</I>&gt;<i>&quot;By hand&quot; means that molecularists are using fairly the same criteria as 
+</I>&gt;<i>morphologists for homology assessment: detecting optimal &quot;connections&quot; in a 
+</I>&gt;<i>molecular sequence, like for connections of a bone in a squeleton. After 
+</I>&gt;<i>all one could state that squeletons of different species are &quot;aligned by 
+</I>&gt;<i>overall similarity&quot; some way, with some corrections (a bone is likely 
+</I>&gt;<i>missing here, some are likely fused there...)...
+</I>&gt;<i>You certainly can see that if you really want.
+</I>&gt;<i>
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>&gt;&gt;<i>In the sense that parsimony is the shortest tree then that is a concept
+</I>&gt;&gt;<i>not restricted to cladistics.
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>Finding the shortest tree and rooting on outgroups is merely the computing 
+</I>&gt;<i>shortcut for finding exactly the optimal cladistic tree you are obtaining 
+</I>&gt;<i>by hand on your morphological data (be it with compatibility or standard 
+</I>&gt;<i>parsimony methods).
+</I>&gt;<i>You can also see that if you really want (just check basic courses in 
+</I>&gt;<i>cladistics, or even simply the user's guide of PAUP to start with).
+</I>&gt;<i>
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>&gt;&gt;<i> I am not saying that molecular trees cannot be correct, just
+</I>&gt;&gt;<i>that they are not necessarily correct just because they use DNA
+</I>&gt;&gt;<i>sequences, and that morphology is not necessarily wrong when it does not
+</I>&gt;&gt;<i>corroborate molecular trees.
+</I>&gt;&gt;<i>    
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>OK but this is clearly not the point at stake when you are globally 
+</I>&gt;<i>charging all cladistic molecular analyses of being &quot;phenetic&quot; - a nonsense 
+</I>&gt;<i>in itself.
+</I>&gt;<i>Beside your esoteric acception of &quot;cladistic characters&quot; (= surviving a 
+</I>&gt;<i>compatibility analysis), hence of &quot;phenetic characters&quot; by the way (= any 
+</I>&gt;<i>other kind of data set), your charge that molecular phylogenies are always 
+</I>&gt;<i>based on overall similarity is flatly wrong.
+</I>&gt;<i>Ze fact iz zat cladistic ones are cladistic, you know... yes, exactly like 
+</I>&gt;<i>for morphological data... I'm pretty sure you can see that (if only...).
+</I>&gt;<i>
+</I>&gt;<i>Pierre.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>Pierre Deleporte
+</I>&gt;<i>CNRS UMR 6552 - Station Biologique de Paimpont
+</I>&gt;<i>F-35380 Paimpont   FRANCE
+</I>&gt;<i>Téléphone : 02 99 61 81 63
+</I>&gt;<i>Télécopie : 02 99 61 81 88
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>_______________________________________________
+</I>&gt;<i>Taxacom mailing list
+</I>&gt;<i><A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i><A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>
+-- 
+--
+Prof.Dr. Vítor Fernandes Oliveira de Miranda
+Professor Assistente
+Universidade de Mogi da Cruzes - UMC
+Laboratório de Sistemática Vegetal
+Herbarium Mogiense - HUMC (Sala 21.16 - Prédio II)
+Av. Dr. Cândido Xavier de Almeida Souza, n.200
+CEP 08780-911 - Moji das Cruzes - SP - Brasil
+Tel.: +55 (11) 4798-7000 Ramal 7313
+<A HREF="http://www.umc.br/~vmiranda/lsv">http://www.umc.br/~vmiranda/lsv</A>
+e-mail: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">vmiranda at umc.br</A>
+
+_______________________________________________
+Taxacom mailing list
+<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="107910.html">[Taxacom] base alignment
+</A></li>
+	<LI>Next message: <A HREF="107912.html">[Taxacom] Pasimony and base alignment
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#107911">[ date ]</a>
+              <a href="thread.html#107911">[ thread ]</a>
+              <a href="subject.html#107911">[ subject ]</a>
+              <a href="author.html#107911">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

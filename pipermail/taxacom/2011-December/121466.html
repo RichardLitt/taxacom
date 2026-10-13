@@ -1,0 +1,248 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Finding your species in Mendeley
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2011-December/121466.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Finding your species in Mendeley</H1>
+    <B data-pagefind-meta="author">Ward Appeltans</B>
+    ward.appeltans at vliz.be<BR>
+    <I data-pagefind-meta="date">Thu Dec  8 08:51:25 CST 2011</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="121465.html">[Taxacom] Finding your species in Mendeley
+</A></li>
+        <LI>Next message: <A HREF="121467.html">[Taxacom] Online! Anchoring Biodiversity Information: From Sherborn
+ to the 21st century and beyond
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#121466">[ date ]</a>
+              <a href="thread.html#121466">[ thread ]</a>
+              <a href="subject.html#121466">[ subject ]</a>
+              <a href="author.html#121466">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2011</span><!--beginarticle-->
+<PRE>Hi Rod
+Good point. fixed.
+Thanks.
+Ward
+ 
+ 
+From: Roderic Page [mailto:r.page at bio.gla.ac.uk] 
+Sent: donderdag 8 december 2011 13:36
+To: Ward Appeltans
+Cc: taxacom; TDWG Content Mailing List
+Subject: Re: [Taxacom] Finding your species in Mendeley
+ 
+Dear Ward,
+ 
+That's great!
+ 
+One quibble, I would expect the value for <A HREF="http://rs.tdwg.org/dwc/terms/#namePublishedInID">http://rs.tdwg.org/dwc/terms/#namePublishedInID</A> to be a URI, not a string literal. In other words, instead of:
+ 
+&lt;dwc:namePublishedInID&gt;
+&lt;![CDATA[ <A HREF="http://dx.doi.org/10.1371/journal.pone.0026243">http://dx.doi.org/10.1371/journal.pone.0026243</A> ]]&gt;
+&lt;/dwc:namePublishedInID&gt;
+ 
+I would have:
+ 
+&lt;dwc:namePublishedInID rdf:resource=&quot;<A HREF="http://dx.doi.org/10.1371/journal.pone.0026243">http://dx.doi.org/10.1371/journal.pone.0026243</A>&quot; /&gt;
+ 
+This means a client will interpret this as a resource and could decide to go and fetch it. If you store the DOI as a string clients won't know to &quot;follow their nose&quot; and retrieve details about the publication with that DOI. This isn't made clear in the Darwin Core spec, so I've cc'd this to the TDWG-Content mailing list in case anyone there has any comments.
+ 
+Regards
+ 
+Rod
+ 
+On 8 Dec 2011, at 12:20, Ward Appeltans wrote:
+
+
+Dear Rod
+ 
+The original description references and DOIs are now also part of the WoRMS RDF output.
+E.g. <A HREF="http://lsid.tdwg.org/summary/urn:lsid:marinespecies.org:taxname:590007">http://lsid.tdwg.org/summary/urn:lsid:marinespecies.org:taxname:590007</A>
+ 
+Note, the RDF seems to be cached at the TDWG site, because the new terms do not yet show up in older records.
+ 
+Thanks!
+Best regards
+Ward
+ 
+ 
+From: Roderic Page [mailto:r.page at bio.gla.ac.uk] 
+Sent: woensdag 7 december 2011 16:40
+To: taxacom
+Cc: gread at actrix.gen.nz; Ward Appeltans
+Subject: Re: [Taxacom] Finding your species in Mendeley
+ 
+Dear Ward,
+ 
+On 7 Dec 2011, at 11:38, Ward Appeltans wrote:
+
+
+
+Dear Rod,
+
+Good points, we have extended the WoRMS webservice, and added the elements 'link' and 'fulltext' to the Source output object.
+ 
+That's great. Will these appear in the LSID metadata as well, because that's what I use to harvest WoRMS records (and is arguably what anyone wanting to do Semantic Web-style integration will use.
+
+
+
+
+With regards to the mapping interface and colour blindness, there is a option to switch the base layers (to countries for example). Is this OK for you?
+<A HREF="http://www.marinespecies.org/polychaeta/aphia.php?p=taxdetails&amp;id=590097">http://www.marinespecies.org/polychaeta/aphia.php?p=taxdetails&amp;id=590097</A>
+ 
+I guess my point is that the default map should not be uninterpretable to people like me who have trouble distinguishing red and green when used together (the EOL maps are equally bad, where as GBIF is much better.
+
+
+
+
+Linking taxa to the original source reference (incl DOI/handle links and/or full texts if possible) is a priority in WoRMS, so I'm eager to look at more automated ways (if quality and citation completeness is acceptable).
+ 
+Automation we can do, quality depends heavily on the original citation, which for older literature can be pretty messy. If by completeness you mean completeness of the citation record you'd want to add to WoRMS, I'd argue this matters less than identifiers, because if you have a DOI you can retrieve the citation at any time (albeit with a few caveats). Obsessing with citations is what got us in this mess in the first place ;)
+ 
+Regards
+ 
+Rod
+ 
+ 
+
+
+
+
+Thanks.
+Best regards
+Ward
+WoRMS/VLIZ
+
+-----Original Message-----
+From: Geoffrey Read [mailto:gread at actrix.gen.nz] 
+Sent: woensdag 7 december 2011 9:22
+To: Roderic Page
+Cc: taxacom; Ward Appeltans
+Subject: Re: [Taxacom] Finding your species in Mendeley
+
+Hi Rod,
+
+Fine.  Tech points Ward's business. I only want to point out that you have
+only the bare minimum ION shows you, which is very far from &quot;this record
+complete&quot;.  You don't seem to have the hierarchy even, just the names, and
+no authors. If Thompson Reuters was in the business of creating WoRMS-like
+records like that one (not difficult just takes someone a bit of time), we
+volunteer database workers could all fold our tents and get back to the
+taxonomic coalface (sorry, mixed metaphors there).  Although they wouldn't
+be allowing free access, now would they? Perhaps it's good they don't then
+(see below). Plus you've matched the doi perfectly to ION's record. Which
+is indeed clever.  Of course Thompson Reuters could provide that initially
+if they wanted to - but I imagine doing that would adversely affect some
+of their middle man services.
+
+I like that ZooKeys is auto loading its new papers into the Species-Id
+website. Ideally all taxonomy will be available structured like that, and
+auto loadable into WoRMS and there would be little manual work for WoRMS
+editors from the new pubs anymore.
+
+Geoff
+
+On Wed, December 7, 2011 7:43 pm, Roderic Page wrote:
+
+
+On 7 Dec 2011, at 01:15, Geoffrey Read wrote:
+
+
+
+<A HREF="http://www.marinespecies.org/polychaeta/aphia.php?p=taxdetails&amp;id=590097">http://www.marinespecies.org/polychaeta/aphia.php?p=taxdetails&amp;id=590097</A>
+ 
+Nice, but can't resist three comments:
+ 
+1. It's great that this record has a DOI, but the same information doesn't
+appear in the metadata for the LSID, which means the only way I could
+extract this information from WoRMS is by screen scraping (yuck)
+ 
+2. iTaxon already has this record complete with DOI
+<A HREF="http://iphylo.org/~rpage/itaxon/?search=Notodasus+harrisae">http://iphylo.org/~rpage/itaxon/?search=Notodasus+harrisae</A>
+ 
+3. When will map makers learn about red-green colour blindness! I can't
+see the red dot indicating the type locality unless I  zoom in and the
+green background momentarily disappears.
+
+
+
+
+ 
+---------------------------------------------------------
+Roderic Page
+Professor of Taxonomy
+Institute of Biodiversity, Animal Health and Comparative Medicine
+College of Medical, Veterinary and Life Sciences
+Graham Kerr Building
+University of Glasgow
+Glasgow G12 8QQ, UK
+
+Email: r.page at bio.gla.ac.uk
+Tel: +44 141 330 4778
+Fax: +44 141 330 2792
+AIM: rodpage1962 at aim.com
+Facebook: <A HREF="http://www.facebook.com/profile.php?id=1112517192">http://www.facebook.com/profile.php?id=1112517192</A>
+Twitter: <A HREF="http://twitter.com/rdmpage">http://twitter.com/rdmpage</A>
+Blog: <A HREF="http://iphylo.blogspot.com">http://iphylo.blogspot.com</A>
+Home page: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+
+
+ 
+ 
+---------------------------------------------------------
+Roderic Page
+Professor of Taxonomy
+Institute of Biodiversity, Animal Health and Comparative Medicine
+College of Medical, Veterinary and Life Sciences
+Graham Kerr Building
+University of Glasgow
+Glasgow G12 8QQ, UK
+
+Email: r.page at bio.gla.ac.uk
+Tel: +44 141 330 4778
+Fax: +44 141 330 2792
+AIM: rodpage1962 at aim.com
+Facebook: <A HREF="http://www.facebook.com/profile.php?id=1112517192">http://www.facebook.com/profile.php?id=1112517192</A>
+Twitter: <A HREF="http://twitter.com/rdmpage">http://twitter.com/rdmpage</A>
+Blog: <A HREF="http://iphylo.blogspot.com">http://iphylo.blogspot.com</A>
+Home page: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+
+ 
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="121465.html">[Taxacom] Finding your species in Mendeley
+</A></li>
+        <LI>Next message: <A HREF="121467.html">[Taxacom] Online! Anchoring Biodiversity Information: From Sherborn
+ to the 21st century and beyond
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#121466">[ date ]</a>
+              <a href="thread.html#121466">[ thread ]</a>
+              <a href="subject.html#121466">[ subject ]</a>
+              <a href="author.html#121466">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

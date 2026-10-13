@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> New release of DELTA programs
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1993-May/014286.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">New release of DELTA programs</H1>
+    <B data-pagefind-meta="author">Mike Dallwitz</B>
+    miked at ENTO.CSIRO.AU<BR>
+    <I data-pagefind-meta="date">Fri May 14 10:07:17 CDT 1993</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="097441.html">The Bean Bag
+</A></li>
+        <LI>Next message: <A HREF="050078.html">New release of DELTA programs
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#014286">[ date ]</a>
+              <a href="thread.html#014286">[ thread ]</a>
+              <a href="subject.html#014286">[ subject ]</a>
+              <a href="author.html#014286">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1993</span><!--beginarticle-->
+<PRE>New versions of the DELTA programs for MS-DOS are now available by anonymous
+ftp from the following Internet hosts.
+     huh.harvard.edu        (directory: /pub/software/delta/msdos)
+     life.anu.edu.au        (directory: /pub/delta/msdos)
+     spider.ento.csiro.au   (directory: /delta/msdos)
+
+The Internet distribution package consists of text files *.1st and
+self-expanding files *.exe. Download.1st contains this information about
+downloading the files, changes.1st contains the revision history of the
+programs, and delta.1st describes the procedure for installing the programs on
+an MS-DOS computer. The files must be transmitted in binary mode, set by the
+ftp command `binary'. (Failure to do so will result in the error message
+`HeaderC Error' when the .exe files are run.)
+
+Place the files in the directory C:\DELTA on your MS-DOS computer. Then follow
+the installation procedure described in delta.1st, but omit the XCOPY command.
+
+The date of this release is 12 May 1993. The changes from the previous
+release (9 February 1993) are as follows.
+
+
+
+SAMPLE DATA
+
+19 April 1993. The sample data were replaced by a new set, generated from the
+current version of Watson's Grass Genera of the World.
+
+
+DOCUMENTATION
+
+10 May 1993. See DOC.1ST for procedures for typesetting and printing
+documentation. Drafts of Edition 4 of the User's Guide and Edition 3 of the
+Primer are included with the distribution. Comments are requested.
+
+
+TRANSLATIONS
+
+19 April 1993. A French version of INTKEY is now available, invoked by INTKEYF
+INTKEYF.INI. The INTKEY commands themselves have not been translated, so that
+command-input files, particularly INTKEY.INI files, can usually be run without
+translation. (The sample INTKEYF.INI differs from INTKEY.INI only in that
+function key F1 is defined as Alt+Aide instead of Alt+Help.) The commands
+could be translated if required. Please send comments to Taxacom, or to the
+translator, Pierre-Andre' Loizeau, Conservatoire et Jardin botaniques de la
+Ville de Gene`ve C.P. 60, CH-1292 Chambe'sy/Gene`ve, Suisse. Phone +41 22 732
+69 69. Fax +41 22 738 45 97. Internet loizeau at cjb.unige.ch
+
+
+CONFOR
+
+Version 2.07, 21 April 1993. Character ranges were implemented in the
+CHARACTER NOTES and CHARACTER IMAGES directives. The effect of the REPLACE
+SEMICOLON BY COMMA directive was modified to omit the comma before `or'. The
+FORMATTING MARKS directive was extended to allow different formatting of
+character notes in three contexts, and the default formatting of character
+notes was changed. An option for NEXUS FORMAT was added to the TRANSLATE INTO
+directive. A directive NUMBER STATES FROM ZERO was added. Several error
+messages were improved. Various bugs were fixed.
+
+
+DELFOR
+
+Version 2.06, 21 April 1993. The handling of CHARACTER NOTES/IMAGES was
+changed to conform to the CONFOR changes. The directive NEW LINE FOR
+ATTRIBUTES was added, to output each attribute of an item on a new line (to
+facilitate file comparisons). ERRORLEVEL is now set on abnormal termination.
+The maximum number of files which can be reformatted was increased to 100.
+
+
+INTKEY
+
+Version 3.04, 6 May 1993. A French translation is now available (see above).
+The command DISPLAY KEYWORDS was added. When DISPLAY KEYWORDS is OFF, the
+display does not pause at keyword menus, but goes directly to the default
+character or taxon menu. The keywords SELECTED and LAST (which had not been
+implemented), were removed from the menus. The name of an image file to be
+displayed when the program starts can now be specified on the command line:
+INTKEY /i=filename.gif. Options were added to the DISPLAY IMAGES command.
+Continuous display of images was implemented (via DISPLAY CONTINUOUS ON or
+Ctrl/End). Image display for the VESA standard was implemented, and the
+UNIVESA driver (written by Kendall Bennett, Internet kjb at citri.edu.au) was
+added to the distribution. Various bugs were fixed. For translators of
+INTKEY.HLP: an escape character | was implemented to allow the use of @, !,
+and ? in messages in the file MESS.INT; e.g. loizeau|@cjb.unige.ch.
+
+
+KEY
+
+Version 2.04, 21 April 1993. An ADD CHARACTER NUMBERS directive was
+implemented, to insert character numbers in bracketted keys.
+
+
+TED
+
+Version 2.02, 23 April 1993. Status words SVER (operating-system version) and
+PVER (the version of TED) were added. 'R now gives a soft failure when issued
+at the end of a line. An apostrophe modifier for the C command was implemented
+to check for the existence of a file without copying it to the workspace. 'C
+and M were modified to work with directory names, indicated by a final \ (e.g.
+'C;DOC\; M;\DELTA\TEST\;). Swapping out of conventional memory when shelling
+to DOS now uses the SPAWNO library, written by Ralf Brown. Handling of
+Ctrl/Break and DOS 'critical' errors was improved.
+
+
+TYPSET
+
+Version 2.02, 14 April 1993. The default values in some of the font files were
+changed. A program TPAGE is now available to set up the font files for
+American Quarto paper. Bugs in the /FROM and /TO options were corrected.
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="097441.html">The Bean Bag
+</A></li>
+        <LI>Next message: <A HREF="050078.html">New release of DELTA programs
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#014286">[ date ]</a>
+              <a href="thread.html#014286">[ thread ]</a>
+              <a href="subject.html#014286">[ subject ]</a>
+              <a href="author.html#014286">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

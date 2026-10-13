@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Markov chain Monte Carlo
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2012-April/122300.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Markov chain Monte Carlo</H1>
+    <B data-pagefind-meta="author">Richard Zander</B>
+    Richard.Zander at mobot.org<BR>
+    <I data-pagefind-meta="date">Wed Apr 18 17:24:57 CDT 2012</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="122299.html">[Taxacom] 2nd Checklist Best Practice Guide for review
+</A></li>
+        <LI>Next message: <A HREF="122301.html">[Taxacom] Markov chain Monte Carlo
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#122300">[ date ]</a>
+              <a href="thread.html#122300">[ thread ]</a>
+              <a href="subject.html#122300">[ subject ]</a>
+              <a href="author.html#122300">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2012</span><!--beginarticle-->
+<PRE>Help! Would a Taxacomer familiar with MCMC criticize the appended
+paragraphs I wrote for an article? Am I right? Am I wrong? If the
+coalescent MCMC method is sampling, then sampling is sampling. On the
+other hand . . . 
+* * * * * * * * * * * *
+Richard H. Zander
+Missouri Botanical Garden, PO Box 299, St. Louis, MO 63166-0299 USA  
+Web sites: <A HREF="http://www.mobot.org/plantscience/resbot/">http://www.mobot.org/plantscience/resbot/</A> and
+<A HREF="http://www.mobot.org/plantscience/bfna/bfnamenu.htm">http://www.mobot.org/plantscience/bfna/bfnamenu.htm</A>
+Modern Evolutionary Systematics Web site:
+<A HREF="http://www.mobot.org/plantscience/resbot/21EvSy.htm">http://www.mobot.org/plantscience/resbot/21EvSy.htm</A>
+UPS and FedExpr -  MBG, 4344 Shaw Blvd, St. Louis 63110 USA
+One might point out here that the percent posterior probability of
+Bayesian analysis only involves (adds to &quot;probability one&quot;) those trees
+actually sampled by the Monte Carlo process. Any sampling process tries
+to generate a &quot;representative&quot; group with the same proportions as the
+full set. A Markov chain Monte Carlo analysis randomly selects a set of
+possible solutions and probabilistically selects one tree (or a small
+set of trees) that appears with greatest frequency as posterior
+probability in that sample. It may well be, however, that the total
+probabilistic support of improbable, unsampled trees may add to an
+amount that will reduce the support for the most probable tree (say, of
+0.95 posterior probability) to a value below that acceptable (Zander
+2001: 433). Remember that the data set supports all possible trees. One
+of the the improbable trees of among those making up the set with 0.05
+probability will be correct 0.05 of the time, so the mass of improbable
+trees is important in calculation. Consider, for instance, a million
+trees sampled (computed by sampling the data in a likelihood-based
+coalescent process) in a molecular systematics Markov chain Monte Carlo
+analysis, and the best tree is correct at 0.95 probability. Say there
+are 20 million more trees unsampled. Ideally the sampled trees represent
+proportions in the sampled population, so there should be 20 more more
+or less highly likely trees in the unsampled set involving multiple
+peaks in the target distribution. This would reduce the posterior
+probability of the best tree by a factor of about twenty. But suppose we
+assume all unsampled trees are simply to be of low, nearly insignificant
+probability.
+	If these quite improbable trees had the same average probability
+of those that are not the one that is of 0.95 probability, then the
+probability space is extended twenty times (total of 21 million trees).
+The probability of the best tree, which was 0.95 of 1.00, is now only
+0.045 of the extended probability space (21.0). It remains by far the
+best solution compared to any other single solution, but 0.955 of the
+time, one of the improbable trees will be the correct tree. Statistical
+sampling procedures do generally estimate percentages well by increasing
+the differences (statistical power or effect size) between one included
+set and another, but when sampling involves correct distinction of only
+a single item out of a large number of items, the relative size of that
+full set counts because one of the sample is a set of 1. Again, for the
+same problem, imagine a die with one side labled &quot;most probable&quot; and the
+other side consisting of a sphere with one million small flattenings.
+The analysis does not present that die as the solution to the problem by
+creating it from a die of the same configuration and size but 21 million
+flattenings on the spherical side. It creates the die from a die with
+the same configuration and 21 million flattenings but with the
+flattenings of there same size original small flat areas, making the
+spherical area of the die 20 times larger. Thus, rolling the die gives
+the spherical area a far greater chance of having a &quot;correct&quot; face.
+	A possible explanation of why poorly supported arrangements are
+tolerated or accepted is &quot;statistical relevance&quot; (Salmon 1971: 11).
+Statistical relevance is the philosophy-of-science version of the Bayes
+Factor, recently much promoted by Bayesian statisticians (e.g.
+Aris-Brosou &amp; Yang, 2002; Suchard &amp; al., 2002). The prior understanding,
+in this case, is that there is no or equal support for a particular
+hypothesis, and this is replaced after analysis by some statistical
+support which demonstrates what appears to be a relatively great and
+perhaps significant increase in support. This, however, is only
+apparent; a particular absolute level of support is required for the
+arrangement to be accepted as due to shared ancestry. As Huelsenbeck et
+al. (2002) have pointed out, although the Bayes Factor has applications
+of value, such as model selection, it is the posterior probability that
+genuinely reflects the chance of an arrangement being correct. Also, a
+similar attitude known as &quot;clinical relevance&quot; (Hopkins 2001, 2003) is
+valuable in practice when an effect is demonstrated as not entirely
+reliable (e.g. p-values of 0.80 or 0.90) but the chance that it is
+helpful far outweighs the risk, e.g. using a harmless drug to treat a
+dread illness. In betting our science, however, the loss upon failure
+far outweighs any benefit on success. 
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="122299.html">[Taxacom] 2nd Checklist Best Practice Guide for review
+</A></li>
+        <LI>Next message: <A HREF="122301.html">[Taxacom] Markov chain Monte Carlo
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#122300">[ date ]</a>
+              <a href="thread.html#122300">[ thread ]</a>
+              <a href="subject.html#122300">[ subject ]</a>
+              <a href="author.html#122300">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

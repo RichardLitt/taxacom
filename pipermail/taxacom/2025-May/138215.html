@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Taxacom: A one-step TNT scipt for MP phylogenetics
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2025-May/138215.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Taxacom: A one-step TNT scipt for MP phylogenetics</H1>
+    <B data-pagefind-meta="author">Kuoi Zhang</B>
+    zhang.guo-yi at outlook.com<BR>
+    <I data-pagefind-meta="date">Thu May 29 01:17:11 CDT 2025</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="138214.html">Taxacom: Taxacom Digest, Vol 229, Issue 7
+</A></li>
+        <LI>Next message: <A HREF="138216.html">Taxacom: Biogeogrpahy of smail genus
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#138215">[ date ]</a>
+              <a href="thread.html#138215">[ thread ]</a>
+              <a href="subject.html#138215">[ subject ]</a>
+              <a href="author.html#138215">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2025</span><!--beginarticle-->
+<PRE>Hello everyone
+
+I am sharing a new TNT script, guoyi.run, for one-step MP phylogenetics
+
+This tool is incredibly useful for anyone working with morphological phylogenetic analysis, even molecular phylogenetics. It aims to make maximum parsimony phylogenetic analyses more reproducible and has already been adopted in numerous studies in entomology and palaeontology.
+
+It provides a one-step TNT pipeline that supports multiple weighting schemes (equal, implied, and extended implied), customizable K values, consensus tree type selection, and resampling methods such as Bremer, bootstrap, and jackknife. It also automatically generates svg files and output files compatible with WinClada and FigTree. The entire analysis runs with a single command and intelligently adjusts tree search strategies based on dataset size.
+
+Huge thanks to Pablo Goloboff, the author of TNT, for his encouragement and valuable comments.
+
+Paper: <A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdoi.org%2F10.11646%2Fzootaxa.5642.1.10&amp;data%7C02%7Ctaxacom%40lists.ku.edu%7C1e796e7373774924f46008dd9e7876af%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638840962427793531%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=ZM2CGUevQRcWE1opGm3bNHjhhEtIjncivRmG0BXLdkw%3D&amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdoi.org%2F10.11646%2Fzootaxa.5642.1.10&amp;data%7C02%7Ctaxacom%40lists.ku.edu%7C1e796e7373774924f46008dd9e7876af%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638840962427793531%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=ZM2CGUevQRcWE1opGm3bNHjhhEtIjncivRmG0BXLdkw%3D&amp;reserved=0</A>
+
+Best regards
+Guoyi
+
+Guoyi Zhang (she/her), MRes, PhD candidate
+Personal Web&lt;<A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmalacology.net%2F&amp;data%7C02%7Ctaxacom%40lists.ku.edu%7C1e796e7373774924f46008dd9e7876af%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638840962427816374%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata£ffFWhg6VAXRUyDbky6eT1%2B0weaRwDLhsLfe%2FcWToQ%3D&amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmalacology.net%2F&amp;data%7C02%7Ctaxacom%40lists.ku.edu%7C1e796e7373774924f46008dd9e7876af%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638840962427816374%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata£ffFWhg6VAXRUyDbky6eT1%2B0weaRwDLhsLfe%2FcWToQ%3D&amp;reserved=0</A>&gt; | OCRID&lt;<A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Forcid.org%2F0000-0002-3426-9273&amp;data%7C02%7Ctaxacom%40lists.ku.edu%7C1e796e7373774924f46008dd9e7876af%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638840962427829223%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=sNb856AmPkFdtJZzTuD7SYKYMFkMoVQBkrjqkiSmJhg%3D&amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Forcid.org%2F0000-0002-3426-9273&amp;data%7C02%7Ctaxacom%40lists.ku.edu%7C1e796e7373774924f46008dd9e7876af%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638840962427829223%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=sNb856AmPkFdtJZzTuD7SYKYMFkMoVQBkrjqkiSmJhg%3D&amp;reserved=0</A>&gt;
+School of Biological, Earth and Environmental Sciences
+University of New South Wales
+Australian Museum Research Institute
+Australian Museum
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="138214.html">Taxacom: Taxacom Digest, Vol 229, Issue 7
+</A></li>
+        <LI>Next message: <A HREF="138216.html">Taxacom: Biogeogrpahy of smail genus
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#138215">[ date ]</a>
+              <a href="thread.html#138215">[ thread ]</a>
+              <a href="subject.html#138215">[ subject ]</a>
+              <a href="author.html#138215">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

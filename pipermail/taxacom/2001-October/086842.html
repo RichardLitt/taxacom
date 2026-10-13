@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> names &amp; numbers
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2001-October/086842.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">names &amp; numbers</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at BISHOPMUSEUM.ORG<BR>
+    <I data-pagefind-meta="date">Tue Oct 16 07:34:36 CDT 2001</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="086834.html">More on Biogeographic memory
+</A></li>
+        <LI>Next message: <A HREF="086837.html">names &amp; numbers
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#086842">[ date ]</a>
+              <a href="thread.html#086842">[ thread ]</a>
+              <a href="subject.html#086842">[ subject ]</a>
+              <a href="author.html#086842">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2001</span><!--beginarticle-->
+<PRE>I said:
+
+&gt; &gt;To do it right, you only need two separate entities:  NAMES, and
+&gt; ASSERTIONS
+&gt; &gt;(=circumscriptions).
+
+[etc...]
+
+To which Doug replied:
+
+&gt; I don't think this claim applies to higher classification, however:
+&gt; most people have databases designed in a strict &quot;parent:child&quot;
+&gt; hierarchy. If taxon X belongs to subfamily Y of family Z in one
+&gt; classification, and to tribe A of subfamily B of family C in another,
+&gt; you have VERY different parent:child links all leading down to the
+&gt; same terminal taxon.
+
+Yes, and this is very easy to track with the system I use.  I'll elaborate
+in greater detail to you in a separate email off-list, so as not to bore the
+non-computer nerds (anyone who is interested in getting a copy, please let
+me know).
+
+&gt; If anything, this sort of variant supra-generic
+&gt; classification is probably *more* common (in terms of numbers of
+&gt; species involved) than disagreement about species and genus placement.
+&gt; Maybe others here will see a simple workaround to accommodate it, but
+&gt; I don't - it's an extremely complex thing to do.
+
+It's not hard at all -- you just need a list of &quot;NAMES&quot;, and a
+(comprehensive) list of &quot;ASSERTIONS&quot; by experts about those names.  Things
+like proper spelling, Parent, etc. go in the ASSERTIONS table.  So for each
+NAME, you can have as few as one ASSERTION record (the original
+description), or as many records as there have been assertions made by
+various experts about the status of that name following its original
+description.  To map your example, the NAMES table would have the following
+records:
+
+Name    Rank
+----------------
+X       Genus
+Y       Subfamily
+Z       Family
+A       Tribe
+B       Subfamily
+C       Family
+
+You'd also have a REFERENCE table:
+
+Citation
+--------------
+Smith, 1999
+Jones, Pers. Comm., 2001
+
+And the ASSERTIONS table would have the following:
+
+ID      Citation                Name    Parent
+------------------------------------
+1       Smith, 1999             X       Y
+2       Smith, 1999             Y       Z
+3       Jones, 2001             X       A
+4       Jones, 2001             A       B
+5       Jones, 2001             B       C
+
+So, by moving the hierarchy details to the ASSERTIONS table, you've just
+tracked two separate classifications, and of course, you're not in any way
+limited by the number of classifications that you can track using this
+method.
+
+I've shown the sample data in simple form.  Bringing this back to the
+original point of this thread, you would, of course, substitute a unique and
+constant &quot;TaxonNameID&quot; number for each &quot;Name&quot;, which would serve as the link
+to the ASSERTIONS table.  And, you'd have a similar ID field for the
+REFERENCE table as well.
+
+You can use this same pair of tables (well...three tables if you count the
+Reference table) to track synonymies as well.  Just imagine the additional
+field &quot;ValidName&quot; in the ASSERTIONS table, which is another link back to the
+NAMES table. In the ASSERTIONS table, if field &quot;Name&quot; equals field
+&quot;ValidName&quot;, then the experts noted in the Citation regarded the &quot;Name&quot; as
+valid.  If they are not equal, then said experts regarded the &quot;Name&quot; as a
+junior synonym of the &quot;ValidName&quot;. If you really wanted to map synonomies
+accurately, you'd split them out into a separate table that linked One
+Assertion record back to another Assertion record....but that's getting
+beyond the scope of this thread....
+
+&gt; I think it
+&gt; necessitates a disassociation of the terminal taxa and the
+&gt; alternative hierarchies within the data (in other words, taxa are
+&gt; stored *without* being classified,
+
+Yes, exactly - the &quot;NAMES&quot; table.
+
+&gt; and the phylogenies are stored as
+&gt; separate data sets,
+
+Yes, exactly - the &quot;ASSERTIONS&quot; table.
+
+&gt; so you only get the computer to spit out a
+&gt; classification for a taxon after you choose which phylogeny you wish
+&gt; to view), OR, you stick with the default, reliance on a single
+&gt; classification.
+
+The way I have it set up (see my other email to you), you pick a single
+&quot;status&quot; for each NAME from among the linked ASSERTIONS to serve as your
+&quot;current&quot; status.  Part of the status is the Parent, so the base unit of
+classification is selected in this way.  You can create as many &quot;sets&quot; of
+these &quot;current status&quot; assertions for all taxa within a certain scope, and
+these alternative sets become your alternative &quot;classifications&quot;.
+
+&gt; Right now, *all* the major on-line databases,
+&gt; including ITIS, choose the latter option; a single, invariant higher
+&gt; classification.
+
+But the system Jim describes is doing what my system does, which is to say,
+tracks *ALL* classifications (or at least is set up to track them all - you
+just need to do the legwork and crank the data in). Moreover, I was invited
+to join a meeting last year involving some ITIS folks, and the outcome was a
+data schema along the basic lines of what I just described.
+
+&gt; You can't have a child link to two different parents,
+
+Not if that link is contained within the NAMES table ... but if the link to
+the parent is kept in the ASSERTIONS table, then you can have as many
+different links to different Parents as have ever been asserted for any
+given taxon name (or you can even pers. com. yourself, and make up a new
+one).  Each classification designates one assertion to be the &quot;correct&quot; or
+&quot;current&quot; assertion, so you build a complete set of assertions (one per
+taxon name), in order to create one complete classification.
+
+&gt; so ITIS will presumably *never* be able to designate alternative
+&gt; classifications above the terminal taxa - unless they radically
+&gt; change their data structure.
+
+Maybe some folks at ITIS can comment on that. I'm waiting to hear back as to
+whether a synonpsis of the aforementioned meeting has been posted to the
+FDGC website yet (I couldn't find it during a brief look through:
+<A HREF="http://www.fgdc.gov/index.html).">http://www.fgdc.gov/index.html).</A>
+
+Aloha,
+Rich
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="086834.html">More on Biogeographic memory
+</A></li>
+        <LI>Next message: <A HREF="086837.html">names &amp; numbers
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#086842">[ date ]</a>
+              <a href="thread.html#086842">[ thread ]</a>
+              <a href="subject.html#086842">[ subject ]</a>
+              <a href="author.html#086842">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

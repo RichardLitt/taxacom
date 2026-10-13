@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] validation of taxon names
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20validation%20of%20taxon%20names&In-Reply-To=%3C4F3C09F0.7040503%40gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="121792.html">
+   <LINK REL="Next"  HREF="121799.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2012-February/121793.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] validation of taxon names</H1>
+    <B data-pagefind-meta="author">Armand Turpel</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20validation%20of%20taxon%20names&In-Reply-To=%3C4F3C09F0.7040503%40gmail.com%3E"
+       TITLE="[Taxacom] validation of taxon names">armand.turpel.mnhn at gmail.com
+       </A><BR>
+    <I data-pagefind-meta="date">Wed Feb 15 13:39:28 CST 2012</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="121792.html">[Taxacom] validation of taxon names
+</A></li>
+        <LI>Next message: <A HREF="121799.html">[Taxacom] validation of taxon names
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#121793">[ date ]</a>
+              <a href="thread.html#121793">[ thread ]</a>
+              <a href="subject.html#121793">[ subject ]</a>
+              <a href="author.html#121793">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2012</span><!--beginarticle-->
+<PRE>Hi,
+
+If it is from interest. The catalogue of life for postgresql is a public 
+available project.
+
+<A HREF="http://code.google.com/p/catalogue-of-life-for-postgresql/">http://code.google.com/p/catalogue-of-life-for-postgresql/</A>
+
+As shortly described in my first posting it is possible to compare a 
+list of taxons against the col data. Currently there is only one 
+function that compare the genus, species epithet and authority and gives 
+for each taxon a 3 digits code back which represents the genus, species 
+epithet and authority match.
+
+120
+
+0 = no match
+1 = exact match
+2 = fuzzy match
+
+Here an example of the function call.
+
+select col.validate_from_file( 'C:/test_files/input.csv', 'C:/test_files/output.csv',
+
+         ARRAY[  ARRAY['levenshtein_genus', '1'],
+
+                 ARRAY['levenshtein_species', '2'],
+
+                 ARRAY['levenshtein_author', '2']
+
+         ] );
+
+
+
+a+
+
+arm
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="121792.html">[Taxacom] validation of taxon names
+</A></li>
+	<LI>Next message: <A HREF="121799.html">[Taxacom] validation of taxon names
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#121793">[ date ]</a>
+              <a href="thread.html#121793">[ thread ]</a>
+              <a href="subject.html#121793">[ subject ]</a>
+              <a href="author.html#121793">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

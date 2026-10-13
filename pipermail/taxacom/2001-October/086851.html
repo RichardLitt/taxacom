@@ -1,0 +1,251 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Ungarbled version
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2001-October/086851.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Ungarbled version</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at BISHOPMUSEUM.ORG<BR>
+    <I data-pagefind-meta="date">Wed Oct 17 00:40:51 CDT 2001</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="086848.html">Ungarbled version
+</A></li>
+        <LI>Next message: <A HREF="086852.html">names and numbers
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#086851">[ date ]</a>
+              <a href="thread.html#086851">[ thread ]</a>
+              <a href="subject.html#086851">[ subject ]</a>
+              <a href="author.html#086851">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2001</span><!--beginarticle-->
+<PRE>&gt; In other words, if author X says
+&gt;
+&gt; species A is in genus B of subfamily C of family D
+&gt; species J is in genus K of subfamily C of family D
+&gt;
+&gt; and author Y says
+&gt;
+&gt; species A is in genus B of subfamily C (same name but entirely
+&gt; different circumscription) of family E
+&gt; species J is in genus K of subfamily L of family D
+&gt;
+&gt; the assertion table would be
+&gt;
+&gt; name   parent
+&gt; A       B
+&gt; B       C
+&gt; C       D
+&gt; C       E
+&gt; J       K
+&gt; K       C
+&gt; K       L
+&gt; L       D
+
+It's important to remember that the &quot;Reference&quot; is a key component to the
+Assertions table. Also, although I didn't really clarify it in the Taxacom
+post (but did in the private post), Rank is actually also part of the
+assertion. So, using your example data, the Assertion table would look like
+this (note that the &quot;Rank&quot; applies to the &quot;Name&quot;, not the &quot;Parent&quot;):
+
+ID  Cit.   Name  Rank      Parent
+----------------------------------
+1    X      A    Species     B
+2    X      B    Genus       C
+3    X      C    Subfamily   D
+4    X      D    Family      -
+5    X      J    Species     K
+6    X      K    Genus       C
+7    Y      A    Species     B
+8    Y      B    Genus       C
+9    Y      C    Subfamily   E
+10   Y      E    Family      -
+11   Y      J    Species     K
+12   Y      K    Genus       L
+13   Y      L    Subfamily   D
+14   Y      D    Family      -
+
+Now, since I took the time to type all of this out, I'll use it to
+illustrate several points.
+
+First of all, each record in the Assertions table can be thought of as a
+&quot;Taxon sensu Author&quot; record. So, in this dataset we have a &quot;Species A sensu
+X&quot; record, and a &quot;Species A sensu Y&quot; record.  In this case, they're probably
+more or less equivalent.  However, &quot;Subfamily C sensu X&quot; is not equivalent
+to &quot;Subfamily C sensu Y&quot;, because, as you stated, they represent quite
+different circumscriptions.
+
+Second, the reason that Rank is included in the Assertions table, rather
+than the Names table, is that a given name can be used at different ranks,
+depending on the circumscription (e.g., a genus name could be regarded as a
+valid genus by some authors, or as a subgenus of another genus by other
+authors, e.g.:
+
+ID  Cit.   Name  Rank      Parent
+----------------------------------
+15   Z      B    Subgenus    M
+16   Z      M    Genus       C
+
+etc....
+
+Of course, there are any number of additional references with their
+respective assertions about the same set of names, that can be added to the
+table.
+
+&gt; and the &quot;assertion table&quot; will not be able to reconstruct the fact
+&gt; that one should ONLY classify species A as belonging to family E *if*
+&gt; one defines C the way author Y does.
+
+Sure it can, you just need to add one more record to the Assertions table,
+which links genus B either directly to family E, or to a different subfamily
+(other than C) that is placed within family E.  For example:
+
+ID  Cit.   Name  Rank      Parent
+----------------------------------
+17   T      B    Genus       E
+
+Can't find a reference &quot;T&quot; that does this?  Then create one: Yanega, Pers.
+Comm.  Seem too &quot;artificial&quot;?  Well, you're the one that set the parameters:
+
+1. A is species of genus B
+2. B is a genus within family E
+3. C is a subfamily of family D (assuming that we're *not* following author
+Y, as you suggest)
+
+Well, given these premises (which represents the situation of your concern)
+then neither of the available assertions about the status of genus B that
+you provided are logically possible, given the 3 presmises above.  If you
+want A to be in genus B, and you want to follow X for the subfamily C, then
+you must have *some* reason why you want to put species A within Family E,
+so there must be *some* assertion out there (even if it's your own) that
+connects B to E via a route other than C.
+
+For clarification to others following this thread, as I detailed in the
+&quot;Details&quot; post I sent you, there is a field in the NAMES table that points
+to the &quot;correct&quot; assertion; that is, the &quot;accepted status&quot; of the given
+name. So, the NAMES table for the above would be as follows:
+
+Name  CurrentStatus
+-------------------
+ A         1
+ B        17
+ C         3
+ D         4
+ E        10
+ J         5
+ K         6
+ L        13
+ M        16
+
+The value in the &quot;CurrentStatus&quot; field corresponds to the ID field of the
+Assertions table, which means that we've decided to follow author X as
+representing the &quot;correct&quot; circumscriptions for the names A, C, D, J, and K,
+but we'd follow author Y for the correct circumscriptions of names E and L
+We'd follow author T for name B, and Z for name M.
+
+There's an entire thread of conversation that could take place eith respect
+to whether the &quot;Parent&quot; field should point to the &quot;Name&quot; table, or th
+&quot;Assertion&quot; table.  It's a complicated question, with fundamental
+implications, but as this discussion is long enough on its own, I'll save
+that thorn for another time.
+
+&gt; Further, it isn't fair to list
+&gt; both D and E as parents to C, because in neither author's
+&gt; classification can species J be considered a member of family E (that
+&gt; is, not all children of C are grandchildren of E).
+
+I think I've addressed these in the examples above, but if not, please let
+me know. It all depends on which Assertions you've chosen as &quot;correct&quot; for
+each taxon name. There are rules to deal with inconsistencies, but one would
+assume you would refrain from chosing inconsistent sets of assertions to
+represent a particlar classification.
+
+
+&gt; Your designation
+&gt; of the &quot;preferred&quot; links certainly would help, but what happens when
+&gt; there are thrid and fourth and fifth authors' opinions that also use
+&gt; the same names in different ways?
+
+See below.
+
+&gt; What would happen is you'd lose
+&gt; track of which authors' schemes grouped things which ways.
+
+I think that's the fundamental point of miscommunication.  We keep track of
+*all* authors' schemes independently. That's the objective part.  The
+subjective part is erecting a &quot;correct&quot; classification, which involves
+designating one assertion for each name to represent the &quot;correct&quot; current
+status.
+
+&gt; This kind
+&gt; of thing does actually happen. I still do feel that you can't
+&gt; reconstruct a single author's phylogeny by giving simple lists of
+&gt; parent-child linkages,
+
+You're right, that's why we have complex parent-child linkages.  So, if we
+wanted to know something about Subfamily C from the above data sets, we'd
+see that we have a choice between two status options:
+
+3: C sensu X, as a valid subfamily of family D
+9: C sensu Y, as a valid subfamily of family E
+
+To illustrate further the potential of this scheme, I'll add the following
+additional options to the Assertions table:
+
+18: C sensu Q, as a valid family of suborder N
+19: C sensu R, as a junior synonym of family O
+20: C sensu S, as a junior synonym of subfamily L
+
+Thus, for the Taxon Name C, you'd want to select one of the five available
+alternative Assertions about the status of C (3, 9, 18, 19 or 20) to
+represent the &quot;current status&quot; of taxon name &quot;C&quot;.
+
+Aloha,
+Rich
+
+Richard L. Pyle
+Ichthyology, Bishop Museum
+1525 Bernice St., Honolulu, HI 96817
+Ph: (808)848-4115, Fax: (808)847-8252
+email: deepreef at bishopmuseum.org
+<A HREF="http://www.bishopmuseum.org/bishop/HBS/pylerichard.html">http://www.bishopmuseum.org/bishop/HBS/pylerichard.html</A>
+&quot;The views expressed are the author's, and not necessarily those of Bishop
+Museum.&quot;
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="086848.html">Ungarbled version
+</A></li>
+        <LI>Next message: <A HREF="086852.html">names and numbers
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#086851">[ date ]</a>
+              <a href="thread.html#086851">[ thread ]</a>
+              <a href="subject.html#086851">[ subject ]</a>
+              <a href="author.html#086851">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

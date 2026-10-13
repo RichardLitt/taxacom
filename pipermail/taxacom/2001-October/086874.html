@@ -1,0 +1,274 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Assertions and Circumscriptions (Was: names and numbers)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2001-October/086874.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Assertions and Circumscriptions (Was: names and numbers)</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at BISHOPMUSEUM.ORG<BR>
+    <I data-pagefind-meta="date">Sun Oct 21 15:46:08 CDT 2001</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="086869.html">Year problem for Linell
+</A></li>
+        <LI>Next message: <A HREF="086875.html">names and numbers
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#086874">[ date ]</a>
+              <a href="thread.html#086874">[ thread ]</a>
+              <a href="subject.html#086874">[ subject ]</a>
+              <a href="author.html#086874">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2001</span><!--beginarticle-->
+<PRE>A new thread has begun....
+
+&gt; The big question is, would you model and build them differently, say
+&gt; as separate entities, in a database sense...
+
+Good question, and I think the answer depends on how you want to use
+circumscriptions (see below).
+
+&gt; The determination assertion (specimen identification) is obviously quite
+&gt; a different beast to a taxon assertion (taxon circumscription or
+&gt; concept), although the latter can be thought of as the totality of the
+&gt; former...
+
+I see a &quot;Determination&quot; as the intersection between a specimen and an
+assertion.  The source of Determination assertions could be assertions
+created specifically for the purpose of the determination (e.g., expert
+comes to museum, examines specimens, assigns taxon names to specimens), or
+they can be assertions gleaned from other published or unpublished sources
+(e.g., Author of published reference lists a series of Museum specimen
+catalog numbers under a particular taxon name). In either case, the
+relationship between Assertions and Specimens is many-to-many.  A single
+assertion can serve to determine many specimens (e.g., expert visits museum
+and within a narrow period of time identifies many different specimens as
+belonging to a given species name; or a publication lists many specimen
+catalog numbers under a given species name); and a single specimen may have
+been determined multiple times by mutiple assertions (e.g., identification
+history of a specimen).
+
+I see this as fundamentally different from the relationship between
+Assertions and Circumscriptions, which can either be one-to-one, or
+many-to-one, depending on how flexible you want to be in defining
+circumscriptions (again, see below).
+
+&gt; Both are subjective and can only be expressed objectively in the context
+&gt; of a reference to a person making an assertion in a particular place and
+&gt; at a particular time...
+
+Absolutely, and I will take your phrase, &quot;reference to a person making an
+assertion in a particular place and at a particular time&quot; as my core
+definition of the concept of a &quot;Reference&quot;  (I usually define a Reference as
+simply &quot;time-stamped Agent(s)&quot;...but I think we're driving at the same
+point). I agree that the &quot;objective&quot; manifestation of both Determinations
+and Circumscriptions *must* exist in the context of a &quot;Reference&quot; (as
+defined in the previous sentence), and so I think that both can be
+structured (both conceptually, and as database entities) with direct
+association to an &quot;Assertion&quot;.
+
+As I've repeatedly suggested, I've come at this from the &quot;bottom-up&quot;
+approach, so I haven't really given much thought to how the notion of a
+&quot;Circumscription&quot; is used. It seems that we all agree that it represents the
+boundaries of a &quot;taxon concept&quot;, and that the most common practical use of
+Circumscriptions is to map equivalencies among different use of nomenclature
+(e.g., Smith's 1992 survey of the flora of Sibera referred to species name
+Aaa bbb; and Jones' 1999 survey of the flora of Sibera referred to the
+species name Xxxx yyyy to mean the same taxon concept, so we can map the
+equivalency of
+&quot;[Aaa bbb sensu Smith 1992] = [Xxxx yyyy sensu Jones 1999]&quot;).
+
+Following this notion of a &quot;Circumscription&quot;, I'll now try to articulat how
+I imagine the concept fitting into a database, with respect to the notion of
+an &quot;Assertion&quot;.
+
+First of all, to be clear, I am defining an &quot;Assertion&quot; very broadly as
+simply any instance of a Reference citing a taxon name.  One will obviously
+find a vast range in the scientific &quot;quality&quot; of such broadly-defined
+&quot;assertions&quot;, ranging from original descriptions, taxonomic revisions,
+non-taxonomic articles, etc. -- all the way down to grey literature, popular
+books and articles, and even newspaper articles. Also, Assertions are
+entities of nomenclature; not necessarily entities of biological assemblages
+of &quot;taxa&quot;. In a very &quot;liberal&quot; sense, all of these assertions could
+potentially represent Circumscriptions; but except for the implied
+biological relationships among primary type specimens, Assertions don't
+neccessarily define the boundaries of taxon conecepts with much meaningful
+precision.
+
+So how are circumscriptions definied with any meaningful precision?  I know
+of three basic ways, at three levels of precision (resolution):  Taxon Names
+(Primary Types); Populations (Biogeography), an individual specimens.  The
+second of these (Populations) is a bit nebulous, so I'll skip if for this
+discussion, and concetrate on the other two (Taxon Names, and individual
+specimens).
+
+At the level of Taxon Names, an Assertion can only serve as a meaningful
+representation of a Circumscription in the context of other Assertions by
+the same Reference about related taxon names.  For example, suppose we have
+the three species names:
+
+Aaa bbbb
+Aaa cccc
+Aaa dddd
+
+For simplicity, I'll keep it all within a single genus and only talk about
+species-level circumscriptions, although the same concept extrapolates
+easily upwards to all taxonomic ranks. We'll also assume that these are the
+only three species names ever assigned to the genus Aaa.
+
+We'll also work with the three references:
+
+Smith, 1967
+Jones, 1990
+Pyle, 2000
+
+Suppose, then, that we've got the following records in the Assertion table:
+
+ID  Reference      Name  Rank   Valid   Parent
+----------------------------------------------
+1   Smith, 1967    bbbb  Sp.    bbbb    Aaa
+2   Smith, 1967    cccc  Sp.    cccc    Aaa
+3   Smith, 1967    dddd  Sp.    dddd    Aaa
+4   Jones, 1990    bbbb  Sp.    bbbb    Aaa
+5   Jones, 1990    cccc  Sp.    cccc    Aaa
+6   Jones, 1990    dddd  Sp.    cccc    Aaa
+7   Pyle, 2000     bbbb  Sp.    bbbb    Aaa
+8   Pyle, 2000     cccc  Sp.    cccc    Aaa
+
+&gt;From this we know that Smith (1967) treated all three species as valid and
+distinct (because the all have Valid=Name). We also know that Jones (1990)
+regarded bbbb and cccc as valid species, but treated dddd as a junior
+synonym of cccc.  Also, Pyle (2000) treated bbbb and cccc as valid, but
+being the sloppy taxonomist that he is, made no mention of what he felt the
+status of species dddd should be.
+
+No single record in the above Assertions table constitutes a complete
+Circumscription by itself, without knowledge of other assertions made by the
+same Reference.  For example, Jones' concept of the taxon represented by the
+name cccc represents the combinations of Smith's concepts of the taxa
+represented by the names cccc *and* dddd.  We can only know this if we know
+that Jones regarded cccc as valid *and* that he regarded the primary type of
+dddd and all its kin to be part of the same taxon concept represented by the
+name cccc.  If we did not know about Jones' treatment of dddd, we could not
+represent a complete circumscription of Jones' concept of cccc.  Similarly,
+we can't really know what Pyle had in mind for his concept of cccc, because
+he never told us whether he would have included all things previously
+assinged to dddd within his cccc circumscription. So, is [Aaa cccc sensu
+Pyle, 2000] equivalent to [Aaa cccc sensu Smith, 1967], or is it equivalent
+to [Aaa cccc sensu Jones, 1990]?  Without Pyle's assertion about dddd, we
+have no way of knowing what Pyle's concept of cccc really is.
+
+The significance of this is that, while Pyle probably had a concept for cccc
+(and for dddd in the context of cccc), and thus Assertion record ID# 8
+*could* represent a circumscription; we have no way of delineating the scope
+of that circumscription based on the incormation contained within Pyle,
+2000.  In this way, Assertion record ID#'s 1-6 are all well-defined
+Circumscriptions, because they exist in full context, but Assertion ID# 8 is
+not.
+
+What about Assertion ID# 7?  In one sense, we could assume that Pyle
+regarded bbbb in the same way that all other References treated bbbb (i.e.,
+bbbb sensu Pyle as equivalent to bbbb sensu Smith and also equivalent to
+bbbb sensu Jones) -- but we can't do that objectively, because for all we
+know, Pyle thought of dddd as a junior synonym of bbbb, in which case his
+concept of bbbb would be broader than either Jones' or Smith's.
+
+What's the point?  The point is that each Assertion record represents a
+&quot;potential&quot; Circumscription, but not all of them can be used as &quot;defined&quot;
+circumscriptions.
+
+This is why I said in my last post that I see Circumscriptions as a subset
+of Assertions (that is, all Circumscriptions are based on Assertions, but
+not all Assertions can be used as Circumscriptions).  Getting back to your
+original question, Jim, my simple approach would be to treat
+Circumscriptions and Assertions as the same database entity (same primary
+key pool), but  that only a subset of assertions constitute meaningful
+Circumscriptions. This could be dealt with either by splitting
+Circumscriptiopns into a separate table with a one-to-one relationship to
+Assertions (linked on their respective Primary Keys); or keep it all within
+the Assertions table and flag the Circumscriptions accordingly. The
+difference is purely a technical issue.
+
+However, I think we might be restricting ourselves too severely in this
+scheme, so an alternative approach would be to establish a many-to-one
+relationship between Assertions and Circumscriptions.  For clarity, this
+wouldn't be a many-to-one relationship in the classical sense, but rather in
+a contextual sense.  For example, suppose there is a reference for Pyle in
+2001 where he declared that dddd should be treated as a junior synonym of
+bbbb.  Thus, if we expand the scope of Pyle's assertions to treat his 2000
+reference and 2001 references as contextually equivalent, then all of a
+sudden we can use his 2000 assertion about cccc as a Circumscription,
+because it is elaborated in full context by the combination of both the 2000
+reference and the 2001 reference. While this would technically leave is with
+a one-to-one relationship between Assertions and Cicumscriptions, we would
+need an additional layer in the database scheme to map which set of
+Assertions can be combined to represent a contextual group.
+
+Now is not the time to explore that further (I'll probably have to break
+this post up into 2 parts as it is), but the point is that Circumscriptions
+involve considerably more complexity (particularly in the sense that they
+are sensative to the context of other assertions), than simple assertions
+do.  There's also a whole 'nother tome to write about with respect to
+definitions of Circumscriptions in association with specimen
+Determinations...but I'll simply address that by saying that I think these
+specimen-based circumscriptions can be accomodated via assertions, as long
+as the assertions are the foundations of specimen Determinations.
+
+Overall, I'd say that References, Names, and Assertions all conform well to
+the notion of centralized, universal ID numbers, because they can achieve
+maximal usefulness within their purely objective contexts; whereas
+Circumscriptions may not yet be ready for universal centralizations, because
+subjectivity may be required to decide which Assertions can represent valid
+Circumscriptions, and perhaps also which set of References can be grouped
+together for the perposes of defining a full Circumscription context.
+
+Whew....I think I spent more time on that than I probably should have....
+
+Aloha,
+Rich
+
+Richard L. Pyle
+Ichthyology, Bishop Museum
+1525 Bernice St., Honolulu, HI 96817
+Ph: (808)848-4115, Fax: (808)847-8252
+email: deepreef at bishopmuseum.org
+<A HREF="http://www.bishopmuseum.org/bishop/HBS/pylerichard.html">http://www.bishopmuseum.org/bishop/HBS/pylerichard.html</A>
+&quot;The views expressed are the author's, and not necessarily those of Bishop
+Museum.&quot;
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="086869.html">Year problem for Linell
+</A></li>
+        <LI>Next message: <A HREF="086875.html">names and numbers
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#086874">[ date ]</a>
+              <a href="thread.html#086874">[ thread ]</a>
+              <a href="subject.html#086874">[ subject ]</a>
+              <a href="author.html#086874">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,234 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] [tdwg-tag] Recent DiGIR service disruption
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2008-October/111154.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] [tdwg-tag] Recent DiGIR service disruption</H1>
+    <B data-pagefind-meta="author">Roger Hyam</B>
+    rogerhyam at mac.com<BR>
+    <I data-pagefind-meta="date">Wed Oct  8 04:42:18 CDT 2008</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="111153.html">[Taxacom] Race and taxonomy
+</A></li>
+        <LI>Next message: <A HREF="111155.html">[Taxacom] [tdwg-tag] Recent DiGIR service disruption
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#111154">[ date ]</a>
+              <a href="thread.html#111154">[ thread ]</a>
+              <a href="subject.html#111154">[ subject ]</a>
+              <a href="author.html#111154">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2008</span><!--beginarticle-->
+<PRE>Thanks to Rod and DaveV for their work.
+
+I'd like to make one observation and concur with David Shorthouse on  
+one point.
+
+1) Looking down the list of providers many are exposed as IP addresses  
+(which is bad), some are on domain names but not port 80 (which is  
+slightly bad) and some are clearly machine names rather than names  
+that one would associate with services. It appears to me that a  
+proportion people are not using DNS robustly to allow services to be  
+moved from machine to machine in a sensible way. So aside from the  
+current issues DaveV has outline there is inherent brittleness in the  
+way we are implementing these services. This may well be because  
+people in large or small institutions do not have easy access to DNS  
+configuration for their institutional domain even if they understand  
+the importance of it. This has big implications for role out of LSIDs  
+or any other technology dependent on configuration of DNS.
+
+2) To concur with DavidS on the number of providers. Whilst  
+developing  the Biodiversity Collections Index we worked through some  
+lists of DiGIR providers at various portals to see if we were missing  
+any 'real' collections. What struck us was the level of overlap and  
+the fact that we weren't discovering much (if anything) new. Rod's  
+page lists &lt; 200 DiGIR providers (if I try and weed out the duplicates  
+by eye).  BCI has around 5,000 physical collections listed. This seems  
+like a small percentage of cover even if you take into account BioCASe  
+and TAPIR providers. There is overlap between provider and they do not  
+very often cover complete collections. On the other hand the more  
+important collections may be more likely to be covered.
+
+Sorry for the lengthy cross post.
+
+All the best,
+
+Roger
+
+
+
+On 8 Oct 2008, at 07:06, Dave Vieglais wrote:
+
+&gt; Apologies for cross posting.
+&gt;
+&gt; Hopefully, most of you did not notice this, but if you did, here's
+&gt; what happened.  A problem with resolving the digir.net domain was
+&gt; recently identified by John Wieczorek and possibly others.  This
+&gt; problem would have affected most, if not all DiGIR providers currently
+&gt; operating.  Once identified, the issue was promptly resolved, and
+&gt; ongoing problems are unlikely.
+&gt;
+&gt; This message provides further information about the problem, how it
+&gt; was resolved, and how recurrence will be avoided to ensure continued
+&gt; operation of the DiGIR infrastructure.
+&gt;
+&gt;
+&gt; = Problem =
+&gt;
+&gt; The DNS entry &quot;digir.net&quot; is an A record that must point to an IP
+&gt; address.  For several years digir.net resolved to the ip address of
+&gt; &quot;66.35.250.210&quot; which is a Source Forge machine that is configured as
+&gt; a VHOST for digir.net.  At some point in the last 48hrs, 66.35.250.210
+&gt; ceased to respond as a VHOST for digir.net.  This meant that any web
+&gt; service that was expecting to retrieve content from digir.net (e.g. <A HREF="http://digir.net/schema/protocol/2003/1.0/digir.xsd">http://digir.net/schema/protocol/2003/1.0/digir.xsd</A>
+&gt;  ) failed, with significant operational repercussions.  For technical
+&gt; reasons, most other digir.net DNS entries were unaffected (e.g. www.digir.net
+&gt; ).
+&gt;
+&gt;
+&gt; = Resolution =
+&gt;
+&gt; The new Source Forge VHOST servicing www.digir.net was identified as
+&gt; &quot;216.34.181.97&quot;, and the DNS entry for digir.net was updated
+&gt; appropriately.  Since the TTL on that DNS record was set relatively
+&gt; short (600 seconds), the DNS infrastructure picked up the new
+&gt; information fairly quickly, and testing indicates that digir.net URLs
+&gt; are now being correctly resolved from several locations around the
+&gt; world.
+&gt;
+&gt;
+&gt; = What You Need To Do =
+&gt;
+&gt; Nothing.  You should not notice any ongoing disruption.
+&gt;
+&gt;
+&gt; = Ensuring Continued Operation =
+&gt;
+&gt; There are three major issues that lead to this malfunction (#2 and #3
+&gt; are informational only for developers of new services and tools):
+&gt;
+&gt;  1. We have no control over Source Forge, and nor should digir.net
+&gt; infrastructure be dependent on them
+&gt;
+&gt;  2. Much of the existing installed DiGIR infrastructure references
+&gt; &quot;digir.net&quot; directly and so DNS level indirection is not practical.
+&gt;
+&gt;  3. HTTP redirects need to be supported in service implementations
+&gt; and their clients.  I suspect that a lot of DiGIR software services
+&gt; and clients do not follow redirects properly.
+&gt;
+&gt;
+&gt; == Issue #1 ==
+&gt;
+&gt; A DNS monitoring service is now in place that will update the DNS
+&gt; entries if the source forge machine changes again.
+&gt;
+&gt; Also, a replica of the DiGIR web material currently hosted by Source
+&gt; Forge is being created on a machine that we have complete control over
+&gt; and is located on a fast internet backbone.  The replica machine will
+&gt; be monitored with a system that will provide automatic notification to
+&gt; appropriate contacts in the event of failure.  This machine will be
+&gt; located at the University of Kansas at least initially.  Once
+&gt; operational, the DNS entry for digir.net will be modified to point to
+&gt; this machine.
+&gt;
+&gt; DNS services are handled by dyndns.org.  Since their inception they
+&gt; have provided a 100% uptime for their clients which includes domains
+&gt; such as CNN, Mozilla, and Twitter.  Since digir.net was an early
+&gt; adopter of their services, the DNS service provided by DynDNS does not
+&gt; expire.  DNS registration does expire however, and this relatively
+&gt; minor expense is covered by the University of Kansas with assistance
+&gt; from the National Science Foundation.
+&gt;
+&gt;
+&gt; == Issue #2 ==
+&gt;
+&gt; In retrospect, something like &quot;<A HREF="http://schema.digir.net">http://schema.digir.net</A>&quot; rather than &quot;<A HREF="http://digir.net">http://digir.net</A>
+&gt; &quot; should have been used.  This would have provided a low level (DNS)
+&gt; mechanism for indirection that would have been unaffected by this
+&gt; unanticipated hardware change.  Altering these entries in DiGIR
+&gt; providers and tools is really not practical at this stage, so it is
+&gt; unlikely that this issue can be directly addressed.
+&gt;
+&gt;
+&gt; == Issue #3 ==
+&gt;
+&gt; HTTP offers a mechanism for temporary and permanent redirection.  In
+&gt; order to take advantage of this functionality, it is necessary for
+&gt; HTTP clients to properly interpret the HTTP 301 and 307 status codes
+&gt; and the respective response headers to determine the new location of
+&gt; the resource being resolved.  This is the mechanism employed by PURLs
+&gt; and TinyURL for example.  Unfortunately, many developers take short
+&gt; cuts when building tools to retrieve content from URLs and avoid the
+&gt; additional small amount of work necessary to handle redirect
+&gt; messages.  Where ever possible, developers of services and clients
+&gt; should use libraries that at least properly handle HTTP redirects
+&gt; which will allow the use of PURLs and other mechanisms for providing
+&gt; an additional level of indirection in URL resolution where necessary.
+&gt;
+&gt;
+&gt; regards,
+&gt;   Dave Vieglais
+&gt;
+&gt; ---
+&gt; Biodiversity Research Center
+&gt; University of Kansas
+&gt;
+&gt;
+&gt; _______________________________________________
+&gt; tdwg-tag mailing list
+&gt; tdwg-tag at lists.tdwg.org
+&gt; <A HREF="http://lists.tdwg.org/mailman/listinfo/tdwg-tag">http://lists.tdwg.org/mailman/listinfo/tdwg-tag</A>
+
+-------------------------------------------------------------
+Roger Hyam
+Roger at BiodiversityCollectionsIndex.org
+<A HREF="http://www.BiodiversityCollectionsIndex.org">http://www.BiodiversityCollectionsIndex.org</A>
+-------------------------------------------------------------
+Royal Botanic Garden Edinburgh
+20A Inverleith Row, Edinburgh, EH3 5LR, UK
+Tel: +44 131 552 7171 ext 3015
+Fax: +44 131 248 2901
+<A HREF="http://www.rbge.org.uk/">http://www.rbge.org.uk/</A>
+-------------------------------------------------------------
+
+
+
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="111153.html">[Taxacom] Race and taxonomy
+</A></li>
+        <LI>Next message: <A HREF="111155.html">[Taxacom] [tdwg-tag] Recent DiGIR service disruption
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#111154">[ date ]</a>
+              <a href="thread.html#111154">[ thread ]</a>
+              <a href="subject.html#111154">[ subject ]</a>
+              <a href="author.html#111154">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

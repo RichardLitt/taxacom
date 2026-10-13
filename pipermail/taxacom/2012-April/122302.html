@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Markov chain Monte Carlo
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2012-April/122302.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Markov chain Monte Carlo</H1>
+    <B data-pagefind-meta="author">Peter Hovenkamp</B>
+    phovenkamp at casema.nl<BR>
+    <I data-pagefind-meta="date">Thu Apr 19 15:56:51 CDT 2012</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="122301.html">[Taxacom] Markov chain Monte Carlo
+</A></li>
+        <LI>Next message: <A HREF="122303.html">[Taxacom] Seeking collaboration on illustrated biological
+ dictionary/glossary for semantic mediawiki with ontological relations
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#122302">[ date ]</a>
+              <a href="thread.html#122302">[ thread ]</a>
+              <a href="subject.html#122302">[ subject ]</a>
+              <a href="author.html#122302">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2012</span><!--beginarticle-->
+<PRE>  Not correct.
+If it appears in 95 % of the sample, it does not appear in 95 % of the 
+unsampled population. That would be representative sampling. Could be 
+done much easier and quicker than MCMC sampling.
+
+MCMC sampling is different: it samples not according to frequencies, it 
+samples according to optimality. If there would be only one tree (or 
+item, or whatever) with an optimality of 0.95, it would be sampled 95 
+times out of 100. No matter how many other trees (or item, or whatever) 
+are present. Of course, the other trees would all have very low 
+optimalities.
+
+Mindbending.
+
+Peter Hovenkamp
+
+
+On 19-4-2012 17:29, Richard Zander wrote:
+&gt; Carl:
+&gt; I much appreciate the clear short response. I was wrong to use &quot;tree.&quot;
+&gt; And also &quot;clade&quot; is wrong in place of &quot;tree&quot; since one is not looking
+&gt; for the &quot;best&quot; clade but the one that appears most often.
+&gt;
+&gt; Yes, each tree must be improbable (multiply the posterior probabilities
+&gt; of each branch to get the probability of the entire tree).
+&gt;
+&gt; So when the posterior is given as 0.95, it means that branch
+&gt; configuration (clade) appears 0.95 of the time in the sample, which if
+&gt; large enough implies that it also appears 0.95 of the time in the
+&gt; unsampled population.
+&gt;
+&gt; Dang.
+&gt;
+&gt; Many thanks,
+&gt; Richard
+&gt;
+&gt; * * * * * * * * * * * *
+&gt; Richard H. Zander
+&gt; Missouri Botanical Garden, PO Box 299, St. Louis, MO 63166-0299 USA
+&gt; Web sites: <A HREF="http://www.mobot.org/plantscience/resbot/">http://www.mobot.org/plantscience/resbot/</A> and
+&gt; <A HREF="http://www.mobot.org/plantscience/bfna/bfnamenu.htm">http://www.mobot.org/plantscience/bfna/bfnamenu.htm</A>
+&gt; Modern Evolutionary Systematics Web site:
+&gt; <A HREF="http://www.mobot.org/plantscience/resbot/21EvSy.htm">http://www.mobot.org/plantscience/resbot/21EvSy.htm</A>
+&gt; UPS and FedExpr -  MBG, 4344 Shaw Blvd, St. Louis 63110 USA
+&gt;
+&gt;
+&gt; -----Original Message-----
+&gt; From: Carl Rothfels [mailto:crothfels at yahoo.ca]
+&gt; Sent: Wednesday, April 18, 2012 5:45 PM
+&gt; To: Richard Zander
+&gt; Subject: Re: [Taxacom] Markov chain Monte Carlo
+&gt; Very short superficial response -- your initial description of MCMC is
+&gt; correct -- it attempts to sample from the posterior distribution in
+&gt; proportion to its probability density. But you're going astray when you
+&gt; start thinking about there being one tree that has a .95 posterior -- in
+&gt; any dataset with more than a handful of taxa any single tree will have
+&gt; an extremely low posterior (which may be what you're trying to say). In
+&gt; fact, with many taxa, the chances of sampling any tree even twice is
+&gt; low, even if you take very many samples from the posterior. So that's
+&gt; why folks concentrate on elements of the posterior, rather than on
+&gt; complete trees -- in what proportion of the sample is a given split in
+&gt; the tree supported (the posterior support for that branch)? What's the
+&gt; average length of this branch in the posterior? etc. The presence of a
+&gt; huge number of unique and extremely unlikely trees doesn't affect these
+&gt; measures (not in a way that is not already captured by the MCMC,
+&gt; provided the MCMC has sampled the posterior well, as it should if the
+&gt; researchers did a good job..).
+&gt;
+&gt; carl rothfels
+&gt;
+&gt; _______________________________________________
+&gt;
+&gt; Taxacom Mailing List
+&gt; Taxacom at mailman.nhm.ku.edu
+&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt;
+&gt; The Taxacom archive going back to 1992 may be searched with either of these methods:
+&gt;
+&gt; (1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt;
+&gt; (2) a Google search specified as:  site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+&gt;
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="122301.html">[Taxacom] Markov chain Monte Carlo
+</A></li>
+        <LI>Next message: <A HREF="122303.html">[Taxacom] Seeking collaboration on illustrated biological
+ dictionary/glossary for semantic mediawiki with ontological relations
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#122302">[ date ]</a>
+              <a href="thread.html#122302">[ thread ]</a>
+              <a href="subject.html#122302">[ subject ]</a>
+              <a href="author.html#122302">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

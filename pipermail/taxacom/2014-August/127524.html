@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Chameleons, GBIF, and the Red List
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Chameleons%2C%20GBIF%2C%20and%20the%20Red%20List&In-Reply-To=%3C005501cfbe2b%246fc0ef20%244f42cd60%24%40bishopmuseum.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="127522.html">
+   <LINK REL="Next"  HREF="127525.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2014-August/127524.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Chameleons, GBIF, and the Red List</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Chameleons%2C%20GBIF%2C%20and%20the%20Red%20List&In-Reply-To=%3C005501cfbe2b%246fc0ef20%244f42cd60%24%40bishopmuseum.org%3E"
+       TITLE="[Taxacom] Chameleons, GBIF, and the Red List">deepreef at bishopmuseum.org
+       </A><BR>
+    <I data-pagefind-meta="date">Fri Aug 22 12:06:36 CDT 2014</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="127522.html">[Taxacom] Chameleons, GBIF, and the Red List
+</A></li>
+        <LI>Next message: <A HREF="127525.html">[Taxacom] Chameleons, GBIF, and the Red List
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#127524">[ date ]</a>
+              <a href="thread.html#127524">[ thread ]</a>
+              <a href="subject.html#127524">[ subject ]</a>
+              <a href="author.html#127524">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2014</span><!--beginarticle-->
+<PRE>I have not followed this thread closely, but it seems to me that the main problems people complain about regarding data harvested by aggregators like GBIF fall into two broad categories:
+1) The indicated geographic location is bad
+2) The indicated taxon is bad
+
+Bad geography comes in two basic forms:
+a) The stated geographic place is not correct.  This could be due to bad original data or bad digitization, but there is generally no way to fix this other than fixing it at the source.
+
+b) The stated geographic place is correct, but the associated lat/long coordinates are either missing or wrong.  This one could be improved through various georeferencing algorithms and tools and/or crowd-sourcing.
+
+Bad taxonomy also comes in two basic forms:
+a) The organism was misidentified. Again, there is no real way to fix this other than to fix it at the source.  Sometimes a reasonable inference can be made by a good taxonomist, but that always comes with risks.
+
+b) The name used to represent the organism was &quot;correct&quot; in the context in which the organism was identified, but the name is not consistent with &quot;modern&quot; representations of &quot;accepted&quot; taxonomy.  There are many reasons for this, such as abbreviated or misspelled names, names that are objectively unavailable via the relevant Code (e.g., not validly published), names that are now widely regarded as heterotypic synonyms of other names, names that are classified in a different genus from what modern taxonomists follow, and text-strings that are really not representative of Linnean-style scientific names at all.
+
+Of these various categories of problems, I suspect it's the last one that represents the largest portion of the &quot;mess&quot;.  The good news is that help is on the way.
+
+If you've got some time, and have an interest in this sort of thing, grab a cup of coffee and read on. Otherwise, hit &quot;delete&quot; now.
+
+-------------------
+
+Still here?  Cool.
+
+OK, so one of the prototype services Rob Whitton and I developed through NSF funding of the Global Names Architecture is a service we call &quot;real-time taxonomic translation&quot;.  Basically, this is a service that &quot;translates&quot; taxon names into the &quot;modern&quot; equivalent. The best way to demonstrate the power of this service is through a specific example.
+
+When Rob and I are wearing our fish-nerd hats instead of our database-nerd hats, we are collaborating with colleagues at NOAA to develop a comprehensive checklist of the fishes of the Northwestern Hawaiian Islands that is &quot;evidence-based&quot; (i.e., occurrence-based with explicit evidence supporting each occurrence).  When this is published later this year (or possibly early next year), I think it will represent a very cool model for how all regional organism checklists should be done in the future.  But for this Taxacom post, I want to focus on just one small component of it:  how real-time taxonomic translation works.
+
+So, the &quot;evidence&quot; behind the occurrences we are using to develop this checklist come from various sources: Museum specimens, recorded observations, photos and videos, and, of course, historical literature reports.  On the literature reports, so far we have captured 2,856 Occurrence records based on reports in 24 publications going back 114 years.  If we only look at the raw taxon names as they appeared in these 24 publications, we get a list of 675 distinct scientific names.  Obviously, the prevailing taxonomy has changed over these 114 years, so many of those names are not consistent with the &quot;modern&quot; interpretation of the relevant taxonomy.  It would take many hours of time from multiple experts to review all of those 675 names and figure out all the corrected spellings, etc.  However, using the real-time taxonomic translation service Rob and I developed, we can convert these 675 historical names into the 506 &quot;accepted&quot; names as we would use them today.  And it does so in a few seconds (i.e., in &quot;real time&quot;).
+
+A short explanation of how it works is as follows:
+
+All 2,856 literature-based occurrence records are tied to a &quot;Taxon Name Usage&quot; (TNU) instance (i.e., the usage of a taxon name within a publication). These represent how the original publication recorded the name.  For example, what we now call Acanthurus triostegus had been variously recorded in these literature citations by the following names:
+Acanthurus triostegus (Linnaeus, 1758)
+Hepatus triostegus (Linnaeus, 1758)
+Acanthurus triostegus sandvicensis Streets, 1877
+Hepatus sandvicensis (Streets, 1877)
+Teuthis sandvicensis (Streets, 1877)
+
+Similarly, what we now call Coris flavovittata has been recorded variously as:
+Coris flavovittata (Bennett, 1828)
+Coris lepomis Jenkins, 1901
+Julis eydouxii Valenciennes in Cuvier &amp; Valenciennes, 1839
+Julis flavovittata Bennett, 1828
+
+...and so on for all the different names.
+
+Every TNU is linked to what we call the &quot;Protonym&quot; of the name.  This is essentially equivalent to the botanical &quot;basionym&quot;, but essentially represents the original description of the name. Taking the second example above, there are three distinct Protonyms represented among the four names used for Coris flavovittata:
+flavovittata Bennett, 1828
+eydouxii Valenciennes in Cuvier &amp; Valenciennes, 1839
+lepomis Jenkins, 1901
+
+The taxonomic translation service is built around the &quot;Meta-Authority&quot; (Authority of Authorities) concept.  A Meta-Authority is any organization or individual who wants to assert an &quot;accepted&quot; taxonomy.  For example, ITIS, CoL, WoRMS, etc. are all Meta-Authorities, because they assert an &quot;accepted&quot; usage for each taxon name.  For our checklist paper, we have established our own Meta-Authority (technically now recorded as the &quot;Rob Whitton Meta-Authority, but functionally it is the Bishop Museum Meta-Authority). Each Meta-Authority has a specific scope of interest -- which might be very large (ITIS, CoL, WoRMS, etc.), or might be very small (e.g., a single family or geographic region).
+
+In any case, what a Meta-Authority does is, for each name within the scope of interest, it makes a statement along the lines &quot;For Protonym A, I/We follow the Treatment of Reference X&quot;
+
+In this case, The Rob Whitton/Bishop Museum Meta-Authority has made these assertions:
+- For the protonym &quot;flavovittata Bennett, 1828&quot;, we follow the treatment of Randall 2007 [who treats it as a valid species within the genus Coris].
+- For the protonym &quot;eydouxii Valenciennes in Cuvier &amp; Valenciennes, 1839&quot;, we follow the treatment of Eschmeyer 2004 [who treats it as a junior synonym of flavovittata Bennett, 1828].
+- For the protonym &quot;lepomis Jenkins, 1901&quot;, we follow the treatment of Eschmeyer 2004 [who treats it as a junior synonym of flavovittata Bennett, 1828].
+
+This is how we are able to collapse those messy 675 names spanning 114 years of taxonomic history into the 506 names that we (the experts of the fishes of the Northwestern Hawaiian Islands) regard as &quot;accepted&quot; in a few seconds.
+
+If anyone wants more details on how it works, I'd be happy to explain further.
+
+The main limitations of this services are:
+1) It's limited to the names within the Global Names Usage Bank (GNUB; currently 543,989 TNUs linked to 195,369 Protonyms); and
+2) There is currently only one Meta-Authority implemented
+
+We already have funding from NSF to address limitation #1, by developing a workflow to capture millions of protonyms and tens of millions of TNUs through integrating GNUB, GNI, BHL, and multiple other taxonomic data sources.  We also plan to expand the Meta-Authority list to include the &quot;big&quot; ones (e.g., IT IS/CoL, WoRMS, NCBI), and develop tools to make it easy for any individual or organization to create their own personal Meta-Authority.  And, we just submitted a proposal to NSF to (among other things) develop this real-time taxonomic translation service into a set of tools that can be very easily applied to any list of taxon names.
+
+If we are successful, users of GBIF data will have the option of selecting any Meta-Authority they want (one of the big ones, or their own), and then be able to translate (in real time) all the taxon names as they appear in the GBIF dataset into the &quot;accepted&quot; modern/clean equivalent names according to the selected Meta-Authority.  And the Meta-Authorities aren't just for species-level names -- they also provide full &quot;accepted&quot; classifications all the way up to Kingdom.
+
+Obviously this won't solve all the problems with aggregated data, but it will help solve a lot of it.
+
+OK, enough for now....
+
+Aloha,
+Rich
+
+
+Richard L. Pyle, PhD
+Database Coordinator for Natural Sciences
+Associate Zoologist in Ichthyology
+Dive Safety Officer
+Department of Natural Sciences, Bishop Museum
+1525 Bernice St., Honolulu, HI 96817
+Ph: (808)848-4115, Fax: (808)847-8252
+email: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">deepreef at bishopmuseum.org</A>
+<A HREF="http://hbs.bishopmuseum.org/staff/pylerichard.html">http://hbs.bishopmuseum.org/staff/pylerichard.html</A>
+
+Note: This disclaimer formally apologizes for the disclaimer below, over which I have no control.
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="127522.html">[Taxacom] Chameleons, GBIF, and the Red List
+</A></li>
+	<LI>Next message: <A HREF="127525.html">[Taxacom] Chameleons, GBIF, and the Red List
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#127524">[ date ]</a>
+              <a href="thread.html#127524">[ thread ]</a>
+              <a href="subject.html#127524">[ subject ]</a>
+              <a href="author.html#127524">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

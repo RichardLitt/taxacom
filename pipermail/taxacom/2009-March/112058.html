@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Geodetic datums do matter
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Geodetic%20datums%20do%20matter&In-Reply-To=%3Cf05100300c5ed61e564b0%40%5B138.23.134.119%5D%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="112033.html">
+   <LINK REL="Next"  HREF="112061.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2009-March/112058.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Geodetic datums do matter</H1>
+    <B data-pagefind-meta="author">Doug Yanega</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Geodetic%20datums%20do%20matter&In-Reply-To=%3Cf05100300c5ed61e564b0%40%5B138.23.134.119%5D%3E"
+       TITLE="[Taxacom] Geodetic datums do matter">dyanega at ucr.edu
+       </A><BR>
+    <I data-pagefind-meta="date">Mon Mar 23 12:46:48 CDT 2009</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="112033.html">[Taxacom] Geodetic datums do matter  [SEC=Unclassified]
+</A></li>
+        <LI>Next message: <A HREF="112061.html">[Taxacom] Geodetic datums do matter
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#112058">[ date ]</a>
+              <a href="thread.html#112058">[ thread ]</a>
+              <a href="subject.html#112058">[ subject ]</a>
+              <a href="author.html#112058">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2009</span><!--beginarticle-->
+<PRE>Dave Watts wrote:
+
+&gt;<i>It does matter - a geodetic datum refers to a model of world that 
+</I>&gt;<i>attempts to fit the shape of the earth and therefore
+</I>&gt;<i>is an approximation to it. Each datum uses various parameters to 
+</I>&gt;<i>define its shape and hence each coordinate of the same place will be 
+</I>&gt;<i>different for each datum.
+</I>&gt;<i>
+</I>&gt;<i>Comparing WGS84  to the Australian standard AGD96  will make a point 
+</I>&gt;<i>appear to move 200 metres. Most users of GPS units are unaware of 
+</I>&gt;<i>this and complain that the GPS unit / map is in error when they 
+</I>&gt;<i>compare the positions  with different datums.
+</I>&gt;<i>
+</I>&gt;<i>In reference to an earlier post, GPS horizontal accuracies for hand 
+</I>&gt;<i>helds is likely to be only about 20 metres. If you wish accurate 
+</I>&gt;<i>stuff, you need a base station and do differential measurements. 
+</I>&gt;<i>Heights from hand-helds are also very poor.
+</I>&gt;<i>
+</I>&gt;<i>The bottom line is KNOW YOUR DATUM when recording stuff. It will 
+</I>&gt;<i>save you problems in the future as you can transform from any one 
+</I>&gt;<i>datum to another with certainty.
+</I>&gt;<i>
+</I>&gt;<i>Cheers Dave
+</I>
+It matters, but how MUCH it matters (the actual practical 
+implications) will DEPEND ON CONTEXT. I've gotten into many arguments 
+about this point with a very good friend who is an expert on 
+georeferencing; he is fond of claiming that if you were dying buried 
+underneath an avalanche, a *properly* georeferenced point is one that 
+could direct a team of rescuers to your position and dig you out 
+before you freeze to death. In such a context, yes, the datum is 
+crucial. If you're in the military and targeting &quot;smart bombs&quot; to 
+blow up certain buildings remotely, then yes, the datum is crucial. 
+However, I am conversely fond of telling him that when a team of 
+entomologists goes into the field to collect specimens, we take a GPS 
+reading where we park the car, and then each person is free to wander 
+- maybe a kilometer or more distant, collecting dozens of specimens 
+at random points anywhere within that radius. There is SO MUCH ERROR 
+associated with the specimens bearing that GPS reading on their 
+labels that it is no longer relevant what datum it was based on; even 
+the largest possible discrepancy from one datum to another is utterly 
+dwarfed by the uncertainty, not only in the location of the actual 
+collecting event but especially with regards to the overall spatial 
+distribution of the type of organism that was collected. An error of 
+200m may seem massive if you're trying to find a single, immobile 
+target, but a lot of what biologists deal with are not single 
+immobile targets! If I have data from a weather station, and it's 
+200m from where I think it is, it isn't going to influence the value 
+of the weather data. If I collect a rare bird specimen at 33 26 13 N, 
+117 19 25 W, and someone goes back 50 years later and is mistakenly 
+200m from the actual spot I collected that bird, then this error is 
+NOT going to negatively impact their ability to find another member 
+of that same species (i.e., if they don't find one, then the *reason* 
+for their failure is NOT going to be that they were 200m from where 
+they needed to be). Locating a spot where you can encounter members 
+of species X is not the same as locating a friend's house using a GPS 
+reading alone; most species have a spatial distribution greater than 
+a 200m radius, and most houses are considerably smaller. Accordingly, 
+it is genuinely pointless in such a context to *worry* about the 
+datum used.
+
+Even in those very special circumstances where a habitat is along a 
+boundary feature such as a shoreline or cliff, where a 200m error 
+might put one across that boundary, or a cave where one might miss 
+the entrance, no sensible biologist is going to take a GPS reading so 
+literally as to do something like climb in a boat and start searching 
+200m offshore to find a known tidal pool species, for example; those 
+few incredibly rare cases where this small a discrepancy may actually 
+be problematic are a negligible fraction out of all possible specimen 
+labels in existence. In that case, maybe people working on shoreline 
+habitats or cave-dwelling species or such might be more concerned 
+than others, and place greater emphasis on knowing their datum - 
+again, it's a matter of context, and for many (if not most) of us, it 
+simply won't matter.
+
+Sincerely,
+-- 
+
+Doug Yanega        Dept. of Entomology         Entomology Research Museum
+Univ. of California, Riverside, CA 92521-0314        skype: dyanega
+phone: (951) 827-4315 (standard disclaimer: opinions are mine, not UCR's)
+              <A HREF="http://cache.ucr.edu/~heraty/yanega.html">http://cache.ucr.edu/~heraty/yanega.html</A>
+   &quot;There are some enterprises in which a careful disorderliness
+         is the true method&quot; - Herman Melville, Moby Dick, Chap. 82
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="112033.html">[Taxacom] Geodetic datums do matter  [SEC=Unclassified]
+</A></li>
+	<LI>Next message: <A HREF="112061.html">[Taxacom] Geodetic datums do matter
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#112058">[ date ]</a>
+              <a href="thread.html#112058">[ thread ]</a>
+              <a href="subject.html#112058">[ subject ]</a>
+              <a href="author.html#112058">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

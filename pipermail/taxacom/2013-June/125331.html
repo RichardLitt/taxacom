@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Data query
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-June/125331.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Data query</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at bishopmuseum.org<BR>
+    <I data-pagefind-meta="date">Tue Jun 25 03:27:57 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="125330.html">[Taxacom] Data query
+</A></li>
+        <LI>Next message: <A HREF="125332.html">[Taxacom] Data query
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#125331">[ date ]</a>
+              <a href="thread.html#125331">[ thread ]</a>
+              <a href="subject.html#125331">[ subject ]</a>
+              <a href="author.html#125331">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>Well, I didn't really want to go down that path, but since you brought it
+up..
+
+ 
+
+First of all, we have a service that already does that:
+
+<A HREF="http://zoobank.org/Search?search_term=Chromis+abyssus">http://zoobank.org/Search?search_term=Chromis+abyssus</A>
+
+ 
+
+In other words, there's your URL for the name.  It takes you to a
+disambiguation page, rather than directly to the page.  It would be fairly
+easy to 'smarten' this service up to catch cases where there is only one
+search result and auto re-direct to that page (ala Google's &quot;I'm Feeling
+Lucky&quot; feature).
+
+ 
+
+But frankly, I wouldn't want to encourage people to link to a service as
+though it were an identifier. Yes, I know that in some circles, all URLs
+*are* identifiers; but some URLs are more optimally designed for
+identification than others.  And as much as I am a HUGE defender of Linnean
+names as human-friendly identifiers (being an ICZN Commissioner and all),
+more than three decades of experience working with computer databases to
+track organism names has taught me nothing if not that scientific names make
+for really, really, really, REALLY bad identifiers for computer systems.
+The problem is not that text strings as such cannot be used by computers as
+identifiers.  Rather, the problems mostly involve bad human behavior when
+confronted with a familiar-looking thing.  The temptation to change that
+thing is just too powerful. Good Identifiers just don't want to be changed.
+
+ 
+
+I fear that if I launched into a more elaborated explanation than that, I
+would be typing this email for another hour.  I'd rather add a half-dozen
+identifiers each to 60 different ZooBank records than spend another hour
+writing email..
+
+ 
+
+For now, I'll just leave it as this:  I currently established WikiSpecies as
+an &quot;Identifier Domain&quot; (mostly for your benefit, in honor of the many hours
+of work you have personally put into adding content to ZooBank) - which
+means that I treat the URLs as &quot;identifiers&quot; rather than services.  However,
+in a sense, it's more of a service.  I don't really need to establish a
+&quot;hard link&quot; of this sort to WikiSpecies, because it's much easier to
+establish a &quot;soft link&quot;.  The idea of a &quot;soft link&quot; is that instead of
+explicitly recording in the database &quot;ZB:
+8BDC0735-FEA4-4298-83FA-D04F67C3FBEC maps to WS:Chromis_abyssus&quot;, instead I
+can simply take the name-string (&quot;Chromis abyssus&quot;), replace the space with
+an underscore, and slap that at the end of
+&quot;<A HREF="http://species.wikimedia.org/wiki/">http://species.wikimedia.org/wiki/</A>&quot;.  Before displaying the link to the
+user, I can ping that page, and only display the link if I get a real WS
+page.  In other words, there's no reason for me to explicitly make that
+link, because I can make the link on the fly.  This is the advantage of
+having a &quot;soft&quot; link.  But there are other advantages to using opaque
+identifiers (e.g., DOIs . hint, hint, Rod) that are proper actionable GUIDs
+- and that's where the &quot;hard links&quot; come into play. An example of this, that
+must be explicitly recorded in the database as a cross-link (instead of
+created on the fly as a soft link), is &quot;ZB:
+8BDC0735-FEA4-4298-83FA-D04F67C3FBEC maps to WoRMS:345844&quot;.
+
+ 
+
+OK, 'nuff said.
+
+ 
+
+Aloha,
+
+Rich
+
+ 
+
+ 
+
+ 
+
+From: Stephen Thorpe [mailto:stephen_thorpe at yahoo.co.nz] 
+Sent: Monday, June 24, 2013 9:35 PM
+To: Richard Pyle; Tony.Rees at csiro.au; mesibov at southcom.com.au
+Cc: taxacom at mailman.nhm.ku.edu
+Subject: Re: [Taxacom] Data query
+
+ 
+
+Actually Rich, you might think seriously about creating ZooBank URLs, in
+addition to, and which redirect to the current ones based on LSIDs, but
+based instead on the name, as Wikispecies does. This would greatly
+facilitate automatic link creation from WS to ZooBank ...
+
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="125330.html">[Taxacom] Data query
+</A></li>
+        <LI>Next message: <A HREF="125332.html">[Taxacom] Data query
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#125331">[ date ]</a>
+              <a href="thread.html#125331">[ thread ]</a>
+              <a href="subject.html#125331">[ subject ]</a>
+              <a href="author.html#125331">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

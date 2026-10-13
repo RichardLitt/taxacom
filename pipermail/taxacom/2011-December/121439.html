@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Finding your species in Mendeley
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2011-December/121439.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Finding your species in Mendeley</H1>
+    <B data-pagefind-meta="author">Roderic Page</B>
+    r.page at bio.gla.ac.uk<BR>
+    <I data-pagefind-meta="date">Wed Dec  7 00:43:55 CST 2011</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="121438.html">[Taxacom] question -- topic length
+</A></li>
+        <LI>Next message: <A HREF="121440.html">[Taxacom] Finding your species in Mendeley
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#121439">[ date ]</a>
+              <a href="thread.html#121439">[ thread ]</a>
+              <a href="subject.html#121439">[ subject ]</a>
+              <a href="author.html#121439">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2011</span><!--beginarticle-->
+<PRE>Dear Geoff,
+
+On 7 Dec 2011, at 01:15, Geoffrey Read wrote:
+
+&gt; Hi Rod,
+&gt; 
+&gt; I'll put the 'tout tout' bit first.  Ordinary new or updated WoRMS entries
+&gt; can look more like this routine one (done yesterday) with a nice type
+&gt; locality map, and a source (citation) with a doi hot link going bang to
+&gt; the pdf of the original description. Links to whatever on the web is
+&gt; relevant can be added, also images. So the potential is there.
+&gt; 
+&gt; <A HREF="http://www.marinespecies.org/polychaeta/aphia.php?p=taxdetails&amp;idY0097">http://www.marinespecies.org/polychaeta/aphia.php?p=taxdetails&amp;idY0097</A>
+
+Nice, but can't resist three comments:
+
+1. It's great that this record has a DOI, but the same information doesn't appear in the metadata for the LSID, which means the only way I could extract this information from WoRMS is by screen scraping (yuck)
+
+2. iTaxon already has this record complete with DOI <A HREF="http://iphylo.org/~rpage/itaxon/?search=Notodasus+harrisae">http://iphylo.org/~rpage/itaxon/?search=Notodasus+harrisae</A>
+
+3. When will map makers learn about red-green colour blindness! I can't see the red dot indicating the type locality unless I  zoom in and the green background momentarily disappears.
+
+&gt; 
+&gt; However, the fleshing of the skeleton is variable. Because the base data
+&gt; arose from many origins, a lot of WoRMS entries can be the checklist type
+&gt; you noticed - eg., I noticed for Isopoda the 'source' might be only a
+&gt; 'basis of record' type from Schotte et als World list. Not adequate to you
+&gt; or me, because it doesn't have the source for the original description. 
+&gt; Polychaeta section is rather better off with a good proportion of original
+&gt; description literature of 10,000 papers (in the database) linked, and but
+&gt; still many 'basis of record' ones exist that just indicate &quot;we got this
+&gt; from somewhere, trust us, but sorry, it's not fully referenced&quot;).
+
+This is a problem that's shared by a lot of databases.
+
+&gt; 
+&gt; I'm all for adding good live links to the primary literature. Best done
+&gt; manually, but that will take years for WoRMS, and auto matching is worth
+&gt; developing, as long as the resultant links are identified as unverified &amp;
+&gt; user beware, and I don't need to spend my days removing the real duds from
+&gt; my area. Sorry if that sounds a bit pessimistic, and I'm eager to see how
+&gt; itaxon develops, but of course.
+
+There are two aspects of matching. The first is name to citation. the second is citation to identifier. For the first I'm using ION as a starting point, so if ION has it wrong (which it does sometimes) then iTaxon will be wrong. The second is matching citations to identifiers (e.g., DOIs, BHL records). Much of this I've automated, and there is always the potential for errors, especially as the original citations can be a bit dodgy.
+
+My sense is that a good fraction of names can be linked fairly quickly (I have &gt; 250,000 animal names done in a few months), then there will be a second tier of harder ones, followed by the really, really hard ones.
+
+But I think a significant fraction of WoRMS names could be matched automatically.
+
+Regards
+
+Rod
+
+
+
+&gt; 
+&gt; 
+&gt; Geoff
+&gt; 
+&gt; On Tue, December 6, 2011 9:55 pm, Roderic Page wrote:
+&gt;&gt; Dear Geoff,
+&gt;&gt; 
+&gt;&gt; On 5 Dec 2011, at 23:40, Geoff Read wrote:
+&gt; 
+&gt;&gt;&gt; [...]
+&gt;&gt;&gt; WoRMS has a way to go with achieving literature mapping and the
+&gt;&gt;&gt; important
+&gt;&gt;&gt; facility to quickly open the original publication, supplying the link
+&gt;&gt;&gt; for
+&gt;&gt;&gt; which for new entries may be viewed as optional by some editors (not
+&gt;&gt;&gt; me),
+&gt;&gt;&gt; but it has a good literature list with mostly full rather than micro
+&gt;&gt;&gt; citations. There may already be an automatic link to the BHL mentions of
+&gt;&gt;&gt; the older species.
+&gt;&gt; 
+&gt;&gt; My sense is that most of the literature in WoRMS is &quot;secondary&quot;, in the
+&gt;&gt; sense that it comprises checklists, etc., which are used as sources for
+&gt;&gt; names, and an authority for usage of the name. I'm taking with Ward
+&gt;&gt; Appeltans about adding links to the primary literature from
+&gt;&gt; <A HREF="http://iphylo.org/~rpage/itaxon">http://iphylo.org/~rpage/itaxon</A> .
+&gt; 
+&gt; 
+&gt; 
+
+---------------------------------------------------------
+Roderic Page
+Professor of Taxonomy
+Institute of Biodiversity, Animal Health and Comparative Medicine
+College of Medical, Veterinary and Life Sciences
+Graham Kerr Building
+University of Glasgow
+Glasgow G12 8QQ, UK
+
+Email: r.page at bio.gla.ac.uk
+Tel: +44 141 330 4778
+Fax: +44 141 330 2792
+AIM: rodpage1962 at aim.com
+Facebook: <A HREF="http://www.facebook.com/profile.php?id12517192">http://www.facebook.com/profile.php?id12517192</A>
+Twitter: <A HREF="http://twitter.com/rdmpage">http://twitter.com/rdmpage</A>
+Blog: <A HREF="http://iphylo.blogspot.com">http://iphylo.blogspot.com</A>
+Home page: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="121438.html">[Taxacom] question -- topic length
+</A></li>
+        <LI>Next message: <A HREF="121440.html">[Taxacom] Finding your species in Mendeley
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#121439">[ date ]</a>
+              <a href="thread.html#121439">[ thread ]</a>
+              <a href="subject.html#121439">[ subject ]</a>
+              <a href="author.html#121439">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

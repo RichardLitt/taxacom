@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Ebbe Nielsen Challenge submission
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2018-September/132509.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Ebbe Nielsen Challenge submission</H1>
+    <B data-pagefind-meta="author">Shorthouse, David</B>
+    davidpshorthouse at gmail.com<BR>
+    <I data-pagefind-meta="date">Fri Sep  7 07:38:46 CDT 2018</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="132508.html">[Taxacom] Ebbe Nielsen Challenge submission
+</A></li>
+        <LI>Next message: <A HREF="132510.html">[Taxacom] Ebbe Nielsen Challenge submission
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#132509">[ date ]</a>
+              <a href="thread.html#132509">[ thread ]</a>
+              <a href="subject.html#132509">[ subject ]</a>
+              <a href="author.html#132509">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2018</span><!--beginarticle-->
+<PRE>Dan, Rod -
+
+This is interesting. I'm assuming we'd want a way to differentiate
+what was ID'd/collected by a machine vs. what was accomplished by a
+human. They have very different signals. Are the Darwin Core terms
+identifiedBy and recordedBy appropriate? The definition of
+identifiedBy is as follows: &quot;A list (concatenated and separated) of
+names of people, groups, or organizations who assigned the Taxon to
+the subject.&quot; No machines there. That said, if you poke around ORCID a
+bit, it's clear that there are a heap of spammy accounts that are not
+people at all, eg <A HREF="https://orcid.org/0000-0002-5950-6036">https://orcid.org/0000-0002-5950-6036</A> (sigh).
+Clearly, someone made these with the expectation that machines at
+Google will bump up their page rank. In theory, a mass collecting
+machine and a mass identification machine could have an ORCID or other
+identifier such that if we had the desire to, we could differentiate
+human vs. machine instead of attempting to do this via strings of text
+as we do now (eg is that D. Janzen in identifiedBy the same person as
+this other D. Janzen?!). But, that puts the onus on some third party
+to ensure GUID-assigning organizations like ORCID (meant for humans)
+are never purged if these accounts do not represent the identifies of
+humans.
+
+This has to be taken seriously in an &quot;Agent Actions&quot; extension to Darwin Core.
+
+David
+On Fri, Sep 7, 2018 at 4:32 AM Roderic Page &lt;Roderic.Page at glasgow.ac.uk&gt; wrote:
+&gt;
+&gt; Dan, David will no doubt have something to say about this, but I think there are frameworks to handle this, such as nanopubs <A HREF="http://nanopub.org/wordpress/">http://nanopub.org/wordpress/</A> . Put simply, one way to handle machine ids is to have a DOI for, say, a barcode dataset, and use that DOI as the GUID for the identifier. Then we can attribute all these identifications to the machine/process that did the ids. If specimen gets new identification in subsequent analysis, Darwin Core can already handle that (it’s possible to have multiple ids).
+&gt;
+&gt; Regards,
+&gt;
+&gt; Rod
+&gt;
+&gt; Get Outlook for iOS
+&gt;
+&gt;
+&gt;
+&gt; On Fri, Sep 7, 2018 at 4:53 AM +0200, &quot;Janzen, Daniel H&quot; &lt;djanzen at sas.upenn.edu&gt; wrote:
+&gt;
+&gt;&gt; what is the plan for when the ID is done by a DNA barcode, a machine, and then equally, later on upgraded or otherwise modified by machine (and collected in the beginning by machine, such as a Malaise trap and never seen by a taxonomist other than a machine).  Or when the ID is done by unknown persons sorting the specimens into unit trays in a museum (whenever).
+&gt;&gt;
+&gt;&gt; ??
+&gt;&gt;
+&gt;&gt; Dan Janzen
+&gt;&gt;
+&gt;&gt;
+&gt;&gt; &gt; On Sep 6, 2018, at 8:00 PM, Shorthouse, David  wrote:
+&gt;&gt; &gt;
+&gt;&gt; &gt; Thanks! Am pleased it's sparked interest. It means we're on the right track
+&gt;&gt; &gt; with our thoughts about an extension to Darwin Core.
+&gt;&gt; &gt;
+&gt;&gt; &gt; -D
+&gt;&gt; &gt;
+&gt;&gt; &gt; On Thu, Sep 6, 2018 at 3:54 PM Eduardo Dalcin  wrote:
+&gt;&gt; &gt;
+&gt;&gt; &gt;&gt; Well done! Amazing tool.
+&gt;&gt; &gt;&gt;
+&gt;&gt; &gt;&gt; Eduardo
+&gt;&gt; &gt;&gt; --------------------------------
+&gt;&gt; &gt;&gt; [image: photo]
+&gt;&gt; &gt;&gt; *Eduardo Dalcin*
+&gt;&gt; &gt;&gt; Inst. Pesq. Jardim Botânico do Rio de Janeiro
+&gt;&gt; &gt;&gt; +55 21 3204 2116 &lt;+55+21+3204+2116&gt; | +55 21 98393 3344
+&gt;&gt; &gt;&gt; &lt;+55+21+98393+3344&gt; | edalcin at jbrj.org | Skype: eduardo.dalcin
+&gt;&gt; &gt;&gt;
+&gt;&gt; &gt;&gt;  | WhatsApp: 55 21 983933344
+&gt;&gt; &gt;&gt; Rua Pacheco Leão 915 - Sl 203 - Rio de Janeiro - RJ - Brazil
+&gt;&gt; &gt;&gt;
+&gt;&gt; &gt;&gt;
+&gt;&gt; &gt;&gt; Portal de Dados: <A HREF="http://dados.jbrj.gov.br">http://dados.jbrj.gov.br</A>
+&gt;&gt; &gt;&gt; Blog: <A HREF="http://eduardo.dalc.in">http://eduardo.dalc.in</A>
+&gt;&gt; &gt;&gt; Agende uma reunião: <A HREF="https://doodle.com/edalcin">https://doodle.com/edalcin</A>
+&gt;&gt; &gt;&gt; &quot;To organize Brazil's biodiversity information and make it universally
+&gt;&gt; &gt;&gt; accessible and useful.&quot;
+&gt;&gt; &gt;&gt;
+&gt;&gt; &gt;&gt;
+&gt;&gt; &gt;&gt; Em qui, 6 de set de 2018 às 11:26, Shorthouse, David &lt;
+&gt;&gt; &gt;&gt; davidpshorthouse at gmail.com&gt; escreveu:
+&gt;&gt; &gt;&gt;
+&gt;&gt; &gt;&gt;&gt; All -
+&gt;&gt; &gt;&gt;&gt;
+&gt;&gt; &gt;&gt;&gt; I threw my hat in the ring for GBIF's Ebbe Nielsen Challenge and
+&gt;&gt; &gt;&gt;&gt; welcome you to take a gander at <A HREF="https://bloodhound.shorthouse.net/.">https://bloodhound.shorthouse.net/.</A> If
+&gt;&gt; &gt;&gt;&gt; you also have an ORCID account, try your hand at declaring the
+&gt;&gt; &gt;&gt;&gt; specimens you identified or collected - assuming they're shown to you!
+&gt;&gt; &gt;&gt;&gt; (*ducks and cowers*) And, if you're up for it, make your profile
+&gt;&gt; &gt;&gt;&gt; public.
+&gt;&gt; &gt;&gt;&gt;
+&gt;&gt; &gt;&gt;&gt; I'm using this as fodder to help develop a 1:many extension to Darwin
+&gt;&gt; &gt;&gt;&gt; Core with the joint RDA/TDWG Interest Group who are interested in how
+&gt;&gt; &gt;&gt;&gt; to best attribute occurrence data to people. The extension has yet to
+&gt;&gt; &gt;&gt;&gt; be named but will attempt to express from the source, a better
+&gt;&gt; &gt;&gt;&gt; mechanism to share granular information about the actions people take
+&gt;&gt; &gt;&gt;&gt; when collecting, identifying, and curating occurrence data &amp; will
+&gt;&gt; &gt;&gt;&gt; include identifiers for people. The logical identifier in today's
+&gt;&gt; &gt;&gt;&gt; academic environment is ORCID - thus we can have a collective think
+&gt;&gt; &gt;&gt;&gt; about academic credit systems for people who work at and contribute to
+&gt;&gt; &gt;&gt;&gt; natural history collections -, but we'd expect the extension to be
+&gt;&gt; &gt;&gt;&gt; supportive of other such identifiers. It's early days but here's its
+&gt;&gt; &gt;&gt;&gt; workspace: <A HREF="https://github.com/tdwg/attribution.">https://github.com/tdwg/attribution.</A> Others involved in
+&gt;&gt; &gt;&gt;&gt; this possible extension to Darwin Core are cc'd here.
+&gt;&gt; &gt;&gt;&gt;
+&gt;&gt; &gt;&gt;&gt; Cheers,
+&gt;&gt; &gt;&gt;&gt;
+&gt;&gt; &gt;&gt;&gt; David P. Shorthouse
+&gt;&gt; &gt;&gt;&gt; _______________________________________________
+&gt;&gt; &gt;&gt;&gt; Taxacom Mailing List
+&gt;&gt; &gt;&gt;&gt; Send Taxacom mailing list submissions to: Taxacom at mailman.nhm.ku.edu
+&gt;&gt; &gt;&gt;&gt;
+&gt;&gt; &gt;&gt;&gt; <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom</A>
+&gt;&gt; &gt;&gt;&gt; The Taxacom Archive back to 1992 may be searched at:
+&gt;&gt; &gt;&gt;&gt; <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt;&gt; &gt;&gt;&gt; To subscribe or unsubscribe via the Web, visit:
+&gt;&gt; &gt;&gt;&gt; <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom</A>
+&gt;&gt; &gt;&gt;&gt; You can reach the person managing the list at:
+&gt;&gt; &gt;&gt;&gt; taxacom-owner at mailman.nhm.ku.edu
+&gt;&gt; &gt;&gt;&gt;
+&gt;&gt; &gt;&gt;&gt; Nurturing Nuance while Assaulting Ambiguity for 31 Some Years, 1987-2018.
+&gt;&gt; &gt;&gt;&gt;
+&gt;&gt; &gt;&gt;
+&gt;&gt; &gt; _______________________________________________
+&gt;&gt; &gt; Taxacom Mailing List
+&gt;&gt; &gt; Send Taxacom mailing list submissions to: Taxacom at mailman.nhm.ku.edu
+&gt;&gt; &gt;
+&gt;&gt; &gt; <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom</A>
+&gt;&gt; &gt; The Taxacom Archive back to 1992 may be searched at: <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt;&gt; &gt; To subscribe or unsubscribe via the Web, visit: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom</A>
+&gt;&gt; &gt; You can reach the person managing the list at: taxacom-owner at mailman.nhm.ku.edu
+&gt;&gt; &gt;
+&gt;&gt; &gt; Nurturing Nuance while Assaulting Ambiguity for 31 Some Years, 1987-2018.
+&gt;&gt;
+&gt;&gt; _______________________________________________
+&gt;&gt; Taxacom Mailing List
+&gt;&gt; Send Taxacom mailing list submissions to: Taxacom at mailman.nhm.ku.edu
+&gt;&gt;
+&gt;&gt; <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom</A>
+&gt;&gt; The Taxacom Archive back to 1992 may be searched at: <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt;&gt; To subscribe or unsubscribe via the Web, visit: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom</A>
+&gt;&gt; You can reach the person managing the list at: taxacom-owner at mailman.nhm.ku.edu
+&gt;&gt;
+&gt;&gt; Nurturing Nuance while Assaulting Ambiguity for 31 Some Years, 1987-2018.
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="132508.html">[Taxacom] Ebbe Nielsen Challenge submission
+</A></li>
+        <LI>Next message: <A HREF="132510.html">[Taxacom] Ebbe Nielsen Challenge submission
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#132509">[ date ]</a>
+              <a href="thread.html#132509">[ thread ]</a>
+              <a href="subject.html#132509">[ subject ]</a>
+              <a href="author.html#132509">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

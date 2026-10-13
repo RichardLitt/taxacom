@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> collection DB design question
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1996-December/019957.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">collection DB design question</H1>
+    <B data-pagefind-meta="author">Robin Leech</B>
+    robinl at NAIT.AB.CA<BR>
+    <I data-pagefind-meta="date">Thu Dec 12 19:27:49 CST 1996</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="103109.html">Cooperation &amp; professionals
+</A></li>
+        <LI>Next message: <A HREF="055749.html">collection DB design question
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#019957">[ date ]</a>
+              <a href="thread.html#019957">[ thread ]</a>
+              <a href="subject.html#019957">[ subject ]</a>
+              <a href="author.html#019957">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1996</span><!--beginarticle-->
+<PRE>You have several variations on a theme here. You have presented the
+simplest situation.
+
+Suppose that the professor borrows the specimens for a thesis study by a
+student.  Now suppose that the student goes elsewhere (a reality) and
+that the professor also goes elsewhere (a possibility).
+
+If you do not have some way of retaining the address of the institute to
+which the specimens were sent, and the the new address of the professor,
+and a new address for the student (suppose, for example, the student
+wants to enlarge the project either as a postdoc or as a new professor,
+an these are realities!), then your address data base system should be
+able to access these three addresses.
+
+Now, as a new PhD on a postdoc, the student may be there for only a year
+or two, so you should allow for 4 addresses.  My final perhaps is that the
+student was at the MSc level, and is expanding the topic for a PhD, and
+that the PhD will be done at a different university, either with the same
+professor, or with a new one.
+
+I do not know if you can do it, but perhaps allow for 5 addresses and 3
+names.  Now, if you were still using loan card files, there would be no
+problem, would there?
+
+Robin Leech
+
+On Thu, 12 Dec 1996, Alan Harvey wrote:
+
+&gt; Greetings!
+&gt;
+&gt; For the sake of efficient design of cataloging databases, consider the
+&gt; following situation. Dr. X, who is at institution Y, borrows some specimens
+&gt; from our museum, and we dutifully record her name and address (in the
+&gt; computer, advanced beings that we are). Subsequently she moves to Z, and we
+&gt; not surprisingly update our address files accordingly. While this makes
+&gt; perfect sense, I was wondering if anyone knows of a situation in which we
+&gt; would NOT want to update a person's address, i.e., for historical reasons.
+&gt; For example, if Dr. X donated a collection of specimens while at Y, should
+&gt; the _accession_ record connected to that gift be updated when she moves to
+&gt; Z, or remain a static document? This question may sound trivial, but it
+&gt; affects the way our cataloging database will be designed. I think it would
+&gt; be easier if we didn't have to juggle multiple addresses for each person in
+&gt; the database itself. What about &quot;retiring&quot; previous addresses, with dates,
+&gt; to a separate file whenever a change is made, so the information isn't
+&gt; lost?
+&gt;
+&gt; Thanks in advance for any thoughts on this.
+&gt;
+&gt; Cheers,
+&gt;
+&gt; Alan
+&gt;
+&gt; ------------------------------------
+&gt;
+&gt; Alan W. Harvey (aharvey at amnh.org)
+&gt; Assistant Curator of Invertebrates
+&gt; American Museum of Natural History
+&gt; Central Park West at 79th Street
+&gt; New York, NY 10024
+&gt; (212) 769-5638; fax (212) 769-5783
+&gt; <A HREF="http://research.amnh.org/~aharvey">http://research.amnh.org/~aharvey</A>
+&gt;
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="103109.html">Cooperation &amp; professionals
+</A></li>
+        <LI>Next message: <A HREF="055749.html">collection DB design question
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#019957">[ date ]</a>
+              <a href="thread.html#019957">[ thread ]</a>
+              <a href="subject.html#019957">[ subject ]</a>
+              <a href="author.html#019957">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

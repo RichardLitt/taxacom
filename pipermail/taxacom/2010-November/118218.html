@@ -1,0 +1,277 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] saturday morning fun
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20saturday%20morning%20fun&In-Reply-To=%3CDB2D3A1A-F662-4C7D-ADB3-411C914446A3%40gbif.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="118216.html">
+   <LINK REL="Next"  HREF="118223.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2010-November/118218.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] saturday morning fun</H1>
+    <B data-pagefind-meta="author">David Remsen (GBIF)</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20saturday%20morning%20fun&In-Reply-To=%3CDB2D3A1A-F662-4C7D-ADB3-411C914446A3%40gbif.org%3E"
+       TITLE="[Taxacom] saturday morning fun">dremsen at gbif.org
+       </A><BR>
+    <I data-pagefind-meta="date">Sun Nov 28 11:28:43 CST 2010</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="118216.html">[Taxacom] saturday morning fun
+</A></li>
+        <LI>Next message: <A HREF="118223.html">[Taxacom] saturday morning fun
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#118218">[ date ]</a>
+              <a href="thread.html#118218">[ thread ]</a>
+              <a href="subject.html#118218">[ subject ]</a>
+              <a href="author.html#118218">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2010</span><!--beginarticle-->
+<PRE>I said in the previous email I would attempt to explain a bit about  
+the roots of the problems inherent to the taxonomic index within the  
+data accessed through the GBIF data portal.    While Stephen laments &quot;  
+'official' databases like GBIF ... feeding us sh!t&quot; we should  
+collectively recall the old saw that when you point a finger at  
+someone remember there are three pointing back at you.    We (not sure  
+who you think 'we' are) may indeed be responsible for all of messes  
+and problems you see in the data accessible via the portal but I  
+believe the causes can be distributed a bit more widely than a few  
+well-intentioned, but perhaps taxonomically under-informed,   
+programmers in Copenhagen.
+
+Trying to organise 264 million-plus records from over 8000 different  
+databases is more complicated than you probably understand.  I'd try  
+to explain but even a brief explanation isn't as short as Id like.
+
+1.  There is no &quot;GBIF&quot; data and GBIF is not a database.   GBIF is an  
+agreement among participating countries and networks to publish and  
+share data.
+There are datasets that originate in a growing number (~8000) of  
+datasets derived from natural history collections and observational  
+data.  The list is here.  <A HREF="http://data.gbif.org/datasets/">http://data.gbif.org/datasets/</A>    or here <A HREF="http://gbrds.gbif.org/browse/agents?agentType=RESOURCE">http://gbrds.gbif.org/browse/agents?agentType=RESOURCE</A>
+
+2.  GBIF provides a mechanism to share these data and enable them to  
+be discovered in a single place instead of going to 8000 different  
+URLs and asking yourself.   This is done by  A) registering that  
+datasets exist and B) by providing a URL that links to some sort of  
+access mechanism whereupon GBIF (or anyone else) can access the source  
+data.   We access these data and store a cache of it in our data portal.
+
+3.  Every month,  we rebuild the index of data by starting at the top  
+of the list of registered datasets, contacting each database, and re- 
+acquiring a new set of data in case there are updates or additions.    
+This super-index is then available through our portal.   It provides  
+links back to individual data records where the real details lay.    
+Your problem is that we have yet to overcome problems inherent in the  
+data to properly organise it into neat taxonomic bundles for more  
+precise access.   Here is why:
+
+4.   After visiting all 8000 datasets and pulling and processing the  
+XML data we receive every month, what we obtain, and cache,  from each  
+database looks like a single table,  such as you can put in a  
+spreadsheet.   This months table is 269 million rows deep.   Among the  
+columns it contains are Kingdom, Phylum, Class, Order, Family, Genus  
+and species.   These will be the columns for which you here have the  
+most complaints.
+
+5. While you may think that the worlds collections data are sorted and  
+in good order,  even in simple Linnaean ranks you would probably be  
+surprised at what shows up in the collective data.  Last week we did  
+some basic analysis of this part of the index.   Some basic numbers  
+can be found here:
+
+<A HREF="http://code.google.com/p/gbif-occurrencestore/wiki/TaxonomicIntegration#Statistics">http://code.google.com/p/gbif-occurrencestore/wiki/TaxonomicIntegration#Statistics</A>
+
+Row 2 of the Basic Figures tells me that the 269 million records are  
+represented by 5.5M distinct combinations of  Kingdom, Phylum, Class,  
+Order, Family, Genus, Species.   It tells me that even Lynn Margulis  
+would be surprised at over 9000 distinct Kingdom values for these  
+data, surpassing the 5000+ Order values listed in the same file.
+
+6.  Here is a sample entry for a single species (Mytilus edulis, the  
+common blue mussel):
+       <A HREF="http://code.google.com/p/gbif-ecat/wiki/Nom5ExampleMytilusedulis">http://code.google.com/p/gbif-ecat/wiki/Nom5ExampleMytilusedulis</A>
+
+This ignores misspellings for the species name itself - which add to  
+the list but it illustrates a lot of variation both in the orthography  
+and correctness of the authorship as well as in the higher taxonomy.   
+Some is completely incorrect,  some out of date,  some missing, some  
+transposed and some is, well, it's right.
+
+Of course we could easily weed out all of the incorrect stuff,  
+right?    Sure,  if A) we had basic lists of the correct information  
+and B) these authoritative sources came anywhere near being  
+comprehensive enough to answer basic questions like:  How many Mytilus  
+edulis are there really?     We don't have either.
+
+7.  Sampling only from these specimen and observation datasets, and  
+with the limited metadata provided from the soures, we have no  
+effective way of distinguishing good taxonomy and orthography from bad  
+or for qualitatively ranking one dataset from another.    So this  
+makes even determining how many real taxa are represented in these  
+data problematic.
+
+8.  We therefore look for organised collections of authoritative data  
+that we might rely on to organise this giant and messy beast of  
+primary data.    The Catalogue of Life has played this role almost  
+exclusively.   Why?  It's available for us to use and it offers a  
+chance we might do better than the source data to answer what must  
+seem like simple questions like &quot;What records exist for Coleoptera?&quot;
+
+9.  This only provides a solution for 54% of names that match the  
+Catalog of Life (as well as IPNI and Index Fungorum).   For taxa not  
+listed in those sources our choices have been to 1) ignore them or 2)  
+try to provisionally place them in a taxonomic hierarchy that uses the  
+Catalogue of Life as the starting point and hope we get it close.
+
+In other words,  if someone asked for all the Coleoptera,  we could  
+provide only those records that the Catalogue of Life says are beetles  
+or what the source data say are beetles.   Since the COL only matches  
+50% of the names,  we felt that 1) was too restrictive.
+
+10.  We derive a classification based on the Catalogue of Life where  
+we try to place species not reported in it to a higher taxon that is.
+
+For example, if Scombrus maximus (i made this up) isn't in the  
+Catalogue of Life but is reported in the Family Scombridae (which is)  
+we could provisionally link the taxon in the Scombridae.   This is a  
+simple and easy case.
+
+More problematic is when the placement is ambiguous.  Oenanthe appears  
+as a genus among the plants and the birds but within the plants it's  
+reported as both an orchid and an umbelliferid.    Plant species are  
+listed in the Graminaceae and other older higher taxa that don't  
+conform to the available higher taxonomy we rely on and make it hard  
+to place them.
+
+&quot;Phantom&quot; genera appear where the same genus is listed in different  
+higher taxa according to different sources.   Genera appear listed as  
+Families or Orders.   How should we know what are legit?   Download  
+the complete and official list of genera. Or the one of families or  
+orders?  Where are they?   Do we teach our programmes the higher taxa  
+suffixes and let them sort it out?  I say &quot;Hah,&quot; sirs, simply &quot;Hah!&quot;
+
+11.  Lastly,  Wolfgang, and others,  have offered to 'fix' the  
+taxonomy issues in the portal to the extent we even funded a pilot to  
+see what a review could be found and done with the data.    Like  
+everything else, this isn't as simple as just pointing out a bad  
+record.    Since we rebuild the cache every month from a network of  
+sources,  applying corrections either needs to be done at the source  
+or applied repeatedly by us.   We are now working on the means to  
+support source-level remediation by
+1) developing an annotation mechanism to enable suggested fixes to be  
+sent back to a source curator and
+2) enabling taxonomic data-cleaning services to be offered by people  
+who have the sort of authority files to offer them.
+
+We are also looking to have expanded access to a wider array of  
+taxonomic authority files that we can use as more and better authority  
+files.   This has been hindered by an accessible data standard to  
+allow easy sharing of authority files as well as incentives to make  
+them available to GBIF and others.   We are trying to work on this as  
+well.  I posted the link to a call to evaluate that format and  
+particularly those parts related to citation and attribution by all  
+who use the data to those who curate it.   These could help address  
+the above immensely.   Want to help?  Offer us some authority files in  
+this format.   We will ensure you are credited.
+
+So, while your Saturday morning fun appears to make what we do seem  
+sort of senseless and value-less, my Sunday evening response is not  
+based on that view.     You are seeing a processed version of what we  
+see that originates in the big dirty messy world.   I think GBIF  
+(Copenhagen) is remiss in that we have not properly put the noise in  
+it's proper proportion and done a better job of faceting and sorting  
+the majority &quot;good&quot; data from the bad.   We work in a shifting  
+landscape of noisy stakeholders all shouting that everything is a  
+priority.   I'm sorry we still haven't gotten this straightened out  
+but we hope to have a better solution very soon.
+
+
+----------------------------------------------------------------------------
+David Remsen, Senior Programme Officer
+Electronic Catalog of Names of Known Organisms
+Global Biodiversity Information Facility Secretariat
+Universitetsparken 15, DK-2100 Copenhagen, Denmark
+Tel: +45-35321472   Fax: +45-35321480
+Mobile +45 28751472
+Skype: dremsen
+----------------------------------------------------------------------------
+
+
+
+
+On Nov 28, 2010, at 3:34 PM, Dr. Rodham E. Tulloss wrote:
+
+&gt;<i> Dr. Lorenz,
+</I>&gt;<i>
+</I>&gt;<i> Thank you for drawing my attention to GBIF.
+</I>&gt;<i>
+</I>&gt;<i> I am one of the few persons left in the world who actually work at  
+</I>&gt;<i> morphological
+</I>&gt;<i> taxonomy of an agaric group worldwide and have over 30 years of  
+</I>&gt;<i> experience.  I
+</I>&gt;<i> work on the Amanitaceae (Agaricales, Basidiomycetes, Fungi).
+</I>&gt;<i>
+</I>&gt;<i> I went to look at GBIF this morning.  For fungi, it is worse than a  
+</I>&gt;<i> bad joke.  I
+</I>&gt;<i> immediately decided that it was better to do a few more dozen new  
+</I>&gt;<i> taxa than it
+</I>&gt;<i> was to be a part of straightening out the the hopeless mess related  
+</I>&gt;<i> to my group
+</I>&gt;<i> on GBIF (such as it is...they have one specie inexplicably listed  
+</I>&gt;<i> both as a
+</I>&gt;<i> fungus and a synonym of a Pine tree).
+</I>&gt;<i>
+</I>&gt;<i> I PAY MY OWN WAY in retirement.  They have millions.  What a travesty.
+</I>&gt;<i>
+</I>&gt;<i> Rod Tulloss
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i>
+</I>&gt;<i> Taxacom Mailing List
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;<i>
+</I>&gt;<i> The Taxacom archive going back to 1992 may be searched with either  
+</I>&gt;<i> of these methods:
+</I>&gt;<i>
+</I>&gt;<i> (1) <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+</I>&gt;<i>
+</I>&gt;<i> Or (2) a Google search specified as:  site:mailman.nhm.ku.edu/ 
+</I>&gt;<i> pipermail/taxacom  your search terms here
+</I>&gt;<i>
+</I>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="118216.html">[Taxacom] saturday morning fun
+</A></li>
+	<LI>Next message: <A HREF="118223.html">[Taxacom] saturday morning fun
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#118218">[ date ]</a>
+              <a href="thread.html#118218">[ thread ]</a>
+              <a href="subject.html#118218">[ subject ]</a>
+              <a href="author.html#118218">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

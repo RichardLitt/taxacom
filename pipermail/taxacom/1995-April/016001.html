@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Delta and DDATA
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Delta%20and%20DDATA&In-Reply-To=%3Cmailman.2429.1157126648.2564.taxacom%40mailman.nhm.ku.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="051794.html">
+   <LINK REL="Next"  HREF="051793.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1995-April/016001.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Delta and DDATA</H1>
+    <B data-pagefind-meta="author">jkirkbri at ASRR.ARSUSDA.GOV</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Delta%20and%20DDATA&In-Reply-To=%3Cmailman.2429.1157126648.2564.taxacom%40mailman.nhm.ku.edu%3E"
+       TITLE="Delta and DDATA">jkirkbri at ASRR.ARSUSDA.GOV
+       </A><BR>
+    <I data-pagefind-meta="date">Mon Apr  3 09:04:44 CDT 1995</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="051794.html">nominal characters
+</A></li>
+        <LI>Next message: <A HREF="051793.html">Delta and DDATA
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#16001">[ date ]</a>
+              <a href="thread.html#16001">[ thread ]</a>
+              <a href="subject.html#16001">[ subject ]</a>
+              <a href="author.html#16001">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>1995</span><!--beginarticle-->
+<PRE>David Taylor is suffering from a &quot;disease&quot; that plagues everyone
+working with the DELTA format, slight incapabilities between the
+various software systems.  His original piece of a character set was:
+
+*SHOW Flora of Texas. Revised Sun Apr 02 16:48:17 1995
+
+*CHARACTER LIST
+
+#1. &lt;nomenclatural comments, associations&gt;//
+
+#2. plant &lt;duration&gt;//
+ 1. annual// 2. bienial// 3. perenial//
+
+#3. plant &lt;habit&gt;//
+ habit// 1. aquatic// 2. emergent// 3. terrestrial// 4. hemiepiphytic// 5.
+  epiphytic//
+
+#4. roots &lt;type&gt;//
+ 1. fibrous// 2. tap-root// 3. absent// 4. rhizomes// 5. rhizoids//
+
+To use his characters with the DELTA software, I made up the following
+specifications file:
+
+*SHOW Flora of Texas - specifications.
+
+*NUMBER OF CHARACTERS 4
+*MAXIMUM NUMBER OF STATES 5
+*MAXIMUM NUMBER OF ITEMS 10
+
+*CHARACTER TYPES 1,TE
+
+*NUMBERS OF STATES 2,3 3-4,5
+
+When I checked David's characters using the DELTA software system, I
+got the following error statements:
+
+chars,3        *CHARACTER LIST
+chars,5        #1. &lt;nomenclatural comments, associations&gt;//
+                                                         ^
+****** Preceding text character should not have &quot;units&quot; or &quot;states&quot;.
+chars,7        #2. plant &lt;duration&gt;//
+                                    ^
+****** State number terminated by period+space expected.
+chars,10       #3. plant &lt;habit&gt;//
+                                 ^
+****** State number terminated by period+space expected.
+chars,14       #4. roots &lt;type&gt;//
+                                ^
+****** State number terminated by period+space expected.
+chars,16       *PREVIOUS INPUT FILE
+              ^
+****** Number of characters not as specified (4).
+checkc,7       *END
+****** Number of errors = 5
+****** Abnormal Termination.
+
+The obvious deviation from the DELTA format was the presence of
+pairs of slashes (//) after the character names and states.  I used my
+ASCII text editor to find and replace the pairs of slashes (//) with a
+single slash (/).  Also in character 3, the word &quot;habit&quot; was repeated
+followed by a pair of slashes.  I removed the extra &quot;habit&quot; and its
+pairs of slashes and produced the following modified character list:
+
+*SHOW Flora of Texas. Revised Sun Apr 02 16:48:17 1995
+
+*CHARACTER LIST
+
+#1. &lt;nomenclatural comments, associations&gt;/
+
+#2. plant &lt;duration&gt;/
+ 1. annual/ 2. bienial/ 3. perenial/
+
+#3. plant &lt;habit&gt;/
+ 1. aquatic/ 2. emergent/ 3. terrestrial/ 4. hemiepiphytic/ 5.
+  epiphytic/
+
+#4. roots &lt;type&gt;/
+ 1. fibrous/ 2. tap-root/ 3. absent/ 4. rhizomes/ 5. rhizoids/
+
+When I checked the modified character list using the DELTA software
+system, it ran just fine.
+
+As I wrote at the beginning, David Taylor is suffering from a
+&quot;disease&quot; that plagues everyone working with the DELTA format, slight
+incapabilities between the various software systems.  I like features
+from all the different software systems that truly work with the DELTA
+format, the DELTA software system, PANKEY, and DDATA.  But, I learned
+very early on that when you have 250 characters and 150-500 taxa,
+switching software systems is nearly impossible.  You go crazy trying
+to find and make the little corrections necessary each time that you
+move from one software system to the other.  To move David's four
+characters from DDATA to the DELTA software system, I had to make 18
+changes!
+
+Early on, my Laboratory made the decision to use the DELTA software
+system.  I would like to be able to run my data sets in PANKEY and
+DDATA, but changing them each time is to daunting and time consuming a
+task.
+
+Another confusing situation is the DELTA data format and the DELTA
+software system.  Since they both start with the word DELTA, you must
+also include modifiers to clearly establish whether you are referring
+to the DELTA data format or the DELTA software system.  When
+communicating, please be sure to be specific.
+
+Joseph H. Kirkbride, Jr.
+USDA, Agricultural Research Service
+Systematic Botany and Mycology Laboratory
+Room 304, Building 011A, BARC-West
+Beltsville, Maryland 20705-2350 USA
+Voice telephone: 301-504-9447
+FAX: 301-504-5810
+Internet: <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">jkirkbri at asrr.arsusda.gov</A>
+
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="051794.html">nominal characters
+</A></li>
+	<LI>Next message: <A HREF="051793.html">Delta and DDATA
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#16001">[ date ]</a>
+              <a href="thread.html#16001">[ thread ]</a>
+              <a href="subject.html#16001">[ subject ]</a>
+              <a href="author.html#16001">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

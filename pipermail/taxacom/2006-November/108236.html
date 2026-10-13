@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] GBIF data
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20GBIF%20data&In-Reply-To=%3C002201c70e80%2483658620%248a309260%24%40ca%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="108235.html">
+   <LINK REL="Next"  HREF="108237.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2006-November/108236.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] GBIF data</H1>
+    <B data-pagefind-meta="author">Shorthouse, David</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20GBIF%20data&In-Reply-To=%3C002201c70e80%2483658620%248a309260%24%40ca%3E"
+       TITLE="[Taxacom] GBIF data">dps1 at ualberta.ca
+       </A><BR>
+    <I data-pagefind-meta="date">Wed Nov 22 15:52:32 CST 2006</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="108235.html">[Taxacom] GBIF data
+</A></li>
+        <LI>Next message: <A HREF="108237.html">[Taxacom] GBIF data
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#108236">[ date ]</a>
+              <a href="thread.html#108236">[ thread ]</a>
+              <a href="subject.html#108236">[ subject ]</a>
+              <a href="author.html#108236">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2006</span><!--beginarticle-->
+<PRE>Wolfgang,
+
+You have essentially commented on the ultimate goals for GBIF, but it's
+unclear to me how your email or text file solution using pipes helps solve
+the issue of digitizing invertebrate collections. Folks at GBIF are
+considering text file uploads among other data exchange protocols, but this
+really isn't the bottleneck. The true bottleneck is the human-power and
+associated funds to enter the data. If &quot;bugs&quot; came with geotagged barcodes,
+it would be much easier ;)~ To encourage data entry, I'd argue for
+value-added features to assist the data entry process &amp; thus streamline it
+as much as possible e.g. real-time nomenclatural checks, geocoding checks,
+etc. because what comes out of GBIF is really only as good as what goes in.
+As for the choice of fields and XML schema, GBIF has a pretty elegant
+(though somewhat sluggish) system with DiGIR and other communication
+protocols...not all fields are required and you may use any database system
+you want so long it is tied to a web server that can serve PHP. Perhaps what
+they also need is better documentation about this system &amp; step-by-step
+installable packages.
+
+David P. Shorthouse
+------------------------------------------------------
+Department of Biological Sciences
+CW-403, Biological Sciences Centre
+University of Alberta
+Edmonton, AB   T6G 2E9
+Phone: 1-780-492-3080
+mailto:<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">dps1 at ualberta.ca</A>
+<A HREF="http://canadianarachnology.webhop.net">http://canadianarachnology.webhop.net</A>
+<A HREF="http://arachnidforum.webhop.net">http://arachnidforum.webhop.net</A>
+------------------------------------------------------
+
+
+-----Original Message-----
+From: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom-bounces at mailman.nhm.ku.edu</A>
+[mailto:<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom-bounces at mailman.nhm.ku.edu</A>] On Behalf Of <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Faunaplan at aol.com</A>
+Sent: Wednesday, November 22, 2006 2:24 PM
+To: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">TAXACOM at mailman.nhm.ku.edu</A>
+Subject: [Taxacom] GBIF data
+
+Dear all,
+GBIF's data on geographic occurrences of the world's living species are
+still 
+highly fragmentary and, in part, rather unreliable esp. in regard to
+insects. 
+I'm just wondering why not open yet another gate for a large community of 
+data holders who could support GBIF's mission, - more user-friendly, simple
+and 
+much faster  than current procedures.
+Here are some musings, - focussing on data from entomological collections:
+
+Insects make up the lion's share of species diversity but reliable
+occurrence 
+data are still mainly written on hundreds of millions of labels pinned to 
+specimens in museums and collections, - practically inaccessible for most 
+potential users. 
+Instead of trying to digitize these data according to a highly complex XML 
+schema, why not just take data as they are from these specimen labels and
+put 
+them into a simple (flat) data file, say - a pipe delimited text file like
+in 
+the following example:
+
+ID-LABEL|LOC-LABEL|SAMPLESIZE|COLLECTION
+&quot;Amara (Brad.)\ majuscula Chd.\ det. Hieke 1982&quot;|&quot;Schwanheim a.M.\ Feld, 
+18.6.53\ coll. H.Hesse&quot;|1|&quot;ZSM&quot;
+&quot;Amara (s.str.)\ pindica Apf.\ det. Hieke 1969&quot;|&quot;Collection\ Strasser\\ 
+Caucasus\\ Eriwan&quot;|1|&quot;ZSM&quot;
+&quot;Harpalus\ Winkleri Schbg.\ det. Dr. E.Schaub.&quot;|&quot;Mokra pl.\\ Golesnica pl.\ 
+Macedonia\\ Sammlung\ Apfelbeck&quot;|1|&quot;ZSM&quot;
+
+In a second step, we can add a few fields in order to standardize and unlock
+
+the treasure, e.g.:
+- COUNTRY (standard names or codes)
+- LATLONG (containing a gross latitude/longitude georeference)
+- VALIDNAME (containing the standardized current taxonomic name)
+example as above:
+COUNTRY|LATLONG|VALIDNAME|ID-LABEL|LOC-LABEL|SAMPLESIZE|COLLECTION
+Germany|NE50008|Amara majuscula|&quot;Amara (Brad.)\ majuscula Chd.\ det. Hieke 
+1982&quot;|&quot;Schwanheim a.M.\ Feld, 18.6.53\ coll. H.Hesse&quot;|1|&quot;ZSM&quot;
+Armenia|NE40044|Amara proxima|&quot;Amara (s.str.)\ pindica Apf.\ det. Hieke 
+1969&quot;|&quot;Collection\ Strasser\\ Caucasus\\ Eriwan&quot;|1|&quot;ZSM&quot;
+Macedonia|NE41021|Harpalus xanthopus|&quot;Harpalus\ Winkleri Schbg.\ det. Dr. 
+E.Schaub.&quot;|&quot;Mokra pl.\\ Golesnica pl.\ Macedonia\\ Sammlung\
+Apfelbeck&quot;|1|&quot;ZSM&quot;
+Additional steps, e.g. more detailed georeferencing, could follow later 
+whenever needed...
+ 
+Such simple files could be produced during routine curatorial or ID work and
+
+sharing them via email should be very easy. GBIF could use these handy 
+datasets to create dynamic distribution maps generated by a rather simple
+PHP/ MySQL 
+application. On the new GBIF data portal prototype, I've already seen a
+pixel 
+worldmap that seems to be perfectly fit for the display of standardized 
+(one-degree latlong) occurrence data by accurrate 2X2 pixel dots. 
+In addition to such maps, there could be a display of corresponding 
+standardized background information (e.g., VALIDNAME, COUNTRY, LATLONG,
+COLLECTION) in 
+simple data lists. Both maps and lists could be downloaded by the user with 
+just a click. 
+In case access to full data details is seen as problematic (see previous 
+discussions on &quot;sensitive data&quot;), the field LOC-LABEL could be kept under 
+restricted access while other essential information is freely accessible.
+Tracking 
+down all information to the sources would be rather easy anyway.
+As a side effect, this could also become a central database for collection 
+inventaries, - wouldn't it be more useful than individual inventaries on
+each 
+Museum's website?
+
+&quot;Free and open access to the world's biodiversity data through the 
+collaborative medium of the Web is an important tool for the sustainable
+stewardship of 
+Earth. Unlocking such data will lead to much better policy and 
+resource-management choices locally, regionally and globally&quot; (cited from an
+article by Matt 
+BALL, in GeoWorld, Aug. 2005)
+
+Best wishes,
+Wolfgang
+---------------------------------------
+Wolfgang Lorenz
+Faunistics and Environmental Planning
+Hoermannstr. 4
+D-82327  Tutzing, Germany
+
+(P.S.: I'm currently running two test versions of  PHP/MySQL map tools on my
+
+websites; please contact me for details)
+_______________________________________________
+Taxacom mailing list
+<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="108235.html">[Taxacom] GBIF data
+</A></li>
+	<LI>Next message: <A HREF="108237.html">[Taxacom] GBIF data
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#108236">[ date ]</a>
+              <a href="thread.html#108236">[ thread ]</a>
+              <a href="subject.html#108236">[ subject ]</a>
+              <a href="author.html#108236">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

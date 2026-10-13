@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Specimen Databases PC/Mac(Biota)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1995-October/017285.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Specimen Databases PC/Mac(Biota)</H1>
+    <B data-pagefind-meta="author">Rob Colwell</B>
+    COLWELL at UCONNVM.UCONN.EDU<BR>
+    <I data-pagefind-meta="date">Mon Oct 30 15:52:09 CST 1995</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="100440.html">NBS JOINS ITIS
+</A></li>
+        <LI>Next message: <A HREF="053077.html">Specimen Databases PC/Mac(Biota)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#017285">[ date ]</a>
+              <a href="thread.html#017285">[ thread ]</a>
+              <a href="subject.html#017285">[ subject ]</a>
+              <a href="author.html#017285">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1995</span><!--beginarticle-->
+<PRE>Specimen Databases on PC &amp; Mac: Applications, Compatibility, Biota
+                    *************************
+Recently, Nancy Hensold wrote:
+
+&gt;I have just finished a manual entitled &quot;Specimen Databases in
+&gt;Research and Collection Management: A Practical Guide for dBase
+&gt;and WordPerfect Users.&quot;...&lt;snip&gt;...I don't know a) how widespread use
+&gt;of dBase is; b) how adaptable dBase &amp; WP protocol might be to other
+&gt;software app's; and c) whether anyone cares.
+
+In his reply, Doug Yanega said:
+
+&gt;...&lt;snip&gt;...There should soon be a new relational version of FileMaker
+&gt;released, as well as the BIOTA collection database program (which
+&gt;may or may not be Mac-only, I've heard different rumors), so there
+&gt;is certainly new software on the horizon which may make life even
+&gt;easier. It would be interesting if someone could take the time to do
+&gt;a &quot;Consumer's Reports&quot;-style comparison of the pros and cons of
+&gt;the many database programs on the market, as well as doing a
+&gt;compatibility analysis....
+
+This posting has 3 numbered, related parts (read any, all, or none...):
+(1) Remarks on the distinction between collections management
+applications and  general data management applications, (2) A
+comment on Doug Yanega's suggested  &quot;compatibility analysis&quot;
+among database tools, and (3) An answer to the &quot;rumors&quot; Doug
+mentioned regarding the Biota biodiversity data management
+application (of which I am the author).
+
+(1) Collections management applications vs. general database
+management applications. General purpose database management
+applications for micros (e.g. FoxPro, 4th Dimension, dBase, MS
+Access, FileMaker, etc.,) offer the tools for creating and managing
+structured data files (databases). Depending upon the application and
+how it is used, data structures vary from simple flat-files (column-
+by-row tables) to complex relational structures; the means for
+specifying these structures and managing the data in them (input,
+output, analysis, queries) vary from using built-in tools to complex
+programming and interface design.
+
+Collections/survey management applications (e.g. MUSE, Biota), on
+the other hand, are designed specifically to speed the tasks
+collections managers, researchers, and biodiversity survey managers
+carry out in their work. Confusion between these two kinds of
+software sometimes arises because collections management
+applications are often developed using the advanced application-
+development capabilities of the same software (e.g. FoxPro or 4th
+Dimension) that others use in much simpler ways for &quot;do-it-
+yourself&quot; data management.
+
+(2) Compatibility. Although database management applications can
+often import and export data tables in special formats (e.g. the DBF
+standard of dBase and relatives; DIF, SYLK), the lingua franca of
+compatibility is plain-text tables (flat-files) with end-of-field and
+end of record delimiters. In my view, the issue of which database
+apps are &quot;compatible&quot; with which others has a very simple answer:
+If an application can import and export plain-text files efficiently,
+with specifiable delimiters, it's compatible with every other
+application that can do so, and forever shall be. If it can't do this,
+forget it. Special formats can be more efficient, but should not a
+sine qua non for getting data in and out of any database management
+tool.
+
+(3) About Biota: The Biodiversity Database Manager (not to be
+confused with USDA/SEL's nomenclature database, BIOTA--or with
+other synonyms). Biota is a specimen-based biodiversity data
+management application that was developed for and is used daily in
+Project ALAS (Arthropods of La Selva) in Costa Rica (a collaboration
+between the Organization for Tropical Studies, the Instituto
+Nacional de Biodiversidad-INBio, and 30 systematist collaborators).
+Because ALAS manages not only survey data but collections data
+(label printing, specimen curation, and loans to collaborators), Biota
+serves both functions. A graphical interface to a fully relational
+database structure coordinates tools for recording, maintaining,
+querying, and analyzing specimen- or lot-based data, including full
+geographic and taxonomic information and species images. Biota
+supports plain-text im/exporting to/from all tables. Many features
+have been added to allow other users to customize Biota (including
+unlimited user-definable auxiliary fields).
+
+Biota will be published by Sinauer Associates (joining MacClade and
+PAUP) in early 1996. (The application itself is in late beta testing
+and the manual is in draft.) Biota was developed in the 4th
+Dimension language (though you need not own 4D to run it). To
+answer the platform question: when released, Biota will be available
+for Macintosh or PowerMac (native PPC compiled code) only. If Biota
+is well-received, Windows and possibly UNIX versions may be
+offered, perhaps in a year or so. (4D for Windows has been released,
+and 4D for UNIX is soon to follow.) BiotaApp for Macintosh or
+PowerMac (the standalone version, which incorporates the 4D
+database engine) will cost US$125; Biota4D (for use under 4th-
+Dimension or 4D-First, or to run in client/server mode under 4D
+Server) will be $100 (prices in Latin America $70 and $90).
+
+When Biota is released I will post a brief notice on TAXACOM.
+Sinauer?s homepage at&lt;<A HREF="http://www.webcom.com/~sinauer">http://www.webcom.com/~sinauer</A>&gt; will
+provide a summary of features and ordering information in a few
+weeks. Meanwhile, please e-mail me directly if you have technical
+questions about Biota, rather than posting to the list.
+
+======================================================
+Robert K. Colwell
+Department of Ecology and Evolutionary Biology
+University of Connecticut, U-42
+Storrs, CT 06269-3042
+=====================
+E-mail colwell at uconnvm.uconn.edu
+Voice (860) 486-4395
+Fax (860) 486-3790
+??    Specimen Databases PC/Mac(Biota)
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="100440.html">NBS JOINS ITIS
+</A></li>
+        <LI>Next message: <A HREF="053077.html">Specimen Databases PC/Mac(Biota)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#017285">[ date ]</a>
+              <a href="thread.html#017285">[ thread ]</a>
+              <a href="subject.html#017285">[ subject ]</a>
+              <a href="author.html#017285">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

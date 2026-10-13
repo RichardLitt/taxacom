@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Taxacom: Basis of record terms
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40lists.ku.edu?Subject=Re:%20Re%3A%20Taxacom%3A%20Basis%20of%20record%20terms&In-Reply-To=%3CCA%2BvkFWBxwmFK1BiweuG6hp%2BZKTBPW%2BKcHVTgjmcm79O9QLdVFg%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="136163.html">
+   <LINK REL="Next"  HREF="136169.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2022-July/136167.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Taxacom: Basis of record terms</H1>
+    <B data-pagefind-meta="author">Donald Hobern</B> 
+    <A HREF="mailto:taxacom%40lists.ku.edu?Subject=Re:%20Re%3A%20Taxacom%3A%20Basis%20of%20record%20terms&In-Reply-To=%3CCA%2BvkFWBxwmFK1BiweuG6hp%2BZKTBPW%2BKcHVTgjmcm79O9QLdVFg%40mail.gmail.com%3E"
+       TITLE="Taxacom: Basis of record terms">dhobern at gmail.com
+       </A><BR>
+    <I data-pagefind-meta="date">Tue Jul 26 18:51:33 CDT 2022</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="136163.html">Taxacom: Basis of record terms
+</A></li>
+        <LI>Next message: <A HREF="136169.html">Taxacom: [EXT] Re:  Basis of record terms
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#136167">[ date ]</a>
+              <a href="thread.html#136167">[ thread ]</a>
+              <a href="subject.html#136167">[ subject ]</a>
+              <a href="author.html#136167">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2022</span><!--beginarticle-->
+<PRE>Hi Mary,
+
+As Debbie notes, this is an area where discussion and work continues, but
+here are some comments that I feel should guide us.
+
+The basis of record values should serve as useful filters for end-users and
+I think that provides some answers to what we should do, but we arrived at
+where we are today because of the history of our digital networks.
+
+The origins of our basisOfRecord terms are from a couple of decades ago.
+The first DwC/ABCD implementations (DiGIR/MaNIS and BioCASE) were largely
+modeled on online library catalogues, with specimens replacing books. As
+these solutions expanded to accommodate other biodiversity data, the
+perspectives of these original communities shaped the terminology.
+Voucherless observations were seen as degenerate specimen records,
+basically ones where the specimens no longer exist. In other words,
+specimens==good, observations==not-so-good. It took a little while longer
+to consider why &quot;observations&quot; may for some purposes be very good (large
+volumes, sample events, etc) and what subcategories were hidden inside it.
+As a split between human and machine observations developed, it was still
+largely seen as a subdivision within the voucherless category.
+
+I believe that in fact we are just entering the third age of biodiversity
+recording and that we need to think first and foremost of a three-way
+division in our occurrence records. The human/machine division is critical,
+but it is really about how the identification is derived rather than
+whether technology (cameras, audio recorders, sequencers, etc.) was used.
+
+Here is how I use these three top-level categories:
+
+   1. *Specimen* - A specimen, tissues or DNA are held somewhere. *The
+   reason we trust the identification is because it can be reviewed and
+   verified from this material (with varying degrees of difficulty).*
+   2. *Human observation* - A (hopefully knowledgeable) observer reports
+   that they saw a specimen at a given time and place. Digital evidence may be
+   provided (photos, audio, even a sequence). For me, a camera trap image
+   would be a human observation if the identification was provided by a human
+   reviewing the image and identifying whatever was detected. *The reason
+   we trust the identification is because of the level of trust we give to the
+   observer or the community (think iNaturalist) that provides the
+   identification.*
+   3. *Machine observation* - An unattended (or incompletely supervised)
+   process identified an organism without a human expert directly identifying
+   each example. Examples would include AI identifications based on images
+   from a network of camera traps or audio recorders or even satellites, and
+   species identifications from eDNA. *The reason we trust the
+   identification is because of the level of trust we have in the algorithms
+   used and the reference libraries on which they may depend.*
+
+Each of these can usefully be subdivided into different categories, but
+this is the fundamental split I want to understand when I consume DwC data.
+
+Donald
+-- 
+
+*Donald Hobern* / <A HREF="https://lists.ku.edu/listinfo/taxacom">dhobern at gmail.com</A> / +61 420511471
+Araba Bioscan Project &lt;<A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fstangeia.hobern.net%2Faraba-bioscan-project%2F&amp;amp;data=05%7C01%7Ctaxacom%40lists.ku.edu%7Cdf0705118dc141ca5fa608da6f61cab1%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637944763054369819%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=BWNxKj3HDMTX0AYFWie5kCbPRNAPxKwn8Up%2F8qVdpFk%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fstangeia.hobern.net%2Faraba-bioscan-project%2F&amp;data=05%7C01%7Ctaxacom%40lists.ku.edu%7Cdf0705118dc141ca5fa608da6f61cab1%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637944763054369819%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=BWNxKj3HDMTX0AYFWie5kCbPRNAPxKwn8Up%2F8qVdpFk%3D&amp;reserved=0</A>&gt;
+/ Pterophoroidea &lt;<A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fpterophoroidea.hobern.net%2F&amp;amp;data=05%7C01%7Ctaxacom%40lists.ku.edu%7Cdf0705118dc141ca5fa608da6f61cab1%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637944763054369819%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=ugvJmGJLzlti3i%2BYlYYaBqHYVI5qppCp51N1z4LAlr8%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fpterophoroidea.hobern.net%2F&amp;data=05%7C01%7Ctaxacom%40lists.ku.edu%7Cdf0705118dc141ca5fa608da6f61cab1%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637944763054369819%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=ugvJmGJLzlti3i%2BYlYYaBqHYVI5qppCp51N1z4LAlr8%3D&amp;reserved=0</A>&gt; / Alucitoidea
+&lt;<A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Falucitoidea.hobern.net%2F&amp;amp;data=05%7C01%7Ctaxacom%40lists.ku.edu%7Cdf0705118dc141ca5fa608da6f61cab1%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637944763054369819%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=jfVXG1Dhjq7PdFOt06K%2FOJeOrGK5XiGUU%2B%2FzY4Y8fQc%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Falucitoidea.hobern.net%2F&amp;data=05%7C01%7Ctaxacom%40lists.ku.edu%7Cdf0705118dc141ca5fa608da6f61cab1%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637944763054369819%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=jfVXG1Dhjq7PdFOt06K%2FOJeOrGK5XiGUU%2B%2FzY4Y8fQc%3D&amp;reserved=0</A>&gt; / BOLD Australia
+&lt;<A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fbold-au.hobern.net%2F&amp;amp;data=05%7C01%7Ctaxacom%40lists.ku.edu%7Cdf0705118dc141ca5fa608da6f61cab1%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637944763054369819%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=nmJX4xMEb1Cu3huB5VR5040S%2FYosCVLpC1AKGbdzb3A%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fbold-au.hobern.net%2F&amp;data=05%7C01%7Ctaxacom%40lists.ku.edu%7Cdf0705118dc141ca5fa608da6f61cab1%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637944763054369819%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=nmJX4xMEb1Cu3huB5VR5040S%2FYosCVLpC1AKGbdzb3A%3D&amp;reserved=0</A>&gt;
+ORCID: 0000-0001-6492-4016 &lt;<A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Forcid.org%2F0000-0001-6492-4016&amp;amp;data=05%7C01%7Ctaxacom%40lists.ku.edu%7Cdf0705118dc141ca5fa608da6f61cab1%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637944763054369819%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=B0SNoHgAEdvI07lBrKOVR04yWkN5gyPU977Hr4NoRRQ%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Forcid.org%2F0000-0001-6492-4016&amp;data=05%7C01%7Ctaxacom%40lists.ku.edu%7Cdf0705118dc141ca5fa608da6f61cab1%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637944763054369819%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=B0SNoHgAEdvI07lBrKOVR04yWkN5gyPU977Hr4NoRRQ%3D&amp;reserved=0</A>&gt; / Blog
+&lt;<A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fstangeia.hobern.net%2F&amp;amp;data=05%7C01%7Ctaxacom%40lists.ku.edu%7Cdf0705118dc141ca5fa608da6f61cab1%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637944763054369819%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=9L7CtZCmJ%2ByBAuuSAm3j1To30mKniNOutYPjDQeBLjE%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fstangeia.hobern.net%2F&amp;data=05%7C01%7Ctaxacom%40lists.ku.edu%7Cdf0705118dc141ca5fa608da6f61cab1%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637944763054369819%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=9L7CtZCmJ%2ByBAuuSAm3j1To30mKniNOutYPjDQeBLjE%3D&amp;reserved=0</A>&gt; / iNaturalist
+&lt;<A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Finaturalist.ala.org.au%2Fpeople%2Fdhobern&amp;amp;data=05%7C01%7Ctaxacom%40lists.ku.edu%7Cdf0705118dc141ca5fa608da6f61cab1%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637944763054369819%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=NBA9jpkU7KIfpod7ystFo4t5o6o7Lh%2B86ps4bWiIQsE%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Finaturalist.ala.org.au%2Fpeople%2Fdhobern&amp;data=05%7C01%7Ctaxacom%40lists.ku.edu%7Cdf0705118dc141ca5fa608da6f61cab1%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637944763054369819%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=NBA9jpkU7KIfpod7ystFo4t5o6o7Lh%2B86ps4bWiIQsE%3D&amp;reserved=0</A>&gt; / Flickr
+&lt;<A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.flickr.com%2Fphotos%2Fdhobern%2F&amp;amp;data=05%7C01%7Ctaxacom%40lists.ku.edu%7Cdf0705118dc141ca5fa608da6f61cab1%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637944763054369819%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=2AJlL6QbhmDh9Z2V%2F8YDwkrjkbsbbothTPG5X3HuTHA%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.flickr.com%2Fphotos%2Fdhobern%2F&amp;data=05%7C01%7Ctaxacom%40lists.ku.edu%7Cdf0705118dc141ca5fa608da6f61cab1%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637944763054369819%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=2AJlL6QbhmDh9Z2V%2F8YDwkrjkbsbbothTPG5X3HuTHA%3D&amp;reserved=0</A>&gt;/ GitHub
+&lt;<A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fgithub.com%2Fdhobern&amp;amp;data=05%7C01%7Ctaxacom%40lists.ku.edu%7Cdf0705118dc141ca5fa608da6f61cab1%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637944763054369819%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=dtvG4sj0emVJ8Q3wrlqitAMWEX%2FACn42YL0fIn7hLAU%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fgithub.com%2Fdhobern&amp;data=05%7C01%7Ctaxacom%40lists.ku.edu%7Cdf0705118dc141ca5fa608da6f61cab1%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637944763054369819%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=dtvG4sj0emVJ8Q3wrlqitAMWEX%2FACn42YL0fIn7hLAU%3D&amp;reserved=0</A>&gt; / Twitter &lt;<A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Ftwitter.com%2Fdhobern&amp;amp;data=05%7C01%7Ctaxacom%40lists.ku.edu%7Cdf0705118dc141ca5fa608da6f61cab1%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637944763054369819%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=4IXp40Yly6V7fMLpICpnSRXXjcH7x3cl1Oyqf9cxgps%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Ftwitter.com%2Fdhobern&amp;data=05%7C01%7Ctaxacom%40lists.ku.edu%7Cdf0705118dc141ca5fa608da6f61cab1%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637944763054369819%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=4IXp40Yly6V7fMLpICpnSRXXjcH7x3cl1Oyqf9cxgps%3D&amp;reserved=0</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="136163.html">Taxacom: Basis of record terms
+</A></li>
+	<LI>Next message: <A HREF="136169.html">Taxacom: [EXT] Re:  Basis of record terms
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#136167">[ date ]</a>
+              <a href="thread.html#136167">[ thread ]</a>
+              <a href="subject.html#136167">[ subject ]</a>
+              <a href="author.html#136167">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

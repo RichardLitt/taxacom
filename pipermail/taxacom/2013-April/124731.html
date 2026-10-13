@@ -1,0 +1,361 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] ZooBank Progress
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-April/124731.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] ZooBank Progress</H1>
+    <B data-pagefind-meta="author">Francisco Welter-Schultes</B>
+    fwelter at gwdg.de<BR>
+    <I data-pagefind-meta="date">Sun Apr 28 17:13:40 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="124730.html">[Taxacom] Fwd: Bubble science
+</A></li>
+        <LI>Next message: <A HREF="124732.html">[Taxacom] Fwd: Bubble science
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124731">[ date ]</a>
+              <a href="thread.html#124731">[ thread ]</a>
+              <a href="subject.html#124731">[ subject ]</a>
+              <a href="author.html#124731">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>Just some thoughts on two issues you brought up.
+
+&quot;Fossil: No&quot;: I would still remove it. The example I gave you was not a
+result of a systematic search but I just saw it coincidentally when
+passing by. Linnaeus 1758 described many fossil species, so finding such a
+case would probably not be such a rare event.
+
+You know in AnimalBase we display a field concerning the gender treatment,
+a specific name is either marked as changeable or unchangeable. Shortly
+after we began doing this around 2005 we obtained angry feedback from
+users who discovered wrong information. Our team members had selected the
+wrong item. We initially answered &quot;thanks, I corrected it, took me 10
+seconds&quot;, but this did not help.
+So we quickly modified our strategy and instructed our team members very
+strictly to give this information only if they were absolutely sure about
+what they wrote. If they were not sure we demanded them to select the
+option &quot;I don't know&quot;. We had obtained feedback that saying &quot;I don't know&quot;
+was much better than giving incorrect information.
+I would compare this experience with the fossil information. Only display
+it if you have verified it. Otherwise, write &quot;I don't know&quot; or &quot;not
+verified&quot;.
+
+
+
+The long s. I had discussions with others and the same arguments came up,
+and we also had this problem in AnimalBase. We discussed it intensively
+and came to a different conclusion.
+Let me summarize the arguments, maybe you find them interesting. Perhaps
+you already know them, but these things are rarely discussed.
+
+(1) the long s is a rare letter and many non-insiders do not know this
+letter and when they see it, they cite it as f. The result is that we
+observe a number of Latin names spelled with f instead of s. Many people
+do not know Latin and do not know a word refinella or resinella. If
+ZooBank (which is deveoping into a very important database) decides
+displaying the long s and will be consulted by many people, these errors
+will increase and we will have to search for names like Musca and Mufca,
+Ostrea and Oftrea, pusio and pufio, refinella and resinella, and so on, a
+never ending list. Citing the long s would create more problems than
+benefit.
+We repeatedly had to teach AnimalBase team members to pay very much
+attention on the f and long s problem, and also, if they did not find a
+name with f, for example in Sherborn, we instructed them to look for it
+spelled with s.
+This had the funny result that in the weekly lectures when they reported
+their problems with names they had not found in the literature, they
+always knew where they had to add the sentence &quot;I also looked for the name
+with f and did not find it either&quot;.
+
+(2) The long s and other special characters have never been cited as such
+by taxonomists. We quickly said, let's avoid introducing a totally new
+standard, we can only make mistakes and we don't help people. This was
+probably the most important argument: we intended to present a service for
+the community, to facilitate people's work, and not to complicate it.
+The ae and oe ligatures have been cited in the past, so these characters
+are well known and we decided to cite them.
+
+(3) the argument &quot;let's display all the UTF-8 characters as in the
+original source&quot; seemed weak to us. In UTF-8 you can display almost
+anything. We would have needed to teach our team members a whole new world
+of Latin script characters. Would have been like teaching Chinese...
+In ZooBank you now have the problem of being inconsistent, in that some
+UTF-8 characters were ignored and automatically corrected, others were
+incorrectly cited. For example the ct ligature seems to have been
+consistently ignored, or the Linnean u with tilde (&amp;#361;) at the end of a
+name ending in -um is incorrectly displayed.
+
+<A HREF="http://zoobank.org/NomenclaturalActs/6FCAAF6C-3DAE-4237-B61E-6CAABCE1AAD3">http://zoobank.org/NomenclaturalActs/6FCAAF6C-3DAE-4237-B61E-6CAABCE1AAD3</A>
+Alcyonium arbore? Linn?us, 1758 - ? was the incorrect UTF-8 character,
+correct would be u with tilde.
+This seems to be a systematic error, incorrectly cited at all instances.
+<A HREF="http://zoobank.org/NomenclaturalActs/41F4F85A-33EC-49BF-AA41-872E0D8F1294">http://zoobank.org/NomenclaturalActs/41F4F85A-33EC-49BF-AA41-872E0D8F1294</A>
+Alcyonium digitat? Linn?us, 1758, same problem.
+
+However, only extremely skilled experts know this u tilde spelling mode at
+all, so for not making zoology more sophisticated than it needs to be,
+there seems to be a general convention to cite such a name as arboreum,
+and to ignore the u with tilde.
+
+Looking for a name Alcyonium digitatum in the ZooBank search box does not
+return a result, you have to search for digitatu.
+
+Sometimes I also saw m with tilde, this stands for mm.
+
+Name with ligatures in the original sources which also have UTF-8 characters:
+
+<A HREF="http://zoobank.org/NomenclaturalActs/F3685154-FA47-4085-BFAE-5CF4CF0445DA">http://zoobank.org/NomenclaturalActs/F3685154-FA47-4085-BFAE-5CF4CF0445DA</A>
+Tubipora mu&amp;#383;ica Linn?us, 1758, with long s - i ligature
+
+<A HREF="http://zoobank.org/NomenclaturalActs/0BD4B2B0-E5E6-4161-BD5B-63678A694474">http://zoobank.org/NomenclaturalActs/0BD4B2B0-E5E6-4161-BD5B-63678A694474</A>
+Dermestes pectinicornis Linn?us, 1758, originally with ct ligature
+
+<A HREF="http://zoobank.org/NomenclaturalActs/4F7B08AD-13A7-4C58-94FD-FEFCFF188399">http://zoobank.org/NomenclaturalActs/4F7B08AD-13A7-4C58-94FD-FEFCFF188399</A>
+Gadus aeglefinus Linn?us, 1758, originally with fi ligature (and moreover,
+originally spelled ?glefinus, with AE ligature, in Zoobank cited as
+aeglefinus, probably unintended)
+
+I guess there are half a dozen more of such ligatures, about 10 % of the
+Linnean names are involved and we would have become crazy. A whole hell of
+devils in the details.
+
+Never hesitate if you have more questions and ideas
+Francisco
+
+
+&gt;
+&gt;&gt; If it's done manually it might be worth to correct some other names that
+&gt;&gt; were linked by ZooBank to the Linnean 1758 work.
+&gt;
+&gt; Yes, exactly!  Part of the process of cross-linking is to compare
+&gt; discrepancies.  We've found that in most datasets that we cross-link
+&gt; against, there are a relatively small fraction of discrepancies.  For
+&gt; example, out of 50,000 names, there might be only a few hundred
+&gt; discrepancies -- usually involving the date of publication, correct
+&gt; authorship, or the exact orthography of the name.  This means that it's a
+&gt; very manageable task to investigate each one of the discrepancies. Also,
+&gt; I've found that no database is perfect.  Some are better than others, to
+&gt; be sure -- but one can never assume that one database is always correct --
+&gt; which means that it's important to examine the discrepancies individually.
+&gt;  Indeed, this is one of the main reasons why we wanted to establish this
+&gt; link with BHL -- to make it easier to resolve discrepancies.
+&gt;
+&gt;&gt; My understanding is that ZooBank is a data resource where available
+&gt;&gt; names
+&gt;&gt; are contained. Unavailable names should probably not be contained at
+&gt;&gt; all,
+&gt;&gt; and if yes, they should clearly be marked as such.
+&gt;&gt; I am not sure how names should be treated which were initially made
+&gt;&gt; available and later suppressed.
+&gt;
+&gt; This is an issue that has been debated since ZooBank was first conceived.
+&gt; In 2008, at a Commissioners meeting in Paris, it was determined that
+&gt; ZooBank *would* include unavailable names, and that those names would be
+&gt; clearly marked not only as unavailable, but also give the reason(s) why
+&gt; the name is unavailable.  We already have a very robust data model to deal
+&gt; with this (which I'd be happy to describe, if anyone is interested).  But
+&gt; as with most aspects of ZooBank development, the tricky part is how to
+&gt; implement it (devil is always in the details).  One of the things in the
+&gt; works is a policy on data verification in ZooBank.  Right now, the focus
+&gt; is on building the core infrastructure of ZooBank, populating it with
+&gt; restrospective content, and building tools to streamline the capture of
+&gt; prospective content.  However, what people *really* want from ZooBank is a
+&gt; definitive declaration of whether or not any particular name is available
+&gt; under the Code.  This is the entire process of content verification.  So
+&gt; far, we focused only on registration (these are two very different
+&gt; things).
+&gt;
+&gt;&gt; Example:
+&gt;&gt; <A HREF="http://zoobank.org/NomenclaturalActs/1E691819-76A8-492D-8AE1-DA84F9103CF8">http://zoobank.org/NomenclaturalActs/1E691819-76A8-492D-8AE1-DA84F9103CF8</A>
+&gt;&gt; Acarus telarius Linn??us, 1758 - this name should somehow be marked as
+&gt;&gt; suppressed (ICZN Op. 968).
+&gt;&gt; There were many other such names established in the 1758 work, which
+&gt;&gt; were totally or partly suppressed by the Commission.
+&gt;
+&gt; Yes, indeed!  In fact, one of the projects we've been working on (with
+&gt; LARGE thanks to Charles Hussey, and also to Rod Page who defined the
+&gt; article boundaries of historical BZN volumes in BHL) is a complete
+&gt; database of Opinions.  This is effectively complete (still needs some
+&gt; verification, though), and will be one of the new features added to
+&gt; ZooBank this summer.  But again, we need to sort out exactly how this sort
+&gt; of thing will be implemented on the ZooBank website, and what the policy
+&gt; is for editing these sorts of things, etc.
+&gt;
+&gt; Many thanks for pointing out the individual issues related to Linneaus
+&gt; names.  This sort of thing is EXTREMELY helpful!  I will definitely use
+&gt; these as test cases when we implement the next set of features involving
+&gt; ZooBank record verification/validation.  But again, it probably can't be
+&gt; implemented until later this summer (northern hemisphere summer, that is).
+&gt;
+&gt;&gt; Maybe some other systematic things could be fixed.
+&gt;&gt;
+&gt;&gt; - Remove the long s throughout the original spellings, and replace it at
+&gt;&gt; all
+&gt;&gt; instances by the short s.
+&gt;
+&gt; In this case, we want to maintain the precise orthography as it originally
+&gt; appeared on the printed page -- in al respects.  Basically, if a UTF-8
+&gt; character exists for a particular glyph, we want to capture it as such.
+&gt; The main exceptions are that all-caps words are not faithfully captured as
+&gt; such, and other stylistic attributes (e.g., boldface, small-caps, when
+&gt; original names were not italicized, etc.) will not be captured.  But
+&gt; characters such as the long s and dipthong &quot;??&quot; will be captured as
+&gt; originally printed on the page.
+&gt;
+&gt; The next step is to build the correct algorithm to transform these things,
+&gt; so that the Code-corrected &quot;original spelling&quot; can be generated
+&gt; automatically.  In most cases, this is easy to do -- but there are some
+&gt; tricky ones (e.g., see Art. 32.5.2.1. -- which would require us to know
+&gt; whether the root word is German or not; or some of Art. 32.5.2.4.).  This
+&gt; is one more example of features currently in the works, that will be
+&gt; introduced over time as they rise up the priority list, and as appropriate
+&gt; policies are drafted and ratified.
+&gt;
+&gt;
+&gt;&gt; Example Musca Linn??us, 1758, this name was
+&gt;&gt; spelled Musca with long s at some occasions and MUSCA at others, MUSCA
+&gt;&gt; is
+&gt;&gt; usually converted to Musca with short s. So all specific names should
+&gt;&gt; correctly be combined with Musca with short s.
+&gt;
+&gt; This is a slightly separate issue (multiple spellings of the same genus
+&gt; name, and how they map to the species they are combined with).  The new
+&gt; GNUB data model (not yet implemented) deals with this by capturing
+&gt; separately the verbatim name-string, and the separate name components.  At
+&gt; the moment, this sort of issue is rare enough that it has not risen up the
+&gt; priority &quot;to-do&quot; list.  But it's definitely on the list.
+&gt;
+&gt;&gt; Also, the long s is not cited consistently. Example:
+&gt;&gt; <A HREF="http://zoobank.org/NomenclaturalActs/D2B4DA70-35AE-4D87-9E34-E219FC8E3DA0">http://zoobank.org/NomenclaturalActs/D2B4DA70-35AE-4D87-9E34-E219FC8E3DA0</A>
+&gt;&gt; Ostrea Pu&amp;#383;io Linn??us, 1758 - here Pusio with long s and Ostrea
+&gt;&gt; with
+&gt;&gt; short s, both had the long s in the original source.
+&gt;
+&gt; This is another example of the previous.  The genus was rendered as OSTREA
+&gt; on p. 696 (<A HREF="http://www.biodiversitylibrary.org/pagethumb/727611),">http://www.biodiversitylibrary.org/pagethumb/727611),</A> so the
+&gt; genus is captured as such in the database (minus the all-caps).  I only
+&gt; see &quot;O??trea&quot; in the page header.  Is it rendered this way somewhere else?
+&gt;
+&gt;&gt; - Consider presenting a field &quot;original spelling&quot; and another field
+&gt;&gt; &quot;correct
+&gt;&gt; spelling&quot;. This would probably reduce confusion. In the correct spelling
+&gt;&gt; field
+&gt;&gt; the species would not appear capitalised, and diacritics would be
+&gt;&gt; removed.
+&gt;
+&gt; Yes!  This is already part of the plan.  It just needs to rise up the
+&gt; priority list for implementation.
+&gt;
+&gt;&gt; - I am confused by the statement &quot;Fossil: No&quot; in the ZooBank data result
+&gt;&gt; set.
+&gt;&gt; Is this nomenclaturally relevant?
+&gt;
+&gt; It's not a Code-relevant issue, but it is a useful piece of information
+&gt; (just like type locality, figures, and page number).
+&gt;
+&gt;&gt; Is there an exact definition for the term &quot;fossil&quot;? Since when does a
+&gt;&gt; taxon
+&gt;&gt; need to be extinct for obtaining the attribute &quot;fossil&quot;?
+&gt;
+&gt; If you read the help section for this particular field (click on the blue
+&gt; icon when registering a new name, or editing an existing name), it
+&gt; explains it thusly:
+&gt;
+&gt; &quot;If this new name is based on fossil material, select this checkbox.
+&gt; Otherwise, leave the checkbox unselected.&quot;
+&gt;
+&gt; In other words, it only applies to species-group names, and it is a
+&gt; specific indication of the nature of the name-bearing type material.
+&gt; Technically, if the type specimen of Latimeria chalumnae had been a
+&gt; fossil, and then it was later discovered alive, this would be &quot;Fossil:
+&gt; Yes&quot;.  However, I am not aware of any case where a name is established
+&gt; based on a fossilized type, and then later discovered (at the species
+&gt; level) to be extant.  Generally such cases are described as separate
+&gt; species.
+&gt;
+&gt;&gt; Can we be sure that all molluscs and brachiopods named in the early
+&gt;&gt; Linnean
+&gt;&gt; works were recent?
+&gt;
+&gt; Nope.  Neither can we be sure that all the page numbers are correct, or
+&gt; all the type localities are correct -- or any number of other things.
+&gt; That doesn't mean the data field should be eliminated.  It just means we
+&gt; have to deal with cases that prove to be inaccurate (or unknown).
+&gt;
+&gt;&gt; Would it not be better to remove the statement, to avoid running the
+&gt;&gt; risk to
+&gt;&gt; give an incorrect information?
+&gt;
+&gt; I don't think so, but I'd be interested in hearing opinions from others on
+&gt; this.  As I already said, there is no such thing as a perfect database.
+&gt; One of the things Rob Whitton constantly reminds me of is not to let the
+&gt; &quot;perfect&quot; be the enemy of the &quot;good&quot;.  I tend to be a perfectionist on
+&gt; thses sorts of things (as many database managers are).  But sometimes it's
+&gt; better to just get what you have out there, and then provide a
+&gt; crowd-sourcing mechanism to get it corrected.
+&gt;
+&gt;&gt; Example:
+&gt;&gt; <A HREF="http://zoobank.org/NomenclaturalActs/04B5D5F4-648A-489F-ADE9-2C13971F8A69">http://zoobank.org/NomenclaturalActs/04B5D5F4-648A-489F-ADE9-2C13971F8A69</A>
+&gt;&gt; Anomia Gryphus Linn??us, 1758. Here a fossil species was described, and
+&gt;&gt; in
+&gt;&gt; Zoobank it was marked as &quot;Fossil: No&quot;.
+&gt;
+&gt; Many thanks for the correction!  I have already implemented it on ZooBank
+&gt; (it took me 7 seconds to correct this -- but you did the hard part of
+&gt; finding the error, and made it extremely easy for me by providing the
+&gt; link).
+&gt;
+&gt; I want to thank you again for providing all of these VERY VALUABLE
+&gt; corrections to names in ZooBank.  I will study them in more detail (along
+&gt; with your other recent messages), and will likely come back to you with
+&gt; follow-up questions.
+&gt;
+&gt; Aloha,
+&gt; Rich
+&gt;
+&gt;
+
+
+Francisco Welter-Schultes
+Zoologisches Institut, Berliner Str. 28, D-37073 Goettingen
+Phone +49 551 395536
+<A HREF="http://www.animalbase.org">http://www.animalbase.org</A>
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="124730.html">[Taxacom] Fwd: Bubble science
+</A></li>
+        <LI>Next message: <A HREF="124732.html">[Taxacom] Fwd: Bubble science
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124731">[ date ]</a>
+              <a href="thread.html#124731">[ thread ]</a>
+              <a href="subject.html#124731">[ subject ]</a>
+              <a href="author.html#124731">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

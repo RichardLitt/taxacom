@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Inappropriate accuracy of locality data
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2010-December/118306.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Inappropriate accuracy of locality data</H1>
+    <B data-pagefind-meta="author">Arthur Chapman</B>
+    taxacom3 at achapman.org<BR>
+    <I data-pagefind-meta="date">Wed Dec  1 16:40:52 CST 2010</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="118305.html">[Taxacom] Rafaela Lopes Falaschi invited you to Dropbox
+</A></li>
+        <LI>Next message: <A HREF="118307.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#118306">[ date ]</a>
+              <a href="thread.html#118306">[ thread ]</a>
+              <a href="subject.html#118306">[ subject ]</a>
+              <a href="author.html#118306">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2010</span><!--beginarticle-->
+<PRE>Someone has already mentioned that the&quot;accuracy&quot; as reported by a GPS 
+being not the reportable accuracy, but the precision of the instrument.
+
+This is indeed correct, and is one thing that creates a lot of confusion 
+when I train people in GPS use.
+
+What is reported as 'accuracy' by the instrument is mislabelled and 
+should be called 'precision' - or more correctly 'instrument 
+precision'.  The instrument may conduct 100 repetitions  and report an 
+error of 2m - that is the repeatability, or the error between those 100 
+readings by the instrument. That 'accuracy' reported by the GPS of 2m, 
+however, may bear no resemblance whatsoever to the accuracy of the 
+reading to the actual position on the earth, which may be up to 30m or 
+more away. To get a better fix on the real accuracy one could calibrate 
+the GPS against a known fixed TRIG point; or use a differential GPS, or 
+even use several GPSs and average the results.  For most of our 
+biological work, an accuracy of 10-30m or so is suitable.  If you 
+regularly need greater accuracy, then you should be using differential 
+GPSs (which links to a GPS Base station, and provides a form of 
+calibration) or link to a Wide Area Augmentation System (WAAS) as used 
+by aircraft landing systems - or  Local Area Augmentation Systems (LAAS).
+
+Somebody mentioned the difference between different DATUMs, and 
+especially NAD83 and WGS84.  Indeed - for North America, there is little 
+difference between these, however, the further you move away from 
+continental North America, the greater the difference.  As far away as 
+Hawaii - there may not be a great difference - I've never checked it, 
+but NAD was never intended for use so far out into the Pacific. Many 
+older maps, and older lats and longs would have been produced prior to 
+1983, and in North America probably used NAD27 (North American Datum 
+1927), and this can be up to hundreds of meters out (around 480 around 
+the Aleutian Islands).  Indeed - on a recent trip to Alaska, I regularly 
+found the map used in my GPS showed the road I was on to be consistently 
+about 80 meters from my position.  As one reached a town, the maps had 
+obviously been updated and I was back on the road.  This is a DATUM 
+problem in the maps being used by the GPS company. More and more 
+institutions are locking their GPSs to WGS84 or the local equivalent 
+(NAD83 in North America; AGD84 in Australia), but I often see people 
+using GPSs and have no idea what Datum they are using.  In the Guide to 
+Best Practices for Georeferencing we provide a table showing some the 
+variations between a number of DATUMs.  We also refer to the MANIS 
+Georeferencing Calculator which will calculate the error for any 
+position using a large range of different DATUMs.
+
+I hope this helps
+
+Arthur D. Chapman
+Toowoomba, Australia.
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="118305.html">[Taxacom] Rafaela Lopes Falaschi invited you to Dropbox
+</A></li>
+        <LI>Next message: <A HREF="118307.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#118306">[ date ]</a>
+              <a href="thread.html#118306">[ thread ]</a>
+              <a href="subject.html#118306">[ subject ]</a>
+              <a href="author.html#118306">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Data query
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-June/125367.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Data query</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at bishopmuseum.org<BR>
+    <I data-pagefind-meta="date">Wed Jun 26 06:23:25 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="125366.html">[Taxacom] Data query
+</A></li>
+        <LI>Next message: <A HREF="125368.html">[Taxacom] Fwd: Professorship for Systematic and Evolutionary Botany
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#125367">[ date ]</a>
+              <a href="thread.html#125367">[ thread ]</a>
+              <a href="subject.html#125367">[ subject ]</a>
+              <a href="author.html#125367">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>Thanks, Tony --
+
+[Note to non-data-nerds -- you might want to delete now.]
+
+&gt; One thing relevant to your explanation below: the species epithet is
+treated
+&gt; as a unique entity in zoology, yes, but in botany (most likely also in
+&gt; bacteriology, not sure) it is the original combination which is unique
+i.e. the
+&gt; species plus its original genus placement, not the epithet alone. 
+
+Yes, but from the TNU perspective, this difference turns out to be
+irrelevant for data modeling purposes.  A subset of all TNUs represent
+Nomenclatural Acts.  Because the Codes are different, there are different
+rules to determine which TNUs represent Code-governed nomenclatural acts.
+Under the botanical Code, TNUs representing the first combination of an
+epithet and a genus are included within the subset of TNUs that are
+nomenclatural acts; whereas under the zoological Code, they are not.  This
+is just one of many differences in the application of nomenclatural acts to
+TNUs; but the important point is that the TNUs themselves are the same
+regardless.  Several years and many NOMINA meetings with zoology nerds,
+botanical nerds, a few bacterial nerds, and yes, even one particularly
+outspoken mycological nerd -- have led to a better understanding of how to
+model data from a TNU perspective in a way that is Code-agnostic (or,
+rather, accommodates the needs of all the Codes).  One nice thing about this
+approach is that it allows the same TNU to represent different nomenclatural
+acts under different Codes in the case of ambiregnal names.
+
+&gt; If it is moved
+&gt; to a different genus a new combination is established with a new
+authorship
+&gt; (unlike in zoology), with the old one in brackets. In other words now we
+have
+&gt; a new &quot;thingy&quot; (needing a new ID) which has a relationship to the original
+&gt; &quot;thingy&quot; but is not the same. 
+
+No new ID necessary.  All of it happens via TNUs, and each TNU has its own
+unique identifier. All that differs is which TNUs represent Code-governed
+acts under which Codes.  The issue with comb. nov. under ICNafp is only one
+example.  In other words, all of the &quot;thingies&quot; are TNUs.  The issue is
+about which subset of those Thingies carry Code-goverened nomenclatural
+acts, and which do not. The rules differ between the Codes, but the
+fundamental TNUs remain the same in any case.
+
+&gt; Forgive me if I have this wrong but I think you
+&gt; may need to encode slightly different rules for botanical and zoological
+usage
+&gt; in GNUB at least (not required in ZooBank for obvious reasons). 
+
+Yes, absolutely!  But the new GNUB model (which was hammered out over
+several NOMINA meetings) puts a nomenclatural layer on top of the TNUs.  We
+call these this layer the &quot;Nomenclatural Event&quot; layer, and as I described
+above, while each Code may have its own unique set of Nomenclatural Events
+specific to each Code, this layer of Nomenclatural Events applies to the
+same underlying TNU structure for all Codes.  Nothing in my previous email
+touched on that layer -- that would require a MUCH longer email to explain.
+The way it's implemented, you can define a virtually unlimited number of
+rules through an unlimited number of different nomenclatural codes.  In
+other words, it's open-ended in its design, so if a new Code comes along, or
+if an existing Code changes, you just need to define new Nomenclatural
+Events (i.e., no new tables or fields required; only new records in existing
+tables and fields).
+
+&gt; I imagine
+&gt; those on the GNUB-constructing board / advisory panel / whatever from the
+&gt; botanical sphere will be across this, but it is not apparent from my
+reading of
+&gt; what you have written below (I think).
+
+What I wrote in the previous post is a data model for TNUs.  As I said, the
+TNUs are the same across Codes.  The differences between the Codes are
+applied at the Nomenclatural Event layer.  Simple algorithms take care of
+formatting the bits together in a Code-appropriate way when presenting to a
+human.  For example, names seen through the zoological Nomenclatural Event
+layer are formatted as &quot;Aus bus (Linnaeus, 1758)&quot;, whereas an analogous name
+under ICNafp governance would be rendered as &quot;Aus bus (L.) Jones&quot;.  The
+underlying data are the same in both cases -- it's just an issue for the
+algorithm operating at the presentation layer.
+
+&gt; Best - Tony (only mildly confused at this point, may get worse).
+
+Don't feel bad -- it took me the better part of my PhD years to get my head
+around it enough to come up with the Taxonomer data model, and then it took
+a number of years and NOMINA meetings to generalize it across Codes.  The
+good news is that, the more we implement it with real world data, the more
+confident I am that we're on the right track.
+
+Aloha,
+Rich
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="125366.html">[Taxacom] Data query
+</A></li>
+        <LI>Next message: <A HREF="125368.html">[Taxacom] Fwd: Professorship for Systematic and Evolutionary Botany
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#125367">[ date ]</a>
+              <a href="thread.html#125367">[ thread ]</a>
+              <a href="subject.html#125367">[ subject ]</a>
+              <a href="author.html#125367">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] validation of taxon names
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20validation%20of%20taxon%20names&In-Reply-To=%3CCE00F45D-C684-44B2-931E-E5E259D1C549%40email.arizona.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="121918.html">
+   <LINK REL="Next"  HREF="121866.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2012-February/121817.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] validation of taxon names</H1>
+    <B data-pagefind-meta="author">Bradley Boyle</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20validation%20of%20taxon%20names&In-Reply-To=%3CCE00F45D-C684-44B2-931E-E5E259D1C549%40email.arizona.edu%3E"
+       TITLE="[Taxacom] validation of taxon names">bboyle at email.arizona.edu
+       </A><BR>
+    <I data-pagefind-meta="date">Thu Feb 16 16:46:20 CST 2012</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="121918.html">[Taxacom] validation of taxon names
+</A></li>
+        <LI>Next message: <A HREF="121866.html">[Taxacom] validation of taxon names
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#121817">[ date ]</a>
+              <a href="thread.html#121817">[ thread ]</a>
+              <a href="subject.html#121817">[ subject ]</a>
+              <a href="author.html#121817">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2012</span><!--beginarticle-->
+<PRE>Hi Armand,
+
+Sorry to be getting into this discussion rather late. I haven't been monitoring taxacom for a few days.
+
+As Tony mentioned in his response, there are several solutions out there at the moment, each with its own limitations and caveats. For plants, one of those solutions is the iPlant Taxonomic Name Resolution Service (<A HREF="http://tnrs.iplantcollaborative.org/">http://tnrs.iplantcollaborative.org/</A>), a project I've been involved with for the past couple of years. 
+
+The purpose of the iPlant TNRS is too provide tools for bulk resolution of large lists of names--such as yours--against taxonomic databases. The TNRS is not a primary provider of taxonomic data, but rather a &quot;window&quot; on other databases; it provides a means of accessing the content of those databases. The tools consist of Dmitry Mozzherin's GNI Name Parser (<A HREF="http://gni.globalnames.org/parsers/new;">http://gni.globalnames.org/parsers/new;</A> with thanks to Dmitry), a somewhat modified version of Tony's TAXAMATCH (<A HREF="http://www.cmar.csiro.au/datacentre/taxamatch.htm...with">http://www.cmar.csiro.au/datacentre/taxamatch.htm...with</A> thanks and apologies to Tony), and additional code for disambiguating results which are machine-resolvable and flagging those which are not. And finally, a user interface and api.
+
+Currently we are at version 2.0, which uses Tropicos (<A HREF="http://www.tropicos.org/">http://www.tropicos.org/</A>) as its source of names and synonymy (the latter as determined by their computed acceptance algorithm). As a Neotropics-centric botanist, I can attest that Tropicos provides extremely thorough coverage of bryophytes, ferns and seed plants of the Americas; indeed, it is the major electronic reference for a large number of Neotropical herbaria, many of which synchronize their taxonomy with Tropicos. Tropicos is also comprehensive for many regions of the Old World--Madagascar, for example. Of course if you need to resolve algae, fungi or insects, or have a lot of plant names from Indonesia, then the TNRS may not do the job. 
+
+As a redistributor, the TNRS is not able to allow users to download its cache of source databases. But it will enable you resolve your names in a single pass against all the names in those databases. For example, all 1.2 million names in Tropicos.
+
+The TNRS will only be as useful as its taxonomic sources. If Tropicos is not adequate for your purposes, then the current version of the TNRS won't be adequate either. As of version 3.0 (currently under development) the TNRS will provide access to multiple sources of taxonomy. If you prefer NCBI to Tropicos, you will be able to use NCBI. If you are with a government agency that requires you standardize taxonomy according to an &quot;approved&quot; source, then you will be able to use that source (in the US, many agencies are required to use USDA Plants, <A HREF="http://plants.usda.gov/java/">http://plants.usda.gov/java/</A>). Most importantly, you will be able to combine sources and rank them, so that &quot;gold standard&quot; monographic taxonomies can be applied to specific clades, and the remaining names mopped up using more comprehensive but less stringent sources.
+
+The TNRS approach is agnostic in that it does not attempt to reconcile these sources against each other; rather, it provides access to what is currently out there. By no means is the TNRS is intended to be a substitute for more comprehensive solutions such as the Global Names Architecture. However, until solutions such as the GNA are fully implemented, applications like the TNRS can provide a practical means of cleaning and merging the enormous quantities of useful but taxonomically &quot;dirty&quot; data that many of us depend upon for our research.
+
+Finally, although iPlant's funding and mission constrain the taxonomic scope of the iPlant TNRS to plants, we invite the community to develop other instances capable of resolving all organism names. The entire code base through version 2.0 is freely available via our GitHub repository (<A HREF="http://tnrs.iplantcollaborative.org/about.html#source_code">http://tnrs.iplantcollaborative.org/about.html#source_code</A>).
+
+Cheers,
+Brad
+
+__________________________________
+
+Brad Boyle, Ph.D.
+Dept. of Ecology and Evolutionary Biology
+University of Arizona
+BSW 310
+P.O. Box 210088
+Tucson, AZ 85721, USA
+
+520-626-3336
+<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">bboyle at email.arizona.edu</A>
+__________________________________
+
+
+
+On Feb 14, 2012, at 11:00 AM, <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom-request at mailman.nhm.ku.edu</A> wrote:
+
+&gt;<i> Message: 13
+</I>&gt;<i> Date: Tue, 14 Feb 2012 09:42:10 +0100
+</I>&gt;<i> From: Armand Turpel &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">armand.turpel.mnhn at gmail.com</A>&gt;
+</I>&gt;<i> Subject: [Taxacom] validation of taxon names
+</I>&gt;<i> To: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> Message-ID: &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">4F3A1E62.80307 at gmail.com</A>&gt;
+</I>&gt;<i> Content-Type: text/plain; charset=UTF-8; format=flowed
+</I>&gt;<i> 
+</I>&gt;<i> Hi,
+</I>&gt;<i> 
+</I>&gt;<i> We have a database with over 80000 species taxon names which we want to 
+</I>&gt;<i> compare and validate against other databases. Doing this job isn?t very 
+</I>&gt;<i> easy:
+</I>&gt;<i> 
+</I>&gt;<i> 1. The majority of organizations only provide web interfaces to search 
+</I>&gt;<i> for single taxon names.
+</I>&gt;<i> 2. Copyrights of data are some times not very clear
+</I>&gt;<i> 3. Quality of data is doubtful. &gt;
+</I>&gt;<i> - Lamia amputator Gu?rin-M?neville, 1844
+</I>&gt;<i> - Lamia amputator Guerin-Meneville, 1844
+</I>&gt;<i> - Lamia amputator Gu?rin-M?neville
+</I>&gt;<i> - ?...
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> The only organization we know that provide its whole database for 
+</I>&gt;<i> download is species2000 (catalogue of life &gt; COL). We created a 
+</I>&gt;<i> postgresql version for the COL data from which it is possible to compare 
+</I>&gt;<i> a big number of taxon names in one run. Postgresql provide good fuzzy 
+</I>&gt;<i> string algorithms. But the COL data isn?t error free and it isn?t 
+</I>&gt;<i> complete for our region.
+</I>&gt;<i> 
+</I>&gt;<i> The question is: Which organization provide trustful, complete (as 
+</I>&gt;<i> possible) and full accessible data?
+</I>&gt;<i> 
+</I>&gt;<i> a+
+</I>&gt;<i> 
+</I>&gt;<i> arm
+</I>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="121918.html">[Taxacom] validation of taxon names
+</A></li>
+	<LI>Next message: <A HREF="121866.html">[Taxacom] validation of taxon names
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#121817">[ date ]</a>
+              <a href="thread.html#121817">[ thread ]</a>
+              <a href="subject.html#121817">[ subject ]</a>
+              <a href="author.html#121817">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

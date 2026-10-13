@@ -1,0 +1,219 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> ITIS (an explanation of GBIF's data integration activities)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2004-June/092211.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">ITIS (an explanation of GBIF's data integration activities)</H1>
+    <B data-pagefind-meta="author">Donald Hobern</B>
+    dhobern at GBIF.ORG<BR>
+    <I data-pagefind-meta="date">Wed Jun 23 16:17:23 CDT 2004</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="092203.html">Characters.
+</A></li>
+        <LI>Next message: <A HREF="092213.html">ITIS (an explanation of GBIF's data integration activities)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092211">[ date ]</a>
+              <a href="thread.html#092211">[ thread ]</a>
+              <a href="subject.html#092211">[ subject ]</a>
+              <a href="author.html#092211">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2004</span><!--beginarticle-->
+<PRE>Richard Petit has raised several issues about the presentation of
+taxonomic information by ITIS and GBIF.  Some of his concerns arose from
+an e-mail he had received from me (sent on behalf of GBIF, not ITIS):
+
+
+
+&gt;&gt; I then sent in four of five corrections and received a reply from
+
+&gt;&gt; ITIS (will forward to Dr. Lane off server but will send to anyone
+
+&gt;&gt; interested) in which I am advised that &quot;it is important that the
+
+&gt;&gt; search interfaces continue to list these names since a user may
+
+&gt;&gt; recognise them as misspellings for names of taxa in which he or she
+
+&gt;&gt; is interested.&quot;
+
+
+
+It may be helpful for me to explain a little more about GBIF's data
+integration activities.  I hope to be able to clarify our approach and
+to remove some fears about what we hope to achieve.
+
+
+
+GBIF aims to provide electronic access to key primary resources for
+biodiversity informatics and to ensure that these resources are as
+interoperable as possible for use by different communities.  To this
+end, we have focused on two different levels.
+
+
+
+First, we are encouraging the digitisation of biodiversity-related data
+using well-defined data standards and access protocols.  Most of the
+work in 2003/2004 has been in establishing a global network of specimen
+and observation databases (building on the work of many regional and
+thematic networks).  These databases are being accessed using TDWG
+standards (the DiGIR protocol, with the Darwin Core record format, and
+the BioCASe protocol using the ABCD schema).  We are also working with
+providers of nomenclatural and taxonomic information (including ITIS and
+Species 2000) to develop similar models to simplify access to resources
+such as nomenclators, taxonomic revisions, regional checklists and other
+significant species lists (e.g. red lists).
+
+
+
+Secondly, we are developing central infrastructure to help users to
+locate all of these data resources and to select those which address
+their interests.  We have established a central registry with
+descriptive and technical metadata concerning the resources which can be
+accessed through the network.  During the next year, we will provide a
+web service to allow users and software tools to search for these
+resources using any of the fields defined in the registry database.  We
+are also building an index to all of the taxon names in use in all of
+these resources.  As of today this index holds information from the
+ITIS/Species 2000 annual checklist and from the taxon names used in
+specimen and observation records throughout the network.  This index is
+not in any way regarded as an &quot;authoritative source&quot; of taxonomic
+information.  It is rather a tool to assist users to discover which
+resources include data on different taxa.
+
+
+
+The current GBIF Data Portal (<A HREF="http://www.gbif.net/)">http://www.gbif.net/)</A> is a prototype
+intended simply to allow users to see the data offered today by data
+providers within the GBIF Network.  Its search function offers a view
+into the data index and therefore includes a wide variety of names which
+may in many cases be invalid, misspelled or otherwise incorrect.
+
+
+
+The Data Portal includes information from ITIS and Species 2000 and uses
+it for two purposes.  The ITIS/Species 2000 taxonomic hierarchy is used
+to allow users to browse much of the accessible data without searching
+directly by name.  Synonymy data from ITIS/Species 2000 is used to help
+users to find relevant specimen and observation records which may have
+been provided using different names from the one used in a search
+request.
+
+
+
+All data presented through the GBIF Data Portal interface is credited to
+the provider of the information.  We identify ITIS or one of the Species
+2000 Global Species Databases as the source for each name which they
+include.  We report their opinion on the acceptability of the name (e.g
+&quot;accepted name&quot;, &quot;unambiguous synonym for Puma concolor&quot;).  For all
+other names in the index (i.e. for all names which we only know from
+specimen or observation records), we state that their position in the
+overall taxonomic hierarchy is &quot;tentative&quot;.  This approach is meant to
+highlight that these names are of unknown quality, but we recognise that
+this needs to be made much clearer.  We therefore intend to change the
+interface to provide a clear separation between accepted names,
+unaccepted names and names of unknown provenance.  As I stated in my
+e-mail to Richard, we believe however that all of these names have to be
+included in an interface which is intended to allow users to find data
+regardless of the name under which it may have been shared.  This is
+very different from an interface such as that offered by ITIS, which
+does seek to provide an authoritative judgment about the names included.
+GBIF will also offer interfaces to resources which provide authoritative
+taxonomic judgments, and we need to ensure that users can easily
+understand what sort of data they are searching and viewing at any
+point.
+
+
+
+As GBIF develops, we should see a wide range of different tools and
+portals based on the underlying data resources.  These will serve the
+needs of different types of users and will include access to different
+taxonomic hierarchies.  Many different groups will be able to develop
+the tools that meet their particular needs.  This will be made possible
+because GBIF is using well-defined standards and protocols, and
+encouraging the development of reusable, open-source software
+components.
+
+
+
+Many users will have no ability to choose between different taxonomic
+views and will require the system to provide them with a default
+taxonomy (something which will clearly be a great challenge in itself).
+However there are many other users who will wish to use, or will need to
+use, a particular taxonomy.  These taxonomies should be made available
+through the network and will be used to offer different paths into the
+overall pool of data.  Taxonomists should be able to organise their
+personal view of the data using their preferred taxonomy (even using a
+local working version of a taxonomy for this purpose).  Those working in
+government departments or conservation organisations should be able to
+access data using the species names required by their work (red lists,
+regional checklists, etc.).  Any user should be able to enter the system
+and browse just the names from IPNI, IndexFungorum, &quot;Catalogue of the
+Pseudoscorpionida&quot; or &quot;Distribution and Taxonomy of Birds of the World&quot;,
+along with metadata describing the source for each list and its intended
+use.  Many of these lists will be &quot;authoritative&quot; views for the groups
+concerned.
+
+
+
+I am fully aware of the enormous gap between where we are today and
+where we hope to be in the near future.  I also recognise that we will
+need access to much fuller information about the relationships between
+different taxonomic concepts if we are going to be able to allow all of
+the available data to be re-organised using a number of different
+taxonomies.  These are the problems which GBIF is trying to address.  I
+would follow Richard Pyle's plea on Monday and encourage you all to
+contribute to this process, in particular to the development of the
+various TDWG standards needed to make this work.  Of most relevance
+right now is the development of an exchange standard for taxonomic name
+and concept data (see <A HREF="http://tdwg.napier.ac.uk/phpwiki/index.php).">http://tdwg.napier.ac.uk/phpwiki/index.php).</A>
+
+
+
+Donald
+
+
+
+Donald Hobern (dhobern at gbif.org)
+
+Programme Officer for Data Access and Database Interoperability
+
+Global Biodiversity Information Facility Secretariat
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="092203.html">Characters.
+</A></li>
+        <LI>Next message: <A HREF="092213.html">ITIS (an explanation of GBIF's data integration activities)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092211">[ date ]</a>
+              <a href="thread.html#092211">[ thread ]</a>
+              <a href="subject.html#092211">[ subject ]</a>
+              <a href="author.html#092211">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

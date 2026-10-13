@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Showing the importance of natural
+	history	collections	and the networks they are building
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2014-April/127285.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Showing the importance of natural
+	history	collections	and the networks they are building</H1>
+    <B data-pagefind-meta="author">Roderic Page</B>
+    Roderic.Page at glasgow.ac.uk<BR>
+    <I data-pagefind-meta="date">Mon Apr 28 03:17:45 CDT 2014</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="127284.html">[Taxacom] Showing the importance of natural history collections
+ and the networks they are building
+</A></li>
+        <LI>Next message: <A HREF="127286.html">[Taxacom] Showing the importance of natural history collections
+ and the networks they are building
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#127285">[ date ]</a>
+              <a href="thread.html#127285">[ thread ]</a>
+              <a href="subject.html#127285">[ subject ]</a>
+              <a href="author.html#127285">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2014</span><!--beginarticle-->
+<PRE>Hi Rich,
+
+The distinction between data and metadata in LSIDs had little or nothing to do with the distinction between digital and conceptual objects IMHO. It was a way to transport both data (e.g., a gigabyte worth of genomic data) and metadata about that data (e.g., accession numbers, sequencing protocol, associated publications). Somehow this got muddled with a distinction between digital and conceptual objects.
+
+In the wider RDF world people are very aware of the distinction between digital records and concepts/physical things, so much so that there has been a horrendously convoluted debate about it (the dreaded HTTPRange-14 question <A HREF="https://en.wikipedia.org/wiki/HTTPRange-14">https://en.wikipedia.org/wiki/HTTPRange-14</A> ). It?s pretty much the ?what?s a species?? question for the Semantic Web (run away, run away).
+
+One of the many things CrossRef did well was to regard DOIs as identifying an article in the abstract sense, not any particular representation of that article (e.g., paper, PDF, HTML, ePub all have same DOI). This makes it easy to say things like ?this article cites that article?, ?I am the author of this article?, etc. Hence we can talk about citation and authorship, relationships that are at the core of bibliographic data. Had they chosen to identify database records, it would be much less useful.
+
+In the same way, if we have identifiers for specimens, we can talk about citations, sequencing, determinations, etc. I suspect a lot of this discussion would be simpler if we focus on where we?d want to be in terms of our science. I want a ?biodiversity knowledge graph? (<A HREF="http://iphylo.blogspot.co.uk/2014/01/what-i-be-working-on-in-2014-knowledge.html">http://iphylo.blogspot.co.uk/2014/01/what-i-be-working-on-in-2014-knowledge.html</A> ), so I want identifiers on things that are in that graph. 
+
+Regards
+
+Rod
+
+On 26 Apr 2014, at 03:17, Richard Pyle &lt;deepreef at bishopmuseum.org&gt; wrote:
+
+&gt; Hi Quentin,
+&gt; 
+&gt;&gt; do the DOIs (or other identifiers) allocated to specimens refer to the
+&gt; physical
+&gt;&gt; object or the database entry describing them?
+&gt; 
+&gt; This is exactly the issue I was trying to get at.  I think it depends on who
+&gt; is in charge of issuing the identifiers.  If it's a collections person who
+&gt; is used to dealing with catalog numbers, and who is thrust into the role of
+&gt; informatician (e.g., due to lack of funds to hire an informatician), then
+&gt; the identifiers are intended to represent the physical (really conceptual --
+&gt; but that's another discussion) specimens.  However, if the person in charge
+&gt; of issuing identifiers is from the informatics world (without a background
+&gt; in natural history collections), then often the intention is to assign the
+&gt; identifier to the data record.
+&gt; 
+&gt; The real problem is that this fundamental dichotomy exists, but only a very
+&gt; few people on the front lines even realize the dichotomy exists.  And even
+&gt; fewer people take the time to make it clear to the outside world what their
+&gt; identifiers actually represent.  It's fashionable to bash LSIDs these days
+&gt; (perhaps justifiably), but one thing the LSID exercise forced our community
+&gt; to confront (besides the world of RDF) is this distinction between digital
+&gt; objects and conceptual/abstract/physical (i.e., non-digital) objects;
+&gt; particularly in terms of the distinction between &quot;data&quot; and &quot;metadata&quot;
+&gt; (sensu LSID spec).  Other than media files (images, videos, audio files,
+&gt; PDFs, etc. -- and *possibly* gene sequences...), almost all of the stuff we
+&gt; care about in biodiversity informatics is in the realm of
+&gt; conceptual/abstract/physical.  Thus, the trend has been towards minting
+&gt; identifiers for such.
+&gt; 
+&gt; I'm not saying that identifiers for data records isn't important (it *is*
+&gt; important -- especially in the iDigBio space).  I'm just saying that our
+&gt; community hasn't been particularly diligent about being up-front and clear
+&gt; about what our identifiers are intended to represent.
+&gt; 
+&gt;&gt; I would have thought it was the former, in which case versions are rather
+&gt;&gt; irrelevent. I tend to agree with Rod, that versioning is not that
+&gt; important.
+&gt; 
+&gt; No, it's not so much about record versions, as it is about *dataset*
+&gt; versions.  It's less about what metadata was associated with each record
+&gt; than it is about what records were there.
+&gt; 
+&gt; Aloha,
+&gt; Rich
+&gt; 
+&gt; 
+&gt; _______________________________________________
+&gt; Taxacom Mailing List
+&gt; Taxacom at mailman.nhm.ku.edu
+&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt; The Taxacom Archive back to 1992 may be searched at: <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt; 
+&gt; Celebrating 27 years of Taxacom in 2014.
+
+---------------------------------------------------------
+Roderic Page
+Professor of Taxonomy
+Institute of Biodiversity, Animal Health and Comparative Medicine
+College of Medical, Veterinary and Life Sciences
+Graham Kerr Building
+University of Glasgow
+Glasgow G12 8QQ, UK
+
+Email: 		r.page at bio.gla.ac.uk
+Tel: 			+44 141 330 4778
+Fax: 		+44 141 330 2792
+Skype: 		rdmpage
+Facebook: 	<A HREF="http://www.facebook.com/rdmpage">http://www.facebook.com/rdmpage</A>
+LinkedIn: 	<A HREF="http://uk.linkedin.com/in/rdmpage">http://uk.linkedin.com/in/rdmpage</A>
+Twitter: 		<A HREF="http://twitter.com/rdmpage">http://twitter.com/rdmpage</A>
+Blog: 		 <A HREF="http://en.wikipedia.org/wiki/Roderic_D._M._Page">http://en.wikipedia.org/wiki/Roderic_D._M._Page</A>
+Citations: 	<A HREF="http://scholar.google.co.uk/citations?hl=en&amp;user=4Z5WABAAAAAJ">http://scholar.google.co.uk/citations?hl=en&amp;user=4Z5WABAAAAAJ</A>
+ORCID: 		<A HREF="http://orcid.org/0000-0002-7101-9767">http://orcid.org/0000-0002-7101-9767</A>
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="127284.html">[Taxacom] Showing the importance of natural history collections
+ and the networks they are building
+</A></li>
+        <LI>Next message: <A HREF="127286.html">[Taxacom] Showing the importance of natural history collections
+ and the networks they are building
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#127285">[ date ]</a>
+              <a href="thread.html#127285">[ thread ]</a>
+              <a href="subject.html#127285">[ subject ]</a>
+              <a href="author.html#127285">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

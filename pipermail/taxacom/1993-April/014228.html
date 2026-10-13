@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> ASC Collectors File
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20ASC%20Collectors%20File&In-Reply-To=%3Cmailman.669.1157126627.2564.taxacom%40mailman.nhm.ku.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="097379.html">
+   <LINK REL="Next"  HREF="050020.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1993-April/014228.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">ASC Collectors File</H1>
+    <B data-pagefind-meta="author">Peter D. Wilson</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20ASC%20Collectors%20File&In-Reply-To=%3Cmailman.669.1157126627.2564.taxacom%40mailman.nhm.ku.edu%3E"
+       TITLE="ASC Collectors File">dflora!peter at WPA.COM
+       </A><BR>
+    <I data-pagefind-meta="date">Fri Apr 16 10:58:39 CDT 1993</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="097379.html">Gopher University 93
+</A></li>
+        <LI>Next message: <A HREF="050020.html">ASC Collectors File
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#14228">[ date ]</a>
+              <a href="thread.html#14228">[ thread ]</a>
+              <a href="subject.html#14228">[ subject ]</a>
+              <a href="author.html#14228">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>1993</span><!--beginarticle-->
+<PRE>Yesterday I downloaded the ASC Collectors from Taxacom so as to
+incorporate it into the new Tropcos Database, but I am having a lot of
+problems with the quality of the data. Is this data for general release or
+have I jumped the gun a little. I also tried to e-mail David Boufford
+about the problems but the address I have (<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">boufford.oeb at mhsgw.harvard.edu</A>)
+bounced .. does anybody have a more current address for him.
+
+One of the things I observe in the data is that is essentially manual..
+ie. it is designed be to used to generate listings and these listings must
+be interpreted by humans. I think it is time that we established machine
+readable standards for our data. By this I don't mean in the sense of
+something like TDWG Standards; I mean it in the sense of having datasets
+which are decodeable by reasonably simple programs and which don't involve
+applications of artificial inteligence. Adding little textual comments to
+data fields; inserting private 'codes' like, =,?,???,! or !!!, or having
+ambiguous delimeters  in lists or multivalued fields.
+
+One of the ways in which we can achieve this is to actually clean the data
+with the assistance of programs, rather than relying simply on human
+scanning. I use perl scripts such as the one below. They take only a few
+minutes to clone and modify, and in a few seconds show up problems which
+would take immense amounts of time to catch by manual scanning. Admittedly
+this listing is manually scanned but at least it in a form which shows up
+problems. The scripts can also be rapidly modified to scan only for
+particular problems like numbers in fields which are 'supposed' to be
+alphabetic. More sophisticated scripts can look for acceptibly formatted
+person names, plant names, dates, lat-long coordinates etc. I can provide
+perl subroutines which do some of this, maybe other perlers have useful
+data cleaning scripts we could use.
+
+We have got to get out of this manual mindedness. Just because we put
+things on computers is not to say that we have in any meaningful way
+computerized anything !!!
+
+'nough said.
+
+
+PERL SCRIPT:
+
+#!/LocalApps/perl
+# This script prints out the collector_id and the value of a field, sorts
+# on the value then prints out the value and all id's which have that
+#  value. Each new value is introduced with an asterisk
+
+# usage:    script.pl &lt;asc_collector.data &gt;problems
+
+open(PRESORTFILE,&quot;| sort -t@ +1 &gt;/tmp/Tmp$$&quot;) || die &quot;Can't open sort
+file.&quot;;
+
+
+while (&lt;&gt;) {
+        chop;
+
+        split(/\$/,$_);
+        foreach (@_) {s/ +/ /g;s/^ //; s/ $//;}
+
+        ($collector_id,$alt_name,$abbrev,$country,$dates,$institution,
+         $full_name,$created,$edited) = @_;
+
+
+         $field = $country;
+
+
+
+        printf PRESORTFILE &quot;%s@%s\n&quot;,$collector_id,$field  if $field;
+
+}
+
+close(PRESORTFILE);                                                     #
+wait for sort to finish
+die &quot;sort failed.&quot; if $?;                                       # sordid
+sort
+open(SORTEDFILE, &quot;&lt;/tmp/Tmp$$&quot;);
+
+$maxids_perline = 5;            # format 5 specimen id's per line
+$id_count = 0;                          # id's output for current
+collector
+$old_problem = &quot;&quot;;              # switch variable
+
+while (&lt;SORTEDFILE&gt;) {
+        ($specimen_id, $new_problem) = split(/@/,$_);
+        if($old_problem ne $new_problem) {
+#               printf &quot;\n&quot;;
+                $old_problem = $new_problem;
+                printf &quot;\n*\n%s&quot;, $new_problem;
+#               printf &quot;%s&quot;, $specimen_id; # for representative id
+                $id_count = 0;
+        }
+#       for all id's
+        if($id_count ge $maxids_perline) { print &quot;\n&quot;; $id_count = 0;}
+        printf &quot; %6s&quot;, $specimen_id; $id_count++;
+}
+printf &quot;\n&quot;;
+
+# remove the temp sort file
+unlink &quot;/tmp/Tmp$$&quot;;
+
+
+--
+--------------------------------------------------------------------------
+peter d. wilson
+   NeXTMail prefered -- dflora!<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">peter at wpa.com</A>
+   no NeXTMail       -- <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">wilsonp at mobot.org</A>     (Missouri Botanical Garden)
+--------------------------------------------------------------------------
+
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="097379.html">Gopher University 93
+</A></li>
+	<LI>Next message: <A HREF="050020.html">ASC Collectors File
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#14228">[ date ]</a>
+              <a href="thread.html#14228">[ thread ]</a>
+              <a href="subject.html#14228">[ subject ]</a>
+              <a href="author.html#14228">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

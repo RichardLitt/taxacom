@@ -1,0 +1,233 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Real time batch spell checking of scientific names
+ now available via IRMNG
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-October/126201.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Real time batch spell checking of scientific names
+ now available via IRMNG</H1>
+    <B data-pagefind-meta="author">Tony.Rees at csiro.au</B>
+    Tony.Rees at csiro.au<BR>
+    <I data-pagefind-meta="date">Tue Oct 29 14:29:53 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="126200.html">[Taxacom] New species of the future
+</A></li>
+        <LI>Next message: <A HREF="126202.html">[Taxacom] New species of the future
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#126201">[ date ]</a>
+              <a href="thread.html#126201">[ thread ]</a>
+              <a href="subject.html#126201">[ subject ]</a>
+              <a href="author.html#126201">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>Hi David,
+
+Thanks for your response. I agree entirely that 
+
+&gt; the closest known spelling may in fact be in a completely different taxon
+
+For this reason, along with the name, in this result format and elsewhere I include a subset of the higher classification for each name returned so the (human) user can see whether this is a name in Mammalia, angiosperms or whatever (the problem is more severe for genera alone than it is for supplied binomials, however), and accept/or reject accordingly depending on other knowledge regarding the supplied input name.
+
+I have also provided a facility to automate this to a degree: on the IRMNG search page I include an optional higher taxonomic filter with 30 or so different choices so if desired, you can restrict your search to just land plants, algae, insects, molluscs, mammals or a range of other groups. At present, when selected, this filters the exact matches only and switches out for the near matches (in the batch checking mode) but I guess I should make it apply there as well (however there is a logic which says the nearest match may be in an adjacent group from the one requested since some class or phylum lines are blurry, but not too many).
+
+In my system the near matches returned are graded at into 3 classes of nearest, and more distant (the latter has 2 subdivisions in fact) and by default my algorithm switches off the more distant ones unless there are no nearer ones to show (this is on the basis of my experience which is that for species at least, 99% + of the time the intended target is in the &quot;nearest&quot; class when this is present). However this masking (I call it shaping) can be switched off for single name checking by selecting the &quot;full (no shaping)&quot; mode from the IRMNG search page as desired, for single input names (for batch processing it introduces so much noise that I have not included this as an option at this time, but could do in the future if desired).
+
+Also when names are input singly, my system will report a degree of similarity for an authority match when this is supplied with the input name - again at present this is not part of the batch mode (this time for space reasons) but could be added. Having a high authority similarity (or not) is another hint as to whether the suggested nearest match is in fact likely to be what was intended, although as we know in some cases this can be fallible too as sometimes the same taxon authority can be cited in rather different ways (or simply be incorrect too).
+
+You are of course right that a combination of computer processing and human review is still required, the latter to accept or reject the suggested near matches as plausible or not. Nevertheless my experience to date with this system (6 years since I implemented the initial version) is that where the desired target name is held it is almost always returned except for severely misspelled input names, sometimes with the odd false hit too but most often not. In fact for the majority of false hits presently returned this is because the desired true hit is not presently held, a situation I intend to rectify over time, especially as more large reference sets of correctly spelled names become available for re-use as previously mentioned.
+
+I hope this gives some insight into some things which are going on behind the scenes, and of course I am very happy to receive suggestions for improving this service further.
+
+Regards - Tony
+
+ 
+________________________________________
+From: taxacom-bounces at mailman.nhm.ku.edu [taxacom-bounces at mailman.nhm.ku.edu] on behalf of David Campbell [pleuronaia at gmail.com]
+Sent: Wednesday, 30 October 2013 2:21 AM
+Cc: taxacom
+Subject: Re: [Taxacom] Real time batch spell checking of scientific names now available via IRMNG
+
+Such error checking is a very useful resource.  Spelling errors are quite
+common on museum labels, not to mention the new errors introduced when the
+labels are copied, especially by anyone not well acquainted with the taxa
+in question, Latin roots, and the vagaries of handwriting.  Publications
+likewise reflect varying levels of knowledge of the names.
+
+An important part of name checking, however, requires also recognizing
+other likely mistakes.  Examples include mental lapses such as using the
+wrong synonymous root or an incorrect but somehow associated genus name.
+Also, the closest known spelling may in fact be in a completely different
+taxon - some idea of what the specimen actually is will be critical to
+tracking down the correct identity.  Yet again, taxonomic expertise will be
+required alongside of the benefits of computing technology.
+
+
+On Tue, Oct 29, 2013 at 2:28 AM, &lt;Tony.Rees at csiro.au&gt; wrote:
+
+&gt; Dear Taxacomers,
+&gt;
+&gt; Mindful of the present round of acronym-bashing, I thought I might let you
+&gt; know of a useful new feature added today to my own aggregated biodiversity
+&gt; database &quot;IRMNG&quot;: real-time spelling correction of multiple supplied
+&gt; species names (previously this feature was only activated on single
+&gt; supplied names for performance reasons, to avoid potentially lengthy
+&gt; delays, now worked around).
+&gt;
+&gt; Here's how to use it:
+&gt;
+&gt; - Take a list of species names including potentially misspelled ones (can
+&gt; also have authorities appended too as available), one per line, max. around
+&gt; 1,500-2,000 at a time depending on word length.
+&gt;
+&gt; ** Here is an example small set of real world marine species data I am
+&gt; currently working on for a user in my agency, from a field survey list,
+&gt; excluding names which already have an exact match in the main IRMNG list):
+&gt;
+&gt; Acanthophora glomerata
+&gt; Acrosterigma vlamigi
+&gt; Aeverrillia pilosa
+&gt; Alcospira rosea
+&gt; Alliodoris hedley
+&gt; Anadara articulata
+&gt; Ancilla cingulata
+&gt; Angula sphaeruia
+&gt; Anquipecten aurantiacus
+&gt; Arca avellana_MTQ
+&gt; Arca avellana_QMS
+&gt; Arcania foleolata
+&gt; Ashtoret planipes
+&gt; Australium tentoriformis
+&gt; Austrolabidia gracilipes
+&gt; Beania spinulosa
+&gt; Biflustra limosa
+&gt; Botryocladia skottsbergi
+&gt; Bufonia margaritula
+&gt; Bugula johnsoni
+&gt; Bursa thersites
+&gt; Calliostoma monile
+&gt; Callyspongia schultzi
+&gt; Cancilla fillaris
+&gt; Caulerpa urvilliana
+&gt;
+&gt; (and so on)
+&gt;
+&gt; - Go to the IRMNG data access page at
+&gt; <A HREF="http://www.cmar.csiro.au/datacentre/irmng/,">http://www.cmar.csiro.au/datacentre/irmng/,</A> copy-and-paste the list into
+&gt; the search box
+&gt;
+&gt; - Press &quot;check species names&quot;
+&gt;
+&gt; Look for &quot;Species names not found&quot; at the bottom (obviously, names found
+&gt; will be resolved first, however in this case there are none).
+&gt;
+&gt; After each name not found there will be information about whether at least
+&gt; the genus name is held in that form (for something, may not be the intended
+&gt; target of course) then either the nearest matching species name or names,
+&gt; or a &quot;no match&quot; message at species level. Click on any near match name to
+&gt; get the full taxonomic hierarchy, synonym status where known, and other
+&gt; information as presently held in the database.
+&gt;
+&gt; For the record IRMNG could not be built without drawing on other &quot;names
+&gt; aggregator&quot; activities (acronyms if you must) including Catalogue of Life
+&gt; (only 2006 version as yet), WoRMS (World register of Marine Species) and
+&gt; more - eventually also to include names from The Plant List when that data
+&gt; is re-usable as advised earlier today (thanks Rafa?l!) -
+&gt; building on the efforts of their respective aggregators of course (since
+&gt; entering names individually would not be tractable). It is also not
+&gt; complete at this time (only 1.9 million species names held, lots including
+&gt; many fossil species and certain higher plants still missing), but will be
+&gt; added to further as time and resources may be available. Once I have all
+&gt; The Plant List data added plus more recent updates to Catalogue of Life
+&gt; included it should be useful to more people again.
+&gt;
+&gt; I hope at least some on this list may find this feature useful in your
+&gt; work and I am very happy for you to recommend the site to others as
+&gt; appropriate.
+&gt;
+&gt; Regards to all- Tony
+&gt;
+&gt;
+&gt; Dr Tony Rees
+&gt; Manager | Divisional Data Centre
+&gt; Marine and Atmospheric Research
+&gt; CSIRO
+&gt; E Tony Rees at csiro.au T +61 3 6232 5318
+&gt; CSIRO Marine and Atmospheric Research, GPO Box 1538, Hobart, TAS 7001,
+&gt; Australia
+&gt; www.cmar.csiro.au/datacentre
+&gt; Manager, OBIS Australia regional Node, <A HREF="http://www.obis.au">http://www.obis.au</A>
+&gt; LinkedIn profile: <A HREF="http://www.linkedin.com/pub/tony-rees/18/770/36">http://www.linkedin.com/pub/tony-rees/18/770/36</A>
+&gt;
+&gt; _______________________________________________
+&gt; Taxacom Mailing List
+&gt; Taxacom at mailman.nhm.ku.edu
+&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt;
+&gt; The Taxacom Archive back to 1992 may be searched with either of these
+&gt; methods:
+&gt;
+&gt; (1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt;
+&gt; (2) a Google search specified as:  site:
+&gt; mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+&gt;
+&gt; Celebrating 26 years of Taxacom in 2013.
+&gt;
+
+
+
+--
+Dr. David Campbell
+Assistant Professor, Geology
+Department of Natural Sciences
+Gardner-Webb University
+Boiling Springs NC 28017
+_______________________________________________
+Taxacom Mailing List
+Taxacom at mailman.nhm.ku.edu
+<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+
+The Taxacom Archive back to 1992 may be searched with either of these methods:
+
+(1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+
+(2) a Google search specified as:  site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+
+Celebrating 26 years of Taxacom in 2013.
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="126200.html">[Taxacom] New species of the future
+</A></li>
+        <LI>Next message: <A HREF="126202.html">[Taxacom] New species of the future
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#126201">[ date ]</a>
+              <a href="thread.html#126201">[ thread ]</a>
+              <a href="subject.html#126201">[ subject ]</a>
+              <a href="author.html#126201">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

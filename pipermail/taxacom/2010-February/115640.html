@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] the hurdle for all biodiv informatics initiatives
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2010-February/115640.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] the hurdle for all biodiv informatics initiatives</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at bishopmuseum.org<BR>
+    <I data-pagefind-meta="date">Thu Feb 18 12:39:31 CST 2010</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="115639.html">[Taxacom] Anyone out there know of a US species of termite that
+ is easily bred?
+</A></li>
+        <LI>Next message: <A HREF="115641.html">[Taxacom] the hurdle for all biodiv informatics initiatives
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#115640">[ date ]</a>
+              <a href="thread.html#115640">[ thread ]</a>
+              <a href="subject.html#115640">[ subject ]</a>
+              <a href="author.html#115640">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2010</span><!--beginarticle-->
+<PRE>&gt; ***
+&gt; OK, &quot;biodiversity informatics&quot; it is (BTW, when I took a 
+&gt; course in bioinformatics it meant something different 
+&gt; entirely from what is sketched above. There are a lot of 
+&gt; terms that are confusing!)
+&gt; * * *
+
+Yes -- same here.  The term &quot;bioinformatics&quot; existed in our sense long
+before PCR was a mature technology.  But if you Google that term, you'll see
+that it's almost always used sensu stricto for DNA stuff.
+
+&gt; ***
+&gt; But how much more effective it would be if this was skipped, 
+&gt; and instead an infrastructure was built with actual 
+&gt; information (names, types, circumscriptions), with the text 
+&gt; strings left to be handled by a trivial algorithm to be 
+&gt; designed for the purpose!
+&gt; * * *
+
+Without launching into another HUGE email, I'll just say that this is how my
+own bio[diversity]informatics efforts began.  I spent perhaps a decade
+staunchly avoiding any sort of &quot;surrogate primary key&quot; (i.e., arbitrary
+number) in my data tables.  In fact, the first robust database I created --
+the specimen database for Ichthyology at Bishop Museum -- *still* uses the
+set of three fields &quot;Genus&quot;, &quot;Species&quot;, &quot;Subspecies as the compound primary
+key for the taxonomy table.  But after a decade of beating my head against
+that ideological wall, I finally had to re-evaluate my position and embrace
+surrogate primary key fields (locally unique identifiers) in my databases.
+Now that I have a better understanding of what is needed to allow taxonomic
+data to flow across the internet, I have come to embrace GUIDs.  Basically,
+over the years of dealing with real-world taxonomy database issues, as I
+became both experienced and educated, I transitioned from a staunch
+opposition to any kind of identifier, to one of the loudest advocates of
+them.
+
+
+&gt; Text strings will never become consistent, nor stop multiplying.
+&gt; Not unless humans are excluded from the entire process.
+
+I think you misunderstood my point.  By &quot;consistent&quot; I didn't mean that we'd
+all share the same taxonomy and nomenclature.  I meant that we wouldn't have
+to continue to deal with variations like this:
+
+Cyclotrachelus (Evarthrus) sodalis (LeConte)
+Cyclotrachelus (Evarthrus) sodalis (Le Conte, 1848)
+Cyclotrachelus (Evarthrus) sodalis (Le Conte 1848)
+Cyclotrachelus (Evarthrus) sodalis (Le Conte)
+Cyclotrachelus (Evarthrus) sodalis (LeC., 1848)
+Cyclotrachelus (Evarthrus) sodalis (LeC. 1848)
+Cyclotrachelus (Evarthrus) sodalis (LeC.)
+Cyclotrachelus (Evarthrus) sodalis (LeC)
+Cyclotrachelus (E.) sodalis (LeConte)
+Cyclotrachelus (E.) sodalis (Le Conte, 1848)
+Cyclotrachelus (E.) sodalis (Le Conte 1848)
+Cyclotrachelus (E.) sodalis (Le Conte)
+Cyclotrachelus (E.) sodalis (LeC., 1848)
+Cyclotrachelus (E.) sodalis (LeC. 1848)
+Cyclotrachelus (E.) sodalis (LeC.)
+Cyclotrachelus (E.) sodalis (LeC)Cyclotrachelus sodalis (LeConte)
+Cyclotrachelus sodalis (Le Conte, 1848)
+Cyclotrachelus sodalis (Le Conte 1848)
+Cyclotrachelus sodalis (Le Conte)
+Cyclotrachelus sodalis (LeC., 1848)
+Cyclotrachelus sodalis (LeC. 1848)
+Cyclotrachelus sodalis (LeC.)
+Cyclotrachelus sodalis (LeC)
+C. (Evarthrus) sodalis (LeConte)
+C. (Evarthrus) sodalis (Le Conte, 1848)
+C. (Evarthrus) sodalis (Le Conte 1848)
+C. (Evarthrus) sodalis (Le Conte)
+C. (Evarthrus) sodalis (LeC., 1848)
+C. (Evarthrus) sodalis (LeC. 1848)
+C. (Evarthrus) sodalis (LeC.)
+C. (Evarthrus) sodalis (LeC)
+C. (E.) sodalis (LeConte)
+C. (E.) sodalis (Le Conte, 1848)
+C. (E.) sodalis (Le Conte 1848)
+C. (E.) sodalis (Le Conte)
+C. (E.) sodalis (LeC., 1848)
+C. (E.) sodalis (LeC. 1848)
+C. (E.) sodalis (LeC.)
+C. (E.) sodalis (LeC)Cyclotrachelus sodalis (LeConte)
+C. sodalis (Le Conte, 1848)
+C. sodalis (Le Conte 1848)
+C. sodalis (Le Conte)
+C. sodalis (LeC., 1848)
+C. sodalis (LeC. 1848)
+C. sodalis (LeC.)
+C. sodalis (LeC)
+
+....and that's just a fraction of the possible variations!
+
+&gt; ***
+&gt; Actually, I do not see that the &quot;myriad text strings... are 
+&gt; our only link ... to important information about 
+&gt; biodiversity&quot; nor that they would be sufficient to access all 
+&gt; the information. They are just what the &quot;biodiversity 
+&gt; informatics&quot; people are dealing with.
+
+OK, I don't follow.  Can you elaborate on how else we index information
+about biodiversity in published (and unpublished) forms?  It seems to me
+that the entire REASON we use taxon names is to abstract the notion of a
+taxon concept in the form of a series of text characters, and that we use
+those text-character strings to label other information (specimens, images,
+DNA sequences, ecological datasets, taxonomic revisions, etc., etc.).  These
+text strings existed LONG before computers existed, and certainly before
+there were any &quot;biodiversity informatics people&quot; around.  
+
+And it wasn't the &quot;biodiversity informatics people&quot; who created the mess.
+Only a tiny fraction of the name-string variations are created during the
+process of digitization/databasing.  The vast, vast majority of them exist
+in printed form -- in published and unpublished documents, in natural
+history specimen ledgers and labels, in notebooks, etc.  You can blame the
+&quot;biodiversity informatics people&quot; for a lot of things, but the mess of
+text-strings purported to represent scientific names that we now have to
+deal with is definitely not among those things.
+
+Aloha,
+Rich
+
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="115639.html">[Taxacom] Anyone out there know of a US species of termite that
+ is easily bred?
+</A></li>
+        <LI>Next message: <A HREF="115641.html">[Taxacom] the hurdle for all biodiv informatics initiatives
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#115640">[ date ]</a>
+              <a href="thread.html#115640">[ thread ]</a>
+              <a href="subject.html#115640">[ subject ]</a>
+              <a href="author.html#115640">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Data quality of aggregated datasets
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-May/124773.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Data quality of aggregated datasets</H1>
+    <B data-pagefind-meta="author">Quentin Groom</B>
+    quentin.groom at br.fgov.be<BR>
+    <I data-pagefind-meta="date">Tue May  7 07:13:20 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="124772.html">[Taxacom] Data quality of aggregated datasets
+</A></li>
+        <LI>Next message: <A HREF="124774.html">[Taxacom] Data quality of aggregated datasets
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124773">[ date ]</a>
+              <a href="thread.html#124773">[ thread ]</a>
+              <a href="subject.html#124773">[ subject ]</a>
+              <a href="author.html#124773">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>Hi Robert,
+you probably have to understand my background to understand my 
+perspective. I work on vascular plants in north-western Europe. Here, 
+_no_ records are collected using the point-radius method, even though 
+GBIF converts them to one. I also do ecological modelling and all 
+environmental data uses the same grid system. There is nothing wrong 
+with collecting fine scale records on a GPS using longitudes and 
+latitudes, but when you are using a GPS there is no need for a radius as 
+the error is well within the walking distance of most creatures.  The 
+only possible need for a radius is when you are georeferencing legacy 
+specimens. In this use case, it helps the downstream users decide if the 
+data is useful for their needs. However, I would arguing that it would 
+be better if this kind of georeferencing when straight into a grid 
+system. In fact, it does in the UK (<A HREF="http://herbariaunited.org/atHome/).">http://herbariaunited.org/atHome/).</A>
+
+ &gt;There may be ecological analyses that require gridded data only, but 
+why do you think specimen localities should first be in that form?
+Because all other environmental data is in that form and the repeated 
+conversion leads to errors. Also, consider that your GPS readout is 
+defining a square and not circle.
+
+ &gt;Aren't ecological analyses generally done at a grid scale much coarser 
+than would be used for recording localities+'errors' as grid squares?
+I've seen all sorts, for the sort of things I do I have used  4 km2 and 
+1 km2 squares, because that's what is available. Recording localities 
+are also done using squares, just very small ones.
+Quentin
+
+
+
+
+
+
+Robert Mesibov wrote:
+&gt; Quentin Groom wrote:
+&gt;
+&gt; &quot;Why shouldn't taxonomists collect gridded data in the first place, just as ecologist have been for years?&quot;
+&gt;
+&gt; Many taxonomists used to do so (including me) and probably many still do, if they record locations as UTM grid squares from maps. You read or estimate from the map the easting to the left and the northing to the bottom of the site location. The grid reference thus created is a square within which the site was located. It's then a computational piece of cake to aggregate sets of these squares into larger and larger units, like 1 km squares, 2 km squares, etc., for grid-based analysis. But when I bought a GPS, I no longer needed a map, so I gave up UTM entirely. Lat/lon data are the universal currency for reporting spatial data, and I could get those directly without a UTM-to-geographic conversion.
+&gt;
+&gt; I'm afraid I don't see your point about gridded data. Point data are fine for recording and mapping localities. They're also OK for biogeographic analysis; see my 2011 parapatry paper in ZooKeys: <A HREF="http://www.pensoft.net/journals/zookeys/article/1893/a-remarkable-case-of-mosaic-parapatry-in-millipedes">http://www.pensoft.net/journals/zookeys/article/1893/a-remarkable-case-of-mosaic-parapatry-in-millipedes</A>  In non-taxonomic GIS work in the past I've had no trouble stacking point and grid data and doing analyses based on the two sorts of data. There may be ecological analyses that require gridded data only, but why do you think specimen localities should first be in that form? Aren't ecological analyses generally done at a grid scale much coarser than would be used for recording localities+'errors' as grid squares?
+&gt;   
+
+-- 
+Dr. Quentin Groom
+(Botany and Information Technology)
+
+National Botanic Garden of Belgium
+Domein van Bouchout
+B-1860 Meise
+Belgium
+
+ORCID: 0000-0002-0596-5376
+
+Landline; +32 (0) 226 009 20 ext. 364
+FAX:      +32 (0) 226 009 45
+
+E-mail:     quentin.groom at br.fgov.be
+Skype name: qgroom
+Website:    www.botanicgarden.be
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="124772.html">[Taxacom] Data quality of aggregated datasets
+</A></li>
+        <LI>Next message: <A HREF="124774.html">[Taxacom] Data quality of aggregated datasets
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124773">[ date ]</a>
+              <a href="thread.html#124773">[ thread ]</a>
+              <a href="subject.html#124773">[ subject ]</a>
+              <a href="author.html#124773">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

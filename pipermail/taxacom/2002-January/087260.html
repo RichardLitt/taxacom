@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Database - summary
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Database%20-%20summary&In-Reply-To=%3CNCBBLOIBJEMNABMOGEMGOECOELAA.deepreef%40bishopmuseum.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="087256.html">
+   <LINK REL="Next"  HREF="087262.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2002-January/087260.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Database - summary</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Database%20-%20summary&In-Reply-To=%3CNCBBLOIBJEMNABMOGEMGOECOELAA.deepreef%40bishopmuseum.org%3E"
+       TITLE="Database - summary">deepreef at BISHOPMUSEUM.ORG
+       </A><BR>
+    <I data-pagefind-meta="date">Wed Jan 16 12:56:57 CST 2002</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="087256.html">Database - summary
+</A></li>
+        <LI>Next message: <A HREF="087262.html">Database - summary
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#87260">[ date ]</a>
+              <a href="thread.html#87260">[ thread ]</a>
+              <a href="subject.html#87260">[ subject ]</a>
+              <a href="author.html#87260">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2002</span><!--beginarticle-->
+<PRE>&gt;<i> MS Access is the most popular database software (be careful,
+</I>&gt;<i> Access should not be used for larger databases. For example,
+</I>&gt;<i> Willoughby Ass.
+</I>&gt;<i> <A HREF="http://www.willo.com/cgi/content.cgi?main.html,snap.html,intro_lef">http://www.willo.com/cgi/content.cgi?main.html,snap.html,intro_lef</A>
+</I>&gt;<i> t,snap.html,intro_right recommend only 60.000 objects for their
+</I>&gt;<i> Access-based database SNAP!)
+</I>
+Access 2000 can handle files up to 2GB in size. I've been able to
+successfully develop databases entirely within MS Access for up to about a
+quarter-million taxon &quot;assertion&quot; records -- linking 66K taxon names to 20K
+Reference citaions, alongside 40K collection objects and 10K records of
+people and organizations (all-told involving about 60 linked tables) -- all
+within a single file less than 200MB. It operates amazingly well on a
+single-processor, 366Mhz Pentium laptop. When you consider that nearly half
+the file size is made up by about 50 embedded hi-res images (which would
+best not be embedded), and even then we're only talking 10% of Access'
+capacity, I think it's safe to say that file size is not the main limiting
+factor.  Databases with &gt;&gt;60K records are routinly handled with ease by
+Access, provided the system was designed and coded well.
+
+The real limitation that I've encountered in Access is with respect to the
+number of simultaneous concurrent users.  Who you should believe for
+&quot;actual&quot; number of simultaneous concurrent users that Access can support
+depends on a lot of factors, but we've generally had success with up to
+about 5 or 6 -- but mini-crashes (e.g., individual record locks crapping
+out) crop up from time to time, even with a half-dozen users.  For this
+reason, we are moving in the direction of SQLServer with Access front-ends
+to handle most of our in-house DB development needs. Incidentally, we are
+also evaluating BioLink at the moment for our Botany collection.  So far,
+we're very encouraged.  It seems to have the right combination of
+well-developed schema, good user interface tools, and direct access to data
+due to its SQL Server platform.
+
+Una Smith wrote:
+
+&gt;<i> Two more:  PANDORA (don't recall if it handles loan paperwork),
+</I>&gt;<i> available on ibiblio.org, and BIOTA, available from Sinauer
+</I>&gt;<i> Associates.  PANDORA is freeware.  BIOTA is inexpensive, has a
+</I>&gt;<i> very nice manual and a very impressive list of features.
+</I>
+Also, don't forget Vernon Systems COLLECTION
+(<A HREF="http://www.vernonsystems.com/">http://www.vernonsystems.com/</A>). There's also MANDALA
+(<A HREF="http://pherocera.inhs.uiuc.edu/index.htm">http://pherocera.inhs.uiuc.edu/index.htm</A>), but I don't know if its being
+distributed.
+
+Aloha,
+Rich
+
+P.S. Just read this:
+
+&gt;<i> As for the assertion that you should not use Access for large databases,
+</I>&gt;<i> this is pure propaganda that was once true but is now outdated and
+</I>&gt;<i> unfortunately maintained by Oracle and its affectionados. I have one
+</I>&gt;<i> database with 180,000 records in it that runs fine in Access2000.
+</I>&gt;<i> The limit
+</I>&gt;<i> is around 2 gigabytes for the size of the mdb file. That would be 3.6
+</I>&gt;<i> million records in my herbarium database. Then you can export to SQL
+</I>&gt;<i> automatically - unlike a lot of MS software, it actually works, I've tried
+</I>&gt;<i> it.
+</I>&gt;<i>
+</I>&gt;<i> Stinger
+</I>
+It's not just Oracle affectionados -- I've heard the same erroneous
+propaganda coming out of FoxPro diehards as well.  The Oracle part I can
+understand, given Larry Ellison's feelings about Bill Gates....but FoxPro is
+now owned by MS, so I'm not sure what fuels that fire.  This is not to say
+that certain aspects of Oracle and/or FoxPro aren't superior to Jet 4.0 or
+SQLServer....but when the anti-Access crowd resorts to false information to
+make their case, it's a bit disturbing.
+
+
+
+Richard L. Pyle
+Ichthyology, Bishop Museum
+1525 Bernice St., Honolulu, HI 96817
+Ph: (808)848-4115, Fax: (808)847-8252
+email: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">deepreef at bishopmuseum.org</A>
+<A HREF="http://www.bishopmuseum.org/bishop/HBS/pylerichard.html">http://www.bishopmuseum.org/bishop/HBS/pylerichard.html</A>
+&quot;The views expressed are not necessarily those of Bishop Museum.&quot;
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="087256.html">Database - summary
+</A></li>
+	<LI>Next message: <A HREF="087262.html">Database - summary
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#87260">[ date ]</a>
+              <a href="thread.html#87260">[ thread ]</a>
+              <a href="subject.html#87260">[ subject ]</a>
+              <a href="author.html#87260">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

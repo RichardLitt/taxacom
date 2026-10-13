@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Data quality of aggregated datasets
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-May/124764.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Data quality of aggregated datasets</H1>
+    <B data-pagefind-meta="author">Dean Pentcheff</B>
+    pentcheff at gmail.com<BR>
+    <I data-pagefind-meta="date">Mon May  6 16:35:44 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="124763.html">[Taxacom] Data quality of aggregated datasets
+</A></li>
+        <LI>Next message: <A HREF="124765.html">[Taxacom] Data quality of aggregated datasets
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124764">[ date ]</a>
+              <a href="thread.html#124764">[ thread ]</a>
+              <a href="subject.html#124764">[ subject ]</a>
+              <a href="author.html#124764">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>Quite.
+
+See page 24 for precise details (and a whole lot of other good
+georeferencing best practices):
+    <A HREF="http://www.gbif.org/orc/?doc_id=1288">http://www.gbif.org/orc/?doc_id=1288</A>
+
+-Dean
+-- 
+Dean Pentcheff
+pentcheff at gmail.com
+dpentche at nhm.org
+
+
+On Mon, May 6, 2013 at 10:28 AM, Doug Yanega &lt;dyanega at ucr.edu&gt; wrote:
+
+&gt; On 5/6/13 12:10 AM, Quentin Groom wrote:
+&gt; &gt; Unfortunately, a common problem is that taxonomists fail to record the
+&gt; &gt; Geodetic System or Datum they are using, which leaves the aggregators to
+&gt; &gt; guess, sometime wrongly.
+&gt; &gt; Worst still there have been many occasions where GPS are not set up
+&gt; &gt; correctly and give the wrong output.
+&gt; &gt; Before the recent advent of the the GPS I would not guarantee the
+&gt; &gt; accuracy of any grid reference made in open country.
+&gt; &gt; This also underlines the importance of collectors/recorders creating an
+&gt; &gt; accurate site name with which the grid reference can be validated.
+&gt; &gt; Quentin
+&gt; &gt;
+&gt; It's funny how often I hear people make this claim, yet the reality of
+&gt; it is absurd in its precision. I once asked a friend of mine - an actual
+&gt; world authority on georeferencing - what sort of offset would result for
+&gt; a position in the US that was recorded in one map datum and displayed in
+&gt; a different one. He said, with ominous tones, &quot;Why, that could easily be
+&gt; 100 meters error!&quot;. I laughed in his face, and offended him terribly. As
+&gt; someone who manages a museum full of specimens we are presently
+&gt; georeferencing, and as someone who studies mobile organisms, I find
+&gt; several things about this absurd: (1) with very, very, very few
+&gt; exceptions, one will typically not find a specimen label that can be
+&gt; said to be accurate to within 100 meters. That actually includes most
+&gt; labels that have GPS readings, since most specimen labels in existence
+&gt; are attached to *insect* specimens, and since most entomologists who
+&gt; carry GPS units take a single reading for a collecting site but wander
+&gt; beyond that exact point, sometimes with a wandering radius approaching a
+&gt; kilometer. Accordingly, the intrinsic uncertainty on a legacy
+&gt; georeference (generally from 1-5 km) is typically MUCH greater than
+&gt; whatever error could possibly result from using the wrong datum. (2)
+&gt; More to the point, perhaps, is that prior to the invention of GPS units,
+&gt; virtually no specimen labels actually GAVE a latitude/longitude, so the
+&gt; odds of a label containing coordinates from any datum other than WGS 84
+&gt; are very, very slim. That means that legacy material being georeferenced
+&gt; NOW is almost all being given coordinates based on a resource like
+&gt; Google Earth, /which uses WGS 84/. So, it doesn't make any difference at
+&gt; all whether a data provider says anything about it; an aggregator that
+&gt; *assumes* WGS 84 as default is almost never going to be wrong (and even
+&gt; if so, the error radius is almost always large enough to encompass
+&gt; this). (3) For a mobile organism, if one is using a georeference either
+&gt; as an indicator of habitat (i.e., for GIS analyses) or for trying to go
+&gt; back to re-collect additional specimens, a 100 meter error is, with
+&gt; very, very, very few exceptions, utterly trivial. I have this vision of
+&gt; a biologist with a GPS unit, staring intensely at the screen, walking to
+&gt; the exact point the database gave them, looking up, and noticing that
+&gt; they've just walked off the edge of a cliff, and then gravity takes
+&gt; hold, /a la/ Wile E. Coyote. If you're within 100 meters of the spot a
+&gt; specimen was collected, any failure to re-collect it is NOT going to be
+&gt; because you were looking in the wrong place.
+&gt;
+&gt; In a practical sense, since the error radius is an essential parameter
+&gt; of any legitimate georeferencing effort, and since that radius always
+&gt; takes the *maximum* possible value, potential datum error almost never
+&gt; would exceed that radius, and can therefore be safely ignored. Yes, I
+&gt; know there will be cries of &quot;Heresy!&quot;, but of all the myriad things that
+&gt; are LEGITIMATE causes for concern when one is producing or using
+&gt; georeferenced data, the map datum is the *least* of our worries. Sure,
+&gt; it would be NICE if we didn't introduce that sort of error, but it isn't
+&gt; worth WORRYING about it - if I'm paying a data entry technician by the
+&gt; hour, I'm not going to have them waste a single minute of their time
+&gt; dealing with map datum issues as opposed to, say, making sure the label
+&gt; doesn't give the wrong county, or have spelling errors. I can't imagine
+&gt; ever being persuaded otherwise.
+&gt;
+&gt; Sincerely,
+&gt;
+&gt; --
+&gt; Doug Yanega      Dept. of Entomology       Entomology Research Museum
+&gt; Univ. of California, Riverside, CA 92521-0314     skype: dyanega
+&gt; phone: (951) 827-4315 (disclaimer: opinions are mine, not UCR's)
+&gt;               <A HREF="http://cache.ucr.edu/~heraty/yanega.html">http://cache.ucr.edu/~heraty/yanega.html</A>
+&gt;    &quot;There are some enterprises in which a careful disorderliness
+&gt;          is the true method&quot; - Herman Melville, Moby Dick, Chap. 82
+&gt;
+&gt; _______________________________________________
+&gt; Taxacom Mailing List
+&gt; Taxacom at mailman.nhm.ku.edu
+&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt;
+&gt; The Taxacom Archive back to 1992 may be searched with either of these
+&gt; methods:
+&gt;
+&gt; (1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt;
+&gt; (2) a Google search specified as:  site:
+&gt; mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+&gt;
+&gt; Celebrating 26 years of Taxacom in 2013.
+&gt;
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="124763.html">[Taxacom] Data quality of aggregated datasets
+</A></li>
+        <LI>Next message: <A HREF="124765.html">[Taxacom] Data quality of aggregated datasets
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124764">[ date ]</a>
+              <a href="thread.html#124764">[ thread ]</a>
+              <a href="subject.html#124764">[ subject ]</a>
+              <a href="author.html#124764">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

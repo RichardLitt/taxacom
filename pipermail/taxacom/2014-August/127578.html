@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Chameleons, GBIF, and the Red List
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Chameleons%2C%20GBIF%2C%20and%20the%20Red%20List&In-Reply-To=%3C29EB41DFA4B4DD4A86954D104130670AFA9D0D12%40MAIL-MBX-004.internal.amnh.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="127577.html">
+   <LINK REL="Next"  HREF="127585.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2014-August/127578.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Chameleons, GBIF, and the Red List</H1>
+    <B data-pagefind-meta="author">Donat Agosti</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Chameleons%2C%20GBIF%2C%20and%20the%20Red%20List&In-Reply-To=%3C29EB41DFA4B4DD4A86954D104130670AFA9D0D12%40MAIL-MBX-004.internal.amnh.org%3E"
+       TITLE="[Taxacom] Chameleons, GBIF, and the Red List">agosti at amnh.org
+       </A><BR>
+    <I data-pagefind-meta="date">Mon Aug 25 15:36:23 CDT 2014</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="127577.html">[Taxacom] Chameleons, GBIF, and the Red List
+</A></li>
+        <LI>Next message: <A HREF="127585.html">[Taxacom] Chameleons, GBIF, and the Red List
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#127578">[ date ]</a>
+              <a href="thread.html#127578">[ thread ]</a>
+              <a href="subject.html#127578">[ subject ]</a>
+              <a href="author.html#127578">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2014</span><!--beginarticle-->
+<PRE>How does something like this scale up? Is there a way that this example can be automated? 
+d
+-----Original Message-----
+From: Taxacom [mailto:<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom-bounces at mailman.nhm.ku.edu</A>] On Behalf Of Chuck Miller
+Sent: Monday, August 25, 2014 10:32 PM
+To: Roderic Page
+Cc: TAXACOM; Bob Mesibov
+Subject: Re: [Taxacom] Chameleons, GBIF, and the Red List
+
+Rod,
+I see what you are thinking.
+
+I'm thinking too much about the alternate views that seem to always come up in comments about taxonomic data, even right here on Taxacom.  So, an annotation thread could be something like:
+&quot;Now in different genus&quot;
+&quot;No way, respectfully what century are you from?. It's not even a species.&quot;
+&quot;Maybe they meant Africa.&quot;
+&quot;Yeh, in Namibia it was split and revised to Y, I think.&quot;
+&quot;The phylogeny for Y is totally different. It's now in Z. Does no one read my work? Taxonomic tyranny!&quot;
+&quot;Consider this DOI that refers to new collections and it seems to contradict all y'all.&quot;
+
+What does &quot;social&quot; annotation turn into?  Lots of useful information but if it starts being contradictory or overlapping, can it be databased and which contradiction is the primary?  Hopefully, annotation of localities could be straightforward as in your example.
+
+Chuck
+
+
+From: Roderic Page [mailto:<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Roderic.Page at glasgow.ac.uk</A>]
+Sent: Monday, August 25, 2014 2:37 PM
+To: Chuck Miller
+Cc: TAXACOM; Bob Mesibov
+Subject: Re: [Taxacom] Chameleons, GBIF, and the Red List
+
+Hi Chuck,
+
+So was I  sorry if I was being obscure.
+
+My take on the TripAdvisor model is that it is like this:
+
+[Source]
+   |
+   +- comment1 &quot;Now in different genus&quot;
+   |
+   +- comment2 &quot;Maybe they meant Africa?&quot;
+
+The comments can have social scores, badges, etc. Useful, but not really what I'm after. How do we get information from the comments? How do we move information from comments to the source? What if the source has insufficient resources to respond? We are left with source data that is being displayed, despite (say) comments saying &quot;this data is wrong&quot;.
+
+The &quot;social data&quot; model differs in that it doesn't privilege any one particular source of information (so it's not like the &quot;sticky notes&quot; TripAdvisor model), nor does it insist on one summary view (like a Wiki where the latest edit wins). Instead, everyone gets to write to the database, and nobody can overwrite what someone else writes. So the &quot;primary source&quot; isn't privileged, but at the same time its data can't be overwritten.
+
+What I have in mind is something like this:
+
+[ ... ]
+   +- source
+   |
+   +- comment1
+   |
+   +- comment2
+
+The source is one of a number of &quot;comments&quot;, and the comments are not simply bits of text but actual data, e.g.
+
+[ ... ]
+   +- &quot;Mt. Brandenberg&quot; [source]
+   |
+   +- lat -21.1, long 14.35 [GEOLocate]
+   |
+   +- &quot;Mt. Brandenberg, Namibia&quot; [Chuck Miller]
+
+Then we can do a bunch of things. We might just accept the primary source, or we might defer to your annotation, or we might synthesise them together a present a (hopefully) enhanced view of the data.
+
+The switch in perspective is from &quot;I am the authority for this record and you may comment on it&quot; to &quot;together we will build the record&quot;.
+
+Regards
+
+Rod
+
+---------------------------------------------------------
+Roderic Page
+Professor of Taxonomy
+Institute of Biodiversity, Animal Health and Comparative Medicine College of Medical, Veterinary and Life Sciences Graham Kerr Building University of Glasgow Glasgow G12 8QQ, UK
+
+Email:  <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Roderic.Page at glasgow.ac.uk</A>&lt;mailto:<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Roderic.Page at glasgow.ac.uk</A>&gt;
+Tel:  +44 141 330 4778
+Skype:  rdmpage
+Facebook:  <A HREF="http://www.facebook.com/rdmpage">http://www.facebook.com/rdmpage</A>
+LinkedIn:  <A HREF="http://uk.linkedin.com/in/rdmpage">http://uk.linkedin.com/in/rdmpage</A>
+Twitter:  <A HREF="http://twitter.com/rdmpage">http://twitter.com/rdmpage</A>
+Blog:  <A HREF="http://iphylo.blogspot.com">http://iphylo.blogspot.com</A>
+ORCID:  <A HREF="http://orcid.org/0000-0002-7101-9767">http://orcid.org/0000-0002-7101-9767</A>
+Citations:  <A HREF="http://scholar.google.co.uk/citations?hl=en&amp;user=4Z5WABAAAAAJ">http://scholar.google.co.uk/citations?hl=en&amp;user=4Z5WABAAAAAJ</A>
+
+On 25 Aug 2014, at 19:09, Chuck Miller &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Chuck.Miller at mobot.org</A>&lt;mailto:<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Chuck.Miller at mobot.org</A>&gt;&gt; wrote:
+
+
+Rod,
+I was referring more to the commenting &amp; rating aspects of Yelp &amp; TripAdvisor when you mentioned a &quot;social&quot; approach.
+
+In TripAdvisor, each commenter makes a rating of a record (a hotel or restaurant in this case), then the individual ratings are summarized into summary scores.  The comments are displayed together, both positive and negative, for a record.  The commenters get &quot;badges&quot; but only for the quantity of their posts.  But, there are also &quot;votes&quot; on the comments by the users of the data if a comment is considered &quot;helpful&quot;.  The records are ranked #1 to #Last based on the ratings. And finally there can be a response by the &quot;owner&quot; of the record.
+
+All of it adds up to &quot;social annotation&quot; - a collective think without rigor or standardization.  And for hotels and restaurants, it's very helpful.  Would it be as helpful for biodiversity data records?
+
+Chuck
+
+_______________________________________________
+Taxacom Mailing List
+<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom</A>
+The Taxacom Archive back to 1992 may be searched at: <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+
+Celebrating 27 years of Taxacom in 2014.
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="127577.html">[Taxacom] Chameleons, GBIF, and the Red List
+</A></li>
+	<LI>Next message: <A HREF="127585.html">[Taxacom] Chameleons, GBIF, and the Red List
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#127578">[ date ]</a>
+              <a href="thread.html#127578">[ thread ]</a>
+              <a href="subject.html#127578">[ subject ]</a>
+              <a href="author.html#127578">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> PhyloCode prefix/suffix?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2000-October/084824.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">PhyloCode prefix/suffix?</H1>
+    <B data-pagefind-meta="author">Eric Zurcher</B>
+    Eric.Zurcher at PI.CSIRO.AU<BR>
+    <I data-pagefind-meta="date">Fri Oct 27 09:29:36 CDT 2000</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="084830.html">PhyloCode prefix/suffix?
+</A></li>
+        <LI>Next message: <A HREF="084829.html">Fwd: Re: Fwd: Re: PhyloCode prefix/suffix?
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#084824">[ date ]</a>
+              <a href="thread.html#084824">[ thread ]</a>
+              <a href="subject.html#084824">[ subject ]</a>
+              <a href="author.html#084824">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2000</span><!--beginarticle-->
+<PRE>At 10:08 26-10-2000 -1000, Richard Pyle wrote:
+&gt; &gt; In raw HTML it would appear Apogonidae&amp;lt; but on a web page would render
+&gt; &gt; as Apogonidae&lt;
+&gt;
+&gt;Actually, I made a quick test page just to see, and indeed you can use the
+&gt;literal &quot;&lt;&quot; as a suffix for taxon names within HTML, and it will appear
+&gt;unmolested when diplayed on the web page.
+&gt;
+&gt;For example, open the attached file in a web browser, and then view the HTML
+&gt;source.  Note that there are exceptions (as included on the attached file),
+&gt;but they should be solvable.  Any web gurus know of any other potential
+&gt;showstoppers that would require the &quot;&amp;lt&quot; method?
+
+First of all, my apologies for this post, since this in getting pretty
+tangential to the discussion. But since the question was asked, I'll
+attempt an answer.
+
+Here is a quote from the W3C XML 1.0 specification:
+
+&quot;The ampersand character (&amp;) and the left angle bracket (&lt;) may appear in
+their literal form only when used as markup delimiters, or within a
+comment, a processing instruction, or a CDATA section. If they are needed
+elsewhere, they must be escaped using either numeric character references
+or the strings &quot;&amp;amp;&quot; and &quot;&amp;lt;&quot; respectively.&quot;
+
+So the use of a raw &quot;&lt;&quot; character to represent itself in XML/HTML is
+certainly bad practice. Just because current browsers will display this
+character literally in some contexts doesn't mean that behaviour can be
+relied upon in the future. In particular, I suspect that future XML
+browsers will be less forgiving in this regard.
+
+Of course there are a few other non-alphanumeric characters that one might
+consider, in addition to the '!', '\', '&lt;', '&gt;', and '^' which have already
+been mentioned in this forum. For example, '#' (Is that &quot;hash&quot; or &quot;sharp&quot;?
+It depends on your viewpoint, I suppose.) Or &quot;@&quot; (for &quot;apomorphic?&quot;)
+
+Eric Zurcher
+CSIRO Livestock Industries
+Canberra, ACT Australia
+E-mail: Eric.Zurcher at pi.csiro.au
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="084830.html">PhyloCode prefix/suffix?
+</A></li>
+        <LI>Next message: <A HREF="084829.html">Fwd: Re: Fwd: Re: PhyloCode prefix/suffix?
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#084824">[ date ]</a>
+              <a href="thread.html#084824">[ thread ]</a>
+              <a href="subject.html#084824">[ subject ]</a>
+              <a href="author.html#084824">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

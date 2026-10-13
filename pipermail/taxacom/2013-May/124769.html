@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Data quality of aggregated datasets
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-May/124769.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Data quality of aggregated datasets</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at bishopmuseum.org<BR>
+    <I data-pagefind-meta="date">Tue May  7 05:04:56 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="124768.html">[Taxacom] Data quality of aggregated datasets
+</A></li>
+        <LI>Next message: <A HREF="124770.html">[Taxacom] Data quality of aggregated datasets
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124769">[ date ]</a>
+              <a href="thread.html#124769">[ thread ]</a>
+              <a href="subject.html#124769">[ subject ]</a>
+              <a href="author.html#124769">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>The problem with using number of decimal places to represent accuracy is
+that you're limited to such representation only in powers of ten. Moreover,
+assuming you store these values as numbers, ten percent of your values will
+be one order of magnitude off in terms of precision (i.e., ten percent of
+values will have the final digit as &quot;0&quot;, which numeric data fields will
+trim); one percent will be off by two orders of magnitude, and so on.  The
+combination of an arbitrarily precise point plus a radius, when used as Bob
+describes below, is a far more flexible &amp; powerful method for representing
+both place and accuracy.  As Bob says, the correct way to interpret a
+point+radius is as the definition of a circle, within which there is a high
+probability for the occurrence to have happened. There are methods for
+calculating the radius, such that unknown datum, datum error, and other
+factors are taken into account.
+
+Note: Place some emphasis on the word &quot;arbitrarily&quot; above when I talk about
+&quot;arbitrarily precise&quot;  As long as an appropriate radius value is provided,
+there is absolutely no harm in representing the &quot;point&quot; part via arbitrarily
+precise numbers, such as -17.6000003814697, 145.699996948242.  There is,
+however, non-trivial harm when doing so while relying on the number of
+included digits as a representation of accuracy.
+
+Note also the difference between precision and accuracy.  The location of a
+collected insect could (theoretically) be represented by coordinates of
+precision to a few cm to a few mm (depending on what kind of insect we're
+talking about).  The point+radius approach is intended to represent
+accuracy, not precision.  The precision of the true location will always be
+limited by the physical size of the organism; but the accuracy will
+generally be much larger than this.
+
+Aloha,
+Rich
+
+&gt; -----Original Message-----
+&gt; From: taxacom-bounces at mailman.nhm.ku.edu [mailto:taxacom-
+&gt; bounces at mailman.nhm.ku.edu] On Behalf Of Robert Mesibov
+&gt; Sent: Monday, May 06, 2013 11:20 PM
+&gt; To: Quentin Groom
+&gt; Cc: TAXACOM
+&gt; Subject: Re: [Taxacom] Data quality of aggregated datasets
+&gt; 
+&gt; Quentin Groom wrote:
+&gt; 
+&gt; &quot;This is the problem I've always had with the point-radius method. It
+&gt; encourages people to document a very precise coordinate and then account
+&gt; for the error in the radius. The error should be obvious from the number
+of
+&gt; decimal places you write, just like any other measurement.&quot;
+&gt; 
+&gt; I think that depends on how you understand the point-radius method. The
+&gt; idea is that there's a circle which completely contains the area searched
+or
+&gt; sampled. The point is simply an estimate of that circle's centre, and is
+not
+&gt; meant to be an estimate of the location of the actual collecting site
+(assuming
+&gt; there was just one) plus a measurement error. The point+radius define a
+&gt; circular *area* containing the collecting site in an easily understandable
+way.
+&gt; 
+&gt; How many decimal places you use for the point's location should obviously
+&gt; (to me, anyway) depend on the magnitude of the radius. Recording
+&gt; 22?06'57.54&quot;S 117?53'15.31&quot;E +/- 100 m is, I think, bizarre. [We've had a
+&gt; discussion about this on Taxacom before, and some listers think that
+&gt; rounding off is throwing away data.]
+&gt; 
+&gt; You can also define a collecting *area* by the implied uncertainty in a
+single
+&gt; point estimate, as you suggest. However, I don't think many people on this
+&gt; list would know the uncertainty at a glance in 22.116?S 117.888?E. A
+computer
+&gt; can pull it out, but eyeballing the area in a point-radius record is
+easier.
+&gt; 
+&gt; Another difficulty with implied uncertainty occurs with the
+above-mentioned
+&gt; computer when UTM data are converted to lat/lon, or vice-versa, or for
+that
+&gt; matter with lat/lon format conversions. In my audit paper in ZooKeys I
+cite a
+&gt; wonderful GBIF/ALA example where '12 km SE of Millaa Millaa' (Queensland,
+&gt; 1971) got processed from 17?36'S 145?42'E to -17.6000003814697
+&gt; 145.699996948242. Implied uncertainty of a few atomic radii, maybe?
+&gt; --
+&gt; Dr Robert Mesibov
+&gt; Honorary Research Associate
+&gt; Queen Victoria Museum and Art Gallery, and School of Agricultural Science,
+&gt; University of Tasmania Home contact: PO Box 101, Penguin, Tasmania,
+&gt; Australia 7316
+&gt; Ph: (03) 64371195; 61 3 64371195
+&gt; 
+&gt; _______________________________________________
+&gt; Taxacom Mailing List
+&gt; Taxacom at mailman.nhm.ku.edu
+&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt; 
+&gt; The Taxacom Archive back to 1992 may be searched with either of these
+&gt; methods:
+&gt; 
+&gt; (1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt; 
+&gt; (2) a Google search specified as:
+&gt; site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+&gt; 
+&gt; Celebrating 26 years of Taxacom in 2013.
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="124768.html">[Taxacom] Data quality of aggregated datasets
+</A></li>
+        <LI>Next message: <A HREF="124770.html">[Taxacom] Data quality of aggregated datasets
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124769">[ date ]</a>
+              <a href="thread.html#124769">[ thread ]</a>
+              <a href="subject.html#124769">[ subject ]</a>
+              <a href="author.html#124769">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

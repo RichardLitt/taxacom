@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] A new way to view taxonomic publications
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-June/125230.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] A new way to view taxonomic publications</H1>
+    <B data-pagefind-meta="author">Donat Agosti</B>
+    agosti at amnh.org<BR>
+    <I data-pagefind-meta="date">Wed Jun 19 22:30:11 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="125229.html">[Taxacom] A new way to view taxonomic publications
+</A></li>
+        <LI>Next message: <A HREF="125231.html">[Taxacom] A new way to view taxonomic publications
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#125230">[ date ]</a>
+              <a href="thread.html#125230">[ thread ]</a>
+              <a href="subject.html#125230">[ subject ]</a>
+              <a href="author.html#125230">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>Hi Rod
+
+Interesting development and great you go ahead with BIONAMES. 
+
+You mention that  build the system based on NLM DTD, whilst it is actually taxpub JATS, that this a flavor of on the NLM DTD, a widely use DTD for publishing biomedical articles and especially used to archive the article that has been customized for taxonomy, and thus includes all the elements that are domain specific, such as scientific names or treatments. Citations, tables, figures are part of the DTD.
+
+In the demo you skip one of the nice elements, the treatment element. And in my view this is a loss of quality, which you can easily see, when you start looking up one of the new descriptions, eg . Paedophryne dekot. If you look it up on the right hand in Biostor, you finally end up up at the article level and the treatment itself, which is the relevant information that I need, not the publication. Similar the pdf that you show in biostor has lost all the links that are in the original pdf.
+
+I know, you are not interested in the treatment but names and publications. I as a taxonomist in the world you describe, a publication being a database, which happens when you convert it into XML, and even more so an XML that is domain specific, don't want to be stuck in the world or articles, just because we grew up with it. The goal is customized information, and that means treatment (in the context of a scientific publication). And with Zookeys at hand you have all to make this happen.
+
+Finally, most of the functionality is already in the Zookeys article itself when you look at it in the html version instead of the pdf your link to (<A HREF="http://www.pensoft.net/journals/zookeys/article/1963/at-the-lower-size-limit-for-tetrapods-two-new-species-of-the-miniaturized-frog-genus-paedophryne-anura-microhylidae-)">http://www.pensoft.net/journals/zookeys/article/1963/at-the-lower-size-limit-for-tetrapods-two-new-species-of-the-miniaturized-frog-genus-paedophryne-anura-microhylidae-)</A> , and even more so in their species profiles <A HREF="http://ptp.pensoft.eu/external_details.php?type=1&amp;query=Paedophryne">http://ptp.pensoft.eu/external_details.php?type=1&amp;query=Paedophryne</A> . The interesting step then is to get this done for other journals and see, how it looks like. There, the production of clean OCR or text extraction from PDF, the semantic mark-up is not done, that is served on a silver platter by Pensoft, with a pretty overhead in the production of the article.
+
+Then this needs to be compared to other similar sites, like Species-ID <A HREF="http://species-id.net/wiki/Paedophryne_dekot">http://species-id.net/wiki/Paedophryne_dekot</A> , that allows the crowd to edit and add content or Plazi, the treatment repository <A HREF="http://tinyurl.com/nku2rdd">http://tinyurl.com/nku2rdd</A> , which allows to get back to the treatment and not end up in the article.
+
+So, the challenge has to be that Bionames does not loose granularity, and operates at the level we cite (not article but a page within an article, essentially linking to the treatment), and to show mechanisms to read in pdfs that have no XML, not text in fact,  and make this fly, something you have demonstrated to find articles within the BHL body. This time just one level down.
+
+
+Cheers
+
+Donat
+
+
+
+
+-----Original Message-----
+From: taxacom-bounces at mailman.nhm.ku.edu [mailto:taxacom-bounces at mailman.nhm.ku.edu] On Behalf Of Roderic Page
+Sent: Thursday, June 20, 2013 12:50 AM
+To: taxacom at mailman.nhm.ku.edu com
+Subject: [Taxacom] A new way to view taxonomic publications
+
+I've developed a somewhat experimental viewer for articles in the journal ZooKeys which might be of interest. There is a blog post here <A HREF="http://iphylo.blogspot.co.uk/2013/06/a-new-way-to-view-taxonomic-publications.html">http://iphylo.blogspot.co.uk/2013/06/a-new-way-to-view-taxonomic-publications.html</A>
+
+You can try a live example here:  <A HREF="http://bionames.org/labs/zookeys-viewer/?doi.3897/zookeys.154.1963">http://bionames.org/labs/zookeys-viewer/?doi.3897/zookeys.154.1963</A>
+
+This viewer is one of the motivations behind <A HREF="http://bionames.org">http://bionames.org</A> I'm aiming for a platform where we can embed the taxonomic literature and have names and publications seamlessly linked together, enabling us to navigate through the primary taxonomic literature in a single place.
+
+Regards
+
+Rod
+
+---------------------------------------------------------
+Roderic Page
+Professor of Taxonomy
+Institute of Biodiversity, Animal Health and Comparative Medicine College of Medical, Veterinary and Life Sciences Graham Kerr Building University of Glasgow Glasgow G12 8QQ, UK
+
+Email: r.page at bio.gla.ac.uk
+Tel: +44 141 330 4778
+Fax: +44 141 330 2792
+Skype: rdmpage
+Facebook: <A HREF="http://www.facebook.com/rdmpage">http://www.facebook.com/rdmpage</A>
+Twitter: <A HREF="http://twitter.com/rdmpage">http://twitter.com/rdmpage</A>
+Blog: <A HREF="http://iphylo.blogspot.com">http://iphylo.blogspot.com</A>
+Home page: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+Wikipedia: <A HREF="http://en.wikipedia.org/wiki/Roderic_D._M._Page">http://en.wikipedia.org/wiki/Roderic_D._M._Page</A>
+Citations: <A HREF="http://scholar.google.co.uk/citations?hl=en&amp;user=4Z5WABAAAAAJ">http://scholar.google.co.uk/citations?hl=en&amp;user=4Z5WABAAAAAJ</A>
+ORCID id: <A HREF="http://orcid.org/0000-0002-7101-9767">http://orcid.org/0000-0002-7101-9767</A>
+
+_______________________________________________
+Taxacom Mailing List
+Taxacom at mailman.nhm.ku.edu
+<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+
+The Taxacom Archive back to 1992 may be searched with either of these methods:
+
+(1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+
+(2) a Google search specified as:  site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+
+Celebrating 26 years of Taxacom in 2013.
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="125229.html">[Taxacom] A new way to view taxonomic publications
+</A></li>
+        <LI>Next message: <A HREF="125231.html">[Taxacom] A new way to view taxonomic publications
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#125230">[ date ]</a>
+              <a href="thread.html#125230">[ thread ]</a>
+              <a href="subject.html#125230">[ subject ]</a>
+              <a href="author.html#125230">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

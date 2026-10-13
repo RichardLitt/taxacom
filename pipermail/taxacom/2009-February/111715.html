@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] How Species Concepts and Taxonomic Hypothesis are	different as it relates to the Semantic Web
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20How%20Species%20Concepts%20and%20Taxonomic%20Hypothesis%20are%0A%09different%20as%20it%20relates%20to%20the%20Semantic%20Web&In-Reply-To=%3C3833bf630902021610j719cb2dax6b99a66cc31e07fe%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="111697.html">
+   <LINK REL="Next"  HREF="111720.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2009-February/111715.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] How Species Concepts and Taxonomic Hypothesis are	different as it relates to the Semantic Web</H1>
+    <B data-pagefind-meta="author">Peter DeVries</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20How%20Species%20Concepts%20and%20Taxonomic%20Hypothesis%20are%0A%09different%20as%20it%20relates%20to%20the%20Semantic%20Web&In-Reply-To=%3C3833bf630902021610j719cb2dax6b99a66cc31e07fe%40mail.gmail.com%3E"
+       TITLE="[Taxacom] How Species Concepts and Taxonomic Hypothesis are	different as it relates to the Semantic Web">pete.devries at gmail.com
+       </A><BR>
+    <I data-pagefind-meta="date">Mon Feb  2 18:10:24 CST 2009</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="111697.html">[Taxacom] RES:  Another papers request
+</A></li>
+        <LI>Next message: <A HREF="111720.html">[Taxacom] Open job positions at the Biodiversity and Climate	Research	Centre (BiK-F) in Frankfurt am Main, Germany
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#111715">[ date ]</a>
+              <a href="thread.html#111715">[ thread ]</a>
+              <a href="subject.html#111715">[ subject ]</a>
+              <a href="author.html#111715">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2009</span><!--beginarticle-->
+<PRE>I started this note based on Rod Page's Blog thoughts on Wiki Modeling,
+which got me thinking.
+<A HREF="http://iphylo.blogspot.com/2009/02/wiki-modelling-part-1.html">http://iphylo.blogspot.com/2009/02/wiki-modelling-part-1.html</A>
+
+Also, if you go back to the 2006 tdwg list I tried to make this point
+earlier, but did not seem to succeed
+and that is why I ended up creating my own species concept identifiers.
+
+The NCBI taxon id works in a way similar to the GeoSpecies ID's in that the
+ID stays the same despite changes in nomenclature.
+
+I would use this except that there is no NCBI ID for most species. There
+needs to be a sequence for there to be an NCBI ID.
+
+
+In this sense, the NCBI ID and GeoSpecies ID are compatible types of OTU's.
+
+
+It seems that the genomics/proteomics people are already using forms of the
+NCBI ID as Species identifiers (URI's)
+
+
+For example, these are similar concepts, in that the meaning is similar and
+they stay the same
+
+despite changes in nomenclature. They are being used as Species Concept
+identifiers.
+
+
+<A HREF="http://species.geospecies.org/spec_concept_uuid/0fcb5b7e-bcfc-4b56-b565-e1e38768badd/">http://species.geospecies.org/spec_concept_uuid/0fcb5b7e-bcfc-4b56-b565-e1e38768badd/</A>
+
+<A HREF="http://bio2rdf.org/taxon:7163">http://bio2rdf.org/taxon:7163</A>
+
+<A HREF="http://purl.uniprot.org/taxonomy/7163">http://purl.uniprot.org/taxonomy/7163</A>
+
+
+These are names or taxonomic hypothesis:
+
+
+<A HREF="http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:2593981">http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:2593981</A> &lt;- name Aedes vexans
+, taxonomic hierarchy (hypothesis), changes with changes in nomenclature
+
+<A HREF="http://lsid.tdwg.org/urn:lsid:ubio.org:classificationbank:11149341">http://lsid.tdwg.org/urn:lsid:ubio.org:classificationbank:11149341</A> &lt;-
+taxonomic hierarchy (hypothesis)
+
+<A HREF="http://lsid.tdwg.org/urn:lsid:ubio.org:classificationbank:2463176">http://lsid.tdwg.org/urn:lsid:ubio.org:classificationbank:2463176</A>   &lt;-
+taxonomic hierarchy (hypothesis)
+
+
+This gets into what makes a good species concept URI. (identifier)
+
+
+The first set of identifiers can represent a Species Concept independent of
+a particular taxonomic hypothesis
+
+
+The second set of identifiers represent various taxonomic hypotheses, that
+might apply to a specific species concept.
+
+
+Was I able to clearly demonstrate the differences between these two type of
+identifiers?
+
+
+Under this model, the species hypothesis i.e. name is not the Species
+Concept.
+
+Comments, suggestions and disagreements are welcome :-)
+
+- Pete
+---------------------------------------------------------------
+Pete DeVries
+Department of Entomology
+University of Wisconsin - Madison
+445 Russell Laboratories
+1630 Linden Drive
+Madison, WI 53706
+------------------------------------------------------------
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="111697.html">[Taxacom] RES:  Another papers request
+</A></li>
+	<LI>Next message: <A HREF="111720.html">[Taxacom] Open job positions at the Biodiversity and Climate	Research	Centre (BiK-F) in Frankfurt am Main, Germany
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#111715">[ date ]</a>
+              <a href="thread.html#111715">[ thread ]</a>
+              <a href="subject.html#111715">[ subject ]</a>
+              <a href="author.html#111715">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

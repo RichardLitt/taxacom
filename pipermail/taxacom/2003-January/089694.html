@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Databases for multiple view taxonomy
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Databases%20for%20multiple%20view%20taxonomy&In-Reply-To=%3CDF5A9B2B-33E5-11D7-AAC5-0003934B6A38%40mbl.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="089695.html">
+   <LINK REL="Next"  HREF="089697.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2003-January/089694.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Databases for multiple view taxonomy</H1>
+    <B data-pagefind-meta="author">David Remsen</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Databases%20for%20multiple%20view%20taxonomy&In-Reply-To=%3CDF5A9B2B-33E5-11D7-AAC5-0003934B6A38%40mbl.edu%3E"
+       TITLE="Databases for multiple view taxonomy">dremsen at MBL.EDU
+       </A><BR>
+    <I data-pagefind-meta="date">Wed Jan 29 19:03:59 CST 2003</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="089695.html">Databases for multiple view taxonomy
+</A></li>
+        <LI>Next message: <A HREF="089697.html">Databases for multiple view taxonomy
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#89694">[ date ]</a>
+              <a href="thread.html#89694">[ thread ]</a>
+              <a href="subject.html#89694">[ subject ]</a>
+              <a href="author.html#89694">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2003</span><!--beginarticle-->
+<PRE>Hi Anthony
+
+We are building a system right now.  The taxonomic name server that Im
+assembling as we speak (instead of eating dinner) is essentially a
+networked database with several different ways of using it.
+
+I am starting to put together some pilots for developing interfaces
+over the course of the next months.  I would very much like access to a
+'real' piece of monographic work.  Do you a sample document as well as
+specifics about what you would actually want from an external system.
+
+The current pilots involve full-text XML documents from AMNH and NYBG
+which Im going to try to develop some generic XML parsing tools around.
+  Essentially I want to be able to point an XML document at our name
+server, have it identify taxa within the document based upon the
+multi-class data model, iterate through which taxa and treatments I
+ascribe to, and then take all the relevant name and classification
+information from the server and give me back a supplemental XML
+document with pointers back to the source XML.  I have XML with
+specific name-related tags as well as a case where name information is
+contained within freetext.
+
+--- cut here if you don't need to hear any more but what follows is a
+bit more background.
+
+The model for how it manages different classifications is based on
+several sources.  The primary model is the Metathesaurus of the Unified
+Medical Language System at the National Library of Medicine.  This
+system is a complication of multiple medical terminologies and the
+relationships between concepts within these terminologies.  Other big
+influences have been folks like Richard Pyle from this list, MoreTax
+and Nomencurator.  It is a first step in exploring how best to deal
+with a difficult issue but we have enough of a model that we are
+putting together a system and then some prototype applications to use
+it.   What I have learned is that there are lots of different
+stakeholders with different needs.  I know what my needs and dream
+system would be but it might be quite different from yours.
+
+The salient points:
+
+The Taxonomic Name Server views all taxonomic concepts as, in Richard
+Pyle's terms, &quot;assertions.&quot;   A taxonomic concept is someone's opinion
+of a particular taxon based on an original description.  These concepts
+or assertions have relationships both within a specific taxonomic
+treatment and without, with other treatments.  These relationships can
+be hierarchical or set-related.  Everything is unique and ascribed to
+some source authority.  I make no assumptions.   I am putting all sorts
+of interesting sources in such as 12 different classifications for a
+single species (Cercopithecus mitis, a monkey).
+Each instance of the C.mitis concept is unique with further rows then
+ascribing relations between them.  They might all be the same thing but
+that is left for the source authority to &quot;assert.&quot;  Im currently
+loading this database with approx. 1 million taxa and 1.5 million name
+strings so we can see what it does at scale.
+
+We will talk to the name server primarily through an XML-RPC or a SOAP
+interface.  These two systems are kissing cousins and I prefer XML-RPC
+to SOAP but we have functions for both.   This interface defines
+functions on the server which are called from the client side to
+deliver this taxonomic 'metadata' to the client.
+
+Our initial prototype applications will fall into a few categories
+which I think account for much of the usage of this system.  I'm in the
+archive/library/data business so our needs might not be your needs but
+it's a start and I'd like to hear about what people would use a
+'system' for.
+
+Our pilot applications will explore:
+
+Full-text XML parsing - specific name tags plus names within freetext
+tags.
+RDBMS applications and Marc record systems
+Dictionary-type freetext parsing
+
+
+For much of our needs we are interested in using a dynamic taxonomic
+authority to help us index the contents of an information source and
+then dynamically import and integrate supplemental name and
+classification information and repeat this process dynamically.
+
+My goal is to have a workable API and a suite of client tools in Java,
+PHP, and Perl by April with demonstration applications using it.  What
+I expect at that point is to attack it and determine if it does what it
+should.
+
+DR
+
+On Wednesday, January 29, 2003, at 06:04 PM, Anthony Pigott wrote:
+
+&gt;<i> Dear All
+</I>&gt;<i>
+</I>&gt;<i> Some while ago there was some discussion about database systems /
+</I>&gt;<i> software to support multiple taxonomies or publication centred
+</I>&gt;<i> taxonomy,
+</I>&gt;<i> i.e., all the past views rather than one current 'accepted taxon' view.
+</I>&gt;<i> There are a few systems around with at least prototype software
+</I>&gt;<i> available, e.g. Syngraph, Nomencurator and Prometheus.
+</I>&gt;<i>
+</I>&gt;<i> I'd be grateful to hear if anyone has experience of using any of these
+</I>&gt;<i> or similar systems in a 'real' piece of monographic work.  I'd like to
+</I>&gt;<i> use such a system and whilst very tempted to do the modelling and
+</I>&gt;<i> database design myself, I know better than to try if there's something
+</I>&gt;<i> usable out there. Thanks.
+</I>&gt;<i>
+</I>&gt;<i> Regards
+</I>&gt;<i>
+</I>&gt;<i> Anthony
+</I>&gt;<i>
+</I>&gt;<i>
+</I>_______________________________________________
+David Remsen
+uBio Project Developer
+Marine Biological Laboratory
+Woods Hole, MA 02543
+
+
+_______________________________________________
+David Remsen
+uBio Project Developer
+Marine Biological Laboratory
+Woods Hole, MA 02543
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="089695.html">Databases for multiple view taxonomy
+</A></li>
+	<LI>Next message: <A HREF="089697.html">Databases for multiple view taxonomy
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#89694">[ date ]</a>
+              <a href="thread.html#89694">[ thread ]</a>
+              <a href="subject.html#89694">[ subject ]</a>
+              <a href="author.html#89694">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

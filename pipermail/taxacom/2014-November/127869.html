@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Specimen database that works with sequence data
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2014-November/127869.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Specimen database that works with sequence data</H1>
+    <B data-pagefind-meta="author">Daniel Barker</B>
+    db60 at st-andrews.ac.uk<BR>
+    <I data-pagefind-meta="date">Fri Nov 14 11:06:18 CST 2014</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="127868.html">[Taxacom] big cat near Paris
+</A></li>
+        <LI>Next message: <A HREF="127870.html">[Taxacom] Specimen database that works with sequence data
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#127869">[ date ]</a>
+              <a href="thread.html#127869">[ thread ]</a>
+              <a href="subject.html#127869">[ subject ]</a>
+              <a href="author.html#127869">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2014</span><!--beginarticle-->
+<PRE>Dear Eric,
+
+The problem seems difficult, for a couple of other reasons:
+
+- GenBank sequences may be incorrect (incorrect bases in the GenBank record); or
+
+- GenBank sequences may be incorrectly annotated (wrong species, wrong gene, etc., in the GenBank meta-data); or
+
+- In general, GenBank sequences may be inconsistently annotated (hemoglobin vs haemoglobin, sulfur vs sulphur, 'protein/gene name goes here' vs 'hypothetical', etc.)
+
+An approach that only uses GenBank meta-data, without some consideration of the sequences themselves, will be open to some errors from these sources.
+
+Sequence-based approaches that ignore GenBank's annotation, for example BLAST or protein domain searches (e.g. InterProScan or CDD), potentially remove the problem of 'wrong gene' and 'inconsistently annotated'. I can imagine they could help with a minority of cases of 'incorrect bases', too.
+
+However, they introduce other issues that must be dealt with - and which may be summed up as, how to interpret the results BLAST or protein domain searches in biological terms? Which are the relevant cut-offs? Where several models of the protein domain of interest exist, which should be used, or should you make your own?
+
+Thought 1. Would iPhy help? It seems to me that it might. I know of it, but have not used it:
+
+<A HREF="http://www.biomedcentral.com/1471-2105/12/30">http://www.biomedcentral.com/1471-2105/12/30</A>
+
+Thought 2. How about a BLAST search at NCBI, but with an Entrez query to limit results? This will cause BLAST to only report matches to that subset of sequences in the database that also match your keyword query. (N.B. Search for protein-coding sequences at the protein level, e.g. BLASTP, PSI-BLAST, BLASTX, TBLASTN or TBLASTX as appropriate; not BLASTN, which for protein-coding sequences is less sensitive and less accurate.)
+
+Best regards,
+
+Daniel
+
+Daniel Barker
+<A HREF="http://biology.st-andrews.ac.uk/staff/db60">http://biology.st-andrews.ac.uk/staff/db60</A>
+The University of St Andrews is a charity registered in Scotland :
+No SC013532
+
+________________________________________
+From: Taxacom [taxacom-bounces at mailman.nhm.ku.edu] on behalf of Eric Chapman [ericgchapman at gmail.com]
+Sent: 13 November 2014 19:35
+To: taxacom at mailman.nhm.ku.edu
+Subject: [Taxacom] Specimen database that works with sequence data
+
+Hello,
+
+I was wondering if anyone could tell me if there is a database available
+that  houses both collection information and DNA sequences of multiple
+genes such that I could query that database in this way:
+
+For all specimens that are from the US with COI sequences, give me a FASTA
+(or other DNA format) file containing all of the sequences.
+
+I don't care if the sequences are aligned - I can do that part. I have been
+working with a data file and selecting a subset of sequences by hand in
+MacClade or Mesquite, which has become very time consuming as the data set
+has grown to well over 1000 sequences. I am not skilled at writing scripts,
+so extracting them that way is not practical for me. I have never used
+Sequencher - does it have this capability?
+
+I would appreciate any input any of you can give me.
+
+Regards,
+Eric Chapman
+
+--
+Eric G. Chapman, PhD
+Research Analyst, Collections Manager
+Department of Entomology
+University of Kentucky
+S225 Agricultural Science Center N
+Lexington KY 40546-0091 USA
+(859) 257-3169 (lab)
+(330) 221-7812 (mobile)
+_______________________________________________
+Taxacom Mailing List
+Taxacom at mailman.nhm.ku.edu
+<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom</A>
+The Taxacom Archive back to 1992 may be searched at: <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+
+Celebrating 27 years of Taxacom in 2014.
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="127868.html">[Taxacom] big cat near Paris
+</A></li>
+        <LI>Next message: <A HREF="127870.html">[Taxacom] Specimen database that works with sequence data
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#127869">[ date ]</a>
+              <a href="thread.html#127869">[ thread ]</a>
+              <a href="subject.html#127869">[ subject ]</a>
+              <a href="author.html#127869">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

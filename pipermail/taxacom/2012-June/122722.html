@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] LSID versus names
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2012-June/122722.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] LSID versus names</H1>
+    <B data-pagefind-meta="author">Roderic Page</B>
+    r.page at bio.gla.ac.uk<BR>
+    <I data-pagefind-meta="date">Wed Jun 20 02:42:47 CDT 2012</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="122721.html">[Taxacom] LSID versus names
+</A></li>
+        <LI>Next message: <A HREF="122723.html">[Taxacom] Does the species name have to change when it
+	moves	genus?
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#122722">[ date ]</a>
+              <a href="thread.html#122722">[ thread ]</a>
+              <a href="subject.html#122722">[ subject ]</a>
+              <a href="author.html#122722">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2012</span><!--beginarticle-->
+<PRE>Dear Stephen,
+
+It might be useful to unpack this argument a little.
+
+LSIDs have not been a success for a bunch of reasons: the technology itself is not straightforward to get working properly (harder than setting up a web site, for example), LSID don't work in natively in web browsers, and some example are ugly e.g., those that use UUIDs, such as the examples you gave earlier, and the ones issued by ZooBank (note that you don't have to make such ugly LSIDs).
+
+But if we compare them to, say DOIs, we discover that in principle DOIs have similar isses. DOIs are non-trivial to set up, don't work natively in web browsers (unless you stick <A HREF="http://dx.doi.org">http://dx.doi.org</A> in front of them), and some DOIs are ugly (e.g., <A HREF="http://dx.doi.org/10.1002/(SICI)1520-6408(1999)25:2">http://dx.doi.org/10.1002/(SICI)1520-6408(1999)25:2</A>&lt;87::AID-DVG2&gt;3.0.CO;2-4 , most are much nicer to look at).
+
+Yet DOIs have become the identifier of choice for journal articles, and its difficult to imagine a new journal launching without using them. Why have DOIs worked but LSIDs haven't. Here are some possible reasons:
+
+1. DOIs provide a unique identifier for something that is otherwise hard to uniquely identify (as you point out) (just think of all the different ways we can write a citation to an article)
+
+2. DOIs identify the authoritative source of an article. Yes, I can Google an article, but today I'm likely to get lots of hits, only one of which is likely to be the article on the publisher's website (i.e., the authoritative copy of that article)
+
+3. When I resolve a DOI I get something of value, namely an article, which is typically a rich source of information, often with links to further sources (e.g., the literature it cites).
+
+4. Everybody is using them. Most major journals employ them, both for their own articles, and in the list of literature cited. Bibliographic tools like Mendeley and Zotero &quot;speak DOI&quot;, they can take a DOI and get the details for the corresponding article.
+
+5. There are strong incentives for publishers to be part of the system because it adds value to your content (readers like links to other articles) and it can drive traffic to your content (when articles in other journals cite DOIs for articles that you have published).
+
+LSIDs for taxa and taxon names pretty much lack any of this:
+
+1. As you point out, for most (but not all) taxa, the name is unique, and so functions as an identifier
+
+2. In most cases there is no authoritative source of information on a name. Nomenclators may make a claim for this, but in zoology at least we are faced with ZooBank, with fractional coverage of names (maybe 5% of names, ignoring combinations), and ION, which has much greater coverage but is a little messy and somewhat restricted by commercial interests. Plant people are somewhat better off with IPNI, although one could argue whether we should regard IPNI, Tropics, or the Plant List as the definitive authority.
+
+3. When you resolve a LSID typically what you get is a fairly trivial statement that this is a name. Few LSIDs resolve to something you'd actually make use of, or provide links to other sources.
+
+4. To a first approximation nobody is using them. OK, I exaggerate, but apart from a few niche examples (e.g., ZooKeys, PLoS) they are not being used. Nobody is going to feel left out by not using them.
+
+5. There aren't strong incentives for publishers to use them. They don't provide much additional value to readers, they aren't a source of new traffic.
+
+Note that I'm not arguing that identifiers are a bad idea (quite the reverse), but I think there are lots of reasons why LSIDs haven't taken off for taxonomic names or concepts. Unless we address these issues I think advocates of identifiers (and I include myself here) are going to have a tough time selling their virtues.
+
+Regards
+
+Rod
+
+
+
+On 20 Jun 2012, at 00:52, Stephen Thorpe wrote:
+
+&gt; I can understand why doi are a good idea for publications - because they don't otherwise have standard identifiers - but taxonomic names *are* standard identifiers for taxa. The fact that they fail &lt;1% of the time is no justification for assigning *everything* GUIDs ...
+&gt; 
+&gt; From: Richard Pyle &lt;deepreef at bishopmuseum.org&gt;
+&gt; To: 'Jim Croft' &lt;jim.croft at gmail.com&gt;; 'Stephen Thorpe' &lt;stephen_thorpe at yahoo.co.nz&gt; 
+&gt; Cc: 'Chris Thompson' &lt;xelaalex at cox.net&gt;; 'Neal Evenhuis' &lt;neale at bishopmuseum.org&gt;; 'Roderic Page' &lt;r.page at bio.gla.ac.uk&gt;; 'Frederick W. Schueler' &lt;bckcdb at istar.ca&gt;; taxacom at mailman.nhm.ku.edu 
+&gt; Sent: Wednesday, 20 June 2012 11:36 AM
+&gt; Subject: RE: [Taxacom] LSID versus names
+&gt; 
+&gt; &gt; But they are not designed for humans. They are designed for computers to
+&gt; &gt; communicate with each other unambiguously.
+&gt; 
+&gt; +1
+&gt; 
+&gt; 
+&gt; 
+&gt; 
+&gt; This message is only intended for the addressee named above.  Its contents may be privileged or otherwise protected.  Any unauthorized use, disclosure or copying of this message or its contents is prohibited.  If you have received this message by mistake, please notify us immediately by reply mail or by collect telephone call.  Any personal opinions expressed in this message do not necessarily represent the views of the Bishop Museum.
+&gt; 
+&gt; 
+
+---------------------------------------------------------
+Roderic Page
+Professor of Taxonomy
+Institute of Biodiversity, Animal Health and Comparative Medicine
+College of Medical, Veterinary and Life Sciences
+Graham Kerr Building
+University of Glasgow
+Glasgow G12 8QQ, UK
+
+Email: r.page at bio.gla.ac.uk
+Tel: +44 141 330 4778
+Fax: +44 141 330 2792
+Skype: rdmpage
+AIM: rodpage1962 at aim.com
+Facebook: <A HREF="http://www.facebook.com/profile.php?id12517192">http://www.facebook.com/profile.php?id12517192</A>
+Twitter: <A HREF="http://twitter.com/rdmpage">http://twitter.com/rdmpage</A>
+Blog: <A HREF="http://iphylo.blogspot.com">http://iphylo.blogspot.com</A>
+Home page: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="122721.html">[Taxacom] LSID versus names
+</A></li>
+        <LI>Next message: <A HREF="122723.html">[Taxacom] Does the species name have to change when it
+	moves	genus?
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#122722">[ date ]</a>
+              <a href="thread.html#122722">[ thread ]</a>
+              <a href="subject.html#122722">[ subject ]</a>
+              <a href="author.html#122722">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

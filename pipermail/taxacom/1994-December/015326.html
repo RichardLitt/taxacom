@@ -1,0 +1,252 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Nomenclatural Databases
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Nomenclatural%20Databases&In-Reply-To=%3Cmailman.1754.1157126640.2564.taxacom%40mailman.nhm.ku.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="098478.html">
+   <LINK REL="Next"  HREF="051118.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1994-December/015326.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Nomenclatural Databases</H1>
+    <B data-pagefind-meta="author">Robert Robbins</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Nomenclatural%20Databases&In-Reply-To=%3Cmailman.1754.1157126640.2564.taxacom%40mailman.nhm.ku.edu%3E"
+       TITLE="Nomenclatural Databases">rrobbins at GDB.ORG
+       </A><BR>
+    <I data-pagefind-meta="date">Thu Dec 22 10:06:43 CST 1994</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="098478.html">NEW INTERNATIONAL PRIZE FOR BEETLE SCIENTISTS
+</A></li>
+        <LI>Next message: <A HREF="051118.html">Nomenclatural Databases
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#15326">[ date ]</a>
+              <a href="thread.html#15326">[ thread ]</a>
+              <a href="subject.html#15326">[ subject ]</a>
+              <a href="author.html#15326">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>1994</span><!--beginarticle-->
+<PRE>Dr. Roberts,
+
+What you propose sounds fairly similar to work being conducted at Michigan
+State University by Sakti Pramanik, who has been working on a
+sophisticated taxonomic database for several years.  This, I think, is the
+work described in the Beach et al paper you mention.  I suggest, as the
+former NSF program officer who first funded Pramanik this project (i.e.,
+not just as a random kibitzer), that you take the time to become familiar
+with that work.
+
+Pramanik is a computer scientist who has been collaborating with several
+botanists (including Beach, who is now at UC Berkeley) in developing the
+system.  As I understand it, Pramanik's system is designed for genericity
+and involves supporting some very interesting historical questions, such
+as &quot;Get me all species, now classified in genus x, which have been
+reclassified at least twice, and which were originally described by
+Linnaeus.&quot; If I'm wrong on this specific question, I believe I am right in
+spirit, which is that the system is intended to manage names and their
+history so that nearly any question that can be conceived of taxonomic
+names is answerable by the system.
+
+I have copied Drs. Pramanik and Beach in this message (with what I hope
+are current addresses).  I would hope that you be able to establish a good
+interaction with them.  It was our hope at NSF when funding this work that
+it would prove helpful to many groups of biologists.
+
+You are of course correct that the recursive nature of taxonomic queries
+requires special attention.
+
+With regard to your thinking about an object-oriented C++ approach,
+however, you might want to read &quot;An Object-oriented DBMS war story:
+Developing a genome mapping database in C++&quot; by Goodman, in Kim [ed]
+Modern Database Systems, Addison Wesley, 1994.  Many people have been
+arguing for some time that an object-oriented approach is far superior to
+relational systems for handling biological data.  In principle, this is
+true.  But building a robust production system requires that the software
+handle the logical needs of the data and that it handle the basic
+functions necessary of a production database.  Some seem to be finding
+that forcing a relational system to handle tough logical problems is
+easier than forcing an object-oriented system to behave like a proper
+database.
+
+Goodman, another computer professional recruited to interesting biological
+problems, reports on some of the practical problems associated with
+building a database using tools that are lacking some of the robust
+support for database maintenance found in RDBM systems. Anyone seriously
+interested in using OO technology for a production database would be well
+advised to read Goodman's paper.  (I have asked him if a copy might be
+made available electronically, but to my knowledge it is not yet
+obtainable in that manner.)
+
+Another paper by Stonebraker et al (1990, The Implementation of POSTGRES,
+IEEE Transactions on Knowledge and Data Engineering, 2(1):125-142),
+reporting on the development of the PostGRES database, noted that the
+system, an outgrowth of Ingres, was to have a rules-based component.
+Logically, it seemed that using a rules-oriented language would make that
+development easier.  So, the project went ahead, using C for the main
+project and LISP for the rules part.  As expected, the use of Lisp made
+coding the rules much easier.  But, debugging the LISP-C interface proved
+so difficult and other aspects of LISP proved so problematic that
+Stoenbraker concluded, &quot;Our feeling is that the use of LISP has been a
+terrible mistake for several reasons. ...  As a result, we have just
+[rewritten our LISP components in C] to avoid the the debugging hassle and
+secodarily to avoid the performance and footprint problems in LISP.  Our
+experience with LISP and two-language systems has not been positive, and
+we would caution others not to follow in our footsteps.&quot;
+
+I know you have not proposed a two-language system, but I note that very
+few authors, besides Goodman and Stonebraker, take the time to publish
+about negative lessons learned from using certain tools in certain
+environments.  These lessons should be carefully attended to, as many
+other reports that speak glowingly of the perfect fit between some new
+data model or programming language and some real-world problem have much
+in common with advertising copy.
+
+As for a Prolog solution, as I understand it, it can be difficult to build
+a prolog system that supports multiple, simultaneous users -- a problem
+for a database used to operate a functioning collection.  Also, many
+prolog systems require that the entire &quot;database&quot; be loaded into memory to
+function and this puts some substantial requirments on the workstation, if
+a large data collection is to be operated.  Finally, my reading of the
+logic programming literature suggests that maintaining large collections
+of rules in a perfectly consistent state over long periods of time can be
+taxing.
+
+Stonebraker again (Stonebraker, 1989, Future trends in database systems,
+IEEE Transactions on Knowledge and Data Engineering, 1(1):33-44),
+commenting on various options for building information resources that
+combine data and rules: &quot;The second alternative is to put both the data
+and the rules in an expert system environment such as Prolog...  The
+problem with this approach is that these systems, without exception,
+assume that facts available to their rule engines are resident in main
+memory.  It is simply not practical to put a large database into virtual
+memory.  Even is this were possible, such a database would have no
+transaction support and would not be sgarable by multiple users.  In
+short, current expert system shells do not include database support, and
+[this option] is simply infeasible.&quot;
+
+Pramanik's work was explicitly designed to deal with the recursive nature
+of taxonomic queries.  Indeed, it was the challenge of recursion that got
+him interested in the project in the first place.  Again, I suggest you
+contact him to learn more about his approach.
+
+Regards,
+
+Bob
+
+=================================================================
+
+  Robert J. Robbins
+  Applied Research Laboratory
+  Johns Hopkins University
+  2024 E. Monument Street
+  Baltimore, MD  21205
+
+  <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">rrobbins at gdb.org</A>
+
+  (410) 955-9705 (office secretary)
+  (410) 614-0434 (fax)
+
+=================================================================
+
+
+On Thu, 22 Dec 1994, cgh wrote:
+
+&gt;<i> From: Charles Hussey, Data Manager, Department of Zoology, The Natural
+</I>&gt;<i> History Museum, London.
+</I>&gt;<i>
+</I>&gt;<i> A Research Leader in our Microbiology Section is to begin a Data Modelling
+</I>&gt;<i> Project and has asked me to circulate TAXACOM Subscribers. If you wish to
+</I>&gt;<i> respond could you do so direct to Dr. Dave Roberts : <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">dmr at nhm.ac.uk</A>
+</I>&gt;<i>
+</I>&gt;<i> The text of his message follows:
+</I>&gt;<i>
+</I>&gt;<i> Hello,
+</I>&gt;<i> We have some funding to begin work on a nomenclatural database. The problem
+</I>&gt;<i> we want to address is how to handle the instability (synonymy and re-
+</I>&gt;<i> classification) and the tracking of the history of names. Linked to this is
+</I>&gt;<i> the issue of supporting multiple higher classification systems, which is an
+</I>&gt;<i> acute problem in fields such as the protista at present.
+</I>&gt;<i>
+</I>&gt;<i> If a suitable implementation can be designed, we will be able to recover
+</I>&gt;<i> lists of &quot;what species are in genus X&quot; and &quot;what genera are in Order Y
+</I>&gt;<i> sensu Jones&quot;, including all synonyms and a nomenclatural history. Another
+</I>&gt;<i> question that can be addressed is whether a name is valid or available.
+</I>&gt;<i> The database will also be able to provide higher taxonomic structure and
+</I>&gt;<i> authorities for genus-species names under a chosen system (again, in the
+</I>&gt;<i> protista there are several systems in current use).
+</I>&gt;<i>
+</I>&gt;<i> This is important for us in being able to search our collections where
+</I>&gt;<i> many items are listed under the name by which they were deposited, not the
+</I>&gt;<i> name which is currently valid; again an acute problem in groups such as
+</I>&gt;<i> the protists.
+</I>&gt;<i>
+</I>&gt;<i> The work we have done to date has led us to believe that an object-
+</I>&gt;<i> orientated approach (C++) would be most likely to succeed, but it is
+</I>&gt;<i> possible that languages such as Prolog might be better. The issue that has
+</I>&gt;<i> led to this conclusion is the recursive nature of a synonymy query. For a
+</I>&gt;<i> given species, you recover a number of synonyms; for each synonym you must
+</I>&gt;<i> perform the same enquiry and so on until the list of names  does not
+</I>&gt;<i> recover any new members. Further, the system should check that the original
+</I>&gt;<i> name itself is still nomenclaturally valid (has not been submerged).
+</I>&gt;<i> Complications occur when part of a set described under one name are moved
+</I>&gt;<i> to another name and the original name remains sensu lato or sensu stricto.
+</I>&gt;<i> The information comprises of comparable volumes of items (names and other
+</I>&gt;<i> textual data) and links between those data. The links can be stated
+</I>&gt;<i> explicitly, of course, but the maintenance of such linkage sets could
+</I>&gt;<i> become unreasonably demanding as the volume of information grows. There are
+</I>&gt;<i> thought to be some 1.8 million names, with an estimate of 20% synonymy.
+</I>&gt;<i>
+</I>&gt;<i> The trial group is the Protists (see for example Corliss, 1994. Acta.
+</I>&gt;<i> Protozoologica 33: 1-51). If we can devise a model capable of handling this
+</I>&gt;<i> degree of taxonomic instability, it should not prove a major difficulty to
+</I>&gt;<i> extend it to any other group.
+</I>&gt;<i>
+</I>&gt;<i> We would like to hear of any work that has been done in this area (e.g.
+</I>&gt;<i> Beach et al. 1993. pp241-256, in R. Fortuner (ed.) Advances in Computer
+</I>&gt;<i> Methods for Systematic Biology. John Hopkins University Press). More
+</I>&gt;<i> importantly, are we trying to re-invent the wheel? If not, is anyone
+</I>&gt;<i> interested in collaborating on this problem?
+</I>&gt;<i> Charles Hussey,
+</I>&gt;<i> Department of Zoology, The Natural History Museum,
+</I>&gt;<i> Cromwell Road, London SW7 5BD, United Kingdom.
+</I>&gt;<i> Tel: +44 (0)71 938 8921 [Direct Line]; Fax: +44 (0)71 938 9158
+</I>&gt;<i> JANET: <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">cgh at uk.ac.nhm</A>
+</I>&gt;<i> INTERNET: <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">cgh at nhm.ac.uk</A>
+</I>&gt;<i>       Nomenclatural Databases                                                 +
+</I>
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="098478.html">NEW INTERNATIONAL PRIZE FOR BEETLE SCIENTISTS
+</A></li>
+	<LI>Next message: <A HREF="051118.html">Nomenclatural Databases
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#15326">[ date ]</a>
+              <a href="thread.html#15326">[ thread ]</a>
+              <a href="subject.html#15326">[ subject ]</a>
+              <a href="author.html#15326">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

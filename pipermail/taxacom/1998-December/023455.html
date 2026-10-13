@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> data sharing
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20data%20sharing&In-Reply-To=%3Cmailman.9883.1157126735.2564.taxacom%40mailman.nhm.ku.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="059239.html">
+   <LINK REL="Next"  HREF="059247.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1998-December/023455.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">data sharing</H1>
+    <B data-pagefind-meta="author">Julian Humphries</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20data%20sharing&In-Reply-To=%3Cmailman.9883.1157126735.2564.taxacom%40mailman.nhm.ku.edu%3E"
+       TITLE="data sharing">jmhbs at UNO.EDU
+       </A><BR>
+    <I data-pagefind-meta="date">Mon Dec  7 16:29:14 CST 1998</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="059239.html">data sharing
+</A></li>
+        <LI>Next message: <A HREF="059247.html">data sharing
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#23455">[ date ]</a>
+              <a href="thread.html#23455">[ thread ]</a>
+              <a href="subject.html#23455">[ subject ]</a>
+              <a href="author.html#23455">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>1998</span><!--beginarticle-->
+<PRE>At 12:17 PM 12/7/98 -0800, Stan Blum wrote:
+&gt;<i>Alta-Vista and the other Web crawling-indexing have absolutely nothing to
+</I>&gt;<i>do with the argument.  To see how reliable full-text indexing is in
+</I>&gt;<i>information retrieval, all you have to do is issue the same query to
+</I>&gt;<i>Alta-Vista, Hotbot, Lycos, etc., and compare the results.  How come they're
+</I>&gt;<i>so different?
+</I>
+Well, this is not really the issue, they are different because they
+use different strategies to try and index a *very* moving target,
+hardly comparable to label data for specimens.   Even in our wildest
+views of what specimen data are, there don't approach the content
+variation of the web (by several orders of magnitude).  In fact,I dare say if
+we put museum records up as &quot;files&quot; every major search engine
+would produce nearly identical hits (once they found them of course).
+
+&gt;<i>
+</I>&gt;&gt;<i>Web technologies are
+</I>&gt;&gt;<i>pre-adapted to process and display distributed data
+</I>&gt;<i>
+</I>&gt;<i>*** but only one connection at a time ***
+</I>
+Thats not quite true and while it might not be relevant, not only are
+browsers multi-threaded, the servers you connect to can definitely
+do multiple searches to lots of machines at once (see FishGopher).
+
+&gt;<i>
+</I>&gt;<i>Full-text indexing has well known limitations.  Within the collections data
+</I>&gt;<i>context, I can't easily and reliably issue a query that distinguishes
+</I>&gt;<i>between &quot;Smith&quot; as the collector and &quot;Smith&quot; as the identifier
+</I>&gt;<i>(determiner).
+</I>
+Well, I might say you can't reliably do fielded searches for
+Tom Smith when the data are entered as T. Smith or Smith,T.
+
+&gt;<i>I can't search for specimens collected between 200 and 500
+</I>&gt;<i>meters elevation.  More importantly, I can't easily do any kind of
+</I>&gt;<i>post-processing (re-sorting, sub-querying, etc.) on the results precisely
+</I>&gt;<i>because the records are either unstructured (full-text) or heterogeneously
+</I>&gt;<i>structured (i.e., structured, but according to different semantic standards).
+</I>&gt;<i>
+</I>
+There is nothing inherent in full text indexing that says you can't
+return structured data.  There are advantages and disadvantages
+to both fielded and full text versions of databases.   For really high quality
+data from homogenenous sources, I would guess you can more easily
+find what you are looking for with a traditional fielded database.  But,
+with data from mixed sources and/or with annotation in note fields, its
+often easier to find that record you are looking for (even if it means looking
+through extra records) with a full text engine.
+
+.....
+&gt;<i>
+</I>&gt;&gt;<i>Since this involves
+</I>&gt;&gt;<i>machine-to-machine interactions that must be conducted across a
+</I>&gt;&gt;<i>network that is becoming more congested every day, one wonders if
+</I>&gt;&gt;<i>this potential solution ....
+</I>
+&gt;<i>The bandwidth arguments are irrelevant.  People doing distributed searches
+</I>&gt;<i>for biological specimen data aren't going to have a serious impact on net
+</I>
+I would think the question is not if we impact the net, but the reverse.
+How many
+distributed data sources are practical before net congestion makes
+retrieval too painful to be practical... 5? 25? 100?  I think it is a great
+idea
+to work on distributed search systems, but data warehousing remains
+a viable alternative for the near future, particularly where the audience (and
+data sources) are international.   I will be very interested in performance
+on Dave's system with realistic numbers of data sources spread around the
+world.  I will be thrilled if it works.  It will be interesting to see what
+the effect
+to Z39.50 type transactions (vs HTTP) is on performance.
+
+Julian Humphries
+
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="059239.html">data sharing
+</A></li>
+	<LI>Next message: <A HREF="059247.html">data sharing
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#23455">[ date ]</a>
+              <a href="thread.html#23455">[ thread ]</a>
+              <a href="subject.html#23455">[ subject ]</a>
+              <a href="author.html#23455">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

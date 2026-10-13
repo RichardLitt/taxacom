@@ -1,0 +1,279 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> RASA
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1997-March/020498.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">RASA</H1>
+    <B data-pagefind-meta="author">James Francis Lyons-Weiler</B>
+    weiler at ERS.UNR.EDU<BR>
+    <I data-pagefind-meta="date">Thu Mar  6 06:30:22 CST 1997</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="103650.html">See you later, emulator
+</A></li>
+        <LI>Next message: <A HREF="056290.html">RASA
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#020498">[ date ]</a>
+              <a href="thread.html#020498">[ thread ]</a>
+              <a href="subject.html#020498">[ subject ]</a>
+              <a href="author.html#020498">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1997</span><!--beginarticle-->
+<PRE>        I'm responding to Tom's request that I explain my
+        probabilistic approach.  This is rather serendipitous,
+        for I am close to releasing RASA 2.1, and I can take
+        full advantage of this forum to explain in some
+        detail the workings and my understanding of RASA theory
+        to date.  Most of the extensions are currently under peer
+        review, but most of this has been presented in verbal
+        form elsewhere.  Given the informal nature of this list,
+        I'll not cite literature when I should.
+
+Signal:
+        RASA provides a measure of how much cladistic hierarchy is present
+        in a matrix of character state beyond that which is expected by
+        chance alone.  It is similar in it goal to g1 and PTP, but
+        quite different in its implementation and flexibility.
+
+        It does this by taking advantage of the observable consequence
+        that random data produces no differences between an observed
+        and null rate of increase in apparent cladistic similarity
+        (RAS) among pairs of taxa as a function of overall similarity, but
+        data with signal produces a statistically significant difference
+        between the slopes.
+
+        [note that some folk balk at the use of the term
+        cladistic similarity;  I don't really care what
+        one calls the metric; for me, it's a semantic issue.]
+
+        Cladistic similarity is defined for each taxon pair as the
+        number of times that pair shares a character state to the
+        exclusion of other taxa, all characters considered.
+        Semantics aside, this metric incorporates all of the
+        (A,B),X comparisons where A is taxon A, B is taxon B, and
+        X is any other taxon, for all characters.  As a measure of
+        unique similarity, the metric contains ALL of the information
+        in the matrix.  Invariant sites are trivial.
+
+        the phenetic used (on the x-axis) is the number of characters
+        that are putatively informative for a taxon pair; i.e., the
+        number of characters that contribute to the cladistic
+        metric for that pair.  This two metric will positively
+        covary EVEN with random data, so a test of this slope
+        against zero is trivial.
+
+        The test statistic (trasa) incorporates three parameters, each
+        observed directly from the matrix: the observed slope, the
+        null slope, and an error term (a function of scatter and slope
+        in the observed model).  The null slope can either be
+        determined by permutations to the matrix, or by an analytical
+        procedure. Each matrix has a characteristic null slope.  Details
+        on the process that determines the null slope (reciprocal
+        equiprobable redistribution) are as follows:
+
+        Each taxon pair contributes a particular amount of information
+        to each axis.  If no cladistic hierarchy is present, there is
+        nothing remarkable about any the three-taxon comparisons (ie.,
+        no synapomorphic information is represented).  To
+        determine the expected rate of increase in the cladistic metric as
+        a function of the phenetic, the total amount of information on
+        each axis is summed, and the &quot;matrix rate&quot; is the ratio of the sum
+        of the cladistic metric values to the sum of the phenetic values
+        (D. Colless pointed out that my eq. in the RASA I paper was
+        inelegant).  I am at present exploring the effects of a variety
+        of factor other than randomness and phylogeny on the null.
+
+
+        Simulated and empirical test of the test for signal have
+        been conducted.  trasa has predictive power for the accuracy
+        of methods of phylogenetic inference.  It tracks the decay
+        of signal as internodal nodes become long.  It, like
+        mp, is sensitive to long branches, to outgroup selection,
+        and other pathologies that can reduce the accuracy of
+        evolutionary trees.
+
+        This sensitivity has been turned to an advantage.  But first,
+        assumptions, falsifiability, and limitations
+
+        The assumptions of the test are that past processes of evolution
+        may or may not produce pattern in the data that
+        looks like signal, and that other processes only produce
+        signal-like pattern rarely (explicitly, ca. 5% of the time).
+        This makes the method falsifiable.  If other conditions can be
+        shown to produce signal &gt; 5% of the time, the test statistic
+        may be misleading.
+
+        On the other hand, the method assumes that processes of
+        evolution that produce distributions of character states
+        among taxa and cause methods of phylogenetic inference
+        to retrieve accurate trees will result in a difference
+        between the slopes.  Often there is a complex interplay
+        between the cladistic hierarchy in a matrix, caused
+        by the processes of the evolution, and localized
+        violations of the assumptions of phylogenetic
+        methods.  This turns out to not be a problem, and
+        because these influences are readily identifiable..
+
+        The method is falsifiable.  Specifically, some rather bold
+        predictions can be made.  For example, anything one does to the
+        matrix that increases tRASA will increase the accuracy of the
+        phylogenetic inference.  This includes taxon sampling,
+        and character sampling. tRASA therefore provides a ready
+        criterion for determining the implications of things like
+        removing apparent autapomorphies.
+
+Testing Homology
+
+        If a preponderance of hypotheses of homology are in err, then
+        an mp tree will likely be wrong, and inferred synapomorphies
+        will be erroneously adduced.  If a preponderance of hypotheses
+        of homology are wrong, phylogenetic signal is weak, tRASA
+        will not be significant, and the tree, which would have wrongly
+        been used to erroneously falsify correct hypotheses of
+        homology, would be recognized as a poor test, to be distrusted.
+
+        In contrast, tRASA tracks the proportion of erroneous
+        hypotheses of homology well, and can be applied to the
+        task of trying to falsify individual hypotheses of
+        homology.
+
+        The impact of individual hypotheses of homology
+        can be explored by comparing signal when they are
+        included or excluded.  This particalar application of
+        RASA is not well explored, but it appears to be justified.
+        I included here because it is most relevent to the
+        disucssion.  From my experience with empirical data, tree-based
+        indicators of accuracy can be improved dramatically by finding
+        and removing apparently misleading characters.  Once an
+        estimate of phylogeny is produce that uses apparently
+        accurate hypotheses of homology, the evolution of the
+        misleading characters can be better understood a posteriori.
+        Naturally, this is similar to previous approaches because it
+        has the same goal, but there are some fundamental differences
+        here; the RASA algorithm is solved in polynomial time (therefore,
+        the entire tree space doesn't have to be explored).
+
+Long branches
+
+        Taxa at the end of long branches have undergone a great
+        amount of anagenetic evolution (not necessarily an increased
+        rate of evolution), without cladogenesis.  As a result,
+        autapomorphies accumulate.  This quite effectively randomizes the
+        charactre states _with respect to phylogenetic information).
+
+        This can be a result either of true evolutionary history (i.e.,
+        living fossils), or as result of taxon sampling.
+
+        Taxa (and clades) at the ends of long branches tend to be
+        not all that similar to other taxa in matrix (in the phenetic
+        sense); but for their low similarity, they tend to have a
+        high value of pairwise cladistic similarity with other
+        taxa in the matrix.  This tends to reduce the observed slope.
+        The contribution of each individual taxon to the variance
+        on each axis is summarized is a type of residual plot
+        (a taxon variance plot), in which taxa on long branches
+        are readily identified.
+
+        Although such patterns are caused by long branch attraction,
+        this application makes no assumptions of evolutionary process,
+        for if ANY factor causes the characteristic pattern, the
+        algorithms for trees will respond similarly, and whatever
+        topologies are found to be optimal will be something other than
+        an accurate estimation of phylogeny.  A direct analogy is the
+        test for normality for parametric statistics; it is entirely
+        irrelevant to the functioning, accuracy and utility of the
+        test that a multitude of factors may causes a sample to be
+        non-normal
+
+        Although the cause of the observed pattern may be multifarious,
+        the method does not assume details of evolutionary processes
+        because all inferences are based on observed character states, not
+        on inferred transformations.  RASA does not assume homology;
+        it test for it.  For example, if an alignment of nucleotide is
+        wrong owing to a computer copy error, that matrix will be
+        innappropriate for phylogenetic inquiry; this type of error
+        will be observable in the signal, and in other ways (see below).
+
+        In another turn, I have found that when long branches have
+        influences the distribution of character states among
+        taxa (via simulation and some emprical data set as well),
+        a bootstrap power analysis that uses tRASA as a criterion
+        to ask the question &quot;do I have enough characters?&quot; has a
+        predictable and intuitive effect.  When signal is strong,
+        and there are o long branches, and characters are resampled
+        are various leves of Nc (number of characters), signal
+        increases and asymptotes.  This is a more classical and
+        better justified use of the boostrap (power analysis).  When
+        long branches are present, signal _decreases+ as one adds
+        more characters, just as Felsenstein predicted; obviously,
+        the taxon variance plot is direct evidence of which
+        taxa maybe problematic.   The efficiency of the algorithm
+        pays off here, too.
+
+Outgroup Selection
+        In the calculation of RAS, comparisons of (A,B),X for a given
+        character are ignored if X is a putative outgroup and if
+        the state of that character is the same for A, B and X.
+        Similarly, a comparison of (A,B),Y is ignored if Y is not an
+        outgroup, but if A and B have the same state as X, which is a
+        putative outgroup.
+
+        When X is a poor outgroup choice (e.g., random data), the
+constraints on the comparisons of (A,B),Y will includes (byt chance)
+homoplasy, plesiomorphy, and synapomorphy.  When X has a sufficient
+plesiomorphy content, MOSTLY plesiomorphy will be constrained, and that
+plesiomorphy in the ingroup will include true plesiomorphy, and some
+reversals.  When plesiomorphy is constrained, tRASA increases (i.e., less
+noise in going into RASij and more signal (i.e., synapomorphy) is
+incorporated.  This procedure can be used to choose among possible
+outgroup candidates; this is important because of they PAUP and other
+programs use outgroups, a poor outgroup selection can bend trees around,
+and cause polarity inferences to be way off.
+
+        It is my hope that TAXACOMERS don't misread this post as
+        an advertisement.  My goal is to increase the accuracy
+        of phylogenetic trees by helping people to see pitfalls
+        in their data before they fall in.
+
+        Cheers,
+
+
+        James Lyons-Weiler
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="103650.html">See you later, emulator
+</A></li>
+        <LI>Next message: <A HREF="056290.html">RASA
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#020498">[ date ]</a>
+              <a href="thread.html#020498">[ thread ]</a>
+              <a href="subject.html#020498">[ subject ]</a>
+              <a href="author.html#020498">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

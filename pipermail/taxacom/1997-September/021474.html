@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Status of plant systematics
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1997-September/021474.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Status of plant systematics</H1>
+    <B data-pagefind-meta="author">Daniel Barker</B>
+    sokal at HOLYROOD.ED.AC.UK<BR>
+    <I data-pagefind-meta="date">Sat Sep  6 21:27:56 CDT 1997</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="104626.html">inch/zoll - laurel leaves - Acknowledgements
+</A></li>
+        <LI>Next message: <A HREF="057266.html">Status of plant systematics
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#021474">[ date ]</a>
+              <a href="thread.html#021474">[ thread ]</a>
+              <a href="subject.html#021474">[ subject ]</a>
+              <a href="author.html#021474">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1997</span><!--beginarticle-->
+<PRE>On Fri, 29 Aug 1997, Richard Zander wrote:
+
+&gt; Fear not that molecular systematics will render us classical
+&gt; systematists obsolete. The problem is in computerized &quot;reconstruction,&quot;
+&gt; which is all pretty much Bayesian. Check Farris' 1973 Dollo parsimony
+&gt; paper for a curiously slanted discussion of probability that hides an
+&gt; important fact: computerized phylogenetic analysis usually gives
+&gt; improbable results.
+&gt;   If you analyse a simple three-taxon cladogram, the shortest tree with
+&gt; two taxa sharing one advanced character has a .67 posterior probability
+&gt; of being right. This is better than random .33 but compared to the sum
+&gt; of the other two hypotheses (possible trees), .33, its just fair. With
+&gt; two characters, the probability of the shortest tree is .80, better.
+&gt; With 4 terminal taxa, however, you have 9 hypotheses, and the likelihood
+&gt; of the shortest tree must be far greater than with just 3 hypotheses to
+&gt; be &quot;probable.&quot; For trees with several terminal taxa, the posterior
+&gt; probablility of the shortest tree is less than .5, and there is more
+&gt; evidence against than for.
+
+There are optimization problems in all fields of science, and the ways to
+solve them are basically independent of the problem and optimality
+criterion. It doesn't matter whether you want to minimize air resistance
+of a car, minimize total wire length in a microchip or minimize potential
+energy in 3 dimensional protein structure. In the case of parsimony, we
+try and minimize the length of a phylogenetic tree. As with the problems
+of design and biophysics, we can find a reasonable solution using standard
+approaches such as greedy algorithms, hill climbing, simulated annealing
+or a combination of any of these. For example, typically Phylip's DNAPARS
+uses a greedy algorithm to propose a tree, which it then optimizes using
+hill climbing.
+
+It does not matter if there is more evidence against the solution than for
+it. I have never heard anyone use this reason to suggest that other
+optimality criteria are irrelevant. For example, it would be unreasonable
+to scrap a microchip on the grounds that the probability its use of wire
+is optimal is just 1%. It would be even less reasonable to abandon
+computerized simulation in microchip design because of this figure. All
+that matters is that what we have a good guess, and computer programs can
+help us guess fairly well.
+
+Some parts of the solution to an optimization problem may be better than
+others. This is certainly true of phylogeny: few phylogeneticists would
+claim to have EVER published a cladogram that is wholly correct. But few
+would claim (even privately) to have ever published one that is wholly
+incorrect, either. The hope is that a cladogram is reasonable overall, and
+beyond doubt correct in some places.  Measures like the CI and RI tell us
+the overall quality of the tree: if, after minimizing homoplasy, there is
+still a lot of homoplasy, we should not place faith in the reconstruction.
+We might decide to find some data that better matches the optimality
+criterion (i.e. characters with a lower rate of evolution), or change the
+optimality criterion to better match our data (i.e. correct for multiple
+hits). Anyway, apart from such measures of overall tree quality, quality
+of specific clades in a tree can be checked using the bootstrap.  If a
+clade has high bootstrap support, we believe in it, even if the rest of
+the tree is rather dire.
+
+&gt; [cut to keep my reply fairly short ...]
+&gt; Phylogeneticists of any stripe are getting away with maybe one paper
+&gt; in ten having a good chance of a correct result, and which paper that is
+&gt; is unknown. (The intuited regularity assumptions of Bayesian analysis
+&gt; are another problem which I won't even bring up...) Simplicity is useful
+
+This frequentist (not Bayesian) attitude to confidence is fine for simple
+hypothesis testing, for example testing the effect of treatments on
+disease, or fertilizer on yield. In such cases we want to know the answers
+to basic questions like 'Does this work? Is it worthwhile?' But trees are
+not hypotheses that are to be rejected or accepted with absolute
+certaintly. The probability indicates how much we should believe the tree
+overall, and is in this respect similar to the RI and CI.
+
+&gt; in other sciences where the &quot;least wrong&quot; answer(s) out of many can be
+&gt; immediately checked for correctness, but we have no such tests in
+&gt; systematics.
+
+I think, with the CI, RI, tree probability, bootstrap and at least half a
+dozen other statistics, parsimony has more immediate checks for
+correctness than most optimization problems. We do have such tests, and we
+have so many of them that few people can keep up with developments and
+understand them all.
+
+&gt;   This will be abundantly evident someday as maximum likelihood analyses
+&gt; become more prevalent and posterior probabilities are published, and
+&gt; then it's back to monography for systematists.
+
+maybe back to monography, but cetainly not for the reasons you give.
+
+Further reading:
+
+Buck, B. &amp; Macaulay, V. A. (eds) 1991. Maximum entropy in action (Oxford &amp;
+New york: Clarendon Press)
+
+Kirkpatrick, S., Gelatt, C. D. &amp; Vecci, M. P. 1983.  Optimization by
+simulated annealing. Science 220(4598): 671-680
+
+&gt;
+&gt; --
+&gt;
+&gt; *******************************************************
+&gt; Richard H. Zander, Buffalo Museum of Science
+&gt; 1020 Humboldt Pkwy, Buffalo, NY 14211 USA bryo at commtech.net
+&gt; *******************************************************
+&gt;
+
+
+Daniel Barker,
+Institute of Cell and Molecular Biology,
+University of Edinburgh,
+Daniel Rutherford Building,
+King's Buildings,
+Mayfield Road,
+Edinburgh
+EH9 3JH
+UK
+
+<A HREF="http://www.icmb.ed.ac.uk/sokal.html">http://www.icmb.ed.ac.uk/sokal.html</A>
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="104626.html">inch/zoll - laurel leaves - Acknowledgements
+</A></li>
+        <LI>Next message: <A HREF="057266.html">Status of plant systematics
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#021474">[ date ]</a>
+              <a href="thread.html#021474">[ thread ]</a>
+              <a href="subject.html#021474">[ subject ]</a>
+              <a href="author.html#021474">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

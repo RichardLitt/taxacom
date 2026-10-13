@@ -1,0 +1,213 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> ITIS (an explanation of GBIF's data integration
+              activities)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2004-June/092214.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">ITIS (an explanation of GBIF's data integration
+              activities)</H1>
+    <B data-pagefind-meta="author">Christopher Lyal</B>
+    chcl at NHM.AC.UK<BR>
+    <I data-pagefind-meta="date">Wed Jun 23 23:12:30 CDT 2004</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="092213.html">ITIS (an explanation of GBIF's data integration activities)
+</A></li>
+        <LI>Next message: <A HREF="092218.html">ITIS (an explanation of GBIF's data integration activities)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092214">[ date ]</a>
+              <a href="thread.html#092214">[ thread ]</a>
+              <a href="subject.html#092214">[ subject ]</a>
+              <a href="author.html#092214">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2004</span><!--beginarticle-->
+<PRE>Although the Napier schema is perhaps daunting it is part of a concerted
+effort to make datasets of many different types interoperable.  If one
+is interested only in querying databases of names then an approach such
+as Rod outlines may well work, although the multiplicity of formats will
+create problems.  However, part of the vision is to have
+interoperability between taxonomic (name) databases and specimen-level
+databases.  This opens the door to querying a distributed system on a
+taxon name, and having as a return the full synonymy and, if required,
+of specimen data from a variety of sources that have been retrieved not
+only for the name entered but also for junior synonyms and misspellings
+(and if anyone thinks that the museums of the world are going to be able
+to correct the nomenclatural inaccuracies in a hurry, I fear they are in
+for a disappointment).  Moreover, the simultaneous access to such a mass
+of data in a standard form allows implementation of analytical tools to
+those data. In order to get this level of interoperability an approach
+using standards (e.g. Darwin Core / ABCD at the specimen level, Linnean
+Core / Napier schema at name and concept level) is vital.  Use of such
+standards will bring many databases to 'Level 4' interoperability
+standard from the NIH/NIAID/Wellcome Trust Workshop, and GBIF is
+striving the help data owners do this.
+
+While the majority of names accessible through GBIF that come from name
+providers rather than named specimens in collections are from the
+Catalogue of Life Partnership (ITIS and Species 2000), a proportion will
+in the future be submitted directly from data providers through a
+standard XML schema (which is why we are waiting with keen interest for
+the standard to be determined).  With an increasing number of providers,
+mapping a portal to each will prove difficult if not impossible, while
+if each of them use a standard schema accessibility and interoperability
+will be much facilitated.
+
+At present use of XML schemas is difficult for many data providers
+because of their unfamiliarity and their rapid development, but we are
+still in the early stages of developing interoperability.  As the
+schemas settle down, tools will be developed to assist data providers to
+use them; the fact that GBIF already is a gateway to over 24 million
+specimen-level records from more than 60 data providers is a good
+pointer in this direction.
+
+I agree fully with Rod that we need examples of useful tools; I think
+that we already have one (well, two) in ABCD and Darwin Core.  I also
+think that we will have another for names and concepts in a reasonably
+short time.
+
+Chris
+
+
+Christopher H. C. Lyal,
+Chair, GBIF Electronic Catalogue of Names Science Subcommittee,
+Department of Entomology,
+The Natural History Museum,
+Cromwell Road,
+London SW7 5BD
+UK
+tel: +44 (0) 207 942 5113
+fax: +44 (0) 207 942 5229
+e-mail chcl at nhm.ac.uk
+URL:
+personal page  - <A HREF="http://www.nhm.ac.uk/entomology/staffpages/clyal.html">http://www.nhm.ac.uk/entomology/staffpages/clyal.html</A>
+electronic Biologia Centrali-Americana -
+  <A HREF="http://www.sil.si.edu/digitalcollections/bca/">http://www.sil.si.edu/digitalcollections/bca/</A>
+
+
+
+-----Original Message-----
+From: Taxacom Discussion List [mailto:TAXACOM at LISTSERV.NHM.KU.EDU] On
+Behalf Of Roderic D. M. Page
+Sent: 23 June 2004 22:13
+To: TAXACOM at LISTSERV.NHM.KU.EDU
+Subject: Re: [TAXACOM] ITIS (an explanation of GBIF's data integration
+activities)
+
+I wonder whether the exchange standard for taxonomic name
+and concept data ( <A HREF="http://tdwg.napier.ac.uk/phpwiki/index.php)">http://tdwg.napier.ac.uk/phpwiki/index.php)</A> is the
+best place to start. The scheme itself is huge (does anybody enjoy
+reading these things?), and probably only of interest to those few
+who have large databases of names (as opposed to those who would be
+interested in contributing names to a database).
+
+For me quickest way towards the vision that Donald Hobern outlines is
+to get a simple standard for returning results from querying
+taxonomic databases. As an exercise I constructed a &quot;portal&quot; where a
+user to types in a name and ITIS, uBio, IPNI, and GenBank are all
+queried for that name (see
+<A HREF="http://darwin.zoology.gla.ac.uk/~rpage/MyToL/www/portal.html">http://darwin.zoology.gla.ac.uk/~rpage/MyToL/www/portal.html</A> --
+&quot;Phyllocladus&quot; is a good name to try). This is really a toy, but I
+was interested in seeing how easy it was to query existing databases
+to check the status of a name -- perhaps the most basic use of a
+taxonomic name database. Certainly, for my own phylogenetic projects
+this is what I need.
+
+Of course, each database has its own interface and means of returning
+data, and so the portal has to cope with everything from XML to plain
+text, and each database returns rather different kinds of information
+(ITIS being the most comprehensive).
+
+We need a simple, easily implemented standard way of asking questions
+of taxonomic databases. For example, it is pretty easy to get a
+Microsoft Excel spreadsheet to use SOAP to talk to an Internet
+database (see
+<A HREF="http://darwin.zoology.gla.ac.uk/~rpage/MyToL/www/excel.php">http://darwin.zoology.gla.ac.uk/~rpage/MyToL/www/excel.php</A> ) --
+wouldn't it be great if users had a list of names in a spreadsheet
+and could call an Excel function to check the status of those names?
+This is easy to do, and would seem to me to give people a much
+stronger incentive to get involved, rather than wade through database
+exchange schema.
+
+Lastly, Mary Barkworth alludes to the problem of data availability.
+ITIS and GenBank make all their data available by FTP, which is one
+reason why these databases are widely used in efforts to build name
+databases (ITIS is used by Species 2000, GBIF, SEEK, etc.). Other
+databases, such as IPNI which permit only a name (or a few) at a time
+are frustrating to use, and hence don't feature much in large scale
+efforts. Databases such as IPNI would be vastly more useful if their
+content was available for bulk downloading.
+
+There is a useful discussion of database interoperability in the
+&quot;Report from the NIH/NIAID/Wellcome Trust Workshop on Model Organism
+Databases&quot; (<A HREF="http://www.genome.gov/10006356">http://www.genome.gov/10006356</A> ). FTP and &quot;screen
+scrapping&quot;, which pretty much where we are at now, is listed as the
+worst level of interoperability (and we're lucky if we have FTP
+access. (I should mention that uBio and GenBank provide SOAP access).
+
+To make the vision happen we need compelling, practical examples of
+useful tools.
+
+Regards
+
+
+Rod
+
+
+
+--
+--------------------------------------------------------
+Professor Roderic D. M. Page
+Editor Elect, Systematic Biology
+DEEB, IBLS
+Graham Kerr Building
+University of Glasgow
+Glasgow G12 8QP
+United Kingdom
+
+
+Phone:    +44 141 330 4778
+Fax:      +44 141 330 2792
+email:    r.page at bio.gla.ac.uk
+web:      <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+reprints: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/pubs.html">http://taxonomy.zoology.gla.ac.uk/rod/pubs.html</A>
+
+Subscribe to Systematic Biology through the Society of Systematic
+Biologists Website:  <A HREF="http://systematicbiology.org">http://systematicbiology.org</A>
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="092213.html">ITIS (an explanation of GBIF's data integration activities)
+</A></li>
+        <LI>Next message: <A HREF="092218.html">ITIS (an explanation of GBIF's data integration activities)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092214">[ date ]</a>
+              <a href="thread.html#092214">[ thread ]</a>
+              <a href="subject.html#092214">[ subject ]</a>
+              <a href="author.html#092214">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

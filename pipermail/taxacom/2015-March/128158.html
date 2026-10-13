@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Identification key software
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Identification%20key%20software&In-Reply-To=%3C55057534.2020000%40netspeed.com.au%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="128150.html">
+   <LINK REL="Next"  HREF="080779.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2015-March/128158.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Identification key software</H1>
+    <B data-pagefind-meta="author">Mike Dallwitz</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Identification%20key%20software&In-Reply-To=%3C55057534.2020000%40netspeed.com.au%3E"
+       TITLE="[Taxacom] Identification key software">m.j.dallwitz at netspeed.com.au
+       </A><BR>
+    <I data-pagefind-meta="date">Sun Mar 15 07:04:04 CDT 2015</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="128150.html">[Taxacom] Identification key software
+</A></li>
+        <LI>Next message: <A HREF="080779.html">[Taxacom] Taxacom Digest, Vol 108, Issue 5
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#128158">[ date ]</a>
+              <a href="thread.html#128158">[ thread ]</a>
+              <a href="subject.html#128158">[ subject ]</a>
+              <a href="author.html#128158">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2015</span><!--beginarticle-->
+<PRE>- From: Fabio Moretzsohn
+- To: Taxacom
+
+&gt;<i> I would like to hear from people who have experience using Lucid Key or similar software to produce identification keys.
+</I>
+There are some relevant links at 'Methodology of Interactive Keys and 
+Descriptive Databases' (<A HREF="http://delta-intkey.com/www/methodology.htm">http://delta-intkey.com/www/methodology.htm</A>), 
+including 'Comparison of interactive identification programs' and 
+'Principles of interactive keys'.
+
+'Comparison of interactive identification programs' 
+(<A HREF="http://delta-intkey.com/www/comparison.htm">http://delta-intkey.com/www/comparison.htm</A>) was written in 2000, but the 
+programs described haven't changed much in their important features since 
+that date. Also, the comparison criteria could be applied to any other 
+programs that you're evaluating.
+
+I'd like to update this publication to include later versions of the 
+programs, and other programs such as 3I and Xper2 that weren't around when 
+I did the original comparison. I'm reluctant to attempt this until there 
+is a reasonably good SDD-DELTA translator in both directions. This would 
+make comparison much easier, as the programs could be tested with the same 
+data.
+
+An SDD-DELTA translator would also facilitate comparison of the 
+capabilities of the data formats themselves.
+
+At <A HREF="http://delta-intkey.com/www/data.htm">http://delta-intkey.com/www/data.htm</A> there are packages in which the 
+same data are used with different interactive-key programs. 'British 
+ferns' (<A HREF="http://delta-intkey.com/britfe/index.htm">http://delta-intkey.com/britfe/index.htm</A>) uses Intkey and NaviKey; 
+'Fruit fly pests of the world' (<A HREF="http://delta-intkey.com/ffa/index.htm">http://delta-intkey.com/ffa/index.htm</A>) 
+uses Intkey, Lucid2, and Lucid3; and 'Anastrepha and Toxotrypana' 
+(<A HREF="http://delta-intkey.com/anatox/intro.htm">http://delta-intkey.com/anatox/intro.htm</A>) uses Intkey and Lucid3.
+
+'Principles of Interactive Keys' 
+(<A HREF="http://delta-intkey.com/www/interactivekeys.htm">http://delta-intkey.com/www/interactivekeys.htm</A>) contains a small section 
+on 'History of interactive keys', with a table showing when various 
+important features of interactive keys were introduced. It's surprising 
+how many recent programs lack many of these features. As I said in a 
+review of a paper describing one such program:
+
+&quot;It's a very primitive program, and it's essential to discuss this in the 
+paper. Does it have /any/ features that are an improvement over other 
+programs? /If/ it does, it must be explained to potential users that the 
+program is, at present, just a test bed for these features, and shouldn't 
+be used as a serious identification tool, because of the many other 
+important features that it lacks - some of which were available in Goodall 
+(1968) and Morse (1971).&quot;
+
+
+- From: Timothy Jones
+- To: Taxacom
+
+&gt;<i> If I had to write an interactive key today I would use Lucid or Excel as my manager
+</I>
+A good special-purpose editor (such as the Lucid Builder or the DELTA 
+Editor) will have better facilities than Excel for entering descriptive data.
+
+&gt;<i> easy to check both positive and negative dependency issues with Lucid
+</I>
+The Lucid Builder (V3.5.3) doesn't enforce character dependencies. For 
+example, it's possible to record a taxon with 'wings absent, wings blue'. 
+To avoid confusion, it would be better if Lucid used a different word for 
+its 'dependencies'. A large dataset will typically contain hundreds of 
+dependency errors if dependencies haven't been enforced during its 
+construction.
+
+
+I've posted this on both Taxacom and DELTA-L 
+(<A HREF="http://delta-intkey.com/www/delta-l.htm">http://delta-intkey.com/www/delta-l.htm</A>). The latter might be more 
+appropriate for any further discussion of technical details.
+
+-- 
+Mike Dallwitz
+Contact information: <A HREF="http://delta-intkey.com/contact/dallwitz.htm">http://delta-intkey.com/contact/dallwitz.htm</A>
+DELTA home page: <A HREF="http://delta-intkey.com">http://delta-intkey.com</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="128150.html">[Taxacom] Identification key software
+</A></li>
+	<LI>Next message: <A HREF="080779.html">[Taxacom] Taxacom Digest, Vol 108, Issue 5
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#128158">[ date ]</a>
+              <a href="thread.html#128158">[ thread ]</a>
+              <a href="subject.html#128158">[ subject ]</a>
+              <a href="author.html#128158">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

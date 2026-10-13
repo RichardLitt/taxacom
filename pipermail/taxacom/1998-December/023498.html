@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> data sharing
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20data%20sharing&In-Reply-To=%3Cmailman.9926.1157126736.2564.taxacom%40mailman.nhm.ku.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="106688.html">
+   <LINK REL="Next"  HREF="059290.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1998-December/023498.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">data sharing</H1>
+    <B data-pagefind-meta="author">Dave Vieglais</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20data%20sharing&In-Reply-To=%3Cmailman.9926.1157126736.2564.taxacom%40mailman.nhm.ku.edu%3E"
+       TITLE="data sharing">vieglais at UKANS.EDU
+       </A><BR>
+    <I data-pagefind-meta="date">Thu Dec 10 07:11:33 CST 1998</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="106688.html">museum designations
+</A></li>
+        <LI>Next message: <A HREF="059290.html">data sharing
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#23498">[ date ]</a>
+              <a href="thread.html#23498">[ thread ]</a>
+              <a href="subject.html#23498">[ subject ]</a>
+              <a href="author.html#23498">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>1998</span><!--beginarticle-->
+<PRE>Coments interspersed below:
+
+&gt;<i> -----Original Message-----
+</I>&gt;<i> From: Biological Systematics Discussion List
+</I>&gt;<i> [mailto:<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">TAXACOM at cmsa.Berkeley.EDU</A>]On Behalf Of Hugh Wilson
+</I>&gt;<i> Sent: Tuesday, December 08, 1998 11:04 AM
+</I>&gt;<i> To: Multiple recipients of list TAXACOM
+</I>&gt;<i> Subject: Re: data sharing
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On  7 Dec 98 at 12:17, Stan Blum &lt;<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">sblum at CALACADEMY.ORG</A>&gt; wrote:
+</I>&gt;<i>
+</I>&gt;<i> &gt; Alta-Vista and the other Web crawling-indexing have absolutely
+</I>&gt;<i> nothing to
+</I>&gt;<i> &gt; do with the argument.....
+</I>&gt;<i>
+</I>&gt;<i> aside from demonstrating fast web access to a large mass of info and
+</I>&gt;<i> great success in terms of simple utility.  While the need to 'cull'
+</I>&gt;<i> from indexed returns will probably always be part of the game, the
+</I>&gt;<i> trick - which needs more research - is to create, from traditional
+</I>&gt;<i> databases, 'clean' text files for use as base indices.
+</I>
+Yes, certainly these text search engines are fast, and they work nicely for
+large amounts of unstructured textual information.  But I doubt any of the
+developers of thse search engines would suggest using them for ordered
+access to structured data (certainly their marketing folks might have
+another opinion), and would probably be amused at the suggestion.  The
+reason is quite simple- by exporting to a text file, and providing access
+via web search engines, you are effectively creating a new DBMS, albeit one
+of very much reduced functionality.  You lose all the functionality for
+fielded searching, and lose control over the format of information that
+might be returned from the search.  You are also creating a new headache for
+yourself in maintaining more than a single operational copy of your database
+(exporting the data to another format is essentially the same as creating a
+replica).
+
+Obviously, it would be better to treat remote queries on the database
+essentially the same as local queries, with no loss of functionality.  And
+then to retrieve strutured information in response to a query would provide
+the opportunity of using that information directly rather than just staring
+at it in a web browser.
+
+Certainly it is possible to provide this functionality through a web search
+engine type of interface, however there is a lot of functionality that needs
+to be built to provide this sort of mechanism.  Why not just use one of the
+systems already available for handling access to distributed information
+systems?
+
+&gt;<i> &gt;
+</I>&gt;<i> &gt; Full-text indexing has well known limitations....
+</I>&gt;<i>
+</I>&gt;<i> and very conspicuous advantages, which include minimal processing
+</I>&gt;<i> between query and return and the ability to work with text files that
+</I>&gt;<i> can be generated by any user from any development system.
+</I>
+Processing time is not typically an issue with properly setup DBMS systems.
+Certainly, text searching will usually be faster, but at the loss of a
+tremendous amount of functionality.  And yes, text files can be generated
+from any development system, but in doing so, it is widely recognized that
+information loss is inevitable.
+
+&gt;<i>
+</I>&gt;<i> &gt; &gt;Since this involves
+</I>&gt;<i> &gt; &gt;machine-to-machine interactions that must be conducted across a
+</I>&gt;<i> &gt; &gt;network that is becoming more congested every day, one wonders if
+</I>&gt;<i> &gt; &gt;this potential solution - which certainly appears to be popular with
+</I>&gt;<i> &gt; &gt;the U.S. Federal Government (NBII, ITIS, NSF, etc.) will function to
+</I>&gt;<i> &gt; &gt;link data resources (biodiversity collections) that differ, in many
+</I>&gt;<i> &gt; &gt;fundamental ways, from the established model (libraries).
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; The bandwidth arguments are irrelevant.  People doing
+</I>&gt;<i> distributed searches
+</I>&gt;<i> &gt; for biological specimen data aren't going to have a serious
+</I>&gt;<i> impact on net
+</I>&gt;<i> &gt; traffic; certainly nothing like streaming video, which is the kind of
+</I>&gt;<i> &gt; capacity the telecommunications companies are planning for.
+</I>&gt;<i>
+</I>&gt;<i> Am not worried about searches, evidently via local PC nodes, slowing
+</I>&gt;<i> down the network.  My point was that the act of searching will be
+</I>&gt;<i> *slow*, i.e., lots of lag between query and response.
+</I>
+How much lag time is there currently between a request for information about
+a specimen from an arbitrarily selected collection?  Query response should
+not be slow in a properly setup database system (be it based on a text
+search engine or a real DBMS).  Personally I wouldn't mind waiting a few
+seconds for the information to flow straight into my spreadsheet or GIS app
+or whatever in a nice orderly fashion, rather than having to cut and paste
+oddly formatted lumps out of my web browser screen (with the associated risk
+of messing things up).
+
+
+regards,
+  Dave V.
+
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="106688.html">museum designations
+</A></li>
+	<LI>Next message: <A HREF="059290.html">data sharing
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#23498">[ date ]</a>
+              <a href="thread.html#23498">[ thread ]</a>
+              <a href="subject.html#23498">[ subject ]</a>
+              <a href="author.html#23498">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

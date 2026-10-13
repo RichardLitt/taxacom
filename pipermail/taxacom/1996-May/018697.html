@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Geocoding Localities
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1996-May/018697.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Geocoding Localities</H1>
+    <B data-pagefind-meta="author">Melissa C. Winans</B>
+    mcwinans at MAIL.UTEXAS.EDU<BR>
+    <I data-pagefind-meta="date">Tue May 21 12:24:00 CDT 1996</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="101852.html">UCMP data model
+</A></li>
+        <LI>Next message: <A HREF="054489.html">Geocoding Localities
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#018697">[ date ]</a>
+              <a href="thread.html#018697">[ thread ]</a>
+              <a href="subject.html#018697">[ subject ]</a>
+              <a href="author.html#018697">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1996</span><!--beginarticle-->
+<PRE>At 12:02 PM 5/20/96 EDT, you wrote:
+&gt;I am working on a geocoding project at USNM. We are in the process of
+&gt;working up protocols for enhancing specimen locality data by attaching
+&gt;latitude and longitude. The goal is to be able to use these data in GIS
+&gt;applications to look at everything from change over time to species
+&gt;distribution. I'm looking for feedback from other collections that may
+&gt;have done this or thought about it and other members of the community
+&gt;that may have thoughts and ideas. One of my concerns is augmenting
+&gt;imprecise localities with very precise lat/longs. We want this data to
+&gt;be meaningful and mappable but we do not want to imply more precision
+&gt;than we really have. Please email me with your comments at
+&gt;cvanhils at sivm.si.edu.
+
+I agree with you that the precision of your data is a serious issue, and
+that it is important to do something to inform the user of differences in
+precision from site to site.  We had to deal with the same question when we
+set up a GIS for our fossil specimen sites about 4 years ago; some sites
+(especially the ones from the late 1800's and early 1900's) could not be
+spotted precisely due to inadequate data, and others covered a large enough
+area that it was not possible to represent them with a single point at the
+1:24,000 map resolution we were using.  We solved this by doing three
+things:  1) We marked sites that were too large to represent as a single
+point with polygons outlining the extent of the site; 2) for sites where the
+location was uncertain, but an educated guess could be made, we outlined the
+most probable area and digitized that as a polygon; 3) we attached an
+attribute to each point or polygon indicating the degree of reliability of
+the plotting on a 5-step scale ranging from &quot;Exact&quot; at the top to &quot;Wild
+guess&quot; at the bottom.
+
+This still leaves you with the question of what to do about coordinates for
+the sites that can't be represented as points.  Depending on how you do your
+distribution analyses, you still may have to represent the large or
+uncertain sites by a single coordinate pair (probably the centroid of the
+polygon), but if your GIS attribute tables have a reliability attribute you
+at least will be able to take whatever steps seem to be called for to
+indicate the degree of certainty of each location.
+****************************************************************
+Melissa C. Winans, Collection Manager (mcwinans at mail.utexas.edu)
+Vertebrate Paleontology Laboratory      Phone: 512-471-6087
+J.J. Pickle Research Campus               Fax: 512-471-5973
+University of Texas, Austin, TX 78712
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="101852.html">UCMP data model
+</A></li>
+        <LI>Next message: <A HREF="054489.html">Geocoding Localities
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#018697">[ date ]</a>
+              <a href="thread.html#018697">[ thread ]</a>
+              <a href="subject.html#018697">[ subject ]</a>
+              <a href="author.html#018697">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

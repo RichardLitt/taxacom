@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Language tags for scientific names
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2008-June/110590.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Language tags for scientific names</H1>
+    <B data-pagefind-meta="author">Andy Mabbett</B>
+    andy at pigsonthewing.org.uk<BR>
+    <I data-pagefind-meta="date">Thu Jun 26 14:07:22 CDT 2008</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="110589.html">[Taxacom] POLIBOTANICA, New number(25), June 2008
+</A></li>
+        <LI>Next message: <A HREF="110591.html">[Taxacom] Wrongly named by scientists
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#110590">[ date ]</a>
+              <a href="thread.html#110590">[ thread ]</a>
+              <a href="subject.html#110590">[ subject ]</a>
+              <a href="author.html#110590">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2008</span><!--beginarticle-->
+<PRE>In message
+&lt;5ebbead70806260533h3b6afe8ai11cd1d387549a7b5 at mail.gmail.com&gt;, Gregor
+Hagedorn &lt;g.m.hagedorn at gmail.com&gt; writes
+
+&gt;Scientific names not only occur as labels of an
+&gt;object, but also in comments and other free-form text. Most projects
+&gt;devise special markup for these, but we believe that many more
+&gt;purposes can be served (including when using scientific names in
+&gt;DublinCore based metadata schema) if a language tag were available. In
+&gt;practice &quot;la&quot; for latin is frequently abused for this purpose, but a
+&gt;more precise and correct tag seems desirable.
+
+I agree. Thank you for re-raising the issue.
+
+&gt;In general, it seems desirable to have a generic form as well as forms
+&gt;specific to the codes of nomenclature (BC, ICVCN, ICBN, ICNCP, ICZN).
+
+What is your reasoning for this (especially given that it would be
+desirable for the new code(s) to be usable by non-taxonomists, who may
+not be familiar with such bodies)?
+
+I think the relevant authorities are more likely to be persuaded to
+allow a single code, than a set.
+
+&gt;The name for the generic form is perhaps most difficult to agree, my
+&gt;proposal would be to use TAX (for taxonomic community), but I welcome
+&gt;other proposals.
+
+So long as nothing ridiculous is proposed, the actual term used is not
+as important as the need to have one in the first place, That said, we
+need to encourage understanding amongst people who speak many languages,
+and perhaps not English. Possibilities might include:
+
+        TAX     Taxonomy
+        BIO     Biology (or BLG, BLY, BGY)
+        BTA     Biota (or BIA, BOA)
+        SCI     Scientific name
+        LIN     Linnaean
+
+Two letter equivalents might be needed; BT and TX are available, for
+instance, but these are not: BI, BO, SC, SI, LI, LN, TA. All the above
+three-letter options are free (per
+&lt;<A HREF="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes</A>&gt;).
+
+&gt;Available options for denoting scientific names using standard
+&gt;xml:lang or html:lang attributes are thus:
+&gt;
+&gt;* Register a new basic language code like sc / stn (scientific taxon name)
+&gt;** Such a proposal was made in 2003 by Andy Mabbett
+&gt;   (see <A HREF="http://www.alvestrand.no/pipermail/ietf-languages/2003-February">http://www.alvestrand.no/pipermail/ietf-languages/2003-February</A>
+&gt;/000576.html)
+&gt;   and refuted on reasons that do not convince me.
+
+Nor me!
+
+Perhaps we should return there? It might be that my proposal suffered by
+being made from an amateur (not that that's bad thing!) individual,
+rather than someone - or a group - with the backing of an organisation
+or academic institution(s). Also, personal circumstances meant that I
+was unfortunately unable to participate in the cited debate, which
+followed my initial proposal.
+
+Though that debate discussed pronunciation, the issue of translation is
+more crucial (&quot;Circus cyaneus&quot; in an English page should not be
+translated to &quot;Zirkus cyaneus&quot; if the page is translated into German!).
+
+&gt;** Example name codes: sc-TAX, sc-ICVCN, sc-BC, sc-ICZN
+
+The first of those is redundant, but the others are good, if ether must
+be multiple codes, because publishers and parsers which do not
+understand the sub-codes fall back to a taxonomy-specific parent (&quot;sc&quot;).
+
+&gt;* Use zxx- for &quot;non-language dependent&quot;
+&gt;** Example name codes: zxx-TAX, zxx-ICVCN, zxx-BC, zxx-ICZN
+&gt;
+&gt;* Use x- for &quot;experimental or extension range&quot; (IETF only)
+&gt;** Example name codes: x-TAX, x-ICVCN, x-BC, x-ICZN
+
+I don't think those are as good as the first option, if there is more
+than one code, because they do not fall back to a common
+taxonomy-specific parent (which is &quot;sc&quot; in your above example).
+
+&gt;My preference would be to use the zxx- range because it probably
+&gt;informs processors not knowing the specific codes best how to handle
+&gt;this information (i.e. that it would be appropriate in any linguistic
+&gt;context).
+
+That's a fair point, if there's only one taxonomic sub-code (&quot;zxx-TAX&quot;,
+say); but otherwise means that &quot;zxx-ICVCN&quot; is not a child of &quot;zxx-TAX&quot;.
+
+&gt;I look forward for a good discussion, including the pointer to where
+&gt;someone else has already solved the problem and I have not found it
+
+Another option is to retain the Latin code as a fallback, but with a
+taxonomy sub-code (&quot;la-TAX&quot;). I see this as less desirable, but perhaps
+more easily achieved. Again, one issue would be that &quot;la-ICVCN&quot; is not a
+child of &quot;la-TAX&quot;.
+
+
+You might also be interested in the draft &quot;Species&quot; microformat:
+
+        &lt;<A HREF="http://microformats.org/wiki/species">http://microformats.org/wiki/species</A>&gt;
+
+that offers an alternative method for marking up (X)HTML content so as
+to indicate which parts are taxonomic names:
+
+        &lt;p&gt;Yesterday, I saw a
+        &lt;span class=&quot;biota&quot;&gt;
+        &lt;span class=&quot;vernacular&quot;&gt;House sparrow&lt;/span&gt;
+        (&lt;i class=&quot;binominal&quot;&gt;Passer domesticus&lt;/i&gt;)
+        &lt;/span&gt;.
+        &lt;/p&gt;
+
+Of course, the microformat could be used in conjunction with a language
+attribute:
+
+        &lt;p&gt;Yesterday, I saw a
+        &lt;span class=&quot;biota&quot;&gt;
+        &lt;span class=&quot;vernacular&quot;&gt;House sparrow&lt;/span&gt;
+        (&lt;i class=&quot;binominal&quot; lang=&quot;SC&quot;&gt;Passer domesticus&lt;/i&gt;)
+        &lt;/span&gt;.
+        &lt;/p&gt;
+
+Much work remains to be done to develop that microformat, but the draft
+is already widely used on Wikipedia.
+
+
+Please let me know if I can assist further.
+
+-- 
+Andy Mabbett
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="110589.html">[Taxacom] POLIBOTANICA, New number(25), June 2008
+</A></li>
+        <LI>Next message: <A HREF="110591.html">[Taxacom] Wrongly named by scientists
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#110590">[ date ]</a>
+              <a href="thread.html#110590">[ thread ]</a>
+              <a href="subject.html#110590">[ subject ]</a>
+              <a href="author.html#110590">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

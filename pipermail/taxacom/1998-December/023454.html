@@ -1,0 +1,374 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> data sharing - an unauthorized TNC response
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20data%20sharing%20-%20an%20unauthorized%20TNC%20response&In-Reply-To=%3Cmailman.9882.1157126735.2564.taxacom%40mailman.nhm.ku.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="059247.html">
+   <LINK REL="Next"  HREF="059246.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1998-December/023454.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">data sharing - an unauthorized TNC response</H1>
+    <B data-pagefind-meta="author">John Shuey</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20data%20sharing%20-%20an%20unauthorized%20TNC%20response&In-Reply-To=%3Cmailman.9882.1157126735.2564.taxacom%40mailman.nhm.ku.edu%3E"
+       TITLE="data sharing - an unauthorized TNC response">Shueyi at AOL.COM
+       </A><BR>
+    <I data-pagefind-meta="date">Mon Dec  7 17:19:39 CST 1998</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="059247.html">data sharing
+</A></li>
+        <LI>Next message: <A HREF="059246.html">data sharing - an unauthorized TNC response
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#23454">[ date ]</a>
+              <a href="thread.html#23454">[ thread ]</a>
+              <a href="subject.html#23454">[ subject ]</a>
+              <a href="author.html#23454">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>1998</span><!--beginarticle-->
+<PRE>In this thread, I noted that someone, way back, asked what TNC uses to track
+conservation targets, how we handle audit trails and so on.  I apologize for
+the length of this post, but I can't really convey our data tracking system
+simply.
+
+ We use an in-house database called Biological Conservation Database (BCD),
+which is managed in conjunction state and country natural heritage programs.
+Our answer is not simple, and I'm an end-user, not a database manager, so I
+don't claim to understand the nuances.  But it works, and this system is
+driving some of the most detailed conservation planning in the world at the
+moment.  I've included some www links if you want insights into how the data
+is used for conservation.
+
+BCD is a unique database designed exclusively to support conservation decision
+making and implementation - it is GIS linked for geographic analysis.  It is
+not a system for casual use, and in fact it isn't user friendly.  But it
+includes hundreds-of-thousands of entries, and extensive audit controls for
+each and every aspect of the data from the taxonomy itself, to the
+authenticity and accuracy of the data, and including audit trails for such
+routine tasks as data maintenance.  Because of the nature of our business, the
+audit trail is a must. Last year alone, TNC spent $500M on conservation in the
+areas where we work (N-S America and the south Pacific).  You have to have
+absolute confidence in your information to &quot;risk&quot; that level of funding - and
+essentially we don't risk anything to poor-quality data.
+
+BCD is an array of about 15 linked databases to track our work.  Here is a
+very brief overview of the three databases that seem most relevant to the
+ongoing discussion. Note that these databases are VERY cross-linked, so that
+the number of data fields per database is somewhat high - also note that for
+many records, blank data fields are the norm:
+
+Element Tracking Record (ETR)- a database of 71 fields that tracks the
+taxonomy  (including synonyms), classification, global and state conservation
+status, regulatory lead agency (for endangered species), etc. with 10 optional
+comment fields.  Essentially this is an authoritative treatment of what this
+species/community is, including references and nomenclatural history.
+
+Element Occurrence Record (EOR)- about 70 data fields which place a particular
+conservation target (as defined in the ETR) at a particular site.  Included
+are fields for geographic location and precision (21 fields total), record
+info (similar to traditional herbarium data or label data - but with detailed
+observations on numbers seen in the field, habitat, breeding status, and so on
+if this is a field observation, and repository info if it is a specimen based
+record), status (first observation, last observation, observer name, etc), and
+then cross linked data fields to the site basic record which provide ownership
+info, protection status, management info, site threats, etc.  Of particular
+interest to this discussion are the Documentation fields, which reference the
+best source of information about this occurrences, date of initial data entry,
+who entered the data on paper, who mapped the data on paper, who transcribed
+this data to the database, and a complete maintenance history of this data
+record, including specific notes to what changes where made, why, when, and by
+whom.
+
+Site Basic Record (SBR)- this is essentially a description of sites with high
+conservation value.  The data consists of much crosslinked data from other
+sources.  Included in the 80 data fields are an array of site locators,
+habitat descriptions, landuse history, site significance, site planning status
+for active conservation sites, ownership by tracts, site size, site threats,
+management needs, rare species (linked to above), and more. Again, audit
+trails are featured throughout the data. The SBR is usually used to group EOR
+data to identify conservation targets at particular conservation sites.
+
+What Species are tracked?  Actually more than species - Element Records (EOs)
+include species/subspecies/unique populations targets as well as community
+targets.  Because the primary use of these data are for conservation, the
+emphasis is on imperiled species and on high-quality Communities.   At the
+species level, the data have a strong bias towards vascular plants and
+terrestrial vertebrates.  But unionid mussels, crayfish and fishes are rapidly
+catching up, as are selected insects, other invertebrates and non-vascular
+plants.   In practice BCD will be limited to well known groups, where
+inventory offers the real insights into relative rarity.
+        All community types are tracked in BCD.  TNC and the heritage programs have
+developed a National (US) classification system for terrestrial plant
+communities, and we are working a similar system for aquatic and subterranean
+communities.
+
+Where does the data come from?  Many places.  Historical data is derived from
+wherever you can get it, but always the preference is from the actual
+vouchers.  I'm sure that almost all-major herbaria have been visited by
+heritage biologists.  But because our focus is conservation, the vast majority
+of the records are recent, based on field observations by heritage/TNC
+biologists or specimen records from the same group.  Old literature/museum
+records are often the starting-point for efforts to relocate extant
+populations of imperiled species and their supporting habitats. One of the key
+points to make here is that no data is included without authentication by an
+&quot;expert&quot; of record.  In other words, an on-line data base from say the Generic
+State Herbarium would not simply be swallowed up into BCD.  Each record would
+need to be authenticated before inclusion - this might be done in cooperation
+with herbarium staff, such that they would verify that they authenticated each
+and every ID, or a heritage botanist would do it the old fashion way.  The key
+here is that you have to be sure that you are not simply incorporation
+misidentified records at typed into a computer by a work-study student.
+
+
+How is data shared?  With caution.  Because a single database system (BCD) is
+used by all but one heritage program in the world - data sharing between
+programs and with TNC is very easy.  There are standardized procedures for
+keeping the &quot;master file&quot; at TNC headquarters current.  But because almost all
+the species tracked are uncommon to outright rare - the data is confidential,
+and is not available to the general public, research community, etc, with a
+valid end use.  In other words, if you have a legitimate use for data, you can
+get the data that are relevant.  But you will not be getting a data dump of a
+few thousand misc. records, never - ever (keep in mind that these data are
+intended to be used for guiding conservation - and as such include very
+accurate descriptions of locality, usually such that you can walk directly to
+a population of plants in the field based on the database printout alone).  I
+have heard rumors that Lat/Long will be &quot;fuzzed&quot; a bit in the near future such
+that parts of the data can be moved to the Internet for online queries of
+elements and for soft GIS display.
+
+Hope this helps,
+John Shuey
+Dir Conservation Science
+Indiana Office of The Nature Conservancy
+_______________________
+Links to the Heritage Network
+<A HREF="http://www.heritage.tnc.org/nhp/nhpovv2.html">http://www.heritage.tnc.org/nhp/nhpovv2.html</A>   --Natural Heritage Network
+Overview and Evolution
+
+<A HREF="http://www.heritage.tnc.org/nhp/us/hi/sample.htm">http://www.heritage.tnc.org/nhp/us/hi/sample.htm</A> -- A Sample of Heritage Rare
+Taxon Information  -- This simplified presentation details about half of the
+data fields in Element Record Occurrence database - which is the database most
+similar to the discussion tread.
+
+<A HREF="http://www.consci.tnc.org/library/index.html">http://www.consci.tnc.org/library/index.html</A>  - includes REAL online
+publications derived from Heritage data for the US -  I recommend a scan of
+the Annual Report Cards (which detail the status of  the US Biota) as well
+Rivers of Life which makes a very strong case for expedited aquatic
+conservation efforts in the western hemisphere.
+
+
+__________________
+Here is some CANNED text re/ the data tracking system.
+AN Overview: the Natural Heritage Central Databases and the Biological and
+Conservation
+Data System
+
+The Natural Heritage Central Databases (NHCD)*
+
+     From humble beginnings, the Natural Heritage Central Databases (NHCD)
+have
+     evolved into an important biodiversity conservation tool which
+increasingly serve not
+     just the Conservancy and Heritage Network, but a growing number of
+federal and
+     international agencies and others in need of accurate and comprehensive
+     conservation information at a multi-jurisdictional level.
+
+     For many thousands of species the central databases summarize information
+on
+     taxonomy, distribution, conservation and legal status, habitat, and life
+history. With
+     new data being added every day, the central databases currently contain
+summary
+     information on all U.S. and Canadian vertebrate and selected invertebrate
+species
+     (e.g., crayfishes, mussels, several orders and families of insects); all
+U.S. and
+     Canadian vascular plant species, subspecies, and varieties; many
+thousands of North
+     American non-vascular plants and other invertebrate animals; and most
+mammals,
+     birds, reptiles, and amphibians of Latin America. As a result of regular
+review of
+     more than 70 zoological journals as well as many monographs and other
+sources,
+     particularly detailed information on the distribution and ecology of all
+North
+     American vertebrate species is recorded in the databases. In addition, we
+are
+     beginning to standardize natural community information for the United
+States in
+     preparation for including terrestrial communities, and ultimately aquatic
+communities,
+     in the NHCD.
+
+     A major collaborative effort, the central databases represent the
+collective work of
+     Conservancy staff and independent heritage data centers in all 50 U.S.
+states, 6
+     Canadian provinces, and 13 Latin American and Caribbean nations. Many
+other
+     collaborators also have generously contributed expertise and information.
+Federal
+     and state agencies, other conservation organizations, and educational and
+research
+     institutions all have played key roles in developing conservation data
+contained within
+     the NHCD. Noteworthy among the latter are the North Carolina Botanical
+Garden,
+     the Missouri Botanical Garden, the Smithsonian Institution, the American
+     Ornithologists' Union, and the American Fisheries Society.
+
+     The need to gather and record information that applies to a species or a
+community
+     throughout its range and the advent of our conservation status ranking
+system, which
+     requires an assessment of status in every jurisdiction where a species or
+community
+     occurs, resulted in the demand to centrally record and exchange
+information. These
+     needs, together with the availability of increasingly powerful computer
+database
+     systems, provided the catalyst to create the NHCD. A regular process of
+data
+     exchange between individual data centers and the NHCD was established-to
+     download rangewide information to local jurisdictions to inform local
+conservation
+     decision-making, and to upload local status information to inform global
+and national
+     conservation status assessments. These exchanges have had an added
+benefit:
+     quality control. Each data exchange includes a rigorous process of data
+review and
+     reconciliation that strengthens both the NHCD and the databases of the
+individual
+     data center.
+
+     Even with the great amount of data the NHCD already contain, there are
+still
+     significant data gaps that will require a concerted effort to fill.
+Developing the best
+     possible conservation databases must be a collaborative effort in which
+all users of
+     the databases both participate and benefit. We ask users of the NHCD to
+review
+     existing information in the databases for possible errors or omissions,
+and to send us
+     useful unpublished reports so that their information can be evaluated for
+possible
+     incorporation into the NHCD.
+
+     *The Natural Heritage Central Databases (NHCD) refers to the aggregate
+set of
+     conservation data housed in the Biological Conservation Data (BCD)
+System. This
+     data is developed and maintained by TNC and the Heritage Network.
+
+The Biodiversity Conservation Data System (BCD)*
+
+     Good conservation depends on good information! The Biological and
+Conservation
+     Data (BCD) System is a powerful information management tool designed to
+help
+     users answer key questions related to biodiversity conservation.
+Developed and
+     supported by The Nature Conservancy, BCD represents more than twenty
+years of
+     experience in designing and implementing computer applications for
+biodiversity
+     information management. With linked applications in biological and
+ecological
+     inventory, land protection and management, and general administration,
+the BCD
+     System offers a fully integrated approach to biodiversity conservation.
+
+     The BCD, in addition to being a data management system, is an electronic
+     expression of the methodology utilized by TNC and the Heritage Network.
+Because
+     the BCD System represents a standardized and integrated approach to
+biological
+     inventory, land protection, and stewardship, it is possible to establish
+operational
+     continuity in different offices and over different time periods. The
+common
+     vocabulary provided by BCD fosters multi-institutional cooperation and
+efficient
+     data exchange. The BCD System unites the work of many individuals and
+institutions
+     throughout the western hemisphere, and documents their combined knowledge
+in an
+     organized and accessible manner.
+
+     The BCD System is built upon a set of standard fields and files. These
+are the basic
+     structures which make it possible for different offices and data centers
+in different
+     parts of the world to collect, exchange, and disseminate information. By
+establishing
+     this set of standard data fields and files, the BCD System helps to
+promote a
+     common vocabulary that unites people and purposes.
+
+     In addition, the BCD System is constantly evolving. Only through constant
+     improvements and enhancements can it keep pace with a growing set of
+information
+     needs. With each new edition of the BCD System, changes are made and new
+     features added. In order to provide an efficient, orderly process for the
+best logical
+     design and the most coherent evolution of the BCD System, the
+Conservancy's
+     Center for Conservation Engineering (CIEC) establishes data and
+methodological
+     standards and develops conceptual models for conservation information
+     management.
+
+     The power of the BCD System lies with the users of the system and the
+data.
+     Changes and events in the real world may quickly out pace the currency of
+     information in the System unless staff resources are devoted to its
+maintenance.
+     Investing the time and resources to maintain good data may seem an
+onerous
+     burden. Doing so however, will ensure the maximum benefit of good
+conservation
+     that comes with good information.
+
+     * The Biological and Conservation Data (BCD) System software and
+     documentation are copyrighted products of The Nature Conservancy.
+
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="059247.html">data sharing
+</A></li>
+	<LI>Next message: <A HREF="059246.html">data sharing - an unauthorized TNC response
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#23454">[ date ]</a>
+              <a href="thread.html#23454">[ thread ]</a>
+              <a href="subject.html#23454">[ subject ]</a>
+              <a href="author.html#23454">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

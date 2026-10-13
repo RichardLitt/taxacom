@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> INTKEY SET MATCH bug/undocumented behavior
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2001-October/086879.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">INTKEY SET MATCH bug/undocumented behavior</H1>
+    <B data-pagefind-meta="author">Joseph H. Kirkbride, Jr.</B>
+    jkirkbri at ASRR.ARSUSDA.GOV<BR>
+    <I data-pagefind-meta="date">Wed Oct 24 11:47:01 CDT 2001</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="086877.html">Student Assistantship
+</A></li>
+        <LI>Next message: <A HREF="086878.html">Position announcement in MNHN, Paris
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#086879">[ date ]</a>
+              <a href="thread.html#086879">[ thread ]</a>
+              <a href="subject.html#086879">[ subject ]</a>
+              <a href="author.html#086879">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2001</span><!--beginarticle-->
+<PRE>Since no one else has commented on Una's e-mail, I will take a crack at
+it.  I do not think that what happened when Una used SET MATCH U E or
+SET MATCH I E versus SET MATCH E U or SET MATCH E I is a bug in the
+program.  In the INTKEY documentation, it states, &quot;SET MATCH E specifies
+that two sets of values match only if they are identical.&quot;  For example,
+if you want to know which taxa have only character state 1 of character 6
+(6,1), then INTKEY will have remaining the taxa with 6,1 and NOT those
+taxa with 6,1/2 or 6,2 or with 6 uncoded (unknown) or coded U, V, or -.
+An exact match means that you are looking for the taxa coded in a
+particular way.  It is illogical to look for the taxa coded only and
+exactly for character state 1 of character 6 AND for the taxa uncode for
+character 6.
+
+I assumed that the use of E with SET MATCH caused I U S O to be turned off
+for logical reasons and the use of I U S O causes E to be turned off for
+similar logical reasons.  I verified my assumption by using the SET MATCH
+buttin in Advanced Mode.  In INTKEY go to Advanced Mode, and several new
+buttons appear above the character listing in the upper lefthand pane.
+One of those has an equals sign with a dot above and below it.  Click on
+that button, and the SET MATCH menu will appear.  When you click the box
+next to Exact, the checks (or activitions) are removed from the
+Inapplicables, Unknowns, Subset and Overlap boxes.  Also clicking the
+Subset box will deactivate the Overlap and Exact boxes, and clicking
+the Overlap box will deactivate the Subset and Exact boxes.
+
+My guess is that Una was using the command line rather than the SET MATCH
+menu.  The SET MATCH menu should be experimented with to see how SET MATCH
+functions before using it strictly from the command line.
+
+Joseph H. Kirkbride, Jr.
+USDA, Agricultural Research Service
+Systematic Botany and Mycology Laboratory
+Room 304, Building 011A, BARC-West
+Beltsville, Maryland 20705-2350 USA
+Voice telephone: 301-504-9447
+FAX: 301-504-5810
+Internet: jkirkbri at asrr.arsusda.gov
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="086877.html">Student Assistantship
+</A></li>
+        <LI>Next message: <A HREF="086878.html">Position announcement in MNHN, Paris
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#086879">[ date ]</a>
+              <a href="thread.html#086879">[ thread ]</a>
+              <a href="subject.html#086879">[ subject ]</a>
+              <a href="author.html#086879">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

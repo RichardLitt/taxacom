@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> SOAP tools for identifying names and name/authors
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20SOAP%20tools%20for%20identifying%20names%20and%20name/authors&In-Reply-To=%3C3F4B0D6C-79D5-437A-8AA8-0A7C65B8CBDB%40mbl.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="094460.html">
+   <LINK REL="Next"  HREF="094462.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2005-December/094458.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">SOAP tools for identifying names and name/authors</H1>
+    <B data-pagefind-meta="author">David Remsen</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20SOAP%20tools%20for%20identifying%20names%20and%20name/authors&In-Reply-To=%3C3F4B0D6C-79D5-437A-8AA8-0A7C65B8CBDB%40mbl.edu%3E"
+       TITLE="SOAP tools for identifying names and name/authors">dremsen at MBL.EDU
+       </A><BR>
+    <I data-pagefind-meta="date">Mon Dec  5 12:44:01 CST 2005</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="094460.html">plant name help: &quot;Microlina&quot;?
+</A></li>
+        <LI>Next message: <A HREF="094462.html">Uses of online specimen images
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#94458">[ date ]</a>
+              <a href="thread.html#94458">[ thread ]</a>
+              <a href="subject.html#94458">[ subject ]</a>
+              <a href="author.html#94458">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2005</span><!--beginarticle-->
+<PRE>Greeting:   I'd like to announce the release of a set of SOAP methods
+that have proven useful in parsing scientific names from freetext.
+Using SOAP client calls, you can use these functions locally within
+your own applications.
+
+The FindIT method accepts a URL or base-64 encoded text as input and
+outputs a list of all scientific names it finds in the input text as
+an XML object.   The name-recognition algorithm identifies names as
+well as authorship and nomenclatural annotation.  It accepts a number
+of additional input parameters.  The output includes the identified
+name string, both whole, and broken into it's component parts, a
+confidence score, and and nameBank identifier (if it exists).
+
+The author abbreviation resolver methods complement the findIT
+method.  It accepts author name strings and returns an array of
+mapped lexical variations.  This is very useful for determining the
+nomenclatural equivalence of distinct lexical forms of the same
+name.  This tool has an input interface.  If you would like to
+contribute to this utility I can add you to the editor list.
+
+<A HREF="http://namebank.ubio.org/soap/">http://namebank.ubio.org/soap/</A>
+<A HREF="http://namebank.ubio.org/soap/finditSOAP.php">http://namebank.ubio.org/soap/finditSOAP.php</A>
+
+<A HREF="http://www.ubio.org/authors/index.php">http://www.ubio.org/authors/index.php</A>
+
+That's the basic announcement.  You can stop here or continue with an
+example below.
+
+Thank you,
+David Remsen
+uBio Project
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+Example The text below:
+
+&quot;The chief region of rosin production is the South Atlantic and
+Eastern Gulf states of the United States. American rosin is obtained
+from the turpentine of the swamp pine, Pinus australis Michx., and of
+the loblolly pine, P. taeda. The main source of supply in Europe is
+the landes of the departments of Gironde and Landes in France, where
+the cluster pine, P. pinaster, is extensively cultivated. In the
+north of Europe rosin is obtained from the Scotch fir, P. sylvestris,
+and throughout European countries local supplies are obtained from
+other species of pine.&quot;
+
+passed to the findIT method will output (in part):
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;allNames&gt;
+         &lt;entity&gt;
+                 &lt;nameString&gt;P[inus] taeda&lt;/nameString&gt;
+                 &lt;parsedName canonical=&quot;Pinus taeda&quot;&gt;
+                         &lt;component type=&quot;name&quot; rank=&quot;genus&quot;&gt;P[inus]&lt;/
+component&gt;
+                         &lt;component type=&quot;name&quot; rank=&quot;species&quot;&gt;taeda&lt;/
+component&gt;
+                 &lt;/parsedName&gt;
+                 &lt;score&gt;1&lt;/score&gt;
+         &lt;/entity&gt;
+         &lt;entity&gt;
+                 &lt;nameString&gt;Pinus australis Michx.&lt;/nameString&gt;
+                 &lt;parsedName canonical=&quot;Pinus australis&quot;&gt;
+                         &lt;component type=&quot;name&quot; rank=&quot;genus&quot;&gt;Pinus&lt;/
+component&gt;
+                         &lt;component type=&quot;name&quot;
+rank=&quot;species&quot;&gt;australis&lt;/component&gt;
+                         &lt;component type=&quot;author&quot; id=&quot;1&quot;&gt;Michx.&lt;/
+component&gt;
+                 &lt;/parsedName&gt;
+                 &lt;score&gt;0.75&lt;/score&gt;
+         &lt;/entity&gt;
+&lt;/allNames&gt;
+
+The author abbreviation &quot;Michx.&quot; can be input to the
+namebank_search_authors method.  The search can limit to, for
+example, the Brummit and Powell author abbreviations.  This returns
+an author group ID for matches and a default display form for that
+group.  The group ID returns all members of the group.   Example:
+
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        &lt;authorGroup groupID=&quot;142&quot;&gt;
+                &lt;dateRangeString&gt;1746-1802&lt;/dateRangeString&gt;
+                &lt;authorString&gt;
+                        &lt;stringForm&gt;Michaux, Andre&lt;/stringForm&gt;
+                        &lt;stringQualifier id=1&gt;default display form&lt;/stringQualifier&gt;
+                &lt;/authorString&gt;
+                &lt;authorString&gt;
+                        &lt;stringForm&gt;Michaux&lt;/stringForm&gt;
+                        &lt;stringQualifier id=2&gt;Harvard University Herbarium src&lt;/
+stringQualifier&gt;
+                &lt;/authorString&gt;
+                &lt;authorString&gt;
+                        &lt;stringForm&gt;Michx.&lt;/stringForm&gt;
+                        &lt;stringQualifier id=3&gt;Brummitt and Powell src&lt;/stringQualifier&gt;
+                &lt;/authorString&gt;
+                &lt;authorString&gt;
+                &lt;stringForm&gt;Andre Michaux&lt;/stringForm&gt;
+                &lt;stringQualifier id=4&gt;lexical variant originating in the Harvard
+Univ. Herbaria database&lt;/stringQualifier&gt;
+                &lt;/authorString&gt;
+                &lt;groupSource&gt;Brummitt and Powell, Authors of Plant Names. Royal
+Botanic Gardens, Kew, 1992&lt;/groupSource&gt;
+                &lt;groupSource&gt;Taxonomic Literature. Second Edition. Utrecht&lt;/
+groupSource&gt;
+        &lt;/authorGroup&gt;
+
+_______________________________________________
+David Remsen
+uBio Project Manager
+Marine Biological Laboratory
+Woods Hole, MA 02543
+508-289-7632
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="094460.html">plant name help: &quot;Microlina&quot;?
+</A></li>
+	<LI>Next message: <A HREF="094462.html">Uses of online specimen images
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#94458">[ date ]</a>
+              <a href="thread.html#94458">[ thread ]</a>
+              <a href="subject.html#94458">[ subject ]</a>
+              <a href="author.html#94458">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

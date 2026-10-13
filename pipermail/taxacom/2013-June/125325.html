@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Data query
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-June/125325.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Data query</H1>
+    <B data-pagefind-meta="author">Tony.Rees at csiro.au</B>
+    Tony.Rees at csiro.au<BR>
+    <I data-pagefind-meta="date">Mon Jun 24 23:50:59 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="125324.html">[Taxacom] Data query
+</A></li>
+        <LI>Next message: <A HREF="125326.html">[Taxacom] Data query
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#125325">[ date ]</a>
+              <a href="thread.html#125325">[ thread ]</a>
+              <a href="subject.html#125325">[ subject ]</a>
+              <a href="author.html#125325">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>Bob - I take your point(s) especially with the regard to the minimal latency with which both you and Stephen are able to update web pages I have called &quot;static&quot; (meaning directly coded, as opposed to dynamically created from an underlying data store). Of course latency (minimal or large) is not inherently a feature of either system but rather a by-product of the workflows that have been created around them. I can also edit my database in real time resulting in minimal latency for the derived web pages - in fact I do this all the time (probably 500+ edits in the past week). Or I could wait to periodically refresh some portions of the content at a much longer interval (for example I have not re-crawled the Catalogue of Life for updates since 2006, my choice but to be rectified at some point) which means that yes, that portion of my system has not been updated for a possibly over-long time.
+
+Paul Kirk, Chris Thompson and others who maintain database-driven web information systems will all concur that it is not the system, but the editor (and processes s/he has set in place) who has control over the latency thereof... but of course I agree, anything which serves to reduce such latency - including for example permitting multiple user entry such as wikispecies (static pages in my previous definition) and WoRMS (dynamic ones) - is good.
+
+You also said:
+
+&gt; I started this thread by saying that clean-bucket resource builders
+&gt; could use a webpage markup system that allowed people like Tony to
+&gt; harvest webpage contents more easily, for uses other than those for
+&gt; which the clean buckets were designed.
+
+My comment on this would be that clean data is useable data, why differentiate between who might use it in the future and for what purpose?
+
+Perhaps it is time to move the discussion on to related matters such as how to possibly chain these systems together in the future so that updates may more readily flow from the point of entry to potentially multiple points of re-use...
+
+Regards - Tony
+
+
+&gt; -----Original Message-----
+&gt; From: Bob Mesibov [mailto:mesibov at southcom.com.au]
+&gt; Sent: Tuesday, 25 June 2013 2:38 PM
+&gt; To: Rees, Tony (CMAR, Hobart)
+&gt; Cc: stephen_thorpe at yahoo.co.nz; taxacom at mailman.nhm.ku.edu;
+&gt; deepreef at bishopmuseum.org
+&gt; Subject: Re: [Taxacom] Data query
+&gt; 
+&gt; Tony Rees wrote:
+&gt; 
+&gt; &quot;Basically we are talking about the generic area of computerized
+&gt; compilations of taxonomic data and associated attributes, and the
+&gt; benefits of storing these in static web pages as opposed to generating
+&gt; dynamic ones on demand from a data store of some sort.&quot;
+&gt; 
+&gt; Well, I'd restate that:
+&gt; 
+&gt; '...and the benefits of storing these in frequently edited webpages
+&gt; (confusingly called 'static') tended by interested people, as opposed
+&gt; to generating rarely edited webpages (confusingly called 'dynamic') on
+&gt; request from data stores whose page-related content hasn't changed
+&gt; since the last machine harvest of some other data store, and for whose
+&gt; content there are limited and difficult editing opportunities.'
+&gt; 
+&gt; Like Stephen, I could give you a 'f'rinstance' or two. When I find a
+&gt; new publication mentioning a named Australian millipede, the 'static'
+&gt; pages on the Millipedes of Australia (MoA) website get correctly
+&gt; updated with synonymy and bibliographic info within a few hours. I
+&gt; don't know any large data stores that do synonymies correctly; I do
+&gt; know that MoA is always ahead with regard to new species.
+&gt; 
+&gt; Similarly, on Sunday I ID'ed new specimens of the rare species
+&gt; Atrophotergum bonhami Mesibov, 2004. It took me less than a minute to
+&gt; add the collecting event and the ID and other info to my data tables.
+&gt; It took a few seconds each for my shell scripts to generate updated
+&gt; Atrophotergum CSV records files and KML files, and another minute to
+&gt; FTP those updates to the MoA server. (The pre-registered specimens
+&gt; themselves will be on a museum shelf in a few weeks; if I worked at a
+&gt; museum the delay would be minutes.) Those 'static' CSV and KML
+&gt; downloads, each dated in the file name, have records that won't appear
+&gt; for years in some online records databases, and when they do the
+&gt; occurrence information will be truncated and may be plain wrong (see my
+&gt; audit paper in ZooKeys), having passed through formatting filters
+&gt; insisted upon by the data storers.
+&gt; 
+&gt; I started this thread by saying that clean-bucket resource builders
+&gt; could use a webpage markup system that allowed people like Tony to
+&gt; harvest webpage contents more easily, for uses other than those for
+&gt; which the clean buckets were designed. I'm sure Tony would be happy to
+&gt; see that happen. An alternative is for clean-bucketers to add all their
+&gt; edits and novelties to the dirty buckets, where they'll get lost among
+&gt; the rubbish. Not me, thanks, but please remember that Wikispecies and
+&gt; MoA are open-access and CC. If you really want the data, you can get
+&gt; it.
+&gt; --
+&gt; Dr Robert Mesibov
+&gt; Honorary Research Associate
+&gt; Queen Victoria Museum and Art Gallery, and
+&gt; School of Agricultural Science, University of Tasmania
+&gt; Home contact:
+&gt; PO Box 101, Penguin, Tasmania, Australia 7316
+&gt; (03) 64371195; 61 3 64371195
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="125324.html">[Taxacom] Data query
+</A></li>
+        <LI>Next message: <A HREF="125326.html">[Taxacom] Data query
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#125325">[ date ]</a>
+              <a href="thread.html#125325">[ thread ]</a>
+              <a href="subject.html#125325">[ subject ]</a>
+              <a href="author.html#125325">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

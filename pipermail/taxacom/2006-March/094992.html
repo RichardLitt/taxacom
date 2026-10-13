@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Character states 'present by misinterpretation'
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2006-March/094992.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Character states 'present by misinterpretation'</H1>
+    <B data-pagefind-meta="author">Mike Dallwitz</B>
+    M.J.Dallwitz at NETSPEED.COM.AU<BR>
+    <I data-pagefind-meta="date">Mon Mar 20 14:46:33 CST 2006</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="094991.html">Interactive keys as aids to revisions
+</A></li>
+        <LI>Next message: <A HREF="094999.html">Character states 'present by misinterpretation'
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#094992">[ date ]</a>
+              <a href="thread.html#094992">[ thread ]</a>
+              <a href="subject.html#094992">[ subject ]</a>
+              <a href="author.html#094992">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2006</span><!--beginarticle-->
+<PRE>Alessandra Baptista wrote (Re: [TAXACOM] interactive keys):
+
+&gt; A piece of advice I have for the ones who want to build their own
+&gt; interactive keys: even if you use LUCID to publish your key, build your
+&gt; database in DELTA, and only export it to LUCID when it is time to publish
+&gt; the key. Delta allows for better control of the database, and helps you to
+&gt; avoid stupid mistakes and build a more consistent database.
+
+Kevin Thiele wrote (Re: [TAXACOM] interactive keys):
+
+&gt; There is one problem with the DELTA data format (with respect to interactive
+&gt; identification) which works against Alessandra's solution. With respect to
+&gt; IntKey, DELTA only allows you to record whether a character state is present
+&gt; or absent in a taxon (or uncertain for the whole character). Lucid is much
+&gt; richer in this respect (it allows a character state to be scored
+&gt; present/absent/rare/uncertain/not scored/present-by-misinterpretation). The
+&gt; last of these is very important - if you have a state that is actually
+&gt; absent in a taxon but a user may misinterpret it as present (or vice versa),
+&gt; then using DELTA you have only two choices - code for the strict truth (in
+&gt; which case most users will go astray here) or encode false data (clearly a
+&gt; bad idea). Think of a key that includes Euphorbia and has characters like
+&gt; petals:present/absent flowers:bisexual/unisexual. This circumstance (when
+&gt; you want to pre-empt a likely user mistake but maintain the integrity of the
+&gt; data while doing it) is very common in keys, and is pretty much the only
+&gt; reason why I advise people against using DELTA to build interactive keys.
+&gt; Many DELTA data sets have false data recorded in them because of this
+&gt; problem, and in my experience these false data are virtually unrecoverable.
+
+I agree with Kevin that the 'present by misinterpretation' coding is very
+important for data integrity (truth), while allowing for user errors in
+identification. It was proposed, as part of a more general scheme, by the
+DELTA team well before the advent of Lucid (see 'Dallwitz, M.J., Paine, T.A.
+and Zurcher, E.J. 1993 onwards. Proposed new features for the DELTA system.
+<A HREF="http://delta-intkey.com/www/proposal.htm&#x27;,">http://delta-intkey.com/www/proposal.htm&#x27;,</A> under 'Coded ?comments?
+(subsidiary information)'). Unfortunately, because of other priorities, it
+was not implemented before the DELTA project was terminated.
+
+Furthermore, the distinction between true and misinterpreted values is
+important even _within_ the context of identification. In the Lucid Player,
+users who are confident of not making errors in interpretation can instruct
+the programs to ignore values marked 'present by misinterpretation', and
+this will usually result in shorter paths to identifications. Therefore,
+this feature (under the name 'Special values for keys') is given a high
+weight in my 'Comparison of Interactive Identification Programs'
+(<A HREF="http://delta-intkey.com/www/comparison.htm).">http://delta-intkey.com/www/comparison.htm).</A> Although Intkey doesn't have
+this feature, it has other features that are important for identification
+but are lacking in Lucid - for example, character reliabilities, diagnostic
+descriptions, and finding the best characters for separating a given taxon
+from the rest.
+
+Although the current DELTA format doesn't have a special 'by
+misinterpretation' coding, the information can be incorporated as a
+free-text comment. In fact, the Lucid Translator supplied by the Lucid team
+does this when translating from Lucid to DELTA format. Unfortunately, the
+reverse translation from DELTA to Lucid ignores this comment. Perhaps this
+could be remedied if anyone writes a DELTA/SDD translator.
+
+As a stopgap, I've written a program which strips out values attached to a
+&lt;by misinterpretation ...&gt; comment, so that DELTA users can pass the 'true'
+data to applications that require it, such as classification programs or
+(perhaps) natural-language generation. See
+     <A HREF="http://delta-intkey.com/test/dismis.txt">http://delta-intkey.com/test/dismis.txt</A>
+
+
+DELTA and Intkey have many features that help authors produce accurate and
+robust data. The particular one that Alessandra may have in mind is the
+checking of character dependencies, which the Lucid Builder doesn't do. For
+example, it would allow you to record 'petals absent' and 'petals red' for
+the same taxon. This is a serious problem. A medium-sized dataset (a few
+hundred characters and taxa) typically contains hundreds of dependency
+errors if produced without checking of dependencies. This can happen even in
+DELTA if dependencies are not actually specified by the author. Bitter
+experience led us to incorporate a warning when dependencies are not
+specified in datasets containing more than 20 characters.
+
+The 'present by misinterpretation' coding makes dependency checking slightly
+more difficult. The dependencies effectively have to be checked twice: once
+excluding all 'present by misinterpretation' codings, and once including
+them all. Data would need to be recorded like this:
+     petals absent; or present (by misinterpretation)
+     petals red (by misinterpretation)
+Recording simply 'petals red' would be an error, which should be detected by
+the program.
+
+--
+Mike Dallwitz
+Contact information: <A HREF="http://delta-intkey.com/contact/dallwitz.htm">http://delta-intkey.com/contact/dallwitz.htm</A>
+DELTA home page: <A HREF="http://delta-intkey.com">http://delta-intkey.com</A>
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="094991.html">Interactive keys as aids to revisions
+</A></li>
+        <LI>Next message: <A HREF="094999.html">Character states 'present by misinterpretation'
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#094992">[ date ]</a>
+              <a href="thread.html#094992">[ thread ]</a>
+              <a href="subject.html#094992">[ subject ]</a>
+              <a href="author.html#094992">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

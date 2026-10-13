@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] recursive SQL database for taxonomy available?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2014-January/126686.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] recursive SQL database for taxonomy available?</H1>
+    <B data-pagefind-meta="author">Erik Rijkers</B>
+    er at xs4all.nl<BR>
+    <I data-pagefind-meta="date">Fri Jan 17 11:10:25 CST 2014</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="126685.html">[Taxacom] recursive SQL database for taxonomy available?
+</A></li>
+        <LI>Next message: <A HREF="126687.html">[Taxacom] Biogeografia 6
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#126686">[ date ]</a>
+              <a href="thread.html#126686">[ thread ]</a>
+              <a href="subject.html#126686">[ subject ]</a>
+              <a href="author.html#126686">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2014</span><!--beginarticle-->
+<PRE>On Fri, January 17, 2014 17:08, Markus D?ring wrote:
+&gt; Hi Kim &amp; Erik,
+&gt;
+&gt; I've dumped the GBIF backbone from our postgres 9.3 server and placed it here (427MB):
+&gt; <A HREF="https://dl.dropboxusercontent.com/u/457027/nub.sql.zip">https://dl.dropboxusercontent.com/u/457027/nub.sql.zip</A>
+
+The dump took just over 4 minutes to load (postgres 9.4devel).
+
+Thank you very much Markus, this is much fun and really useful.
+
+Erik Rijkers
+Utrecht, Netherlands
+
+
+&gt; The tables should be fairly straight forward with taxa being in &quot;name_usage&quot; and names in &quot;name&quot;.
+&gt; A simple join to get the core properties for a taxon would be this sql:
+&gt;
+&gt; 	select u.id, parent_fk,n.scientific_name, rank, status, p.citation as publlishedIn from name_usage u join name n on
+&gt; name_fk=n.id left join citation p on name_published_in_fk=p.id order by rank limit 100;
+&gt;
+&gt; The backbone is the current live one with the higher classification coming from the Catalog of Life.
+&gt; Quick facts:
+&gt;
+&gt;   taxa incl synonyms:  4.416.347
+&gt;   synonyms:  1.143.026
+&gt;   names: 4.410.899
+&gt;   accepted taxa by rank:
+&gt; 	KINGDOM: 9
+&gt; 	PHYLUM: 111
+&gt; 	CLASS: 272
+&gt; 	ORDER: 1183
+&gt; 	SUPERFAMILY: 356
+&gt; 	FAMILY: 20760
+&gt; 	GENUS: 390790
+&gt; 	SPECIES: 2497114
+&gt; 	SUBSPECIES: 171473
+&gt; 	VARIETY: 149011
+&gt; 	SUBVARIETY: 1070
+&gt; 	FORM: 40473
+&gt;
+&gt;
+&gt; best,
+&gt; Markus
+&gt;
+&gt;
+&gt; --
+&gt; Markus D?ring
+&gt; Software Developer
+&gt; Global Biodiversity Information Facility (GBIF)
+&gt; mdoering at gbif.org
+&gt; <A HREF="http://www.gbif.org">http://www.gbif.org</A>
+
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="126685.html">[Taxacom] recursive SQL database for taxonomy available?
+</A></li>
+        <LI>Next message: <A HREF="126687.html">[Taxacom] Biogeografia 6
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#126686">[ date ]</a>
+              <a href="thread.html#126686">[ thread ]</a>
+              <a href="subject.html#126686">[ subject ]</a>
+              <a href="author.html#126686">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

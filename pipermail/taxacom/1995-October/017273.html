@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Distribution maps - basic help needed
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1995-October/017273.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Distribution maps - basic help needed</H1>
+    <B data-pagefind-meta="author">Robert Raven</B>
+    R.Raven at MAILBOX.UQ.OZ.AU<BR>
+    <I data-pagefind-meta="date">Sun Oct 29 13:15:39 CST 1995</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="100428.html">Electronics vs. Paper
+</A></li>
+        <LI>Next message: <A HREF="053065.html">Distribution maps - basic help needed
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#017273">[ date ]</a>
+              <a href="thread.html#017273">[ thread ]</a>
+              <a href="subject.html#017273">[ subject ]</a>
+              <a href="author.html#017273">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1995</span><!--beginarticle-->
+<PRE>Hi Deb!
+
+&gt; The data from which our map points are drawn are not
+&gt; &quot;computerized&quot; in any way.  All are U.S. distributions, ranging
+
+Four years ago we produced an Altas of the frogs, reptiles, birds &amp;
+mammals of  Queensland. ABout 1200 species, one species per map. We had
+the advantage of having the data already on disk,
+even thne it was a very demanding task. Since then
+GIS programs have advanced. One of the possibilities
+now is to scan the maps as bitmaps and use a GIS
+program than can &quot;register&quot; the bit map against its
+records. You effectively overlay the bitmap with a
+vector map and digitise from it. I know ARCINFO can
+do that and so can Explorer &amp; Spans. Even then I do
+not envy your task. You do not tell us whether the
+sources maps are at the same projection which would
+simpliy tings somewhat. I believe Mapinfo's present
+incarnation in Windoze may do the task also but I
+cannot speak with authority. We were absolutely
+disgusted with Mapnfo 2 for windoze and haven't
+upgraded since. Our atlas was done on the DOS Mapinfo
+and was made much less painless because we had data
+digitised and had the map plotting automated by a
+sophisticated version of C (Mapcode) which handled
+the map printing. We would print 40 maps on an A1
+plotter in one hour so the entire 1200 went fairly
+quickly. We used R:base to generate the point and
+remarkably to control where on the page the next map
+was to be plotted.
+
+&gt; from local endemics to widespread &quot;weedy&quot; taxa.  We will be
+&gt; working from &quot;draft maps&quot; on which errors have just been
+&gt; scratched through, and several taxa (up to four) appear on a
+&gt; single map indicated by different colored dots.  Also the draft
+&gt; base maps are regional, with many taxa now spread across two or
+&gt; more maps.  We visualize the finished maps as: 1) perhaps several
+&gt; taxa per map, but each taxon on only one map, 2) map should
+&gt; indicate distribution at least to county by &quot;dots&quot; (various
+&gt; symbols to represent different taxa on a map), 3) showing the
+&gt; entire U.S. on the map for widespread species, but smaller areas
+&gt; for more localized taxa.
+
+We also did something like this for a World heritage report listing and
+it is much more complex because the mapping program should be governed
+to a fixed number of scales and then it decides whether an entire species
+distribution will fit on scale A or it must select a higher scale.
+
+&gt; How can we best/most efficiently tackle this project?  Should we
+&gt; do these &quot;by hand&quot;, working with a symbols template on a &quot;paper&quot;
+&gt; base map?  If we can find an &quot;object-oriented&quot; map file, would
+&gt; that be the best way to go?  Should we digitize the data, even
+&gt; though we don't foresee a future use for these files?  Can we
+&gt; &quot;scan in&quot; the drafts, clean them up, and piece them together to
+&gt; create usable maps?
+
+The other process is to have a GIS program that has your projection,
+place a map on a digitiser and register the printed map against the on
+screen map (about 5 minutes on a DOS GIS) then digitise the points
+straight in (about 30 secs max. per point). The bottom line a a GIS which
+you KNOW will do the task, not one that a salesman says will do the task.
+Good luck!
+
+Dr Robert J. Raven
+Museum Scientist (Arachnology)
+Queensland Museum, Grey St, South Brisbane, 4101, Q.
+Queensland Museum, PO Box 3300, South Brisbane, 4101, Q.
+Australia
+
+Phone: 61-7-38407698 or 61-18-748 467 (24 hour)
+Fax: 61-7-3846 1918
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="100428.html">Electronics vs. Paper
+</A></li>
+        <LI>Next message: <A HREF="053065.html">Distribution maps - basic help needed
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#017273">[ date ]</a>
+              <a href="thread.html#017273">[ thread ]</a>
+              <a href="subject.html#017273">[ subject ]</a>
+              <a href="author.html#017273">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

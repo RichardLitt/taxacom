@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Markov chain Monte Carlo
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2012-April/122304.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Markov chain Monte Carlo</H1>
+    <B data-pagefind-meta="author">Richard Zander</B>
+    Richard.Zander at mobot.org<BR>
+    <I data-pagefind-meta="date">Fri Apr 20 10:54:38 CDT 2012</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="122303.html">[Taxacom] Seeking collaboration on illustrated biological
+ dictionary/glossary for semantic mediawiki with ontological relations
+</A></li>
+        <LI>Next message: <A HREF="122305.html">[Taxacom] PDF request bird sexing
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#122304">[ date ]</a>
+              <a href="thread.html#122304">[ thread ]</a>
+              <a href="subject.html#122304">[ subject ]</a>
+              <a href="author.html#122304">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2012</span><!--beginarticle-->
+<PRE>Peter Hovenkamp
+Carl Rothfels
+
+Thanks for clarifying Bayesian MCMC analysis. Statistics is a basis for
+modern science, yet there remain mysteries. 
+
+Let me get this straight. MCMC analysis searches a sample of the full
+population and finds maximal support values for nodes, i.e. it does an
+optimality search. Because it is Bayesian, the optimality values for the
+nodes are the same as in the unsearched subset of the population,
+assuming that all peaks are searched by an efficient algorithm, like 3
+or 4 random-sampling lines going at once. 
+
+A tree is then presented with compatible nodes and their posterior
+probabilities.
+
+Question: Is the tree selected as final that one with the joint
+probability (product of all support values) the highest? 
+
+When there are equally probable trees, I assume a consensus tree (with
+multifurcations) is generated.
+
+So... 
+Question: Are the support values in Bayesian analysis the probability of
+optimality of a clade or the probability of being right? When these are
+not the same, there is a problem.
+
+Question: Is the following correct? Say, the posterior probability is
+the chance of a clade being correct. The chance that all clades are
+correct is then the product of all support values. The probability of
+all clades being correct may be low, but the probability of most clades
+being right is high. Using binomial calculator, I see the probability of
+all nodes of a 40 node tree each at 0.95 probability is 0.13 joint
+probability but the probability of at least 36 or more of them being
+right (90% of nodes) is 0.95. So molecular trees are mostly right.
+
+That's great. IF the joint probability refers to actually chance of
+being correct, not chance of being optimal, in which case maximum
+likelihood (Williams) or Bayes Factors (Raftery) may make problems.
+
+Richard
+
+* * * * * * * * * * * *
+Richard H. Zander
+Missouri Botanical Garden, PO Box 299, St. Louis, MO 63166-0299 USA  
+Web sites: <A HREF="http://www.mobot.org/plantscience/resbot/">http://www.mobot.org/plantscience/resbot/</A> and
+<A HREF="http://www.mobot.org/plantscience/bfna/bfnamenu.htm">http://www.mobot.org/plantscience/bfna/bfnamenu.htm</A>
+Modern Evolutionary Systematics Web site:
+<A HREF="http://www.mobot.org/plantscience/resbot/21EvSy.htm">http://www.mobot.org/plantscience/resbot/21EvSy.htm</A>
+UPS and FedExpr -  MBG, 4344 Shaw Blvd, St. Louis 63110 USA
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="122303.html">[Taxacom] Seeking collaboration on illustrated biological
+ dictionary/glossary for semantic mediawiki with ontological relations
+</A></li>
+        <LI>Next message: <A HREF="122305.html">[Taxacom] PDF request bird sexing
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#122304">[ date ]</a>
+              <a href="thread.html#122304">[ thread ]</a>
+              <a href="subject.html#122304">[ subject ]</a>
+              <a href="author.html#122304">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

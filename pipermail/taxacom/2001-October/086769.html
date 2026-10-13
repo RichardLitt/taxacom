@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> critter names
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2001-October/086769.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">critter names</H1>
+    <B data-pagefind-meta="author">Doug Yanega</B>
+    dyanega at POP.UCR.EDU<BR>
+    <I data-pagefind-meta="date">Wed Oct 10 20:27:38 CDT 2001</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="086764.html">critter names
+</A></li>
+        <LI>Next message: <A HREF="086774.html">critter names
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#086769">[ date ]</a>
+              <a href="thread.html#086769">[ thread ]</a>
+              <a href="subject.html#086769">[ subject ]</a>
+              <a href="author.html#086769">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2001</span><!--beginarticle-->
+<PRE>Once again, a can of worms I've stirred up. ;-)
+
+The point, lost amidst the idealism, is the enormous discrepancy
+between what is desirable and what is *practical*. We're dealing with
+over 1 million valid taxon names, and several million synonyms,
+homonyms, lapsi, nomina nuda, etc. Consider ANY of your suggested
+solutions applied to THAT mountain of information. For example,
+Margaret wrote:
+
+&gt;A relatively simple way to deal with gender-based name changes in authority
+&gt;files (as I've done in my own research files) is to have an extra field
+&gt;that contains the stem of the specific epithet (for adjectival names that
+&gt;change with the gender of the genus in which they're placed) or the entire
+&gt;epithet (for names that don't change: patronyms and nouns in
+&gt;apposition).
+
+That may be fine on the scale of your own research files, but do you
+have the time to do this for several MILLION names, one at a time,
+manually entered? I already have 65,000 species and 14,000 generic
+names in my database, and trying to look up each species name to see
+whether it's a noun or not, and each genus to determine its gender,
+and then manually enter this data in another set of fields is NOT
+practical at that scale. You CANNOT automate the process, because you
+need to actually go to the original publication and see what the
+author designated. No database program will *ever* be able to do that.
+Look at Poole's Nomina Insecta Nearctica: in the Nomina, all epithets
+listed are shown in their *original* orthography, so a substantial
+portion of the binomials in the Nomina are in violation of the rules.
+Does anyone here think they can write a program that can download the
+data from the webpages, read all the binomials, and automatically
+tell you which are correct and which are not? It simply can't be
+done. It requires *human labor*, and none of the available electronic
+resources have already invested this labor.
+
+Una wrote:
+
+&gt;  &gt;Consider that you can't teach a database program how to conjugate latin.
+&gt;
+&gt;Why can't you?  I think I could;  there aren't too many exceptions...
+
+Because you need to know whether a word is a noun or an adjective,
+and in *many* cases you can't determine this without referring to the
+original description. What is the species epithet &quot;sonora&quot;? A
+reference to the desert, or a variant of &quot;sonorus&quot;? I know some
+authors, too, who have taken to declaring all of their species
+epithets to be &quot;nouns in apposition&quot; - even epithets that are
+latinized - simply to keep anyone from changing them should the genus
+name change. How are you going to know that without referring to the
+original publication?
+
+&gt;A good taxonomic database should provide automatic recognition that the
+&gt;epithets trivittatus and trivittata, or igniventris and igniventre, are
+&gt;variants of the same word.  Or, even better, it would include the full
+&gt;web of published taxonomic relationships, and *never* attempt to guess
+&gt;at the current correct name by pattern-matching on epithets.
+
+By that definition, there are no good electronic taxonomic databases
+available. The &quot;full web&quot; you refer to includes listings of all
+genera under which a species has appeared, and that is information
+which is rare to find even in *print* catalogs; NONE of the
+electronic catalogs or checklists I've seen contain this information.
+That means going to the library to manually compile the data for well
+over half of those 1 million species. I don't think any of us has
+that kind of time.
+
+Let me point out one further problem (to those who have privately
+accused me of magnifying a trivial issue); &quot;searching&quot; in the sense I
+intended is more than just lookups. Suppose I've acquired an
+electronic file of an order/family with, say, 25000 species. Now, a
+new version comes out, with changes. It might not be an issue if the
+*only* use I had for the data was for reference; I'd simply delete
+the old file and use the new one. But I don't just use it for
+reference; I run a museum, in which specimens have labels attached to
+them, using old names. I have a specimen-level database, too, in
+which I've already entered the genus and species names of thousands
+of specimens, SOME of which may need to be updated. There are
+individual specimen records involved, not just the authority file
+itself, and those records need a fixed link back to the taxon record
+in the authority file. But there are many types of changes possible;
+there are some new taxa, some old taxa have been sunk, some have been
+resurrected out of previous synonymy, and still others moved to other
+genera.
+        Without having taxon numbers, there's no simple way to
+automate the process of determining which species fall into which
+category; the best I can do is find all non-matches and then
+personally examine each one to determine what each represents. That's
+a LOT of work. In 1983, Ron Hodges gave a unique taxon number to each
+NA lepidopteran. It'd be very easy to take a database of Hodges'
+original list, and automate the comparison between that and a new,
+updated list that ALSO uses those same numbers. There is a precedent,
+for all you naysayers - and no one has EVER complained that Hodges
+numbers are a nuisance. We could easily expand that system to all
+insects, and these problems with automating taxon information would
+go away. I do, in fact, assign each taxon in my database a unique
+number (e.g., Boisea trivittata is 62434), so I *can* update the
+specimen record taxonomic information automatically - there's no
+other way, since the genus name is not stable, the epithet is not
+stable, and epithet-author combinations are commonly not unique.
+        Efficient cataloguing requires that there be unique and
+permanent identifiers, and we presently do not have them. I'm not
+advocating *replacing* conventional binomials! I simply believe that
+if we're serious about computerizing (certainly not a concern when
+the Codes were originally Codified) we need to either fix the Codes
+so names never change, or come up with some supplementary system like
+Hodges did, that accomplishes the same thing. I think a supplementary
+system is both easier to implement and more likely to succeed than
+asking the almighty Committees to change the almighty Codes - it'd be
+a small investment, with worthwhile long-term payoffs.
+
+Peace,
+--
+
+Doug Yanega        Dept. of Entomology         Entomology Research Museum
+Univ. of California - Riverside, Riverside, CA 92521
+phone: (909) 787-4315 (standard disclaimer: opinions are mine, not UCR's)
+            <A HREF="http://entmuseum9.ucr.edu/staff/yanega.html">http://entmuseum9.ucr.edu/staff/yanega.html</A>
+   &quot;There are some enterprises in which a careful disorderliness
+         is the true method&quot; - Herman Melville, Moby Dick, Chap. 82
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="086764.html">critter names
+</A></li>
+        <LI>Next message: <A HREF="086774.html">critter names
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#086769">[ date ]</a>
+              <a href="thread.html#086769">[ thread ]</a>
+              <a href="subject.html#086769">[ subject ]</a>
+              <a href="author.html#086769">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

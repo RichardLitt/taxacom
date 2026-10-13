@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> author of the name
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20author%20of%20the%20name&In-Reply-To=%3C20030712135334.105482f4.mole%40morris.net%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="090582.html">
+   <LINK REL="Next"  HREF="090553.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2003-July/090581.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">author of the name</H1>
+    <B data-pagefind-meta="author">Paul J. Morris</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20author%20of%20the%20name&In-Reply-To=%3C20030712135334.105482f4.mole%40morris.net%3E"
+       TITLE="author of the name">mole at MORRIS.NET
+       </A><BR>
+    <I data-pagefind-meta="date">Sat Jul 12 13:53:34 CDT 2003</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="090582.html">author of the name
+</A></li>
+        <LI>Next message: <A HREF="090553.html">re Registration
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#90581">[ date ]</a>
+              <a href="thread.html#90581">[ thread ]</a>
+              <a href="subject.html#90581">[ subject ]</a>
+              <a href="author.html#90581">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2003</span><!--beginarticle-->
+<PRE>I think the answer depends a lot on the context.
+
+If you are developing an information interchange standard, then you
+probably do not want to make these data mandatory elements, as some
+collections data sets may not include fields for these concepts.
+
+If you are capturing legacy data from handwritten catalogs or other
+sources you do not want fields for these data to be required to contain
+values (you may wish to prohibit null values and allow empty strings) as
+you will encounter names in legacy data that do not include authorship
+information.  As Mary Barkworth pointed out, legacy data are often full
+of inaccurate authorship information, and as more authoritative lists of
+names come on line you will want to check the name author year
+combinations you find in your datasets against those lists.
+If you are compiling a species level taxonomic dictionary for a
+collections database you may well want to make authorship fields
+mandatory.
+
+The fields that you use to hold author and year of publication may also
+vary depending on the context.
+
+For a collections data exchange standard you may well want to use a
+single concept to hold a string value representing author, year of
+publication (if present), and parenthesies (if applicable) as some
+collections will probably have used a single string field to hold these
+pieces of information.  For a taxonomic data exchange standard you would
+defintely want to separate these three concepts, but the goals of a
+collections data exchange standard might be met without atomizing these
+concepts.
+
+For a database and data entry system customized for rapid capture of
+legacy paper records (e.g. verbatim capture of information in a
+handwritten catalog), you may well also wish to use a single field to
+enter author, year of publication, and parenthesies, and then write a
+parser to split this verbatim string into three fields after all the
+data have been captured.  Capturing a single literal text string
+requires two errors to be made to incorrectly add or omit parenthesies,
+while usign a single field to indicate parenthesies will result in some
+portion of the data being in error in a way that cannot easily be
+checked unless an authoritative name list is available.  Capturing a
+single literal text string rather than using three fields will probably
+result in faster data capture, and for data capture from large
+handwritten catalogs these time savings will be significant.
+
+For a database to manage collections data (other than capturing verbatim
+data from bulk sources), you will probably want to use atomized fields
+for authorship, year of publication, and whether parenthesies should be
+applied.   You may (but in the context of a collections database
+probably do not have the resources) want to further normalize the
+authorship string and link authors held in an a generic agent table to
+taxon names in a many to many relationship (through a table that
+implements an authorship associative entity) as Richard Pyle discussed.
+
+
+The ideal goal is to have the information stored in a highly normalized
+relational structure (or heirarchical object structure), where
+collections objects have multiple identifications applied to them an
+each identification uses one taxon name, and each taxon name is created
+in one publication that has a publication date and has an authorship
+list where each author in the list is an agent.  But the available
+resources may not allow you to separate your existing data out this
+cleanly or build software to handle this complexity with an efficient
+user interface.  Some kinds of tasks, such as rapid capture of verbatim
+text from bulk paper data sources may proceed much more efficiently and
+accurately if you use a simpler data structure and then check and
+manipulate the data in bulk after it has been captured in electronic
+form.
+
+Author and year of publication of a taxon are important information, but
+for existing collections data, they are often in error, and with the
+exception of types, are not core critical pieces of information for
+collections data.  Within the context of limited resources that we work
+in in most collections, you may want to keep the storage of this
+information as simple as possible and rely on the folks who are
+compiling authoritative lists of names to provide accurate values for
+taxon name, author, year of publication, parenthesies, that you will be
+able to link to or import in the future.  With limited resources, it may
+be best to focus design and programing effort on the quality of the core
+pieces of information about the collections objects themselves.
+
+Hope this is of help,
+-Paul
+-------------
+Paul J. Morris
+Biodiversity Information Manager, The Academy of Natural Sciences
+1900 Ben Franklin Parkway, Philadelphia PA, 19103, USA
+<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">mole at morris.net</A>  1-215-299-1161  AA3SD  PGP public key available
+
+On Fri, 11 Jul 2003 13:20:54 -0500
+Liliana Lara Morales &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">llara at XOLO.CONABIO.GOB.MX</A>&gt; wrote:
+
+&gt;<i> In biodiversity information system based on specimen data from
+</I>&gt;<i> biological scientific collection, should have as mandatory data
+</I>&gt;<i>   the author of the name and date of publication for the scientific
+</I>&gt;<i>   name?
+</I>&gt;<i>
+</I>&gt;<i> Liliana Lara
+</I>&gt;<i> National Commission for the Knowledge and Use of the Biodiversity
+</I>&gt;<i> (CONABIO). www.conabio.gob.mx
+</I>&gt;<i>
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="090582.html">author of the name
+</A></li>
+	<LI>Next message: <A HREF="090553.html">re Registration
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#90581">[ date ]</a>
+              <a href="thread.html#90581">[ thread ]</a>
+              <a href="subject.html#90581">[ subject ]</a>
+              <a href="author.html#90581">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

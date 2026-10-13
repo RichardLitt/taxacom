@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Maintaining datbases
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Maintaining%20datbases&In-Reply-To=%3Cmailman.3935.1157126665.2564.taxacom%40mailman.nhm.ku.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="053300.html">
+   <LINK REL="Next"  HREF="053299.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1995-December/017507.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Maintaining datbases</H1>
+    <B data-pagefind-meta="author">Rob Colwell</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Maintaining%20datbases&In-Reply-To=%3Cmailman.3935.1157126665.2564.taxacom%40mailman.nhm.ku.edu%3E"
+       TITLE="Maintaining datbases">COLWELL at UCONNVM.UCONN.EDU
+       </A><BR>
+    <I data-pagefind-meta="date">Fri Dec  1 11:27:51 CST 1995</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="053300.html">pinned insect databasing (was: Maintaining databases)
+</A></li>
+        <LI>Next message: <A HREF="053299.html">Maintaining datbases
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#17507">[ date ]</a>
+              <a href="thread.html#17507">[ thread ]</a>
+              <a href="subject.html#17507">[ subject ]</a>
+              <a href="author.html#17507">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>1995</span><!--beginarticle-->
+<PRE>Doug Yanega wrote, regarding my discussion of specimen det updating
+using barcodes:
+
+&gt;<i>I've noted in the past that the protocol in step 1 [including a barcode
+</I>&gt;<i>on each specimen during the preparation process] is not the same as
+</I>&gt;<i>the protocol for [snip] insect specimens in a museum. A pinned ALAS
+</I>&gt;<i>insect specimen apparently has a barcode label there on top where one
+</I>&gt;<i>can read it or scan it easily. A museum specimen will not, unless one
+</I>&gt;<i>has gone to the trouble of removing the 2-5 labels already there,
+</I>&gt;<i>putting the bar code label on top, and then replacing the original
+</I>&gt;<i>labels (running risks of both losing or damaging some of the original
+</I>&gt;<i>labels as well as damaging the specimen). Has anyone on this
+</I>&gt;<i>newsgroup actually taken already-identified pinned museum
+</I>&gt;<i>specimens and added barcodes to them? [Snip] An upside-down code
+</I>&gt;<i>label is a problem even if NOT bar-coded, for this same reason, and
+</I>&gt;<i>also because if one then gets a request for, say, &quot;specimen 00003478&quot;
+</I>&gt;<i>there is no good way to make a quick visual search.
+</I>
+Project ALAS and everyone else I know that uses barcodes for pinned
+material puts them upside down on the bottom of the label stack, for
+new or old specimens. (In fact, we have many pre-ALAS,  older specimens
+in the ALAS working collection at La Selva, to which barcodes were
+added as they were accessioned.) Yes, putting the label on the bottom of
+the stack means you have to handle each specimen to scan them into a
+database.
+
+But consider these facts: for newly prepared material, you have to handle
+each specimen in the storage process anyway; in the protocol I outlined
+in my last message, the records are created before adding the barcode to
+the specimen, but alternatively, you could just pass it under the scanner
+in the process of placing it in the unit tray for storage. When a specialist
+visits your collection and sorts specimens into groups for identification
+or re-identification, they must be handled anyway; just scan them as
+they are taken out of storage for study (to pull up the records) and again
+as they are replaced in the collection (to update the records). To make a
+loan, you have to handle each specimen anyway; just scan them as they
+go into the shipping tray/box, or back into storage for a return.
+
+In short, all these key tasks involve removing specimens, one by one,
+from storage and handling them anyway. If someone wants to see
+&quot;specimen 00003478,&quot; let's say based on something in the database
+record, there are two ways a database application can help. First, as
+mentioned by Norm Johnson, the Specimen record can include information
+on where to find the specimen. (The Biota database management app has
+a field called &quot;Storage,&quot; and other re-namable fields could be used if
+more than one is needed.)
+
+Second, consider the following preparation protocol for new material: (1)
+line up a series of N newly-pinned specimens from a single collection-
+event. (2) Create Specimen records for the N specimens, linked to a
+record for that Collection-Event, using the first and last barcode in the
+sequence (if your application can do this, as Biota does), or one-by-one.
+(3) Print out Locality labels directly from the database, with the unique
+barcode number *on each locality label.* (Biota does this as an option,
+for pin labels as well as slide, vial, and herbarium labels.) (4) Place the
+locality label in the standard, top position, then the corresponding
+barcode upside down beneath it. Now you can scan a unit tray visually,
+and find a specimen by specimen code (number).
+
+Three caveats: (1) This is no help for old specimens, which of course I
+agree should never have old labels removed. (2) Unless matters have
+changed recently, there is no consensus that the laser printed pin labels
+are sufficiently durable for the ages. (In fact, ALAS does not use them, in
+spite of Biota's capability to produce them; we do print and apply slide
+labels with specimen numbers using precisely the above protocol,
+however.) But this will surely change. (3) You have to take the barcode
+off and put it back on again to add a determination (or other) additional
+label). Since the barcodes in use are tough polyester, they survive this
+well physically, but the chance of mixing them up among specimens does
+exist.
+
+A note on barcodes and manually entered specimen codes (numbers):
+Barcode readers are simply an alternative, parallel input device to the
+keyboard. Specimen database management systems (Biota included) also
+accept *manual* keyboard entry for any field that can accept a barcode;
+barcodes are in no sense required.
+
+======================================================
+Robert K. Colwell
+Department of Ecology and Evolutionary Biology
+University of Connecticut, U-42
+Storrs, CT 06269-3042
+=====================
+E-mail <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">colwell at uconnvm.uconn.edu</A>
+***PLEASE NOTE THE NEW AREA CODE for northern. CT: 860***
+Voice (860) 486-4395
+Fax (860) 486-3790
+
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="053300.html">pinned insect databasing (was: Maintaining databases)
+</A></li>
+	<LI>Next message: <A HREF="053299.html">Maintaining datbases
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#17507">[ date ]</a>
+              <a href="thread.html#17507">[ thread ]</a>
+              <a href="subject.html#17507">[ subject ]</a>
+              <a href="author.html#17507">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

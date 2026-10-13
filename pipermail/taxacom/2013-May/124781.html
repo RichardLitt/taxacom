@@ -1,0 +1,187 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Data quality of aggregated datasets
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-May/124781.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Data quality of aggregated datasets</H1>
+    <B data-pagefind-meta="author">Dean Pentcheff</B>
+    pentcheff at gmail.com<BR>
+    <I data-pagefind-meta="date">Tue May  7 14:35:09 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="124780.html">[Taxacom] Data quality of aggregated datasets
+</A></li>
+        <LI>Next message: <A HREF="124782.html">[Taxacom] Asking a paper
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124781">[ date ]</a>
+              <a href="thread.html#124781">[ thread ]</a>
+              <a href="subject.html#124781">[ subject ]</a>
+              <a href="author.html#124781">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>I agree. I see those &quot;elaborate best practices&quot; (as encoded by Chapman &amp;
+Wieczorek in the Geomancer document) as a codification of
+well-throught-through rules of thumb that can be applied in the absence of
+other information. The key (in my mind) is that the &quot;objective, and very
+precise&quot; estimates always yield to additional information.
+
+In your example, the critical piece of additional information is
+&quot;campground&quot;. If the hypothetical label was just &quot;4 mi E Logan&quot;, I don't
+think you could do much better than the automatic estimated location. But
+&quot;campground 4 mi E Logan&quot; lets you (yes you, an expert :) snuffle around
+for that feature, find it, assess whether it's likely to be the campground
+in question (how many other campgrounds are in that area?), and if it seems
+reasonable, assign that as the high-probability collection location.
+
+-Dean
+-- 
+Dean Pentcheff
+pentcheff at gmail.com
+dpentche at nhm.org
+
+
+On Tue, May 7, 2013 at 11:37 AM, Doug Yanega &lt;dyanega at ucr.edu&gt; wrote:
+
+&gt; On 5/7/13 5:15 AM, Mary Barkworth wrote:
+&gt; &gt; The basic reason that the data will always be &quot;raw&quot; is that we have no
+&gt; reliable means of communicating with the dead. When a label says Logan,
+&gt; Utah, I am told to use the city's current boundaries. Technically, I could
+&gt; look up its boundaries at the time the specimen was collected but perhaps
+&gt; all the collector was doing was naming the nearest settlement that he or
+&gt; she knew of, or the postal district, or home based for that day or week.
+&gt; Moreover no one is willing to pay the herbarium for the additional work
+&gt; required to check into alternative estimates. Actually, they are not
+&gt; willing to pay for anything; we (like all collections) provide the data for
+&gt; free. When it comes to collection data, we can adhere to standard protocols
+&gt; but all that provides are estimates calculated in standard way. Whether
+&gt; that is good enough depends on the question being addressed and the
+&gt; organism(s) involved. Data users should always evaluate the data they wish
+&gt; to use - and be grateful for the quantity being made available (gratitude
+&gt; can be expressed by informing the head of the collection of any errors that
+&gt; need fixing, mention in the acknowledgements, and an email to the head of
+&gt; the collection who may not otherwise know that its records have been used).
+&gt; &gt;
+&gt; This is an example of how different standards and protocols make a
+&gt; difference. In our database, we accept the USGS GNIS georef placement of
+&gt; Logan, Utah as 41 44 08 N, 111 50 04 W. However, we use an error radius
+&gt; of 10 km around that point. This is an *arbitrary* error radius used to
+&gt; account for the very real potential that someone whose label simply said
+&gt; &quot;Logan&quot; could have been outside of the boundary of the city proper
+&gt; (which, incidentally, has a radius of around 8 km, if one uses a
+&gt; satellite image to determine the extent of the densely populated zone).
+&gt; The decision to use a 10 km radius is part of our in-house standard
+&gt; protocol for contending with &quot;populated place&quot; category names, which
+&gt; uses several criteria, virtually all of which include the process
+&gt; &quot;...and then round UP&quot;. This does not require any investment of time or
+&gt; energy to look for alternative estimates; we simply opt to play things
+&gt; conservatively, and use the largest minimum error radius (even though
+&gt; that sounds like an oxymoron), to avoid false precision while giving
+&gt; *realistic* accuracy. To further clarify, if (hypothetically) the next
+&gt; nearest city was only 10 km from Logan, then the largest minimum error
+&gt; radius for &quot;Logan&quot; would extend to roughly halfway between the two
+&gt; cities (5 km), because the protocol assumes that a person collecting in
+&gt; between two towns will make labels referring to the nearest one, if they
+&gt; do not otherwise specify displacement.
+&gt;
+&gt; A few rules of thumb like these can serve to make georeferencing easier
+&gt; and more practical than the rather elaborate set of &quot;best practices&quot;
+&gt; that Dean Pentcheff linked here; those &quot;best practices&quot; are spectacular
+&gt; IF you can afford the time and energy and IF you are really, really
+&gt; focused on precision and objectivity rather than accuracy (especially if
+&gt; you want a computer to do your work for you). This is linked to the
+&gt; desire of the authors of that set of guidelines to automate the process
+&gt; of georeferencing, while developing the Biogeomancer georeferencing
+&gt; tool. But guidelines that are intended to work for automation do not
+&gt; necessary correspond to protocols that are intended for a human being
+&gt; using, say, Google Earth. A pertinent example is the label in our
+&gt; collection that reads &quot;campground 4 mi E Logan&quot;. Biogeomancer uses the
+&gt; GNIS point I mentioned above as the origin and then measures exactly 4
+&gt; miles from that, and draws a rather large error radius around the
+&gt; resulting point (based on the theoretical possibility that the angle of
+&gt; displacement could have been anything between NE and SE). Very
+&gt; objective, and very precise - and utterly wrong; the campground in
+&gt; question is not within this circle, because most of that circle is
+&gt; inside the city limits of Logan, which is more than 4 miles in radius. A
+&gt; human-powered protocol would start measuring from the eastern edge of
+&gt; the city, rather than its center, and measure actual distances along
+&gt; roads, rather than fixed compass directions in straight lines. A human
+&gt; using Google Earth can see that there is indeed a campground along the
+&gt; highway almost exactly four miles east of the mouth of Logan Canyon,
+&gt; which abuts the eastern edge of the city, and one can plot that point
+&gt; with a very small error radius (basically, the limits of the campground
+&gt; itself) - which is in fact both more accurate AND more precise than the
+&gt; &quot;objective&quot; protocol. The reason I bother to go through this example in
+&gt; such detail is the end result: a data provider using an automated georef
+&gt; tool will give a point that is 5 miles away from the actual collecting
+&gt; site, AND in a completely different habitat. That is an extremely
+&gt; significant error, resulting solely from the reliance on automation -
+&gt; two data providers starting with original data of the exact same quality
+&gt; (a label reading &quot;campground 4 mi E Logan&quot;) and following different
+&gt; &quot;standard protocols&quot; will produce data sets of completely *different*
+&gt; quality. I doubt that data aggregators or users are paying any attention
+&gt; to WHAT the georeferencing protocols are behind the datasets they are
+&gt; using.
+&gt;
+&gt; Sincerely,
+&gt;
+&gt; --
+&gt; Doug Yanega      Dept. of Entomology       Entomology Research Museum
+&gt; Univ. of California, Riverside, CA 92521-0314     skype: dyanega
+&gt; phone: (951) 827-4315 (disclaimer: opinions are mine, not UCR's)
+&gt;               <A HREF="http://cache.ucr.edu/~heraty/yanega.html">http://cache.ucr.edu/~heraty/yanega.html</A>
+&gt;    &quot;There are some enterprises in which a careful disorderliness
+&gt;          is the true method&quot; - Herman Melville, Moby Dick, Chap. 82
+&gt;
+&gt;
+&gt;
+&gt; _______________________________________________
+&gt; Taxacom Mailing List
+&gt; Taxacom at mailman.nhm.ku.edu
+&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt;
+&gt; The Taxacom Archive back to 1992 may be searched with either of these
+&gt; methods:
+&gt;
+&gt; (1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt;
+&gt; (2) a Google search specified as:  site:
+&gt; mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+&gt;
+&gt; Celebrating 26 years of Taxacom in 2013.
+&gt;
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="124780.html">[Taxacom] Data quality of aggregated datasets
+</A></li>
+        <LI>Next message: <A HREF="124782.html">[Taxacom] Asking a paper
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124781">[ date ]</a>
+              <a href="thread.html#124781">[ thread ]</a>
+              <a href="subject.html#124781">[ subject ]</a>
+              <a href="author.html#124781">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

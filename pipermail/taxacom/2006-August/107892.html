@@ -1,0 +1,187 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Authorities for trinomials
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Authorities%20for%20trinomials&In-Reply-To=%3CD2E4730FE8F9E54A8379EF1E2B82E15B76BC6B%40ua-mail5.asnet.ua-net.ua.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="107891.html">
+   <LINK REL="Next"  HREF="107873.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2006-August/107892.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Authorities for trinomials</H1>
+    <B data-pagefind-meta="author">Ginzbarg, Steve</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Authorities%20for%20trinomials&In-Reply-To=%3CD2E4730FE8F9E54A8379EF1E2B82E15B76BC6B%40ua-mail5.asnet.ua-net.ua.edu%3E"
+       TITLE="[Taxacom] Authorities for trinomials">sginzbar at biology.as.ua.edu
+       </A><BR>
+    <I data-pagefind-meta="date">Sun Aug 27 15:31:44 CDT 2006</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="107891.html">[Taxacom] Authorities for trinomials
+</A></li>
+        <LI>Next message: <A HREF="107873.html">[Taxacom] Guide to Best Practices for Georeferencing
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#107892">[ date ]</a>
+              <a href="thread.html#107892">[ thread ]</a>
+              <a href="subject.html#107892">[ subject ]</a>
+              <a href="author.html#107892">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2006</span><!--beginarticle-->
+<PRE>Richard Pyle wrote: 
+
+&gt;<i> ... in the case of 
+</I>&gt;<i> invalid/unavailable names, &quot;keeping track&quot; is certainly 
+</I>&gt;<i> assisted by the inclusion of authorships in some 
+</I>&gt;<i> standardized/conventional way -- which brings us back to the 
+</I>&gt;<i> issue that originally started this thread.
+</I>
+To summarize our progress on resolving Richard Zander's original
+question regarding the practice of inserting the authorities of
+binomials after the species name in trinomials in addition to the
+authority of the trinomial:
+
+The ICBN does not consider authors to be part of a taxon name. The Code
+has rules regarding names and rules regarding the citation of authors of
+names. There are recommendations on the full citation of names + authors
+including citation of invalid names, General recommendations on citation
+(Rec. 50A-F). However, the code takes no stand on the question Richard
+raised.
+
+Conventions differ on the inclusion of authors with names. Mark Skinner
+has pointed out that IPNI, GRIN and the USDA PLANTS database include
+binomial authors of trinomials while ITIS does not.
+
+Richard Zander wrote: 
+
+&gt;<i> Why did I start this thread?
+</I>
+Whether the authors are included or not makes little difference to a
+human reading printed text. The issue has taken on more importance now
+that herbaria are beginning to provide their specimen data including the
+scientific name to common data portals such as GBIF. A computer search
+on 
+
+Aus bus var. cus Miller
+
+Will not find specimens determined as
+
+Aus bus Jones var. cus Miller
+
+The only standard so far to set a convention on inclusion of authors in
+addition to the authors of the whole name is the Taxon Concept Transfer
+Schema (TCS). The TCS, <A HREF="http://tdwg.napier.ac.uk,">http://tdwg.napier.ac.uk,</A> voted a TDWG standard
+in 2005, includes &quot;author given only for the lowest nomenclatural rank&quot;
+in the description of the Simple element, ScientificName complex type
+(TCSv1.01).
+
+In the current draft of Darwin Core 2 it is recommended that authors be
+included in the ScientificName element. The question of providing
+binomial authors for trinomials is not addressed. There has been a
+recommendation to omit authors altogether.
+
+The Access to Biological Collections Data (ABCD) schema does not have an
+element for the full scientific name string specific for botany. The
+general element says that the name should be &quot;preferrably formed in
+accordance with a Code of Nomenclature, i. e. a monomial, bionomial, or
+trinomial plus author(s) or author team(s)...&quot;
+(<A HREF="http://www.bgbm.org/TDWG/CODATA/Schema/,">http://www.bgbm.org/TDWG/CODATA/Schema/,</A> Schema viewer link, Complex
+type: Taxon identified/ScientificName/FullScientificNameString).
+
+ABCD does have elements for the atomized Botanical Name. Darwin Core has
+atomized general scientific name elements. Both only have a place to
+record the authors of the whole name.
+
+What is GBIF doing to allow retrieval of specimen data for a species
+given the inconsistent inclusion of authors in the scientific name? They
+have two types of searches available the advanced search,
+<A HREF="http://afroditi.gbif.org:8080/pres/PresentationServlet?action=home,">http://afroditi.gbif.org:8080/pres/PresentationServlet?action=home,</A> and
+indexed searches, 'Browse' and 'Search' from <A HREF="http://www.gbif.org/.">http://www.gbif.org/.</A> The
+advanced search queries the name just as it was provided by
+participating herbaria (w/ authors or w/o authors). Results are
+available as soon as herbaria provide them. The index searches search
+cleaned up data cached by GBIF. The data are infrequently updated.
+
+The advanced search can be searched by parts of the atomized name rather
+than by the full scientific name, e.g. Genus = Aus AND Species = bus AND
+Subspecies = cus AND ScientificNameAuthor = Miller. There is only one
+atomized field for the author of the name so this search should retrieve
+both
+
+ScientificName                   Genus Species Subspecies
+ScientificNameAuthor
+Aus bus var. cus Miller          Aus   bus     cus        Miller
+Aus bus Jones var. cus Miller    Aus   bus     cus        Miller
+
+That is, if the atomized fields are provided. ScientificName is required
+but the atomized fields are not. This also assumes that the author
+abbreviations follow Brummit.
+
+The atomized search is not as convenient as a full scientific name
+search which most search engines, e.g. TROPICOS use. Perhaps what is
+needed is a required field ScientificName field for which no authors are
+to be included at all. A second field VerbatimIdentification field could
+show all the authors which the determiner of the specimen included along
+with any identification qualifiers, e.g. &quot;cf.&quot; or &quot;aff.&quot; A query might
+return more specimens than one was interested in, e.g. homonyms, but the
+records could be visually inspected and the unwanted records weeded out.
+
+I think asking herbaria to include a third scientific name fields with
+authors but no identification qualifiers and with no binomial authors
+provided for trinomials might be asking alot of data providers. I don't
+think it will be easy to reach a concensus on whether or not the
+binomial authors should be included either.
+
+Will GUIDs make the issue a mute point? We'll have to wait and see.
+There may always be some names that herberia wish to provide that are
+not on the global taxon lists which will still need to be provided as
+text.
+
+-Steve Ginzbarg
+ 
+Steve Ginzbarg, Collections Manager
+Herbarium (UNA)
+Department of Biological Sciences
+Box 870345
+The University of Alabama
+Tuscaloosa, AL 35487-0345
+(205) 348-1829, FAX: (205) 348-6460
+<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">sginzbar at biology.as.ua.edu</A>
+<A HREF="http://bama.ua.edu/~bsc/herbarium/">http://bama.ua.edu/~bsc/herbarium/</A>
+
+_______________________________________________
+Taxacom mailing list
+<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="107891.html">[Taxacom] Authorities for trinomials
+</A></li>
+	<LI>Next message: <A HREF="107873.html">[Taxacom] Guide to Best Practices for Georeferencing
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#107892">[ date ]</a>
+              <a href="thread.html#107892">[ thread ]</a>
+              <a href="subject.html#107892">[ subject ]</a>
+              <a href="author.html#107892">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

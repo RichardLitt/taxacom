@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] HHDB: hemihomonyms
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20HHDB%3A%20hemihomonyms&In-Reply-To=%3C20100117210844.4AFE324A3437%40smtprelay03.hostedemail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="115128.html">
+   <LINK REL="Next"  HREF="115131.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2010-January/115130.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] HHDB: hemihomonyms</H1>
+    <B data-pagefind-meta="author">Pat LaFollette</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20HHDB%3A%20hemihomonyms&In-Reply-To=%3C20100117210844.4AFE324A3437%40smtprelay03.hostedemail.com%3E"
+       TITLE="[Taxacom] HHDB: hemihomonyms">pat at lafollette.com
+       </A><BR>
+    <I data-pagefind-meta="date">Sun Jan 17 15:08:32 CST 2010</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="115128.html">[Taxacom] HHDB: hemihomonyms
+</A></li>
+        <LI>Next message: <A HREF="115131.html">[Taxacom] HHDB: hemihomonyms
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#115130">[ date ]</a>
+              <a href="thread.html#115130">[ thread ]</a>
+              <a href="subject.html#115130">[ subject ]</a>
+              <a href="author.html#115130">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2010</span><!--beginarticle-->
+<PRE>The solution to the problem of appropriately indexing hemihomonyms 
+lies squarely in the indexer's court.  (Its 250 years too late for a 
+taxonomic solution.  That ship has already sailed.)
+
+An automated solution is possible, however, for projects like BHL if 
+not for Google.  It requires four coordinated steps.  (This would of 
+course be a future refinement, once the dust of BHL's current 
+&quot;scanning phase&quot; has settled and everyone's had a chance to catch 
+their breath. But it would not be premature to start thinking about 
+and making provision for its future implementation).
+
+1) uBio's names database must accomodate the Code or Codes under 
+which each generic name has been used.  This field can be populated 
+initially by looking up the names in discipline specific 
+nomenclators. (Various filters and some manual editing could then be 
+applied to refine the results.) &quot;0&quot; (Undetermined / multiple) would 
+be a valid value for Code. NameBank queries must return this information.
+
+2) BHL needs to code their titles (volumes) as botanical, zoological, 
+bacteriological, mixed, or not taxonomic.  This is not as big a task 
+as it might seem as entire runs of journals are often exclusively 
+botanical or zoological.  While at it, the works might also be coded 
+by discipline: entomology, ornithology, malacology, etc.
+
+3) The BHL NamePage index must include a field for recording 
+Code.  If the Code returned by NameBank for a particular name is &quot;0&quot;, 
+it would be resolved first by checking the volume code.  If volume 
+code is &quot;mixed,&quot; then by checking other names on the same page. If 
+resolved names on the page are all plants, for example, it would be a 
+reasonable assumption that the undetermined name is also a plant and 
+code it as such.  Experiment would be necessary to determine whether 
+including preceding and following pages in the analysis would be 
+helpful.  Some names would have Code left unresolved.
+
+4) Finally, the BHL Advanced Search option will need to allow 
+taxonomic searches to be restricted by Code, and whether unresolved 
+names should be included or excluded.
+
+Pat
+
+At 07:26 AM 1/17/2010, Francisco Welter-Schultes wrote:
+&gt;<i>If there would at least be a rule that from now on new genera shall not be
+</I>&gt;<i>established in one kingdom if the name was already established in another
+</I>&gt;<i>one.
+</I>&gt;<i>
+</I>&gt;<i>I have proposed such a modification for the next edition of the ICZN Code,
+</I>&gt;<i>but there has been no feedback. Seems that no zoologist has ever used
+</I>&gt;<i>botanical names or has ever worked with internet search engines.
+</I>&gt;<i>
+</I>&gt;<i>Francisco
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>_______________________________________________
+</I>&gt;<i>
+</I>&gt;<i>Taxacom Mailing List
+</I>&gt;<i><A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i><A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;<i>
+</I>&gt;<i>The Taxacom archive going back to 1992 may be searched with either 
+</I>&gt;<i>of these methods:
+</I>&gt;<i>
+</I>&gt;<i>(1) <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+</I>&gt;<i>
+</I>&gt;<i>Or (2) a Google search specified 
+</I>&gt;<i>as:  site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+</I>
+Patrick I LaFollette
+Research Associate in Malacology
+Natural History Museum of Los Angeles County
+<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">pat at lafollette.com</A> 
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="115128.html">[Taxacom] HHDB: hemihomonyms
+</A></li>
+	<LI>Next message: <A HREF="115131.html">[Taxacom] HHDB: hemihomonyms
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#115130">[ date ]</a>
+              <a href="thread.html#115130">[ thread ]</a>
+              <a href="subject.html#115130">[ subject ]</a>
+              <a href="author.html#115130">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

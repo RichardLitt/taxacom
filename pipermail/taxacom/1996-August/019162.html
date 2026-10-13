@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> DCA
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20DCA&In-Reply-To=%3Cmailman.5590.1157126683.2564.taxacom%40mailman.nhm.ku.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="102312.html">
+   <LINK REL="Next"  HREF="054954.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1996-August/019162.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">DCA</H1>
+    <B data-pagefind-meta="author">James Lyons-Weiler</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20DCA&In-Reply-To=%3Cmailman.5590.1157126683.2564.taxacom%40mailman.nhm.ku.edu%3E"
+       TITLE="DCA">weiler at ERS.UNR.EDU
+       </A><BR>
+    <I data-pagefind-meta="date">Tue Aug  6 07:56:35 CDT 1996</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="102312.html">FW: Nov. Friburg -- Where is it?
+</A></li>
+        <LI>Next message: <A HREF="054954.html">DCA
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#19162">[ date ]</a>
+              <a href="thread.html#19162">[ thread ]</a>
+              <a href="subject.html#19162">[ subject ]</a>
+              <a href="author.html#19162">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>1996</span><!--beginarticle-->
+<PRE>On Tue, 6 Aug 1996, Utteridge Timothy Michael Arthur wrote:
+
+&gt;<i> Dear Taxacomers,
+</I>&gt;<i>
+</I>&gt;<i> Having read Parnell &amp; Waldren's paper about Detrended correspondence
+</I>&gt;<i> analysis (Taxon 45(1): 71-84. 1996) I was wondering if anyone has any
+</I>&gt;<i> experience of using DCA with taxonomic data. Parnell &amp; Waldren list only
+</I>&gt;<i> advantages, there must be a few disadvantages or problems with using DCA.
+</I>&gt;<i> Comments on 'friendliness' of computer programs would be appreciated.
+</I>&gt;<i>
+</I>&gt;<i> Tim Utteridge
+</I>&gt;<i> Dept. of Ecology &amp; Biodiversity
+</I>&gt;<i> University of Hong Kong
+</I>&gt;<i>
+</I>&gt;<i> Tel: +852 2857 9912
+</I>&gt;<i> Fax: +852 2559 5984
+</I>&gt;<i>
+</I>There are two opinions on DCA: the second axis arch should be flattened,
+or you shouldn't use an algorithm that causes such non-independence
+between axes.  Wartenberg et al. 1987 (Am Nat 129:434-444) point to some
+negatives, and see numerous references in Tausch et al. 1995 for other
+detractors.
+
+A more general issue is what do the results of any ordination mean, and
+how much confidence can one place in the results?  Ordination science does
+not use inferential statistics, so true confidence intervals ae hard to
+come by.  So far as what the results mean, Tausch et al. (1995) J. Veg.
+Sci 6:897-902 have shown that any software package that conducts
+ordination analyses like PCA, DCA, and classification (cluster) analyses
+such as UPGMA or TWINSPAN have a MAJOR problem: their results depend on
+data entry order (which species comes first in the matrix, or which
+character is character #1).  That means that the software may settle on
+a different answer depending on a completelty arbitrary characteristic of
+the data.  The problem is due to the fact that multidimensional analyses
+are computationally complex, so the programmers have to use various
+estimation steps for eigenvalues.  If they didn't, the programs would take
+much longer to give an answer.
+
+So, before settling on any classification or ordination with your data, it
+is wise to randomize it a couple of hundred times or so to see what kind
+of diffferent results you'd get with different entry order.  So much time
+is spent collecting data of all types; we shouldn't produce or accept
+potentially arbitrary results.
+
+James
+
+Tausch, R.J., D.A. Charlet, D.A. Weixelman, and D.C. Zamudio. 1995.
+Patterns of ordination and classification instability resulting from
+changes in input data order.  J.Veg. Sci. 6:897-902.
+
+Robin Tausch can be sent reprint requests at
+
+USDA Forest Service
+Intermountain Research Station
+920 Valley Road
+Reno, NV 89512 USA
+_______________________________________________________________________________
+
+  \  /   /    \  /           JAMES LYONS-WEILER           ______________
+   \/   /      \/                                        |..............|
+    \  /       /                                         |..............|
+     \/       /              DOCTORAL PROGRAM IN         |..............|
+      \      /               ECOLOGY, EVOLUTION, AND     |...***........|
+       \    /                CONSERVATION BIOLOGY        |..*****.......|
+        \  /                                             |.******.......|
+         \/                  1000 VALLEY ROAD/186        |********......|
+    ______________           THE UNIVERSITY OF            --------------
+   | will perform |          NEVADA, RENO
+   |  statistical |          RENO, NEVADA 89512-0013
+   | phylogenetic |
+   | analyses for |         &quot;(Biology) is not religion; if it were, we'd
+   |    food      |          have a much easier time raising money.&quot;
+    --------------                       -Leon Lederman
+_______________________________________________________________________________
+
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="102312.html">FW: Nov. Friburg -- Where is it?
+</A></li>
+	<LI>Next message: <A HREF="054954.html">DCA
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#19162">[ date ]</a>
+              <a href="thread.html#19162">[ thread ]</a>
+              <a href="subject.html#19162">[ subject ]</a>
+              <a href="author.html#19162">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

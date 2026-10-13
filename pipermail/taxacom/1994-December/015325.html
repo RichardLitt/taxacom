@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Nomenclatural Databases
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Nomenclatural%20Databases&In-Reply-To=%3Cmailman.1753.1157126640.2564.taxacom%40mailman.nhm.ku.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="051118.html">
+   <LINK REL="Next"  HREF="051117.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1994-December/015325.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Nomenclatural Databases</H1>
+    <B data-pagefind-meta="author">cgh</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Nomenclatural%20Databases&In-Reply-To=%3Cmailman.1753.1157126640.2564.taxacom%40mailman.nhm.ku.edu%3E"
+       TITLE="Nomenclatural Databases">cgh at MAILSERVER.NHM.AC.UK
+       </A><BR>
+    <I data-pagefind-meta="date">Thu Dec 22 10:07:55 CST 1994</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="051118.html">Nomenclatural Databases
+</A></li>
+        <LI>Next message: <A HREF="051117.html">Nomenclatural Databases
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#15325">[ date ]</a>
+              <a href="thread.html#15325">[ thread ]</a>
+              <a href="subject.html#15325">[ subject ]</a>
+              <a href="author.html#15325">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>1994</span><!--beginarticle-->
+<PRE>From: Charles Hussey, Data Manager, Department of Zoology, The Natural
+History Museum, London.
+
+A Research Leader in our Microbiology Section is to begin a Data Modelling
+Project and has asked me to circulate TAXACOM Subscribers. If you wish to
+respond could you do so direct to Dr. Dave Roberts : <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">dmr at nhm.ac.uk</A>
+
+The text of his message follows:
+
+Hello,
+We have some funding to begin work on a nomenclatural database. The problem
+we want to address is how to handle the instability (synonymy and re-
+classification) and the tracking of the history of names. Linked to this is
+the issue of supporting multiple higher classification systems, which is an
+acute problem in fields such as the protista at present.
+
+If a suitable implementation can be designed, we will be able to recover
+lists of &quot;what species are in genus X&quot; and &quot;what genera are in Order Y
+sensu Jones&quot;, including all synonyms and a nomenclatural history. Another
+question that can be addressed is whether a name is valid or available.
+The database will also be able to provide higher taxonomic structure and
+authorities for genus-species names under a chosen system (again, in the
+protista there are several systems in current use).
+
+This is important for us in being able to search our collections where
+many items are listed under the name by which they were deposited, not the
+name which is currently valid; again an acute problem in groups such as
+the protists.
+
+The work we have done to date has led us to believe that an object-
+orientated approach (C++) would be most likely to succeed, but it is
+possible that languages such as Prolog might be better. The issue that has
+led to this conclusion is the recursive nature of a synonymy query. For a
+given species, you recover a number of synonyms; for each synonym you must
+perform the same enquiry and so on until the list of names  does not
+recover any new members. Further, the system should check that the original
+name itself is still nomenclaturally valid (has not been submerged).
+Complications occur when part of a set described under one name are moved
+to another name and the original name remains sensu lato or sensu stricto.
+The information comprises of comparable volumes of items (names and other
+textual data) and links between those data. The links can be stated
+explicitly, of course, but the maintenance of such linkage sets could
+become unreasonably demanding as the volume of information grows. There are
+thought to be some 1.8 million names, with an estimate of 20% synonymy.
+
+The trial group is the Protists (see for example Corliss, 1994. Acta.
+Protozoologica 33: 1-51). If we can devise a model capable of handling this
+degree of taxonomic instability, it should not prove a major difficulty to
+extend it to any other group.
+
+We would like to hear of any work that has been done in this area (e.g.
+Beach et al. 1993. pp241-256, in R. Fortuner (ed.) Advances in Computer
+Methods for Systematic Biology. John Hopkins University Press). More
+importantly, are we trying to re-invent the wheel? If not, is anyone
+interested in collaborating on this problem?
+Charles Hussey,
+Department of Zoology, The Natural History Museum,
+Cromwell Road, London SW7 5BD, United Kingdom.
+Tel: +44 (0)71 938 8921 [Direct Line]; Fax: +44 (0)71 938 9158
+JANET: <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">cgh at uk.ac.nhm</A>
+INTERNET: <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">cgh at nhm.ac.uk</A>
+&#255;&#255;    Nomenclatural Databases                                                 &#171;
+
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="051118.html">Nomenclatural Databases
+</A></li>
+	<LI>Next message: <A HREF="051117.html">Nomenclatural Databases
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#15325">[ date ]</a>
+              <a href="thread.html#15325">[ thread ]</a>
+              <a href="subject.html#15325">[ subject ]</a>
+              <a href="author.html#15325">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

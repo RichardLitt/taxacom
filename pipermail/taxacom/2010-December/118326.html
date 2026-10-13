@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Estimation in GPS positioning
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2010-December/118326.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Estimation in GPS positioning</H1>
+    <B data-pagefind-meta="author">Curtis Clark</B>
+    lists at curtisclark.org<BR>
+    <I data-pagefind-meta="date">Sat Dec  4 19:15:54 CST 2010</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="118325.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+        <LI>Next message: <A HREF="118327.html">[Taxacom] Estimation in GPS positioning
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#118326">[ date ]</a>
+              <a href="thread.html#118326">[ thread ]</a>
+              <a href="subject.html#118326">[ subject ]</a>
+              <a href="author.html#118326">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2010</span><!--beginarticle-->
+<PRE>On 12/4/2010 4:41 PM, Bob Mesibov wrote:
+&gt; You could be even more exact and say that the estimates are different because the range of the first is 697473-699473, and the second range is 697000-699000. I'm aware of that arithmetical difference. However, the two ranges are not comparable. 697473 is a number known to 6 significant figures, while 697000 is a number known to 3 significant places. You are putting the number 699470 first into a box where it fits with all its digits, and second into a box where it should be rounded off to 699000. Not fair.
+But we're estimating an integer. There exists an exact, correct value; 
+it's not a measurement. If we knew that value, we'd never round it off 
+(and see below).
+&gt; &quot;+/- 1000&quot; is not a statement of error around a mean. It is an uncertainty, plain and simple.
+If uncertainty is not error, it has no meaning statistically. It can't 
+be used for inference, and no probability can be associated with it.
+&gt; The Alaska population number comes from Wikipedia and, ultimately, from the Census. It is not a mean, it is a head count. The +/- 1000 figure I added is my guess, for purposes of argument, at how reliable that number is. You can attach an uncertainty to any estimate, whether a mean or not.
+Actually, according to the Wikipedia article you cited, &quot;An important 
+caveat is that significant figures apply only to/measured/values.&quot; It 
+even lists integers as something that should not have significance 
+arithmetic applied. Nevertheless, one could count the people in Alaska 
+multiple times, yielding a sampling distribution and a standard error of 
+the mean, so that you could state with some assurance that the 
+population has probability x of being between y and z.
+&gt; &quot;Dusty was writing about points, but every spatial coordinate is an ellipse which includes its error. We can specify the ellipse by rounding, or by some other indicator of error, but we probably shouldn't use both.&quot;
+&gt;
+&gt; That's a very good argument, but it doesn't quite work for spatial data, for a reason mentioned (I think) by Rich Pyle. If I round a lat/long to the nearest second, that rounding implies a certain number of metres' uncertainty. For latitude, it's +/- 15 m; for longitude, it's roughly that number at the Equator and decreases towards the Poles. It is a coincidence that +/- 15 m is the RMS 'accuracy' for some GPS units. The real uncertainty could be larger and should be stated if it is. Again, I use +/- 25 m for single-point sampling because by going out to 25 m I am more likely to be including the true position than with 15 m (which, remember, is not a magical circle, but a 2/3 - 1/3 split in likelihood.) It's entirely appropriate for me to use nearest-second and +/- 25 m; it's the +/- 25 m figure that counts, not the +/- 15 m or less implied by the rounding.
+RMS &quot;accuracy&quot; implies a probability distribution, hence error. But in 
+either case, you are talking about a &quot;fuzzy point&quot;, which can be 
+idealized to an ellipse. If you add an uncertainty value to a rounded 
+number, you are broadening the ellipse. If either value alone is a good 
+measure of uncertainty, combining them throws away actual precision.
+&gt; Absolutely correct. But what Rusty was trying to do was compare the estimate points with the true position (i.e., assess accuracy), which is unknown in the field. I thought I made that clear when I wrote 'It is just as likely that a rounded-off position will be closer to the true position than the non-rounded-off position, as for the rounded-off position to be further away. We have no idea what is happening within the estimate.'
+I agree that Dusty's proposition doesn't hold water, and there's another 
+reason, as well: Google aerials are only crudely aligned with the datum. 
+It's interesting to go backwards in time on Google Earth and see points 
+move around in relationship to mapped roads, as a result of different 
+aerials being more, less, or not at all aligned.
+
+But at its basis, precision is about repeatability, and that's something 
+that can be dealt with statistically.
+
+-- 
+Curtis Clark                  <A HREF="http://www.csupomona.edu/~jcclark/">http://www.csupomona.edu/~jcclark/</A>
+Director, I&amp;IT Web Development                   +1 909 979 6371
+University Web Coordinator, Cal Poly Pomona
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="118325.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+        <LI>Next message: <A HREF="118327.html">[Taxacom] Estimation in GPS positioning
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#118326">[ date ]</a>
+              <a href="thread.html#118326">[ thread ]</a>
+              <a href="subject.html#118326">[ subject ]</a>
+              <a href="author.html#118326">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

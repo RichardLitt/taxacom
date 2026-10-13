@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> An overlooked (free!) sequence alignment service
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1996-February/018009.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">An overlooked (free!) sequence alignment service</H1>
+    <B data-pagefind-meta="author">Harvey E. Ballard, Jr.</B>
+    hballard at STUDENTS.WISC.EDU<BR>
+    <I data-pagefind-meta="date">Fri Feb  2 10:21:48 CST 1996</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="101164.html">Zool. records, Entomol. Abstracts, etc.
+</A></li>
+        <LI>Next message: <A HREF="053801.html">An overlooked (free!) sequence alignment service
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#018009">[ date ]</a>
+              <a href="thread.html#018009">[ thread ]</a>
+              <a href="subject.html#018009">[ subject ]</a>
+              <a href="author.html#018009">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1996</span><!--beginarticle-->
+<PRE>I assume that you are obtaining sequences for ITS or another fast-evolving
+spacer.  Before you bother spending money, I would wait to examine the
+level of difficulty you experience in aligning the sequences by hand.  In
+Viola, the sequences show the highest variability reported for species
+within a genus, but I have still had little difficulty aligning the
+sequences with confidence.  Some folks here have used SeqApp software to
+manipulate the sequences.  I simply use PAUP (we have been using the
+beta-test version, which has a few more useful features and runs faster
+than 3.1.1).  I will bet that you can do all the alignment initially--and
+maybe finally--using PAUP without the extravagant software.  Most published
+ITS papers have used visual alignment to prepare a data set for analysis.
+[Everyone has their favorite software; I'm both stingy with my time and
+money and want to know as little about computer-work as possible to get the
+desired result.  This is what I do, but I'm sure others have their own
+methods that work as well.]
+
+I should also tell you of a wonderful service now available on the World
+Wide Web (we use NetScape Navigator to get to it and now have it
+&quot;bookmarked&quot;) based on the mainframe computer of Baylor College of
+Medicine.  Via the Web you can submit a data matrix of sequences by
+&quot;cut-and-paste&quot; directly from an initial PAUP file (minus a few unnecessary
+command items).  The mainframe will accept up to 20,000 characters and give
+up to an hour of free time to analyzing your matrix with ClustalW, a
+program that aligns sequences and inserts gaps to find a matrix that yields
+the shortest generated trees.  My aligned matrix of 55 taxa and 750
+nucleotides for Viola ITS was too big, so I broke it into two halves--ITS 1
+and ITS 2--and submitted them separately.  The program did an amazing job
+of finding slightly different alignments for some troublesome taxa and,
+with slight adjustment from me afterwards, the matrix provides fewer,
+better resolved trees than it did before.
+
+My recommendation, then, would be to visually align your sequences and then
+submit the matrix as a cut-and-paste (stripping off the &quot;options&quot; commands
+of PAUP first and any trailing assumptions blocks) to the mainframe at
+Baylor College of Medicine.  The official name is &quot;BCM Search Launcher:
+Multiple Sequence Alignments&quot;.  Use ClustalW (one of the first of several
+options).  Paste the stripped-down PAUP file in the window and click the
+&quot;search&quot; button, then wait a minute or a few (go have tea if it's a big
+matrix).  The screen will reveal a new arrangement of taxa and their
+sequences when it's done.  Go to the middle of the screen--the software
+provides &quot;two&quot; matrix formats, the second is easiest to paste back into a
+PAUP file--block and copy, then close the Web site and get into PAUP,
+pasting the realigned sequences into a file.  Use the &quot;find&quot; and &quot;replace
+all&quot; edit functions to remove the &quot;&gt;&quot; symbols at the beginning of the taxon
+names and block the hard returns and remove those at the end of each line
+of sequence to make an unbroken line for each sequence (PAUP doesn't like
+hard returns).  When you've cleaned it up, go back and reinsert any
+polymorphisms and question-mark areas--ClustalW frustratingly changes these
+to &quot;?&quot; and &quot;-&quot; respectively.  Double-check your matrix for any silly
+realignments that you can judge are best modified, make a careful count of
+the new length of the aligned sequences, change the parameters on your
+realigned PAUP file, and run it to your heart's content.  It still amazes
+me that the service is free, and I've heard rumors that a recently
+published paper evaluating ClustalW's utility extolls its virtues as an aid
+to sequence alignment.
+
+So, unless your sequences are too variable--in which case the spacer you're
+using may not be suitable for the kinds of questions you might be
+asking--you shouldn't have to spend additional money when pre-alignment
+visually with PAUP (or MacClade) and submission to ClustalW with final
+editing for &quot;funnies&quot; should be perfect.
+
+--
+Harvey E. Ballard, Jr.
+Department of Botany, University of Wisconsin-Madison
+132 Birge, 430 Lincoln Drive
+Madison, WI 53706-1381
+Fax: (608) 262-7509; office phone: (608) 262-2792 (Rm. 161, Herbarium);
+Systma lab phone: (608) 262-4422
+e-mail: hballard at students.wisc.edu  OR  hbviolet at macc.wisc.edu
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="101164.html">Zool. records, Entomol. Abstracts, etc.
+</A></li>
+        <LI>Next message: <A HREF="053801.html">An overlooked (free!) sequence alignment service
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#018009">[ date ]</a>
+              <a href="thread.html#018009">[ thread ]</a>
+              <a href="subject.html#018009">[ subject ]</a>
+              <a href="author.html#018009">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Characters; interactive identification (x Delta-l)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1995-March/015875.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Characters; interactive identification (x Delta-l)</H1>
+    <B data-pagefind-meta="author">Mike Dallwitz</B>
+    miked at ENTO.CSIRO.AU<BR>
+    <I data-pagefind-meta="date">Wed Mar 29 14:06:28 CST 1995</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="099046.html">What can we do about it?
+</A></li>
+        <LI>Next message: <A HREF="051667.html">Characters; interactive identification (x Delta-l)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#015875">[ date ]</a>
+              <a href="thread.html#015875">[ thread ]</a>
+              <a href="subject.html#015875">[ subject ]</a>
+              <a href="author.html#015875">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1995</span><!--beginarticle-->
+<PRE>                                                                 29 March 1995
+
+&gt; From: Renaud Fortuner &lt;fortuner at MATH.U-BORDEAUX.FR&gt;
+&gt; To: Taxacom
+&gt;
+&gt; Should we record all the terms that are attached to a particular character?
+&gt; ... Yes, absolutely. ... It is obvious that we are going to find new states.
+&gt; How do I know which one to record? Easy, I record them all. ... It is not
+&gt; necessary to redefine a character when you are just adding a new state
+&gt; (green, yellow, mauve). Changing `color' to `hue' and `saturation'; or
+&gt; `whether uniformly colored', `background (or only) color', `secondary color'
+&gt; is something else. This is no longer adding a state but modifying the
+&gt; character itself.
+
+You can't do good taxonomy unless you get away from the idea that a character
+is just a list of terms. In the words of my collaborator, Leslie Watson, `The
+taxonomic wisdom [embodied in the character list] will define the standard of
+the rest of the work' (DELTA Primer).
+
+You can't `find' states; they are concepts which have to be thought up. If you
+are trying to get data from the literature, you will have to accept the
+thoughts of others, at least in part, but these thoughts need to be critically
+evaluated and reconciled.
+
+Adding a state DOES redefine or modify the character.
+
+We have been using a very simple example here (flower colour with only a few
+states), and I, at least, intended it only to illustrate the principles
+involved. I wouldn't object to adding `pink' to `white, red, blue' (although
+information is lost unless the program `knows' that pink is intermediate
+between white and red). But what if the descriptors that have been used are
+phrases? Are we going to call each one with a slightly different word order,
+qualification, or terminology a different state?
+
+The use of the word `pink' may have been a bad example, as I think I recall
+reading that this occurs as a named `species' of color in many languages,
+which presumably reflects our perception of its distinctness. The folly of
+thoughtlessly adding each new descriptor as a `state' is more readily apparent
+if we consider the term `light blue': not only does the other state have to be
+changed to `dark blue' (to make the states mutually exclusive), but clearly
+all the taxa that have been coded `blue' need to be re-examined. Having done
+that, what if we later come across the term `azure'?
+
+Anyway, a program cannot prevent people from doing bad taxonomy, but it CAN
+prevent them from doing good taxonomy. That is why I said in my previous
+posting that a program must be CAPABLE of using existing character character
+states plus a qualifying comment.
+
+&gt; Will [recording every term] lead to a separate state for every taxon?
+&gt; ... No, it doesn't (I have checked).
+
+I didn't say it would, I said `taken to an extreme, it could' (and I've seen
+it happen). A character becomes less generally useful as it approaches this
+extreme.
+
+&gt; We seem to agree about the error tolerance: this is for controlling the
+&gt; remaining taxa, it doesn't give &quot;graceful&quot; degradation. ... another
+&gt; difference between the **tomous keys which give THE answer and a similarity
+&gt; program which takes all the available evidence and offers a list of possible
+&gt; answers for the user to ponder.
+
+I think we agree in that our programs allow essentially the same mode of
+operation, but we disagree in that you don't realise this. I presume your
+program would allow something like this.
+    After entering information for a few characters, you find that there are a
+    few taxa whose similarities to the specimen are in the range 90-100%. You
+    browse through illustrations and/or descriptions of these. If necessary,
+    you extend your browsing to some lower level of similarity.
+INTKEY allows this too. Only the terminology is different: `number of
+differences' instead of `% similarity'.
+
+&gt; Number of differences used by INTKEY as a dissimilarity measure: why not
+&gt; divide this number by the number of characters used? Surely, 2 differences
+&gt; when you use 2 characters is not the same as when you use 20? Also, why use
+&gt; only 0 and 1? There is a lot of room between &quot;identical&quot; and &quot;completely
+&gt; different&quot;.
+
+For classification, yes; for identification, no.
+
+Firstly, a minor point of presentation. If you had used six characters in an
+identification, would you prefer to be told that the specimen was `83%
+similar' to the specimen, or had `1 difference' from the specimen?
+
+Let's take as an example three taxa described as:
+    #A/ 1,1 2,1 3,1 4,1/2 5,1/2
+    #B/ 1,1 2,1 3,2 4,1/2 5,1/2
+    #C/ 1,1 2,1 3,1 4,1   5,1
+(I'm using DELTA notation for brevity: taxon A has state 1 of characters 1-3
+and states 1 or 2 of characters 4 and 5, etc.) With a typical phenetic
+distance measure, taxa B and C are both distant .2 from taxon A. But if B and
+C are not taxa, but specimens, do we want to be told that both have 1
+difference from taxon A (or the equivalent expressed as a similarity)? If
+there is no variation within individual specimens, C is as close to A as it is
+possible to get, and with the settings recommended for identification, INTKEY
+would say that there are no differences between C and A.
+
+&gt; How do I calculate the &quot;best&quot; character? That depends on what you mean by
+&gt; &quot;best&quot;: most reliable, most discriminating, easiest to record, or what?
+
+Well, what do YOU mean by it? Does your program give the user any guidance on
+what character to use next? INTKEY can sort the available characters on a
+criterion involving the discriminating power and a subjective
+ease-of-use/reliability usually (but not necessarily) assigned by the author
+of the data. To calculate a discriminating power, you need some indication of
+the set of taxa that need to be discriminated.
+
+&gt; I fail to see how entering SET RELIABILITY COLOR,0 is going to affect the
+&gt; character:
+&gt;     #6. flowers/
+&gt;          1. white/
+&gt;          2. blue/
+&gt;          3. red/
+&gt; In other words, how is the computer going to know that this character is
+&gt; describing a color?
+
+I must admit that I seem to have underestimated the capabilities of your
+program here. INTKEY needs to be told which are the `color' characters. Does
+your program infer this from the character description alone?
+
+There may be no point in prolonging this discussion unless we get some input
+from other people.
+
+Mike Dallwitz                                  Internet md at ento.csiro.au
+CSIRO Division of Entomology                   Fax +61 6 246 4000
+GPO Box 1700, Canberra ACT 2601, Australia     Phone +61 6 246 4075
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="099046.html">What can we do about it?
+</A></li>
+        <LI>Next message: <A HREF="051667.html">Characters; interactive identification (x Delta-l)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#015875">[ date ]</a>
+              <a href="thread.html#015875">[ thread ]</a>
+              <a href="subject.html#015875">[ subject ]</a>
+              <a href="author.html#015875">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

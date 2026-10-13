@@ -1,0 +1,265 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Machine-tagging Flickr images with taxonomic names
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Machine-tagging%20Flickr%20images%20with%20taxonomic%20names&In-Reply-To=%3C1a9849d0802070030s503e01cap3717d836649c1a7e%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="109851.html">
+   <LINK REL="Next"  HREF="109865.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2008-February/109859.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Machine-tagging Flickr images with taxonomic names</H1>
+    <B data-pagefind-meta="author">Ken-ichi Ueda</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Machine-tagging%20Flickr%20images%20with%20taxonomic%20names&In-Reply-To=%3C1a9849d0802070030s503e01cap3717d836649c1a7e%40mail.gmail.com%3E"
+       TITLE="[Taxacom] Machine-tagging Flickr images with taxonomic names">kueda at ischool.berkeley.edu
+       </A><BR>
+    <I data-pagefind-meta="date">Thu Feb  7 02:30:19 CST 2008</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="109851.html">[Taxacom] Machine-tagging Flickr images with taxonomic names
+</A></li>
+        <LI>Next message: <A HREF="109865.html">[Taxacom] Machine-tagging Flickr images with taxonomic names
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#109859">[ date ]</a>
+              <a href="thread.html#109859">[ thread ]</a>
+              <a href="subject.html#109859">[ subject ]</a>
+              <a href="author.html#109859">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2008</span><!--beginarticle-->
+<PRE>(Sent from the wrong address, sorry about the dupes, Patrick and Roderick)
+
+I've been working with the Catalogue of Life 2007 data
+(<A HREF="http://www.catalogueoflife.org">http://www.catalogueoflife.org</A>), so I figured I'd run a query to see
+how many name collisions came up when you concatenate binomials.
+Assuming I did this correctly, there are actually very few collisions
+within the CoL data for binomials.  The only ones I found seem to be
+typos, mostly involving whitespace.  The CoL data certainly aren't
+comprehensive at the species level, but they do have 978,880 distinct,
+accepted names.
+
+Here what I did, and the result (let me know if I screwed up, sorry
+about the formatting):
+
+mysql&gt; SELECT
+    -&gt;   LOWER(REPLACE(name, ' ', '')) as tag,
+    -&gt;   COUNT(name) as count,
+    -&gt;   GROUP_CONCAT(name SEPARATOR ', ') as names
+    -&gt; FROM
+    -&gt;   (SELECT DISTINCT name FROM col_taxa WHERE taxon='Species' AND
+is_accepted_name=1) as s
+    -&gt; GROUP BY tag
+    -&gt; HAVING count &gt; 1
+    -&gt; ORDER BY count DESC;
++--------------------------+-------+-------------------------------------------------------+
+|<i> tag                      | count | names
+</I>                    |
++--------------------------+-------+-------------------------------------------------------+
+|<i> apomecynaflavomarmorata  |     2 | Apomecyna flavomarmorata,
+</I>Apomecyna  flavomarmorata   |
+|<i> astathesholorufa         |     2 | Astathes  holorufa, Astathes
+</I>holorufa                 |
+|<i> curculiosaltatoralni     |     2 | Curculio saltator alni, Curculio
+</I>saltatoralni         |
+|<i> curculiosaltatorsalicis  |     2 | Curculio saltator salicis,
+</I>Curculio saltatorsalicis   |
+|<i> curculiosaltatorulmi     |     2 | Curculio saltator ulmi, Curculio
+</I>saltatorulmi         |
+|<i> dymasiusangustatus       |     2 | Dymasius  angustatus, Dymasius
+</I>angustatus             |
+|<i> jordanoleiopusgardneri   |     2 | Jordanoleiopus  gardneri,
+</I>Jordanoleiopus gardneri     |
+|<i> merionoedatosawai        |     2 | Merionoeda tosawai, Merionoeda
+</I>tosawai               |
+|<i> mesosaindica             |     2 | Mesosa indica, Mesosa  indica
+</I>                    |
+|<i> mimozotaleminuta         |     2 | Mimozotale  minuta, Mimozotale
+</I>minuta                 |
+|<i> mimozotaletrivittata     |     2 | Mimozotale  trivittata,
+</I>Mimozotale trivittata         |
+|<i> mispilacoomani           |     2 | Mispila  coomani, Mispila coomani
+</I>                    |
+|<i> monochamusspectabilis    |     2 | Monochamus spectabilis,
+</I>Monochamus  spectabilis       |
+|<i> oplatoceraoberthuri      |     2 | Oplatocera oberthuri, Oplatocera
+</I>oberthuri           |
+|<i> plagithmysusswezeyi      |     2 | Plagithmysus swezeyi,
+</I>Plagithmysus  swezeyi           |
+|<i> prosopoceralepesmei      |     2 | Prosopocera  lepesmei,
+</I>Prosopocera lepesmei           |
+|<i> pterolophiaalbosignata   |     2 | Pterolophia  albosignata,
+</I>Pterolophia albosignata     |
+|<i> pterolophiamediomaculata |     2 | Pterolophia  mediomaculata,
+</I>Pterolophia mediomaculata |
+|<i> pterolophiapedongana     |     2 | Pterolophia pedongana,
+</I>Pterolophia  pedongana         |
+|<i> pterolophiayunnanensis   |     2 | Pterolophia  yunnanensis,
+</I>Pterolophia yunnanensis     |
+|<i> xoanoderavitticollis     |     2 | Xoanodera  vitticollis, Xoanodera
+</I>vitticollis         |
++--------------------------+-------+-------------------------------------------------------+
+21 rows in set (3 min 29.94 sec)
+
+
+-Ken-ichi
+
+
+
+On Feb 6, 2008 12:21 AM, Roderic Page &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">r.page at bio.gla.ac.uk</A>&gt; wrote:
+&gt;<i> Flickr allows you to tag photos with tags that include spaces, but
+</I>&gt;<i> collapses them when saving the tag. You can still retrieve the photo
+</I>&gt;<i> with the tag that includes white space. For example
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://www.flickr.com/photos/tags/diomedeaexulans/">http://www.flickr.com/photos/tags/diomedeaexulans/</A>
+</I>&gt;<i>
+</I>&gt;<i> and
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://www.flickr.com/photos/tags/diomede%20aexulans/">http://www.flickr.com/photos/tags/diomede%20aexulans/</A>
+</I>&gt;<i>
+</I>&gt;<i> retrieve albatross photos. I can insert spaces pretty much wherever I
+</I>&gt;<i> like and still get the same pictures. Hence, users could still
+</I>&gt;<i> recover pictures using the original binomial tag (i.e., the species
+</I>&gt;<i> name).
+</I>&gt;<i>
+</I>&gt;<i> It would be interesting to know how many collisions this might cause.
+</I>&gt;<i> In other words, how many times does deleting the white space from two
+</I>&gt;<i> different binomials result in the same text string? Sounds like
+</I>&gt;<i> something uBio could answer very quickly. If the answer is &quot;not
+</I>&gt;<i> many&quot;, then I don't see a problem with people simply tagging photos
+</I>&gt;<i> with regular tags (and/or bionomials as machine tags).
+</I>&gt;<i>
+</I>&gt;<i> Regards
+</I>&gt;<i>
+</I>&gt;<i> Rod
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On 6 Feb 2008, at 00:10, Andy Mabbett wrote:
+</I>&gt;<i>
+</I>&gt;<i> &gt; In message
+</I>&gt;<i> &gt; &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">1a9849d0802051347w766bf234n7c9de04ea1b5ee00 at mail.gmail.com</A>&gt;,
+</I>&gt;<i> &gt; Ken-ichi &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">kenichi.ueda at gmail.com</A>&gt; writes
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;&gt; This works:
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; taxonomy:binomial=Alcedo_atthis
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; (see <A HREF="http://flickr.com/photos/ken-ichi/2240715004/">http://flickr.com/photos/ken-ichi/2240715004/</A>)
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Thank you, but that too gets collapsed, as &quot;helvellalacunosa&quot;; try
+</I>&gt;<i> &gt; selecting the tag's link and you'll get:
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; &lt;<A HREF="http://flickr.com/photos/ken-ichi/tags/taxonomy%3Abinomial%">http://flickr.com/photos/ken-ichi/tags/taxonomy%3Abinomial%</A>
+</I>&gt;<i> &gt; 3Dhelvellalacunosa/&gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Nice picture, BTW!
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Incidentally, several people kindly made the same suggestion, but by
+</I>&gt;<i> &gt; writing to me directly. Perhaps the list can be reconfigured to
+</I>&gt;<i> &gt; default
+</I>&gt;<i> &gt; to replying to the group; or people could just double check before
+</I>&gt;<i> &gt; sending!
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;&gt; I'd also be interested to hear about any conventions or emerging
+</I>&gt;<i> &gt;&gt; conventions on taxonomic tagging in folksonomies like Flickr.  I tend
+</I>&gt;<i> &gt;&gt; to just tag with genus and the binomial on Flickr, but some
+</I>&gt;<i> &gt;&gt; machine tag
+</I>&gt;<i> &gt;&gt; standard would definitely add a lot of value to Flickr as a
+</I>&gt;<i> &gt;&gt; biodiversity informatics resource.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; I've also tagged my image with:
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;         taxonomy:genus=Alcedo
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; and:
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;         taxonomy:specific=atthis
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; but I suppose others might use:
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;         taxonomy:epithet=atthis
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; and even &quot;binominal&quot; instead of &quot;binomial&quot;,
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Oh why do we make things so complicated!
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; --
+</I>&gt;<i> &gt; Andy Mabbett
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;             *  Are you using Microformats, yet: &lt;<A HREF="http://">http://</A>
+</I>&gt;<i> &gt; microformats.org/&gt; ?
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; _______________________________________________
+</I>&gt;<i> &gt; Taxacom mailing list
+</I>&gt;<i> &gt; <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> &gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;<i> &gt;
+</I>&gt;<i>
+</I>&gt;<i> ----------------------------------------
+</I>&gt;<i> Professor Roderic D. M. Page
+</I>&gt;<i> Editor, Systematic Biology
+</I>&gt;<i> DEEB, IBLS
+</I>&gt;<i> Graham Kerr Building
+</I>&gt;<i> University of Glasgow
+</I>&gt;<i> Glasgow G12 8QP
+</I>&gt;<i> United Kingdom
+</I>&gt;<i>
+</I>&gt;<i> Phone: +44 141 330 4778
+</I>&gt;<i> Fax: +44 141 330 2792
+</I>&gt;<i> email: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">r.page at bio.gla.ac.uk</A>
+</I>&gt;<i> web: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+</I>&gt;<i> iChat: <A HREF="aim://rodpage1962">aim://rodpage1962</A>
+</I>&gt;<i> reprints: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/pubs.html">http://taxonomy.zoology.gla.ac.uk/rod/pubs.html</A>
+</I>&gt;<i>
+</I>&gt;<i> Subscribe to Systematic Biology through the Society of Systematic
+</I>&gt;<i> Biologists Website: <A HREF="http://systematicbiology.org">http://systematicbiology.org</A>
+</I>&gt;<i> Search for taxon names: <A HREF="http://darwin.zoology.gla.ac.uk/~rpage/portal/">http://darwin.zoology.gla.ac.uk/~rpage/portal/</A>
+</I>&gt;<i> Find out what we know about a species: <A HREF="http://ispecies.org">http://ispecies.org</A>
+</I>&gt;<i> Rod's rants on phyloinformatics: <A HREF="http://iphylo.blogspot.com">http://iphylo.blogspot.com</A>
+</I>&gt;<i> Rod's rants on ants: <A HREF="http://semant.blogspot.com">http://semant.blogspot.com</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Taxacom mailing list
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;<i>
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="109851.html">[Taxacom] Machine-tagging Flickr images with taxonomic names
+</A></li>
+	<LI>Next message: <A HREF="109865.html">[Taxacom] Machine-tagging Flickr images with taxonomic names
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#109859">[ date ]</a>
+              <a href="thread.html#109859">[ thread ]</a>
+              <a href="subject.html#109859">[ subject ]</a>
+              <a href="author.html#109859">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

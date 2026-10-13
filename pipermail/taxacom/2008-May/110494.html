@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] highest number of new species described in one paper
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2008-May/110494.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] highest number of new species described in one paper</H1>
+    <B data-pagefind-meta="author">Anders Silfvergrip</B>
+    anders.silfvergrip at nrm.se<BR>
+    <I data-pagefind-meta="date">Fri May 30 11:33:31 CDT 2008</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="110493.html">[Taxacom] highest number of new species described in one paper
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#110494">[ date ]</a>
+              <a href="thread.html#110494">[ thread ]</a>
+              <a href="subject.html#110494">[ subject ]</a>
+              <a href="author.html#110494">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2008</span><!--beginarticle-->
+<PRE>
+Thanks for identifying my blind faith in productive authors! :)
+
+Here is reworked list, now made with
+
+select count(author), author
+from scientific_names
+where is_accepted_name = 1
+group by author
+order by count(*) Desc
+
+3043 - L.
+2921 - Schltr.
+2115 - Benth.
+1996 - Wood &amp; Bright, 1992
+1906 - ICTV
+1624 - Sudre
+1496 - (Linnaeus, 1758)
+1435 - Walker 1865
+1402 - J.J.Sm.
+1272 - Lindl.
+1188 - Rchb.f.
+1035 - Walker 1864
+1029 - Baker
+968 - Walker 1863
+964 - Dejean, 1821
+956 - Walker 1862
+942 - M?ll.Arg.
+931 - Gray
+906 - Guen?e 1852
+902 - Hampson 1910
+900 - Ridl.
+894 - Casey, T.L., 1922
+867 - Walker 1859
+842 - Luer
+823 - Standl.
+815 - L.B.Sm.
+792 - Hampson 1926
+775 - Guen?e 1858
+769 - Warren 1897
+765 - Fruhstorfer 1910
+764 - Grunow
+728 - Linnaeus, 1758
+712 - Walker 1858
+704 - Felder 1874
+680 - Dyar 1914
+677 - Robineau-Desvoidy, 1863
+673 - Merr.
+667 - Sturm, 1826
+656 - Walker 1856
+652 - Harms
+651 - Hustedt
+650 - Walker 1855
+643 - Strand 1917
+639 - Meyrick 1921
+632 - Boiss.
+629 - Hook.f.
+627 - Casey
+627 - DC.
+622 - Warren 1896
+620 - Walker, 1849
+614 - Walker 1866
+608 - Warren 1904
+607 - Breuning, 1938
+600 - Greene
+598 - LINNAEUS 1758
+596 - Boheman, 1843
+592 - Meyrick 1913
+590 - Fabricius, 1801
+590 - Playfair
+589 - Meyrick 1914
+588 - Meyrick 1922
+588 - Sarg.
+581 - K?tzing
+578 - Meyrick 1915
+571 - Bremek.
+570 - Gand.
+567 - Kunth
+563 - Warren 1913
+556 - Meyrick 1931
+555 - Fruhstorfer 1912
+550 - Warren 1907
+543 - Warren 1906
+543 - Breuning, 1939
+541 - Schaus 1901
+531 - Hustache, A., 1938
+530 - Steyerm.
+530 - Hampson 1912
+528 - Hampson 1918
+517 - Wiedemann, 1830
+510 - Germar, 1824
+505 - Prout 1938
+504 - Fruhstorfer 1911
+
+Linnaeus is on top among authors with more than 500 species per publication. There a pdf-version of his Systema Naturae 1758 volume here <A HREF="http://gdz.sub.uni-goettingen.de/no_cache/dms/load/img/?IDDOC&amp;5100">http://gdz.sub.uni-goettingen.de/no_cache/dms/load/img/?IDDOC&amp;5100</A> for those willing to check the numbers.
+
+Hope it worked better this time.
+
+
+
+
+_____________________________________
+Dr. Anders Silfvergrip, Curator 
+Department of Vertebrate Zoology, FishBase 
+Swedish Museum of Natural History 
+POB 50007, SE-10405 Stockholm, Sweden 
+phone +46 8 51954114, fax +46 8 51954212 
+anders.silfvergrip at nrm.se, <A HREF="http://www.nrm.se">http://www.nrm.se</A> 
+ 
+
+-----Original Message-----
+From: taxacom-bounces at mailman.nhm.ku.edu [mailto:taxacom-bounces at mailman.nhm.ku.edu] On Behalf Of Karl Magnacca
+Sent: den 30 maj 2008 14:36
+To: TAXACOM at mailman.nhm.ku.edu
+Subject: Re: [Taxacom] highest number of new species described in one paper
+
+On Fri, May 30, 2008 1:03 pm, Anders Silfvergrip wrote:
+&gt; I downloaded the 2008 version of Catalog of Life, from
+&gt; <A HREF="http://www.catalogueoflife.org">http://www.catalogueoflife.org</A> &lt;<A HREF="http://www.catalogueoflife.org/">http://www.catalogueoflife.org/</A>&gt;  ,
+&gt; installed it, and opened the adjoining databases in MySQL, ran the
+&gt; following snippet:
+
+Those include literature references in catalogs, not just descriptions. 
+Monn? &amp; Giesbert 1994, listed with 8927, is a checklist and probably
+doesn't have any descriptions at all.
+
+Karl
+==========Karl Magnacca
+Postdoctoral Researcher
+Department of Zoology
+Trinity College, Dublin 2
+Ireland
+
+
+_______________________________________________
+Taxacom mailing list
+Taxacom at mailman.nhm.ku.edu
+<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="110493.html">[Taxacom] highest number of new species described in one paper
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#110494">[ date ]</a>
+              <a href="thread.html#110494">[ thread ]</a>
+              <a href="subject.html#110494">[ subject ]</a>
+              <a href="author.html#110494">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

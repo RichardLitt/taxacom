@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Recording decimal latitude and longitude
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1996-July/019103.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Recording decimal latitude and longitude</H1>
+    <B data-pagefind-meta="author">Robert K. Colwell</B>
+    Colwell at UCONNVM.UCONN.EDU<BR>
+    <I data-pagefind-meta="date">Tue Jul 30 11:29:51 CDT 1996</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="102255.html">Vouchering
+</A></li>
+        <LI>Next message: <A HREF="054895.html">Recording decimal latitude and longitude
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#019103">[ date ]</a>
+              <a href="thread.html#019103">[ thread ]</a>
+              <a href="subject.html#019103">[ subject ]</a>
+              <a href="author.html#019103">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1996</span><!--beginarticle-->
+<PRE>Charles Hussey writes:
+
+&gt;&gt;I am involved in setting up databases for recording specimen data at the
+&gt;&gt;&gt;Natural History Museum, London. We have provided separate fields for
+&gt;&gt;&gt;recording degrees, minutes, seconds and direction for latitude and
+&gt;&gt;&gt;longitude, plus fields for decimal degrees for lat. &amp; long. to cope with
+&gt;&gt;&gt;output from GPS devices. In due course, in order to facilitate GIS
+&gt;&gt;analysis &gt;of data, we expect to convert degrees/minutes/seconds to
+&gt;&gt;decimal degrees and &gt;fill the decimal fields. &gt;&gt; &gt;&gt;In designing the
+&gt;&gt;system I had anticipated that decimal degrees would be &gt;presented as a
+&gt;&gt;positive or negative number with up to four decimal places. &gt;One of our
+&gt;&gt;researchers, who uses a GIS device has alerted me to the fact &gt;that his
+&gt;&gt;GPS device outputs things as degrees and decimal minutes (114 &gt;24.567'E
+&gt;&gt;for example); which would indicate the requirement for an integer &gt;degree
+&gt;&gt;field and a decimal minute field. &gt;&gt; &gt;&gt;Can anyone out there who has
+&gt;&gt;experience of these things provide details how &gt;many formats exist for
+&gt;&gt;data from GIS/GPS systems and which are the most common.
+
+
+
+GIS: The lingua franca of spatial referencing in the GIS world is decimal
+degrees, with positive sign for N and E, negative for S and W. For plotting
+purposes and for computational and storage efficieny in database systems,
+this makes excellent sense--like the metric system instead of yards,
+feet,and inches makes sense.
+
+GPS: Low-end and older GPS devices do indeed read out in integer degrees
+and decimal minutes, although fancier and more recent ones can switch
+between readouts in a variety of coordinate systems, including decimal
+degrees, DMS, and others.
+
+ATLASES: Beware! Some gazetteers list latitude and longitude values in DMS,
+but use a format that looks like integer degrees with decimal minutes, e.g.
+24deg 48.39 actually means 24deg 48min 39sec in these gazetteers. The
+easiest way to detect this abomination is to see if you can find any values
+in the gazetteer to the right of the &quot;decimal point&quot; that exceed 59. If
+not, those values are *seconds*, not the decimal part of true decimal
+minutes.
+
+DATABASES: One solution with databasing spatial reference data (e.g. for
+specimen collection localities) is to store all coordinates internally as
+decimal degrees, then let the *interface* handle the conversions. My
+biodiversity database mgt application, Biota (Sinauer Press), uses this
+approach. The input screen for locality data presents all three common
+systems (DMS;integer degrees plus decimal minutes; and decimal degrees).
+The user can enter lat and long in any of the three systems, and the
+coordinates are simultaneously displayed in all three systems in the input
+screen as they are entered. For record listing (output) screens, either the
+internal decimal degree format (fast) or DMS (a little slower, since
+computation is required) is displayed, depending on a user preference
+setting. Labels print in DMS.
+
+Just to be sure we all mean the same thing, here are the conversion formulas.
+
+DMS to decimal degrees, and to integer degrees plus decimal minutes:
+
+
+Decimal Degrees = Degrees + (Minutes/60) + (Seconds/3600).
+Integer Degrees = Degrees
+Decimal Minutes = Minutes + (Seconds/60)
+
+Decimal degrees to integer degrees plus decimal minutes, and to DMS:
+
+
+AbsDD = Abs (Decimal Degrees)
+Degrees = Int (AbsDD)
+Decimal Minutes = (AbsDD - Degrees) * 60
+Minutes = Int (Decimal Minutes)
+Decimal Seconds = (Decimal Minutes - Minutes ) * 60
+Seconds = Round (Decimal Seconds)
+
+Regards to all,
+
+Rob
+
+
+**************************************************************************
+Robert K. Colwell, Professor
+Department of Ecology and Evolutionary Biology, U-42
+University of Connecticut
+Storrs, CT 06269-3042
+Tel: 860-486-4395   Fax: 860-486-3790  Internet: &lt;colwell at uconnvm.uconn.edu&gt;
+**************************************************************************
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="102255.html">Vouchering
+</A></li>
+        <LI>Next message: <A HREF="054895.html">Recording decimal latitude and longitude
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#019103">[ date ]</a>
+              <a href="thread.html#019103">[ thread ]</a>
+              <a href="subject.html#019103">[ subject ]</a>
+              <a href="author.html#019103">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

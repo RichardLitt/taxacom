@@ -1,0 +1,740 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> database structure replies
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1997-September/021459.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">database structure replies</H1>
+    <B data-pagefind-meta="author">James P. Bennett</B>
+    jpbennett at MACC.WISC.EDU<BR>
+    <I data-pagefind-meta="date">Wed Sep  3 14:50:29 CDT 1997</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="104612.html">Taxacom Listserv Reference Card
+</A></li>
+        <LI>Next message: <A HREF="057251.html">database structure replies
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#021459">[ date ]</a>
+              <a href="thread.html#021459">[ thread ]</a>
+              <a href="subject.html#021459">[ subject ]</a>
+              <a href="author.html#021459">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1997</span><!--beginarticle-->
+<PRE>There were 13 replies to my query last week about database structure.  I =
+don't believe these were delivered to the rest of the list, so here they =
+are in their entirety.  There were basically 3 types of replies:
+
+1. Split the binomial elements into separate tables and link them.
+2. Duplicate the elements as strings in separate fields.
+3. Custom design everything to do what you want it to do.
+
+Jim Bennett
+
+1
+From:    IN%&quot;R.Mill at rbge.org.uk&quot;   &quot;Robert Mill&quot;
+To:      jpbennett at MACC.WISC.EDU
+Subject: Re: Taxaonomic database structure
+Lines:   78
+
+Dear Dr Bennett
+=20
+Your message was severely truncated to two-and-a-half lines so don't =
+know what the main point might have been, but:
+=20
+I use eleven separate fields:
+=20
+Genus
+Infrageneric (i.e. subgen., sect., subsect., ser.)
+Species
+Authority
+Place of publication
+Date
+Subspecies
+Variety [any 'formae' go in here also preceded by f.]
+Infraspecific Authority
+Infraspecific Place of Publication
+Date (infraspecific)
+=20
+I also have a separate &quot;Current Name&quot; field which is like the one you =
+use, with genus/species/authority all together; this field is =
+cross-indexed to the &quot;date&quot; field.
+=20
+By cross-indexing the fields, this allows me to index in various ways =
+(my database allows 8 indices at any one time), e.g. all species names =
+in a genus alphabetically; all species epithets alphabetically (picks up =
+homonyms); all names described by a particular author. The &quot;Current =
+Name&quot; field allows me to sort all synonyms (homotypic and heterotypic) =
+of a given species in chronological order, to create synonymies, and it =
+also has the advantage that the basionym or first use of the name comes =
+out first.
+=20
+As I am principally involved with one family, I have no &quot;family&quot; field, =
+but any family names I need to deal with go in the &quot;genus&quot; field as it =
+is the first on the card. If I dealt with more than one family I would =
+have additional fields for family and subfamily if necessary.
+=20
+Hope this is useful.
+=20
+Best wishes
+Robert Mill
+
+      ********************************************************
+      (Dr) ROBERT R MILL
+      Royal Botanic Garden Edinburgh
+      20a Inverleith Row, EDINBURGH EH3 5LR, SCOTLAND, U.K.
+=20
+      Electronic Mail:   R.Mill at rbge.org.uk OR robert at rbge.org.uk
+      Telephone:         + 44 131 552 7171 exts. 240 or 449
+      Facsimile:         + 44 131 552 0382
+=20
+      RBGE Website:      <A HREF="http://www.rbge.org.uk">http://www.rbge.org.uk</A>
+
+
+2
+From:    IN%&quot;anita at mozart.cbs.umn.edu&quot;   &quot;Anita Cholewa&quot; 29-AUG-1997 =
+12:54:14.60
+To:      jpbennett at macc.wisc.edu
+Subject: Re: Taxaonomic database structure
+=20
+We're using relational database with a separate table=20
+for family, genus, specific epithet, subspecies.  Keeping
+them is separate tables allowed us to be able to change
+just the specific epithet if needed.  The main viewing
+table automatically conencted the necessary names.
+=20
+A.F.C.
+=20
+=20
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~=
+~~~~~|
+                                            / \     /_ _  /              =
+     |
+                          _ _             /     \ /     /                =
+     |
+                         | \  \         / \     /_ _  /                  =
+     |
+                         | _\/ \      /     \ /     /                    =
+     |
+                          \  \/ \     \     /_ _  /                      =
+     |
+Anita F. Cholewa, Ph.D.    \ _\/ \     \  /     /                        =
+     |
+Curator / UM Herbarium      \ _\  \     //- - -                          =
+     |
+Bell Museum of Nat. His.      \__\/    // _  _          Please Visit     =
+     |
+1445 Gortner Ave.                 \\ //__( )( )              Our         =
+     |
+University of Minnesota            \//    (_)             Web Site:      =
+     |
+St Paul,  MN  55108                ||                                    =
+     |=20
+  612-625-0215                     ||    =
+<A HREF="http://biosci.cbs.umn.edu/herbarium">http://biosci.cbs.umn.edu/herbarium</A>  |
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~=
+~~~~~|
+=20
+3
+From:    IN%&quot;sfarmer at sabre.goldsword.com&quot;   &quot;Susan Farmer&quot; 29-AUG-1997 =
+13:41:51.64
+To:      jpbennett at MACC.WISC.EDU
+Subject: Re: Taxaonomic database structure
+=20
+I have all my nomenclature information in a Microsoft Works database.
+When I finish the thesis, I'm going to *write* one that will let me
+do what I want to do ... but I digress.  I have a genus field and
+a &quot;species&quot; field in which I enter the name from &quot;luteum&quot; to &quot;apetalon
+f. viridicarpa&quot; or even &quot;grandiflorum v. orbiculare f. something&quot;  :-)
+(my list is upstairs, but I *know* that I have 2 &quot;quadnomials.&quot;  Then
+for sorting purposes, I have a field which is just a straight trinomial.
+&quot;recurvatum luteum&quot; without &quot;f.&quot; or &quot;v.&quot;  so that the names will sort
+correctly (If I want them sorted by subspecies, then variety, then =
+forms,
+I can use the primary field.  I also have a field that is the &quot;final&quot;
+epithet -- it the plant is named &quot;recurvatum forma luteum&quot; then that=20
+field contains just &quot;luteum&quot;  That way I can track the basionym usage.
+=20
+What program are you using for your database?  What are you wanting to=20
+do with it?  My background is in Computer Science (B.A.) and these are
+questions that most people don't realize that they need to address =
+before
+they begin the database.  Mine is just to keep track of all named taxa
+from a given family (Trilliaceae) and information about the =
+nomenclature.
+I also have fields that give the literature citation, and information =
+about
+what language the description/diagnosis was published in, and =
+information
+about the Type and herbarium.
+=20
+I don't know if this answers your questions or not.  One thing about
+most of &quot;those&quot; databases that you mentioned.  They're trying to be Very =
+
+General -- able to be used by anybody studying any level of taxa.  If
+you were maintaining a file on all the Liliales, it would be very
+inefficient to have to keep all the genus and order information for
+*each* specimin; so you have pointers and store that information once.
+That's part of the drawbacks to the MSWorks database that I use now;
+I have 3 pages of taxa that Rafinesque named in Medical Flora (most of
+them were literally only *named*), but Rafinesque and Medical Flora
+must be repeated for each taxon.  :-(  It's not prohibitive, and as
+inexpensive as Computer Disk space is these days, that may not even
+be a consideration for the Liliales.  However, anything that you can
+do to reduce the size of your database generally makes the usage of
+it more efficient -- unless you get into too many cute tricks to make
+it small.
+=20
+Anyway, as I said before I went off onto another tangent, I don't know
+if this answers your questions or not.  Feel free to ask more if I =
+didn't.
+=20
+Susan Farmer, B.A. in C.S., Botany grad student
+=20
+&gt;
+&gt;I would like to ask the readership how they deal with binomials and =3D
+&gt;trinomials in their taxonomic databases. Up till now I have entered the =
+=3D
+&gt;entire binomial or trinomial in one field, with separate fields for =3D
+&gt;family and genus. I do not have a field for just the species name or =
+=3D
+&gt;infraspecies name. I have been going through the literature on database =
+=3D
+&gt;structure but this particular point is rarely addressed. In some more =
+=3D
+&gt;advanced databases it appears that each taxonomic rank is made into a =
+=3D
+&gt;separate record with a field for what the rank is. I don't need this =
+=3D
+&gt;level of sophistication for my databases, so am looking for a middle =
+=3D
+&gt;ground structure. Any thoughts on this would be most appreciated.
+&gt;
+&gt;Jim Bennett
+
+4
+From:    IN%&quot;kps at florin.ru&quot;   &quot;Konstantin Savov&quot; 29-AUG-1997 13:27:28.66
+To:      &quot;James P. Bennett&quot; &lt;jpbennett at MACC.WISC.EDU&gt;
+Subject: Re: Taxaonomic database structure
+CC:      (Tatjana E. Kramina) &lt;tanya at florin.ru&gt;
+=20
+On Aug 29, 11:02, James P. Bennett wrote:
+k&gt; Subject: Taxaonomic database structure
+k&gt; I would like to ask the readership how they deal with binomials
+and =3D
+k&gt; trinomials in their taxonomic databases. Up till now I have
+entered the =3D
+k&gt; entire binomial or trinomial in one field, with separate fields
+for =3D
+k&gt; family and genus. I do not have a field for just the species name
+or =3D
+k&gt; infraspecies name. I have been going through the literature on
+database =3D
+k&gt; structure but this particular point is rarely addressed. In some
+more =3D
+k&gt; advanced databases it appears that each taxonomic rank is made
+into a =3D
+k&gt; separate record with a field for what the rank is. I don't need
+this =3D
+k&gt; level of sophistication for my databases, so am looking for a
+middle =3D
+k&gt; ground structure. Any thoughts on this would be most appreciated.
+k&gt;
+k&gt; Jim Bennett
+k&gt;-- End of excerpt from James P. Bennett
+=20
+Dear Jim,
+=20
+'middle ground structure' always means a lot of problems with unique
+names and also in the future.  Adequate taxonomic database structure
+is rather complicated, but helps to avoid a lot of problems.  I know
+this very well, for I work with biological information systems both
+as
+a user and a developer for almost 10 years.
+=20
+So, the best way is to get an adequately designed system, with the
+respective support from a vendor.
+=20
+Please, take a look at FLORIN (<A HREF="http://www.florin.ru/florin).">http://www.florin.ru/florin).</A>  You may
+also find out the first draft documentation on FLORIN database
+structure on &lt;<A HREF="http://www.florin.ru/florin/doc/basics.htm">http://www.florin.ru/florin/doc/basics.htm</A>&gt;.  More
+detailed description of the structure is not a matter for
+publication,
+but information published may be of interest for you.
+=20
+You may also download free version of FLORIN from our Web site.
+=20
+=20
+Hope this helps,
+=20
+=20
+Konstantin Savov
+FLORIN Project Leader
+=20
+--=20
++------------------------------------------------------------------------=
+---+
+|       Konstantin Savov       |    DataX/FLORIN, Inc.    Moscow, Russia =
+   |
+|                              |      Advanced Data Management Systems   =
+   |
+|     E-mail:  kps at florin.ru   |  Voice: (095)158-9520  Fax: =
+(095)158-5700  |
++------------------------------------------------------------------------=
+---+
+               FLORIN Home Page: &quot;<A HREF="http://www.florin.ru/florin/">http://www.florin.ru/florin/</A>&quot;
+
+5
+From:    IN%&quot;nfj at IRIS.BIOSCI.OHIO-STATE.EDU&quot;   &quot;Norman F. Johnson&quot; =
+29-AUG-1997 14:30:39.28
+To:      Multiple recipients of list TAXACOM &lt;TAXACOM at cmsa.Berkeley.EDU&gt;
+Subject: Re: Taxaonomic database structure
+=20
+Here's another option for encoding taxonomic names (no matter what =
+kingdom
+you're dealing with).  Since we're dealing with a hierarchy, it's =
+possible to
+get by with just a single table.  It needs only have the taxon =
+identifier
+(name, id number, whatever) and the corresponding identifier for its =
+parent.
+ Of course, that parent has a parent, on down/up to the most inclusive =
+taxon in
+your database.  We're using Oracle as our RDBMS and it has a nice SQL =
+add-on
+feature that facilitates traversing such hierarchies.
+=20
+With the hierarchy represented in this manner, it seemed easiest to have
+species names represented as the combination of Genus + species. =
+(Trinomials
+would work the same way.)  I went in this direction because the genus in =
+which
+a species is classified may change.  This, in turn, may require =
+modification of
+the ending of the specific epithet.  Rather than try to program in =
+grammatical
+rules, I thought it would be easier to have it just typed in the way the =
+name
+was used.  This also makes it possible to use names in which the gender =
+of the
+genus and species names were incorrectly matched.
+=20
+You may view our database structure (most of it anyway) at
+<A HREF="http://iris.biosci.ohio-state.edu/projects/tpp/tables.html">http://iris.biosci.ohio-state.edu/projects/tpp/tables.html</A>
+This was based on the original Association of Systematics Collections
+information model (<A HREF="http://www.keil.ukans.edu:70/11/standards/asc).">http://www.keil.ukans.edu:70/11/standards/asc).</A>  The =
+newer
+and still developing model may be seen at
+<A HREF="http://gizmo.lbl.gov/DM_TOOLS/OPM/BPSL/LIB/ASC.html">http://gizmo.lbl.gov/DM_TOOLS/OPM/BPSL/LIB/ASC.html</A>
+=20
+Norm Johnson
+-------------------
+Norman F. Johnson        Johnson.2 at osu.edu
+Associate Professor      phone: (614) 292-6595
+Director, Ohio State     fax: (614) 292-7774
+  Insect Collection
+
+6
+From:    IN%&quot;johnm at rom.on.ca&quot;   &quot;John McNeill&quot; 29-AUG-1997 12:56:12.06
+To:      &quot;James P. Bennett&quot; &lt;jpbennett at MACC.WISC.EDU&gt;, =
+TAXACOM at cmsa.berkeley.edu
+Subject: Taxaonomic database structure
+=20
+Jim:
+=20
+I am not a database expert, but there are a couple of nomenclatural
+points that are relevant and depend on whether the database is for
+organisms falling under the botanical code or the zoological one.
+=20
+As you use the term &quot;infraspecies name&quot;, I assume that you may be a
+botanist as zoologists recognise only the one rank, that of
+subspecies.  For names of organisms treated nomenclaturally as plants,
+you really only need three fields (genus, specific epithet, and
+infraspecific epithet), plus a tag field to indicate the infraspecific
+rank, because homonymy runs across the infraspecific ranks within any
+one species (ICBN Art. 53.5).  Of course, if you want your database to
+reflect a particular infraspecific classification (e.g. to which
+subspecies a variety is assigned), you would need more, but three are
+all that are needed nomenclaturally.
+=20
+On the other hand if your database deals only with &quot;animals&quot;, you
+could probably get away with only two fields (with rank tags in each),
+i.e. that for the genus (or genus-group) and that for the
+species-group, because under the &quot;principle of Coordination&quot; (ICZN
+Art. 46 (a)), and species is ipso facto also published as a subspecies
+AND VICE-VERSA.
+=20
+In the above, I am assuming that you are not seeking to include any
+higher classification (family etc.) in the database, nor, at least for
+organisms treated as plants, any infrageneric classification, though
+as the Principle of Coordination also applies at the genus group (ICZN
+Art. 43 (a)), subgenera in an animal database could be accommodated
+(again with a rank tag).
+=20
+The situation for a bacterial database would be essentially the same
+as a botanical one, except that, as the Bacteriological Code does not
+recognize any infraspecific rank other than subspecies, no rank tag
+field is necessary.
+=20
+For discussion of database structure with particular reference to
+plant species, see Berendsohn in the May issue of Taxon.
+=20
+John McNeill
+=20
+-------------------------------------------------------------------------=
+--
+  John McNeill, Director Emeritus, Royal Ontario Museum,=20
+  100 Queen's Park, Toronto, Ontario, M5S 2C6, Canada.
+  Tel. and fax # 416-586-5744  e-mail: johnm at rom.on.ca =20
+-------------------------------------------------------------------------=
+--
+=20
+7
+From:    IN%&quot;johnm at ROM.ON.CA&quot;   &quot;John McNeill&quot; 29-AUG-1997 13:26:05.71
+To:      Multiple recipients of list TAXACOM &lt;TAXACOM at cmsa.Berkeley.EDU&gt;
+Subject: Re: Taxaonomic database structure
+=20
+Richard H. Zander replied to Jim Bennet as follows:
+=20
+&gt;A relational database manager requires a single field to related two
+&gt;files. The complete latin name works well this way. Some people like
+&gt;to type the specific epithet in separately. This requires generating
+&gt;a key field from two fields through programming, another level of
+&gt;complexity.  Fancy database managers written for biological uses do
+&gt;this, but you should type in the whole name for the key field if you
+&gt;are a non-programmer working with a business data manager.
+=20
+I had earlier noted that, nomenclaturally, three name fields were
+needed for organisms falling under the botanical or bacteriological
+codes and two name fields for those under the zoological code.  This
+was, of course, predicated on the data base being a taxonomic one, in
+which synonyms and their relationship to accepted names (&quot;correct&quot; in
+botspeak; &quot;valid&quot; in zoospeak) at various ranks were to be
+accommodated.
+=20
+John McNeill
+=20
+-------------------------------------------------------------------------=
+--
+  John McNeill, Director Emeritus, Royal Ontario Museum,
+  100 Queen's Park, Toronto, Ontario, M5S 2C6, Canada.
+  Tel. and fax # 416-586-5744  e-mail: johnm at rom.on.ca
+-------------------------------------------------------------------------=
+--
+
+8
+From:    IN%&quot;Mary.Seddon at nmgw.ac.uk&quot;   &quot;Mary&quot; 29-AUG-1997 12:59:19.46
+To:      jpbennett at MACC.WISC.EDU
+Subject: Re: Taxaonomic database structure
+=20
+Your message referred to subsp,var in same field as species.
+
+In our experience it depends on how you want to search your
+data-base as to whether to spilt or to lump.
+
+It also depends on whther you use a flat-file or relational=20
+system....
+
+WE do both in different systems for different purposes!!
+Mary Seddon
+Curator
+Biodiversity &amp; Systematic Biology (BioSyB)
+National Museum &amp; Galleries of Wales
+Cathays Park
+Cardiff UK
+Direct Line 44-1222-573343
+Fax 44-1222-239009
+E-mail Mary.Seddon at nmgw.ac.uk
+(or seddonm at cf.ac.uk)
+
+9
+From:    IN%&quot;mcwinans at MAIL.UTEXAS.EDU&quot;   &quot;Melissa C. Winans&quot; 29-AUG-1997 =
+15:15:22.56
+To:      Multiple recipients of list TAXACOM &lt;TAXACOM at cmsa.Berkeley.EDU&gt;
+Subject: Re: Taxaonomic database structure
+=20
+At 11:02 AM 08/29/1997 -0500, Jim Bennett wrote:
+&gt;I would like to ask the readership how they deal with binomials and
+trinomials in their taxonomic databases. Up till now I have entered the
+entire binomial or trinomial in one field, with separate fields for =
+family
+and genus. I do not have a field for just the species name or =
+infraspecies
+name. I have been going through the literature on database structure but
+this particular point is rarely addressed. In some more advanced =
+databases
+it appears that each taxonomic rank is made into a separate record with =
+a
+field for what the rank is. I don't need this level of sophistication =
+for
+my databases, so am looking for a middle ground structure. Any thoughts =
+on
+this would be most appreciated.
+&gt;
+=20
+In addition to the taxonomic and functional points already mentioned,
+another point to consider is the effect of one versus many data fields =
+on
+the overall size of the database.  There are two points to consider =
+here:
+=20
+1. Given two fields (for example, Genus and Species) with entries of
+varying length, you will always save some space, both in the table and =
+in
+the associated index, by concatenating them into a single field.  Your
+mileage will vary with the nature of your data.
+=20
+2. In the specific case that Jim mentions of binomials and trinomials,
+another consideration is how many entries in the table will actually =
+have
+more than just a species name.  If only a small number do, then the =
+space
+allocated for the extra field will be pretty much wasted.
+=20
+=20
+=20
+****************************************************************
+Melissa C. Winans, Collection Manager (mcwinans at mail.utexas.edu)
+Vertebrate Paleontology Laboratory      Phone: 512-471-6087
+J.J. Pickle Research Campus               Fax: 512-471-5973
+University of Texas, 10100 Burnet Road, Austin, TX 78758-4445
+
+10
+From:    IN%&quot;bryo at COMMTECH.NET&quot;   &quot;Richard Zander&quot; 29-AUG-1997 =
+12:49:34.17
+To:      Multiple recipients of list TAXACOM &lt;TAXACOM at cmsa.Berkeley.EDU&gt;
+Subject: Re: Taxaonomic database structure
+=20
+A relational database manager requires a single field to related two
+files. The complete latin name works well this way. Some people like to
+type the specific epithet in separately. This requires generating a key
+field from two fields through programming, another level of complexity.
+Fancy database managers written for biological uses do this, but you
+should type in the whole name for the key field if you are a
+non-programmer working with a business data manager.
+=20
+James P. Bennett wrote:
+&gt;
+&gt;
+&gt;
+&gt; Jim Bennett
+=20
+--
+=20
+*******************************************************
+Richard H. Zander, Buffalo Museum of Science
+1020 Humboldt Pkwy, Buffalo, NY 14211 USA bryo at commtech.net
+*******************************************************
+
+11
+From:    IN%&quot;sblum at bishop.bishop.hawaii.org&quot;   &quot;Stan Blum&quot; 30-AUG-1997 =
+17:15:26
+To:      &quot;James P. Bennett&quot; &lt;jpbennett at MACC.WISC.EDU&gt;
+Subject: Re: Taxaonomic database structure
+=20
+At 11:02 AM 8/29/97 -0500, Jim Bennett wrote:
+&gt;I would like to ask the readership how they deal with binomials and=20
+&gt;trinomials in their taxonomic databases.=20
+=20
+It is difficult to recommend a good &quot;middle ground structure&quot; without
+knowing more about your situation.  For example: =20
+=20
+What is this database intended to capture, and how is it going to be =
+used?
+Are you capturing literature references and supporting your own =
+revisionary
+work, or developing an authority (look-up) file for a collection or
+observation database, or what?
+=20
+Is the current list of uses likely to grow?
+=20
+Which DBMS are you using? =20
+=20
+How much effort can you expend in programming versus data entry and =
+proofing?
+=20
+How many people are doing the data entry? =20
+=20
+&gt;Up till now I have entered the=20
+&gt;entire binomial or trinomial in one field, with separate fields for =
+family=20
+&gt;and genus.=20
+=20
+What does a record in this table represent; a taxon, a species-level =
+taxon,
+a valid (accepted) species-level taxon, a specimen, an identification of =
+a
+specimen?  (There are a lot of possibilities!)  How many tables will =
+taxa
+appear in? =20
+=20
+&gt;In some more advanced databases=20
+&gt;it appears that each taxonomic rank is made into a separate record with =
+a=20
+&gt;field for what the rank is. I don't need this level of sophistication =
+for my=20
+&gt;databases, so am looking for a middle ground structure. Any thoughts on =
+this=20
+&gt;would be most appreciated.
+=20
+As Norm Johnson noted, a recursive (self joining) table for taxa is very
+flexible.  It accepts taxa of any rank and status, unbalanced
+classifications (e.g., incertae sedis species), etc., without requiring =
+a
+lot &quot;work-arounds&quot;.  Unfortunately, it can also require a lot of
+programming to do data retrieval and reporting (in some systems). =20
+=20
+You should note, however, that the question &quot;how to represent a
+species-level name?&quot; is a separate from &quot;how to represent a
+classification?&quot; (=3D relationships among taxa).  It is possible to use =
+a
+single field to capture the full name of a taxon (of any rank and =
+status)
+in a single long list, and to create a classification from this list in =
+one
+or more separate tables.  Whether you add fields for rank, status,
+abbreviation, parent taxon, TaxonID (numeric surrogate key), etc., will =
+all
+depend on your situation and objectives.
+=20
+Finally, please note that the correct URL for the new &quot;ASC model&quot; is:
+=20
+  <A HREF="http://gizmo.lbl.gov/DM_TOOLS/OPM/BCSL/BCSL.html">http://gizmo.lbl.gov/DM_TOOLS/OPM/BCSL/BCSL.html</A>
+=20
+And, yes, it's still under revision (being simplified in several ways).
+=20
+=20
+Stan Blum
+=20
+- - - - - - - - - - - - - - - - - - - - - - - -
+Co-Chair, ASC Computerization &amp; Networking Comm.
+  <A HREF="http://www.bishop.hawaii.org/asc-cnc/">http://www.bishop.hawaii.org/asc-cnc/</A>
+Bishop Museum
+Honolulu, HI
+Tel. (808) 848-4173
+Fax. (808) 847-8252
+
+12
+From:    IN%&quot;fnkwp at AURORA.ALASKA.EDU&quot;   &quot;Kenelm Philip&quot; 29-AUG-1997
+To:      Multiple recipients of list TAXACOM &lt;TAXACOM at cmsa.Berkeley.EDU&gt;
+Subject: Re: Taxaonomic database structure
+=20
+        Along the lines suggested by Doug Yanega, I have for some years
+been using a relational database for storing data on Alaskan =
+butterflies.
+The number of species is small (81 at last count), so I use a two or =
+three-
+letter abbreviation for each species (For example: _Colias hecla_ is Ch)
+in all data entries, which saves space. A lookup table is used to =
+translate
+these abbreviations into genus, species, and catalogue number in any =
+reports
+from the database. Taxonomic or nomeclatural changes can be made once in
+the lookup table, and then affect all future reports.
+        Since abbreviations are easy to remember compared to numbers, I
+have been able to expand this to include the circumpolar arctic =
+butterfly
+fauna without having to look up the abbreviations when entering data.
+=20
+                                                        Ken Philip
+fnkwp at aurora.alaska.edu
+
+13
+From: IN%&quot;dyanega at MONO.ICB.UFMG.BR&quot;  &quot;Doug Yanega&quot; 29-AUG-1997
+To:      Multiple recipients of list TAXACOM &lt;TAXACOM at cmsa.Berkeley.EDU&gt;
+Subject: Re: Taxaonomic database structure
+=20
+Norm Johnson wrote:
+=20
+&gt;Here's another option for encoding taxonomic names (no matter what =
+kingdom
+&gt;you're dealing with).  Since we're dealing with a hierarchy, it's =
+possible to
+&gt;get by with just a single table.  It needs only have the taxon =
+identifier
+&gt;(name, id number, whatever) and the corresponding identifier for its =
+parent.
+&gt; Of course, that parent has a parent, on down/up to the most inclusive =
+taxon in
+=0D&gt;your database.  We're using Oracle as our RDBMS and it has a nice =
+SQL add-on
+&gt;feature that facilitates traversing such hierarchies.
+=20
+It is, of course, also possible to exploit the relational database
+structure and use only a single table for all the bi/tri/quatrinomials
+together, though this puts a little bit more of a premium on having a =
+data
+entry person who has a good memory. In other words, if species 00001 is
+&quot;Xus (Zus) yus yus&quot;, species 00002 is &quot;Xus (Zus) yus wus&quot;, species 00003 =
+is
+&quot;Xus (Zus) yus ssp. undet.&quot;, species 00004 is &quot;Xus (Xus) tus tus&quot;, and =
+so
+forth, then EACH complete taxon name only has to be typed in manually =
+ONE
+time in the entire process of creating the database and entering all the
+data. ID entry is solely a 5-digit number, then, in the above case.
+Ultimately, this saves a LOT of effort, at the tradeoff of having the =
+data
+entry person need to look up species numbers for unfamiliar taxa. Of
+course, if one is entering data in an organized manner, all specimens of
+each taxon should be getting entered together, and no long lookup time =
+is
+required. The *program* will then place the appropriate name in a field
+whenever one needs to see the actual taxon name while scanning records =
+or
+generating reports, with no need for typing it. If any portion of the =
+name
+changes, then it only needs to be changed in one place, not every record
+(and if it's something like the genus name, then one can always do a =
+global
+search/replace, which is hard to avoid even when one has a nested =
+hierarchy
+as Norm suggested). As ever, there's more than one way to skin the
+proverbial cat.
+=20
+Peace,
+=20
+Doug Yanega    Depto. de Biologia Geral, Instituto de Ciencias =
+Biologicas,
+Univ. Fed. de Minas Gerais, Cx.P. 486, 30.161-970 Belo Horizonte, MG   =
+BRAZIL
+phone: 031-448-1223, fax: 031-44-5481  (from U.S., prefix 011-55)
+                  <A HREF="http://www.icb.ufmg.br/~dyanega/">http://www.icb.ufmg.br/~dyanega/</A>
+  &quot;There are some enterprises in which a careful disorderliness
+        is the true method&quot; - Herman Melville, Moby Dick, Chap. 82
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="104612.html">Taxacom Listserv Reference Card
+</A></li>
+        <LI>Next message: <A HREF="057251.html">database structure replies
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#021459">[ date ]</a>
+              <a href="thread.html#021459">[ thread ]</a>
+              <a href="subject.html#021459">[ subject ]</a>
+              <a href="author.html#021459">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

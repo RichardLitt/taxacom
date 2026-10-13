@@ -1,0 +1,200 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Biodiv Informatics Challenges
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Biodiv%20Informatics%20Challenges&In-Reply-To=%3C87e0136b0902170821w50521257wfc95a42aa4272ccc%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="111815.html">
+   <LINK REL="Next"  HREF="111817.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2009-February/111816.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Biodiv Informatics Challenges</H1>
+    <B data-pagefind-meta="author">Hong cui</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Biodiv%20Informatics%20Challenges&In-Reply-To=%3C87e0136b0902170821w50521257wfc95a42aa4272ccc%40mail.gmail.com%3E"
+       TITLE="[Taxacom] Biodiv Informatics Challenges">hong1.cui at gmail.com
+       </A><BR>
+    <I data-pagefind-meta="date">Tue Feb 17 10:21:50 CST 2009</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="111815.html">[Taxacom] Biodiv Informatics Challenges
+</A></li>
+        <LI>Next message: <A HREF="111817.html">[Taxacom] about typification
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#111816">[ date ]</a>
+              <a href="thread.html#111816">[ thread ]</a>
+              <a href="subject.html#111816">[ subject ]</a>
+              <a href="author.html#111816">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2009</span><!--beginarticle-->
+<PRE>Wolfgang and all,
+
+This is Hong Cui from University of Arizona. I am not a biologist but have
+been working with biodiversity information. My research areas include
+semantic markup of taxonomic descriptions.
+
+A recent project in collaboration with the Flora of North America Project
+may be relevant to THE challenge as Wolfgang stated, &quot;In my mind, one of THE
+challenges in biodiversity informatics - is how to distinguish unfinished
+(manuscript) and finished content (reviewed reliable publication)&quot;, so I
+thought I'd share some ideas with you.
+
+This challenge can be translate to a quality measure problem: how can a
+computer identify a quality description from problematic ones?
+
+Our idea is to use semantic markup techniques to fully markup document
+content (our focus is on morphological descriptions), then make the computer
+to compare a manuscript with &quot;finished content&quot; and identify any anormalies.
+We have developed a unsupervised semantic markup algorithm that works very
+well at clause level markup and generates very promising results at
+character level markup. The good thing about the algorithm is that no
+training examples are needed: they work directly from raw text, and no
+dictionaries etc are needed either. The algorithm has been tested on Flora
+of North America, Flora of China, and portions from the Treatise of
+Inverbrate Paleontology. We have also started to develop some algorithms
+that compare one semantically marked-up document with another.
+
+We'd like to hear from others working on similar problems and also welcome
+your comments.
+
+Hong Cui
+Asisstant Professer, Information Technologies
+School of Information Resources and Library Science
+University of Arizona
+
+
+
+
+
+On Tue, Feb 17, 2009 at 3:31 AM, &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">faunaplan at aol.com</A>&gt; wrote:
+
+&gt;<i> Dear all,
+</I>&gt;<i> when following the interesting TAXACOM thread on 'species pages' I was
+</I>&gt;<i> waiting that someone would point to the enormous current problems in
+</I>&gt;<i> retrieving relevant information on the internet. I didn't see such postings
+</I>&gt;<i> so here are some of my thoughts (&amp;dreams - I'm not IT-savvy enough, if at
+</I>&gt;<i> all...), on that issue:
+</I>&gt;<i>
+</I>&gt;<i> Most descriptions are published along with nomenclatural content which must
+</I>&gt;<i> be printed on paper since the internet is not (yet) accepted as a
+</I>&gt;<i> Code-compliant publication media. Not sure it will be accepted in the near
+</I>&gt;<i> future, but even if the change comes, the printed information will continue
+</I>&gt;<i> to play a major role. Therefore, scanning, digitization and markup of
+</I>&gt;<i> literature seems to be what is needed in the very first place. We have tools
+</I>&gt;<i> for extracting at least some taxonomic names from PDFs, but are we really
+</I>&gt;<i> able to work with that and combine it with info from other web resources in
+</I>&gt;<i> an &quot;industrialized&quot; manner?
+</I>&gt;<i> Probably it is GBIF that could play a pioneer role in developing new
+</I>&gt;<i> strategies simply because it's in the nature of the project that is has to
+</I>&gt;<i> cope with more unresolved misspellings, synonyms, homonyms, in litteris
+</I>&gt;<i> names, etc. than any other major web project (just take a look into GBIF's
+</I>&gt;<i> &quot;kingdom unknown&quot; basket!). I believe we urgently do need what David Remsen
+</I>&gt;<i> has alluded to - an Electronic Catalogue of Names that can pick out at least
+</I>&gt;<i> available names from the salad.
+</I>&gt;<i>
+</I>&gt;<i> As for animal names, a first step could be an official ZooBank list of all
+</I>&gt;<i> principally available nomina,=2
+</I>&gt;<i> 0knowing that these are not simply extractable from printed and electronic
+</I>&gt;<i> resources (e.g., the available nomen &lt;Cicindela trisignata&gt; was published by
+</I>&gt;<i> the name string &quot;C.Tri-Signata&quot;; the printed string &quot;N. Kratteri valonensis&quot;
+</I>&gt;<i> is available as &lt;Nebria valonensis&gt; even if it has never been used in that
+</I>&gt;<i> form; etc.).
+</I>&gt;<i>
+</I>&gt;<i> Then, what can we do with available nomina strings? Are they not useful for
+</I>&gt;<i> assigning unique identifiers to ascertained names?
+</I>&gt;<i> For example, how about adding more information to LSIDs? In my imagination,
+</I>&gt;<i> a vetted (ascertained) name could be recognized as such by an human- &amp;
+</I>&gt;<i> computer-readable LSID-substring carrying information on its ascertained
+</I>&gt;<i> nomenclatural basis (and, in case of misspellings etc., pointing to its
+</I>&gt;<i> correct name basis). The benefits would be, in my mind, that vetted/
+</I>&gt;<i> unvetted names could be distinguished easily and involvement of taxon
+</I>&gt;<i> experts would be facilitated (&amp; attracted) very much better than with those
+</I>&gt;<i> *cryptic* LSIDs that are in use so far. Once a name is ascertained, you can
+</I>&gt;<i> see it and the computer can know it by the composition of it's LSID;
+</I>&gt;<i> unvetted names would stay with computer-readable numbers only.
+</I>&gt;<i>
+</I>&gt;<i> E.g.,
+</I>&gt;<i> could an LSID for an ascertained taxonomic name in a GBIF occurrence record
+</I>&gt;<i> be something like:
+</I>&gt;<i> &lt;urn:lsid:gbif.org:ecat:ZS-Carabus_depressus=Licinus_depressus.19020147&gt; ?
+</I>&gt;<i>
+</I>&gt;<i> ... building upon a basic LSID nomen substring issued by ZooBank:
+</I>&gt;<i> &lt;urn:lsid:iczn.org:zoobank:ZS-Carabus_depressus=Licinus_depressus&gt; ?
+</I>&gt;<i>
+</I>&gt;<i> The human- &amp; computer(?)-readable substrings in that imaginary example
+</I>&gt;<i> would be:
+</I>&gt;<i> &quot;Z&quot; = animal na
+</I>&gt;<i> me governed by ICZN
+</I>&gt;<i> &quot;S&quot; = name of species-group (&quot;G&quot; for genus-, &quot;F&quot; for family-group)
+</I>&gt;<i> &quot;Carabus depressus&quot; original generic combination (linking to type material)
+</I>&gt;<i> &quot;=Licinus depressus&quot; subsequent generic combination (up to here all
+</I>&gt;<i> metadata incl. author, date, name history, etc. would be resolvable via
+</I>&gt;<i> ZooBank)
+</I>&gt;<i> &quot;19020147&quot; unique GBIF ID for a name associated with a dataset (where the
+</I>&gt;<i> name could be a misspelling that should not be deleted from the record if it
+</I>&gt;<i> is a verbatim citation e.g. from a specimen label).
+</I>&gt;<i>
+</I>&gt;<i> Not thinkable? I know the devil is always in the details..., but where
+</I>&gt;<i> would IT savvy taxacomers say 'principally impossible'?
+</I>&gt;<i> In my mind, one of THE challenges in biodiversity informatics - is how to
+</I>&gt;<i> distinguish unfinished (manuscript) and finished content (reviewed reliable
+</I>&gt;<i> publication). As for the issue of taxonomic names, maybe a difference in the
+</I>&gt;<i> LSID could be part of the solution?
+</I>&gt;<i>
+</I>&gt;<i> Cheers,
+</I>&gt;<i> Wolfgang
+</I>&gt;<i> ---------------------------------
+</I>&gt;<i> Wolfgang Lorenz, Tutzing, Germany
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ________________________________________________________________________
+</I>&gt;<i> AOL eMail auf Ihrem Handy! Ab sofort können Sie auch unterwegs Ihre AOL
+</I>&gt;<i> email abrufen. Registrieren Sie sich jetzt kostenlos.
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i>
+</I>&gt;<i> Taxacom Mailing List
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;<i>
+</I>&gt;<i> The entire Taxacom Archive back to 1992 can be searched with either of
+</I>&gt;<i> these methods:
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+</I>&gt;<i>
+</I>&gt;<i> Or use a Google search specified as:  site:
+</I>&gt;<i> mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+</I>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="111815.html">[Taxacom] Biodiv Informatics Challenges
+</A></li>
+	<LI>Next message: <A HREF="111817.html">[Taxacom] about typification
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#111816">[ date ]</a>
+              <a href="thread.html#111816">[ thread ]</a>
+              <a href="subject.html#111816">[ subject ]</a>
+              <a href="author.html#111816">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Inappropriate accuracy of locality data
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Inappropriate%20accuracy%20of%20locality%20data&In-Reply-To=%3C4CF3FEC2.7000106%40schweich.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="118244.html">
+   <LINK REL="Next"  HREF="118251.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2010-November/118245.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Inappropriate accuracy of locality data</H1>
+    <B data-pagefind-meta="author">Tom Schweich</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Inappropriate%20accuracy%20of%20locality%20data&In-Reply-To=%3C4CF3FEC2.7000106%40schweich.com%3E"
+       TITLE="[Taxacom] Inappropriate accuracy of locality data">tas27 at schweich.com
+       </A><BR>
+    <I data-pagefind-meta="date">Mon Nov 29 13:28:02 CST 2010</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="118244.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+        <LI>Next message: <A HREF="118251.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#118245">[ date ]</a>
+              <a href="thread.html#118245">[ thread ]</a>
+              <a href="subject.html#118245">[ subject ]</a>
+              <a href="author.html#118245">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2010</span><!--beginarticle-->
+<PRE>
+I appreciate Bob's suggestions from his position as a reviewer and 
+editor.   I come at it from the technology and mapping side and would 
+take a more extreme position.
+
+- Always collect and store your location data in the native system of 
+your GPS receiver.  Always report the datum.
+- Always report geographic coordinates in decimal degrees (with 
+precision that matches the accuracy of your GPS, per Bob's suggestion).
+- If you must transform or project your location data, do it in an 
+additional set of data fields; never overwrite your original location data.
+- Finally, add some backup locality data, such as &quot;12 miles west of Lee 
+Vining.&quot;
+
+I use a Garmin 76csx for location data collection.  It's native 
+geographic system is WGS 1984 and it collects in decimal degrees.   I 
+suspect this is true of nearly all common GPS receivers we use in the 
+sciences.   Yes, the Garmin 76 can report location in 
+degrees-minutes-seconds, or in meters using a UTM system.  However, all 
+of those other numbers are calculated from the GPS' native coordinates 
+via algorithms that may be simplified and give less accurate results 
+than the native system.  You're adding error to your data.    Secondly, 
+if some wants to use your data in a different system it will now have 
+been transformed twice: once by your GPS and once by your user.  Each 
+transformation has the potential of adding error.
+
+If you must report your coordinates in a different system than your GPS' 
+native system, use a good GIS system to perform the transformation or 
+projection.  That's where the best algorithms are.
+
+If you report your location data in degrees-decimal minutes or 
+degrees-minutes-seconds, you are subjecting your data to at least two 
+mathematical operations before it can be mapped.  Here's why: when 
+you're mapping in degrees of any format, the mapping system will always 
+map in decimal degrees.   Your GPS made one mathematical operation, and 
+then your calligraphically elegant locations in degrees-minutes-seconds 
+will be transcribed back into decimal degrees. The latter mathematical 
+operation may be manual and may introduce error into the location of 
+your collections.
+
+Always keep the datum with the original collection data.  In my case, 
+it's WGS 1984.   In North America, some like to use NAD 1983.  They're 
+both good systems.  At Mono Lake, though, the same coordinates in WGS 
+1984 and NAD 1983 are 86 meters apart.  If the location is simply &quot;Mono 
+Lake,&quot; then it's no big deal.  However, if the location is the highly 
+faulted terrain south of the lake, the 86 meter difference could easily 
+put you in the wrong drainage.
+
+Sometimes, you have to transform to a different geographic system (such 
+as NAD 1983) and project to a different projection (such as Albers).  My 
+local forest likes things that way.   I'm happy to do that for them.  
+However, I always save the original coordinates and datum with the 
+projected data.   That way, if I botch the projection, which is *really* 
+*easy* to do, someone can check my work.    There is nothing worse than 
+to discover that the projected coordinates of someone's rare plant 
+collection map out in the middle of the lake, and not have the original 
+collection location to fall back on.
+
+Finally be sure to add a backup locality description.   I occasionally 
+see a collection with nonsensical coordinates and no backup 
+description.  Gotta throw it away; no choice, too bad.
+
+Tom
+
+
+On 11/29/2010 1:54 AM, Bob Mesibov wrote:
+&gt;<i> As a reviewer and editor of scientific papers I often see GPS location and elevation data with inappropriate accuracy. This post is a brief backgrounder on the issue for interested authors, reviewers and editors on this list. For more information, please visit any of the many websites that deal with GPS accuracy.
+</I>&gt;<i>
+</I>&gt;<i> A typical 'consumer' handheld GPS unit gives a location with an accuracy of plus or minus 10-20 m under typical field conditions. In hilly or densely forested country the accuracy may not be this good. The very popular Garmin E-Trex has 15 m RMS accuracy, i.e. about 2/3rds of the time the GPS location will be within 15 m of the real position - under favourable conditions.
+</I>&gt;<i>
+</I>&gt;<i> Neverthless, the GPS unit will calculate its position from the available satellite signals and will display as many significant figures as you ask it to. For example, it might display the latitude as 30d 14m 19.88s N. One second of latitude represents about 30m on the ground, so that last '8' in '19.88' represents 30 cm. This is spurious accuracy. The GPS unit may also display an instrumental accuracy, e.g. '3 m', much greater than the cartographic accuracy. (Yes, I know I am using the word 'accuracy' in a loose way. I want to keep this post short. And I use d, m and s rather than the usual symbols in order to avoid message coding problems in this email.)
+</I>&gt;<i>
+</I>&gt;<i> For this reason, locations from a typical GPS unit should be rounded off:
+</I>&gt;<i> - to the nearest second in degree-minute-second format (30d 14m 20sN)
+</I>&gt;<i> - to four decimal places in decimal degree format (30.2389d N)
+</I>&gt;<i> - to two decimal places in decimal minute format (30d 14.33m N)
+</I>&gt;<i>
+</I>&gt;<i> There are also problems with GPS elevations if the GPS is not equipped with an altimeter. Elevations calculated from satellite signals are elevations above a mathematical model of the Earth's surface, not above sea level. The difference can be tens of metres. In addition, elevation accuracy is tied to accuracy in horizontal position. If your GPS says it's at 1287 m, record the elevation as 'ca 1300 m'.
+</I>&gt;<i>
+</I>&gt;<i> Please do not use geospatial data from your GPS 'as is' on the grounds that 'those were the figures on the screen [or in the GPS memory] and who am I to change them?' You are not changing them if you round them off. It's rather like a (hypothetical) digital balance which says a medical patient weighs 55.4392 kg, even though the balance is only accurate plus or minus 0.1 kg, not 0.1 g. The patient's weight should be recorded as 55.4 kg, not 55.4392 kg. No medical journal would accept a paper with that latter figure, and it surprises me that some journal editors accept overaccurate geospatial data.
+</I>
+
+-- 
+Tom Schweich KJ6BIT <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">tas27 at schweich.com</A>
+<A HREF="http://www.schweich.com">http://www.schweich.com</A>
+<A HREF="http://twitter.com/schweich">http://twitter.com/schweich</A>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="118244.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+	<LI>Next message: <A HREF="118251.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#118245">[ date ]</a>
+              <a href="thread.html#118245">[ thread ]</a>
+              <a href="subject.html#118245">[ subject ]</a>
+              <a href="author.html#118245">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

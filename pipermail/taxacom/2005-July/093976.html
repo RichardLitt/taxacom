@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Invariant sites and reliability
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2005-July/093976.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Invariant sites and reliability</H1>
+    <B data-pagefind-meta="author">Kurt Milton Pickett</B>
+    kpickett at AMNH.ORG<BR>
+    <I data-pagefind-meta="date">Wed Jul 20 14:52:18 CDT 2005</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="093977.html">International Standards for Content Metadata for Biological Images
+</A></li>
+        <LI>Next message: <A HREF="093975.html">Goalposts
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#093976">[ date ]</a>
+              <a href="thread.html#093976">[ thread ]</a>
+              <a href="subject.html#093976">[ subject ]</a>
+              <a href="author.html#093976">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2005</span><!--beginarticle-->
+<PRE>This behavior occurs because, when implementing a homogeneous ML  
+model which averages branch lengths over the tree, every character  
+added shortens edge lengths on the tree.  This means that the  
+probability of erroneously interpreting a homology as homoplasy  
+declines, and so support for clades increases.  You can add invariant  
+characters to any matrix and get the same results.  In a Bayesian  
+analysis, the relative likelihoods of trees is used to accept a new  
+one or keep an old one, and the disparity in likelihoods increases as  
+invariant characters are added, so the number of trees retained in  
+the credible set declines.  This has only to do with the way ML  
+treats branch lengths, and nothing to do with character types.  This  
+kind of support measure differs from resampling support like the  
+bootstrap, in which apparent support falls as invariant characters  
+are added (because the probability of resampling the informative  
+character falls as the total number of characters increases).  In a  
+homogeneous ML framework, the way the Bayesian support is working is  
+the way it &quot;should&quot; given the branch-length smoothing of that  
+framework.  The unexpected behavior of the bootstrap under this  
+framework partly why Goloboff and Farris came up with the poisson  
+bootstrap, which is available in TNT.  Much of this is discussed in  
+Goloboff, P., J. S. Farris, M. K?llersj?, B. Oxelman, M. J. Ramirez  
+and C. A. Szumik. 2003. Improvements to resampling measures of group  
+support. Cladistics 19: 324-332.
+
+Kurt
+
+&gt; Interesting business, that of likelihood (e.g. max likelihood and  
+&gt; Bayesian)
+&gt; and uninformative characters.
+&gt;
+&gt; I've used MrBayes to analyze a contrived data set like this:
+&gt;
+&gt; 1 CCCCCCCCCCCCCCCCCCC etc.
+&gt; 2 CACCCCCCCCCCCCCCCCC
+&gt; 3 CACCCCCCCCCCCCCCCCC
+&gt; 4 CCCCCCCCCCCCCCCCCCC
+&gt;
+&gt; (You can also use 4 sequences of totally random data, except for  
+&gt; one site.)
+&gt;
+&gt; If you set the model to recognize all parsimony uninformative sites as
+&gt; invariable, then you get a low (33%) Bayesian posterior probability  
+&gt; for the
+&gt; tree ((2, 3)4, 1).
+&gt;
+&gt; If you set the model to treat all uninformative sites as variable,  
+&gt; you get
+&gt; BPP of 100% for the same tree.
+&gt;
+&gt; Doubtless (I think) this last situation is because getting two &quot;A&quot;s  
+&gt; at one
+&gt; site for taxon 2 and 3 is very improbable when all the other sites  
+&gt; have no
+&gt; mutations to &quot;A&quot;s at all.
+&gt;
+&gt; This shows a very clear difference in what characters and character  
+&gt; states
+&gt; really mean between analysis in morphology and molecular studies,  
+&gt; though
+&gt; it's hard to put into words.
+&gt;
+&gt; Also, choice of model to recognize invariant sites or not makes a big
+&gt; difference, doesn't it? How might this affect measures of uncertainty?
+&gt;
+&gt; ______________________
+&gt; Richard H. Zander
+&gt; Bryology Group, Missouri Botanical Garden
+&gt; PO Box 299, St. Louis, MO 63166-0299 USA
+&gt; richard.zander at mobot.org &lt;mailto:richard.zander at mobot.org&gt;
+&gt; Voice: 314-577-5180;  Fax: 314-577-9595
+&gt; Websites
+&gt; Bryophyte Volumes of Flora of North America:
+&gt; <A HREF="http://www.mobot.org/plantscience/bfna/bfnamenu.htm">http://www.mobot.org/plantscience/bfna/bfnamenu.htm</A>
+&gt; Res Botanica:
+&gt; <A HREF="http://www.mobot.org/plantscience/resbot/index.htm">http://www.mobot.org/plantscience/resbot/index.htm</A>
+&gt; Shipping address for UPS, etc.:
+&gt; Missouri Botanical Garden
+&gt; 4344 Shaw Blvd.
+&gt; St. Louis, MO 63110 USA
+&gt;
+&gt;
+&gt; -----Original Message-----
+&gt; From: A.P. Jason de Koning [mailto:apjdk at ALBANY.EDU]
+&gt; Sent: Tuesday, July 19, 2005 9:31 PM
+&gt; To: TAXACOM at LISTSERV.NHM.KU.EDU
+&gt; Subject: Re: [TAXACOM] Molecular taxonomy: on way out?
+&gt;
+&gt;
+&gt;
+&gt;&gt; Why bother expurging the data matrix from non-informative
+&gt;&gt; characters when the algorithm doesn't take them into account?
+&gt;&gt;
+&gt;&gt;
+&gt;
+&gt; I agree that throwing out data here is unnecessary, and in general
+&gt; can be biasing.
+&gt;
+&gt; An unmentioned issue to consider with respect to probabilistic
+&gt; analyses (of molecular or phenotypic characters): the inclusion of
+&gt; characters with phylogenetically non-informative character state
+&gt; distributions can be beneficial because they may contribute
+&gt; information to the estimation of model parameters (such as relative
+&gt; rates of character state transformation), which can have an
+&gt; &quot;indirect&quot; effect on the selection of an optimal topology (though
+&gt; perhaps rarely, and not strongly).  Why?  Because the effect on
+&gt; relative rate estimates by 'non-informative' characters can alter the
+&gt; relative probabilities of trees for other 'informative' characters!
+&gt; For a very large dataset, inclusion of such characters could matter
+&gt; for any given phylogeny problem...certainly it matters in molecular
+&gt; evolutionary analyses where phylogeny is not the desired endpoint.
+&gt;
+&gt; Cheers,
+&gt; - Jason
+&gt;
+
+==============
+Kurt Milton Pickett
+Theodore Roosevelt Fellow
+Division of Invertebrate Zoology
+American Museum of Natural History
+79th Street at Central Park West
+New York, NY 10024-5192
+(212) 313-7622
+kpickett at amnh.org
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="093977.html">International Standards for Content Metadata for Biological Images
+</A></li>
+        <LI>Next message: <A HREF="093975.html">Goalposts
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#093976">[ date ]</a>
+              <a href="thread.html#093976">[ thread ]</a>
+              <a href="subject.html#093976">[ subject ]</a>
+              <a href="author.html#093976">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

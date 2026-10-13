@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Latitude &amp; Longitude data
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1995-October/017041.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Latitude &amp; Longitude data</H1>
+    <B data-pagefind-meta="author">Robert Raven</B>
+    R.Raven at MAILBOX.UQ.OZ.AU<BR>
+    <I data-pagefind-meta="date">Sun Oct  1 12:37:50 CDT 1995</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="100197.html">lat/long designation and collection data
+</A></li>
+        <LI>Next message: <A HREF="052833.html">Latitude &amp; Longitude data
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#017041">[ date ]</a>
+              <a href="thread.html#017041">[ thread ]</a>
+              <a href="subject.html#017041">[ subject ]</a>
+              <a href="author.html#017041">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1995</span><!--beginarticle-->
+<PRE>Cute problem. Thankfully this one is way behind us. Our approach was to
+have a person calculate each point from maps. Very tedious but now we
+have a GIS too and things can be easier.
+
+Try this.
+
+Your database (R:Base, at last checking) should be a ble to do
+select distinct locale state county etc. So work only on the unique rows.
+
+Second, normalize the locality data. So that 13km NW of Chiapas and 8
+miles NW of Chiapas look identical (if they are): Chiapas, 13 km NW
+
+Three, try geocoding your register against the GIS in which I gather you
+have a gazeteer. Fine in principle but typically taxonomists don't
+collect in places found in gazeteers but in more interesting areas so
+manual handling is necessary.
+
+Four, make sure your database (in hwich I hope your locality/expedition
+data are stored as a separate table) has a locality error field, i.e. how
+you determined the value. From long experience with museum data and a lot
+of academic input from GIS users, i have learnt that assigning
+quantitative values to the locality error field is an unreal expectation.
+Just take Long Island, New York. If that is the only data given then you
+have to have 2 different error fields, one for longitude and one for
+latitude and even then a wedge shaped island may confound those values.
+My WORKABLE approach is to assign a letter code to the locality error:
+COLL the coordinates were given by the collector who is thorough in such
+matters
+QGAZ taken from Queensland Gazeteer (on autolookup in the database)
+AGAZ taken from Australian Gazeteer (book)
+CALC direct line according to the description (13km NW of Chiapas)
+UNIT The centerpoint of the unit (eg Long Island, Chiapas, etc)
+HIST Historical research revealed very closely where the collection was made
+
+This will not of course satisfy the GIS puritans but they don't live in
+the real world of museum data that were collected before GIS was even
+conceived.
+
+Having done this you should then print your maps (we did it to an A1
+plotter) at a sufficient scale to have all points separate so that you
+can determine that three points around Chiapas should not all be to the
+north when one is south of Chiapas. Enjoy the proofing.
+
+The final result can be fun (see Ingram &amp; Raven, 1991 (eds), An Atlas of
+Queensland's frogs, reptiles, birds and mammals. Qld Museum Board of
+Trustees. Which are the 1200 plus maps of the museum's records. The
+volume is almost out of print.)
+
+Next comes the awakening when the government basically demands that
+environmental impact statements do a search on the Museum's records.
+Things are quite busy here with such searches.
+
+Enjoy!
+
+Rob
+
+
+Dr Robert J. Raven
+Museum Scientist (Arachnology)
+Queensland Museum, Grey St, South Brisbane, 4101, Q.
+Queensland Museum, PO Box 3300, South Brisbane, 4101, Q.
+Australia
+
+Phone: 61-7-38407698 or 61-18-748 467 (24 hour)
+Fax: 61-7-3846 1918
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="100197.html">lat/long designation and collection data
+</A></li>
+        <LI>Next message: <A HREF="052833.html">Latitude &amp; Longitude data
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#017041">[ date ]</a>
+              <a href="thread.html#017041">[ thread ]</a>
+              <a href="subject.html#017041">[ subject ]</a>
+              <a href="author.html#017041">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Botanical Latin Translation
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1995-October/017243.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Botanical Latin Translation</H1>
+    <B data-pagefind-meta="author">Peter Bostock</B>
+    pbostock at OZEMAIL.COM.AU<BR>
+    <I data-pagefind-meta="date">Fri Oct 27 20:07:23 CDT 1995</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="100416.html">Carrying capacity
+</A></li>
+        <LI>Next message: <A HREF="053035.html">Botanical Latin Translation
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#017243">[ date ]</a>
+              <a href="thread.html#017243">[ thread ]</a>
+              <a href="subject.html#017243">[ subject ]</a>
+              <a href="author.html#017243">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1995</span><!--beginarticle-->
+<PRE>Dear Colleagues,
+
+Since Nick Lander has let the cat out of the bag (I don't mind really) I
+think it is time to give a bit of background information re my program
+TRANSLAT. It translates [botanical] Latin more or less literally, but by
+employing 1-word look ahead and 1-word look behind, it has facility to
+decode phrases and also is aware in a dumb sort of way of some verbal
+constructions etc. which have meanings beyond the simple translation of the
+component words.
+
+The program relies on brute force, aided by binary indexes on various
+databases, to match stems and decode endings. Currently handles nouns (c.
+1900 entries), adverbs &amp; prepositions (1500), adjectives &amp; participles
+(2580), verbs (incl. deponents) (375), pronouns (including compounds) and
+2-word phrases (130). The most recent version also has a stab at suggesting
+the gender, case, number etc of words not in its databases. It is presently
+implemented in Quick Basic 4.5 with various library extensions, and has been
+tested (and works) on DOS 3.x to 6.22, and Windows 3.1x. It has not yet been
+tested on Win95. I hope to port it to Visual Basic in the next few months,
+which will facilitate transfer to 32-bit code for Win95. Currently
+decodes/translates at average of 75 milliseconds per word on a 486/DX33.
+
+Finally, it is free! Caveat emptor does not apply, but perhaps 'illud Latine
+dici non potest'* (thank to Henricus Barbatus &amp; Lingua Latine Occasionibus
+Omnibus) does.
+
+If anyone wants further information, contact me via email, or by normal mail
+or phone at Queensland Herbarium. I would like to establish a gopher or FTP
+site or sites, so if anyone wants to evaluate the program to see if they are
+willing to take the risk of distributing it, please feel free to contact me.
+At present, I am unable to deliver the program and data easily to all and
+sundry. As a self-extracting zip file, it is between 380 and 450 kbytes, and
+since I am on a commercial internet connection, I simply cannot afford to
+email encoded information of this size. Thus far, I have only sounded out
+ERIN (via Arthur Chapman) in Canberra, Aust., but have not yet followed
+through as yet.
+
+* illud    that/it(subj.){n.s.n}
+           that/it(obj.){ac.s.n}[Pron.]
+  latine   in latin|in the latin language[adv./conj.]  &lt;-- really a 1 word
+phrase
+  dici     to be said/called[pres.inf.pas.]
+  non      not[adv./conj.]
+  potest.  (he/she/it) is able
+
+  TRANSLAT: That, in latin, is not able to be said.
+  H.Beard:  You can't say that in Latin!
+
+Cheers,
+Peter
+Peter D. Bostock
+Senior Botanist, Queensland Herbarium
+Meiers Road, Indooroopilly, Qld, Australia 4068
+pbostock at ozemail.com.au  Fax: 61-7-389 69624  Phone: 61-7-389 69327
+(note changed phone and fax numbers effective 24 July 1995)
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="100416.html">Carrying capacity
+</A></li>
+        <LI>Next message: <A HREF="053035.html">Botanical Latin Translation
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#017243">[ date ]</a>
+              <a href="thread.html#017243">[ thread ]</a>
+              <a href="subject.html#017243">[ subject ]</a>
+              <a href="author.html#017243">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

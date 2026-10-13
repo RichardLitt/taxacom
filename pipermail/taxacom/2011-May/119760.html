@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] SINES, LINES and chromosomal rearrangements
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2011-May/119760.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] SINES, LINES and chromosomal rearrangements</H1>
+    <B data-pagefind-meta="author">Sergio Vargas</B>
+    sevragorgia at gmail.com<BR>
+    <I data-pagefind-meta="date">Fri May  6 14:41:50 CDT 2011</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="119759.html">[Taxacom] SINES,
+ LINES and chromosomal rearrangements (was: contamination)
+</A></li>
+        <LI>Next message: <A HREF="119761.html">[Taxacom] SINES, LINES and chromosonal rearrangements
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#119760">[ date ]</a>
+              <a href="thread.html#119760">[ thread ]</a>
+              <a href="subject.html#119760">[ subject ]</a>
+              <a href="author.html#119760">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2011</span><!--beginarticle-->
+<PRE>  Hi,
+
+just a brief comment on compatibility.
+
+Compatibility was originally proposed by Lequesne in Syst. Zool. 1969 (A 
+METHOD OF SELECTION OF CHARACTERS IN NUMERICAL TAXONOMY), later 
+developed by other authors, and finally quasi-destroyed by Felsenstein 
+in Syst. Zool. 1978 (CASES IN WHICH PARSIMONY OR COMPATIBILITY METHODS 
+WILL BE POSITIVELY MISLEADING). Some use the principle to find 
+generalized tracks in panbiogeography.
+
+It is not exactly the same thing as finding a tree that maximizes 
+congruence because one only tries to find the maximum number of 
+compatible characters using a clique algorithm for this. First a 
+compatibility matrix is calculated and this matrix (interpreted as a 
+graph) is use to find the largest clique of compatible characters. The 
+result is a set of fully compatible characters that imply a tree with 
+100% CI. The logic would be: maximize compatibility first and then 
+deduce the tree. If you don't use this, you search for the tree that 
+maximizes congruence of the entire matrix, i.e. including homoplasic 
+characters. During optimization solutions that minimize (globally) the 
+number of steps will be favored. If compatibility is used, homoplasic 
+characters are simply not used, even if they could potentially add 
+structure to the phylogenetic tree.
+
+sergio
+
+On 5/6/11 7:00 PM, taxacom-request at mailman.nhm.ku.edu wrote:
+&gt; Perhaps it's my ignorance, but picking the largest set of mutually
+&gt; congruent characters seems like it's effectively the same thing as a
+&gt; 'tree'. But then I admit my ignorance of the clique analysis algorithm
+&gt; and accept I could be wrong in that assertion.
+&gt;
+&gt; John Grehan
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="119759.html">[Taxacom] SINES,
+ LINES and chromosomal rearrangements (was: contamination)
+</A></li>
+        <LI>Next message: <A HREF="119761.html">[Taxacom] SINES, LINES and chromosonal rearrangements
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#119760">[ date ]</a>
+              <a href="thread.html#119760">[ thread ]</a>
+              <a href="subject.html#119760">[ subject ]</a>
+              <a href="author.html#119760">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

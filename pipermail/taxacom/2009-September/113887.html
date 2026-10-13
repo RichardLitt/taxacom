@@ -1,0 +1,402 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] FW: formation of zoological names with Mc, Mac, et
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20FW%3A%20formation%20of%20zoological%20names%20with%20Mc%2C%20Mac%2C%20et&In-Reply-To=%3C1ff243760909021823k6039f9dej4f826cfb8ddd5ef2%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="066521.html">
+   <LINK REL="Next"  HREF="113888.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2009-September/113887.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] FW: formation of zoological names with Mc, Mac, et</H1>
+    <B data-pagefind-meta="author">Dean Pentcheff</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20FW%3A%20formation%20of%20zoological%20names%20with%20Mc%2C%20Mac%2C%20et&In-Reply-To=%3C1ff243760909021823k6039f9dej4f826cfb8ddd5ef2%40mail.gmail.com%3E"
+       TITLE="[Taxacom] FW: formation of zoological names with Mc, Mac, et">pentcheff at gmail.com
+       </A><BR>
+    <I data-pagefind-meta="date">Wed Sep  2 20:23:06 CDT 2009</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="066521.html">[Taxacom] FW: formation of zoological names with Mc, Mac, et
+</A></li>
+        <LI>Next message: <A HREF="113888.html">[Taxacom] FW: formation of zoological names with Mc, Mac, et
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#113887">[ date ]</a>
+              <a href="thread.html#113887">[ thread ]</a>
+              <a href="subject.html#113887">[ subject ]</a>
+              <a href="author.html#113887">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2009</span><!--beginarticle-->
+<PRE>Obligatory disclaimer: I am not a taxonomist. But I play nicely with
+them (at least I try).
+
+I'm in the last gasps of helping coordinate the assembly of a big
+taxonomic list (revision of the genera of the Decapoda) where this
+topic surfaced in excruciating detail. Right as we were winding the
+whole game down, it became apparent that we collectively had several
+very different interpretations of what should be in the authority
+string following a taxon name. Each of us was (of course) convinced
+that our opinion was the obviously corrrect and conventional approach.
+Cough.
+
+My sense (after some months of battering it about) is that we've
+&quot;overloaded&quot; the authority string that the Code specifies may
+optionally follow a taxon name. We expect it to point us to the paper
+publication that has the taxon description, but we also expect it to
+tell us who did the deed and when. Those are not always the same
+thing. But up until recently, taxonomic work has been done in small
+enough communities, by workers who were familiar enough with the
+material, that the mismatches could be mentally glossed over. &quot;Anyone
+working in that field would know...&quot; &quot;Oh, of course workers on that
+taxon always use initials in these two authors' cases...&quot; &quot;Well the
+Code says...&quot; / &quot;No it doesn't.&quot; / &quot;Yes it does...&quot;
+
+What are some of the issues we faced?
+
+There's the name-spelling issue. Should a standardized version of the
+contributors' names be used, since we want to identify the person? Or
+should we use the name as it appeared in the paper publication where
+the taxon was described, since we want to identify the publication?
+Both are reasonable, but you can't have it both ways. And that doesn't
+address how to list the names in the bibliographic references (and
+must the names in the bibiography agree with those in the authority
+strings?).
+
+There are multi-year publications. In this case, I think most
+taxonomists would agree that the authority string should have the year
+in which that taxon was defined, despite the fact that the whole
+publication dribbled out over several years. But that won't match the
+bibliographic information for the paper publication (though it will be
+&quot;nested&quot; in the year range of the publication).
+
+There are contributors who differ from the authors of the publication
+(i.e. Smith in Doe &amp; Jones, 1900).
+
+There are contributors with variably spelled names who differ from the
+authors in multi-year publications. Ack. :)   Etc.
+
+The representation of contributor names is horribly complex and will
+be nearly impossible to standardize. That's another reason this
+information can't be used as part of a unique key for a taxon. There
+are issues with differing transliteration systems, problems with how
+many authors to list when there are multiple authors, initials
+included or not included, problems with multi-part names, problems
+with changing traditions of the representation of Asian names, and on
+and on.
+
+
+But some things seem increasingly clear to me.
+
+The string [taxon name + contributor(s) + year] cannot be guaranteed
+to be unique. From a human perspective, it's pretty close to unique.
+Within a taxonomic group, it should probably nearly always be unique.
+But from the perspective of a database, it is not a unique key to a
+taxon record. Contributor names can be used as search criteria, but
+not as a unique key.
+
+Add to that the reality that we revise those names and dates with some
+frequency. We discover different dates of actual publication. We
+decide that the contributor was really only one of the three authors
+of the publication. We find straightforward errors in spellings. But
+those fixes don't (necessarily) change the taxon concept (oh, I really
+wanted to avoid that term), just a bit of information about it.
+
+As a computer/biology hybrid kind of guy, I can't see an alternative
+to basing taxonomic databases on surrogate keys (alluding to Richard
+Pyle's postings -- entirely arbitrary unique keys). The contributor
+information is &quot;just&quot; a field or fields of data associated with the
+taxon. Important data fields, yes, but not privileged in some sense.
+
+Finding taxa with the same taxon names but differing contributor
+information should make us scratch our heads to figure out what's
+happening, but it doesn't guarantee that they're actually different
+taxa: maybe there's just an error there. Likewise (as has been pointed
+out), it is possible to have taxa with the same names and the same
+contributor information, but that point to different critters (though
+the overlap may alert us to a synonymy issue that needs to be
+resolved).
+
+And the thing that's clearest to me is that we (speaking as a
+quasi-member of the taxonomic community) tend to think about those
+pesky authority strings in a pretty unclear way, wanting to overlap
+several intellectual responsibilities onto a dozen or two characters.
+The clearer the consensus we can reach on this, the more time we can
+spend on tidying up a few centuries of fuzziness, rather than
+perpetuating it.
+
+I'm not a practicing taxonomist, so I don't feel comfortable
+recommending specific solutions. But I'm happy to pitch in to point
+out some of the issues!
+
+-Dean
+-- 
+Dean Pentcheff
+<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">pentcheff at gmail.com</A>
+
+On Wed, Sep 2, 2009 at 2:53 PM, Dan Lahr&lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">daniel.lahr at gmail.com</A>&gt; wrote:
+&gt;<i> I have certainly learned a lot from this thread - I always thought
+</I>&gt;<i> that authority and year were required by the ICZN!
+</I>&gt;<i>
+</I>&gt;<i> Just looping back into my original question on how Bioinformatics can
+</I>&gt;<i> contribute to nomenclature. It seems clear that most agree that:
+</I>&gt;<i>
+</I>&gt;<i> 1 - names are not unique identifiers, whether they include
+</I>&gt;<i> authority+year, initial+authority+year, or even in the extreme case
+</I>&gt;<i> mentioned about using ten or more fields as identifiers. I do
+</I>&gt;<i> appreciate the caveat raised that names are not unique identifiers
+</I>&gt;<i> only for a minority of cases.
+</I>&gt;<i>
+</I>&gt;<i> 2 - bioinformaticians and taxonomists are using names for completely
+</I>&gt;<i> different reasons, but both profit from standardized databases.
+</I>&gt;<i>
+</I>&gt;<i> I know that as a taxonomist, I like to see the authority and year and
+</I>&gt;<i> that is an indication of possible homonymy, where it was possibly
+</I>&gt;<i> published etc, as Jim Croft points out. But most importantly it tells
+</I>&gt;<i> me about the context of the organism's description - assuming I have a
+</I>&gt;<i> good grasp of the relevant literature - and helps me assess biological
+</I>&gt;<i> questions. So I do like to know exactly who was the person describing
+</I>&gt;<i> an organism, but this might be just personal as Francisco pointed out,
+</I>&gt;<i> I can see how it can be irrelevant for many taxonomists. However, when
+</I>&gt;<i> you get to the historical use of names (which I think is a pivotal
+</I>&gt;<i> part of taxonomy), things get really complicate, because there are two
+</I>&gt;<i> types of mistakes: spelling and misidentification.
+</I>&gt;<i>
+</I>&gt;<i> I have to conclude tentatively, that a currently a name means
+</I>&gt;<i> different things, when it shouldn't. For nomenclature, name is the
+</I>&gt;<i> binomial (authority optional), and we have lived happily because
+</I>&gt;<i> practical taxonomy is made in a small scale, that is, someone
+</I>&gt;<i> describing a Tandonia would have a good grasp of the literature on
+</I>&gt;<i> those snails and wouldn't get as confused as we did. For
+</I>&gt;<i> bioinformaticians, the name needs to be unique given that they are
+</I>&gt;<i> unifying the names accross the board, and will eventually be as many
+</I>&gt;<i> fields we agree upon.
+</I>&gt;<i>
+</I>&gt;<i> I can't conceive that people will follow a standardized amount of
+</I>&gt;<i> fields for every database that is put together. So is the take home
+</I>&gt;<i> message that taxonomists should probably start thinking about
+</I>&gt;<i> modifying current rules to accommodate the problems coming from the
+</I>&gt;<i> unification of all taxonomies?
+</I>&gt;<i>
+</I>&gt;<i> Kind regards,
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> DAn
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On Wed, Sep 2, 2009 at 6:49 AM, Jim Croft&lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">jim.croft at gmail.com</A>&gt; wrote:
+</I>&gt;&gt;<i> Nor, as far as I can tell, does either code dictate how yous should
+</I>&gt;&gt;<i> cite an author, or a date...
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> It is just good practice  to do it according to some mutually agreed
+</I>&gt;&gt;<i> standard if you want to be able to do anything useful with it.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> jim
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On Wed, Sep 2, 2009 at 9:40 AM, Stephen Thorpe&lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">s.thorpe at auckland.ac.nz</A>&gt; wrote:
+</I>&gt;&gt;&gt;<i> I was speaking loosely when I said that the authority/date should be thought of as part of the name. My main point was that the original publication is &quot;metadata&quot; over and above the authority/date, the latter of which is not intended to point to a publication, contra AFD style citations of names! Whether you think of authority/date as part of name or not, it is still governed by the Code, whereas &quot;metadata&quot; isn't (the Code can't dictate, for example, how you cite a publication ...)
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Stephen
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> ________________________________________
+</I>&gt;&gt;&gt;<i> From: Jim Croft [<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">jim.croft at gmail.com</A>]
+</I>&gt;&gt;&gt;<i> Sent: Wednesday, 2 September 2009 7:29 p.m.
+</I>&gt;&gt;&gt;<i> To: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Tony.Rees at csiro.au</A>
+</I>&gt;&gt;&gt;<i> Cc: Stephen Thorpe; <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">fwelter at gwdg.de</A>; <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;&gt;&gt;<i> Subject: Re: [Taxacom] FW: formation of zoological names with Mc, Mac, et
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Yes we can agree on the principle and process a far as homonymy resolution goes.
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> In practice I would model all the ancillary stuff you would use to
+</I>&gt;&gt;&gt;<i> clarify as metadata and not part of the name (as I think both codes
+</I>&gt;&gt;&gt;<i> describe)
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> On a wry note, if they author/date were part of the name, whtne they
+</I>&gt;&gt;&gt;<i> would not be homonyms...  ;)
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> On Wed, Sep 2, 2009 at 5:14 PM, &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Tony.Rees at csiro.au</A>&gt; wrote:
+</I>&gt;&gt;&gt;&gt;<i> Hi Jim,
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> You have chosen a non-homonym name (so far as we are aware, maybe a cryptic one nevertheless) but what if there were/are multiple taxa called Eucalyptus deglupta? This is where the authority portions come into play, at least for information retrieval/name reconciliation purposes...
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Surely we can agree at least on this much?
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> What about (e.g.) Ficus variegatus Blume (our friend once more!), a fig tree, vs. Ficus variegatus Röding, 1798, not a fig tree at all? (Hint: google images will give a clue...)
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> You cannot say that the name alone is sufficient without the authority portion, to differentiate these two taxa.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> And in genera, approx. 15% of all names are homonyms, a much bigger problem :(
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> - Tony
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> -----Original Message-----
+</I>&gt;&gt;&gt;&gt;<i> From: Jim Croft [mailto:<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">jim.croft at gmail.com</A>]
+</I>&gt;&gt;&gt;&gt;<i> Sent: Wednesday, 2 September 2009 5:09 PM
+</I>&gt;&gt;&gt;&gt;<i> To: Stephen Thorpe
+</I>&gt;&gt;&gt;&gt;<i> Cc: Rees, Tony (CMAR, Hobart); <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">fwelter at gwdg.de</A>; <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;&gt;&gt;&gt;<i> Subject: Re: [Taxacom] FW: formation of zoological names with Mc, Mac, et
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> We are going to have to differ on this and I guess it is an artefact
+</I>&gt;&gt;&gt;&gt;<i> of how we each model (or not) our information.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> The only non-Australian eucalypt grows in Indonesia.  It was named as
+</I>&gt;&gt;&gt;&gt;<i> 'Eucalyptus deglupta' but a Carl Ludwig Blume, aka C.L. Blume, aka
+</I>&gt;&gt;&gt;&gt;<i> Blume, aka Bl.  He did this in (1849) in a publication commonly, but
+</I>&gt;&gt;&gt;&gt;<i> not ubiquitously abbreviated to Mus. Bot. Lugd.-Bot. on a page number
+</I>&gt;&gt;&gt;&gt;<i> I can not find because IPNI is not talking today and nobody else
+</I>&gt;&gt;&gt;&gt;<i> bother to record this vital piece of information.  Presumably it has a
+</I>&gt;&gt;&gt;&gt;<i> type which would anchor the name.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> The species does not have any or nomenclatural or taxonomic synonyms,
+</I>&gt;&gt;&gt;&gt;<i> but is also referred to as Kamarere, Indonesian Gum and Rainbow Gum
+</I>&gt;&gt;&gt;&gt;<i> and even 'deglupta'.  The names science has chosen to give this
+</I>&gt;&gt;&gt;&gt;<i> species is Eucalyptus deglupta from which you can deduce it is likely
+</I>&gt;&gt;&gt;&gt;<i> to be related to other species our Eucalyptus and very little else.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> All else is (pretty vital) metadata of the name taxon name that helps
+</I>&gt;&gt;&gt;&gt;<i> you clarify what it the name 'most likely' to applies to.  It sum is
+</I>&gt;&gt;&gt;&gt;<i> not the name.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> We could chose a taxon with ambiguous concepts for the same name, and
+</I>&gt;&gt;&gt;&gt;<i> then it gets *really* interesting...
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> jim
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> On Wed, Sep 2, 2009 at 4:23 PM, Stephen Thorpe&lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">s.thorpe at auckland.ac.nz</A>&gt; wrote:
+</I>&gt;&gt;&gt;&gt;&gt;<i> No way! The authority/date should be thought of as part of the name! The authority is only indirectly about a person. The authority for a taxon is however the surname of the author of that taxon is spelled in the original publication, i.e., it is a &quot;nominal person&quot;. If it is Smith, then the authority is just Smith. The name needs to be linked to the original publication is some other (external) way. The only reason for having dates as part of names is because of PRIORITY, NOT to point to a publication. Ideally, in a database, a name needs to be followed by a field pointing to the original publication, maybe like this:
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Examplus primus Smith, 1970
+</I>&gt;&gt;&gt;&gt;&gt;<i> Original publication: J. Smith, 1970a
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> ________________________________________
+</I>&gt;&gt;&gt;&gt;&gt;<i> From: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom-bounces at mailman.nhm.ku.edu</A> [<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom-bounces at mailman.nhm.ku.edu</A>] On Behalf Of <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Tony.Rees at csiro.au</A> [<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Tony.Rees at csiro.au</A>]
+</I>&gt;&gt;&gt;&gt;&gt;<i> Sent: Wednesday, 2 September 2009 6:02 p.m.
+</I>&gt;&gt;&gt;&gt;&gt;<i> To: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">jim.croft at gmail.com</A>; <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">fwelter at gwdg.de</A>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Cc: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Subject: Re: [Taxacom] FW: formation of zoological names with Mc, Mac, et
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Jim Croft wrote:
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> &lt;snip&gt;
+</I>&gt;&gt;&gt;&gt;&gt;<i> I am getting quite worried about all this 'sanitization' of authorish
+</I>&gt;&gt;&gt;&gt;&gt;<i> strings as though it has some sort of nomenclatural, taxonomic or
+</I>&gt;&gt;&gt;&gt;&gt;<i> operational validity.  The author and date are not part of the name -
+</I>&gt;&gt;&gt;&gt;&gt;<i> they are attributes of a particular use of the name.
+</I>&gt;&gt;&gt;&gt;&gt;<i> &lt;/snip&gt;
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Sounds a lot like operational and taxonomic validity to me. In the cases of homonyms at least, we need to distinguish between usages of a name - different authors/years/publications/pages, different usages, often different taxonomic status (nomen nudum or whatever). If we can't link together authority citations that are not identical but which are variant references to the same published name instance, then they all look like different name usages, which is incorrect.
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> - Tony
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Taxacom Mailing List
+</I>&gt;&gt;&gt;&gt;&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;&gt;&gt;&gt;&gt;<i> <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> The Taxacom archive going back to 1992 may be searched with either of these methods:
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> (1) <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Or (2) a Google search specified as:  site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> --
+</I>&gt;&gt;&gt;&gt;<i> _________________
+</I>&gt;&gt;&gt;&gt;<i> Jim Croft ~ <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">jim.croft at gmail.com</A> ~ +61-2-62509499 ~
+</I>&gt;&gt;&gt;&gt;<i> <A HREF="http://www.google.com/profiles/jim.croft">http://www.google.com/profiles/jim.croft</A>
+</I>&gt;&gt;&gt;&gt;<i> ... in pursuit of the meaning of leaf ...
+</I>&gt;&gt;&gt;&gt;<i> ... 'All is leaf' ('Alles ist Blatt') - Goethe
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> --
+</I>&gt;&gt;&gt;<i> _________________
+</I>&gt;&gt;&gt;<i> Jim Croft ~ <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">jim.croft at gmail.com</A> ~ +61-2-62509499 ~
+</I>&gt;&gt;&gt;<i> <A HREF="http://www.google.com/profiles/jim.croft">http://www.google.com/profiles/jim.croft</A>
+</I>&gt;&gt;&gt;<i> ... in pursuit of the meaning of leaf ...
+</I>&gt;&gt;&gt;<i> ... 'All is leaf' ('Alles ist Blatt') - Goethe
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> --
+</I>&gt;&gt;<i> _________________
+</I>&gt;&gt;<i> Jim Croft ~ <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">jim.croft at gmail.com</A> ~ +61-2-62509499 ~
+</I>&gt;&gt;<i> <A HREF="http://www.google.com/profiles/jim.croft">http://www.google.com/profiles/jim.croft</A>
+</I>&gt;&gt;<i> ... in pursuit of the meaning of leaf ...
+</I>&gt;&gt;<i> ... 'All is leaf' ('Alles ist Blatt') - Goethe
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Taxacom Mailing List
+</I>&gt;&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;&gt;<i> <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> The Taxacom archive going back to 1992 may be searched with either of these methods:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> (1) <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Or (2) a Google search specified as:  site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> --
+</I>&gt;<i> Daniel Lahr
+</I>&gt;<i> -------------------------------------------------
+</I>&gt;<i> PhD candidate
+</I>&gt;<i> Organismic and Evolutionary Biology
+</I>&gt;<i> U Massachusetts- Amherst
+</I>&gt;<i> 319 Morrill Science Center, Amherst
+</I>&gt;<i> Amherst, MA 01003
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i>
+</I>&gt;<i> Taxacom Mailing List
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;<i>
+</I>&gt;<i> The Taxacom archive going back to 1992 may be searched with either of these methods:
+</I>&gt;<i>
+</I>&gt;<i> (1) <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+</I>&gt;<i>
+</I>&gt;<i> Or (2) a Google search specified as:  site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+</I>&gt;<i>
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="066521.html">[Taxacom] FW: formation of zoological names with Mc, Mac, et
+</A></li>
+	<LI>Next message: <A HREF="113888.html">[Taxacom] FW: formation of zoological names with Mc, Mac, et
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#113887">[ date ]</a>
+              <a href="thread.html#113887">[ thread ]</a>
+              <a href="subject.html#113887">[ subject ]</a>
+              <a href="author.html#113887">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

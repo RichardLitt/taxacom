@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> NomenclatorZoologicus
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2005-January/092989.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">NomenclatorZoologicus</H1>
+    <B data-pagefind-meta="author">David Remsen</B>
+    dremsen at MBL.EDU<BR>
+    <I data-pagefind-meta="date">Mon Jan  3 16:01:02 CST 2005</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="092988.html">OT (sortof) Molecular Biology
+</A></li>
+        <LI>Next message: <A HREF="092981.html">GBIF Workshop on Biodiversity Data Modelling
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092989">[ date ]</a>
+              <a href="thread.html#092989">[ thread ]</a>
+              <a href="subject.html#092989">[ subject ]</a>
+              <a href="author.html#092989">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2005</span><!--beginarticle-->
+<PRE>Rich  - We are working on a web-based interface for online review now.
+  We would certainly appreciate any input you or others might have.  Our
+idea is, as you suggested, to have the page image visible along with
+the editable data record.  We are playing with image manipulation
+functions in php to dynamically/interactively crop and navigate the
+page image so that the current record is at the top of the image just
+under the converted data record.  One of the most physically exhausting
+exercises in reviewing these data is moving the eye between the page
+and the record, particularly in alphabetical lists where the first
+characters are identical.  Compound this with the fact that much of the
+record consists of abbreviations and non-text words that require a lot
+of this back and forth motion.  We are going to be actively working on
+these issues in the next couple of weeks and will likely try out
+several ideas or offer several options before we get operational.
+
+
+&gt; As for eliminating the need for the second of these, I think the best
+&gt; way to
+&gt; achieve this would be to develop a dead-simple web-based
+&gt; user-interface that
+&gt; allows an online reviewer to easily go page-by-page, line-by-line, and
+&gt; see
+&gt; the electronic version directly next to the original scanned version
+&gt; (ideally with the electronic version formatted with the same font,
+&gt; etc. as
+&gt; the printed version, so discrepancies are more obvious); and a simple
+&gt; way
+&gt; for the reviewer to make the necessary adjustments right there on the
+&gt; web
+&gt; page, then click a &quot;Submit&quot; button to go to the next name.  Dave --
+&gt; I've got
+&gt; a number of ideas &amp; suggestions, if you're interested (although I
+&gt; suspect
+&gt; that you're already WAY ahead of me on this).
+
+
+
+
+&gt; P.S. Dave -- out of curiosity, have you tried Adobe's Acrobat Capture
+&gt; 3.0
+&gt; software? It's their industrial-strength OCR product, which has
+&gt; impressive
+&gt; tools for collaborative scanning/OCRing/proofing of printed documents.
+&gt; Was
+&gt; this among the tools you tried when determining that in-house OCRing
+&gt; was not
+&gt; feasible?
+
+
+We tried this and several other OCR tools prior to out-sourcing to a
+data conversion company.  We had volumes 1-9 professionally unbound so
+that the page feeds would go smoothly.    Our library has several
+high-end scanner/copiers that bundle scanning and OCR together and the
+resultant conversion was a good 99% accurate but unfortunately this was
+not good enough.  99% gives an error approximately every 2 records.
+We also tried a different OCR package and then wrote some scripts to
+compare the two records hoping that they would narrow the mistakes down
+by disagreeing on the errors and agreeing on the successfully converted
+works.  This is the approach used at the NLM for some of the Turning
+the Pages conversions they have done where they actually use something
+like 5 different OCR packages and then sort through the results for an
+editorial pass.  It might be worth chatting with them sometime on this
+methodology.  Our two-pass effort, however,  created more problems than
+it solved.
+
+It's interesting to note that the conversion service we chose that
+purported to do double-keying actually initially used OCR tools as
+well.  I had been told that these guys had some 'tricks' for
+high-accuracy OCR where they use double-keying only sporadically to
+check the OCR.   While this might work for some text it didn't work for
+NZ where everything is abbreviated, punctuated, and very few of the
+strings are actual words.  We went through 4 different iterations with
+the company before they threw there hands up and actually had it
+double-keyed.  The fifth pass was the one we kept. They never actually
+admitted they used OCR but the errors I found were consistent with OCR
+and not typographical errors. (things like an 198o instead of 1980 or
+l980 instead of 1980).  So I think future efforts should keep this in
+mind.   We will summarize this and additional tips and tools that we
+have developed for parsing and QC-ing large volumes of nomenclatural
+text like this on the NZ site.
+
+David Remsen
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="092988.html">OT (sortof) Molecular Biology
+</A></li>
+        <LI>Next message: <A HREF="092981.html">GBIF Workshop on Biodiversity Data Modelling
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092989">[ date ]</a>
+              <a href="thread.html#092989">[ thread ]</a>
+              <a href="subject.html#092989">[ subject ]</a>
+              <a href="author.html#092989">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

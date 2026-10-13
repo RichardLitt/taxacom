@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Catching lat lon in wrong country errors
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2005-January/093000.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Catching lat lon in wrong country errors</H1>
+    <B data-pagefind-meta="author">Robert Mesibov</B>
+    mesibov at SOUTHCOM.COM.AU<BR>
+    <I data-pagefind-meta="date">Thu Jan  6 21:46:50 CST 2005</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="093003.html">Red Ape book press release
+</A></li>
+        <LI>Next message: <A HREF="093004.html">Catching lat lon in wrong country errors
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#093000">[ date ]</a>
+              <a href="thread.html#093000">[ thread ]</a>
+              <a href="subject.html#093000">[ subject ]</a>
+              <a href="author.html#093000">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2005</span><!--beginarticle-->
+<PRE>I'm not 100% sure, but I'm guessing that Doug Yanega's question and the
+thread to which it's tied have to do with locality data NOT defined by
+lat/lon or UTM coordinates supplied by the collector, and coming from the
+pre-GPS era. My own experience with &quot;pre-numerical&quot; localities suggests that
+human checking, and lots of it, is a very good idea.
+
+A couple of years back I audited a Tasmanian digital gazeteer with about
+1700 name + lat/lon entries. Some entries were copied (electronically) from
+an &quot;official&quot; government-produced gazeteer. Most had been created by someone
+finding a location on a printed map and carefully estimating the lat/lon
+from lat/lon marks on the map's margin.
+
+About 45% of the 1700 entries needed to be edited. There were many minor
+data-entry problems of one kind or another (spelling errors, multiple
+entries for the same place) which probably aren't really relevant to Doug's
+query. However, a remarkably high number of the dubious entries, including
+many from the &quot;official&quot; source, were long linear locations (rivers, roads)
+or very large landscape features (e.g. mountain ranges). I have no idea how
+the lat/lons were determined for such features. The error in using gazeteer
+lat/lon as opposed to &quot;X on map&quot; lat/lon in these cases was up to 20 km.
+
+For smaller features (individual hills, towns, etc) I used GIS to calculate
+the distance discrepancy between the feature's location on a digital
+map (with ca. 15m horizontal accuracy) and its gazeteer location. My cut-off
+for being interested was 5+ km, and I was interested 60 times out of 1700,
+with displacement errors of up to 90 km. I checked each of the 60 (both map
+and gazeteer) to see what had happened. Some were obvious data entry errors
+(like misreading a map) and some were placename ambiguities. A surprising
+number of both &quot;official&quot; and homemade entries were just plain wrong.
+
+I emphasise that these were errors in the digital gazeteer, which was the
+spatial reference providing &quot;look ups&quot; for a collection database. At the
+next level up, people entering data in the collection database often
+generated additional errors by spatially misinterpreting text strings such
+as &quot;0.5 km downstream from Rickety Bridge&quot;. They could find Rickety Bridge
+on the map but not in the gazeteer, so they entered the nearest named place
+on the map which was also in the gazeteer. When I audited these database
+entries I found some very large displacements. Nearest named places have a
+strange attractive power! The text string, of course, was also entered in
+the collection database, but spatial searches in this database are done on
+placename and/or numerical coordinates. Should I mention that I also found
+data entry errors for collector-supplied lat/lon and UTM?
+
+This particular audit was carried out because the gazeteer and database
+managers believed, as I think Doug does, that people always need to be part
+of the
+data-validation process.
+---
+Dr Robert Mesibov
+Honorary Research Associate, Queen Victoria Museum and Art Gallery
+and School of Zoology, University of Tasmania
+Home contact: PO Box 101, Penguin, Tasmania, Australia 7316
+(03) 6437 1195
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="093003.html">Red Ape book press release
+</A></li>
+        <LI>Next message: <A HREF="093004.html">Catching lat lon in wrong country errors
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#093000">[ date ]</a>
+              <a href="thread.html#093000">[ thread ]</a>
+              <a href="subject.html#093000">[ subject ]</a>
+              <a href="author.html#093000">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

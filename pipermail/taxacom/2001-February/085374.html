@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> geographical coordinates, GeoCoding, Lat/Long...
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2001-February/085374.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">geographical coordinates, GeoCoding, Lat/Long...</H1>
+    <B data-pagefind-meta="author">Doug Yanega</B>
+    dyanega at POP.UCR.EDU<BR>
+    <I data-pagefind-meta="date">Fri Feb 16 18:25:03 CST 2001</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="085372.html">Homology (was Striking a balance etc.)
+</A></li>
+        <LI>Next message: <A HREF="085377.html">GROUPS contra subgenus
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#085374">[ date ]</a>
+              <a href="thread.html#085374">[ thread ]</a>
+              <a href="subject.html#085374">[ subject ]</a>
+              <a href="author.html#085374">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2001</span><!--beginarticle-->
+<PRE>I was away for a week, but I see some threads have come up while I was gone
+that I'd like to contribute to.
+
+First off, the system we use here for error coding in locality data is one
+that (obviously) I think is suitably informative without requiring a PhD to
+encode, and one I haven't seen anyone propose (most folks seem to use exact
+meters, or a &quot;code&quot;). Locations in our database are given to the nearest
+degree, minute, or second, as appropriate and available, and errors are
+stated in the same units, to distinguish genuine uncertainty from zeroes
+(should some outside user need to convert the data in the future). For
+example, if a label reads &quot;Palm Canyon&quot;, and this geographic feature is
+larger than a minute, then it is coded to degree only (&quot;33 N, 116 W&quot;) and
+the error field reads &quot;degrees&quot;. That informs users that the entry does NOT
+mean 33 00 00 N, 116 00 00 W. It means &quot;anywhere within the box defined as
+one degree of latitude and longitude between 33 and 34 N and 116 and 117
+W&quot;. This allows for the wandering around of a collector relative to their
+base camp, and other such concerns, and gives error at variable scales
+without requiring precise metric breakdowns. Yes, it might be nicer to
+calculate that Palm Canyon is exactly 6.3 miles long and 1.3 miles wide,
+and encode the locality as four or more separate points defining a polygon
+(even a circle is less than optimal, after all), but that starts getting
+into details that might either not be easy for some hourly data-entry
+worker, or not be worth their time (in addition to complicating the
+database; after all, if you want to encode locality X as a 35-sided
+polygon, you'll need lots of separate fields that will be blank in 99% of
+the records in your database). The latter point is the practical reality of
+geocoding: if you have a label that says something like &quot;Wyoming&quot;, is it
+*really* worth worrying about defining a polygon that includes every square
+foot of the state? What I do, and tell data-entry people to do, is leave
+the geocoding fields blank in a case that vague. If a label says only &quot;Los
+Angeles&quot;, it's nearly worthless to geocode it. Same reason why I see no
+problem with leaving such a huge margin for error by defining &quot;Palm Canyon&quot;
+only to the nearest degree - it's so vague to begin with, that worrying
+about the picky details of the location are probably meaningless. Of
+course, should it prove possible to find out by some other means where
+exactly that collection event occurred, one can always update the database.
+It is in fact normal for our database records to have far more accurate
+geocodings than are indicated by the label data alone. This also relates to
+the following note by Chris Thompson:
+
+&gt;The Entomological Collections Network years ago stated that retrospective
+&gt;data capture from specimens should only be done as part of the revisionary
+&gt;work of a specialist, when the identification can be verified and specialist
+&gt;can provide the best point estimation (or rectangle) of the original
+&gt;collection.
+
+This is, essentially what the above system accomplishes; no record is
+entered in such a way as to imply greater geocoding accuracy than is
+practical to determine, and errs very much on the side of being
+conservative. This brings me to Neils Snow's comment:
+
+&gt;A colleague in the Dept. of Geography here tells me decimal degrees are
+&gt;generally prefered by those engaged in remote sensing, and suspects
+&gt;decimal degrees will be used increasingly in the future, especially as
+&gt;regards GIS applications.
+
+This is, I think, *extremely* dangerous, because if you see a decimal
+coordinate of &quot;33.00000 N, 116.00000 W&quot; in a database, you won't know
+whether it's PRECISELY at that point unless you also include an error
+value, whereas having degrees, minutes, and seconds as separate numeric
+fields allows you to enter the data so it is obvious *at first glance* that
+there is significant error in the data. Maybe that's not an issue if no
+human ever reads the data, but do all GIS applications know how to
+incorporate error values, including those that are given as codes?
+
+Peace,
+
+
+Doug Yanega        Dept. of Entomology         Entomology Research Museum
+Univ. of California - Riverside, Riverside, CA 92521
+phone: (909) 787-4315 (standard disclaimer: opinions are mine, not UCR's)
+           <A HREF="http://entmuseum9.ucr.edu/staff/yanega.html">http://entmuseum9.ucr.edu/staff/yanega.html</A>
+  &quot;There are some enterprises in which a careful disorderliness
+        is the true method&quot; - Herman Melville, Moby Dick, Chap. 82
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="085372.html">Homology (was Striking a balance etc.)
+</A></li>
+        <LI>Next message: <A HREF="085377.html">GROUPS contra subgenus
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#085374">[ date ]</a>
+              <a href="thread.html#085374">[ thread ]</a>
+              <a href="subject.html#085374">[ subject ]</a>
+              <a href="author.html#085374">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

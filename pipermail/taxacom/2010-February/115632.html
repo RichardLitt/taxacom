@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] the hurdle for all biodiv informatics initiatives
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2010-February/115632.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] the hurdle for all biodiv informatics initiatives</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at bishopmuseum.org<BR>
+    <I data-pagefind-meta="date">Thu Feb 18 03:32:51 CST 2010</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="115631.html">[Taxacom] the hurdle for all biodiv informatics initiatives
+</A></li>
+        <LI>Next message: <A HREF="115633.html">[Taxacom] the hurdle for all biodiv informatics initiatives
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#115632">[ date ]</a>
+              <a href="thread.html#115632">[ thread ]</a>
+              <a href="subject.html#115632">[ subject ]</a>
+              <a href="author.html#115632">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2010</span><!--beginarticle-->
+<PRE>
+I started writing a reply to this, but it ended up being WAY too long (and I
+was only about 1/4 done writing what I intended to write).  Suffice it to
+say that there are MANY issues here, and it would take a long time to write
+(and read) an adequate response to all of them. 
+
+So here's the highly abridged reply to Doug's post:
+
+&gt; In *principle*, there should be one-to-many mapping (and, 
+&gt; unless I'm mistaken, the informatics people intend it to work 
+&gt; this way) - and, as such, it WOULD be useful. In Wolfgang's 
+&gt; original example, that would mean all six of the known 
+&gt; combinations used historically for Cyclotrachelus sodalis 
+&gt; would have the SAME LSID; that way (for example), any 
+&gt; hyperlinked text version of any of those six names would link 
+&gt; to the same record in any particular taxon registry, even if 
+&gt; different registries used different names (as might well be 
+&gt; the case for a group such as butterflies, where multiple 
+&gt; authorities may differ on generic placement).
+
+I would agree with you in the context of ZooBank, where each LSID represents
+a Nomenclatural Act (in this case, the Act that establishes the species
+epithet &quot;sodalis&quot; as a Code-compliant species-group name).  This is what we
+are calling a &quot;Protonym&quot; (similar in concept to a botanical basionym, but
+broader in scope, and slightly different in other ways).
+
+But in the case of uBio (and GNI, and others), LSIDs (and/or other GUIDs)
+are intended to represent other &quot;things&quot; -- such as variations on text
+strings purported to represent taxon names (with or without authorship
+information).  If that's the item you want to identify, then it's perfectly
+appropriate to have a different GUID (e.g., LSID) assigned to each text
+string.  (There are other issues about assigning GUIDs to text strings --
+and I actually agree there is potential for superfluous identifiers -- but
+that's another topic for another post).
+
+Other taxon data managers (e.g., CoL) need GUIDs to represent taxon concepts
+-- which are neither text strings nor protonyms.  In fact, there are dozens
+of different meanings of the notion of a &quot;taxon name&quot; -- which is part of
+the reason why conversations of this sort are always so confusing (and
+frustrating -- especially for those of us who have been having such
+conversations for multiple decades).
+
+So....how can we ever achieve any sort of community standard if some people
+want to represent text strings via GUIDs; others want to represent Protonyms
+via GUIDs, others want to represent taxon concepts via GUIDs, and so on and
+so on?
+
+Well....Paul Kirk already hinted at the answer (and so did I).  Last week
+there was a meeting in Santa Cruz to discuss the Global Names Usage Bank
+(GNUB), which is part of the emerging &quot;Global Names Architecture&quot; (GNA).
+Another part of the GNI is the Global Names Index (GNI).  Most of the Axis
+of Evil (GBIF, EoL, ALA, etc.) were represented, and we all felt it was an
+extremely productive gathering.  With luck, there will be a public report
+and a bunch of other detailed documentation forthcoming.
+
+It would take several large emails to explain what GNUB is all about, but
+I'll provide a quick synopsis here. You can see more at these two URLs:
+<A HREF="http://www.tdwg.org/fileadmin/2009conference/slides/Remsen_GNA.ppt">http://www.tdwg.org/fileadmin/2009conference/slides/Remsen_GNA.ppt</A>
+<A HREF="http://www.tdwg.org/fileadmin/2009conference/slides/Pyle_GNA.ppt">http://www.tdwg.org/fileadmin/2009conference/slides/Pyle_GNA.ppt</A>
+
+In a nutshell:  The &quot;least common denominator&quot; for all of these variant
+taxonomic objects (text strings and their myriad variations, protonyms and
+other Code-governed nomenclatural acts, taxon concept definitions, etc.,
+etc., etc.) is what we're somewhat awkwardly referring to as a &quot;Taxon Name
+Usage&quot; (TNU).  It's not complicated -- the idea is to build an index of all
+occurrences where people have documented a taxon name in some form or
+another.  The documentation source is most often a publication, but it could
+also be a database, personal correspondence, field notebook, and many, many
+other forms.  A small subset of these TNU instances represent Code-governed
+Acts (and, hence, the foundational units for nomenclators such as ZooBank
+and other zoological nomenclators, Index Fungorum, IPNI, etc.). Other
+subsets represent taxon concept definitions.  Basically, almost anything you
+want to reference in the world of taxonomy exists through one or more TNU
+instances. Dave Remsen refers to these TNUs as the &quot;Atoms&quot; of taxonomy --
+the basic, high-resolution building blocks of the much more complex
+&quot;molecules&quot; of taxonomic revisions and checklists and so on.
+
+The idea with GNUB is to build a simple, common, shared, open-access index
+of all TNUs, and assign GUIDs to them.  These GUIDs could then be
+cross-linked (in ways somewhat analogous to what Rod described for
+CrossRef). Ultimately, this would allow for one-click jumps from (say), an
+EoL page, to a CoL taxon concept definition, to a ZooBank name registration
+record, to a BHL page image of the original description, to listing of all
+taxonomic treatments of that name (including all synonyms and spelling
+variations), to an index of all specimens identified as any subset of those
+synonyms, to a global distribution map ...and on and on and on.  Because it
+will be open-access and shared, if I enter a new record in my copy in
+Hawaii, a taxonomist in India will have access to that information almost
+immediately.  When someone corrects an error in Australia, someone else will
+have access to that correction in France. In short: electronic taxonomic
+utopia.
+
+You haven't heard much about GNA/GNUB/GNI/etc. because it's mostly been just
+a Good Idea, with only rudiments of implementation.  But as the Axis of Evil
+increasingly gets behind it, some of those dollars stolen from primary
+taxonomy (yeah, right....) will be put into developing rich content and
+services for this Global Names Architecture.  The more people begin to
+understand what it's all about, them more they think it's a Good Idea. The
+more who play, the more effective it becomes.  Contrary to some
+misconceptions, it is most definitely *NOT* &quot;yet another taxonomic
+database&quot;.  Rather, it is the glue that will allow all the various existing
+databases to interlink with each other seamlessly. It is analogous in many
+ways to the function on DNS in making the internet work.
+
+Believe it or not, that's the SHORT explanation.
+
+But getting back to Doug's post:
+
+&gt; This would help non-specialists make sense out of situations 
+&gt; where a single taxon has appeared historically under a 
+&gt; variety of names.
+
+Yup, GNUB will definitely do that (and much more).
+
+&gt; If, as in Wolfgang's example, a single taxon with multiple 
+&gt; names (objectively speaking, as in &quot;based unambiguously on 
+&gt; the same type specimen,&quot; and not subjective synonymies) is 
+&gt; being given multiple LSIDs on TOP of the multiple names, then 
+&gt; - unless I have misunderstood the purpose of LSIDs - I think 
+&gt; something is being done incorrectly. 
+
+It's not so much that you've misunderstood the purpose of LSIDs (they are
+just one kind of identifier, that can be, and have been, used to identify
+all sorts of digital and real-world objects of relevance to Life Sciences).
+But rather, you seem to have a very narrow scope of what we in the taxonomic
+community need to apply GUIDs to.  As I said, the
+one-identifier-per-name-unit approach you describe is very-much what
+nomenclators do, but that's only one part of the much broader applications
+of electronic information as used in taxonomy.
+
+&gt; Given that ubio seems to have generated the majority of the 
+&gt; 18 LSIDs for C. sodalis, maybe someone like Rod Page can 
+&gt; clarify what, exactly, is happening here - if it is indeed a 
+&gt; problem, or if there's something that is not immediately 
+&gt; evident that can make this all make sense.
+
+As I said, in the case of uBio (and GNI), the unit being indexed is the text
+string.  Many people misunderstand why it's important to do this.
+Basically, it's a necessary step to bridge the vast quantities of data and
+other information labeled by a HUGE morass of
+text-strings-purported-to-represent-taxon-names, which exist (again, as Dave
+Remsen likes to say) &quot;in the wild&quot;.  That is, in scanned literature, in
+databases, on Museum specimen labels, etc., etc.  Many taxonomists would
+like all this taxonomic/nomenclatural &quot;noise&quot; to just &quot;go away&quot; -- and
+certainly it's important to *not* perpetuate or amplify the noise.  But to
+discard all of the noise would also discard all the sea of information that
+is labeled with the noise -- and frankly, in my experience, the vast
+majority of information important to taxonomy involves an enormous amount of
+this noise.  As distasteful as the messy noise is to look at with our
+taxonomist eyeballs, it's absolutely necessary to index it if we ever want
+to clean it up.
+
+So...that is the highly abridged version of what I was planning to post.....
+
+Aloha,
+Rich
+
+Richard L. Pyle, PhD
+Database Coordinator for Natural Sciences
+  and Associate Zoologist in Ichthyology
+Department of Natural Sciences, Bishop Museum
+1525 Bernice St., Honolulu, HI 96817
+Ph: (808)848-4115, Fax: (808)847-8252
+email: deepreef at bishopmuseum.org
+<A HREF="http://hbs.bishopmuseum.org/staff/pylerichard.html">http://hbs.bishopmuseum.org/staff/pylerichard.html</A>
+
+
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="115631.html">[Taxacom] the hurdle for all biodiv informatics initiatives
+</A></li>
+        <LI>Next message: <A HREF="115633.html">[Taxacom] the hurdle for all biodiv informatics initiatives
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#115632">[ date ]</a>
+              <a href="thread.html#115632">[ thread ]</a>
+              <a href="subject.html#115632">[ subject ]</a>
+              <a href="author.html#115632">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

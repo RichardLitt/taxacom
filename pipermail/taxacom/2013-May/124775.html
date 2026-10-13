@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Data quality of aggregated datasets
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-May/124775.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Data quality of aggregated datasets</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at bishopmuseum.org<BR>
+    <I data-pagefind-meta="date">Tue May  7 12:03:45 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="124774.html">[Taxacom] Data quality of aggregated datasets
+</A></li>
+        <LI>Next message: <A HREF="124776.html">[Taxacom] Data quality of aggregated datasets
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124775">[ date ]</a>
+              <a href="thread.html#124775">[ thread ]</a>
+              <a href="subject.html#124775">[ subject ]</a>
+              <a href="author.html#124775">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>&gt; I take your point about the description of accuracy and precision however,
+for all practical purposes occupancy within a grid is much more useful. 
+
+That's debatable.  It depends on what you want to do with the data. 
+
+Also, you can easily convert point+radius values into a defined grid (which
+includes rejecting datapoints whose circle footprint spans more than one
+grid cell -- or defining rules about whether or not an occurrence is known
+with enough accuracy to be included in a particular grid analaysis).  But if
+you store your data in the form of occurrence within a particular grid cell,
+you can't convert the other direction.  Grid-cell structures may be great
+for certain kinds of data analysis, but not so great for capturing/storing
+the data.  I'm not sure whether your point in your previous post was that
+data should be captured/stored that way (gred-cell), or simply presented to
+end-users that way.
+
+Personally, I'd rather have the data presented to me as point+radius, then
+I'll make my own rules about how to reject points from the analysis and what
+cell to score each point in (if I want to do a cell analysis).  So, in
+either case, while you have a good point for how people use and transform
+these data to perform certain kinds of analysis, I'm not sure it has bearing
+on how data should be captured/stored/presented to end users.
+
+&gt; The conversion of squares to circles and circles back to squares could be
+the 
+&gt; origin of many of the discrepancies between original data and GBIF and
+will 
+&gt; lead to the rejection of potentially useful data when the circle borders 
+&gt; overlap with those of the square. 
+
+Yes -- which is why you don't want to convert the data back and forth.  But
+you have to store it somehow, and as I said above, it's better to start with
+the point-radius that is captured/stored as accurately as the original data
+allow for, then convert to a grid (=bounding box) if/when the analysis calls
+for it; than it is to start with an arbitrary grid (i.e., as opposed to a
+bounding box whose shape/borders are optimized to represent the smallest
+footprint within which the occurrence is likely to have happened).  In other
+words, the error is not symmetrical when doing the conversion.  Converting
+from point-radius (or even from custom bounding box) to arbitrary grid
+involves less data loss than the other way around.
+
+&gt; I'd like to see anyone uses those radii for anything else except for
+determining 
+&gt; if a record belongs within a grid square. Why shouldn't taxonomists
+collect 
+&gt; gridded data in the first place, just as ecologist have been for years?
+
+I use the radius to reject points with insufficient accuracy.  When data
+have been converted to a grid, you lose that information.  For example, if
+you capture the data for a particular grid, you cannot later analyze the
+data based on a different grid pattern.  If your data are in point+radius
+format, you can very easily determine which points are appropriate for use
+within a grid of different scale or offset.
+
+Aloha,
+Rich
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="124774.html">[Taxacom] Data quality of aggregated datasets
+</A></li>
+        <LI>Next message: <A HREF="124776.html">[Taxacom] Data quality of aggregated datasets
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124775">[ date ]</a>
+              <a href="thread.html#124775">[ thread ]</a>
+              <a href="subject.html#124775">[ subject ]</a>
+              <a href="author.html#124775">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

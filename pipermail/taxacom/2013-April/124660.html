@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Author Stats
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-April/124660.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Author Stats</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at bishopmuseum.org<BR>
+    <I data-pagefind-meta="date">Thu Apr 18 23:33:59 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="124659.html">[Taxacom] Announcement of public meetings about Public Access to
+ Federally Supported Research Results
+</A></li>
+        <LI>Next message: <A HREF="124661.html">[Taxacom] Author Stats
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124660">[ date ]</a>
+              <a href="thread.html#124660">[ thread ]</a>
+              <a href="subject.html#124660">[ subject ]</a>
+              <a href="author.html#124660">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>So....as Rob Whitton and I were closing up shop and getting ready to go home
+today,  we were chatting with Shelley James about the recent Taxacom thread
+on numbers of species described by different Authors, normalized database
+models and such.  I told Rob about my horrifically long post to Taxacom
+recently about how I whipped up a simple script to interrogate the GNUB
+database for these sorts of statistics.  Rob said, &quot;Why don't we put that up
+as a dynamic web page on ZooBank?&quot;  I said, &quot;Sure -- let's do that first
+thing tomorrow!&quot;  And he said, &quot;Why wait -- it will only take a few
+minutes!&quot;  And so.... a few minutes later (OK, maybe more like 30 minutes
+later...) Rob and I had joined forces to produce this:
+
+<A HREF="http://zoobank.org/authorstats">http://zoobank.org/authorstats</A>
+
+I realize the histogram is a bit hard to see, but it represents a graphic
+display of when, in history, the authors were most active.
+
+This is dynamically derived from the GNUB database in real time.  As soon as
+someone enters a new name for a given author in ZooBank, the numbers will be
+reflected automatically on this page as soon as you refresh or revisit this
+page.
+
+Obviously, the numbers are limited to the content in GNUB; but as that
+content grows (which should be in large bursts over the next few months, as
+we import large datasets, like Sherborn), so, too will the numbers in this
+table.  It will be interesting to watch.
+
+Right now, we only show the top 20, but we could easily make this a user
+selectable parameter to see the top N authors -- or all Authors (currently
+there are 11,321 authors in GNUB tied to at least one scientific name).
+
+So, why am I posting this?
+
+The page itself is very mildly interesting.  Ho, hum.
+
+What's really interesting are the following facts:
+
+1) A normalized data model lets you derive these kinds of numbers very
+quickly and easily from the database itself (e.g., this is a novel question
+that the database can answer, that the database wasn't originally designed
+to answer).
+
+2) The way we've designed the GNUB database, the web services that use the
+GNUB services, and the ZooBank website (that sits on top of GNUB), is such
+that it only took Rob and I about half an hour to take a script I wrote in 5
+minutes, based on a novel question posted on Taxacom, and turn it into a
+database stored procedure, core web service, and dynamic ZooBank web page.
+
+Many in the biodiversity informatics community are way (WAY) ahead of us in
+their ability to do this sort of thing.  But it's become increasingly clear
+to me that there is a bit of a disconnect between the developers (who know
+how easy it is to make small but interesting services of this sort on top of
+a well-designed data model and n-tier service architecture -- but who don't
+know what kinds of services people want); and the end-users (taxonomists,
+biologists, and others who know what they want, but don't know where on the
+web to get it). 
+
+Maybe what we need is a better mechanism for communication between the
+developers and the end users so we can come up with a set of priority tasks
+to build towards.  
+
+Or not.
+
+Time to go home...
+
+Aloha,
+Rich
+
+Richard L. Pyle, PhD
+Database Coordinator for Natural Sciences
+Associate Zoologist in Ichthyology
+Dive Safety Officer
+Department of Natural Sciences, Bishop Museum
+1525 Bernice St., Honolulu, HI 96817
+Ph: (808)848-4115, Fax: (808)847-8252
+email: deepreef at bishopmuseum.org
+<A HREF="http://hbs.bishopmuseum.org/staff/pylerichard.html">http://hbs.bishopmuseum.org/staff/pylerichard.html</A>
+
+
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="124659.html">[Taxacom] Announcement of public meetings about Public Access to
+ Federally Supported Research Results
+</A></li>
+        <LI>Next message: <A HREF="124661.html">[Taxacom] Author Stats
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124660">[ date ]</a>
+              <a href="thread.html#124660">[ thread ]</a>
+              <a href="subject.html#124660">[ subject ]</a>
+              <a href="author.html#124660">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

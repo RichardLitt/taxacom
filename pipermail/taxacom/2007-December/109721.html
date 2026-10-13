@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Terminology of trinomials
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2007-December/109721.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Terminology of trinomials</H1>
+    <B data-pagefind-meta="author">Andy Mabbett</B>
+    andy at pigsonthewing.org.uk<BR>
+    <I data-pagefind-meta="date">Mon Dec 31 02:50:07 CST 2007</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="109720.html">[Taxacom] Terminology of trinomials
+</A></li>
+        <LI>Next message: <A HREF="109722.html">[Taxacom] Terminology of trinomials
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#109721">[ date ]</a>
+              <a href="thread.html#109721">[ thread ]</a>
+              <a href="subject.html#109721">[ subject ]</a>
+              <a href="author.html#109721">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2007</span><!--beginarticle-->
+<PRE>In message &lt;477833C7.2050407 at skynet.be&gt;, Laurent Raty &lt;l.raty at skynet.be&gt;
+writes
+
+&gt;&gt; AIUI, the name:
+&gt;&gt;  Homo sapiens idaltu
+&gt;&gt;  is a trinomial (aka trinominal ?), consisting, in order, of a genus,
+&gt;&gt;  specific name (or &quot;specific epithet&quot;) and sub-specific name (or
+&gt;&gt;&quot;subspecies&quot;).
+&gt;
+&gt;Based on the terminology of the ICZN, this should be called a &quot;trinomen&quot;
+&gt;(pl. &quot;trinomina&quot;), or a &quot;trinominal name&quot; - although simply &quot;trinominal&quot;
+&gt;is sometimes encountered as well, and &quot;trinomial&quot; is sometimes used
+&gt;instead of &quot;trinominal&quot; in practice. (&quot;Trinomial&quot; simply means &quot;made of
+&gt;three parts&quot;, while &quot;trinominal&quot; is &quot;made of three names&quot;.)
+
+Thank you. Does this apply to other kingdoms also, or do they use
+different terminology?
+
+The reason I ask (should anyone not yet be familiar with work on the
+species microformat) is that a microformat is a way of marking up
+metadata in page content using HTML classes.
+
+For example:
+
+        &lt;span class=&quot;biota&quot;&gt;
+          &lt;span class=&quot;vernacular&quot;&gt;
+             Robin
+          &lt;/span&gt;
+
+          (&lt;span class=&quot;binominal&quot;&gt;
+             Erithacus rubecula
+           &lt;/span&gt;)
+
+         &lt;/span&gt;
+
+and we're currently determining the best &quot;labels&quot; for each rank,
+
+I'll post a full list of proposed labels, as they currently stand,
+shortly. One issue is whether to use English names (&quot;kingdom&quot;, &quot;class&quot;,
+&quot;order&quot;, etc.) or Latin equivalents (&quot;regnum&quot;, &quot;classis&quot;, &quot;ordo&quot;). I
+currently favour the later, to avoid potential ambiguity if the English
+names are already in use in mark-up. Any other thoughts are welcome.
+
+&gt;A trinomen is the combination of a generic name, a specific name (or
+&gt;epithet) and a subspecific name (or epithet).
+&gt;The whole combination is the scientific name of a subspecies (here an
+&gt;extinct subspecies of man).
+
+In this case, I think the best labels might be trinomen, genus, species
+&amp; subspecies (in addition to the parent wrapper, denoting the use of the
+microformat, which is currently &quot;biota&quot;, but likely to become &quot;hbiota&quot;,
+in keeping with other microformats such as hcalendar):
+
+
+      &lt;span class=&quot;biota&quot;&gt;
+
+        &lt;span class=&quot;trinomen&quot;&gt;
+
+          &lt;span class=&quot;genus&quot;&gt;
+            Homo
+          &lt;/span&gt;
+
+          &lt;span class=&quot;species&quot;&gt;
+            sapiens
+          &lt;/span&gt;
+
+          &lt;span class=&quot;subspecies&quot;&gt;
+            idaltu
+          &lt;/span&gt;
+
+        &lt;/span&gt;
+
+      &lt;/span&gt;
+
+(There will be parsing rules, so that, provided the span with
+class=&quot;trinomen&quot; contains exactly three words (two for a binomen), the
+lower levels do not need to be specified; thereby reducing bloat in
+mark-up.
+
+&gt;&gt; However, the archaic taxonomic name for a Little Ringed Plover [1]
+&gt;&gt;was:
+&gt;&gt;  Charadrius dubius curonicus
+&gt;&gt;  Is this also a &quot;trinomial&quot;, or does that form have a different name?
+&gt;&gt;If not, how are the two types of name distinguished?
+&gt;
+&gt;This name is in no way archaic, and is fully comparable to the other
+&gt;one. Charadrius dubius (a binomen, or binominal name, designating a
+&gt;species) is the name of LRP, like Homo sapiens is the name of our
+&gt;species; Ch. d. curonicus is the name of the subspecies of LRP that
+&gt;occurs in Europe.
+
+Oops! I think I pickled a bad example; but so long as that pattern is
+what is usually followed, that's not a problem.
+
+
+Thank you to everyone else who replied, too.
+
+
+[For anyone requiring additional background, see
+&lt;<A HREF="http://species.wikimedia.org/wiki/Wikispecies:Microformat">http://species.wikimedia.org/wiki/Wikispecies:Microformat</A>&gt;]
+
+-- 
+Andy Mabbett
+            *  Say &quot;NO!&quot; to compulsory UK ID Cards:  &lt;<A HREF="http://www.no2id.net/">http://www.no2id.net/</A>&gt;
+            *  Free Our Data:  &lt;<A HREF="http://www.freeourdata.org.uk">http://www.freeourdata.org.uk</A>&gt;
+            *  Are you using Microformats, yet: &lt;<A HREF="http://microformats.org/">http://microformats.org/</A>&gt; ?
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="109720.html">[Taxacom] Terminology of trinomials
+</A></li>
+        <LI>Next message: <A HREF="109722.html">[Taxacom] Terminology of trinomials
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#109721">[ date ]</a>
+              <a href="thread.html#109721">[ thread ]</a>
+              <a href="subject.html#109721">[ subject ]</a>
+              <a href="author.html#109721">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

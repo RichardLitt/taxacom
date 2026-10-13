@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Internet naming models; Long message
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2001-October/086826.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Internet naming models; Long message</H1>
+    <B data-pagefind-meta="author">Robert A. (Bob) Morris</B>
+    ram at CS.UMB.EDU<BR>
+    <I data-pagefind-meta="date">Fri Oct 12 15:35:15 CDT 2001</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="086805.html">unique numbers for species
+</A></li>
+        <LI>Next message: <A HREF="086819.html">unique numbers for species
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#086826">[ date ]</a>
+              <a href="thread.html#086826">[ thread ]</a>
+              <a href="subject.html#086826">[ subject ]</a>
+              <a href="author.html#086826">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2001</span><!--beginarticle-->
+<PRE>christian thompson writes:
+ &gt; Date:         Fri, 12 Oct 2001 08:48:18 -0400
+ &gt; From: christian thompson &lt;cthompson at sel.barc.usda.gov&gt;
+ &gt; To: TAXACOM at usobi.org
+ &gt; Subject:      Names, Numbers, &quot;Agency buckaroos,&quot; etc.
+ &gt;
+ &gt; ...
+ &gt;
+ &gt; And for the proper interaction among systems, etc., there needs to be
+ &gt; central coordination. The Internet work only because once a small group of
+ &gt; US (=&quot;Agency buckaroos&quot;) computer people decided on how build such a system
+ &gt; to assign unique numeric addresses (which may also have ALPHA names too).
+ &gt; Yes, computer people surrendered some of their &quot;freedom,&quot; but we all got a
+ &gt; very useful system.
+
+Hannu Saarenmaa and I have been off and on working on a paper
+discussing the utility for taxonomy of the models in both successful
+and proposed internet naming schemes, of which there are several.
+
+One of the interesting things about the Domain Name System (DNS)---the
+alpha part of the naming system---is that delegation of naming
+authority is hierarchical, not central. The top level domain names
+(edu, org, com, gov, uk, ca, au, ...) are fixed by a central
+authority. This authority maintains a central database of second level
+domains (mit, usda, usobi, ibm, ...) but cedes to &quot;domain registrars&quot; the
+authority to issue these names if they have not already been
+registered. For each such issuance, the registering organization or
+individual determines the entire hierarchy below it, including the
+policies for authorizing further naming AND including delegation of
+the entire authority for any subdomain. Thus, for example, the umb.edu
+domain is administered by the University of Massachusetts at Boston
+Computing Services, but they have delegated to the Computer Science
+department the administration of cs.umb.edu. We have chosen not to
+further subdivide, but we need no further authority or technical
+infrastructure to do so. If we do subdivide further and follow the
+technical rules of which you wrote, nothing whatsover breaks: the
+subdivided names will be globally unique and all properly written
+software will find the resource named. Similar principles are
+in effect for the numeric part of the naming system.
+
+There are several interesting issues with the DNS as a taxonomic
+scheme and Hannu has someone thinking about some of them. To my mind,
+the value of such an exercise is not to computerize taxonomy
+successfully---laudable as that goal might be---but rather that
+substantially more thought has gone into these issues in the internet
+sphere than in the taxonomy sphere and there may be lessons to be
+learned about naming schemes that have not occurred to taxonomists.
+
+Curiously, some issues are not that different from what existing
+taxonomic schemes suffer. They include: (a) A name can be
+snytactically correct, reserved from further use, but not actually
+refer to anything (b). The thing that the name refers to is itself a
+reference to something else (an IP address), and both references may
+be, and often are administratively changed. IP addresses are the
+unique number sought by the number grail seekers, and their syntax and
+assigment protocols are designed for software to easily locate the
+computer or other object they name. They in turn point to something
+that is approximately as unique as a U.S. Vehicle Identification
+Number or Social Security Number and purports to never change. It is
+physically associated with the network interface card of the computer
+that is the thing named. Of course, that can be moved to a different
+computer...).  Despite those changeable things, there is an effective,
+distributed, software architecture (the Domain Name Server system and
+the Internet routing system), which discovers the currently correct
+target of those names and numbers. Think of it as a really good global
+corps of taxonomic librarians with access to every document they need
+to find what a name really refers to. (c). Duplication of names can
+occur but are usually quickly discovered by the global system unless
+the duplication is intententional and accompanied by technically
+sophisticated schemes to hide the &quot;spoof&quot;(*) (d).Temporary inability to
+find the resource that is named by the name can lead poor software
+into believing that it doesn't exist, rather than that the software
+hasn't done enough research. (e). Poorly written software can fail to
+find the (usually emininently successful) fact of synonomy in the
+taxonomic sense. That is, when names are changed, some systems may be
+using the old names, usually leading to failure. There is a formal,
+voluntary synonomy protocol (DNS &quot;aliasing&quot;), but nothing like a paper
+trail of previous publications that allows tracking the history of
+name changes, most of which are lost: the current name is highly
+reliable, but previous names are virtually non-existent.  Most
+interesting is that DNS names all have a time to live (TTL) in any
+database holding them. Records are periodically and automatically
+renewed---provided the database meets its responsibilities about the
+TTL protocols.
+
+For what it's worth, the Worldwide Web and its defunct predecessors
+were the first internet facility to make people realize that on the
+internet, unique identifiers were needed for reasons other than for
+machines to reliably locate and communicate with each other. For the
+most part, that realization has so far led mostly to standards about
+syntax of names. The taxonomic issues remain a mine field in that
+sphere. Interested people can do a google search on &quot;URI&quot; and choose
+among the 982,000 hits---about twice as many as on &quot;taxonomy&quot;.
+
+
+Bob Morris
+
+p.s.  All the biology agency buckaroos I've met since hanging with
+this crowd have been dedicated, productive, and well informed
+professionals, but I'm sure you know that the actual history of the
+technical origin of the internet is that the buckaroos at the Defense
+Advanced Research Projects Agency contracted its design and
+construction to the cowboys and a (shamefully) few cowgirls at Bolt,
+Baranek and Newman, Inc. and a handful of academic
+organizations. However, some technical people did drift back and forth
+between buckaroohood at DARPA and packet wrangling at BBN and the
+universities.
+
+(*)p.p.s.
+Intentional and benign spoofing actually is in sudden widespread
+consumer use in low-cost firewall gateways for cable modem and ISDN
+users. It is a little interesting when thinking about
+nomenclature vs identification. It is yet further afield, so I'll
+shortly write down my thoughts on our web site and just announce it
+here.
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="086805.html">unique numbers for species
+</A></li>
+        <LI>Next message: <A HREF="086819.html">unique numbers for species
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#086826">[ date ]</a>
+              <a href="thread.html#086826">[ thread ]</a>
+              <a href="subject.html#086826">[ subject ]</a>
+              <a href="author.html#086826">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,222 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Data quality of aggregated datasets
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-May/124771.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Data quality of aggregated datasets</H1>
+    <B data-pagefind-meta="author">Quentin Groom</B>
+    quentin.groom at br.fgov.be<BR>
+    <I data-pagefind-meta="date">Tue May  7 05:33:24 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="124770.html">[Taxacom] Data quality of aggregated datasets
+</A></li>
+        <LI>Next message: <A HREF="124772.html">[Taxacom] Data quality of aggregated datasets
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124771">[ date ]</a>
+              <a href="thread.html#124771">[ thread ]</a>
+              <a href="subject.html#124771">[ subject ]</a>
+              <a href="author.html#124771">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>Hi Rich,
+I take your point about the description of accuracy and precision 
+however, for all practical purposes occupancy within a grid is much more 
+useful. Currently, all GBIF data is converted from points into grid 
+occupancy before any modelling is done, even though much of the data in 
+GBIF was gridded data to start with. The conversion of squares to 
+circles and circles back to squares could be the origin of many of the 
+discrepancies between original data and GBIF and will lead to the 
+rejection of potentially useful data when the circle borders overlap 
+with those of the square. I'd like to see anyone uses those radii for 
+anything else except for determining if a record belongs within a grid 
+square. Why shouldn't taxonomists collect gridded data in the first 
+place, just as ecologist have been for years?
+Quentin
+
+Richard Pyle wrote:
+&gt; The problem with using number of decimal places to represent accuracy is
+&gt; that you're limited to such representation only in powers of ten. Moreover,
+&gt; assuming you store these values as numbers, ten percent of your values will
+&gt; be one order of magnitude off in terms of precision (i.e., ten percent of
+&gt; values will have the final digit as &quot;0&quot;, which numeric data fields will
+&gt; trim); one percent will be off by two orders of magnitude, and so on.  The
+&gt; combination of an arbitrarily precise point plus a radius, when used as Bob
+&gt; describes below, is a far more flexible &amp; powerful method for representing
+&gt; both place and accuracy.  As Bob says, the correct way to interpret a
+&gt; point+radius is as the definition of a circle, within which there is a high
+&gt; probability for the occurrence to have happened. There are methods for
+&gt; calculating the radius, such that unknown datum, datum error, and other
+&gt; factors are taken into account.
+&gt;
+&gt; Note: Place some emphasis on the word &quot;arbitrarily&quot; above when I talk about
+&gt; &quot;arbitrarily precise&quot;  As long as an appropriate radius value is provided,
+&gt; there is absolutely no harm in representing the &quot;point&quot; part via arbitrarily
+&gt; precise numbers, such as -17.6000003814697, 145.699996948242.  There is,
+&gt; however, non-trivial harm when doing so while relying on the number of
+&gt; included digits as a representation of accuracy.
+&gt;
+&gt; Note also the difference between precision and accuracy.  The location of a
+&gt; collected insect could (theoretically) be represented by coordinates of
+&gt; precision to a few cm to a few mm (depending on what kind of insect we're
+&gt; talking about).  The point+radius approach is intended to represent
+&gt; accuracy, not precision.  The precision of the true location will always be
+&gt; limited by the physical size of the organism; but the accuracy will
+&gt; generally be much larger than this.
+&gt;
+&gt; Aloha,
+&gt; Rich
+&gt;
+&gt;   
+&gt;&gt; -----Original Message-----
+&gt;&gt; From: taxacom-bounces at mailman.nhm.ku.edu [mailto:taxacom-
+&gt;&gt; bounces at mailman.nhm.ku.edu] On Behalf Of Robert Mesibov
+&gt;&gt; Sent: Monday, May 06, 2013 11:20 PM
+&gt;&gt; To: Quentin Groom
+&gt;&gt; Cc: TAXACOM
+&gt;&gt; Subject: Re: [Taxacom] Data quality of aggregated datasets
+&gt;&gt;
+&gt;&gt; Quentin Groom wrote:
+&gt;&gt;
+&gt;&gt; &quot;This is the problem I've always had with the point-radius method. It
+&gt;&gt; encourages people to document a very precise coordinate and then account
+&gt;&gt; for the error in the radius. The error should be obvious from the number
+&gt;&gt;     
+&gt; of
+&gt;   
+&gt;&gt; decimal places you write, just like any other measurement.&quot;
+&gt;&gt;
+&gt;&gt; I think that depends on how you understand the point-radius method. The
+&gt;&gt; idea is that there's a circle which completely contains the area searched
+&gt;&gt;     
+&gt; or
+&gt;   
+&gt;&gt; sampled. The point is simply an estimate of that circle's centre, and is
+&gt;&gt;     
+&gt; not
+&gt;   
+&gt;&gt; meant to be an estimate of the location of the actual collecting site
+&gt;&gt;     
+&gt; (assuming
+&gt;   
+&gt;&gt; there was just one) plus a measurement error. The point+radius define a
+&gt;&gt; circular *area* containing the collecting site in an easily understandable
+&gt;&gt;     
+&gt; way.
+&gt;   
+&gt;&gt; How many decimal places you use for the point's location should obviously
+&gt;&gt; (to me, anyway) depend on the magnitude of the radius. Recording
+&gt;&gt; 22?06'57.54&quot;S 117?53'15.31&quot;E +/- 100 m is, I think, bizarre. [We've had a
+&gt;&gt; discussion about this on Taxacom before, and some listers think that
+&gt;&gt; rounding off is throwing away data.]
+&gt;&gt;
+&gt;&gt; You can also define a collecting *area* by the implied uncertainty in a
+&gt;&gt;     
+&gt; single
+&gt;   
+&gt;&gt; point estimate, as you suggest. However, I don't think many people on this
+&gt;&gt; list would know the uncertainty at a glance in 22.116?S 117.888?E. A
+&gt;&gt;     
+&gt; computer
+&gt;   
+&gt;&gt; can pull it out, but eyeballing the area in a point-radius record is
+&gt;&gt;     
+&gt; easier.
+&gt;   
+&gt;&gt; Another difficulty with implied uncertainty occurs with the
+&gt;&gt;     
+&gt; above-mentioned
+&gt;   
+&gt;&gt; computer when UTM data are converted to lat/lon, or vice-versa, or for
+&gt;&gt;     
+&gt; that
+&gt;   
+&gt;&gt; matter with lat/lon format conversions. In my audit paper in ZooKeys I
+&gt;&gt;     
+&gt; cite a
+&gt;   
+&gt;&gt; wonderful GBIF/ALA example where '12 km SE of Millaa Millaa' (Queensland,
+&gt;&gt; 1971) got processed from 17?36'S 145?42'E to -17.6000003814697
+&gt;&gt; 145.699996948242. Implied uncertainty of a few atomic radii, maybe?
+&gt;&gt; --
+&gt;&gt; Dr Robert Mesibov
+&gt;&gt; Honorary Research Associate
+&gt;&gt; Queen Victoria Museum and Art Gallery, and School of Agricultural Science,
+&gt;&gt; University of Tasmania Home contact: PO Box 101, Penguin, Tasmania,
+&gt;&gt; Australia 7316
+&gt;&gt; Ph: (03) 64371195; 61 3 64371195
+&gt;&gt;
+&gt;&gt; _______________________________________________
+&gt;&gt; Taxacom Mailing List
+&gt;&gt; Taxacom at mailman.nhm.ku.edu
+&gt;&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt;&gt;
+&gt;&gt; The Taxacom Archive back to 1992 may be searched with either of these
+&gt;&gt; methods:
+&gt;&gt;
+&gt;&gt; (1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt;&gt;
+&gt;&gt; (2) a Google search specified as:
+&gt;&gt; site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+&gt;&gt;
+&gt;&gt; Celebrating 26 years of Taxacom in 2013.
+&gt;&gt;     
+&gt;
+&gt;
+&gt;
+&gt;   
+
+-- 
+Dr. Quentin Groom
+(Botany and Information Technology)
+
+National Botanic Garden of Belgium
+Domein van Bouchout
+B-1860 Meise
+Belgium
+
+ORCID: 0000-0002-0596-5376
+
+Landline; +32 (0) 226 009 20 ext. 364
+FAX:      +32 (0) 226 009 45
+
+E-mail:     quentin.groom at br.fgov.be
+Skype name: qgroom
+Website:    www.botanicgarden.be
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="124770.html">[Taxacom] Data quality of aggregated datasets
+</A></li>
+        <LI>Next message: <A HREF="124772.html">[Taxacom] Data quality of aggregated datasets
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124771">[ date ]</a>
+              <a href="thread.html#124771">[ thread ]</a>
+              <a href="subject.html#124771">[ subject ]</a>
+              <a href="author.html#124771">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

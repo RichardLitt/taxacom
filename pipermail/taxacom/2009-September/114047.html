@@ -1,0 +1,201 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] FW: formation of zoological names with Mc, Mac, et
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20FW%3A%20formation%20of%20zoological%20names%20with%20Mc%2C%20Mac%2C%20et&In-Reply-To=%3CC917E878BD80474D9FE6625F989EF3E1%40rlpsager9262%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="114029.html">
+   <LINK REL="Next"  HREF="113907.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2009-September/114047.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] FW: formation of zoological names with Mc, Mac, et</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20FW%3A%20formation%20of%20zoological%20names%20with%20Mc%2C%20Mac%2C%20et&In-Reply-To=%3CC917E878BD80474D9FE6625F989EF3E1%40rlpsager9262%3E"
+       TITLE="[Taxacom] FW: formation of zoological names with Mc, Mac, et">deepreef at bishopmuseum.org
+       </A><BR>
+    <I data-pagefind-meta="date">Sat Sep  5 23:10:25 CDT 2009</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="114029.html">[Taxacom] FW: formation of zoological names with Mc, Mac, et
+</A></li>
+        <LI>Next message: <A HREF="113907.html">[Taxacom] FW: formation of zoological names with Mc, Mac, et
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#114047">[ date ]</a>
+              <a href="thread.html#114047">[ thread ]</a>
+              <a href="subject.html#114047">[ subject ]</a>
+              <a href="author.html#114047">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2009</span><!--beginarticle-->
+<PRE>
+Jim:  The term &quot;nameString&quot; has evolved a bit over time.  In the context of
+LinneanCore (which was wrapped into TCS), it was intended to specifically
+exclude authorship stuff 
+(see:  <A HREF="http://wiki.tdwg.org/twiki/bin/view/UBIF/LinneanCoreDefinitions">http://wiki.tdwg.org/twiki/bin/view/UBIF/LinneanCoreDefinitions</A>)
+
+More recently, in the context of discussions about GNA/GNI, it has come to
+include the full string including name bits and authorship bits.
+
+In either case, the reason for qualifying the word &quot;name&quot; with &quot;string&quot; was
+to emphasize that it's a taxon name represented by nothing more than a text
+string (in contrast to a taxon name represented as a data object unto
+itself, with rich metadata).  There are many, many, many data records that
+represent taxon names as nothing more than a string of text characters.  The
+prime example would be uBio/NameBank; but also text strings harvested from
+literature scanning/OCRing efforts such as BHL.  In many ways, the DwC names
+data would fall into this category.
+
+To answer your question, I would say they exist in the sense that we need to
+deal with them because of your option &quot;a&quot; (that is, many datasets use them
+because they only have a single unparsed field for taxon name, and/or even a
+parsed taxon name with no other qualifying nomenclatural metadata other than
+the name[+authorship] itself.  They also exist as your &quot;b&quot; inside the GNI,
+as a way of building bridges between datasets with fully parsed name
+&quot;objects&quot; (e.g., from nomenclators) to those namestring-only datasets (via
+&quot;wizardry&quot;, aka clever parsers and text-matching services).  So I guess the
+answer is &quot;c&quot;.
+
+As for which elements should be concatenated, I think that's still an open
+question.  Certainly Uninomial/binomial/trinomial/etc. + author (botanical
+style or zoological style) + year.  Not sure about page numbers and &quot;sec&quot;
+authorship (I tossed all my &quot;sec&quot;-formatted strings into GNI, just to see
+what would happen).
+
+There's some good information on the GNI website (www.globalnames.org --
+check the links to &quot;Help&quot; and &quot;API&quot; in the upper right), and there is more
+information coming soon about GNA/GNI/GNUB.
+
+Aloha,
+Rich
+
+&gt;<i> -----Original Message-----
+</I>&gt;<i> From: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom-bounces at mailman.nhm.ku.edu</A> 
+</I>&gt;<i> [mailto:<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom-bounces at mailman.nhm.ku.edu</A>] On Behalf Of Jim Croft
+</I>&gt;<i> Sent: Saturday, September 05, 2009 7:19 AM
+</I>&gt;<i> To: David Remsen (GBIF)
+</I>&gt;<i> Cc: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> Subject: Re: [Taxacom] FW: formation of zoological names with 
+</I>&gt;<i> Mc, Mac, et
+</I>&gt;<i> 
+</I>&gt;<i> A quick point of clarification...  These days many (most?) 
+</I>&gt;<i> databases enable/require atomized entry of name data and name 
+</I>&gt;<i> metadata.
+</I>&gt;<i> 
+</I>&gt;<i> Is the design intent of the 'namestring' thingy to: a) act as 
+</I>&gt;<i> a placeholder for an unparsed string until someone can get 
+</I>&gt;<i> around to doing something wioth it; b) act as a repository 
+</I>&gt;<i> for a concatenation of atomized elements in anticipation of 
+</I>&gt;<i> some mysterious operational wizardry; or c) both?
+</I>&gt;<i> 
+</I>&gt;<i> and, if b), what elements could or should be concatenated?
+</I>&gt;<i> 
+</I>&gt;<i> just wondering is all....
+</I>&gt;<i> 
+</I>&gt;<i> jim
+</I>&gt;<i> 
+</I>&gt;<i> On Thu, Sep 3, 2009 at 7:07 PM, David Remsen 
+</I>&gt;<i> (GBIF)&lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">dremsen at gbif.org</A>&gt; wrote:
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Just a couple of points regarding this thread.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; We use the term 'namestring' when referring to the literal 
+</I>&gt;<i> orthography 
+</I>&gt;<i> &gt; of a name as it has been used in a particular instance because the 
+</I>&gt;<i> &gt; same name generally has many distinct orthographies.   A 
+</I>&gt;<i> name may or 
+</I>&gt;<i> &gt; may not include authorship.  Authorship may or may not include a 
+</I>&gt;<i> &gt; publication year.  Authors are abbreviated, etc.    Processing 
+</I>&gt;<i> &gt; namestrings is necessary in this digital age and the 
+</I>&gt;<i> reality of this 
+</I>&gt;<i> &gt; wide latitude in orthography presents special difficulties in 
+</I>&gt;<i> &gt; effectively grouping the right sets of namestrings together and 
+</I>&gt;<i> &gt; excluding the wrong ones.   This is less an issue when working with 
+</I>&gt;<i> &gt; single datasets but becomes significant when integrating data from 
+</I>&gt;<i> &gt; many sources.  It's amazing how many different ways a name can be 
+</I>&gt;<i> &gt; written and all are essentially correct, just more or less compete.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Regarding name atomisation, we are quite close to being able to 
+</I>&gt;<i> &gt; effectively atomise 99.99% of all namestrings into distinct and 
+</I>&gt;<i> &gt; identified components so that the use of a parsed or unparsed 
+</I>&gt;<i> &gt; scientific name in data management practices will be less an issue 
+</I>&gt;<i> &gt; than it might be now.  The development of name parsing tools and 
+</I>&gt;<i> &gt; services is quite active at the moment and is currently testing 
+</I>&gt;<i> &gt; against rather esoteric orthographies. In fact,  we are 
+</I>&gt;<i> interested in 
+</I>&gt;<i> &gt; finding cases that either break the parsers or are simply too 
+</I>&gt;<i> &gt; ambiguous to effectively parse.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; A reference implementation can be tried at 
+</I>&gt;<i> &gt; <A HREF="http://globalnames.org/parsers/new">http://globalnames.org/parsers/new</A>
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Cheers,
+</I>&gt;<i> &gt; David Remsen
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; 
+</I>&gt;<i> ----------------------------------------------------------------------
+</I>&gt;<i> &gt; ------ David Remsen, Senior Programme Officer Electronic Catalog of 
+</I>&gt;<i> &gt; Names of Known Organisms Global Biodiversity Information Facility 
+</I>&gt;<i> &gt; Secretariat Universitetsparken 15, DK-2100 Copenhagen, Denmark
+</I>&gt;<i> &gt; Tel: +45-35321472   Fax: +45-35321480
+</I>&gt;<i> &gt; Mobile +45 27201472
+</I>&gt;<i> &gt; Skype: dremsen
+</I>&gt;<i> &gt; 
+</I>&gt;<i> ----------------------------------------------------------------------
+</I>&gt;<i> &gt; ------
+</I>&gt;<i> 
+</I>&gt;<i> --
+</I>&gt;<i> _________________
+</I>&gt;<i> Jim Croft ~ <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">jim.croft at gmail.com</A> ~ +61-2-62509499 ~ 
+</I>&gt;<i> <A HREF="http://www.google.com/profiles/jim.croft">http://www.google.com/profiles/jim.croft</A>
+</I>&gt;<i> ... in pursuit of the meaning of leaf ...
+</I>&gt;<i> ... 'All is leaf' ('Alles ist Blatt') - Goethe
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> 
+</I>&gt;<i> Taxacom Mailing List
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;<i> 
+</I>&gt;<i> The Taxacom archive going back to 1992 may be searched with 
+</I>&gt;<i> either of these methods:
+</I>&gt;<i> 
+</I>&gt;<i> (1) <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+</I>&gt;<i> 
+</I>&gt;<i> Or (2) a Google search specified as:  
+</I>&gt;<i> site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+</I>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="114029.html">[Taxacom] FW: formation of zoological names with Mc, Mac, et
+</A></li>
+	<LI>Next message: <A HREF="113907.html">[Taxacom] FW: formation of zoological names with Mc, Mac, et
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#114047">[ date ]</a>
+              <a href="thread.html#114047">[ thread ]</a>
+              <a href="subject.html#114047">[ subject ]</a>
+              <a href="author.html#114047">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

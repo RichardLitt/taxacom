@@ -1,0 +1,492 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] accepted names using the uBio web services?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2008-June/110567.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] accepted names using the uBio web services?</H1>
+    <B data-pagefind-meta="author">Roderic Page</B>
+    r.page at bio.gla.ac.uk<BR>
+    <I data-pagefind-meta="date">Thu Jun 19 03:55:21 CDT 2008</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="110566.html">[Taxacom] Job Vacancy  - Flora Mesoamericana
+</A></li>
+        <LI>Next message: <A HREF="110568.html">[Taxacom] 6th International Tritiiceae Symposium
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#110567">[ date ]</a>
+              <a href="thread.html#110567">[ thread ]</a>
+              <a href="subject.html#110567">[ subject ]</a>
+              <a href="author.html#110567">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2008</span><!--beginarticle-->
+<PRE>Dear Ken-ichi,
+
+On 18 Jun 2008, at 17:01, Ken-ichi Ueda wrote:
+
+&gt; Wow, that's awesome Rod, probably exactly what I want.  Does the
+&gt; &lt;ubio:hasSYNConcept&gt; entity always reference an accepted name, or can
+&gt; it reference any synonymous concept, accepted or otherwise?  I'm
+&gt; having trouble finding the docs for the ubio and gla predicates used
+&gt; in those RDFs.
+
+The gla and ubio predicates date from early efforts to assign LSIDs to  
+taxonomic names. My now defunct Taxonomic Search Engine (see <A HREF="http://dx.doi.org/10.1186/1471-2105-6-48">http://dx.doi.org/10.1186/1471-2105-6-48</A> 
+  ) assigned LSIDs to names served by several name servers. I order to  
+do this I developed a simple vocabulary (&quot;gla&quot;). You can get some  
+basic information about each gla predicate by resolving the  
+corresponding LSID. For example, gla:rank is urn:lsid:lsid.zoology.gla.ac.uk:predicates:rank 
+. Put this into your resolver of choice and you will get a RDF  
+document describing the term. There's also some background in my 2006  
+paper <A HREF="http://jbi.nhm.ku.edu/index.php/jbi/article/viewArticle/25">http://jbi.nhm.ku.edu/index.php/jbi/article/viewArticle/25</A> .
+
+When uBio started serving LSIDs they used my vocabulary for some  
+terms, and added their own. Simililary, you can get RDF for any uBio  
+predicate by resolving the corresponding LSID &quot;urn:lsid:ubio.org:predicates 
+:&quot; + the predicate, e.g. urn:lsid:ubio.org:predicates:hasSYNConcept .
+
+My vocabulary, and that of uBio were develpped before TDWG developed  
+their own (<A HREF="http://wiki.tdwg.org/twiki/bin/view/TAG/LsidVocs">http://wiki.tdwg.org/twiki/bin/view/TAG/LsidVocs</A> ), which  
+IMHO are rather more verbose than they need to be.
+
+
+&gt;
+&gt;
+&gt; It would be a little more convenient if there was  a service like the
+&gt; one you described, in which you send a namebank ID and a
+&gt; classification ID and it returns an accepted name, as it would save us
+&gt; a call (right now it's three: namebank search for the ID, namebank
+&gt; LSID for the available synonyms and classification IDs, and then
+&gt; classification LSID for the accepted name).  The ultimate service for
+&gt; our needs would probably be a name search with the option of including
+&gt; the all the accepted synonyms in all the classifications, or perhaps
+&gt; in a subset of classifications specified in the request, so we could
+&gt; just make one call.
+
+I'm sure lots of us would kill for such a service, although as Geoff  
+Read pointed out, there are complications. Making a service that  
+summarised uBio's information would get us part of the way there.
+
+Regards
+
+Rod
+
+
+
+
+
+&gt;
+&gt;
+&gt; -Ken-ichi
+&gt;
+&gt;
+&gt; On Wed, Jun 18, 2008 at 1:56 AM, Roderic Page &lt;r.page at bio.gla.ac.uk&gt;  
+&gt; wrote:
+&gt;&gt; Dear Ken,
+&gt;&gt;
+&gt;&gt; I encountered a similar issue when doing some work on ants a while  
+&gt;&gt; back (see
+&gt;&gt; <A HREF="http://semant.blogspot.com/2006_06_01_archive.html">http://semant.blogspot.com/2006_06_01_archive.html</A> ).
+&gt;&gt;
+&gt;&gt; If you look at the metadata associated with a uBio name (accessible  
+&gt;&gt; using
+&gt;&gt; their LSIDs, for example by sticking
+&gt;&gt; <A HREF="http://www.ubio.org/authority/metadata.php?lsid=urn:lsid:ubio.org:">http://www.ubio.org/authority/metadata.php?lsid=urn:lsid:ubio.org:</A>  
+&gt;&gt; in front
+&gt;&gt; of, say, namebank:655121, or using a LSID resolver such as
+&gt;&gt; <A HREF="http://linnaeus.zoology.gla.ac.uk/~rpage/lsid/">http://linnaeus.zoology.gla.ac.uk/~rpage/lsid/</A> or <A HREF="http://lsid.tdwg.org/">http://lsid.tdwg.org/</A> 
+&gt;&gt;  )
+&gt;&gt; you can make the links you need.
+&gt;&gt;
+&gt;&gt; For example, <A HREF="http://www.ubio.org/browser/details.php?namebankID=655121">http://www.ubio.org/browser/details.php?namebankID=655121</A> 
+&gt;&gt;  gives
+&gt;&gt; you
+&gt;&gt; ============================
+&gt;&gt; &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&gt;&gt;       &lt;rdf:RDF
+&gt;&gt;           xmlns:dc=&quot;<A HREF="http://purl.org/dc/elements/1.1/">http://purl.org/dc/elements/1.1/</A>&quot;
+&gt;&gt;           xmlns:dcterms=&quot;<A HREF="http://purl.org/dc/terms/">http://purl.org/dc/terms/</A>&quot;
+&gt;&gt;           xmlns:ubio=&quot;urn:lsid:ubio.org:predicates:&quot;
+&gt;&gt;           xmlns:gla=&quot;urn:lsid:lsid.zoology.gla.ac.uk:predicates:&quot;
+&gt;&gt;           xmlns:rdf=&quot;<A HREF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">http://www.w3.org/1999/02/22-rdf-syntax-ns#</A>&quot;&gt;
+&gt;&gt;
+&gt;&gt;               &lt;rdf:Description
+&gt;&gt; rdf:about=&quot;urn:lsid:ubio.org:namebank:655121&quot;&gt;
+&gt;&gt;
+&gt;&gt; &lt;dc:identifier&gt;urn:lsid:ubio.org:namebank:655121&lt;/dc:identifier&gt;
+&gt;&gt;                       &lt;dc:creator rdf:resource=&quot;http:// 
+&gt;&gt; www.ubio.org&quot;/&gt;
+&gt;&gt;                       &lt;dc:subject&gt;Hyla crucifer (Wied-Neuwied,
+&gt;&gt; 1838)&lt;/dc:subject&gt;
+&gt;&gt;                       &lt;ubio:taxonomicGroup&gt;Amphibia&lt;/ 
+&gt;&gt; ubio:taxonomicGroup&gt;
+&gt;&gt;                       &lt;ubio:recordVersion&gt;7&lt;/ubio:recordVersion&gt;
+&gt;&gt;                       &lt;ubio:canonicalName&gt;Hyla
+&gt;&gt; crucifer&lt;/ubio:canonicalName&gt;
+&gt;&gt;                       &lt;dc:title&gt;Hyla crucifer&lt;/dc:title&gt;
+&gt;&gt;                       &lt;dc:type&gt;Scientific Name&lt;/dc:type&gt;
+&gt;&gt;                       &lt;ubio:lexicalStatus&gt;Unknown
+&gt;&gt; (Default)&lt;/ubio:lexicalStatus&gt;
+&gt;&gt;                       &lt;gla:rank&gt;Species&lt;/gla:rank&gt;
+&gt;&gt;                       &lt;gla:mapping
+&gt;&gt; rdf:resource=&quot;<A HREF="http://www.cbif.gc.ca/pls/itisca/next?v_tsn=173500&amp;amp;taxa=&amp;amp;p_format=&amp;amp;p_ifx=cbif&amp;amp;p_lang=">http://www.cbif.gc.ca/pls/itisca/next?v_tsn=173500&amp;amp;taxa=&amp;amp;p_format=&amp;amp;p_ifx=cbif&amp;amp;p_lang=</A> 
+&gt;&gt; &quot;/&gt;
+&gt;&gt;                       &lt;ubio:lexicalVariant
+&gt;&gt; rdf:resource=&quot;urn:lsid:ubio.org:namebank:2812644&quot;/&gt;
+&gt;&gt;                       &lt;gla:objectiveSynonym
+&gt;&gt; rdf:resource=&quot;urn:lsid:ubio.org:namebank:2812644&quot;/&gt;
+&gt;&gt;                       &lt;ubio:hasSYNConcept
+&gt;&gt; rdf:resource=&quot;urn:lsid:ubio.org:classificationbank:1390223&quot;/&gt;
+&gt;&gt;                       &lt;ubio:hasSYNConcept
+&gt;&gt; rdf:resource=&quot;urn:lsid:ubio.org:classificationbank:1646257&quot;/&gt;
+&gt;&gt;                       &lt;ubio:hasSYNConcept
+&gt;&gt; rdf:resource=&quot;urn:lsid:ubio.org:classificationbank:1871546&quot;/&gt;
+&gt;&gt;                       &lt;ubio:hasSYNConcept
+&gt;&gt; rdf:resource=&quot;urn:lsid:ubio.org:classificationbank:2207108&quot;/&gt;
+&gt;&gt;               &lt;/rdf:Description&gt;
+&gt;&gt;       &lt;/rdf:RDF&gt;
+&gt;&gt; ============================
+&gt;&gt; If you then resolve any of the ubio:hasSYNConcept relationships,  
+&gt;&gt; you will
+&gt;&gt; get this how that classification handles this name. For example,
+&gt;&gt; <A HREF="http://www.ubio.org/authority/metadata.php?lsid=urn:lsid:ubio.org:classificationbank:1390223">http://www.ubio.org/authority/metadata.php?lsid=urn:lsid:ubio.org:classificationbank:1390223</A> 
+&gt;&gt;  gives
+&gt;&gt; you
+&gt;&gt; ============================
+&gt;&gt; &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&gt;&gt; &lt;rdf:RDF
+&gt;&gt;           xmlns:dc=&quot;<A HREF="http://purl.org/dc/elements/1.1/">http://purl.org/dc/elements/1.1/</A>&quot;
+&gt;&gt;           xmlns:dcterms=&quot;<A HREF="http://purl.org/dc/terms/">http://purl.org/dc/terms/</A>&quot;
+&gt;&gt;           xmlns:ubio=&quot;urn:lsid:ubio.org:predicates:&quot;
+&gt;&gt;           xmlns:gla=&quot;urn:lsid:lsid.zoology.gla.ac.uk:predicates:&quot;
+&gt;&gt;           xmlns:rdf=&quot;<A HREF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">http://www.w3.org/1999/02/22-rdf-syntax-ns#</A>&quot;&gt;
+&gt;&gt;
+&gt;&gt;               &lt;rdf:Description
+&gt;&gt; rdf:about=&quot;urn:lsid:ubio.org:classificationbank:1390223&quot;&gt;
+&gt;&gt;
+&gt;&gt; &lt;dc:identifier&gt;urn:lsid:ubio.org:classificationbank:1390223&lt;/ 
+&gt;&gt; dc:identifier&gt;
+&gt;&gt;                       &lt;ubio:namebankIdentifier
+&gt;&gt; rdf:resource=&quot;urn:lsid:ubio.org:namebank:26067&quot;/&gt;
+&gt;&gt;                       &lt;dc:creator rdf:resource=&quot;http:// 
+&gt;&gt; www.ubio.org&quot;/&gt;
+&gt;&gt;                       &lt;dc:title&gt;Pseudacris crucifer (Wied-Neuwied,
+&gt;&gt; 1839)&lt;/dc:title&gt;
+&gt;&gt;       &lt;ubio:classificationName&gt;Integrated Taxonomic Information  
+&gt;&gt; System ITIS
+&gt;&gt; (Aug. 10 2003)&lt;/ubio:classificationName&gt;
+&gt;&gt; &lt;ubio:classificationDescription&gt;&lt;![CDATA[This compilation was  
+&gt;&gt; transcribed
+&gt;&gt; from the monthly  (Aug, 10, 2003)&lt;A
+&gt;&gt; href=<A HREF="http://www.itis.usda.gov/ftp_download.html">http://www.itis.usda.gov/ftp_download.html</A>&gt;ITIS export file&lt;/A&gt;.
+&gt;&gt; Automated and manual parsing tools map ITIS data elements to uBio
+&gt;&gt; identifiers.   Refer to &lt;A href=<A HREF="http://www.itis.usda.gov/">http://www.itis.usda.gov/</A>&gt;ITIS&lt;/A&gt;  
+&gt;&gt; for an
+&gt;&gt; authoritative version of these data.]]&gt;&lt;/ 
+&gt;&gt; ubio:classificationDescription&gt;
+&gt;&gt; &lt;gla:rank&gt;Species&lt;/gla:rank&gt;
+&gt;&gt; &lt;ubio:canonicalName&gt;Pseudacris crucifer&lt;/ubio:canonicalName&gt;
+&gt;&gt; &lt;gla:synonym rdf:resource=&quot;urn:lsid:ubio.org:namebank:655121&quot;/ 
+&gt;&gt; &gt;&lt;gla:synonym
+&gt;&gt; rdf:resource=&quot;urn:lsid:ubio.org:namebank:655245&quot;/&gt;&lt;gla:synonym
+&gt;&gt; rdf:resource=&quot;urn:lsid:ubio.org:namebank:655122&quot;/&gt;&lt;ubio:hasChild
+&gt;&gt; rdf:resource=&quot;urn:lsid:ubio.org:classificationbank:1390224&quot;/&gt;
+&gt;&gt; &lt;ubio:hasChild rdf:resource=&quot;urn:lsid:ubio.org:classificationbank:1390225 
+&gt;&gt; &quot;/&gt;
+&gt;&gt; &lt;gla:parent rdf:resource=&quot;urn:lsid:ubio.org:classificationbank:1363678 
+&gt;&gt; &quot;/&gt;
+&gt;&gt; &lt;gla:lineage&gt;
+&gt;&gt; &lt;rdf:Seq&gt;
+&gt;&gt; &lt;rdf:li rdf:resource=&quot;urn:lsid:ubio.org:classificationbank:1363678&quot;/&gt;
+&gt;&gt; &lt;rdf:li rdf:resource=&quot;urn:lsid:ubio.org:classificationbank:1363660&quot;/&gt;
+&gt;&gt; &lt;rdf:li rdf:resource=&quot;urn:lsid:ubio.org:classificationbank:1363592&quot;/&gt;
+&gt;&gt; &lt;rdf:li rdf:resource=&quot;urn:lsid:ubio.org:classificationbank:1363591&quot;/&gt;
+&gt;&gt; &lt;rdf:li rdf:resource=&quot;urn:lsid:ubio.org:classificationbank:1446436&quot;/&gt;
+&gt;&gt; &lt;rdf:li rdf:resource=&quot;urn:lsid:ubio.org:classificationbank:1363590&quot;/&gt;
+&gt;&gt; &lt;rdf:li rdf:resource=&quot;urn:lsid:ubio.org:classificationbank:1391664&quot;/&gt;
+&gt;&gt; &lt;rdf:li rdf:resource=&quot;urn:lsid:ubio.org:classificationbank:1351740&quot;/&gt;
+&gt;&gt; &lt;rdf:li rdf:resource=&quot;urn:lsid:ubio.org:classificationbank:1477061&quot;/&gt;
+&gt;&gt; &lt;rdf:li rdf:resource=&quot;urn:lsid:ubio.org:classificationbank:2344772&quot;/&gt;
+&gt;&gt; &lt;/rdf:Seq&gt;
+&gt;&gt; &lt;/gla:lineage&gt;          &lt;/rdf:Description&gt;
+&gt;&gt;       &lt;/rdf:RDF&gt;
+&gt;&gt; ============================
+&gt;&gt; This is Pseudacris crucifer in the ITIS classification for August  
+&gt;&gt; 10, 2003.
+&gt;&gt; The other classifications are different versions of ITIS, and one for
+&gt;&gt; Sp2000.
+&gt;&gt; If the name doesn't have a link to a classification, you may need  
+&gt;&gt; to resolve
+&gt;&gt; the links, such as gla:objectiveSynonym. For example,
+&gt;&gt; <A HREF="http://www.ubio.org/authority/metadata.php?lsid=urn:lsid:ubio.org:namebank:2812644">http://www.ubio.org/authority/metadata.php?lsid=urn:lsid:ubio.org:namebank:2812644</A> 
+&gt;&gt;  resolves
+&gt;&gt; to:
+&gt;&gt; ============================
+&gt;&gt; &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&gt;&gt;       &lt;rdf:RDF
+&gt;&gt;           xmlns:dc=&quot;<A HREF="http://purl.org/dc/elements/1.1/">http://purl.org/dc/elements/1.1/</A>&quot;
+&gt;&gt;           xmlns:dcterms=&quot;<A HREF="http://purl.org/dc/terms/">http://purl.org/dc/terms/</A>&quot;
+&gt;&gt;           xmlns:ubio=&quot;urn:lsid:ubio.org:predicates:&quot;
+&gt;&gt;           xmlns:gla=&quot;urn:lsid:lsid.zoology.gla.ac.uk:predicates:&quot;
+&gt;&gt;           xmlns:rdf=&quot;<A HREF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">http://www.w3.org/1999/02/22-rdf-syntax-ns#</A>&quot;&gt;
+&gt;&gt;
+&gt;&gt;               &lt;rdf:Description
+&gt;&gt; rdf:about=&quot;urn:lsid:ubio.org:namebank:2812644&quot;&gt;
+&gt;&gt;
+&gt;&gt; &lt;dc:identifier&gt;urn:lsid:ubio.org:namebank:2812644&lt;/dc:identifier&gt;
+&gt;&gt;                       &lt;dc:creator rdf:resource=&quot;http:// 
+&gt;&gt; www.ubio.org&quot;/&gt;
+&gt;&gt;                       &lt;dc:subject&gt;Hyla crucifer&lt;/dc:subject&gt;
+&gt;&gt;                       &lt;ubio:taxonomicGroup&gt;Amphibia&lt;/ 
+&gt;&gt; ubio:taxonomicGroup&gt;
+&gt;&gt;                       &lt;ubio:recordVersion&gt;0&lt;/ubio:recordVersion&gt;
+&gt;&gt;                       &lt;ubio:canonicalName&gt;Hyla
+&gt;&gt; crucifer&lt;/ubio:canonicalName&gt;
+&gt;&gt;                       &lt;dc:title&gt;Hyla crucifer&lt;/dc:title&gt;
+&gt;&gt;                       &lt;dc:type&gt;Scientific Name&lt;/dc:type&gt;
+&gt;&gt;                       &lt;ubio:lexicalStatus&gt;Canonical
+&gt;&gt; form&lt;/ubio:lexicalStatus&gt;
+&gt;&gt;                       &lt;gla:rank&gt;Species&lt;/gla:rank&gt;
+&gt;&gt;                       &lt;ubio:lexicalVariant
+&gt;&gt; rdf:resource=&quot;urn:lsid:ubio.org:namebank:655121&quot;/&gt;
+&gt;&gt;                       &lt;gla:objectiveSynonym
+&gt;&gt; rdf:resource=&quot;urn:lsid:ubio.org:namebank:655121&quot;/&gt;
+&gt;&gt;               &lt;/rdf:Description&gt;
+&gt;&gt;       &lt;/rdf:RDF&gt;
+&gt;&gt;
+&gt;&gt; ============================
+&gt;&gt; Note the &lt;gla:objectiveSynonym
+&gt;&gt; rdf:resource=&quot;urn:lsid:ubio.org:namebank:655121&quot;/&gt;. This is the  
+&gt;&gt; name we've
+&gt;&gt; already looked at, so you'd go from 2812644 to 655121, and then to  
+&gt;&gt; the
+&gt;&gt; classification of your choice.
+&gt;&gt; Hope this helps.
+&gt;&gt; I guess what would be useful is to have a web service that, for a  
+&gt;&gt; given
+&gt;&gt; classification in uBio, returns the accepted name. Is this what you  
+&gt;&gt; want? If
+&gt;&gt; so, I could look at writing one.
+&gt;&gt; Regards
+&gt;&gt;
+&gt;&gt; Rod
+&gt;&gt;
+&gt;&gt; On 18 Jun 2008, at 09:02, Ken-ichi Ueda wrote:
+&gt;&gt;
+&gt;&gt;&gt; Thanks, Paul.  I've actually been using Catalogue of Life and it's
+&gt;&gt;&gt; wonderful for this very reason ... but uBio has way, way more names,
+&gt;&gt;&gt; especially common names, which are especially important for my
+&gt;&gt;&gt; project, which is targeted at amateur naturalists (check out
+&gt;&gt;&gt; www.inaturalist.org if you're curious).
+&gt;&gt;&gt;
+&gt;&gt;&gt; Are there other name services (with web services) that have have
+&gt;&gt;&gt; accepted status AND have coverage anywhere close to uBio?
+&gt;&gt;&gt;
+&gt;&gt;&gt; -Ken-ichi
+&gt;&gt;&gt;
+&gt;&gt;&gt;
+&gt;&gt;&gt; On Wed, Jun 18, 2008 at 12:50 AM, Paul Kirk &lt;p.kirk at cabi.org&gt; wrote:
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt; your best bet would be the Catalogue of Life ... but not all AVC
+&gt;&gt;&gt;&gt; (Accepted, Valid, Correct) names have all the nomenclatural  
+&gt;&gt;&gt;&gt; (homotypic,
+&gt;&gt;&gt;&gt; 'whatever then word is in ICZN speak') names included. I did not  
+&gt;&gt;&gt;&gt; check
+&gt;&gt;&gt;&gt; this name.
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt; Cheers,
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt; Paul
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt; -----Original Message-----
+&gt;&gt;&gt;&gt; From: taxacom-bounces at mailman.nhm.ku.edu
+&gt;&gt;&gt;&gt; [mailto:taxacom-bounces at mailman.nhm.ku.edu] On Behalf Of Ken-ichi  
+&gt;&gt;&gt;&gt; Ueda
+&gt;&gt;&gt;&gt; Sent: 18 June 2008 08:29
+&gt;&gt;&gt;&gt; To: taxacom
+&gt;&gt;&gt;&gt; Subject: [Taxacom] accepted names using the uBio web services?
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt; Hi all,
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt; Is there a way to get the currently accepted name of an outdated  
+&gt;&gt;&gt;&gt; taxon
+&gt;&gt;&gt;&gt; name using the uBio web services?
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt; For example, if I call namebank_search for &quot;Hyla crucifer,&quot; an  
+&gt;&gt;&gt;&gt; outdated
+&gt;&gt;&gt;&gt; scientific name of Pseudacris crucifer (Spring Peeper, a frog  
+&gt;&gt;&gt;&gt; from the
+&gt;&gt;&gt;&gt; eastern US), I get several namebank objects back at the species  
+&gt;&gt;&gt;&gt; level:
+&gt;&gt;&gt;&gt; 2812644, 6805040, 655121, and 4827754. Calling namebank_object on  
+&gt;&gt;&gt;&gt; each
+&gt;&gt;&gt;&gt; of these returns lots of data about the names, but nothing I can  
+&gt;&gt;&gt;&gt; see
+&gt;&gt;&gt;&gt; that indicates a link to the accepted name, Pseudacris crucifer.  
+&gt;&gt;&gt;&gt; Looking
+&gt;&gt;&gt;&gt; at these IDs on the website (say,
+&gt;&gt;&gt;&gt; <A HREF="http://www.ubio.org/browser/details.php?namebankID=655121),">http://www.ubio.org/browser/details.php?namebankID=655121),</A> it  
+&gt;&gt;&gt;&gt; seems
+&gt;&gt;&gt;&gt; that uBio can make that link, at least in the classification. The
+&gt;&gt;&gt;&gt; results from classificationbank_search and  
+&gt;&gt;&gt;&gt; classificationbank_object
+&gt;&gt;&gt;&gt; didn't seem to provide any connections to an accepted name either.
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt; So, can anyone recommend a way to get at name status using the  
+&gt;&gt;&gt;&gt; uBio web
+&gt;&gt;&gt;&gt; services?  Am I missing something, or is this just not possible?
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt; My apologies if this is too technical (or perhaps too simple!)  
+&gt;&gt;&gt;&gt; for this
+&gt;&gt;&gt;&gt; list.  If there's a more code-oriented biodiversity informatics  
+&gt;&gt;&gt;&gt; list
+&gt;&gt;&gt;&gt; somewhere, please let me know.
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt; -Ken-ichi
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt; _______________________________________________
+&gt;&gt;&gt;&gt; Taxacom mailing list
+&gt;&gt;&gt;&gt; Taxacom at mailman.nhm.ku.edu
+&gt;&gt;&gt;&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt;&gt;&gt;&gt; ************************************************************************
+&gt;&gt;&gt;&gt; The information contained in this e-mail and any files  
+&gt;&gt;&gt;&gt; transmitted with
+&gt;&gt;&gt;&gt; it is confidential and is for the exclusive use of the intended  
+&gt;&gt;&gt;&gt; recipient.
+&gt;&gt;&gt;&gt; If you are not the intended recipient please note that any  
+&gt;&gt;&gt;&gt; distribution,
+&gt;&gt;&gt;&gt; copying or use of this communication or the information in it is  
+&gt;&gt;&gt;&gt; prohibited.
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt; Whilst CAB International trading as CABI takes steps to prevent the
+&gt;&gt;&gt;&gt; transmission of viruses via e-mail, we cannot guarantee that any  
+&gt;&gt;&gt;&gt; e-mail or
+&gt;&gt;&gt;&gt; attachment is free from computer viruses and you are strongly  
+&gt;&gt;&gt;&gt; advised to
+&gt;&gt;&gt;&gt; undertake your own anti-virus precautions.
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt; If you have received this communication in error, please notify  
+&gt;&gt;&gt;&gt; us by
+&gt;&gt;&gt;&gt; e-mail at cabi at cabi.org or by telephone on +44 (0)1491 829199 and  
+&gt;&gt;&gt;&gt; then
+&gt;&gt;&gt;&gt; delete the e-mail and any copies of it.
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt; CABI is an International Organization recognised by the UK  
+&gt;&gt;&gt;&gt; Government
+&gt;&gt;&gt;&gt; under Statutory Instrument 1982 No. 1071.
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt; **************************************************************************
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;
+&gt;&gt;&gt; _______________________________________________
+&gt;&gt;&gt; Taxacom mailing list
+&gt;&gt;&gt; Taxacom at mailman.nhm.ku.edu
+&gt;&gt;&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt;&gt;&gt;
+&gt;&gt;
+&gt;&gt; ---------------------------------------------------------
+&gt;&gt; Roderic Page
+&gt;&gt; Professor of Taxonomy
+&gt;&gt; DEEB, FBLS
+&gt;&gt; Graham Kerr Building
+&gt;&gt; University of Glasgow
+&gt;&gt; Glasgow G12 8QQ, UK
+&gt;&gt;
+&gt;&gt; Email: r.page at bio.gla.ac.uk
+&gt;&gt; Tel: +44 141 330 4778
+&gt;&gt; Fax: +44 141 330 2792
+&gt;&gt; AIM: rodpage1962 at aim.com
+&gt;&gt; Facebook: <A HREF="http://www.facebook.com/profile.php?id=1112517192">http://www.facebook.com/profile.php?id=1112517192</A>
+&gt;&gt;
+&gt;&gt; <A HREF="http://iphylo.blogspot.com">http://iphylo.blogspot.com</A>
+&gt;&gt; <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+&gt;&gt;
+&gt;&gt;
+&gt;&gt;
+&gt;&gt;
+&gt;&gt;
+&gt;&gt;
+&gt;
+
+---------------------------------------------------------
+Roderic Page
+Professor of Taxonomy
+DEEB, FBLS
+Graham Kerr Building
+University of Glasgow
+Glasgow G12 8QQ, UK
+
+Email: r.page at bio.gla.ac.uk
+Tel: +44 141 330 4778
+Fax: +44 141 330 2792
+AIM: rodpage1962 at aim.com
+Facebook: <A HREF="http://www.facebook.com/profile.php?id=1112517192">http://www.facebook.com/profile.php?id=1112517192</A>
+
+<A HREF="http://iphylo.blogspot.com">http://iphylo.blogspot.com</A>
+<A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+
+
+
+
+
+
+
+---------------------------------------------------------
+Roderic Page
+Professor of Taxonomy
+DEEB, FBLS
+Graham Kerr Building
+University of Glasgow
+Glasgow G12 8QQ, UK
+
+Email: r.page at bio.gla.ac.uk
+Tel: +44 141 330 4778
+Fax: +44 141 330 2792
+AIM: rodpage1962 at aim.com
+Facebook: <A HREF="http://www.facebook.com/profile.php?id=1112517192">http://www.facebook.com/profile.php?id=1112517192</A>
+
+<A HREF="http://iphylo.blogspot.com">http://iphylo.blogspot.com</A>
+<A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+
+
+
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="110566.html">[Taxacom] Job Vacancy  - Flora Mesoamericana
+</A></li>
+        <LI>Next message: <A HREF="110568.html">[Taxacom] 6th International Tritiiceae Symposium
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#110567">[ date ]</a>
+              <a href="thread.html#110567">[ thread ]</a>
+              <a href="subject.html#110567">[ subject ]</a>
+              <a href="author.html#110567">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

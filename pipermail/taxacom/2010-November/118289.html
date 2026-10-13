@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Inappropriate accuracy of locality data
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Inappropriate%20accuracy%20of%20locality%20data&In-Reply-To=%3C010001cb90dd%24190f33f0%244b2d9bd0%24%40bishopmuseum.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="118286.html">
+   <LINK REL="Next"  HREF="118291.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2010-November/118289.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Inappropriate accuracy of locality data</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Inappropriate%20accuracy%20of%20locality%20data&In-Reply-To=%3C010001cb90dd%24190f33f0%244b2d9bd0%24%40bishopmuseum.org%3E"
+       TITLE="[Taxacom] Inappropriate accuracy of locality data">deepreef at bishopmuseum.org
+       </A><BR>
+    <I data-pagefind-meta="date">Tue Nov 30 16:22:37 CST 2010</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="118286.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+        <LI>Next message: <A HREF="118291.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#118289">[ date ]</a>
+              <a href="thread.html#118289">[ thread ]</a>
+              <a href="subject.html#118289">[ subject ]</a>
+              <a href="author.html#118289">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2010</span><!--beginarticle-->
+<PRE>&gt;<i> We wish to cover
+</I>&gt;<i> uncertainty in more depth, especially the possibility of using
+</I>foot-printed
+&gt;<i> uncertainty rather than just the point-radius method most are using now.
+</I>&gt;<i> This would use polygons and include things like buffering, roads, etc. 
+</I>
+I generated a system years ago for buffering lines and polygons. Basically,
+a line or polygon is defined by a sequence of points, and if each point has
+an error radius around it, that radius can be translated into a buffer zone
+around the margins of the line or polygon.  By attaching the error distance
+to each point (rather than abstracted to the polygon as a whole), there can
+be different error/buffer zones on different parts of a polygon. For
+example, if a terrestrial plant specimen is vaguely ascribed from some area
+that abuts a water body, and you can say with confidence that the plant
+would not have occurred over the water body, then the points along the
+polygon that border the water body can have relatively small error; whereas
+the borders of the same polygon with less distinct boundaries could have
+larger error values associated with the relevant points.
+
+I eventually mothballed this, for several reasons:
+
+1) I could never decide whether the error around the border of a polygon
+only applied externally to the defined polygon border, or simultaneously
+internal and external (error values on points that describe a line would
+obviously apply to both sides of the line)
+
+2) I did not have any tools for easily generating or visualizing these
+buffered lines &amp; polygons
+
+3) Nobody else seemed very interested.
+
+The value of the point-radius approach is that it's the easiest and least
+time-consuming way to translate the existing human-friendly locality
+descriptors attached to most of our data content into something that can be
+processed by a computer.  The only caveat is that the scale of the error
+radius needs to be acknowledged when interpreting the values for analytical
+purposes.
+
+For example, if I have a fish specimen with locality data &quot;Oahu, Hawaiian
+Islands&quot;, then a point-radius result would put a point at the geographic
+center of Oahu (where the fish was surely not captured), and describe a
+circle that included the entire island plus enough of the surrounding water
+to encompass the likely collecting place for the specimen.  Such information
+would be useless for modeling where on Oahu that species occurs.  But it's
+reasonably useful for modeling where, within the Hawaiian Archipelago, the
+species occurs -- and it would be very precise information on the scale of
+modeling where within the Pacific Ocean the species occurs.
+
+I don't fault the point-radius approach taken so far; but I agree it would
+be valuable to also develop a standard for describing lines and polygons
+that is practical to use within our community.
+
+Aloha,
+Rich
+
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="118286.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+	<LI>Next message: <A HREF="118291.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#118289">[ date ]</a>
+              <a href="thread.html#118289">[ thread ]</a>
+              <a href="subject.html#118289">[ subject ]</a>
+              <a href="author.html#118289">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

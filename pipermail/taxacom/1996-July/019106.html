@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Recording decimal latitude and longitude
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1996-July/019106.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Recording decimal latitude and longitude</H1>
+    <B data-pagefind-meta="author">Robert J Raven</B>
+    qmrraven at MAILBOX.UQ.OZ.AU<BR>
+    <I data-pagefind-meta="date">Tue Jul 30 17:24:13 CDT 1996</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="102259.html">Federal and international permits workshop (fwd)
+</A></li>
+        <LI>Next message: <A HREF="054898.html">Recording decimal latitude and longitude
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#019106">[ date ]</a>
+              <a href="thread.html#019106">[ thread ]</a>
+              <a href="subject.html#019106">[ subject ]</a>
+              <a href="author.html#019106">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1996</span><!--beginarticle-->
+<PRE>In &lt;199607300852.JAA19046 at mailserver.nhm.ac.uk&gt;, on 07/30/96
+   at 09:52 AM, Charles Hussey &lt;cgh at NHM.AC.UK&gt; said:
+
+&gt;&gt;
+&gt;&gt;In designing the system I had anticipated that decimal degrees would be
+&gt;presented as a positive or negative number with up to four decimal
+&gt;places. One of our researchers, who uses a GIS device has alerted me to
+&gt;the fact that his GPS device outputs things as degrees and decimal
+&gt;minutes (114 24.567'E for example); which would indicate the requirement
+&gt;for an integer degree field and a decimal minute field.
+&gt;&gt;
+&gt;&gt;Can anyone out there who has experience of these things provide details h
+&gt;many formats exist for data from GIS/GPS systems and which are the most
+&gt;common. &gt;
+&gt;
+Charles
+
+We have long since solved this problem. GIS units give the results as
+degree, minutes and decimal minutes so we all agreed to that standard. We
+use a REAL data type and we know that the digits after the second place
+are decimalised. We also use a &quot;GIS&quot; program but that requires us to have
+decimal degrees. So we have four fields. One each for long and lat as
+degree.decimal minutes and one each as computed fields which make the
+decimalisation &quot;on the fly&quot;. When we dump the points for mapping (e.g. our
+Atlas of Frogs, Reptiles, Birds &amp; mammals, Ingram &amp; Raven, 1991) we use
+the computed fields. It all happens transparently to the user and there is
+no speed loss.
+
+Equally, however, we have a problem with our mapping program which sees
+the world as a rectangular card in which the ends are not joined, Fiji on
+one side and the other! We wanted to do a map putting Australia at the
+centre, straddled by the Indian and Pacific but also with the Atlantic in
+one piece. So we rotated one map of the world and moved 0 to Capetown. For
+ that we have a second computed field based upon the longitude and we use
+that instead of the actual latitude and drop the points onto our
+Australia-centred world. It is good for Fiji too because it all stays
+together.
+
+We use R:Base in DOS, Windoze and OS/2 implementations and haven't seen
+anything that would turn our heads yet.
+
+Rob
+
+
+Dr Robert J Raven
+Museum Scientist, Arachnology
+Queensland Museum, Brisbane, Australia
+
+Email: R.Raven at mailbox.uq.edu.au
+Home page: <A HREF="http://www.uq.edu.au/~qmrraven">http://www.uq.edu.au/~qmrraven</A>
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="102259.html">Federal and international permits workshop (fwd)
+</A></li>
+        <LI>Next message: <A HREF="054898.html">Recording decimal latitude and longitude
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#019106">[ date ]</a>
+              <a href="thread.html#019106">[ thread ]</a>
+              <a href="subject.html#019106">[ subject ]</a>
+              <a href="author.html#019106">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

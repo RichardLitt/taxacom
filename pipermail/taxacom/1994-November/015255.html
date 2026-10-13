@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> The REPLACE SEMICOLON BY COMMA directive in CONFOR
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1994-November/015255.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">The REPLACE SEMICOLON BY COMMA directive in CONFOR</H1>
+    <B data-pagefind-meta="author">Mike Dallwitz</B>
+    miked at ENTO.CSIRO.AU<BR>
+    <I data-pagefind-meta="date">Fri Nov 18 11:35:51 CST 1994</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="098408.html">Renumbering DELTA character lists
+</A></li>
+        <LI>Next message: <A HREF="051047.html">The REPLACE SEMICOLON BY COMMA directive in CONFOR
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#015255">[ date ]</a>
+              <a href="thread.html#015255">[ thread ]</a>
+              <a href="subject.html#015255">[ subject ]</a>
+              <a href="author.html#015255">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1994</span><!--beginarticle-->
+<PRE>                                                               18 November 1994
+
+
+
+I am posting this correspondence as an example of a detailed discussion of a
+DELTA program, which may be of interest to many DELTA users, but not to Taxacom
+subscribers in general. Will anyone volunteer to set up a mailing list
+specifically for this kind of material?
+
+&gt; From: zhu at mobot.mobot.org (Guang Hua Zhu)
+&gt; To: miked at ento.csiro.au (Mike Dallwitz)
+&gt;
+&gt; I asked Dave Boufford the following statement in 'tonat'. I still don't
+&gt; understand what it's for. I do want to have ',' instead of ';' after some
+&gt; characters. But this can not be done by adding the character number after
+&gt; this command. Please tell why. Thanks a lot.
+&gt;
+&gt; &gt; From: &quot;Dave Boufford&quot; &lt;boufford at huh.harvard.edu&gt;
+&gt; &gt; To: zhu at mobot.mobot.org
+&gt; &gt;
+&gt; &gt; &gt; *REPLACE SEMICOLON BY COMMA 5 9 11 13 (? this makes no difference
+&gt; &gt; &gt; to your description. What is it for?)
+&gt; &gt;
+&gt; &gt; If you prefer a semicolon (;) instead of a comma (,) then don't list any
+&gt; &gt; characters.
+
+The REPLACE SEMICOLON BY COMMA directive requires the specification of sets of
+characters, not just single characters. This is because the required
+punctuation depends not only on the preceding character in the sentence, but
+also on the following one. Characters that are contiguous in the character list
+are not necessarily so in descriptions. Characters may be missing because they
+are unknown, inapplicable, or excluded.
+
+It is usually sufficient to specify (some of) the same sets as in REPLACE
+SEMICOLON BY COMMA as in LINK CHARACTERS. To see the effects of a more
+complicated specification, try the following with the sample data. *LINK
+    CHARACTERS 3-5 7-9 13-15 18-21 (etc.) *REPLACE SEMICOLON BY COMMA 3-5 7-8
+    13:15 18
+To make the effects easier to see, you could remove the OMIT CHARACTER NUMBERS
+directive, and add INCLUDE CHARACTERS 3-21. You will need to look through
+several of the resulting descriptions to find instances of all the possible
+effects.
+
+Mike Dallwitz                                  Internet md at ento.csiro.au
+CSIRO Division of Entomology                   Fax +61 6 246 4000
+GPO Box 1700, Canberra ACT 2601, Australia     Phone +61 6 246 4075
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="098408.html">Renumbering DELTA character lists
+</A></li>
+        <LI>Next message: <A HREF="051047.html">The REPLACE SEMICOLON BY COMMA directive in CONFOR
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#015255">[ date ]</a>
+              <a href="thread.html#015255">[ thread ]</a>
+              <a href="subject.html#015255">[ subject ]</a>
+              <a href="author.html#015255">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

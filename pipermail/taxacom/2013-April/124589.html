@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Generic type of large genus belongs in different genus
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-April/124589.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Generic type of large genus belongs in different genus</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at bishopmuseum.org<BR>
+    <I data-pagefind-meta="date">Tue Apr  9 12:14:17 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="124588.html">[Taxacom] On-line tree builder?
+</A></li>
+        <LI>Next message: <A HREF="124590.html">[Taxacom] Correspondence of Henry Willey,
+	early American lichenologist
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124589">[ date ]</a>
+              <a href="thread.html#124589">[ thread ]</a>
+              <a href="subject.html#124589">[ subject ]</a>
+              <a href="author.html#124589">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>I'll take a moment to address something raised by Rod:
+
+&gt; The effects would be lessened if we either:
+
+[...]
+
+&gt; (b) Had a complete database of synonyms that we could use to expand our queries
+
+Late last month we hosted a gathering of developers from BHL, GNA, IPNI, and Index Fungorum and spent a week focused on figuring out how best to integrate some of the datasets we already have access to.  There were many good ideas and several new services (currently in prototype form) emerging from that meeting, as well as a major focus on cross-linking content from the different resources.
+
+As to Rod's point &quot;b&quot;, we are obviously a long way off from that &quot;complete database of synonyms&quot; right now.  However, one of the things we accomplished at last month's meeting was a step in the right direction.  Specifically, one of the things we did was to define a better way to leverage two distinct resources:  The Global Names Index (GNI; <A HREF="http://gni.globalnames.org/),">http://gni.globalnames.org/),</A> which contains 17M text-string scientific names; and the Global Names Usage Bank (GNUB), which currently contains about a half-million Taxon Name Usage instances with cross-links to literature (and which is the database behind ZooBank).  By more tightly integrating these two GNA components, we'll be able to seed GNI with &quot;clean&quot; name-strings and associated persistent, actionable GNUB identifiers.  In doing so, the existing parsing and lexical matching algorithms already in GNI will be supplemented via GNUB content to include both heterotypic synonym cross-matching (e.g., matching &quot;Aus bus&quot; to &quot;Xus bus&quot;); and homotypic synonym cross-linking (e.g., knowing that &quot;Aus bus&quot; has been regarded as a synonym of &quot;Aus xus&quot;).
+
+For example, a search in GNI for &quot;Pomatomus saltatrix&quot; currently yields 11 lexical variants (<A HREF="http://gni.globalnames.org/name_strings?search_term=Pomatomus+saltatrix&amp;commit=Search).">http://gni.globalnames.org/name_strings?search_term=Pomatomus+saltatrix&amp;commit=Search).</A>  We can now link those 11 variants to the corresponding GNUB Protonym UUID (FFF7160A-372D-40E9-9611-23AF5D9EAC4C; which you can see in ZooBank as <A HREF="http://zoobank.org/FFF7160A-372D-40E9-9611-23AF5D9EAC4C).">http://zoobank.org/FFF7160A-372D-40E9-9611-23AF5D9EAC4C).</A>  That, by itself, is sort of cool -- but only a little bit.  What's *really* cool is that we also built a service that allows that Protonym UUID to be passed in to GNUB, and the following list be returned:
+
+Gasterosteus saltatrix Linnaeus, 1766
+Ga?tero?teus Sallatrix Linnaeus, 1766
+Pomatomus saltatrix (Linnaeus, 1766)
+Pomatomus saltator (Linnaeus, 1766)
+Lopharis mediterraneus Rafinesque, 1810
+Pomatomus mediterraneus (Rafinesque, 1810)
+Pomatomus pallasii (Eichwald, 1831)
+Sypterus pallasii Eichwald, 1831
+Pomatomus conidens (Castelnau, 1861)
+Temnodon conidens Castelnau, 1861
+Gonenion serra Rafinesque, 1810
+Pomatomus serra (Rafinesque, 1810)
+Pomatomus tubulus (Saville-Kent, 1893)
+Temnodon tubulus Saville-Kent, 1893
+Pomatomus nalnal (Rochebrune, 1880)
+Sparactodon nalnal Rochebrune, 1880
+Pomatomus pedica Whitley, 1931
+Anthias lophar (Forssk?l, 1775)
+Perca lophar Forssk?l, 1775
+Pomatomus lophar (Forssk?l, 1775)
+Cheilodipterus heptacanthus Lac?p?de, 1801
+Pomatomus heptacanthus (Lac?p?de, 1801)
+Pomatomus skib Lac?p?de, 1802
+Pomatomus sypterus (Pallas, 1814)
+Scomber sypterus Pallas, 1814
+Chromis epicurorum Gronow in Gray, 1854
+Pomatomus epicurorum (Gronow in Gray, 1854)
+
+(Besides these &quot;clean&quot; text string names, there is also a host of other metadata included with the service response, such as GNUB Protonym UUIDs for each element of each name.)
+
+The first item in that list is the Protonym itself (i.e., the original combination and orthography, sort of like the basionym).  The second item in the list is an example of a lexical variant (i.e., the same genus + species combination, but an alternate spelling).  The third and fourth items in the list are (respectively), a homotypic synonym (same species, different genus), and a spelling variant of the same homotypic synonym.  The remaining items in the list are all names that have been regarded as heterotypic synonyms of that species (and their lexical and homotypic variants).  Had there been any treatments that regarded saltatrix as a heterotypic synonym of another species, those other species would have been included as well.
+
+So, once we get this new set of services implemented through GNA (GNI+GNUB), you will be able to start with any of the 11 text-string names already indexed in GNI (as well as any of the 11 text-string variants of Pomatomus saltator, or the four variants of Gasterosteus saltatrix, or any variants of any of the heterotypic synonyms), and get an expanded list of other names (i.e., the list above) that the organism you're searching for might have been called at one time or another in history. 
+
+Another thing we can include in the response to that service is metrics about how often and when the various names (lexical variants, homotypic synonyms and heterortypic synonyms) have been used throughout history.
+
+Now, as cool as this is, it's obviously limited by the content we have in GNUB/ZooBank (as I said, about a half-million name-usages anchored to about 120,000 protonyms). But we also made very good progress on two other fronts at last month's meeting:
+
+2) Cross-linking the GNI names services to the 107M+ names already known to appear on BHL pages; and
+3) Cross-linking literature records in BHL (Books, Journals, Articles) to corresponding records in GNUB/ZooBank.
+
+Each of these three things is, by itself, an important step forward.  But what's really exciting is what we can do with all three of them together.
+
+Essentially, this triangle of services (BHL-GNI-GNUB) will allow us to discover and index literally tens of millions of Taxon Name Usage instances from the BHL OCR text.  Among these tens of millions of TNUs will be millions of protonyms.  Because the systems can cross-reference each other, the process to verify and clean up these name-usages will be accelerative. The upshot is that we will, in principle, be able to provide the service described above (expanding searches to include a wide spectrum of name variants and synonyms) to a great many more taxa.
+
+To make it work, of course, there needs to be high-quality nomenclature underpinning the entire system.  ZooBank, in cooperation with a variety of zoological nomenclators, is already taking steps towards this for the zoological names.  Part of last month's meeting was also to explore ways that IPNI, Tropicos, and Index Fungorum could be likewise integrated into this part of the GNA infrastructure. Once that gets sorted out, it would be great to include bacterial and viral names as well.
+
+So, no....we do not yet have &quot;a complete database of synonyms that we could use to expand our queries&quot;.  However, we do now have the infrastructure in place to build it.  
+
+And if I were inclined to make wagers, I'd bet that we'll have it built long before we persuade the broader taxonomic community to lock in &quot;current&quot; genus+species combinations and keep those stable going forward.
+
+Aloha,
+Rich
+
+Richard L. Pyle, PhD
+Database Coordinator for Natural Sciences
+Associate Zoologist in Ichthyology
+Dive Safety Officer
+Department of Natural Sciences, Bishop Museum
+1525 Bernice St., Honolulu, HI 96817
+Ph: (808)848-4115, Fax: (808)847-8252
+email: deepreef at bishopmuseum.org
+<A HREF="http://hbs.bishopmuseum.org/staff/pylerichard.html">http://hbs.bishopmuseum.org/staff/pylerichard.html</A>
+
+
+
+
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="124588.html">[Taxacom] On-line tree builder?
+</A></li>
+        <LI>Next message: <A HREF="124590.html">[Taxacom] Correspondence of Henry Willey,
+	early American lichenologist
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124589">[ date ]</a>
+              <a href="thread.html#124589">[ thread ]</a>
+              <a href="subject.html#124589">[ subject ]</a>
+              <a href="author.html#124589">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

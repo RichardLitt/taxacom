@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> DELTA data entry/editing
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1995-March/015772.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">DELTA data entry/editing</H1>
+    <B data-pagefind-meta="author">Mike Dallwitz</B>
+    miked at ENTO.CSIRO.AU<BR>
+    <I data-pagefind-meta="date">Tue Mar 21 18:52:45 CST 1995</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="098941.html">going rankless (was Article 71...)
+</A></li>
+        <LI>Next message: <A HREF="051564.html">DELTA data entry/editing
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#015772">[ date ]</a>
+              <a href="thread.html#015772">[ thread ]</a>
+              <a href="subject.html#015772">[ subject ]</a>
+              <a href="author.html#015772">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1995</span><!--beginarticle-->
+<PRE>                                                                 21 March 1995
+
+&gt; From: Adolf Ceska &lt;aceska at FREENET.VICTORIA.BC.CA&gt;
+&gt;
+&gt; I can see that the main stumbling block in the use of DELTA programs is the
+&gt; preparation of input files (CHARS, ITEMS, SPECS, etc.).
+
+Yes, it is the main stumbling block, but not the main DIFFICULTY. The
+mechanics of preparing these files can be learned in an hour or two (for those
+who know what directories and files are and can use a text editor). Designing
+character lists and recording data in such a way that the maximum benefits can
+be derived from them is an art which takes years to learn, and which will not
+be made substantially easier by better software. In many ways it will get
+harder because of the new features which will be added to the software. You
+will have observed this effect with, for example, word processors and image
+editors. You may say that that is all very well for publishers and graphic
+artists, but that you would be perfectly happy with a much simpler, rough and
+ready word processor (all the same, you probably don't use one!). But as a
+taxonomist, are you going to be satisfied with simple, rough and ready storing
+and processing of your laboriously gathered data?
+
+&gt; To prepare these files is a painful process, almost as complicated as
+&gt; solving the RUBIK CUBE. If you make a small change in CHARS file (add or
+&gt; delete a character), you have to make endless changes in the ITEMS file and
+&gt; other files.
+
+I suppose that even those who haven't used DELTA will realize that this is an
+exaggeration, but may not realize how gross. If you add a character, in most
+cases you need only make a single change in the `specifications' file, namely,
+to increase the number of characters by 1. You may also need to specify the
+type of the character (if not unordered multistate), and its number of states
+(if greater than 2). The `endlessness' of the changes in the ITEMS file (the
+`data matrix') will, of course, be directly proportional to the number of taxa
+which have to be coded for the new character, as would be true whatever the
+software.
+
+Just for fun, I timed myself in adding a new character to a data set. It took
+about 40 seconds to update the characters and specifications files. I tried
+two ways of adding the new data to the ITEMS file. (1) Write an editor macro
+to help: 60 seconds to devise and enter the macro, 1.5 seconds per taxon to
+enter the data. (2) Straightforward editing (cursor to right place, enter the
+data): 7 seconds per taxon.
+
+An inexperienced user would, of course, take longer, but the time would still
+be negligible (or should be) compared with the time taken to think about the
+new character and to get the new data. Also, the time will be paid back
+manyfold, both to the author and the end users, by the facilities provided by
+the programs once the data are there.
+
+I must emphasize that I am not trying to say that the mechanical difficulties
+of using the current DELTA programs are a good thing - I'm just trying to put
+them in perspective. We intend to address the problems, but it's not possible
+to do everything overnight. Users are suffering from the legacy of the
+mainframe systems on which the programs were first developed, but are
+benefiting from the functionality arising from 20 years of development and
+feedback from users.
+
+&gt; I have not had chance to compare performance of XID and INTKEY, but I
+&gt; don't think one will be significantly better than the other.
+
+I haven't seen XID, but you are almost certainly wrong. We have been
+developing INTKEY, on the basis of feedback from numerous users with serious
+data sets, for 12 years. Development started when our experience with an early
+version of Richard Pankhurst's ONLINE showed that it was inadequate in many
+ways. Nevertheless, that early ONLINE was superior in functionality to many of
+the interactive identification programs being written today.
+
+The first step in evaluating XID or any other such program should be to
+compare it with the list of criteria that I posted earlier. If you think that
+some of these are not really necessary, please say so, and I will attempt to
+justify them. More criteria could certainly be added, and I will do so as
+these are brought to my attention.
+
+A proper test of such programs is difficult. It's not much use pretending to
+do an identification, or identifying something when you already know the
+answer. Experimentation would be necessary, along the lines of
+
+Fermanian, T. W., Barkworth, M., and Liu, H. (1989). Trained and untrained
+individual's ability to identify morphological characters of immature grasses.
+Agron. J. 81, 918-22.
+
+&gt; One thing DELTA definitively needs is an easier method of how to enter
+&gt; taxonomical data.
+
+Richard Pankhurst and Eric Gouda have programs for editing DELTA data, and we
+are about to start writing one ourselves.
+
+&gt; Can DELTA people approach the XID Services, and ask them to provide an
+&gt; interface between XID input and DELTA input?
+
+The description of DELTA is in the public domain, and anyone is free to write
+programs to import or export it. For sufficiently popular software (e.g. PAUP,
+MacClade, Hennig86), we also provide the ability to transform DELTA data into
+other formats.
+
+&gt; Both XID and DELTA would benefit from such a marriage.
+
+I agree, and even more importantly, taxonomists would benefit by being able to
+use their hard-won data with a variety of software.
+
+Mike Dallwitz                                  Internet md at ento.csiro.au
+CSIRO Division of Entomology                   Fax +61 6 246 4000
+GPO Box 1700, Canberra ACT 2601, Australia     Phone +61 6 246 4075
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="098941.html">going rankless (was Article 71...)
+</A></li>
+        <LI>Next message: <A HREF="051564.html">DELTA data entry/editing
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#015772">[ date ]</a>
+              <a href="thread.html#015772">[ thread ]</a>
+              <a href="subject.html#015772">[ subject ]</a>
+              <a href="author.html#015772">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

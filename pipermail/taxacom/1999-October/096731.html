@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> standards across taxa
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20standards%20across%20taxa&In-Reply-To=%3C968AD197E75%40biology.as.ua.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="096658.html">
+   <LINK REL="Next"  HREF="096733.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1999-October/096731.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">standards across taxa</H1>
+    <B data-pagefind-meta="author">Steve Ginzbarg</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20standards%20across%20taxa&In-Reply-To=%3C968AD197E75%40biology.as.ua.edu%3E"
+       TITLE="standards across taxa">sginzbar at BIOLOGY.AS.UA.EDU
+       </A><BR>
+    <I data-pagefind-meta="date">Wed Oct 27 17:18:32 CDT 1999</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="096658.html">standards across taxa
+</A></li>
+        <LI>Next message: <A HREF="096733.html">standards across taxa
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#96731">[ date ]</a>
+              <a href="thread.html#96731">[ thread ]</a>
+              <a href="subject.html#96731">[ subject ]</a>
+              <a href="author.html#96731">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>1999</span><!--beginarticle-->
+<PRE>On Mon, 18 Oct 1999 Gail E. Kampmeier wrote
+
+&gt;<i> For example, you may have a name that appears as &quot;Smith&quot; in some places,
+</I>&gt;<i> &quot;C. Smith&quot; in others, &quot;C. W. Smith&quot; in yet others or &quot;Cecil Smith&quot; in
+</I>&gt;<i> others.  These could all be the same person or 4 different ones.  In my
+</I>&gt;<i> database, they appear as 4 separate &quot;people&quot; unless we know for sure that
+</I>&gt;<i> they are all the same.  However, if you want to pull together all the
+</I>&gt;<i> things that a person has done (how many specimens has s/he determined,
+</I>&gt;<i> authored, illustrated, written about, etc.), it would be confusing.
+</I>&gt;<i> Activity dates would be helpful, knowing where someone worked/collected
+</I>&gt;<i> could also be important.  Do such files exist outside of botany and even in
+</I>&gt;<i> botany, are the records complete only for certain groups?
+</I>
+In order to avoid the problem of multiple name forms for the same
+person, at UNA we will be requiring collectors to register before entering
+their collection data in the database program (which both creates
+specimen labels and stores the data in the database.) The collector
+must enter their last name, date of birth, full name, and preferred
+name (their name as they prefer it to appear on specimen labels). The
+combination of date of birth and full name must be unique for each
+record in the Person table. (We are, however, allowing date of birth
+to be left blank since sometimes we must prepare labels for another
+collector whose birthday is not easily obtained.) Only one preferred
+name can be chosen for each date of birth - full name combination.
+Registration sets the default for the Collector field in the
+CollectingEvent table to the collector's PersonID in the Person table.
+The collector's preferred name will appear on all the collection
+labels.
+
+For recording names retrospectively we have a separate PersonName
+table with unique names. (One name, C. Smith, might have been used by
+more than one collector.) In cases of well know collectors we can link
+the person record in the Person table, FullName = &quot;Cecil W. Smith&quot;
+(full name for retrospective data means name to the fullest extent
+known) to the records in the PersonName table that represent variant
+name forms used by Cecil W. Smith. The links are recorded in a third
+table Person_PersonName with fields PersonID and PersonNameID.
+
+All preferred names in the Person table are added to the names in the
+PersonName table. This allows querying of names or querying of people.
+
+-Steve Ginzbarg
+
+Steve Ginzbarg, Assistant Curator
+Herbarium (UNA)
+Department of Biological Sciences
+Box 870345
+The University of Alabama
+Tuscaloosa, AL 35487-0345
+
+(205) 348-1829, FAX: (205) 348-6460
+<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">sginzbar at biology.as.ua.edu</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="096658.html">standards across taxa
+</A></li>
+	<LI>Next message: <A HREF="096733.html">standards across taxa
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#96731">[ date ]</a>
+              <a href="thread.html#96731">[ thread ]</a>
+              <a href="subject.html#96731">[ subject ]</a>
+              <a href="author.html#96731">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

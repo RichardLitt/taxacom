@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] the hurdle for all biodiv informatics initiatives
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2010-February/115694.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] the hurdle for all biodiv informatics initiatives</H1>
+    <B data-pagefind-meta="author">Dave Roberts</B>
+    workpackage6 at googlemail.com<BR>
+    <I data-pagefind-meta="date">Mon Feb 22 03:59:03 CST 2010</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="115693.html">[Taxacom] Digital herbarium
+</A></li>
+        <LI>Next message: <A HREF="115695.html">[Taxacom] the hurdle for all biodiv informatics initiatives
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#115694">[ date ]</a>
+              <a href="thread.html#115694">[ thread ]</a>
+              <a href="subject.html#115694">[ subject ]</a>
+              <a href="author.html#115694">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2010</span><!--beginarticle-->
+<PRE>
+On 22 Feb 2010, at 08:58, Vladimir Blagoderov wrote:
+
+&gt; Dear Tony,
+&gt;
+&gt; On Mon, Feb 22, 2010 at 07:09, Stephen Thorpe  
+&gt; &lt;s.thorpe at auckland.ac.nz&gt;
+&gt; wrote:
+&gt;
+&gt;&gt; - How do Scratchpads approach the ?enter once, use many times?  
+&gt;&gt; paradigm ?
+&gt;&gt; i.e., if information is entered or updated in one Scratchpad, can  
+&gt;&gt; this be
+&gt;&gt; propagated automatically to others? (E.g. cf. the WoRMS approach ?  
+&gt;&gt; a sponge
+&gt;&gt; expert modifies the World Porifera Database, other DB?s which  
+&gt;&gt; utilise the
+&gt;&gt; same shared master taxon list e.g. ERMS, RAMS are instantly updated)
+&gt;&gt;
+&gt;
+&gt; Data exchange is the problem of all bioinformatics initiative: it is  
+&gt; either
+&gt; copy/paste, which multiplies errors across the Web or mush-up.  
+&gt; Scratchpads
+&gt; development follows accepted standards as much as possible, for  
+&gt; example
+&gt; specimen and locality records are Darwin-core 1.2.1.-compatible. So,  
+&gt; the
+&gt; data can be re-used. Perhaps you suggesting global synchronization  
+&gt; of all
+&gt; taxonomic databases? Unfortunately, we have to be realists.
+
+Part of the 'sweet spot' is just how you allow communities to develop  
+their own view of a classification system.  Scratchpads were conceived  
+to allow a community to modify and extend their taxonomy and they saw  
+fit.  It is quite reasonable that more than one Scratchpad will cover  
+a particular taxon (although I know of no example yet).  Bottom line:  
+each Scratchpad has complete control over its taxonomy.  No one  
+outside that community can propagate a change to it without the  
+community's agreement.
+
+&gt;&gt; - Is it possible to do a single query across multiple Scratchpads,  
+&gt;&gt; for a
+&gt;&gt; taxon or taxon name of interest
+&gt;&gt;
+&gt;
+&gt; Not at the moment, however, most of Scratchpads are taxon-oriented,  
+&gt; and it
+&gt; is possible to have multiple classifications within one Scratchpad.  
+&gt; You also
+&gt; can display information from external sources, for example the other
+&gt; Scratchpads, on taxon pages and give it proper credit. I suppose that
+&gt; community maintaining the Scratchpad would be interested to collect  
+&gt; all
+&gt; available information in one place.
+
+Of course you can Google.  Most Scratchpads live as sub-domains of  
+myspecies.info, which you can use to restrict the search.  I can't  
+imagine why you'd want to do that though.
+
+These cross-Scratchpad integration tools are an obvious benefit and  
+are an active area of development for us.  They simply haven't got to  
+the top of the priority pile for our limited development resource.  Yet.
+
+
+&gt;&gt; - Are there scalability issues, i.e. will a Scratchpad break if you  
+&gt;&gt; try to
+&gt;&gt; load e.g. 1 million taxon names, or 10 million into it (as per  
+&gt;&gt; current uBio
+&gt;&gt; content, etc.)
+&gt;&gt;
+&gt;
+&gt; It was tested, and it does work
+
+It does depend on the purpose of loading the names.  We have loaded  
+'life', from CoL, as an hierarchy into the taxonomy module (so that it  
+can be navigated).  That is the test to which Vlad refers.  It was  
+about 2M names.  You can't pull uBio into it because uBio's names are  
+not organised into an hierarchy (they're in multiple hierarchies and  
+generally stored with only their immediate parent or parents).  Indeed  
+building a taxonomic hierarchy from uBio is a challenge.
+
+&gt;&gt; - Is it possible to obtain a database or tabular dump of up-to-the  
+&gt;&gt; minute
+&gt;&gt; taxonomic information, preferably from all Scratchpads, for local  
+&gt;&gt; processing
+&gt;&gt; or upload to other systems?
+&gt;
+&gt; Drupal based on mySQL. In theory you can export a particular node,
+&gt; selection, or entire database. How to provide this functionality is a
+&gt; different question, we are working on it.
+
+This depends on what you mean by &quot;up-to-the minute taxonomic  
+information&quot;.  If you mean taxonomic relationships as represented in  
+the hierarchy, no, not yet.  This is on our to-do list.
+
+Otherwise, basically yes, provided you have the permissions to do so.   
+We, as Scratchpad developers, do not own or have rights to the data.   
+Individual sites make data available as they see fit.
+
+This is another of those 'sweet spot' compromises.  Scratchpad  
+communities own and manage their data.  They are not contributing to a  
+large data-gathering enterprise, such as EoL or CoL.  They are  
+contributing to a vast knowledge base that is better compared to the  
+literature.  It is just more mobile.  This is the compromise.  People  
+still own their data and that ownership is one of the reasons that  
+they engage with Scratchpads to make their data available.
+
+Cheers,  Dave
+-- 
+Dr D.McL. Roberts,        Tel: +44 (0)20 7942 5086
+European Distributed Institute of Taxonomy Project,
+Coordinator WorkPackage 6 (Unifying Revisionary Taxonomy),
+Dept. Zoology,
+The Natural History Museum,
+Cromwell Road,
+London        SW7 5BD
+Great Britain             Email: dmr at nomencurator.org
+Web page:  <A HREF="http://scratchpads.eu">http://scratchpads.eu</A>
+Web page:  <A HREF="http://www.editwebrevisions.info/">http://www.editwebrevisions.info/</A>
+--
+&quot;You can't just ask customers what they want and then try and give it  
+to them.  By the time you get it built, they'll want something  
+new.&quot; [Steve Jobs, quoted in The Guardian, Technology Section, 25 June  
+09].
+--
+
+
+
+
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="115693.html">[Taxacom] Digital herbarium
+</A></li>
+        <LI>Next message: <A HREF="115695.html">[Taxacom] the hurdle for all biodiv informatics initiatives
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#115694">[ date ]</a>
+              <a href="thread.html#115694">[ thread ]</a>
+              <a href="subject.html#115694">[ subject ]</a>
+              <a href="author.html#115694">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

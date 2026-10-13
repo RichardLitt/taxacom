@@ -1,0 +1,275 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Chameleons, GBIF, and the Red List
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Chameleons%2C%20GBIF%2C%20and%20the%20Red%20List&In-Reply-To=%3CCAF%2BcKOoXz97OwZwHtGQenmKvGNuShHdun%2BR8Jun8xXh7m2vsZQ%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="127599.html">
+   <LINK REL="Next"  HREF="127590.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2014-August/127595.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Chameleons, GBIF, and the Red List</H1>
+    <B data-pagefind-meta="author">James Macklin</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Chameleons%2C%20GBIF%2C%20and%20the%20Red%20List&In-Reply-To=%3CCAF%2BcKOoXz97OwZwHtGQenmKvGNuShHdun%2BR8Jun8xXh7m2vsZQ%40mail.gmail.com%3E"
+       TITLE="[Taxacom] Chameleons, GBIF, and the Red List">james.macklin at gmail.com
+       </A><BR>
+    <I data-pagefind-meta="date">Tue Aug 26 13:11:52 CDT 2014</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="127599.html">[Taxacom] Chameleons, GBIF, and the Red List
+</A></li>
+        <LI>Next message: <A HREF="127590.html">[Taxacom] Chameleons, GBIF, and the Red List
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#127595">[ date ]</a>
+              <a href="thread.html#127595">[ thread ]</a>
+              <a href="subject.html#127595">[ subject ]</a>
+              <a href="author.html#127595">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2014</span><!--beginarticle-->
+<PRE>Hi Rod,
+
+Okay, I started this message about 20 messages ago but hope it helps...
+
+I was pleased to see your response to Chuck using the TripAdvisor example.
+I now believe that for the most part what you envision is very similar to
+the goals of FilteredPush but with slightly different focus. Our greatest
+challenge by far has been to &quot;map&quot; the accepted annotations back to source
+collection management databases (concatenation vs. atomization, etc.). We
+do have some solutions based on specific clients but the investment is
+significant. For some, this investment (an API and some potential
+manipulation of interfaces) will be worth it. As I noted earlier, there is
+no doubt that some institutions may be overwhelmed by the number of
+annotations pushed to them and have little hope of processing them given
+their current resources. We have tried to address this issue in a couple
+ways. Our web client does allow for some powerful filtering so a given data
+manager can quickly search for annotations that they wish to review. We
+also have considered a trust mechanism here so that an annotator may be
+given an &quot;accept&quot; status allowing all of their annotations to automatically
+go into the collection management system. The opposite can also be applied
+;-)  This may be especially useful to curators and researchers associated
+with the institution who are working on a project which uses an FP client
+for management, for example Symbiota, where all the annotations relevant to
+their home institution are immediately reflected in their collection
+database. This is also beneficial to those working remotely where no access
+to the collection database is possible but annotations could be made
+through a Morphbank client, for example, and be automatically updated back
+at the source. Of course, a major issue, which has been raised in different
+ways during this discussion is consensus. What if I get pushed 7 different
+new georeferences for a given record over a month's time (not that
+unrealistic). My collection database stores a single georeference with an
+ability to put &quot;old&quot; versions in a comments field. So, I can store what I
+was pushed in an unstructured way but which annotation should be the
+current structured one? Unlike taxonomic annotations where we have a long
+history of the latest annotation wins (naive as that is sometimes...), this
+does not hold for georeferences. The data manager has no easy way to judge
+which to choose. We do have some algorithms in our analysis component of FP
+which could help (compare against Geolocate result for example) but in the
+end some consensus method is necessary.
+
+Now, stepping back to Rod's concept of a store or stores that hold the
+annotations/comments about specimens we can see some real advantages. One
+thing I have learned along the way is that it is unrealistic and
+counterproductive to expect institutions and their collection management
+systems to handle all of this information/knowledge coming from experts
+and/or more automated curation processes. These systems are necessary for
+internal management, no doubt, but are likely to no longer be
+&quot;authoritative&quot; in the sense that all knowledge about the specimen is
+housed there. I think this what Rod is also suggesting. There has, of
+course, traditionally been some information that is not associated with the
+specimen record, i.e., the research done on the specimens and recorded in
+the literature, but thankfully we are slowly doing better at connecting
+these. Thus, we do need stores which are outside of the institutions
+themselves which house all of the annotations/comments/information
+captured. This immediately raises the sustainability flag but that is
+another story (note this may involve GBIF). In FP, we do have to maintain
+an annotation store and in some cases a document store (required for
+reference to what is being annotated). As Rod points out, these could be
+mined for a few purposes, which divide between curation and data quality,
+and research. These stores can in many cases be made public and lead to
+further annotation through a wide range of clients. In fact, we now talk
+about annotation conversations about one-to-many objects/specimens as this
+is what we see occurring between experts. If we want to be more &quot;social&quot;
+then we just need lightweight annotation services that interact with your
+favorite social outlet, Facebook, Wikipedia, Twitter, LinkedIn... We have
+demonstrated a general ability to do this (
+<A HREF="https://sourceforge.net/p/filteredpush/svn/HEAD/tree/trunk/FP-DataEntry/">https://sourceforge.net/p/filteredpush/svn/HEAD/tree/trunk/FP-DataEntry/</A>).
+Let's also not forget the importance of an annotation framework to provide
+at least minimal structure and metadata to annotations being passed and
+stored which we now have at least recognized as part of the W3C Open
+Annotation Consortium standard. This is key to attribution for contributors
+and knowing who/what can be trusted.
+
+The who can be trusted component of the mix is a significant challenge.
+Yes, there are models coming from many &quot;social&quot; clients and apps but their
+application to research and curation is still under studied and perhaps
+appreciated. I was hoping to get a workshop going on this as it is key to
+these annotation systems but have not made it that far yet. Of course, the
+greatest challenge here are our own colleagues who are very used to a
+certain way of doing business and assessing trust and we need to involve
+them and find ways to make them feel comfortable...
+
+Finally, I really believe in the &quot;data cleaning data&quot; model or perhaps
+rephrased &quot;data informing data&quot; to be a little more semantically grounded,
+but the reality so far is that we actually are not big enough! We need much
+more data to be made available through digitization efforts, opening up
+research silos, mining literature, etc., and yes, we need aggregators like
+GBIF to put the data in a place, make it discoverable and perhaps even to
+help us interpret it.
+
+I hope you will see that FP and the many folks we interact with have moved
+well beyond sticky notes ;-)
+
+Best,  JAmes
+
+P.S. Completely agree with Rich's three points, especially #3
+
+
+
+On Tue, Aug 26, 2014 at 5:48 AM, Roderic Page &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Roderic.Page at glasgow.ac.uk</A>&gt;
+wrote:
+
+&gt;<i> Hi Lyubo,
+</I>&gt;<i>
+</I>&gt;<i> Yes, you could have structured annotations and free text for comments. But
+</I>&gt;<i> what I’d like to avoid is the idea that simply putting a comment system
+</I>&gt;<i> onto a database is the answer. It’s easy to do that (I use Disqus on my
+</I>&gt;<i> blog, and on BioStor and BioNames, for example), but that doesn’t get us
+</I>&gt;<i> terribly far (useful as people’s comments are).
+</I>&gt;<i>
+</I>&gt;<i> If we focus on the structured annotations, and the idea that multiple
+</I>&gt;<i> authorities can write about the same thing, then this leads inevitably to
+</I>&gt;<i> the idea of having a single, global annotation store that holds data about
+</I>&gt;<i> all kinds of things that we care about.
+</I>&gt;<i>
+</I>&gt;<i> This was what I was trying to articulate in
+</I>&gt;<i> <A HREF="http://iphylo.blogspot.co.uk/2014/03/rethinking-annotating-biodiversity-data.html">http://iphylo.blogspot.co.uk/2014/03/rethinking-annotating-biodiversity-data.html</A>
+</I>&gt;<i> It can be done in a way that makes almost no demands on data providers at
+</I>&gt;<i> all, and if it’s done cleverly it will (as a side effect) provide a
+</I>&gt;<i> potentially powerful database we can use to ask some of the bigger
+</I>&gt;<i> questions about biodiversity data.
+</I>&gt;<i>
+</I>&gt;<i> Regards
+</I>&gt;<i>
+</I>&gt;<i> Rod
+</I>&gt;<i>
+</I>&gt;<i> ---------------------------------------------------------
+</I>&gt;<i> Roderic Page
+</I>&gt;<i> Professor of Taxonomy
+</I>&gt;<i> Institute of Biodiversity, Animal Health and Comparative Medicine
+</I>&gt;<i> College of Medical, Veterinary and Life Sciences
+</I>&gt;<i> Graham Kerr Building
+</I>&gt;<i> University of Glasgow
+</I>&gt;<i> Glasgow G12 8QQ, UK
+</I>&gt;<i>
+</I>&gt;<i> Email:  <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Roderic.Page at glasgow.ac.uk</A>&lt;mailto:<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Roderic.Page at glasgow.ac.uk</A>&gt;
+</I>&gt;<i> Tel:  +44 141 330 4778
+</I>&gt;<i> Skype:  rdmpage
+</I>&gt;<i> Facebook:  <A HREF="http://www.facebook.com/rdmpage">http://www.facebook.com/rdmpage</A>
+</I>&gt;<i> LinkedIn:  <A HREF="http://uk.linkedin.com/in/rdmpage">http://uk.linkedin.com/in/rdmpage</A>
+</I>&gt;<i> Twitter:  <A HREF="http://twitter.com/rdmpage">http://twitter.com/rdmpage</A>
+</I>&gt;<i> Blog:  <A HREF="http://iphylo.blogspot.com">http://iphylo.blogspot.com</A>
+</I>&gt;<i> ORCID:  <A HREF="http://orcid.org/0000-0002-7101-9767">http://orcid.org/0000-0002-7101-9767</A>
+</I>&gt;<i> Citations:  <A HREF="http://scholar.google.co.uk/citations?hl=en&amp;user=4Z5WABAAAAAJ">http://scholar.google.co.uk/citations?hl=en&amp;user=4Z5WABAAAAAJ</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On 26 Aug 2014, at 08:56, Lyubomir Penev &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">lyubo.penev at gmail.com</A>&lt;mailto:
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">lyubo.penev at gmail.com</A>&gt;&gt; wrote:
+</I>&gt;<i>
+</I>&gt;<i> Rod,
+</I>&gt;<i>
+</I>&gt;<i> Your proposal is indeed elegant, but what about using two separate general
+</I>&gt;<i> types of annotations, e.g.: (1) Corrections/Additions and (2) Comments
+</I>&gt;<i> (&quot;sticky notes&quot;)?
+</I>&gt;<i>
+</I>&gt;<i> The Type 1 (Annotations=Corrections/Additions) can go straight to
+</I>&gt;<i> improve/amend the data (after approval or not is a different story), for
+</I>&gt;<i> example adding geocoordinates for a well-known locality or adding a
+</I>&gt;<i> collector's name missing on label data but known from other source, etc.
+</I>&gt;<i>
+</I>&gt;<i> Annotations Type 2 (Annotations=Comments) could be associated with the
+</I>&gt;<i> original data or with Type 1 Annotations, e.g., &quot;velvet worms cannot live
+</I>&gt;<i> in the ocean, correct geocoordinates for this locality&quot;, or &quot;this locality
+</I>&gt;<i> might be wrongly spelled&quot;, etc.
+</I>&gt;<i>
+</I>&gt;<i> No need to explain that Type 2 annotations could be based on a rich
+</I>&gt;<i> controlled vocabulary of statements, besides the free text option, which
+</I>&gt;<i> will allow machine processing of a part of the process, including automated
+</I>&gt;<i> verification of the original data in some particular cases. For example,
+</I>&gt;<i> annotation of the kind  &quot;Now in different genus&quot;  could automatically query
+</I>&gt;<i> a trusted taxonomy source (CoL, GNUB, etc,) and display all possible
+</I>&gt;<i> versions and validity status of that name and its combinations.
+</I>&gt;<i>
+</I>&gt;<i> Regards,
+</I>&gt;<i> Lyubomir
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On Mon, Aug 25, 2014 at 11:32 PM, Chuck Miller &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Chuck.Miller at mobot.org</A>
+</I>&gt;<i> &lt;mailto:<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Chuck.Miller at mobot.org</A>&gt;&gt; wrote:
+</I>&gt;<i> Rod,
+</I>&gt;<i> I see what you are thinking.
+</I>&gt;<i>
+</I>&gt;<i> I'm thinking too much about the alternate views that seem to always come
+</I>&gt;<i> up in comments about taxonomic data, even right here on Taxacom.  So, an
+</I>&gt;<i> annotation thread could be something like:
+</I>&gt;<i> &quot;Now in different genus&quot;
+</I>&gt;<i> &quot;No way, respectfully what century are you from?. It's not even a species.&quot;
+</I>&gt;<i> &quot;Maybe they meant Africa.&quot;
+</I>&gt;<i> &quot;Yeh, in Namibia it was split and revised to Y, I think.&quot;
+</I>&gt;<i> &quot;The phylogeny for Y is totally different. It's now in Z. Does no one read
+</I>&gt;<i> my work? Taxonomic tyranny!&quot;
+</I>&gt;<i> &quot;Consider this DOI that refers to new collections and it seems to
+</I>&gt;<i> contradict all y'all.&quot;
+</I>&gt;<i>
+</I>&gt;<i> What does &quot;social&quot; annotation turn into?  Lots of useful information but
+</I>&gt;<i> if it starts being contradictory or overlapping, can it be databased and
+</I>&gt;<i> which contradiction is the primary?  Hopefully, annotation of localities
+</I>&gt;<i> could be straightforward as in your example.
+</I>&gt;<i>
+</I>&gt;<i> Chuck
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Taxacom Mailing List
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom</A>
+</I>&gt;<i> The Taxacom Archive back to 1992 may be searched at:
+</I>&gt;<i> <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+</I>&gt;<i>
+</I>&gt;<i> Celebrating 27 years of Taxacom in 2014.
+</I>&gt;<i>
+</I>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="127599.html">[Taxacom] Chameleons, GBIF, and the Red List
+</A></li>
+	<LI>Next message: <A HREF="127590.html">[Taxacom] Chameleons, GBIF, and the Red List
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#127595">[ date ]</a>
+              <a href="thread.html#127595">[ thread ]</a>
+              <a href="subject.html#127595">[ subject ]</a>
+              <a href="author.html#127595">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

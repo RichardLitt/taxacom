@@ -1,0 +1,239 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Taxacom: Management of "unnecessary" names in databases
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2022-November/136406.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Taxacom: Management of "unnecessary" names in databases</H1>
+    <B data-pagefind-meta="author">Tony Rees</B>
+    tonyrees49 at gmail.com<BR>
+    <I data-pagefind-meta="date">Mon Nov 28 12:58:56 CST 2022</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="136405.html">Taxacom: old journals
+</A></li>
+        <LI>Next message: <A HREF="136407.html">Taxacom: Old journals
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#136406">[ date ]</a>
+              <a href="thread.html#136406">[ thread ]</a>
+              <a href="subject.html#136406">[ subject ]</a>
+              <a href="author.html#136406">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2022</span><!--beginarticle-->
+<PRE>OK, I can see a potential complexity here, that in general I have thus far
+avoided, but could come up in future.
+
+In my biodiversity informatics &quot;world view&quot;, a name instance (name as
+published in a certain work by a certain author, with year) initially
+exists once only in my system, either at the rank it was published, or at
+the rank as used in the particular later taxonomic treatment being followed
+if that is different, but the spelling of the name is unchanged (we are
+talking about zoology only here; in botany, changes in rank are accompanied
+by a change in authorship so we thus have a different &quot;name&quot; in such
+cases). So let's consider a hypothetical name in zoology proposed as a
+subgenus (B-us) of a genus (A-us). In my present treatment, I ignore the
+subgeneric rank so just have B-us (with author+year) as &quot;unaccepted&quot; at
+genus rank, represented as a synonym of A-us for taxonomic purposes (since
+that is where the type species of B-us is placed). Later, if B-us is
+upgraded to be an accepted genus, then its status changes but its rank
+remains the same (since I entered it at genus rank in the first place).
+
+Suppose, however, that in this particular sector of IRMNG, I or some later
+editor decide that it would be useful to include subgenera, for example as
+a means to further divide otherwise very large genera. So now, I am
+guessing, I would need 2 entries for B-us: one as an unaccepted genus, and
+one as an accepted subgenus. similarly, I would need a second entry for
+A-us as another accepted subgenus (I am thinking that possibly WoRMS may do
+this already, not sure). So my concept of &quot;name instance&quot; would have to be
+enlarged to encompass &quot;name plus author plus year plus rank&quot;, whereas at
+present, rank is not invoked in my concept.
+
+So you are asking, in the hypothetical example described above, if at some
+point A-us as subgenus becomes redundant (while A-us as genus does not),
+should it be kept on the system? I am thinking it would probably become
+deprecated - i.e. remain on the system at that rank, but not displayed to
+public users, for 3 reasons: first, and old record pointing to this name
+could be redirected elsewhere (to whatever is its current equivalent);
+second, someone with relevant edit privileges could still find it (to know
+it was once entered, and avoid ever creating it again if needed); and
+third, if the redundancy was ever removed (new taxonomic decision, or
+record deprecated in error), the name instance could be revived on the
+system without difficulty.
+
+Maybe this does answer your question now (or again, maybe not!).
+
+Regards - Tony
+
+Tony Rees, New South Wales, Australia
+<A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fabout.me%2FTonyRees&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C081f59530a26405ff4e108dad172a112%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638052587526447095%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=%2Bz%2BKDiNw7MICBUroIoQd%2FROL46wib6sNG%2BKQ2dFgyyU%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fabout.me%2FTonyRees&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C081f59530a26405ff4e108dad172a112%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638052587526447095%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=%2Bz%2BKDiNw7MICBUroIoQd%2FROL46wib6sNG%2BKQ2dFgyyU%3D&amp;amp;reserved=0</A>
+<A HREF="https://nam10.safelinks.protection.outlook.com/?url=http%3A%2F%2Fwww.irmng.org%2F&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C081f59530a26405ff4e108dad172a112%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638052587526447095%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=fjoXgEpcpqklf9MJHGWyiIpgdYjqZCoCmK5ydlSwB3A%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=http%3A%2F%2Fwww.irmng.org%2F&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C081f59530a26405ff4e108dad172a112%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638052587526447095%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=fjoXgEpcpqklf9MJHGWyiIpgdYjqZCoCmK5ydlSwB3A%3D&amp;amp;reserved=0</A>
+
+
+On Tue, 29 Nov 2022 at 04:46, Tony Rees &lt;tonyrees49 at gmail.com&gt; wrote:
+
+&gt; My practice (in IRMNG, data structure is similar to WoRMS) has not
+&gt; involved ranks between the strict Linnean ones very much (i.e. subfamilies,
+&gt; superfamilies, etc.), however sometimes a family is demoted to a subfamily,
+&gt; an order to a suborder, etc. In these cases I keep the formerly used name
+&gt; instance, at its former rank, but synonymise it with whatever the current
+&gt; equivalent would be, based on the current placement of the type [genus],
+&gt; and add a note regarding the current status; for genera that have become
+&gt; subgenera, the same, based upon the current placement of the type species.
+&gt; Actually genera (in zoology only) are a special case, in that all proposed
+&gt; genera and subgenera belong to the &quot;genus group&quot; and (where available) can
+&gt; be used at either rank according to the preference of later workers; so
+&gt; while IRMNG does not invoke zoological subgenera in its taxonomic
+&gt; classification (at this time, anyway), these names are all entered
+&gt; regardless of original proposed rank, however only those currently used as
+&gt; valid genera are treated as accepted names [at genus level], the ones
+&gt; currently valid only at subgenus (no change in spelling or authorship
+&gt; involved) are treated as unaccepted and synonyms of their containing genus
+&gt; (again, according to the current placement of their type species). So in
+&gt; these cases a particular name (subgenus or genus) would only be held once
+&gt; in IRMNG, at this time only, and its treatment could shift according to
+&gt; future taxonomic actions (or recently proposed ones not yet caught up with).
+&gt;
+&gt; For ranks higher than genus e.g. family &lt;&gt; subfamily, as you say typically
+&gt; the spelling of the name would change (e.g. ...idae vs. ...inae in zoology)
+&gt; but since IRMNG does not aim to be comprehensive at ranks higher than
+&gt; genus, normally the ''inae&quot; forms (subfamilies) would not be entered,
+&gt; although the database structure will accept them if a future editor wishes
+&gt; to do so for a particular group (and, do it consistently I guess). Some
+&gt; order names (and above) do become sub-ranks without a change in spelling,
+&gt; however; also in some cases to date I have included intermediate ranks
+&gt; (subclasses, occasionally infraclasses, a few suborders) in the IRMNG
+&gt; taxonomic tree where it seems helpful and is an established practice, such
+&gt; as in Mammalia (e.g. see
+&gt; <A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.irmng.org%2Faphia.php%3Fp%3Dtaxdetails%26id%3D11922423&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C081f59530a26405ff4e108dad172a112%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638052587526447095%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=rCn5zBqsVraZGzVfAMx5ZLR%2BzhG%2F4Kfle4eNuLlU1nw%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.irmng.org%2Faphia.php%3Fp%3Dtaxdetails%26id%3D11922423&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C081f59530a26405ff4e108dad172a112%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638052587526447095%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=rCn5zBqsVraZGzVfAMx5ZLR%2BzhG%2F4Kfle4eNuLlU1nw%3D&amp;amp;reserved=0</A> for subclass
+&gt; Theria), so the practice of omitting subordinate ranks is not immutable.
+&gt;
+&gt; Hope this helps, maybe it does not!
+&gt;
+&gt; Regards - Tony
+&gt;
+&gt; Tony Rees, New South Wales, Australia
+&gt; <A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fabout.me%2FTonyRees&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C081f59530a26405ff4e108dad172a112%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638052587526447095%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=%2Bz%2BKDiNw7MICBUroIoQd%2FROL46wib6sNG%2BKQ2dFgyyU%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fabout.me%2FTonyRees&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C081f59530a26405ff4e108dad172a112%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638052587526447095%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=%2Bz%2BKDiNw7MICBUroIoQd%2FROL46wib6sNG%2BKQ2dFgyyU%3D&amp;amp;reserved=0</A>
+&gt;
+&gt;
+&gt; On Tue, 22 Nov 2022 at 02:36, Scott Thomson via Taxacom &lt;
+&gt; taxacom at lists.ku.edu&gt; wrote:
+&gt;
+&gt;&gt; I keep them but make them redirect to the now used name thats relevant.
+&gt;&gt; This way if someone searches for the term they still find the relevant
+&gt;&gt; valid name.
+&gt;&gt;
+&gt;&gt; It's kind of a combination of keeping the data in case things change and
+&gt;&gt; considering all possibilities for end user usage.
+&gt;&gt;
+&gt;&gt; Cheers Scott
+&gt;&gt;
+&gt;&gt;
+&gt;&gt;
+&gt;&gt; On Mon, Nov 21, 2022, 9:23 AM Carlos Alberto Mart?nez Mu?oz via Taxacom &lt;
+&gt;&gt; taxacom at lists.ku.edu&gt; wrote:
+&gt;&gt;
+&gt;&gt; &gt; Dear Taxacomers,
+&gt;&gt; &gt; Sometimes it happens that scientific names at a given superrank or
+&gt;&gt; subrank
+&gt;&gt; &gt; are subsumed into each other. For a pair of two names, this often means
+&gt;&gt; &gt; that the only remaining name becomes &quot;unnecessary&quot; as it contributes
+&gt;&gt; &gt; nothing to the classification.
+&gt;&gt; &gt; For example, in a family with two subfamilies, one subfamily is
+&gt;&gt; considered
+&gt;&gt; &gt; to be nested within the other and therefore synonymized. The result is
+&gt;&gt; one
+&gt;&gt; &gt; family with one subfamily, the latter being now &quot;unnecessary&quot; from the
+&gt;&gt; &gt; classification point of view.
+&gt;&gt; &gt;
+&gt;&gt; &gt; Sometimes it happens that a subordinal name is elevated to order,
+&gt;&gt; including
+&gt;&gt; &gt; a slightly different ending. No new suborders are proposed. The old
+&gt;&gt; &gt; suborder name is now &quot;unnecessary&quot; for the classification.
+&gt;&gt; &gt;
+&gt;&gt; &gt; How are you handling these &quot;unnecessary&quot; names in your databases? Do you
+&gt;&gt; &gt; keep them in the backend but make them invisible in the frontend? Do you
+&gt;&gt; &gt; tag them with some qualifier or status? Do you delete them? Something
+&gt;&gt; else?
+&gt;&gt; &gt;
+&gt;&gt; &gt; Kind regards,
+&gt;&gt; &gt; Carlos
+&gt;&gt; &gt;
+&gt;&gt; &gt; Carlos A. Mart?nez Mu?oz
+&gt;&gt; &gt; Myriatrix &lt;
+&gt;&gt; &gt;
+&gt;&gt; <A HREF="https://nam10.safelinks.protection.outlook.com/?url=http%3A%2F%2Fmyriatrix.myspecies.info%2F&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C081f59530a26405ff4e108dad172a112%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638052587526447095%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=ixxFm7wp9IX1wCklDu4bybzUjJTaeWekP%2BIgj7eRRjw%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=http%3A%2F%2Fmyriatrix.myspecies.info%2F&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C081f59530a26405ff4e108dad172a112%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638052587526447095%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=ixxFm7wp9IX1wCklDu4bybzUjJTaeWekP%2BIgj7eRRjw%3D&amp;amp;reserved=0</A>
+&gt;&gt; &gt; &gt;
+&gt;&gt; &gt; ResearchGate profile
+&gt;&gt; &gt; &lt;
+&gt;&gt; &gt;
+&gt;&gt; <A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.researchgate.net%2Fprofile%2FCarlos_Martinez-Munoz&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C081f59530a26405ff4e108dad172a112%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638052587526447095%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=vdfZvTSMDviLmF116UzT%2FeWwym2sPSLZQ%2F7ZnKr%2Fy9s%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.researchgate.net%2Fprofile%2FCarlos_Martinez-Munoz&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C081f59530a26405ff4e108dad172a112%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638052587526447095%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=vdfZvTSMDviLmF116UzT%2FeWwym2sPSLZQ%2F7ZnKr%2Fy9s%3D&amp;amp;reserved=0</A>
+&gt;&gt; &gt; &gt;
+&gt;&gt; &gt; Myriapod Morphology and Evolution
+&gt;&gt; &gt; &lt;
+&gt;&gt; &gt;
+&gt;&gt; <A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.facebook.com%2Fgroups%2F205802113162102%2F&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C081f59530a26405ff4e108dad172a112%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638052587526447095%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=KcJSEKGgE0ckt7SFTjpfGflFAx7ZVIZ46fa1y2m1LL0%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.facebook.com%2Fgroups%2F205802113162102%2F&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C081f59530a26405ff4e108dad172a112%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638052587526447095%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=KcJSEKGgE0ckt7SFTjpfGflFAx7ZVIZ46fa1y2m1LL0%3D&amp;amp;reserved=0</A>
+&gt;&gt; &gt; &gt;
+&gt;&gt; &gt; _______________________________________________
+&gt;&gt; &gt; Taxacom Mailing List
+&gt;&gt; &gt;
+&gt;&gt; &gt; Send Taxacom mailing list submissions to: taxacom at lists.ku.edu
+&gt;&gt; &gt; For list information; to subscribe or unsubscribe, visit:
+&gt;&gt; &gt; <A HREF="https://lists.ku.edu/listinfo/taxacom">https://lists.ku.edu/listinfo/taxacom</A>
+&gt;&gt; &gt; You can reach the person managing the list at:
+&gt;&gt; taxacom-owner at lists.ku.edu
+&gt;&gt; &gt; The Taxacom email archive back to 1992 can be searched at:
+&gt;&gt; &gt;
+&gt;&gt; <A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Ftaxacom.markmail.org%2F&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C081f59530a26405ff4e108dad172a112%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638052587526447095%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=PbtTvE63VhmqbN4Cq9gkKqUS2joDLEz0bBz20zfi87k%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Ftaxacom.markmail.org%2F&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C081f59530a26405ff4e108dad172a112%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638052587526447095%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=PbtTvE63VhmqbN4Cq9gkKqUS2joDLEz0bBz20zfi87k%3D&amp;amp;reserved=0</A>
+&gt;&gt; &gt;
+&gt;&gt; &gt; Nurturing nuance while assailing ambiguity and admiring alliteration for
+&gt;&gt; &gt; about 35 years, 1987-2022.
+&gt;&gt; &gt;
+&gt;&gt; _______________________________________________
+&gt;&gt; Taxacom Mailing List
+&gt;&gt;
+&gt;&gt; Send Taxacom mailing list submissions to: taxacom at lists.ku.edu
+&gt;&gt; For list information; to subscribe or unsubscribe, visit:
+&gt;&gt; <A HREF="https://lists.ku.edu/listinfo/taxacom">https://lists.ku.edu/listinfo/taxacom</A>
+&gt;&gt; You can reach the person managing the list at: taxacom-owner at lists.ku.edu
+&gt;&gt; The Taxacom email archive back to 1992 can be searched at:
+&gt;&gt; <A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Ftaxacom.markmail.org%2F&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C081f59530a26405ff4e108dad172a112%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638052587526447095%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=PbtTvE63VhmqbN4Cq9gkKqUS2joDLEz0bBz20zfi87k%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Ftaxacom.markmail.org%2F&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C081f59530a26405ff4e108dad172a112%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638052587526447095%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=PbtTvE63VhmqbN4Cq9gkKqUS2joDLEz0bBz20zfi87k%3D&amp;amp;reserved=0</A>
+&gt;&gt;
+&gt;&gt; Nurturing nuance while assailing ambiguity and admiring alliteration for
+&gt;&gt; about 35 years, 1987-2022.
+&gt;&gt;
+&gt;
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="136405.html">Taxacom: old journals
+</A></li>
+        <LI>Next message: <A HREF="136407.html">Taxacom: Old journals
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#136406">[ date ]</a>
+              <a href="thread.html#136406">[ thread ]</a>
+              <a href="subject.html#136406">[ subject ]</a>
+              <a href="author.html#136406">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

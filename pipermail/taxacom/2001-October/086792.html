@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Numbers for critter names
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2001-October/086792.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Numbers for critter names</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at BISHOPMUSEUM.ORG<BR>
+    <I data-pagefind-meta="date">Thu Oct 11 08:59:45 CDT 2001</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="086771.html">RECORD!!!!
+</A></li>
+        <LI>Next message: <A HREF="086793.html">critter names
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#086792">[ date ]</a>
+              <a href="thread.html#086792">[ thread ]</a>
+              <a href="subject.html#086792">[ subject ]</a>
+              <a href="author.html#086792">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2001</span><!--beginarticle-->
+<PRE>Ron Gatrelle wrote:
+
+&gt; Number 4481 is Phyciodes tharos and 4482 Phyciodes batesii.  Today we know
+&gt; that one of the synonyms he listed under tharos (cocyta) is
+&gt; actually a full
+&gt; species. It can not be given the number 4482 as that number is already
+&gt; taken.  Thus it has no whole number and can have no whole number in a
+&gt; sequence that would indicate its relativity to tharos or batesii.
+&gt;  The next
+&gt; available number is 11234.  It can be given 4481.1 but then why not 4482.1
+&gt; if the number is to relay something of relationship?  Would not 4481 and
+&gt; 4481.1 and 4482 go against logic and form?  Why should some species be
+&gt; listed as whole numbers and others by decimal points?  Hodges simply gave
+&gt; the numbers as a list sequence for the list given.  If he had intended it
+&gt; as a &quot;system&quot; then each genus should have been assigned a unique number
+&gt; with X number of zeros to allow for plenty of additions.  As I
+&gt; said, I find
+&gt; his numbers pointless.
+
+Perhaps the reason you find them pointless is that you want them to convey
+some sort of meaning, or contain some sort of information. However, if I'm
+not mistaken, Doug's point about assigning numbers to taxa was about the
+issue of uniqueness and constancy.  The two problems with using binomials
+(or even monomial names of rank higher than species) as unique identifiers
+for taxon names are that: 1) Names are not constant, due to generic
+reassignment, alterations of species epithets for gender matching, etc.; and
+2) Names are not universally unique, due to homonymy and potential dual
+usage at different ranks, and between botanical and zoological codes.
+
+We humans can usually discern the meaning of any given taxon name in spite
+of these two problems, because we can interpret the context (which may be
+subtle at times).  A computer (a tool that taxonomists use with increasing
+frequency, and one which holds great promise for more efficient
+identification and documentation of species and specimens) would need a LOT
+of AI-type programming to be able to discern the context as well as a human
+can, so for the most part, computers are better-off with a unique and
+constant &quot;handle&quot; (identifier, or &quot;Primary Key&quot;) for each taxon name.
+
+One approach is to use complex primary keys; that is, the combination of
+Taxon Name plus Authorship plus year plus page number etc., taken together,
+for the most part constitute a unique identifier for a particular name.  As
+a database programmer, however, I can testify to the technical difficulties
+in taking this approach.
+
+Another approach is to erect a &quot;Surrogate Key&quot;, usually an integer, to
+assign to each Taxon Name.  These numbers neither change, nor are
+duplicated. The trick to using these numbers effectively is to rob them of
+*ANY* meaning whatsoever. If Hodges numbers were assigned in a particular
+sequence for the purpose of conveying information (e.g. establishing a sort
+order of species), then it would not represent an effective Surrogate Key.
+If, on the other hand, the numbers just happen to be in some sort of
+sequence because that's the order they were initially assigned, then the
+case of Phyciodes cocyta is a no-brainer -- it gets the number 11234 and
+that's the end of it.
+
+I don't know Hodges' intent in assigning these numbers, but I have learned
+from my own database experience that assigning Primary Key numbers in
+sequence (even with no intent of conveying meaning) leads to the problem of
+users *assuming* there is some sort of meaning to the sequence. Largely for
+this reason, I now exclusively assign random numbers to each new entry, so
+that nobody has any illusions about extracting information from the numbers
+themselves.
+
+This is all very basic stuff for anyone who has built a robust database
+system involving taxonomic nomenclature.  Most database systems hide the
+surrogate key number, so the user never even knows that it exists. In my
+opinion, that's the way it should be. The numbers should not be printed in
+catalogs, or used commonly in the literature. No human should ever have to
+write one down or type it into a computer, because an incredibly trivial
+transposition or other error in the number could lead to an incredibly major
+point of confusion for taxonomists (&quot;What was a water buffalo doing 200 feet
+down on a coral reef?&quot;). Also, as Ron pointed out in a later post, numbers
+are not as easy for humans to work with and learn and memorize as names are.
+Computers, on the other hand, LOVE numbers.  They rarely make such
+transposition errors, so they have no difficulty managing such numbers. Many
+(most?) existing databases of taxon names already have such numbers, and use
+them very effectively (i.e., without the user ever knowing that it exists).
+
+The problem is that each database system assigns its own set of numbers to
+every taxon name.  Bill Eschmeyer's Catalog of fish names uses one number
+for each species name. FishBase uses another.  Species 2000 probably uses
+another, Specify probably uses another, ITIS probably uses yet another, my
+own database system uses yet another still....and so on.  The problem, of
+course, comes when trying to link these databases to each other.  In many
+cases, we can create &quot;synonymies&quot; of the different numbering systems.  While
+marginally more effective than maintaining synonymies of the names
+themselves, this approach is still cumbersome, and needs to be mapped and
+maintained by someone as each individual database systems grow.  Another
+approach is to link different sets to each other using the aforementioned
+complex key (Name, Author, Year, Page, etc.).  This is not an effective way
+to do it either for many reasons, for example one database records the
+author as &quot;Smith &amp; Jones&quot;, and another records it as &quot;Smith and Jones&quot;, and
+yet another may record it as &quot;Smith, Jones&quot;, or &quot;Smith et Jones&quot;.....
+
+The value of an &quot;established&quot;, &quot;centralized&quot; numbering system is that all of
+the databases could use the same number. This makes the task of linking
+different systems ENORMOUSLY easier.  Attempts have been made in the past to
+create such numbering systems, but most (all?) seem to have failed for
+various reasons (lack of adoption, falling into the trap of trying to convey
+information within the number, narrowly restricted taxonomic scope, etc.).
+
+In this electronic age, the field of taxonomy could benefit tremendously by
+the establishment of &quot;registration numbers&quot; for taxon names. So far, the
+taxonomic community as a whole seems to have rejected the idea.  And so we
+continue to stumble on, wrestling with the same old problems....
+
+Aloha,
+Rich
+
+P.S. Ron later wrote:
+
+&gt; IF I did a check list I
+&gt; would assign a base number for each genus etc.  In a computer file, all
+&gt; world genera known and unknown would have to have a base number asigned or
+&gt; available. 10000 = genus A, 10001 genus species, 10001.1 genus species
+&gt; subspecies. Permanency by uniformity  -- which was what Doug was actually
+&gt; dirrecting us to -- not numbers for the sake of numbers.
+
+This is where we seem to disagree.  In my opinion, a computer's unique
+&quot;handle&quot; on a taxon name should convey zero meaning. If you want to erect
+some kind of sorting system, do that independently of the primary key. I
+think that a large part of the reason that many previous efforts to
+establish &quot;universal&quot; numbers for taxa is that they tried to convey meaning
+within the numbers themselves (as you outline above).  If you want to use
+this sort of system in a phylogenetic sorting field, then great (I use an
+analagous system for my sorting field). But keep the unique and constant
+identifiers arbitrary.
+
+
+Richard L. Pyle
+Ichthyology, Bishop Museum
+1525 Bernice St., Honolulu, HI 96817
+Ph: (808)848-4115, Fax: (808)847-8252
+email: deepreef at bishopmuseum.org
+<A HREF="http://www.bishopmuseum.org/bishop/HBS/pylerichard.html">http://www.bishopmuseum.org/bishop/HBS/pylerichard.html</A>
+&quot;The views expressed are the author's, and not necessarily those of Bishop
+Museum.&quot;
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="086771.html">RECORD!!!!
+</A></li>
+        <LI>Next message: <A HREF="086793.html">critter names
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#086792">[ date ]</a>
+              <a href="thread.html#086792">[ thread ]</a>
+              <a href="subject.html#086792">[ subject ]</a>
+              <a href="author.html#086792">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

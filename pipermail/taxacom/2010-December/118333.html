@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Estimation in GPS positioning
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2010-December/118333.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Estimation in GPS positioning</H1>
+    <B data-pagefind-meta="author">Dusty</B>
+    dlmcdonald at alaska.edu<BR>
+    <I data-pagefind-meta="date">Mon Dec  6 06:41:59 CST 2010</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="118332.html">[Taxacom] Estimation in GPS positioning
+</A></li>
+        <LI>Next message: <A HREF="118334.html">[Taxacom]  Other estimation
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#118333">[ date ]</a>
+              <a href="thread.html#118333">[ thread ]</a>
+              <a href="subject.html#118333">[ subject ]</a>
+              <a href="author.html#118333">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2010</span><!--beginarticle-->
+<PRE>I apparently failed completely at communicating what I was trying to
+communicate. I even drew a picture....
+
+To steal your population analogy, the population of Alaska is knowable. Say
+it's 698473. You are rounding off to 700000. That's OK, if a little strange.
+Then you are explicitly adding error that does not encompass the true value
+- say 700000 +/- 1000. That's very much not OK. You can round all you want,
+but you must increase your error estimates accordingly.
+
+&gt;From another message...
+*I'm glad you're Google Maps images are so nicely georegistered. By GPS'ing
+landmarks, I find that Google satellite images in my field area in NW
+Tasmania are as much as 20 m out of register with the ground. I'm also glad
+that both you and Dusty do your fieldwork around mailboxes and apartments in
+town. Mine's down in more challenging conditions of topography, access to
+satellites. I sometimes have to wait 5 minutes to get a GPS reading under
+forest cover, and with a large accuracy declaration. Sometimes the unit says
+'Weak signal. Are you indoors?'*
+
+Yes, most of my field work happens around mailboxes. Except the part about
+flying around Alaska, where my GPS continues to fail to kill me despite the
+mountains, trees, clouds, and it being a known instrument of pure evil. In
+fact, GPS continually fails to kill several hundred other pilots who land on
+it several hundred times per day. It's almost like it's a mature technology
+or something. And I'm sure Google, what with it's limited budget and
+propensity for closed-mindedness, has indeed mucked up mapping the entire
+southern hemisphere, and the mistake can not possibly be in some later
+misunderstanding of how technology meets reality...
+
+-D
+
+On Sat, Dec 4, 2010 at 1:50 PM, Bob Mesibov &lt;mesibov at southcom.com.au&gt; wrote:
+
+&gt; Hi, Dusty.
+&gt;
+&gt; Here's a simple example: the estimated population of Alaska is 698473 +/-
+&gt; 1000 people. What I've just said is that the true population of Alaska is
+&gt; estimated to be between 697473 and 699473. I have *not* said that the
+&gt; population is 698473.
+&gt;
+&gt; The statement looks a little funny because the population is given to the
+&gt; nearest person, but there is a 1000-person uncertainty in the estimate. The
+&gt; standard practice in dealing with significant figures is for the estimate to
+&gt; agree with the uncertainty, so I'll round off: 698000 +/- 1000. I have *not*
+&gt; just said that the population is 698000.
+&gt;
+&gt; There is no difference between these two estimates. I have not moved the
+&gt; population of Alaska from 698473 to 698000. I have not created a new
+&gt; population figure.
+&gt;
+&gt; When you write a lat/long +/- an uncertainty, you are not specifying a
+&gt; point, you are specifying a data space within which the true position
+&gt; exists. Sometimes this space is represented by a circle; I sometimes do this
+&gt; in GIS. The estimate is not the circle, it is the set of possible positions
+&gt; within that circle.
+&gt;
+&gt; You cannot, as you seem to have done in your last post, treat possible
+&gt; positions within the estimate as real, and compare them. It is just as
+&gt; likely that a rounded-off position will be closer to the true position than
+&gt; the non-rounded-off position, as for the rounded-off position to be further
+&gt; away. We have no idea what is happening within the estimate.
+&gt;
+&gt; It's different with statistical estimates. 698473 +/- 1000 might be a
+&gt; sample mean +/- average deviation, in which case we know something about the
+&gt; likely distribution of population samples. We *do not know this* for single
+&gt; GPS readings, which are not means.
+&gt;
+&gt; I hope this clarifies for you the use of uncertainty in GPS positioning. If
+&gt; you want to argue that an ordinary handheld GPS unit is more accurate and
+&gt; has less uncertainty than the manufacturer and all the GPS user guides are
+&gt; claiming, then I suggest you test that idea in a range of situations and
+&gt; publish your results, so that the GPS manuals and GPS user guides can be
+&gt; revised.
+&gt; --
+&gt; Dr Robert Mesibov
+&gt; Honorary Research Associate
+&gt; Queen Victoria Museum and Art Gallery, and
+&gt; School of Zoology, University of Tasmania
+&gt; Home contact: PO Box 101, Penguin, Tasmania, Australia 7316
+&gt; Ph: (03) 64371195; 61 3 64371195
+&gt; Webpage: <A HREF="http://www.qvmag.tas.gov.au/?articleID=570">http://www.qvmag.tas.gov.au/?articleID=570</A>
+&gt;
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="118332.html">[Taxacom] Estimation in GPS positioning
+</A></li>
+        <LI>Next message: <A HREF="118334.html">[Taxacom]  Other estimation
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#118333">[ date ]</a>
+              <a href="thread.html#118333">[ thread ]</a>
+              <a href="subject.html#118333">[ subject ]</a>
+              <a href="author.html#118333">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

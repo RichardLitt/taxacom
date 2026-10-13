@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Ebbe Nielsen Challenge submission
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2018-September/132510.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Ebbe Nielsen Challenge submission</H1>
+    <B data-pagefind-meta="author">Paul J. Morris</B>
+    mole at morris.net<BR>
+    <I data-pagefind-meta="date">Fri Sep  7 10:37:54 CDT 2018</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="132509.html">[Taxacom] Ebbe Nielsen Challenge submission
+</A></li>
+        <LI>Next message: <A HREF="132511.html">[Taxacom] Requesting a 1989 paper on Czech braconids
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#132510">[ date ]</a>
+              <a href="thread.html#132510">[ thread ]</a>
+              <a href="subject.html#132510">[ subject ]</a>
+              <a href="author.html#132510">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2018</span><!--beginarticle-->
+<PRE>On Fri, 7 Sep 2018 08:38:46 -0400
+&quot;Shorthouse, David&quot; &lt;davidpshorthouse at gmail.com&gt; wrote:
+&gt; In theory, a mass collecting
+&gt; machine and a mass identification machine could have an ORCID or other
+&gt; identifier
+
+There is currently one entry in the Harvard List of Botanists for a software agent ( <A HREF="http://purl.oclc.org/net/edu.harvard.huh/guid/uuid/1f9d72fd-c9bf-45c6-bca0-7fe2dcc0da5f">http://purl.oclc.org/net/edu.harvard.huh/guid/uuid/1f9d72fd-c9bf-45c6-bca0-7fe2dcc0da5f</A> ), this one happens to be a software agent that created database records rather than made collections or determinations, but no changes would need to be made to the schema to add a software agent that made determinations and link it to determinations as any other botanist.
+
+&gt; such that if we had the desire to, we could differentiate
+&gt; human vs. machine instead of attempting to do this via strings of text
+&gt; as we do now 
+
+The rdf representation of entries in the Harvard List of Botanists uses foaf, and in the absence of a specific foaf type for software the software agent is typed as a foaf:Agent (in distinction to the other records which are typed as foaf:Person, foaf:Group, or foaf:Organization), so something would still need to be added to answer the competency question &quot;select all occurrences identified by a software agent&quot;.
+
+&gt;Are the Darwin Core terms
+&gt;identifiedBy and recordedBy appropriate? 
+
+If the definitions were extended to include software agents, then
+dwciri:identifiedBy and dwciri:recordedBy would seem entirely
+appropriate to carry the identifiers of software agents that are
+determiners, observers, or collectors. See:
+<A HREF="http://rs.tdwg.org/dwc/terms/guides/rdf/index.htm#3.7_dwc:_namespace_terms_that_have_analogues_in_the_dwciri:_name">http://rs.tdwg.org/dwc/terms/guides/rdf/index.htm#3.7_dwc:_namespace_terms_that_have_analogues_in_the_dwciri:_name</A>
+
+
+-Paul
+-- 
+Paul J. Morris
+Biodiversity Informatics Manager
+Museum of Comparative Zoölogy, Harvard University
+mole at morris.net  AA3SD  PGP public key available
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="132509.html">[Taxacom] Ebbe Nielsen Challenge submission
+</A></li>
+        <LI>Next message: <A HREF="132511.html">[Taxacom] Requesting a 1989 paper on Czech braconids
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#132510">[ date ]</a>
+              <a href="thread.html#132510">[ thread ]</a>
+              <a href="subject.html#132510">[ subject ]</a>
+              <a href="author.html#132510">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

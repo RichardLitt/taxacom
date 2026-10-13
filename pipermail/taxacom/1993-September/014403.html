@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> The NCBI Taxonomy Project
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1993-September/014403.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">The NCBI Taxonomy Project</H1>
+    <B data-pagefind-meta="author">Scott Federhen</B>
+    federhen at WISP.NLM.NIH.GOV<BR>
+    <I data-pagefind-meta="date">Thu Sep 30 11:41:26 CDT 1993</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="097555.html">Summmary of IBC voting...
+</A></li>
+        <LI>Next message: <A HREF="050195.html">The NCBI Taxonomy Project
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#014403">[ date ]</a>
+              <a href="thread.html#014403">[ thread ]</a>
+              <a href="subject.html#014403">[ subject ]</a>
+              <a href="author.html#014403">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1993</span><!--beginarticle-->
+<PRE>                    The NCBI Taxonomy Project
+
+The purpose of this note is threefold:
+
+(1) to outline the taxonomy project that we have been working on at the
+    NCBI for the past year,
+(2) to solicit volunteers from the taxonomic and phylogenetic communities
+    (to help curate the taxonomy) and from the users of the sequence
+    databases (to help in identifying problems with the taxonomy), and
+(3) to establish contact with culture collections, stock centers, herbaria
+    &amp; museums, and any other groups that are maintaining general and/or
+    specialty taxonomies and/or phylogenies.
+
+The problems with taxonomies used by the sequence databases are well-known:
+each of database comes with its own taxonomy; each is different from the
+others, and none of them are in full agreement with the current taxonomic
+consensus (even if we could imagine that such a thing existed), and all of
+them contain a wide variety of different kinds of errors and inconsistencies.
+At an even more basic level, it is not always possible (even within the same
+database) to determine if two entries come from the same species.
+
+We have developed a taxonomy database management tool (the TaxMan) which is
+based on a tree-structured database appliction developer's tool (the TreeTool).
+This tool includes a rich set of functions for merging &amp; crossmapping trees.
+We have used the TaxMan to build representations of each of the sequence
+database taxonomies, as well as a few other taxonomies obtained from other
+sources (the ICTV international standard taxonomy for the viruses, the USDA
+taxonomy for the plants, and the FlyBase taxonomy for the Drosophilidae).
+We have used the TaxMan to merge all of these taxonomies into a single tree,
+which we can associate with the database that we are maintaining which merges
+all of the sequence databases into a single structure.
+
+After we had merged the sequence database taxonomies, a workshop was
+organized by Mitch Sogin, of the Marine Biological Laboratory at Woods Hole
+in order to review and revise the taxonomy and to discuss mechanisms by
+which the taxonomic community could maintain the taxonomy (as new species
+enter the databases and as the taxonomic consensus develops). This workshop
+included a dozen representatives, each specializing in different branches
+of the taxonomic tree, and included both classical and molecular systematists.
+The revised 'backbone' tree will be much more of a phylogenetic taxonomy
+than a classical taxonomy; we feel that this will be of more general
+use to the users to the molecular sequence databases.
+
+The nucleic acid sequence database collaborators (EMBL and DDBJ) have agreed,
+in principle, to adopt the revised taxonomy as a database standard.
+
+We realize that for any given taxonomy there will be at most one person in
+the world who is completely happy with it. Although we need a single 'backbone'
+tree to associate with the sequence databases (and we will try to make this
+tree as good as possible) we do not want to claim that our tree is the
+canonical international standard taxonomy. We plan to develop the TaxMan to
+make it easy for concerned users to modify the 'backbone' taxonomy as they see
+fit, crossmap their personal tree back onto the 'backbone' taxonomy, and index
+the sequence databases through their own tree.
+
+For example, we have promoted the Archaea to kingdom level, alongside the
+Eubacteria and the Eucaryotae. Others may wish to use the traditional
+classification (with the Archaea and the Eubacteria buried in the Procaryotae)
+or other modern reclassifications (e.g. the Eocytes). As another example,
+we plan to move the birds (Aves) beneath the Archosauria, as a sister group
+to the Crocodylia.
+
+As a consequence of this approach, since we are moving towards a phylogenetic
+taxonomy instead of a classical taxonomy, the classical concept of taxonomic
+rank names (e.g. family, order &amp; etc.) disappears. In the revision of the
+protozoan taxonomy which we have recieved, the familiar rank-level suffixes
+(-idae, -ida, -iformes, etc.) have been replaced with the generic suffix
+(-ids). We will, however, retain the other names (like Kinetoplastida,
+Trypanosomatidae &amp; etc.) as synonyms in the tree, so that users may continue
+to retrieve the same set of organisms with these names.
+
+There are several consequences for the database users &amp; submitters. First,
+we plan to formalize the use of organism names in the database - to collect
+all of the variant spellings, synonyms and misspellings and to select a
+preferred scientific name for each organism. Second, we plan to phase in
+(and retrofit the databases with) new taxonomic classification lines from
+the revised tree as the subtrees are returned by the workshop participants.
+And finally, each of these fields may change in new releases of existing
+entries in the databases, as new synonyms and misspellings are identified in
+organism names and as the taxonomy is revised to reflect new work in the field.
+Submitters who wish to associate different names and taxonomic classification
+lines with their entries will be allowed to enter this information in a /note
+attached to the source feature in the flatfile format.
+
+We have added a directory to our anonymous ftp site (ncbi.nlm.nih.gov,
+a.k.a. 130.14.25.1) to make available files associated with this project.
+In the directory &quot;repository/taxonomies/taxman&quot; you will find:
+
+  id (15Mb) - the ASN.1 text formatted version of the merged taxonomy
+  id.bin (7Mb) - the ASN.1 binary formatted version of the merged taxonomy
+
+  id.report.ps - a text-file report of the merged taxonomy (375 pages)
+  id.report.index.ps - a text-file index to accompany id.report (139 pages)
+  manual.ps - the first half of a user's manual for the taxman
+
+  taxman - the Sun executable file for the taxman program
+
+Please send comments, criticisms &amp; suggestions to federhen at ncbi.nlm.nih.gov
+
+It will be a long project to clean up the taxonomy and to retrofit the
+sequence databases, but we hope that with the help of the several communities
+involved, we will be able to add a very powerful, uniform &amp; useful set of
+tools for retrieving and manipulating the information in the sequence
+databases.
+
+Scott federhen at ncbi.nlm.nih.gov
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="097555.html">Summmary of IBC voting...
+</A></li>
+        <LI>Next message: <A HREF="050195.html">The NCBI Taxonomy Project
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#014403">[ date ]</a>
+              <a href="thread.html#014403">[ thread ]</a>
+              <a href="subject.html#014403">[ subject ]</a>
+              <a href="author.html#014403">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

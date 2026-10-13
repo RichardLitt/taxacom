@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] formation of zoological names with Mc, Mac, etc.
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2009-August/113775.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] formation of zoological names with Mc, Mac, etc.</H1>
+    <B data-pagefind-meta="author">Doug Yanega</B>
+    dyanega at ucr.edu<BR>
+    <I data-pagefind-meta="date">Mon Aug 31 16:37:54 CDT 2009</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="113774.html">[Taxacom] Is it possible to create easy-to-use,
+	accurate and rapid keys for	species identifiation?
+</A></li>
+        <LI>Next message: <A HREF="113777.html">[Taxacom] source of quote about keys
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#113775">[ date ]</a>
+              <a href="thread.html#113775">[ thread ]</a>
+              <a href="subject.html#113775">[ subject ]</a>
+              <a href="author.html#113775">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2009</span><!--beginarticle-->
+<PRE>Assuming I'm following this correctly, I may be able to expand a 
+little on a point Rich was making about surrogate keys:
+
+&gt;We should use HUMAN IDENTIFERS when interacting with Humans.  The
+&gt;opaque/obscure/surrogate identifiers only exist to serve the needs of
+&gt;computer databases, and as such should be optimized for use by computer
+&gt;databases.  No human should ever see one (I am guilty of violating this in
+&gt;exposing ZooBank identifiers in human interfaces -- and this was a VERY
+&gt;tough decision for me to make -- but I did it only because the
+&gt;bioinformatics community and its relationship to unique identifiers is not
+&gt;yet mature, so I reluctantly exposed them for the time being until such time
+&gt;as the community matures a bit more on this). CERTAINLY, no human should
+&gt;ever type one into a computer (this applies to ZooBank identifiers, even
+&gt;when exposed to human eyeballs).
+&gt;
+&gt;&gt;  So
+&gt;&gt;  I am asking myself if surrogate keys can combine elements of
+&gt;&gt;  natural keys, in a way that each databaser and taxonomist
+&gt;&gt;  would be able to create them easily without involving the
+&gt;&gt;  time consuming process of consulting a central source. For
+&gt;&gt;  that I would need to understand better where exactly you draw
+&gt;&gt;  the line between a natural and a surrogate key.
+&gt;
+&gt;Fair enough.  My database credentials are not hard-core enough to know
+&gt;exactly where to draw that line.  You can see what Wikipedia says about it
+&gt;here:
+&gt;<A HREF="http://en.wikipedia.org/wiki/Surrogate_key">http://en.wikipedia.org/wiki/Surrogate_key</A>
+&gt;
+&gt;I guess I lean more towards the first of the two presented definitions; but
+&gt;I still maintain that they should be visible only to the application, and
+&gt;(in most cases) not to the user. The points I am trying to make are embedded
+&gt;in the bulleted list of points at the bottom of the &quot;Definition&quot; section of
+&gt;the Wikipedia page.  The only part I'm a little fuzzy on is whether the
+&gt;identifier should be visible to an application.  Certainly I think they
+&gt;should be -- but I don't think they should be visible to humans (except the
+&gt;database developers themselves, and as embedded in URLs and such).
+
+Using Wikipedia itself as an example, the distinction Rich is making 
+here is that of using disambiguated hyperlinks for any references to 
+&quot;The Italian Job&quot; within Wikipedia, rather than having to specify the 
+year in any given citation. That is, in Wikipedia, you can have two 
+text strings, even side-by-side, that refer to &quot;The Italian Job&quot;, but 
+if one is hyperlinked to the original movie, and the other is 
+hyperlinked to the re-make, they look identical to a human but will 
+act differently when one clicks on them (they are different to the 
+machine). The question is whether one can have a machine look at a 
+text string and *decide* which link should be used, rather than 
+having a human *tell* it (a &quot;time consuming process&quot;); this is the 
+crux of Francisco's point:
+
+&gt;  &gt; I imagine this could be superior to a system in which the two
+&gt;&gt;  involved partners needed to consult a central source to find
+&gt;  &gt; the globally used identifiers for the 20,000 names.
+
+If you can *fully* automate the linkage of the &quot;invisible&quot; GUIDs to 
+the visible names in both lists, then the &quot;consultation&quot; could be 
+over and done in a matter of seconds. While *full* automation may be 
+unattainable, one can certainly imagine that such a process can be 
+*largely* automated, because names as a whole are *largely* unique 
+and therefore most would not require disambiguation (e.g., if I have 
+&quot;Danaus plexippus&quot; in one list and &quot;D. plexippus L.&quot; in another, 
+these should both be automatically cross-referenced to the same 
+GUID). Realistically, the way this sort of thing would be likely to 
+work is that the software would perform whatever linkages it could, 
+and indicate which names could not be resolved given the information 
+on hand (and therefore require human intervention and clarification). 
+This would still be an immense improvement over having humans go 
+name-by-name, and gets back to Rich's response about the GNA and GNI:
+
+&gt;If the Global Names Architecture (GNA) delivers on what the crafters of it
+&gt;intend it to deliver, then there will be a single set of opaque, globally
+&gt;unique, computer-friendly, human-unfriendly identifiers that can be
+&gt;replicated across all database systems.  In this sense, it is not
+&gt;&quot;centralized&quot;; but rather &quot;coordinated&quot;.
+[snip]
+&gt;The permanent, shared, unique persistent identifiers will emerge from the
+&gt;Global Names Usage Bank (GNUB; still in very early-stage development).  In
+&gt;my vision for the GNA, the GNI will serve as a conduit to help people with
+&gt;taxon-name databases to link into the shared GNUB identifiers.  Any given
+&gt;database would only need to go through this process once; afterwhich it
+&gt;would be immediately cross-linked to all other taxonomic databases that have
+&gt;gone through the same linking process.  In my view, *THIS* is how the
+&gt;world's biodiversity data will eventually get cross-linked together.
+
+Since I am one of those people with a taxon-name database (mine has 
+194,363 insect names to date, each linked to a surrogate key number), 
+I am eager to see how this system will develop, and hopeful that such 
+a thing will come to pass in the near future, to facilitate 
+communication among museums and taxonomists, among other benefits.
+
+Sincerely,
+-- 
+
+Doug Yanega        Dept. of Entomology         Entomology Research Museum
+Univ. of California, Riverside, CA 92521-0314        skype: dyanega
+phone: (951) 827-4315 (standard disclaimer: opinions are mine, not UCR's)
+              <A HREF="http://cache.ucr.edu/~heraty/yanega.html">http://cache.ucr.edu/~heraty/yanega.html</A>
+   &quot;There are some enterprises in which a careful disorderliness
+         is the true method&quot; - Herman Melville, Moby Dick, Chap. 82
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="113774.html">[Taxacom] Is it possible to create easy-to-use,
+	accurate and rapid keys for	species identifiation?
+</A></li>
+        <LI>Next message: <A HREF="113777.html">[Taxacom] source of quote about keys
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#113775">[ date ]</a>
+              <a href="thread.html#113775">[ thread ]</a>
+              <a href="subject.html#113775">[ subject ]</a>
+              <a href="author.html#113775">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

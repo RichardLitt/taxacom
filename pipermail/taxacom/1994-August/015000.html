@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Images in INTKEY
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1994-August/015000.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Images in INTKEY</H1>
+    <B data-pagefind-meta="author">Mike Dallwitz</B>
+    miked at ENTO.CSIRO.AU<BR>
+    <I data-pagefind-meta="date">Fri Aug 12 11:22:36 CDT 1994</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="098156.html">Special Competition in Systematic Biology
+</A></li>
+        <LI>Next message: <A HREF="050792.html">Images in INTKEY
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#015000">[ date ]</a>
+              <a href="thread.html#015000">[ thread ]</a>
+              <a href="subject.html#015000">[ subject ]</a>
+              <a href="author.html#015000">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1994</span><!--beginarticle-->
+<PRE>                                                                 12 August 1994
+
+
+
+I have sent this reply to the list because it may be of general interest.
+
+&gt; Subject: HELP: displaying images in INTKEY
+&gt;
+&gt; Images get out of shape when they are displayed on the screen. They are 480
+&gt; pixels high. What do I have to do?
+&gt;
+&gt; From: Theo Pannen &lt;t.pannen at PEGASUS.PING.DE&gt;
+
+There are two possible causes.
+
+(1) When the MS-DOS version of INTKEY displays an image, it sets the lowest-
+resolution and lowest-colour graphics mode that will accommodate the image. One
+of the 256-colour modes on a standard VGA card has a resolution of 360x480
+pixels. Because the aspect ratio of a screen is 4:3, the pixels in this mode
+are rectangular rather than square. Early versions of INTKEY selected this mode
+for any 256-colour image with dimensions less than or equal to 360x480. If the
+image was intended for display with square pixels, it would be stretched
+horizontally when displayed in this mode. The solution was to avoid images with
+such dimensions (easily done by filling images with blank space to 640x480).
+However, we decided that display modes below 640x480 were not really useful,
+and they were excluded from Version 3.08, 17 November 1993 (see CHANGES.1ST).
+Thus, this is no longer a problem in the current version (3.13). The MS-Windows
+version of INTKEY, soon to be released, has scaling and scrolling of images, so
+images of any size can be displayed.
+
+(2) Many monitors do not automatically maintain the aspect ratio of the display
+area when the display mode is changed - manual controls must be used. Better-
+quality monitors can save the appropriate settings for each mode, and restore
+them automatically when the mode changes. This problem is alleviated when using
+MS-Windows, as Windows applications do not change the display mode (changing
+the mode requires restarting Windows). However, running full-screen DOS
+sessions from Windows still causes a mode change.
+
+Although the Windows INTKEY will display any image while running in standard
+VGA mode, the quality will generally be sub-optimal for all except black-and-
+white images. This is because Windows uses a fixed palette of 16 colours in
+this mode (and in other 16 colour modes); that is, the palette is not optimized
+for the display of any given image. (Also, the quality of black-and-white
+images is intrisically poor in low-resolution modes; we recommend the use of 16
+grey levels for line drawings.)
+
+For good performance and image quality, we recommend a local-bus Super VGA
+display card with Windows accelerator and at least 32768 colours at 800x600 or
+1024x768 resolution. The display should be non-interlaced. When evaluating a
+card and monitor, ask to see Windows running in non-interlaced mode with the
+number of colours and resolution that you require. An interlaced display
+shimmers, and narrow, dark lines appear to separate the horizontal scan lines.
+Sales people are often unaware that special actions may be necessary to make a
+card work in non-interlaced mode at high resolutions. Simply using Windows
+Setup to change from a low-resolution to a high-resolution mode may result in
+the use of an interlaced mode, even though a non-interlaced mode of the same
+resolution is available on the card.
+
+Software for editing bitmap images makes heavy demands on memory and processing
+power, and images can require large amounts of disk space. So if you are
+preparing images (not just viewing them), the following configuration is
+suggested as the minimum desirable on IBM-compatible PC's. Motherboard with 486
+66MHz CPU and local bus (VESA or similar), 16MB RAM, local-bus Super VGA
+display card with Windows accelerator and at least 32768 colours at 800x600
+(including Windows drivers), high-resolution monitor (equivalent to NEC 5FG or
+better), 400 MB hard disk. A high-speed, high-capacity tape drive is also very
+desirable. DDS (DAT) tapes have a capacity of 2GB, and are small and cheap,
+although the drives are fairly expensive - currently about AU$1500. Compatible
+drives are made by several manufacturers.
+
+Mike Dallwitz                                  Internet md at ento.csiro.au
+CSIRO Division of Entomology                   Fax +61 6 246 4000
+GPO Box 1700, Canberra ACT 2601, Australia     Phone +61 6 246 4075
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="098156.html">Special Competition in Systematic Biology
+</A></li>
+        <LI>Next message: <A HREF="050792.html">Images in INTKEY
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#015000">[ date ]</a>
+              <a href="thread.html#015000">[ thread ]</a>
+              <a href="subject.html#015000">[ subject ]</a>
+              <a href="author.html#015000">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

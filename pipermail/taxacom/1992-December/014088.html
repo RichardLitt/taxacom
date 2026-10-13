@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> UNIDATA
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=UNIDATA&In-Reply-To=50495.brp%40mailserver.nhm.ic.ac.uk">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   
+   <LINK REL="Next"  HREF="049880.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1992-December/014088.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">UNIDATA</H1>
+    <B data-pagefind-meta="author">Jim Beach</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=UNIDATA&In-Reply-To=50495.brp%40mailserver.nhm.ic.ac.uk"
+       TITLE="UNIDATA">beach at HUH.HARVARD.EDU
+       </A><BR>
+    <I data-pagefind-meta="date">Tue Dec  1 10:43:03 CST 1992</I>
+    <P><UL data-pagefind-ignore>
+        
+        <LI>Next message: <A HREF="049880.html">UNIDATA
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#14088">[ date ]</a>
+              <a href="thread.html#14088">[ thread ]</a>
+              <a href="subject.html#14088">[ subject ]</a>
+              <a href="author.html#14088">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>1992</span><!--beginarticle-->
+<PRE>&gt;<i> Hi folks,
+</I>&gt;<i>
+</I>&gt;<i> Have any of you any experience with UNIDATA? Our Palaeontology Department,
+</I>&gt;<i> have recently switched from an in-house database to the commercially
+</I>&gt;<i> available UNIDATA. This is currently being reviewed for use throughout the
+</I>&gt;<i> Natural History Museum here in London. I'd appreciate any comments about
+</I>&gt;<i> UNIDATA's performance and networking abilities please.
+</I>&gt;<i>
+</I>&gt;<i> Brian
+</I>&gt;<i> Brian Pitkin
+</I>&gt;<i> Department of Entomology
+</I>&gt;<i> The Natural History Museum
+</I>&gt;<i> Cromwell Road
+</I>&gt;<i> LONDON SW7 5BD
+</I>&gt;<i>
+</I>&gt;<i> INTERNET  b.pitkin%<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">nhm.ic.ac.uk at nsfnet-relay.ac.uk</A>
+</I>
+
+Brian,
+
+The basic problem with Pick-based databases like UNIDATA is that Pick
+derives its strength from non-relational data structures which make Pick a
+jewel of a system for database developers.  It really comes into its glory
+when data are significantly de-normalized in the data files in order to make
+application development relatively easy and quick.
+
+It is a favorite development environment of consultants because prototype
+and production systems can be engineered realtively quickly.  But personally
+I consider Pick and its derivitives (such as Advanced Revelation) to be the
+cocaine of scientific computing.
+
+What you give up is medium and long-term flexibilty for client/server
+computing architectures and systems.  Only Pick code runs against a Pick
+database.  You won't have any flexibility for third-party report generator
+front-ends or QBE front ends, Windows front ends, etc.  You'll be married
+(and monogamous) to UNIDATA for a long, long time.
+
+For vertical markets like Doctors' and Dentists' offices it can be just the
+ticket - why should they care about data modelling, entity cardinality
+relationships, and taking advantange of relational operators and servers?
+
+Scientific computing is another matter, it involves community information
+models, data quality and integrity issues, severe human resource
+constraints (in the case of most museum departments), and the need to
+adopt a database computing strategy which will allow for medium and long
+term flexibility in order to take advantage of new software products (in
+this case database front-ends and servers).
+
+Unidata, Pick, and Advanced Revelation are very specialized database
+environments which are usually implemented in very non-relational, very
+de-normalized designs.
+
+I am going to copy your query and this response to the Taxacom mailing list
+in the hope of generating some additional responses and perspectives.
+
+
+Jim
+
+
+--
+
+James H. Beach                                      <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">beach at huh.harvard.edu</A>
+Museum of Comparative Zoology,                      Tel: (617) 495-1912
+Herbaria, Arnold Arboretum                          Fax: (617) 495-9484
+22 Divinity Avenue
+Harvard University
+Cambridge, MA 02138, USA
+
+
+
+
+
+
+
+--
+
+James H. Beach                                      <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">beach at huh.harvard.edu</A>
+Museum of Comparative Zoology,                      Tel: (617) 495-1912
+Herbaria, Arnold Arboretum                          Fax: (617) 495-9484
+22 Divinity Avenue
+Harvard University
+Cambridge, MA 02138, USA
+
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="049880.html">UNIDATA
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#14088">[ date ]</a>
+              <a href="thread.html#14088">[ thread ]</a>
+              <a href="subject.html#14088">[ subject ]</a>
+              <a href="author.html#14088">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

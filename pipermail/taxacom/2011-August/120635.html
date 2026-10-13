@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] cladistics (was: clique analysis in textbooks)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2011-August/120635.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] cladistics (was: clique analysis in textbooks)</H1>
+    <B data-pagefind-meta="author">Sergio Vargas</B>
+    sevragorgia at gmail.com<BR>
+    <I data-pagefind-meta="date">Thu Aug 18 15:05:30 CDT 2011</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="120634.html">[Taxacom] cladistics (was: clique analysis in textbooks)
+</A></li>
+        <LI>Next message: <A HREF="120636.html">[Taxacom] cladistics (was: clique analysis in textbooks)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#120635">[ date ]</a>
+              <a href="thread.html#120635">[ thread ]</a>
+              <a href="subject.html#120635">[ subject ]</a>
+              <a href="author.html#120635">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2011</span><!--beginarticle-->
+<PRE>Servus,
+
+I've noticed some interesting points, made a day ago, one day too late:
+
+ &gt;I am not tied to any particular analysis. I've used parsimony because 
+it's widely accepted readily accessible and presents a straightforward 
+clustering procedure (with &gt;caveats). In principle I would be happy to 
+use three-item analysis, although right now I do not have access to a 
+program to do that.
+
+I'm not sure one could/should call Maximum Parsimony (MP), or Maximum 
+Likelihood (ML) and derivatives, clustering procedures. There are many 
+fundamental differences between a clustering algorithm and what 
+tree-search algorithms do. I would accept Neighbour Joining (NJ) to be 
+called a clustering algorithm because this method actually produces a 
+cluster based on a (overall) similarity index calculated for pairs of 
+taxa. MP and ML do not work this way. In a NJ analysis the tree space is 
+never searched because the leaves of the tree are clustered together 
+using the NJ criterion whereas in a MP or ML analysis the algorithm 
+actively searches the tree space to find the best tree (best not equal 
+to the true tree). This means that each new tree is evaluated to check 
+whether it is a new best hit. The leaves of the tree are never clustered 
+together, using a pair-wise measure of similarity NJ-style, during the 
+analysis. In this respect MP and ML are not clustering techniques even 
+though they produce a cluster-like graph as output.
+
+ &gt;Don't understand what is meant about how the retained data set will 
+mechanically change without biological reasons with respect to larger or 
+narrower ingroup.
+
+say you want to evaluate the relationships of the following taxa, 
+((Chimp,Human,Gorilla,Orang),Monkeys=Outgroup).
+
+What Pierre is pointing out is that if you constraint your data matrix 
+in a way that only characters that appear to be &quot;shared derived&quot; in the 
+ingroup are used for the analysis, the data matrix (lets call it A) you 
+end up using is (necessarily) a proper subset of a bigger matrix (lets 
+call it B) composed by the characters matching your pre-selection 
+criterion + the character not matching it. After the analysis of matrix 
+A you find ((((Orang,Human),Gorilla),Chimp),Outgroup) as the MP tree, so 
+far so good.
+
+But say you now want to evaluate the relationships of 
+((Chimp,Human,Gorilla,Orang,Monkeys),Whatever_appropriate_taxa=Outgroup). It 
+is very likely that applying the same pre-selection method, viz. only 
+shared derived characters in the ingroup will be included, you will end 
+up having a matrix (say C) that is either very similar to B or is B 
+itself, but either way must include A too because the way you pre-select 
+your characters. After the analysis, you find that the new MP topology 
+is (((((Chimp,Human),Gorilla),Orang),Monkeys),Outgroup). This happens 
+simply because of your pre-selection criterion, has no biological basis, 
+and would not have happened if you had included all characters from the 
+very beginning. I would add is sufficient to reject the pre-selection 
+criterion ad portas and refute the results obtained using it as 
+logically inconsistent.
+
+ &gt;Where this is done to include all characters, whether or not they are 
+restricted to the ingroup, to my mind results in an analysis of overall 
+similarity rather than &gt;cladistic derivation.
+
+I think the use of &quot;overall similarity&quot; here is misleading because it 
+sound as if MP and NJ are exactly the same, and they are not (see also 
+above). The overall similarity John Grehan is referring to, seems to be 
+NJ-like, that is: character vectors are compared pair-wise without 
+reference to other character vector during this comparison, and the more 
+similar taxa are grouped together. MP analysis does not work this way. 
+In a MP analysis the total cost of a transformation series is 
+effectively determined by the entire set of characters with the larger 
+set of congruent characters dominating the analysis (and topology), and 
+setting a higher total cost for non-congruent transformation series. The 
+analysis of all characters is only the analysis of overall similarity if 
+one uses a method that does this, as I have said before in this thread, 
+the method of analysis can be phenetic not the character matrix. The 
+character optimizations resulting from the analysis of a non-preselected 
+character matrix using MP are &quot;cladistic derivation&quot; not overall similarity.
+
+cheers
+
+sergio
+
+
+-- 
+Sergio Vargas R., M.Sc.
+Dept. of Earth&amp;  Environmental Sciences
+Palaeontology&amp;  Geobiology
+Ludwig-Maximilians-Universit?t M?nchen
+Richard-Wagner-Str. 10
+80333 M?nchen
+Germany
+tel. +49 89 2180 17929
+s.vargas at lrz.uni-muenchen.de
+sevra at marinemolecularevolution.org
+
+check my webpage:
+<A HREF="http://www.marinemolecularevolution.org">http://www.marinemolecularevolution.org</A>
+
+check my research ID:
+<A HREF="http://www.researcherid.com/rid/A-5678-2011">http://www.researcherid.com/rid/A-5678-2011</A>
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="120634.html">[Taxacom] cladistics (was: clique analysis in textbooks)
+</A></li>
+        <LI>Next message: <A HREF="120636.html">[Taxacom] cladistics (was: clique analysis in textbooks)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#120635">[ date ]</a>
+              <a href="thread.html#120635">[ thread ]</a>
+              <a href="subject.html#120635">[ subject ]</a>
+              <a href="author.html#120635">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,229 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> software for distribution-maps
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2002-December/089487.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">software for distribution-maps</H1>
+    <B data-pagefind-meta="author">Gerald R. Noonan</B>
+    carabid at MPM.EDU<BR>
+    <I data-pagefind-meta="date">Mon Dec  2 11:10:45 CST 2002</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="089485.html">software for distribution-maps
+</A></li>
+        <LI>Next message: <A HREF="089489.html">Areas.
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#089487">[ date ]</a>
+              <a href="thread.html#089487">[ thread ]</a>
+              <a href="subject.html#089487">[ subject ]</a>
+              <a href="author.html#089487">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2002</span><!--beginarticle-->
+<PRE>        I am in the process of completing final editing revisions on my 92
+page manuscript that reviews the use of GIS technology by entomologists. The
+manuscript includes more than 400 references, has a detailed section about
+the different types of data available, including much free data, and has an
+appendix that describes GIS programs used by entomologists.  When the
+article is published, I'll post a notice to Taxacom. It will soon be
+submitted to the new electronic publication series of the Milwaukee Public
+Museum Contributions in Biology and Geology.
+
+        If at all possible you should probably try to get a full-fledged GIS
+programs such as ArcView. Such a program is relatively easy to learn as
+regards simple functions such as making maps. If later you decide to do GIS
+based biogeographic or ecological analyses, you will already be familiar
+with basic functions of the GIS program.
+        Data used in GIS programs are typically into different formats,
+raster and vector data. In the vector data format geographic features are
+delineated by points, lines or curves (ordered series of points), and areas.
+Polygons or areas For example, a road or political boundary is a line. A
+major advantage of vector format data is that it can be used to produce
+attractive looking maps that closely resemble hand drawn maps.
+
+In the raster data format geographic objects are defined by a grid-cell data
+structure with the geographic area divided into cells identified by row and
+column. Each grid cell is referenced by a unique coordinate system. The size
+of the cells is selected according to the data accuracy and the resolution
+needed by the user.  In raster data, a point is represented by an individual
+cell. A linear feature such as a road consists of a linear series of cells
+with the same value. A polygon comprises a region of cells with the same
+value. Raster format data are best for certain types of advanced GIS based
+analyses. They usually do not to as good a job of producing maps with a
+linear feature such as political boundaries, collecting sites, continental
+boundaries, boundaries of lakes, etc.
+
+For your work in making maps I think you want to be sure that whatever
+program you select does a very good job of handling vector data. Products
+made by ESRI are heavily used by people in the natural sciences. I have made
+extensive use of ArcView for several years including using it to produce
+maps. Below I have pasted in  sections from an appendix in my manuscript
+that provides information about major GIS programs used by entomologists.
+The three sections pasted in below provide information about ArcInfo and
+ArcView, GRASS and MapInfo. I haven't used GIS programs other than ArcView
+and Atlas GIS (Atlas GIS was purchased by ESRI and is being phased out). The
+information below about GRASS and MapInfo is from reviews of the software
+and from company Web sites.
+        If you are at a larger institution that has an information services
+or computer department, you might want to check to be sure that your
+institution doesn't already have site licenses for one or more GIS programs.
+If you decide to purchase a commercial GIS program, I would recommend
+ArcView because it's easy to learn and heavily used by people in the natural
+sciences. ESRI has a very attractive K-12 package for schools and nonprofit
+organizations (such as museums) in the United States. I don't know for
+program extends to other countries. Of course the free GRASS program has a
+price that can be beat. I'm not sure how easy it is without program to
+produce high-quality maps -- perhaps some users of GRASS could comment.
+        There are other mainline GIS programs but they seem to mainly
+concentrate on handling raster data and probably would not be the best
+choice for your needs. Good luck with your work.
+
+
+
+ArcInfo and ArcView
+Current version: 8.2, with version 8.3 to be soon released.
+Software Platforms: Microsoft Windows (NT 4.0 [with Service Pack 6a], 2000
+or XP [Home Edition and Professional]; ArcInfo Workstation can also run on a
+variety of UNIX platforms.
+Company: ESRI. <A HREF="http://www.esri.com/.">http://www.esri.com/.</A>
+Description: ArcInfo and ArcView were formerly separate programs with
+different inter-faces. The release of version 8.1 of ArcGIS provided a
+common graphics interface for these programs and ArcEditor on Windows-based
+desktop computers. ArcView is now the base program in the ArcGIS line. It
+provides basic GIS functions such as the ability to map or visualize spatial
+data, to perform queries and analyses, to inte-grate different types of
+data, and to create and edit spatial data. ArcEditor has all the
+functionality of ArcView and adds the power to edit features in a multi-user
+geoda-tabase. ArcInfo has all the functionality of the previous two modules
+along with ad-vanced geoprocessing and data conversion capabilities. ArcInfo
+Workstation has the classic user interface of ArcInfo and operates on
+Windows NT, Windows 2000, and several UNIX platforms. All three modules are
+vector-based programs. The Spatial Analyst extension provides a broad range
+of tools for creating, querying, mapping, and analyzing cell based raster
+data. Eleven additional extensions provide enhanced features for all three
+of the programs.
+
+
+GRASS
+Current version: GRASS 5.0.
+Platforms: DEC-Alpha; HP-UX; Linux; Mac OS X; Silicon Graphics Irix; Sun
+Solaris; Windows NT/2000/XP (using Cygwin tools).
+Company: GRASS was developed by the U.S. Army Construction Engineering
+Research laboratories (USA-CERL, 1982-1995), a branch of the U.S. Army Corp
+of Engi-neers. It is free software released under GNU General Public License
+(GPL) and is undergoing continuous improvement through a multinational team
+of developers. The official GRASS homepage is at
+<A HREF="http://hgeo02.geog.uni-hannover.de/grass/.">http://hgeo02.geog.uni-hannover.de/grass/.</A> The Internet site
+<A HREF="http://www.helsinki.fi/~jzniemin/gis.html">http://www.helsinki.fi/~jzniemin/gis.html</A> has many GRASS associated links.
+Description: GRASS has raster, topological vector, image processing, and
+graphics abili-ties. All analyses and modeling are done with raster maps.
+Utilities make it easy to convert from one data format to another. GRASS
+operates on various platforms through a graphical user interface and shell
+in X-Windows. It is one of the few full-featured GIS programs available for
+Macintosh computers (open source code at
+<A HREF="http://grass.ibiblio.org/grass5/binary/mac_os_x/;">http://grass.ibiblio.org/grass5/binary/mac_os_x/;</A> commercial version at
+<A HREF="http://www.openosx.com/grass/).">http://www.openosx.com/grass/).</A>
+
+
+
+MapInfo
+Current version: 7.0.
+Platforms: Microsoft Windows (XP [Professional and Home], 2000, NT (+ SP6),
+Win-dows 98).
+Company: MapInfo. <A HREF="http://www.mapinfo.com/.">http://www.mapinfo.com/.</A>
+Description: This moderately powerful vector based GIS program can also
+display raster data. It offers a relatively easy to use mapping package and
+some analytical exten-sions. MapInfo is seen outside the GIS community as a
+mainstream business tool for analyzing and displaying data. Information for
+this description is from the company's Web site and reviews by Barr (2001a,
+2001b) and Carlson et al. (2001).
+
+Gerald R. Noonan Ph.D.
+Curator of Insects
+Milwaukee Public Museum
+800 West Wells Street
+Milwaukee WI 53233
+e-mail: carabid at mpm.edu
+office telephone: (414) 278-2762
+fax: (414) 278-6100
+WWW homepage: <A HREF="http://www.mpm.edu/collect/gary.html">http://www.mpm.edu/collect/gary.html</A>
+
+
+-----Original Message-----
+From: Torbj?rn Tyler [mailto:Torbjorn.Tyler at SYSBOT.LU.SE]
+Sent: Friday, November 29, 2002 2:34 AM
+To: TAXACOM at USOBI.ORG
+Subject: software for distribution-maps
+
+
+Hi!
+
+Is there anyone out there who know about any compter program (for PC or Mac)
+that is particularily useful in constructing distribution-maps? I am used to
+doing this by scanning a suitable background-map and drawing dots on it by a
+conventional drawing program. When I have geographical coordinates (which is
+far from always the case) I have tried to use a calculation program to make
+a scatter-plot with dots that can be superimposed on my scanned map, but
+this only works on a map-projection with right angels (i.e. assuming a flat
+earth)...
+
+How do people make distribution-map these days?  I guess there are many
+different practices but I would be interested in knowing them all because I
+plan to draw some 1000 maps in the near future...
+
+Torbj?rn Tyler
+
+-------------------------------------------------------------------
+
+Torbj?rn Tyler   /  Projekt Sk?nes Flora
+
+Department of Ecology
+Systematic Botany
+Ecology Building
+S?lvegatan 37
+SE-223 62 Lund
+
+tel. +(0)46-222 09 10
+fax + (0)46-222 44 23
+e-mail: torbjorn.tyler at sysbot.lu.se
+
+Private address: Bredgatan 12B, SE-243 32 H??r (=Hoeoer), tel.
++(0)413-23123.
+___________________________________________________________________
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="089485.html">software for distribution-maps
+</A></li>
+        <LI>Next message: <A HREF="089489.html">Areas.
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#089487">[ date ]</a>
+              <a href="thread.html#089487">[ thread ]</a>
+              <a href="subject.html#089487">[ subject ]</a>
+              <a href="author.html#089487">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

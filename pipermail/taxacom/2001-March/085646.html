@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> XML, etc. [was Re: a grandiose but (hopefully) practical idea]
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2001-March/085646.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">XML, etc. [was Re: a grandiose but (hopefully) practical idea]</H1>
+    <B data-pagefind-meta="author">Doug Yanega</B>
+    dyanega at POP.UCR.EDU<BR>
+    <I data-pagefind-meta="date">Wed Mar 14 17:51:27 CST 2001</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="085645.html">Distribution information for Tiaris
+</A></li>
+        <LI>Next message: <A HREF="085649.html">Distribution information for Tiaris
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#085646">[ date ]</a>
+              <a href="thread.html#085646">[ thread ]</a>
+              <a href="subject.html#085646">[ subject ]</a>
+              <a href="author.html#085646">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2001</span><!--beginarticle-->
+<PRE>Time to wrap up some things from the first round of responses.
+
+First off, Bio-Auth is an officially dead mailing list, according to Peter
+Rauch, so (for the time being) I'll keep crossposting. I expect, however,
+to remove entomo-l from the list imminently, so those of you who might be
+interested in discussing electronic taxonomic authority files but aren't
+subscribed to either taxacom or nhcoll should sign up for one. The issue is
+definitely pertinent for taxonomists and for museum workers, both, but
+definitely not limited to entomology.
+
+On to some public comments:
+
+John VanDyk wrote:
+
+&gt;But seriously, the technology for data interchange is here now. All
+&gt;we have to do is agree on the proper XML format for exchange between
+&gt;disparate databases, make sure the databases can output in that
+&gt;format, and write a universal client. The barriers to this are
+&gt;political and financial, not technical.
+
+But those barriers are substantial, and exist NOW. I'm working on my
+&quot;insect genera of the world&quot; database NOW, and using state-of-the-art
+database software that CANNOT import or export in XML - and there are many
+people like myself. We can't all be expected to wait several years, nor all
+invest in new software. If you want community involvement in developing
+authority files, and refuse to have more than one standard format, then the
+standard for exchange has to be the LOWEST common denominator;
+tab-delimited text (evidently, some botanical sites use this; I haven't
+seen them) that follows the taxonomic hierarchy. The latter stipulation is
+important: a file which comes out in ITIS-style text format as
+
+165238 Colletes 272433
+138932 Caupolicana 156393
+62493 Colletidae 37822
+165883 Mourecotelles 272433
+274093 Diphaglossinae 62493
+154064 Crawfordapis 274093
+37822 Apoidea 25683
+156393 Caupolicana 274093
+272433 Colletinae 62493
+138465 Alayoapis 156393
+
+may be efficient, but it's VASTLY harder to decipher or import into many
+databases or a spreadsheet than the *exact* same data in a schema that
+explicitly gives the hierarchy for each taxon:
+
+Apoidea Colletidae Colletinae Colletes
+Apoidea Colletidae Colletinae Mourecotelles
+Apoidea Colletidae Diphaglossinae Crawfordapis
+Apoidea Colletidae Diphaglossinae Caupolicana (Caupolicana)
+Apoidea Colletidae Diphaglossinae Caupolicana (Alayoapis)
+
+See the difference? I'm not trying to badmouth XML (I'd agree with Curtis
+Clark that it rocks), and I think folks should continue to develop it, but
+the reality is that there are many people who will need to have authority
+files who may NEVER have software that works *with* XML. We can't just
+exclude these people, and tell them it's their tough luck. Someone needs to
+accommodate them today, not years from now; and a &quot;solution&quot; like the faux
+ITIS output above is not helpful, either. That's why I see direct
+file-swapping as the only practical answer: we can do it now, and it
+ensures that people get files in the manner which best suits their
+particular needs, something that the extant websites can't do. Again, I
+think sites like ITIS, the USOBI Specify server, TIARA, etc., are wonderful
+in principle (as are the many, many sites with searchable databases, and
+things starting up like GBIF), and a great foundation, but they leave too
+many potential users out in the cold as of *today*. I can't understand why
+no one ever seems to address the need for backwards and cross-platform
+compatibility.
+
+Salgueiro wrote:
+
+&gt;Is there not some pre-existent one which could acomodate this need, access
+&gt;to databases? Maybe here we're &quot;reinventing the wheel&quot; too.
+
+Apparently yes, but only if you have MS Access (which doesn't have a Mac
+version, thank you Bill Gates).
+
+&gt;If I'm downloading a database, I want some assurance it was assembled
+&gt;properly and that the information contained in it is trustworthy.
+
+This is an entirely different issue. If we insist on a high level of
+quality control, it's going to make it nearly impossible to accomplish
+anything; the taxonomic hierarchy is in constant flux, various experts on a
+single group don't agree, and people entering data CAN'T be compelled to
+follow a single idealized standard (however much we might wish otherwise).
+Given that we can't even guarantee trustworthiness of printed reference
+materials that go through peer review, we shouldn't expect to fare any
+better as we delve deeper into the electronic era. All forms of information
+exchange, INCLUDING printed, require the user to realize that error and
+incompleteness are always possible. Like they say in the X-Files, &quot;Trust no
+one&quot; (or, alternatively, _caveat emptor_).
+
+Jim Croft wrote:
+
+&gt;If we could come up with a standard that all our applications could deliver
+&gt;and accept, we would be in business.
+
+Text files can be delivered and accepted by all our applications.
+
+&gt;currency was invented for this purpose... a flat file of
+&gt;unstructured, undefined, non-standard data is not much use to
+&gt;anyone...  build it according to a commonly accepted schema and we can
+&gt;start to talk business.
+
+There *is* a commonly-accepted schema: it's called &quot;The Linnaean System&quot;.
+Supply authority data using that schema, as above, and that's your
+*minimal* acceptable form of &quot;currency&quot; (author names, etc. are gravy;
+ideally we want this info, but we can survive without it, if we must).
+Though, I suppose some people are trying to get us to abandon a ranked
+taxonomy, and then we in the museum business would be REALLY @&amp;*$%ed.
+
+J.W.A. Ridder-Numan wrote:
+
+&gt;GBIF will improve access to biodiversity data worldwide (both flora and
+&gt;fauna) through a kind of portal that will give universal access to
+&gt;information on biodiversity resources; so users will be able to search in
+&gt;all these databases.
+
+and Stan Blum gave three sites that already do this:
+
+&gt;Species Analyst (ZBIG): <A HREF="http://habanero.nhm.ukans.edu/TSA/">http://habanero.nhm.ukans.edu/TSA/</A>
+&gt;REMIB:  <A HREF="http://www.conabio.gob.mx/remib/remib.html">http://www.conabio.gob.mx/remib/remib.html</A>
+&gt;ENHSIN: <A HREF="http://www.nhm.ac.uk/science/rco/enhsin/">http://www.nhm.ac.uk/science/rco/enhsin/</A>
+&gt;
+&gt;Bottom line:  don't let changes in protocol deter you -- technology will
+&gt;always be in a state of flux.  We need to make (and keep) data capture and
+&gt;&quot;data publication&quot; among the top priorities in systematics.
+
+In case it wasn't clear: SEARCHING databases and generating on-screen
+reports is not the issue - for a taxonomist that might be enough in many
+cases, but for a museum person doing a specimen-based inventory or species
+list, the only practical approach to taxonomic authority data is to have
+the entire database on one's own computer, so taxonomic lookups can be
+*automated*. I can enter a species and my database automatically fills in
+all the hierarchical data up to order; but that procedure only works if I
+have the hierarchical data already on my computer, NOT if the data is on a
+website. I need authority file downloads.
+
+Don't get me wrong: I think folks have done some great things - but there's
+a lot yet to be done in making data *available* to everyone, and until
+something changes, I'm for file-swapping. Beats cutting and pasting from
+screen reports.
+
+Peace,
+
+
+Doug Yanega        Dept. of Entomology         Entomology Research Museum
+Univ. of California - Riverside, Riverside, CA 92521
+phone: (909) 787-4315 (standard disclaimer: opinions are mine, not UCR's)
+           <A HREF="http://entmuseum9.ucr.edu/staff/yanega.html">http://entmuseum9.ucr.edu/staff/yanega.html</A>
+  &quot;There are some enterprises in which a careful disorderliness
+        is the true method&quot; - Herman Melville, Moby Dick, Chap. 82
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="085645.html">Distribution information for Tiaris
+</A></li>
+        <LI>Next message: <A HREF="085649.html">Distribution information for Tiaris
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#085646">[ date ]</a>
+              <a href="thread.html#085646">[ thread ]</a>
+              <a href="subject.html#085646">[ subject ]</a>
+              <a href="author.html#085646">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

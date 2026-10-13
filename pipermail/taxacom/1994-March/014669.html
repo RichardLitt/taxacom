@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Not really a bug in MacClade 3.04
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1994-March/014669.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Not really a bug in MacClade 3.04</H1>
+    <B data-pagefind-meta="author">David Maddison</B>
+    dmaddsn at CCIT.ARIZONA.EDU<BR>
+    <I data-pagefind-meta="date">Thu Mar 17 16:03:55 CST 1994</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="097821.html">DELTA.  Comments and opinions continue to trickle in.
+</A></li>
+        <LI>Next message: <A HREF="050461.html">Not really a bug in MacClade 3.04
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#014669">[ date ]</a>
+              <a href="thread.html#014669">[ thread ]</a>
+              <a href="subject.html#014669">[ subject ]</a>
+              <a href="author.html#014669">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1994</span><!--beginarticle-->
+<PRE>A report was just posted about what was claimed to be a small bug
+in MacClade.  The behavior is as follows:
+
+Define state names as follows:
+
+state   name
+0       2
+1       1
+2       0
+
+There are two commands that control the display/interpretation of
+these things in MacClade's editor.  If &quot;interpret state names&quot;
+is turned on in the Entry Interpretation dialog box (see book p. 180),
+then any time MacClade attempts to interpret an entry (which
+can happen if, for example, one tabs between cells), it first checks
+to see if the entry is a state name.  E.g. if 2 is in the cell, then
+MacClade will interpret it as the state named &quot;2&quot;, that is, state 0.
+This gets messy if Display State Names is turned off, in which case
+a 2 displayed in a cell represents state number 2.  In this case,
+MacClade will alter the data as you move between cells.
+
+However, this is not really a bug.  In most circumstances (that is,
+whenever you don't name your states in this unusual way), this
+is the best way for MacClade to behave.  If anything, the problem is
+that MacClade doesn't police the user enough to check to see if
+they are doing something dangerous.
+
+There are three possible solutions:
+   1. don't give names to states that are equivalent to state symbols or
+numbers
+   2. If &quot;Display State Names&quot; is turned off, make sure that &quot;Interpret
+State Names&quot; is also turned off.  (We could change MacClade so that it
+polices you about this, and turns things on and off behind the scenes,
+but this gets messy in other areas.)
+   3. We could change MacClade so that it automatically scans your list
+of state names and warns you if a state name is identical to a
+state symbol or state number, and it gives a warning whenever there
+could be some messy situation (e.g. Display State Names is turned off,
+but Interpret State Names is turned on).  This we will do eventually;
+it is on the list of things to do.
+
+I apologize for the fact that this aspect of MacClade's behavior was
+not clear, and that the book did not provide adequate warning about this.
+
+We would appreciate it if users would contact us about apparent
+bugs in MacClade before posting it on the net, as we may be able to
+clarify the situation.  The appropriate e-mail address for this is
+
+           clade at arizona.edu
+
+(By the way, when we get our act together, there will be an offical
+MacClade gopher site and World Wide Web site, both of which will contain,
+among other things, the Offical Bug List, with all known bugs of MacClade
+3.0 and later.)
+
+
+
+
+
+===================================================================
+David R. Maddison                PHONE: (602) 621 9781
+Department of Entomology         FAX: (602) 621 1150
+University of Arizona            Internet: dmaddsn at ccit.arizona.edu
+Tucson, AZ   85721
+===================================================================
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="097821.html">DELTA.  Comments and opinions continue to trickle in.
+</A></li>
+        <LI>Next message: <A HREF="050461.html">Not really a bug in MacClade 3.04
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#014669">[ date ]</a>
+              <a href="thread.html#014669">[ thread ]</a>
+              <a href="subject.html#014669">[ subject ]</a>
+              <a href="author.html#014669">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

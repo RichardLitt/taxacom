@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Ungarbled version
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2001-October/086848.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Ungarbled version</H1>
+    <B data-pagefind-meta="author">Doug Yanega</B>
+    dyanega at POP.UCR.EDU<BR>
+    <I data-pagefind-meta="date">Tue Oct 16 22:55:43 CDT 2001</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="086843.html">More on Biogeographic memory
+</A></li>
+        <LI>Next message: <A HREF="086851.html">Ungarbled version
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#086848">[ date ]</a>
+              <a href="thread.html#086848">[ thread ]</a>
+              <a href="subject.html#086848">[ subject ]</a>
+              <a href="author.html#086848">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2001</span><!--beginarticle-->
+<PRE>I'll keep this brief: I think the more technical we get, the less
+interest people will have. Nonetheless, I still don't think that
+Richard's system allows for certain complexities of classifications.
+Take his example:
+
+&gt;  &gt; ASSERTION table
+&gt;&gt;  ID      Citation                Name    Parent
+&gt;&gt;  ----------------------------------------------
+&gt;&gt;  1       OrigDescr, 1999          b       A
+&gt;&gt;  2       X et al. 2000            b       C
+&gt;  &gt; 3       Y et al. 2000            b       D
+
+But go *beyond* that level of the hierarchy. It is not uncommon - and
+anyone who works routinely with classifications knows this - for a
+single author's definitive work to cover several ranks
+simultaneously, such that their circumscriptions are interdependent.
+Occasionally, then, when you have competing classifications, two
+authors may use the exact same named ranks, but define (circumscribe)
+each of them differently. If so, the format you give above will not
+preserve those relationships: it only relates child to parent, not
+child to *grandparent*, etc.
+
+In other words, if author X says
+
+species A is in genus B of subfamily C of family D
+species J is in genus K of subfamily C of family D
+
+and author Y says
+
+species A is in genus B of subfamily C (same name but entirely
+different circumscription) of family E
+species J is in genus K of subfamily L of family D
+
+the assertion table would be
+
+name   parent
+A       B
+B       C
+C       D
+C       E
+J       K
+K       C
+K       L
+L       D
+
+and the &quot;assertion table&quot; will not be able to reconstruct the fact
+that one should ONLY classify species A as belonging to family E *if*
+one defines C the way author Y does. Further, it isn't fair to list
+both D and E as parents to C, because in neither author's
+classification can species J be considered a member of family E (that
+is, not all children of C are grandchildren of E). Your designation
+of the &quot;preferred&quot; links certainly would help, but what happens when
+there are thrid and fourth and fifth authors' opinions that also use
+the same names in different ways? What would happen is you'd lose
+track of which authors' schemes grouped things which ways. This kind
+of thing does actually happen. I still do feel that you can't
+reconstruct a single author's phylogeny by giving simple lists of
+parent-child linkages, and a phylogeny is - in certain respects - a
+single specific hypothesis that one *would* want to represent
+faithfully.
+
+Peace,
+--
+
+Doug Yanega        Dept. of Entomology         Entomology Research Museum
+Univ. of California - Riverside, Riverside, CA 92521
+phone: (909) 787-4315 (standard disclaimer: opinions are mine, not UCR's)
+            <A HREF="http://entmuseum9.ucr.edu/staff/yanega.html">http://entmuseum9.ucr.edu/staff/yanega.html</A>
+   &quot;There are some enterprises in which a careful disorderliness
+         is the true method&quot; - Herman Melville, Moby Dick, Chap. 82
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="086843.html">More on Biogeographic memory
+</A></li>
+        <LI>Next message: <A HREF="086851.html">Ungarbled version
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#086848">[ date ]</a>
+              <a href="thread.html#086848">[ thread ]</a>
+              <a href="subject.html#086848">[ subject ]</a>
+              <a href="author.html#086848">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

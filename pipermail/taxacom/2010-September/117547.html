@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Propagation of bad sameAs statements
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Propagation%20of%20bad%20sameAs%20statements&In-Reply-To=%3CPine.LNX.4.64.1009071136470.7311%40linuxserver1.cs.umbc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="117545.html">
+   <LINK REL="Next"  HREF="117553.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2010-September/117547.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Propagation of bad sameAs statements</H1>
+    <B data-pagefind-meta="author">joel sachs</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Propagation%20of%20bad%20sameAs%20statements&In-Reply-To=%3CPine.LNX.4.64.1009071136470.7311%40linuxserver1.cs.umbc.edu%3E"
+       TITLE="[Taxacom] Propagation of bad sameAs statements">jsachs at csee.umbc.edu
+       </A><BR>
+    <I data-pagefind-meta="date">Wed Sep  8 09:42:45 CDT 2010</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="117545.html">[Taxacom] New CUIC website
+</A></li>
+        <LI>Next message: <A HREF="117553.html">[Taxacom] Propagation of bad sameAs statements
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#117547">[ date ]</a>
+              <a href="thread.html#117547">[ thread ]</a>
+              <a href="subject.html#117547">[ subject ]</a>
+              <a href="author.html#117547">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2010</span><!--beginarticle-->
+<PRE>I'd like to catalog sources of biodiversity information and misinformation 
+on the semantic web, and am trying to determine the genesis of some 
+unfortunate owl:sameAs statements.
+
+According to sameas.org:
+
+&lt;<A HREF="http://dbpedia.org/resource/Invasive_species">http://dbpedia.org/resource/Invasive_species</A>&gt;
+    &lt;owl:sameAs&gt;
+       &lt;<A HREF="http://dbpedia.org/resource/Invasive_plant">http://dbpedia.org/resource/Invasive_plant</A>&gt;
+       &lt;<A HREF="http://dbpedia.org/resource/Invasive_animal">http://dbpedia.org/resource/Invasive_animal</A>&gt;
+       &lt;<A HREF="http://dbpedia.org/resource/Invasive_organism">http://dbpedia.org/resource/Invasive_organism</A>&gt;
+       &lt;<A HREF="http://rdf.freebase.com/ns/guid.9202a8c04000641f800000000007de24">http://rdf.freebase.com/ns/guid.9202a8c04000641f800000000007de24</A>&gt;
+      (many other concepts)
+
+Checking out the dbpedia resources that are the objects of the sameAs 
+assertions, we see that each redirects to
+<A HREF="http://dbpedia.org/resource/Invasive_species.">http://dbpedia.org/resource/Invasive_species.</A> But other than 
+dbpedia:Invasive_species including a sameAs link to 
+freebase:Invasive_species, no dbpedia page, afaict,  makes the sameAs assertions listed above.
+
+However, <A HREF="http://rdf.freebase.com/rdf/guid.9202a8c04000641f800000000007de24">http://rdf.freebase.com/rdf/guid.9202a8c04000641f800000000007de24</A> 
+does assert:
+
+&lt;<A HREF="http://rdf.freebase.com/ns/guid.9202a8c04000641f800000000007de24">http://rdf.freebase.com/ns/guid.9202a8c04000641f800000000007de24</A>&gt;
+    &lt;owl:sameAs&gt;
+       &lt;<A HREF="http://dbpedia.org/resource/Invasive_species">http://dbpedia.org/resource/Invasive_species</A>&gt;
+       &lt;<A HREF="http://dbpedia.org/resource/Invasive_plant">http://dbpedia.org/resource/Invasive_plant</A>&gt;
+       &lt;<A HREF="http://dbpedia.org/resource/Invasive_organism">http://dbpedia.org/resource/Invasive_organism</A>&gt;
+       &lt;<A HREF="http://dbpedia.org/resource/Invasive_animal">http://dbpedia.org/resource/Invasive_animal</A>&gt;
+       etc.
+
+
+The direction of propagation is not explicit. One possibility is that 
+sameas.org is inferring that &quot;A sameAs B&quot; based on &quot;A redirects to B&quot;, and 
+that these assertions are making their way into freebase. Another is that 
+a freebase contributor is making the sameas inferences, and that they are 
+being picked up by sameas.org. (Similar cycles of sameAs can be found for 
+&quot;habitat&quot;, &quot;introduced_species&quot;, and many other concepts.)
+
+So, a request for the sameas.org folks: Would it be possible to include a 
+provenance column for all sameAs assertions you keep track of?  In cases 
+where the sameAs assertion isn't actually asserted on the web, you could 
+indicate the provenance as &quot;inferred&quot; in the provenance column. Also, have 
+you published the heuristics you use (if any) to infer sameAs relations?
+
+And questions for freebase contributors: Are any of you running a script 
+that either a) loads in assertions from sameas.org, or b) deduces sameAs 
+relations from dbepedia redirection behaviour?
+
+Thanks!
+Joel.
+
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="117545.html">[Taxacom] New CUIC website
+</A></li>
+	<LI>Next message: <A HREF="117553.html">[Taxacom] Propagation of bad sameAs statements
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#117547">[ date ]</a>
+              <a href="thread.html#117547">[ thread ]</a>
+              <a href="subject.html#117547">[ subject ]</a>
+              <a href="author.html#117547">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

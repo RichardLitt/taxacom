@@ -1,0 +1,209 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> ECOLOG Database Management System
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1993-March/014185.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">ECOLOG Database Management System</H1>
+    <B data-pagefind-meta="author">maurobio at IBASE.BR</B>
+    maurobio at IBASE.BR<BR>
+    <I data-pagefind-meta="date">Thu Mar  4 00:13:02 CST 1993</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="097337.html">French version of INTKEY
+</A></li>
+        <LI>Next message: <A HREF="049977.html">ECOLOG Database Management System
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#014185">[ date ]</a>
+              <a href="thread.html#014185">[ thread ]</a>
+              <a href="subject.html#014185">[ subject ]</a>
+              <a href="author.html#014185">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1993</span><!--beginarticle-->
+<PRE>_____________________________________________________________________________
+
+      EEEEEEEE   CCCCCCCC   OOOOOOOO   LL         OOOOOOOO   GGGGGGGG
+      EE         CC         OO    OO   LL         OO    OO   GG
+      EE         CC         OO    OO   LL         OO    OO   GG
+      EEEEEEEE   CC         OO    OO   LL         OO    OO   GG  GGGG
+      EE         CC         OO    OO   LL         OO    OO   GG    GG
+      EE         CC         OO    OO   LL         OO    OO   GG    GG
+      EEEEEEEE   CCCCCCCC   OOOOOOOO   LLLLLLLL   OOOOOOOO   GGGGGGGG
+
+___________Database Management System for Ecological Field Surveys___________
+
+
+________________
+System Overview
+________________
+
+      ECOLOG is a relational database management system for use in
+IBM-PC compatible microcomputers, aimed at the storage, retrieval
+and preliminary analysis of data on sites, species, and specimens
+gathered in ecological field surveys and biodiversity inventories.
+All these data can be cross-indexed to each other, so that it is
+possible, for example, to list all specimens of species &quot;X&quot; with a
+length &quot;L&quot; collected at site &quot;Y&quot; by collector &quot;Z&quot; at date &quot;W&quot;.
+
+________________
+System Features
+________________
+
+      - Easy of use by people with no technical knowledge or previous
+experience in computing; includes browse windows for input, edit and
+query data, an interactive menu system, and on-line help;
+
+      - Relational capacity, which ensures that changes to one species
+record are automatically applied to all relevant specimen records, thus
+avoiding time-consuming and error-prone typing, and optimizing the use
+of the available disk space;
+
+      - Complete validation of data done on input through search of
+lookup tables, which avoid errors and ensure the integrity of data stored
+by the system; during data input or retrieval, the user need only select
+the desired items from ready-made lists;
+
+      - Generation of species lists and reports in multiple formats
+(including checklists and collecting labels), with optional output to video,
+printer or text files and interactive filter definition for the selection
+of the records to be included in each report; each data field or combination
+of data fields of sites, species or specimens can be used as criteria for
+record retrieval;
+
+      - Production of database statistics, including counts of species per
+group/family/genus, with percents, counts of individuals per species,
+also with percents, and several diversity indices for one or more filtered
+sites; these statistics can then be used to produce simple bar graphs;
+
+      - Creation and maintenance of any number of independent databases
+in the same computer; the ECOLOG software is written in Clipper, version
+Summer '87, from Nantucket Corporation, with some built-in low-level
+functions in C and Assembler, being able to read and write fully standard
+dBase files (.DBF);
+
+      - Includes a separate utility for exporting data in ASCII format
+for input to the FITOPAC ecological data analysis system, developed by
+Dr. George J. Shepherd (Departamento de Botanica, IB/UNICAMP, CP. 6109,
+13081, Campinas, Sao Paulo, Brasil, e-mail: george at ibi.unicamp.br or
+george at ibi.unicamp.ansp.br).
+
+________________
+System Uses
+________________
+
+- Faunistic or floristic surveys
+
+- Conservation inventories
+
+- Environmental impact assessments
+
+- Phytosociological studies
+
+- Natural resources management
+
+________________
+System Requirements
+________________
+
+- IBM-PC compatible microcomputer (XT,AT, etc.), with hard disk
+
+- minimum of 512K RAM
+
+- color or monochrome monitor, with CGA, EGA or VGA graphics adapter
+
+- Epson compatible dot matrix printer, with 80 or 132 columns
+
+- MS-DOS operating system, version 3.1 or higher
+
+________________
+System Development
+________________
+
+The ECOLOG database system has been developed over the last three years
+with previous financial support of the Brazilian National Research Council
+and the American John D. &amp; Catherine T. MacArthur Foundation and is currently
+in use by two projects at Rio de Janeiro Botanical Garden (JBRJ/IBAMA), one
+at Rio de Janeiro State Foundation for Environmental Engineering (FEEMA) and
+one at Santa Ursula University (USU).
+
+Further enhancements to the system include: (i) support for a multi-user
+environment, allowing the system to be run on local area networks compatible
+with Novell and IBM LAN; (ii) development of an independent program to plot
+specimen distribution maps from data stored in ECOLOG databases; and (iii)
+export of data for the ALICE biological checklist and species diversity
+database system, developed by Dr. Robert Allkin (Computing Section,
+Royal Botanic Gardens at Kew, Richmond, Surrey TW9 3AB, England,
+e-mail: BTGOLD 81:bio023).
+
+________________
+System Availability
+________________
+
+Cost of the system is US$ 50.00 (plus 5.00 S&amp;H), for a single user license;
+a 10-user site license is available by US$ 100.00 (plus 5.00 S&amp;H). Both
+licenses include unlimited user support, by phone or e-mail. At present,
+I receive no financial support for the continued development and
+distribution of ECOLOG. Developing, maintaining, and supporting
+reliable, user-friendly software is expensive, and research funding agencies
+rarely support long term software development; on the other hand, large
+public or private institutions are more concerned with their in-house needs
+than those of individual research scientists. So the license fees are
+presently my only source of support. I need funds, for example,
+to cover the costs of e-mail and telephone line, to buy some more computer
+equipment and software libraries for improving the system.
+
+For the time being, the ECOLOG system and user manual are available only in
+Portuguese, but an English version of the software is under completion; an
+English version of the manual is yet to be prepared and will be available
+as soon as possible. The completion of the English versions of both the
+software and the user manual will be announced via TAXACOM and ECOLOG-L.
+
+For additional information, contact me at the address below.
+
+                                            Thank you for your interest.
+
+____________________________________________________________________________
+Mauro J. Cavalcanti                             e-mail: maurobio at ax.apc.org
+Informatics &amp; Environment Consulting                      maurobio at ibase.br
+R. Aquidaba, 805, C29
+Lins, Rio de Janeiro, RJ
+20720-291, BRASIL
+Phone: (021) 594-4745
+____________________________________________________________________________
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="097337.html">French version of INTKEY
+</A></li>
+        <LI>Next message: <A HREF="049977.html">ECOLOG Database Management System
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#014185">[ date ]</a>
+              <a href="thread.html#014185">[ thread ]</a>
+              <a href="subject.html#014185">[ subject ]</a>
+              <a href="author.html#014185">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

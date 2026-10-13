@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Maintaining databases
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1995-November/017475.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Maintaining databases</H1>
+    <B data-pagefind-meta="author">Gary Rosenberg</B>
+    ROSENBERG at SAY.ACNATSCI.ORG<BR>
+    <I data-pagefind-meta="date">Tue Nov 28 16:03:58 CST 1995</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="100628.html">Genus and type designation question
+</A></li>
+        <LI>Next message: <A HREF="053267.html">Maintaining databases
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#017475">[ date ]</a>
+              <a href="thread.html#017475">[ thread ]</a>
+              <a href="subject.html#017475">[ subject ]</a>
+              <a href="author.html#017475">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1995</span><!--beginarticle-->
+<PRE>The situation that Doug Yanega postulates as difficult is exactly the
+situation I am referring to as easy.  Create a file that lists the ID
+numbers of specimens that have had the identification changed, in this case
+refined from Tribe Z to Genus A, B, or C.  Proof-read the list.  Next,
+write a macro or a query that makes the same change on each record.
+
+In Paradox (which I am most familiar with) this can be done via the query
+function, because variables can be assigned in the queries.  The query
+would link two files:
+
+Change File                Identification File
+
+ID no.  ID                 ID no.    ID         Identifier    Date
+---------------            ----------------------------------------------
+10287   Genus A            00001     Aus bus    Darwin, C.    -- Nov 1845
+13478   Genus A            00002     Cus dus    Smith, J.M.   12 Feb 1937
+18976   Genus A            etc.
+10987   Genus B            10287     Family Q   Unknown       -- --- ----
+34789   Genus B            10287     Tribe Z    Jones, J.P.   23 FEB 1985
+etc.                       etc.
+
+In query mode, the insert command will automatically add the
+identifications for every specimen to the Identification File.
+
+Change File                Identification File
+
+ID no.  ID                 ID no.   ID          Identifier    Date
+-------------              ----------------------------------------------
+varA    varB       insert  varA     varB        Yanega, D.    28 Nov 1995
+
+
+One can specify that the operation is done only on items previously
+identified as Tribe Z, as a safeguard against typos in ID numbers.  Similar
+capabilities are available in many off-the-shelf database programs.  It
+might not be trivial to type in the numbers, but it should take less time
+to modify the database than it took to sort the specimens.
+
+By the way, I recall reading on Taxacom about a tagging device that could
+broadcast its ID number, allowing one to input the numbers of hundreds of
+specimens simultaneously.  It might be that as such devices are refined
+they will save enough labor to justify their cost.  Certainly database
+technology is advanced enough now to allow great increases in efficiency
+for museum collections, and other technologies will also help.
+
+Gary Rosenberg
+Academy of Natural Sciences of Philadelphia
+rosenberg at say.acnatsci.org
+
+&gt;I would agree...it *should*. Standard practice, though, is that *every*
+&gt;specimen gets a unique identifier, which poses a problem when the material
+&gt;is sorted above the level of species. Yes, if it were a matter of species
+&gt;X being moved into a different genus, then one simple command should be
+&gt;all that is needed, but when you start out with 10,000 inventoried but
+&gt;unsorted specimens of tribe Z which later are IDed as genera A, B, and C,
+&gt;there is no one global command that can be issued to make the appropriate
+&gt;changes:
+
+&gt;&gt;If 1000 specimens are identified as genus A,
+&gt;&gt;that means 1000 records need an identical change.  Given a list
+&gt;&gt;of the catalogue numbers (or other unique ID numbers), it is
+&gt;&gt;possible in most database programs to make the needed changes to
+&gt;&gt;all affected records with a single set of commands.  If the
+&gt;&gt;system at your institution requires that such changes be made one
+&gt;&gt;by one, you need a different system.
+
+&gt;This is only simple and easy if those 1000 specimens happen, by some
+&gt;miracle, to have their numbers *in sequence*. Otherwise, someone will have
+&gt;to sit down, and *make* that list of 1000 numbers, then type the commands
+&gt;(a process that can, incidentally, be just as fast as trying to scan
+&gt;barcodes, so there isn't necessarily much time-saving in having barcodes,
+&gt;either) - it's no longer a trivial enterprise at that point. I can't think
+&gt;of any systems that can avoid this problem...if there is no shared
+property
+&gt;of those 1000 specimens *already* in the database which distinguishes them
+&gt;from all other specimens, then there is no simple command which can make a
+&gt;global change on those records by themselves.
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="100628.html">Genus and type designation question
+</A></li>
+        <LI>Next message: <A HREF="053267.html">Maintaining databases
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#017475">[ date ]</a>
+              <a href="thread.html#017475">[ thread ]</a>
+              <a href="subject.html#017475">[ subject ]</a>
+              <a href="author.html#017475">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

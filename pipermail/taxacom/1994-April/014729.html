@@ -1,0 +1,626 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Response to comments on DELTA
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Response%20to%20comments%20on%20DELTA&In-Reply-To=%3Cmailman.1164.1157126633.2564.taxacom%40mailman.nhm.ku.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="097885.html">
+   <LINK REL="Next"  HREF="050521.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1994-April/014729.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Response to comments on DELTA</H1>
+    <B data-pagefind-meta="author">Mike Dallwitz</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Response%20to%20comments%20on%20DELTA&In-Reply-To=%3Cmailman.1164.1157126633.2564.taxacom%40mailman.nhm.ku.edu%3E"
+       TITLE="Response to comments on DELTA">miked at ENTO.CSIRO.AU
+       </A><BR>
+    <I data-pagefind-meta="date">Wed Apr 27 16:29:59 CDT 1994</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="097885.html">LIBRARY COMPONENT OF INDIRECT COSTS
+</A></li>
+        <LI>Next message: <A HREF="050521.html">Response to comments on DELTA
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#14729">[ date ]</a>
+              <a href="thread.html#14729">[ thread ]</a>
+              <a href="subject.html#14729">[ subject ]</a>
+              <a href="author.html#14729">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>1994</span><!--beginarticle-->
+<PRE>                                                                  27 April 1994
+
+
+
+I have been away for a few weeks, so was unable to take part in the recent
+Taxacom discussion about DELTA. Here are my responses to some of the comments.
+
+-------------------------------------------------------------------------------
+
+&gt;<i> A lot of botanists are talking about DELTA, but only three, that I know of,
+</I>&gt;<i> are publishing actively using DELTA output... There is a lot of talk, but
+</I>&gt;<i> almost nothing to show for it!
+</I>
+I will post separately a list of references relating to the DELTA programs
+developed in the CSIRO Division of Entomology. References relating to Richard
+Pankhurst's DELTA programs (PANKEY, PANDORA) are not included. The list will be
+published in the forthcoming DELTA Newsletter.
+
+-------------------------------------------------------------------------------
+
+&gt;<i> I believe that the use of DELTA for entomologists [compared to botanists] is
+</I>&gt;<i> DIFFICULT, because: a) there are too many characters to check (botanical
+</I>&gt;<i> descriptions use less characters, at least involving identification routine
+</I>&gt;<i> procedures); b) the states of each character are very numerous and have no
+</I>&gt;<i> specific, easy to learn nomenclature
+</I>
+I have not noticed any such tendency, and counterexamples are very easy to
+find. For example:
+    Ev Britton's data on species of Heteronyx (beetles): 202 species, and 44
+    characters, of which 6 have 3 or 4 states, and 9 are numeric.
+    Joe Kirkbride's data on species of Cucumis (cucumbers): 40 species, and
+    about 230 characters, of which 47 have 3-9 states, 8 have 10 or more
+    states, and 80 are numeric.
+
+-------------------------------------------------------------------------------
+
+&gt;<i> The only major proviso to remember is that the DELTA character lists are not
+</I>&gt;<i> immediately usable in cladistics. Especially when using DELTA for writing
+</I>&gt;<i> descriptions one ends up focussing on what might be called &quot;differentiae&quot;
+</I>&gt;<i> rather than on shared similarities. One can modify a DELTA list to use in
+</I>&gt;<i> cladistics, but using it directly leads to some rather entertaining
+</I>&gt;<i> phylogenies.
+</I>
+The first sentence, though qualified by the subsequent ones, tends to reinforce
+the common, but mistaken, idea that `DELTA character lists' necessarily have
+some taxonomic peculiarities which make them fit only for restricted purposes.
+In fact, one of the main reasons for developing DELTA was to avoid the need to
+contruct special-purpose character lists to suit the requirements of different
+programs. DELTA, in its strict sense, is only a data format (DEscription
+Language for TAxonomy), which is sufficiently flexible to record most of the
+kinds of information used by taxonomists for describing and classifying
+organisms. A character list that you might construct for use with HENNIG86 or
+PAUP can easily be entered in DELTA format. Even if you want to use your data
+only for cladistic analysis, preparing it in DELTA format has the advantages
+that: (1) the data can easily be translated into the formats used by various
+cladistic (and phenetic) programs; (2) numeric data can be coded directly, and
+broken into ranges later (possibly in different ways); and (3) other DELTA
+programs, particularly INTKEY, have valuable features for checking and
+obtaining insight into the data. However, to get the maximum return on the
+effort required to collect the data, it is usually worthwhile to add some
+characters (possibly including pseudo-characters such as synonomy, notes, and
+classification) that will make the data suitable for other purposes too. The
+DELTA programs have facilities for restricting the characters to the subset
+needed for any particular purpose.
+
+By the way, are `entertaining' phylogenies necessarily bad ones?
+
+-------------------------------------------------------------------------------
+
+&gt;<i> I am currently developing computerized keys for the identification of
+</I>&gt;<i> **********. I am using DELTA primarily as an example of how not to make
+</I>&gt;<i> interactive keys. Because I am only making keys for non-entomologists to use,
+</I>&gt;<i> I am only interested in INTKEY, and not in any other features of DELTA. The
+</I>&gt;<i> number of other programs out there that do essentially the same thing as
+</I>&gt;<i> INTKEY indicates to me that this is what everyone else is interested in also.
+</I>
+My experience with running DELTA courses leads me to believe that (regretably)
+most taxonomists are still mainly interested in writing descriptions and
+conventional keys. During the courses, I try to demonstrate the advantages of
+INTKEY, not only as a means of giving others access to taxonomic information,
+but as a means by which taxonomists can check and gain insight into their data.
+
+&gt;<i> There are several problems with DELTA.
+</I>
+&gt;<i> 1. It [INTKEY] is not an expert system, which is really what I want in an
+</I>&gt;<i> interactive key.
+</I>
+It depends what you mean by `expert system'. See
+    Dallwitz, M. J. (1992). A comparison of matrix-based taxonomic
+    identification systems with rule-based sytems. In `Proceedings of IFAC
+    Workshop on Expert Systems in Agriculture', pp. 215-8. (Ed. F. L. Xiong.)
+    (International Academic Publishers: Beijing.)
+Here is part of the summary of that paper.
+
+    Some important aspects of the identification skills used by experts cannot
+    be captured in computerized identification aids, and those that can are not
+    necessarily optimal. Matrix-based identification systems have already
+    reached a high standard of performance, and the data matrices are also
+    valuable for other purposes. Most taxonomic information is gathered and pub-
+    lished in a form more akin to data matrices than to rules, so rule-based
+    sytems are more difficult to construct, and the information they contain
+    tends to be sparse.
+
+&gt;<i> 2. I feel that the search algorithm is the opposite of what it should be. I
+</I>&gt;<i> would prefer a routine that separates the taxa with unique characters FIRST.
+</I>
+There are many algorithms for choosing characters to be used in identification,
+but as far as I know all of them look for characters that divide the remaining
+taxa into subgroups that are as nearly equal as possible. This tends to
+minimize the number of steps required in an identification. For example, for a
+group of 100 taxa, the use of characters which are optimal in this sense would
+lead to a key requiring 6 or 7 steps (characters) for an identification,
+whereas the use of characters which split off one taxon at a time would lead to
+a key requiring an average of 50 steps for an identification. If you need
+further convincing, just try doing some INTKEY identifications choosing
+characters from near the bottom of the `BEST' menu, rather than from the top.
+
+Another important consideration in choosing characters is the ease of use or
+`reliability' of the characters. This is a subjective matter, which often
+depends on the context in which the key will be used. In KEY (our key-
+generation program) and INTKEY, reliabilities may be set for each character.
+The relative importance attached to the reliability and the separating power of
+a character are controlled by a parameter, RBASE, which may be set by the user.
+By suitable choice of reliability and/or RBASE, any character may be forced to
+be the `best' character (provided that it has any separating power at all).
+
+Characters which split one taxon from all the rest are often preferred by
+taxonomists, and could be given high reliability to force their use. However,
+such preferences should be examined critically. A distinction may seem obvious
+to the expert who has a mental picture of all of the taxa. Novices may make the
+distinction accurately when identifying a specimen of the unusual taxon, but
+will they do so with other specimens, particularly if they have never seen an
+example of the unusual taxon? How will the overall accuracy of the
+identification be affected, taking into account the much greater number of
+characters that will have to be used?
+
+&gt;<i> Instead, the program looks for characters that have poor consistency and tend
+</I>&gt;<i> to show up in all taxonomic groups. This is really frustrating for a
+</I>&gt;<i> phylogeneticist.
+</I>
+Classification and identification are quite different operations, and
+attempting to combine them will generally lead to poor results for both.
+
+&gt;<i> 4. The interface [of INTKEY?] really sucks. It is not intuitive.
+</I>
+It's difficult to reply to such general and subjective criticism. I would
+appreciate some more specific comments on the interface.
+
+&gt;<i> The command line interface makes it a dinosaur.
+</I>
+INTKEY can be operated from menus as well as from a command line.
+
+&gt;<i> There are too many things to do to get to an answer. The software does not
+</I>&gt;<i> guide the user through each consecutive step. It is not clear at any given
+</I>&gt;<i> point what to do next.
+</I>
+These comments epitomize the naive view that is apparently leading many people
+to attempt to write their own interactive identification programs. You can't
+get the full benefit of interactive identification by merely computerizing and
+slightly enhancing the step-by-step procedure used in a printed key.
+
+Actually, INTKEY can be configured in such a way that the user is led through
+an identification. Just enter the command SET AUTOBEST 1000 (or place it in the
+INTKEY.INI file). The identification procedure is then as follows.
+(1) Enter RESTART (or select it from the menu).
+(2) A menu of the `best' characters appears. Select one.
+(3) A menu of character states appears. Select one.
+(4) Repeat (2) and (3) until a single taxon remains.
+However, this is not the most effective way of carrying out an identification.
+That is why AUTOBEST 1000 is not the default setting. Compilers of data sets
+are free to put this setting in their INTKEY.INI files (hence effectively
+changing the default), but few choose to do so. In the MS-Windows version of
+INTKEY (to be released soon), we will provide a simple and conspicuous
+mechanism whereby a user can choose settings which lead to `simple' operation
+of the program.
+
+To give you some idea of the flexibility of INTKEY, here some of the possible
+courses of action once you have made a tentative identification - that is, once
+the program has indicated that only one taxon matches the specimen description
+that you have entered. Actually, any of the commands below might be useful at
+any stage of the identification, and I feel strongly that programs should allow
+this kind of flexibility, rather than leading you along pre-determined
+pathways. This certainly means that some effort is required to learn to make
+the best use of the program, but this should be acceptable to professional
+users wanting to achieve professional results. (By `professional', I mean not
+just taxonomists, but anyone who needs identification or information retrieval
+as part of their job.)
+
+For brevity, these actions are described as commands, but they can all be
+carried out via the menu system.
+
+
+DESCRIBE SPECIMEN USED
+    Recapitulate the specimen description that you have entered (that is,
+    describe it in terms of the characters that you have used), so that you can
+    check it.
+
+DESCRIBE REMAINING ALL
+    Display the full description of the `remaining' taxon. REMAINING is an
+    example of an automatically defined `taxon keyword' representing a set of
+    taxa. At the end of an identification, it represents a single taxon, but at
+    earlier stages it would represent several.
+
+DESCRIBE REMAINING HABIT DISTRIBUTION ECOLOGY
+    Display the description of the remaining taxon in terms of its habit,
+    distribution, and ecology. These are examples of user-defined `character
+    keywords' representing sets of characters. They would generally have been
+    defined by the person who prepared the data.
+
+DIAGNOSE REMAINING NONE
+    Generate and display a diagnostic description of the remaining taxon, in
+    terms of characters not used in the identification. This description will
+    distinguish the remaining taxon in at least one respect from all the other
+    taxa, and so provides an independent check.
+
+DIFFERENCES (SP 6) USED
+    Display the differences between the specimen description and taxon 6.
+    (Maybe you thought your specimen was taxon 6. What is the evidence that it
+    isn't?)
+
+SET MATCH EXACT
+DIFFERENCES (SP REM) ALL
+    Set `exact' matching and display the differences between the specimen
+    description and the remaining taxon. If the MATCH setting were left as it
+    was during the identification (normally Overlap, Unknown, Inapplicable), no
+    differences would be shown, because the remaining taxon is, by definition,
+    the one that matches the specimen. Setting MATCH EXACT allows the
+    DIFFERENCE command to pinpoint characters where the specimen and the
+    remaining taxon differ because of variability, or because the character is
+    unknown or inapplicable for the remaining taxon.
+
+SET TOLERANCE 1
+    Set the `tolerance' parameter to 1. This brings back as `remaining' taxa
+    all those that differ in not more than one respect from the specimen
+    description. You can then continue with the identification as before. This
+    is particularly useful if you suspect or know that there has been an error,
+    for example, if the number of taxa remaining is 0, or if the description of
+    the remaining taxon does not fit the specimen.
+
+ILLUSTRATE TAXA REMAINING
+    Display illustrations of the remaining taxon.
+
+&gt;<i> You cannot view text and graphics at the same time.
+</I>
+This will be possible in the Windows version.
+
+&gt;<i> With all the really slick multimedia stuff out there these days, I don't
+</I>&gt;<i> think DELTA has a chance of being adopted as a standard for zoology.
+</I>
+The DELTA standard, as endorsed by the International Working Group on Taxonomic
+Databases for Plant Sciences, is a data-interchange format, not a program.
+Having such a standard means that users need not be locked into particular
+programs. This is obviously just as important for zoologists as it is for
+botanists.
+
+&gt;<i> [Comment by Ingolf Askevold.] I agree, and so do others I've talked to, that
+</I>&gt;<i> the interface sucks and that it is not intuitive. No argument from me. I
+</I>&gt;<i> think Mike should post his fulsome reply to this statement, for I'm still not
+</I>&gt;<i> sure that I buy it.
+</I>
+I will put it at the end of this posting.
+
+&gt;<i> 6. I do all my figures on a Mac (= super VGA). Everything is fine with DELTA
+</I>&gt;<i> [INTKEY] as long as the computer you're using has a super VGA card and
+</I>&gt;<i> driver. If not, the figures, which are the only good part of the entire key,
+</I>&gt;<i> will not work.
+</I>
+You need to distinguish between INTKEY and particular data sets which use it.
+People who compile data sets are free to use standard VGA images if they so
+wish. (They are also free to produce poor data. It would be helpful if you said
+what data you were working with, and what you think is wrong with it. It seems
+quite likely, in view of your other comments, that the fault is in the way you
+are using the program.) Our CD-ROM for the Angiosperm families has both VGA and
+Super VGA versions of the images. Only the latter are on the Internet, but you
+can convert them all with a single Image Alchemy command (or, if you prefer a
+program with a more intuitive interface, about 10000 mouse-clicks). The Windows
+version of INTKEY will have built-in scaling, scrolling, and colour reduction,
+so this problem will not arise.
+
+&gt;<i> 7. The [DELTA-format] data files, and to some extent, the directives files,
+</I>&gt;<i> are too difficult to modify.
+</I>
+Richard Pankhurst and Eric Gouda have editors for entering and modifying DELTA
+files. Also, we will be rewriting our program CONFOR with a built-in editor.
+
+-------------------------------------------------------------------------------
+
+&gt;<i> Manuscripts that I have seen that were written relying heavily on DELTA have
+</I>&gt;<i> convinced me that it is not the way to go to prepare floristic accounts - or
+</I>&gt;<i> only as step one one a long staircase. ... After reading a number of strictly
+</I>&gt;<i> parallel descriptions, I have reached the conclusion that they can easily
+</I>&gt;<i> conceal the significant information in a deluge of unhelpful information. The
+</I>&gt;<i> wording achieved with DELTA is also often very awkward. As a means of
+</I>&gt;<i> providing an initial draft, or a reference work, fine. For a final product,
+</I>&gt;<i> not without more work than is generally used.
+</I>
+Fairly readable descriptions can be obtained directly from CONFOR, provided
+that you put enough thought into the preparation of the data. See, for example,
+    Watson, L., and Dallwitz, M. J. (1992). `The Grass Genera of the World.'
+    1038 pp. (CAB International: Wallingford.)
+All except a few pages (such as the introduction) of this book, were generated
+and typeset automatically, and were not even read before being sent to the
+publishers. (Of course, the material had been read, and checked in other ways,
+many times during the years over which the data were built up.) How could you
+justify the time that would be spent in going through almost 1000 pages of
+descriptions, just to make a few trivial wording changes, which might well
+introduce errors and ambiguities? Surely the time could be better spent in
+other ways. The first print run of this book is almost sold out, and, rather
+than reprinting it, we intend to produce a new edition. This would not be
+practical if large amounts of manual editing were involved.
+
+This book also exemplifies the emphasizing of the most significant parts of the
+descriptions. The emphasized characters were selected partly by hand, and
+partly by the DIAGNOSE command of INTKEY. It is also possible to produce
+descriptions consisting only of the most significant parts.
+
+&gt;<i> And I suspect less work is involved if one starts hand work from the first
+</I>&gt;<i> DELTA product.
+</I>
+This is definitely not so. You should be using tools such as INTKEY to check
+and refine your data as it is gathered. Once manual editing of the output has
+started, all subsequent changes have to be made twice, with the attendant risk
+of inconsistency.
+
+&gt;<i> The keys that I have seen have used relatively obscure characters.
+</I>
+The implication seems to be that this is the fault of the program. As I pointed
+out above, the person making the key must make subjective judgements about the
+`reliability' of the characters; there is no way that the program can do this.
+The programs are aids to taxonomic thought and judgement, not substitutes for
+them.
+
+&gt;<i> Some [keys] did not allow for all the variation in the description (which
+</I>&gt;<i> surprised me).
+</I>
+Inconsistency between keys and descriptions is almost certainly due to editing
+of the program output. (There is a very small chance that it could be due to a
+program bug. If such bugs are reported, we fix them immediately.)
+
+&gt;<i> [Using the DELTA programs] might improve the quality of my work.
+</I>
+It almost certainly would. I base this statement not on my own judgement (I am
+not a taxonomist), but on what users of DELTA have told me.
+
+&gt;<i> I think people are not always prepared to admit how much basic taxonomic work
+</I>&gt;<i> needs to be done before one starts using DELTA to write a revision.
+</I>
+I don't agree with this approach. You will gain the most benefit if you start
+using DELTA right from the start.
+
+-------------------------------------------------------------------------------
+
+&gt;<i> There is the possibility of automatically extracting the information from
+</I>&gt;<i> textual descriptions. I'm currently engaged in doing this with the 4 volume
+</I>&gt;<i> Flora of NSW which contains description of roughly 5,000 species. I've
+</I>&gt;<i> constructed software which reads the text and extracts characters and states.
+</I>&gt;<i> ... This is very much work in progress - but the results are already good
+</I>&gt;<i> enough to convince me that automatic extraction will be sufficiently accurate
+</I>&gt;<i> and complete for the needs of my identification program.
+</I>
+I find it hard to believe that a computer program can extract good comparative
+information from textual descriptions. In my experience, even people can't do
+it, because the information just isn't there. Also, the synthesis of useful and
+meaningful characters from strings of words requires taxonomic judgement. It's
+not just a matter of putting a number in front of every word or phrase that has
+ever been used in a description, and calling it a character state. For a
+discussion, see
+    Watson, L. (1971). Basic taxonomic data: the need for organization over
+    presentation and accumulation. Taxon 20, 131-136.
+
+-------------------------------------------------------------------------------
+
+Here is part of a letter from Ingolf Askevold to me, and my reply. Please note
+that these were written as personal communications, and might have been worded
+more moderately if intended for publication.
+
+&gt;<i> Thanks for your note. Yes, I did receive your question about why I thought
+</I>&gt;<i> INTKEY a little user-unfriendly, but I thought I'd replied, also. Sometimes,
+</I>&gt;<i> our system here eats things, or it simply got misdirected as also occurs
+</I>&gt;<i> around here. Apologies... let's see if I can rethink that problem.
+</I>
+&gt;<i> Essentially, I don't seem to be able to use my data in an intuitively obvious
+</I>&gt;<i> way. I'm not sure why. Perhaps I've simply not spent the time on its use that
+</I>&gt;<i> is necessary, but it seems to me that use of an expert system should be
+</I>&gt;<i> quickly and readily learned without the need for complicated thought. Now, it
+</I>&gt;<i> may just be me and my own logic flaws, because something's just not clicking.
+</I>&gt;<i> Kids might grasp it faster than I, but then they can master the Rubix Cube
+</I>&gt;<i> and video games so much faster, also. I do understand the concepts, I just
+</I>&gt;<i> don't seem to be able to act out the processes. There's no doubt, I suppose,
+</I>&gt;<i> that a windows application will improve that. The pull-down menu is certainly
+</I>&gt;<i> a great idea and is vastly superior to something like the PAUP 2.4.1 command-
+</I>&gt;<i> line program. Somehow, INTKEY still just doesn't fall into place the way I
+</I>&gt;<i> expect it to. Maybe that's the operative term, expectation? Now, if it were
+</I>&gt;<i> me alone thinking this I'd simply have to say that the flaws are mine alone
+</I>&gt;<i> also. However, I know of others who are similarly confused by INTKEY. One
+</I>&gt;<i> fellow with **** even completely rewrote algorithms to suit what he thought
+</I>&gt;<i> more in line with the &quot;expert system&quot; idea ... . He used the general concept
+</I>&gt;<i> of the DELTA data base format but rendered it less syntax sensitive and added
+</I>&gt;<i> a lot of little windows and the like to be able to use data in a way that
+</I>&gt;<i> seems more obvious and simple to me. He loaded his system on my machine, and
+</I>&gt;<i> in a couple of minutes I was able to use the system quite readily (though
+</I>&gt;<i> oddly enough there seemed to be some problem actually getting the
+</I>&gt;<i> identification itself! - so that's not perfect either). I've used a Mac
+</I>&gt;<i> system on chalcidoid wasps that we simply loaded on, and in a few seconds I
+</I>&gt;<i> was running around the data with ease. There's a great deal of interest in
+</I>&gt;<i> expert systems in granting agencies over here now, and it would not be too
+</I>&gt;<i> hard to secure grant funds in our present academic environment. While DELTA
+</I>&gt;<i> is touted as the &quot;industry standard&quot;, it remains to be seen if INTKEY is
+</I>&gt;<i> really the right thing unless it is markedly improved. The USDA, DOD and
+</I>&gt;<i> other people SIMPLY WON'T USE IT IF IT'S NOT USER-FRIENDLY ENOUGH. And that
+</I>&gt;<i> will translate into lack of grant support very quickly - it's got to have the
+</I>&gt;<i> whistles and bells, but also has to be able to generate results along simple,
+</I>&gt;<i> very obvious pathways. People on this side of the pond are not tremendously
+</I>&gt;<i> technical in their abilities, and while this may be frustrating to
+</I>&gt;<i> programmers and program developers such as yourself, I'm merely relating what
+</I>&gt;<i> I perceive here - and include myself among those with limited capabilities!
+</I>&gt;<i> ...
+</I>
+&gt;<i> My point after all this digression, is not that DELTA is bad, Mike. In
+</I>&gt;<i> COMPARISON with some other software such as PAUP 2.4.1 and HENNIG86, the
+</I>&gt;<i> documentation is really fine, as I told you personally. I think my
+</I>&gt;<i> observation is that if I, among entomologists, with my own background and
+</I>&gt;<i> computer ability (as limited as it is) am having trouble with INTKEY, then it
+</I>&gt;<i> seems logical to me to suppose that the less computer literate among
+</I>&gt;<i> entomologists are surely going to have much more difficulty with it. ...
+</I>
+&gt;<i> But what is it specifically about INTKEY that seems user-unfriendly? I'm not
+</I>&gt;<i> sure I can put my finger on it. I simply don't seem to get to the answers I
+</I>&gt;<i> think I ought to get to, and I don't know why. Sometimes it seems the logic I
+</I>&gt;<i> use is the reverse of that under which INTKEY operates. As a result, I don't
+</I>&gt;<i> find myself using it for the purposes it seems I could if I could just grasp
+</I>&gt;<i> the thing. For example, I should be able to select a taxon and diagnose it,
+</I>&gt;<i> but as I try to do so I simply don't get what I expect, and it's frustrating.
+</I>&gt;<i> ... I realize I'm not being especially helpful in pointing to specific
+</I>&gt;<i> shortfalls in INTKEY. ... I would expect that a Windows version should be
+</I>&gt;<i> able to, for example:
+</I>
+&gt;<i> Pull down a &quot;diagnose&quot; bar, automatically presenting me with the list of
+</I>&gt;<i> taxa; I click on the taxon of choice, and it spits out the list of data and
+</I>&gt;<i> what not unique to that taxon (or shared with certain other taxa); compare
+</I>&gt;<i> that taxon with any other taxa for similarities and differences; send any of
+</I>&gt;<i> these data to a clipboard so that they can be used to write aspects of
+</I>&gt;<i> taxonomic monographs; and perhaps other things that presently don't come to
+</I>&gt;<i> mind.
+</I>
+&gt;<i> Now, I know you're going to tell me it can already do most of that? Well, why
+</I>&gt;<i> can't I seem to actually get that done? Why can't I just type in INTKEY at
+</I>&gt;<i> the C: prompt and run about that data as simply as I'd like to? Something's
+</I>&gt;<i> just not intuitively obvious enough. The general criticism I've heard from
+</I>&gt;<i> various individuals is simply the generalized insult that the people who do
+</I>&gt;<i> the programming are just that, programmers, or worse, even main-frame
+</I>&gt;<i> programmers; the implication of that is merely that developers know too
+</I>&gt;<i> damned much about what they are doing, even program for the sake of
+</I>&gt;<i> programming, and can't/don't get things simplified enough for the dumb grunts
+</I>&gt;<i> at the starting level! ...
+</I>
+I have seen quite a few interactive identification systems, many of which are
+quite easy to use, in the sense that you can start the program and immediately
+do something with it. However, I consider all of the ones I have seen to be
+essentially toys, which are incapable of giving the kinds of results that would
+be needed by someone wanting to achieve accurate and efficient identification
+(and information retrieval) with substantial data sets.
+
+The following paragraph is a summary of the features of INTKEY. I consider (in
+the light of actual experience, not just speculation) that most of these are
+very important in achieving good results. If you evaluate other interactive
+identification programs against this list, you will find that most are very
+deficient. The problem is not just to make a user-friendly program, but a user-
+friendly one that has all of these features (and has them easily accessible).
+Unfortunately, some of the modes of operation that might make the program easy
+for beginners tend to make it very clumsy for more experienced users. INTKEY
+has such modes, but you will seldom see a data set distributed with these modes
+turned on, because of their clumsiness for general use. (I will give a specific
+example later.)
+
+    INTKEY offers better and more comprehensive features than any similar
+    program. These features include: entry and deletion of attributes in any
+    order during an identification; calculation of the `best' characters for
+    use in identification; the ability to allow for errors (whether made by the
+    user or in the data); the ability to express variability or uncertainty in
+    attributes; optional display of notes on characters and character state
+    definitions; direct handling of numeric values, including ranges of values
+    and non-contiguous sets of values; the ability to alter the treatments of
+    unknowns, inapplicables and overlapping values, as required for different
+    applications (flexibility in this respect being particularly significant in
+    relation to identification versus information retrieval); retrieving free-
+    text information (that is, information not encoded in terms of the
+    character list); freedom to carry out operations in any order (for example,
+    displaying taxon descriptions or differences during the course of an
+    identification); automatic handling of characters that become inapplicable
+    when other characters take certain values; restricting operations to
+    subsets of characters or taxa; defining keywords to represent subsets of
+    characters and taxa; locating characters by included words, and taxa
+    directly by name; no limits on numbers of taxa, characters, and character
+    states; no limits on lengths of taxon names and character definitions;
+    specifying `character reliabilities' appropriate for particular purposes;
+    obtaining lists of taxa possessing or lacking particular attributes or
+    combinations of attributes; preparing lists of taxa uncoded for particular
+    characters or sets of characters; listing similarities or differences
+    between taxa, with the ability to vary the interpretations of `similarity'
+    and `difference'; describing taxa in terms of nominated sets of characters;
+    generating diagnosic descriptions for specimens or taxa, to specified
+    degrees of redundancy; coalescing descriptions (e.g. to generate accurate
+    generic descriptions from species descriptions); input of complex or
+    lengthy sequences of commands from files; selective output of results to
+    files; generating files suitable for input to other DELTA programs (for
+    example, to highlight diagnostic features in printed descriptions); screen
+    display of illustrations of characters and taxa; complete on-line help; and
+    acceptable response times with large sets of data. The program can easily
+    be translated into other languages (French, German, and Portuguese versions
+    are currently available).
+
+I don't know whether you are right that people won't use a program if it's not
+`user-friendly' (i.e. doesn't require any significant time to learn to use it).
+I think they will if they are sufficiently motivated (e.g. word processors,
+draw programs, Hennig86, early versions of PAUP; or, for that matter, driving a
+car). However, I am well aware (but find it extremely frustrating) that many
+people view learning to use a program very differently to learning almost
+anything else. They quite accept that they will spend years obtaining a degree
+and later gaining practical experience to enable them to do their job, but are
+extremely reluctant to spend a few days (or even hours or minutes) learning to
+use a program that would greatly help them in their work, and would repay the
+investment in time many times over.
+
+We are, of course, continually trying to improve the programs, within the
+constraints imposed by our available resources. The comments that we find most
+valuable are specific ones, such as the ones you made about DIAGNOSE. INTKEY
+can, in fact, be made to give a diagnosis in a way very similar to what you
+described (the main difference being absence of mouse control, which will, of
+course, be in the Windows version). First, enter the command DISPLAY KEYWORDS
+OFF, or put it in INTKEY.INI (more about this later). Then enter DIAGNOSE (or
+select it from the main menu). Cursor to the required taxon in the list which
+will appear, and hit Enter. When the next menu appears, hit Enter again. Surely
+that isn't very difficult! You may, of course, find that the results are
+meaningless, perhaps because certain characters should have been excluded
+first, because the character reliabilities were inappropriate, or because you
+should have used an ABSOLUTE/PERCENTAGE ERROR directive in the CONFOR TOINT
+run. I don't consider this a failing of the program; there is no substitute for
+understanding what you are doing. I don't thing that there are many programs
+which will generate pearls of scientific wisdom whenever you click on a random
+selection of icons. If you want to save the output on a file, use the FILE
+OUTPUT or FILE LOG commands.
+
+Why, I expect you will be asking, don't we make DISPLAY KEYWORDS OFF the
+default? Because, in general, it leads to clumsy operation. Try it - I don't
+think you will like it. If you do, simply put it in your INTKEY.INI and it
+effectively becomes the default. The `keywords' concept is central to using
+INTKEY, and is really essential for handling moderate to large data sets
+effectively. However, it seems to be a stumbling block for beginners, which is
+why we put in the DISPLAY KEYWORDS OFF option. Unfortunately, if you make this
+the default, you are, in the end, imposing the additional burden of finding out
+that it can be cancelled, and how to do it.
+
+Another option you might like to try is SET AUTOBEST 1000; again, after you
+have used it awhile, you will probably find you don't like it.
+
+-------------------------------------------------------------------------------
+
+Mike Dallwitz                                  Internet <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">md at ento.csiro.au</A>
+CSIRO Division of Entomology                   Fax +61 6 246 4000
+GPO Box 1700, Canberra ACT 2601, Australia     Phone +61 6 246 4075
+
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="097885.html">LIBRARY COMPONENT OF INDIRECT COSTS
+</A></li>
+	<LI>Next message: <A HREF="050521.html">Response to comments on DELTA
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#14729">[ date ]</a>
+              <a href="thread.html#14729">[ thread ]</a>
+              <a href="subject.html#14729">[ subject ]</a>
+              <a href="author.html#14729">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

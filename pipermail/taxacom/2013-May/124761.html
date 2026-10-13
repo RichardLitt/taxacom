@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Data quality of aggregated datasets
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-May/124761.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Data quality of aggregated datasets</H1>
+    <B data-pagefind-meta="author">Doug Yanega</B>
+    dyanega at ucr.edu<BR>
+    <I data-pagefind-meta="date">Mon May  6 12:28:58 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="124760.html">[Taxacom] looking for old taxonomic references: 1822-1940
+</A></li>
+        <LI>Next message: <A HREF="124762.html">[Taxacom] Data quality of aggregated datasets
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124761">[ date ]</a>
+              <a href="thread.html#124761">[ thread ]</a>
+              <a href="subject.html#124761">[ subject ]</a>
+              <a href="author.html#124761">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>On 5/6/13 12:10 AM, Quentin Groom wrote:
+&gt; Unfortunately, a common problem is that taxonomists fail to record the
+&gt; Geodetic System or Datum they are using, which leaves the aggregators to
+&gt; guess, sometime wrongly.
+&gt; Worst still there have been many occasions where GPS are not set up
+&gt; correctly and give the wrong output.
+&gt; Before the recent advent of the the GPS I would not guarantee the
+&gt; accuracy of any grid reference made in open country.
+&gt; This also underlines the importance of collectors/recorders creating an
+&gt; accurate site name with which the grid reference can be validated.
+&gt; Quentin
+&gt;
+It's funny how often I hear people make this claim, yet the reality of 
+it is absurd in its precision. I once asked a friend of mine - an actual 
+world authority on georeferencing - what sort of offset would result for 
+a position in the US that was recorded in one map datum and displayed in 
+a different one. He said, with ominous tones, &quot;Why, that could easily be 
+100 meters error!&quot;. I laughed in his face, and offended him terribly. As 
+someone who manages a museum full of specimens we are presently 
+georeferencing, and as someone who studies mobile organisms, I find 
+several things about this absurd: (1) with very, very, very few 
+exceptions, one will typically not find a specimen label that can be 
+said to be accurate to within 100 meters. That actually includes most 
+labels that have GPS readings, since most specimen labels in existence 
+are attached to *insect* specimens, and since most entomologists who 
+carry GPS units take a single reading for a collecting site but wander 
+beyond that exact point, sometimes with a wandering radius approaching a 
+kilometer. Accordingly, the intrinsic uncertainty on a legacy 
+georeference (generally from 1-5 km) is typically MUCH greater than 
+whatever error could possibly result from using the wrong datum. (2) 
+More to the point, perhaps, is that prior to the invention of GPS units, 
+virtually no specimen labels actually GAVE a latitude/longitude, so the 
+odds of a label containing coordinates from any datum other than WGS 84 
+are very, very slim. That means that legacy material being georeferenced 
+NOW is almost all being given coordinates based on a resource like 
+Google Earth, /which uses WGS 84/. So, it doesn't make any difference at 
+all whether a data provider says anything about it; an aggregator that 
+*assumes* WGS 84 as default is almost never going to be wrong (and even 
+if so, the error radius is almost always large enough to encompass 
+this). (3) For a mobile organism, if one is using a georeference either 
+as an indicator of habitat (i.e., for GIS analyses) or for trying to go 
+back to re-collect additional specimens, a 100 meter error is, with 
+very, very, very few exceptions, utterly trivial. I have this vision of 
+a biologist with a GPS unit, staring intensely at the screen, walking to 
+the exact point the database gave them, looking up, and noticing that 
+they've just walked off the edge of a cliff, and then gravity takes 
+hold, /a la/ Wile E. Coyote. If you're within 100 meters of the spot a 
+specimen was collected, any failure to re-collect it is NOT going to be 
+because you were looking in the wrong place.
+
+In a practical sense, since the error radius is an essential parameter 
+of any legitimate georeferencing effort, and since that radius always 
+takes the *maximum* possible value, potential datum error almost never 
+would exceed that radius, and can therefore be safely ignored. Yes, I 
+know there will be cries of &quot;Heresy!&quot;, but of all the myriad things that 
+are LEGITIMATE causes for concern when one is producing or using 
+georeferenced data, the map datum is the *least* of our worries. Sure, 
+it would be NICE if we didn't introduce that sort of error, but it isn't 
+worth WORRYING about it - if I'm paying a data entry technician by the 
+hour, I'm not going to have them waste a single minute of their time 
+dealing with map datum issues as opposed to, say, making sure the label 
+doesn't give the wrong county, or have spelling errors. I can't imagine 
+ever being persuaded otherwise.
+
+Sincerely,
+
+-- 
+Doug Yanega      Dept. of Entomology       Entomology Research Museum
+Univ. of California, Riverside, CA 92521-0314     skype: dyanega
+phone: (951) 827-4315 (disclaimer: opinions are mine, not UCR's)
+              <A HREF="http://cache.ucr.edu/~heraty/yanega.html">http://cache.ucr.edu/~heraty/yanega.html</A>
+   &quot;There are some enterprises in which a careful disorderliness
+         is the true method&quot; - Herman Melville, Moby Dick, Chap. 82
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="124760.html">[Taxacom] looking for old taxonomic references: 1822-1940
+</A></li>
+        <LI>Next message: <A HREF="124762.html">[Taxacom] Data quality of aggregated datasets
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124761">[ date ]</a>
+              <a href="thread.html#124761">[ thread ]</a>
+              <a href="subject.html#124761">[ subject ]</a>
+              <a href="author.html#124761">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

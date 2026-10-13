@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> ITIS (an explanation of GBIF's data integration activities)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2004-June/092213.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">ITIS (an explanation of GBIF's data integration activities)</H1>
+    <B data-pagefind-meta="author">Roderic D. M. Page</B>
+    r.page at BIO.GLA.AC.UK<BR>
+    <I data-pagefind-meta="date">Wed Jun 23 22:13:05 CDT 2004</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="092211.html">ITIS (an explanation of GBIF's data integration activities)
+</A></li>
+        <LI>Next message: <A HREF="092214.html">ITIS (an explanation of GBIF's data integration
+              activities)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092213">[ date ]</a>
+              <a href="thread.html#092213">[ thread ]</a>
+              <a href="subject.html#092213">[ subject ]</a>
+              <a href="author.html#092213">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2004</span><!--beginarticle-->
+<PRE>I wonder whether the exchange standard for taxonomic name
+and concept data ( <A HREF="http://tdwg.napier.ac.uk/phpwiki/index.php)">http://tdwg.napier.ac.uk/phpwiki/index.php)</A> is the
+best place to start. The scheme itself is huge (does anybody enjoy
+reading these things?), and probably only of interest to those few
+who have large databases of names (as opposed to those who would be
+interested in contributing names to a database).
+
+For me quickest way towards the vision that Donald Hobern outlines is
+to get a simple standard for returning results from querying
+taxonomic databases. As an exercise I constructed a &quot;portal&quot; where a
+user to types in a name and ITIS, uBio, IPNI, and GenBank are all
+queried for that name (see
+<A HREF="http://darwin.zoology.gla.ac.uk/~rpage/MyToL/www/portal.html">http://darwin.zoology.gla.ac.uk/~rpage/MyToL/www/portal.html</A> --
+&quot;Phyllocladus&quot; is a good name to try). This is really a toy, but I
+was interested in seeing how easy it was to query existing databases
+to check the status of a name -- perhaps the most basic use of a
+taxonomic name database. Certainly, for my own phylogenetic projects
+this is what I need.
+
+Of course, each database has its own interface and means of returning
+data, and so the portal has to cope with everything from XML to plain
+text, and each database returns rather different kinds of information
+(ITIS being the most comprehensive).
+
+We need a simple, easily implemented standard way of asking questions
+of taxonomic databases. For example, it is pretty easy to get a
+Microsoft Excel spreadsheet to use SOAP to talk to an Internet
+database (see
+<A HREF="http://darwin.zoology.gla.ac.uk/~rpage/MyToL/www/excel.php">http://darwin.zoology.gla.ac.uk/~rpage/MyToL/www/excel.php</A> ) --
+wouldn't it be great if users had a list of names in a spreadsheet
+and could call an Excel function to check the status of those names?
+This is easy to do, and would seem to me to give people a much
+stronger incentive to get involved, rather than wade through database
+exchange schema.
+
+Lastly, Mary Barkworth alludes to the problem of data availability.
+ITIS and GenBank make all their data available by FTP, which is one
+reason why these databases are widely used in efforts to build name
+databases (ITIS is used by Species 2000, GBIF, SEEK, etc.). Other
+databases, such as IPNI which permit only a name (or a few) at a time
+are frustrating to use, and hence don't feature much in large scale
+efforts. Databases such as IPNI would be vastly more useful if their
+content was available for bulk downloading.
+
+There is a useful discussion of database interoperability in the
+&quot;Report from the NIH/NIAID/Wellcome Trust Workshop on Model Organism
+Databases&quot; (<A HREF="http://www.genome.gov/10006356">http://www.genome.gov/10006356</A> ). FTP and &quot;screen
+scrapping&quot;, which pretty much where we are at now, is listed as the
+worst level of interoperability (and we're lucky if we have FTP
+access. (I should mention that uBio and GenBank provide SOAP access).
+
+To make the vision happen we need compelling, practical examples of
+useful tools.
+
+Regards
+
+
+Rod
+
+
+
+--
+--------------------------------------------------------
+Professor Roderic D. M. Page
+Editor Elect, Systematic Biology
+DEEB, IBLS
+Graham Kerr Building
+University of Glasgow
+Glasgow G12 8QP
+United Kingdom
+
+
+Phone:    +44 141 330 4778
+Fax:      +44 141 330 2792
+email:    r.page at bio.gla.ac.uk
+web:      <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+reprints: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/pubs.html">http://taxonomy.zoology.gla.ac.uk/rod/pubs.html</A>
+
+Subscribe to Systematic Biology through the Society of Systematic
+Biologists Website:  <A HREF="http://systematicbiology.org">http://systematicbiology.org</A>
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="092211.html">ITIS (an explanation of GBIF's data integration activities)
+</A></li>
+        <LI>Next message: <A HREF="092214.html">ITIS (an explanation of GBIF's data integration
+              activities)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092213">[ date ]</a>
+              <a href="thread.html#092213">[ thread ]</a>
+              <a href="subject.html#092213">[ subject ]</a>
+              <a href="author.html#092213">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

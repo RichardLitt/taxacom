@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Estimation in GPS positioning
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2010-December/118327.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Estimation in GPS positioning</H1>
+    <B data-pagefind-meta="author">Bob Mesibov</B>
+    mesibov at southcom.com.au<BR>
+    <I data-pagefind-meta="date">Sat Dec  4 19:54:34 CST 2010</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="118326.html">[Taxacom] Estimation in GPS positioning
+</A></li>
+        <LI>Next message: <A HREF="118328.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#118327">[ date ]</a>
+              <a href="thread.html#118327">[ thread ]</a>
+              <a href="subject.html#118327">[ subject ]</a>
+              <a href="author.html#118327">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2010</span><!--beginarticle-->
+<PRE>Curtis Clark wrote:
+
+&quot;But we're estimating an integer. There exists an exact, correct value; it's not a measurement. If we knew that value, we'd never round it off (and see below).&quot;
+
+So the population example and my rounding off in that case isn't a good analogy with GPS measurement. OK, I agree, my bad. I used it to simplify the GPS story. I tried using a comparison of a balance and its sensitivity a few posts back, but that seemed to have fallen flat. Maybe you can come up with a better analogy. See if you can get it to cover Patrick Alexander's understanding that both the GPS manufacturer's accuracy claim and the GPS unit's accuracy declarations are maxima.
+
+&quot;If uncertainty is not error, it has no meaning statistically. It can't be used for inference, and no probability can be associated with it.&quot;
+
+Fine. Now go to the Darwin Core's specification of position 'uncertainty', and tell me what (position) 43.1129 N 142.8837 E and (uncertainty) 30 m means, statistically.
+
+&quot;If you add an uncertainty value to a rounded number, you are broadening the ellipse. If either value alone is a good measure of uncertainty, combining them throws away actual precision.&quot;
+
+Not if the smaller uncertainty is contained within the larger uncertainty. No 'precision' is thrown away. It sounds like you would prefer no. (2) of these 3:
+
+(1) 41 52 38.84 N 87 39 08.48 W (+/- ca 15 cm implied)
+(2) 41 52 38.84 N 87 39 08.48 W +/- 25 m
+(3) 41 52 39 N 87 39 08 W +/- 25 m
+(4) 41 52 39 N 87 39 08 W (+/- ca 15 m implied)
+
+What appears in many published records today is (1), and that's why I started this thread. I like rounding off to a lat/long appropriate to the measurement, and (4) isn't right, so I prefer (3).
+
+&quot;But at its basis, precision is about repeatability, and that's something that can be dealt with statistically.&quot;
+
+But repeatability doesn't come into the picture with one-off GPS measurements under field conditions with unknown measurement uncertainty. It's like measuring someone's weight just once on a balance with variable and unpredictable reliability. How does statistics help?
+-- 
+Dr Robert Mesibov
+Honorary Research Associate
+Queen Victoria Museum and Art Gallery, and
+School of Zoology, University of Tasmania
+Home contact: PO Box 101, Penguin, Tasmania, Australia 7316
+Ph: (03) 64371195; 61 3 64371195
+Webpage: <A HREF="http://www.qvmag.tas.gov.au/?articleID=570">http://www.qvmag.tas.gov.au/?articleID=570</A>
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="118326.html">[Taxacom] Estimation in GPS positioning
+</A></li>
+        <LI>Next message: <A HREF="118328.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#118327">[ date ]</a>
+              <a href="thread.html#118327">[ thread ]</a>
+              <a href="subject.html#118327">[ subject ]</a>
+              <a href="author.html#118327">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> New release of DELTA programs
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1994-May/014807.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">New release of DELTA programs</H1>
+    <B data-pagefind-meta="author">Mike Dallwitz</B>
+    miked at ENTO.CSIRO.AU<BR>
+    <I data-pagefind-meta="date">Fri May 20 15:47:46 CDT 1994</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="097976.html">Help: Wangenheim and his collections?
+</A></li>
+        <LI>Next message: <A HREF="050599.html">New release of DELTA programs
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#014807">[ date ]</a>
+              <a href="thread.html#014807">[ thread ]</a>
+              <a href="subject.html#014807">[ subject ]</a>
+              <a href="author.html#014807">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1994</span><!--beginarticle-->
+<PRE>New versions of the DELTA programs for MS-DOS are now available by gopher or
+anonymous ftp from the following Internet hosts.
+
+     huh.harvard.edu        (directory: /pub/software/delta/msdos)
+     life.anu.edu.au        (directory: /pub/biodiversity/delta/msdos)
+     spider.ento.csiro.au   (directory: /delta/msdos)
+
+The Internet distribution package consists of text files *.1st and
+self-expanding files *.exe. Download.1st contains this information about
+downloading the files, changes.1st contains the revision history of the
+programs, and delta.1st describes the procedure for installing the programs on
+an MS-DOS computer. The files must be transmitted in binary mode, set by the
+ftp command `binary'. (Failure to do so will result in the error message
+`HeaderC Error' when the .exe files are run.)
+
+Place the files in the directory C:\DELTA on your MS-DOS computer. Then follow
+the installation procedure described in delta.1st, but omit the XCOPY command.
+
+The date of this release is 16 May 1994. The changes from the previous
+release (17 December 1993) are as follows.
+
+
+DOCUMENTATION
+
+9 May 1994. The following documents are now available through DOCPRINT: TED
+User's Guide (draft of Edition 2); DELTA Standard (information for
+programmers); Introduction to Computer Images; References.
+
+
+TRANSLATIONS
+
+16 May 1994. Portuguese versions of the CONFOR vocabulary (VOCABP) and INTKEY
+(INKEYP) are now available. The translations were done by Mauro J. Cavalcanti,
+Departamento de Biologia Geral, Universidade Santa Ursula, Rua Fernando
+Ferrari, 75, Botafogo, 22231-040, Rio de Janeiro, RJ, Brasil. Phone:
+Phone +55 21 551 5542 Ext. 151. Internet: maurobio at ax.apc.org. German versions
+of INTKEY (INTKEYD and INTKEYDD) are now available. In INTKEYDD, the commands
+and options have been translated; therefore, input files such as INTKEY.INI
+must be translated before use with this version. The translation was done by
+H. G. Richter, Institut fu&quot;r Holzbiologie und Holzschutz, Leuschnerstrasse 91,
+2050 Hamburg 80, Germany. Phone +49 40 739 62 0. Fax +49 40 739 62 480.
+
+
+CONFOR
+
+Version 2.12, 16 May 1994. Error messages relating to file-open failures were
+improved. The error message when type-1 directives are not read was improved.
+A bug associated output of real numeric and text characters in INTKEY format
+was fixed (it could occur when the MAXIMUM NUMBER OF ITEMS was greater than
+1024). The OMIT LOWER FOR CHARACTERS directive now works as documented, that
+is, it does not add the word `to' before the upper values (if required, this
+word must be in the character list).
+
+
+DELFOR
+
+Version 2.09, 25 March 1994. A bug associated with recognizing directives
+starting with the same words was fixed.
+
+
+DIST
+
+Version 2.04, 8 March 1994. The error message on failure to open a scratch
+file was improved.
+
+
+INTKEY
+
+Version 3.11, 16 May 1994. Various minor bugs were fixed. A message `Press
+PageDown to continue' is displayed the first time the main display area fills.
+SET AUTOBEST 1 sets the parameter to the total number of taxa.
+
+
+KEY
+
+Version 2.07, 24 January 1994. Spurious warning messages associated with the
+ITEM ABUNDANCES directive were fixed.
+
+
+PCLASS
+
+Version 2.01, 8 February 1994. Checking for incorrect specification of the
+number of OTU's was improved. Options for output of tree descriptions in
+Phylip, Nexus, or Hennig86 formats were added, and the default extension of
+the tree-description files was changed from .PCL to .TRE.
+
+
+TED
+
+Version 2.06, 8 March 1994. A misleading error message given on attempting to
+make a file with an empty name was fixed. Box-arithmetic errors were made soft
+failures. Memory management was modified in the OS/2 version to allow editing
+of files up to about 5MB.
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="097976.html">Help: Wangenheim and his collections?
+</A></li>
+        <LI>Next message: <A HREF="050599.html">New release of DELTA programs
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#014807">[ date ]</a>
+              <a href="thread.html#014807">[ thread ]</a>
+              <a href="subject.html#014807">[ subject ]</a>
+              <a href="author.html#014807">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

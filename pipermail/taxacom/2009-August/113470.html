@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Yet another use for Google Maps
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2009-August/113470.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Yet another use for Google Maps</H1>
+    <B data-pagefind-meta="author">Jim Croft</B>
+    jim.croft at gmail.com<BR>
+    <I data-pagefind-meta="date">Tue Aug 11 06:18:15 CDT 2009</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="113469.html">[Taxacom] Yet another use for Google Maps
+</A></li>
+        <LI>Next message: <A HREF="113471.html">[Taxacom] taxonomy article in the NYTimes: Naming the World
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#113470">[ date ]</a>
+              <a href="thread.html#113470">[ thread ]</a>
+              <a href="subject.html#113470">[ subject ]</a>
+              <a href="author.html#113470">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2009</span><!--beginarticle-->
+<PRE>And there does not seem to be much of a limit to how many records can
+be displayed by Googlemaps.  An implementation accessing the
+Australia's Virtual Herbarium cache can render c. 30k records of the
+genus Acacia across the continent without blowing up (but slowly).
+For an on-line freebie this is pretty impressive.  c. 8k records for
+Dodonaea no problem.
+
+Anyone had other experiences displaying large numbers of records in
+Google maps?  Presumably the limit depends on available memory?
+
+jim
+
+On Tue, Aug 11, 2009 at 7:42 PM, Bob Mesibov&lt;mesibov at southcom.com.au&gt; wrote:
+&gt; Google Maps is a great online tool for planning and reviewing fieldwork. It offers zoomable road maps, the Google Earth satellite image layer and a hill-shaded terrain map with rough-enough contour lines. Like Google Earth, it also has Street View (where available on the ground), which gives ground-level views of sampling areas and their access.
+&gt;
+&gt; I've now started using Google Maps to plot specimen locality data as they accumulate. These data are entirely private - they haven't been uploaded to Google.
+&gt;
+&gt; The trick is very simple: build a KML file for the locality data and put it on a Web server to which you have access. Open Google Maps in a browser and put the URL for the KML file into the search bar, then click 'Search Maps'.
+&gt;
+&gt; If you've never had experience with KML: a KML file is just a text file with the suffix '.kml'. You can build one in any text editor. Below is the full text of a KML file which will plot 3 localities for species X - just the localities in this case, not any metadata. Latitude and longitude must be in decimal degree format, with the usual conventions that lats S of the Equator are negative and longs W of Greenwich are negative. The '0' after the long, lat is elevation, here set at ground level.
+&gt;
+&gt; &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&gt; &lt;kml xmlns=&quot;<A HREF="http://www.opengis.net/kml/2.2">http://www.opengis.net/kml/2.2</A>&quot;&gt;
+&gt; &lt;Folder&gt;
+&gt; &lt;Name&gt;SpeciesX&lt;/Name&gt;
+&gt; &lt;Placemark&gt;&lt;name&gt;&lt;/name&gt;&lt;description&gt;&lt;/description&gt;&lt;Point&gt;&lt;coordinates&gt;Long1,Lat1,0&lt;/coordinates&gt;&lt;/Point&gt;&lt;/Placemark&gt;
+&gt; &lt;Placemark&gt;&lt;name&gt;&lt;/name&gt;&lt;description&gt;&lt;/description&gt;&lt;Point&gt;&lt;coordinates&gt;Long2,Lat2,0&lt;/coordinates&gt;&lt;/Point&gt;&lt;/Placemark&gt;
+&gt; &lt;Placemark&gt;&lt;name&gt;&lt;/name&gt;&lt;description&gt;&lt;/description&gt;&lt;Point&gt;&lt;coordinates&gt;Long3,Lat3,0&lt;/coordinates&gt;&lt;/Point&gt;&lt;/Placemark&gt;
+&gt; &lt;/Folder&gt;
+&gt; &lt;/kml&gt;
+&gt;
+&gt; You can also open a .kml file on your own computer in the Google Earth application on your own computer (Windows users: right-click the file name in Explorer, 'Open with...' Google Earth). However, I'm finding Google Maps faster and more useful because of the road and terrain mapping.
+&gt;
+&gt; For a full treatment of KML, see <A HREF="http://code.google.com/apis/kml/documentation/kmlreference.html,">http://code.google.com/apis/kml/documentation/kmlreference.html,</A> but note that not all these features are supported in Google Maps.
+&gt; --
+&gt; Dr Robert Mesibov
+&gt; Honorary Research Associate
+&gt; Queen Victoria Museum and Art Gallery, and
+&gt; School of Zoology, University of Tasmania
+&gt; Home contact: PO Box 101, Penguin, Tasmania, Australia 7316
+&gt; (03) 64371195; 61 3 64371195
+&gt; Website: <A HREF="http://www.qvmag.tas.gov.au/mesibov.html">http://www.qvmag.tas.gov.au/mesibov.html</A>
+&gt;
+&gt; _______________________________________________
+&gt;
+&gt; Taxacom Mailing List
+&gt; Taxacom at mailman.nhm.ku.edu
+&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt;
+&gt; The Taxacom archive going back to 1992 may be searched with either of these methods:
+&gt;
+&gt; (1) <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt;
+&gt; Or (2) a Google search specified as: ?site:mailman.nhm.ku.edu/pipermail/taxacom ?your search terms here
+&gt;
+
+
+
+-- 
+_________________
+Jim Croft ~ jim.croft at gmail.com ~ +61-2-62509499 ~
+<A HREF="http://www.google.com/profiles/jim.croft">http://www.google.com/profiles/jim.croft</A>
+... in pursuit of the meaning of leaf ...
+... 'All is leaf' ('Alles ist Blatt') - Goethe
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="113469.html">[Taxacom] Yet another use for Google Maps
+</A></li>
+        <LI>Next message: <A HREF="113471.html">[Taxacom] taxonomy article in the NYTimes: Naming the World
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#113470">[ date ]</a>
+              <a href="thread.html#113470">[ thread ]</a>
+              <a href="subject.html#113470">[ subject ]</a>
+              <a href="author.html#113470">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,261 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] ZooBank Progress
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-April/124718.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] ZooBank Progress</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at bishopmuseum.org<BR>
+    <I data-pagefind-meta="date">Sat Apr 27 14:57:54 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="124717.html">[Taxacom] Lemurs was Bubble Science
+</A></li>
+        <LI>Next message: <A HREF="124719.html">[Taxacom] Lemurs was Bubble Science
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124718">[ date ]</a>
+              <a href="thread.html#124718">[ thread ]</a>
+              <a href="subject.html#124718">[ subject ]</a>
+              <a href="author.html#124718">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>Many thanks, Francisco!
+
+&gt; In 2003 we applied to the German Science Foundation to do link on page
+&gt; level the Linnean names with the original sources. They allowed is to
+create
+&gt; AnimalBase, but denied our request for a page level linking, arguing that
+this
+&gt; old literature is not of any interest any more today...
+&gt; 10 years later you are doing exactly this and the results looks great! I
+am
+&gt; really happy that you finally did it. This is very useful.
+
+Good to know!  The intention of GNA is to build these cross-links very
+broadly, and in a way that's very easy to access -- either by downloading a
+copy of the cross-link index, or by using simple services to access it in
+real time.  Back in the earliest days of ZooBank I wanted to establish a few
+examples of this sort of cross-linking functionality, and one of the
+cross-links I established was with AnimalBase. For example, if you go to the
+record for Linnaeus 1758 (which is a bit slow to load, because there are
+nearly 5000 names that are loaded for this publication), you can see the
+list of icons under the ZooBank LSID for all the cross-links:
+<A HREF="http://zoobank.org/References/2C6327E1-5560-4DB4-B9CA-76A0FA03D975">http://zoobank.org/References/2C6327E1-5560-4DB4-B9CA-76A0FA03D975</A>
+One of them is the record for AnimalBase.
+
+What I would *love* to do is establish all the cross-links between
+AnimalBase Authors, literature and names (I think you and I discussed this
+once -- I believe we were on the Tube in London at the time....)  That way,
+any link to BHL that is made via ZooBank, would simultaneously be made for
+AnimalBase.  Thus, you could either have a copy of the cross-linked index on
+your server that allows a page-link to BHL to appear on AnimalBase whenever
+someone establishes one on ZooBank; or we could make a simple service on
+GNUB (where the cross-links actually reside) such that your page could call
+the service for a given record of yours, and get back all the cross-links to
+other databases that GNUB knows about (including BHL, and others).  For
+example, if you passed in your AnimalBase reference identifier &quot;4&quot; to this
+service (as well as an indication that the &quot;4&quot; applies to an AnimalBase
+Reference identifier), then the service would give you back something that
+looks like this:
+
+------------------------------------------
+Domain:	Amphibian Species of the World References
+Identifier:	2794
+Link:		URL:
+<A HREF="http://research.amnh.org/vz/herpetology/amphibia/?action=bib&amp;id&#x27;94">http://research.amnh.org/vz/herpetology/amphibia/?action=bib&amp;id&#x27;94</A> 
+------------------------------------------
+Domain:	AnimalBase References
+Identifier:	4
+Link:
+<A HREF="http://www.animalbase.uni-goettingen.de/zooweb/servlet/AnimalBase/home/refer">http://www.animalbase.uni-goettingen.de/zooweb/servlet/AnimalBase/home/refer</A>
+ence?id=4 
+------------------------------------------
+Domain:	Biodiversity Heritage Library Title
+Identifier:	542
+Link:		<A HREF="http://www.biodiversitylibrary.org/bibliography/542">http://www.biodiversitylibrary.org/bibliography/542</A> 
+------------------------------------------
+Domain:	Botanicus
+Identifier:	b12066783
+Link:		<A HREF="http://www.botanicus.org/bibliography/b12066783">http://www.botanicus.org/bibliography/b12066783</A> 
+------------------------------------------
+Domain:	Digital Object Identifier	
+Identifier:	10.5962/bhl.title.542
+Link:		<A HREF="http://dx.doi.org/10.5962/bhl.title.542">http://dx.doi.org/10.5962/bhl.title.542</A> 
+------------------------------------------
+Domain:	Eschmeyer References	
+Identifier:	2787
+Link:
+<A HREF="http://researcharchive.calacademy.org/research/ichthyology/catalog/getref.as">http://researcharchive.calacademy.org/research/ichthyology/catalog/getref.as</A>
+p?id'87 
+------------------------------------------
+Domain:	FishBase - References	
+Identifier:	1652
+Link:		<A HREF="http://www.fishbase.org/References/FBRefSummary.php?id52">http://www.fishbase.org/References/FBRefSummary.php?id52</A> 
+------------------------------------------
+Domain:	Gallica
+Identifier:	ark:/12148/bpt6k99004c
+Link:		<A HREF="http://gallica.bnf.fr/ark:/12148/bpt6k99004c">http://gallica.bnf.fr/ark:/12148/bpt6k99004c</A> 
+------------------------------------------
+Domain:	Google Books
+Identifier:	yZM5AAAAcAAJ
+Link:		<A HREF="http://books.google.com/books?id=yZM5AAAAcAAJ">http://books.google.com/books?id=yZM5AAAAcAAJ</A> 
+------------------------------------------
+Domain:	Hymenoptera Online - References
+Identifier:	978
+Link:		<A HREF="http://hol.osu.edu/reference-full.html?id8">http://hol.osu.edu/reference-full.html?id8</A> 
+------------------------------------------
+Domain:	International Plant Names Index - Publications
+Identifier:	14210-2
+Link:		<A HREF="http://www.ipni.org/ipni/idPublicationSearch.do?id210-2">http://www.ipni.org/ipni/idPublicationSearch.do?id210-2</A> 
+------------------------------------------
+Domain:	Internet Archive Text Records
+Identifier:	mobot31753000798865
+Link:		<A HREF="http://archive.org/details/mobot31753000798865">http://archive.org/details/mobot31753000798865</A> 
+------------------------------------------
+Domain:	Library of Congress Control Number
+Identifier:	6017147
+Link:		<A HREF="http://lccn.loc.gov/06017147">http://lccn.loc.gov/06017147</A> 
+------------------------------------------
+Domain:	Tropicos Reference Records
+Identifier:	1254
+Link:		<A HREF="http://www.tropicos.org/Publication/1254">http://www.tropicos.org/Publication/1254</A> 
+------------------------------------------
+Domain:	World Registry of Marine Species - Reference
+Identifier:	8
+Link:		<A HREF="http://www.marinespecies.org/aphia.php?p=sourcedetails&amp;id=8">http://www.marinespecies.org/aphia.php?p=sourcedetails&amp;id=8</A> 
+------------------------------------------
+Domain:	ZooBank Publication
+Identifier:
+urn:lsid:zoobank.org:pub:2C6327E1-5560-4DB4-B9CA-76A0FA03D975
+Link:
+<A HREF="http://zoobank.org/urn:lsid:zoobank.org:pub:2C6327E1-5560-4DB4-B9CA-76A0FA03">http://zoobank.org/urn:lsid:zoobank.org:pub:2C6327E1-5560-4DB4-B9CA-76A0FA03</A>
+D975 
+------------------------------------------
+
+Obviously, we could include a whole bunch of other metadata as well (such as
+a link to the icon, more information about the Domain, etc.)
+
+The nice thing is that there is no limit to the number of cross-links we can
+establish using this system.  It's just a matter of building those links --
+which involves a process that can be partially automated, but also involves
+a lot of manual proofing.  This is where the &quot;crowd sourcing&quot; concept comes
+into play.  
+
+In any case, Francisco -- it' you're interested in building these crosslinks
+for AnimalBase, please contact me off-list and I can describe the process
+for doing this.  We have some online tools that are designed to make this
+process as painless as possible (for example, Donat Agosti cross-linked all
+800 journals from Hymenoptera Name Server in a few days using these tools).
+This, of course, applies to anyone on Taxacom who has a dataset with
+resolvable identifiers that would like to be cross-linked.  Even if you
+don't have resolvable identifiers, it's still worth building the cross-links
+so that your system can cross-link your records to all these other records
+and build links to them from your web pages.
+
+&gt; 1 - Sometimes you have incorrect names in your database. How can we
+&gt; correct them?
+
+ZooBank already allows for editing records.  There was a ZooBank Users
+Policy that was circulated to this list a while ago that explains who can
+edit what sorts of content. That Policy is in the final stages of
+ratification, but in brief, people with self-created (unverified) user
+accounts can edit their own records; verified users (someone has confirmed
+that you are who you say you are) can also edit records that he or she is an
+author of (even if that person didn't create the record); &quot;Editors&quot; can edit
+all content.
+
+&gt; 2 - Sometimes more than 1 page represent the original source, but 2 pages,
+&gt; which need 2 separate page links. In rare cases even 3 (I know some of
+those
+&gt; cases in Swainson 1840).
+
+Yes, I've given this a lot of thought.  Of course, there is absolutely
+nothing preventing us from linking to multiple pages -- that's easy.
+However, there seems to be a general consensus among the GNA-folk that one
+page should be selected as the specific page on which a name comes into
+existence.  Paul Kirk: this is your cure to chime in on this topic.  
+
+&gt; An example with both case at once is here:
+&gt; 
+&gt; <A HREF="http://zoobank.org/NomenclaturalActs/668885BB-153E-4A55-A65E-BA4EFA302618">http://zoobank.org/NomenclaturalActs/668885BB-153E-4A55-A65E-BA4EFA302618</A>
+&gt; 
+&gt; ZooBank says Buprestis gnita, correct would be Buprestis ignita Linn?us,
+&gt; 1758.
+&gt; Page numbers: 408, 824, both are important and should be linked.
+
+Ah!  Good catch, and good point!  Question to Paul Kirk:  How would you deal
+with this sort of situation?
+
+For now, I added the second page link, I corrected the spelling of the name,
+and I made a note about the pagination (go to the link above to see how I
+dealt with it).  For now, I think we'll keep the ZooBank webpage to only
+allow one page link to be made, and then I'll manage these exceptional cases
+for now.  We can always update the web page interface later, if we decide
+this is something that happens more often.
+
+Here's a question for people on this list:  In such cases, should both pages
+be displayed as thumbnails?  Is there an upper limit to how many pages can
+be displayed for a single name?  Is there a clear policy for what situations
+call for linking to multiple pages?  Should it include all pages that the
+name appears on, or just ones that have nomenclatural relevance?  In the
+latter case, how would &quot;nomenclatural relevance&quot; be defined?  These are the
+kinds of questions that the community should address.  My hope/dream/vision
+is that GNUB will become a resource of the taxonomic community, owned and
+maintained by the taxonomic community, and perpetuated for the taxonomic
+community (to paraphrase one of the more well-known former U.S. presidents).
+Thus, the taxonomic community should be the ones discussing these sorts of
+questions.
+
+In any case, I'll try to find the time to make similar corrections to all
+the names that appear on page 824.
+
+&gt; Here you can see a list with human-corrected Linnean 1758 new names:
+&gt; 
+&gt;
+<A HREF="http://www.animalbase.uni-goettingen.de/zooweb/servlet/AnimalBase/list/taxa?">http://www.animalbase.uni-goettingen.de/zooweb/servlet/AnimalBase/list/taxa?</A>
+from_reference=4
+
+Now, that's a link that I (and ZooBank) already knew about! (see above)
+
+Thanks again for your very helpful feedback!
+
+Aloha,
+Rich
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="124717.html">[Taxacom] Lemurs was Bubble Science
+</A></li>
+        <LI>Next message: <A HREF="124719.html">[Taxacom] Lemurs was Bubble Science
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124718">[ date ]</a>
+              <a href="thread.html#124718">[ thread ]</a>
+              <a href="subject.html#124718">[ subject ]</a>
+              <a href="author.html#124718">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

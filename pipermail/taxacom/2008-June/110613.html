@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Language tags for scientific names
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2008-June/110613.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Language tags for scientific names</H1>
+    <B data-pagefind-meta="author">Gregor Hagedorn</B>
+    g.m.hagedorn at gmail.com<BR>
+    <I data-pagefind-meta="date">Fri Jun 27 20:49:46 CDT 2008</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="110612.html">[Taxacom] Language tags for scientific names
+</A></li>
+        <LI>Next message: <A HREF="110614.html">[Taxacom] Language tags for scientific names
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#110613">[ date ]</a>
+              <a href="thread.html#110613">[ thread ]</a>
+              <a href="subject.html#110613">[ subject ]</a>
+              <a href="author.html#110613">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2008</span><!--beginarticle-->
+<PRE>Donald writes:
+&gt; 1. What do we (as the interested community) really want to represent by
+&gt; such codes?  When we want to give additional information about a
+&gt; particular scientific name (including e.g. code), why don't we just use
+&gt; proprietary tags (like the TDWG RDF TaxonName properties)?
+
+a) Because current technology of RDF does not seem to support markup
+of text in publications (xhtml, PDF, etc.) very well. This issue is
+not primarily about cases where the scientific name is an atomized
+piece of data.
+
+b) RDF is limited to RDF-based applications like XMP, but cannot be
+extended to more general xml-schema based data exchange, including
+EML, SDD or TaxonX.
+
+Please correct me if am wrong, I may not be up to date!
+
+&gt; 2. Is this compatible with the intended use of the language tag?  If
+&gt; something is a proper name with no translation into different languages,
+&gt; what would ISO expect?  Is the language code in any way appropriate in
+&gt; such a case?
+
+zxx is a standard ISO and IETF code for this case, nothing proposed to
+introduce here.
+
+zxx is especially important for binary media objects: many images are
+zxx, but some may be language specific.
+
+About processing: since xml:lang is part of the xml specification, any
+xml processor is known how to behave on a low level.
+
+&gt; I believe it is an abuse of the language code to use it to identify the
+&gt; nomenclatural code, and something which may alienate non-taxonomic
+&gt; users.  A single code, (null, &quot;zxx&quot;, &quot;tax&quot; or something) would encourage
+&gt; consistent interpretation better, but I still think we are
+&gt; misunderstanding the point of the language tag.  Surely its primary role
+&gt; is in situations in which there may be different versions of some
+&gt; content in different languages and software may choose the most
+&gt; appropriate for a given user.  This is not the case here and I suspect
+&gt; the ISO recommendation would be to use &quot;zxx&quot; or nothing at all.
+
+I have no problem if a consensus emerges that the nomenclatural codes
+should not be considered here.
+
+I disagree with your last point. Language tags are important for many
+purposes, including presentation or screen or for readers, for spell
+checking of documents with mixed language use (most people have to use
+several languages in parallel rather than choosing one). When using
+scientific organisms names in Chinese, arab, or hebrew texts,
+appropriate language tags would inform software on script, reading
+direction, etc.
+
+-----
+
+Examples for a free form text description of a species as it might be published:
+
+&lt;p xml:lang=&quot;la&quot;&gt;conidia singula, terminalia ... ex &lt;span
+xml:lang=&quot;zxx-taxon&quot;&gt;Rhododendron maximum&lt;/span&gt; in Germania&lt;/p&gt;
+&lt;p xml:lang=&quot;de&quot;&gt;Konidien einzeln, endst?ndig, isoliert aus &lt;span
+xml:lang=&quot;zxx-taxon&quot;&gt;Rhododendron maximum&lt;/span&gt; in Deutschland&lt;/p&gt;
+
+Gregor
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="110612.html">[Taxacom] Language tags for scientific names
+</A></li>
+        <LI>Next message: <A HREF="110614.html">[Taxacom] Language tags for scientific names
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#110613">[ date ]</a>
+              <a href="thread.html#110613">[ thread ]</a>
+              <a href="subject.html#110613">[ subject ]</a>
+              <a href="author.html#110613">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

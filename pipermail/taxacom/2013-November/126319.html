@@ -1,0 +1,258 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] FW: Real time batch spell checking of scientific names
+ now available via IRMNG
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-November/126319.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] FW: Real time batch spell checking of scientific names
+ now available via IRMNG</H1>
+    <B data-pagefind-meta="author">Tony.Rees at csiro.au</B>
+    Tony.Rees at csiro.au<BR>
+    <I data-pagefind-meta="date">Wed Nov 13 23:46:36 CST 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="126318.html">[Taxacom] Norton H. Nickerson memorial?
+</A></li>
+        <LI>Next message: <A HREF="126320.html">[Taxacom] Thesis and new species
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#126319">[ date ]</a>
+              <a href="thread.html#126319">[ thread ]</a>
+              <a href="subject.html#126319">[ subject ]</a>
+              <a href="author.html#126319">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>Dear Quentin (also copying to the list for interest),
+
+Further to your request as below I have added a facility for pre-formatting of exact and near match search results to the IRMNG search interface - look for the entry &quot;Response format:&quot; and check the option for &quot;Delimited (for upload e.g. to spreadsheet)&quot;. I have chosen the pipe delimiter (&quot;|&quot;) between fields (columns) but you can replace this by tabs or other preferred delimiters as desired after copying the content locally (commas are not recommended since they may appear within the included text strings).
+
+Now, entering a batch of names such as (subset below) and requesting &quot;delimited&quot; format, after pressing &quot;Check species name(s)&quot; you will get this (inside some generic informative text):
+
+At the IRMNG data search page <A HREF="http://www.cmar.csiro.au/datacentre/irmng/:">http://www.cmar.csiro.au/datacentre/irmng/:</A>
+
+(input names entered):
+
+Acanthophora glomerata
+Acrosterigma vlamigi
+Aeverrillia pilosa
+Alcospira rosea
+Alliodoris hedley
+Anadara articulata
+Ancilla cingulata
+Angula sphaeruia
+Anquipecten aurantiacus
+Arca avellana_MTQ
+Arca avellana_QMS
+Arcania foleolata
+Ashtoret planipes
+Australium tentoriformis
+Austrolabidia gracilipes
+Beania spinulosa
+Biflustra limosa
+
+(result: - NB for readability in this email I have added an additional line break between rows. The input name is given first, and may be reflected in multiple rows if multiple exact and/or near matches are detected; also note, as desired, matches can be restricted to just within a selectable higher taxonomic unit e.g. animal phyla, vertebrate classes/superclass &quot;Pisces&quot;, land plants, algae, fungi, bacteria, archaea)
+
+----------------
+
+input_name|sp_match_type|sp_edit_distance|species_name|authority|irmng_id|family|irmng_hierarchy|irmng_extant_flag|irmng_habitat_flag|syn_of_name|syn_of_irmng_id|irmng_remarks|genera_found
+
+
+
+Acanthophora glomerata|none||||||||||||Found the following exact or phonetic near matches on input genus name: Acanthopora Moseley, 1876 in family Stylasteridae (Animalia-Cnidaria-Hydrozoa-Anthoathecata) - phonetic near match; Acanthopora d'Orbigny, 1849 in family Cyclostomatida (awaiting allocation) (Animalia-Bryozoa-Stenolaemata-Cyclostomatida) - phonetic near match; Acanthophoria Gorjanovic-Kramberger, 1895 in family Pisces (awaiting allocation) (Animalia-Chordata-Pisces (awaiting allocation)-Pisces (awaiting allocation)) - phonetic near match; Acanthophora Borgmeier, 1922 in family Phoridae (Animalia-Arthropoda-Insecta-Diptera) - exact match; Acanthophora Sollas, 1873 in family Astrophorida (awaiting allocation) (Animalia-Porifera-Demospongea-Astrophorida) - exact match; Acanthophora J.V.F. Lamouroux, 1813 in family Rhodomelaceae (Plantae-Rhodophyta-Florideophyceae-Ceramiales) - exact match; Acanthopora Verrill, 1864 in family Faviidae (Animalia-Cnidaria-Anthozoa-Scleractinia) - phonetic near match; Acanthopora Young &amp; Young, 1876 in family Bryozoa (awaiting allocation) (Animalia-Bryozoa-Bryozoa (awaiting allocation)-Bryozoa (awaiting allocation)) - phonetic near match; Acanthophora Hulst, 1896 in family Geometridae (Animalia-Arthropoda-Insecta-Lepidoptera) - exact match; Acanthopora Valiukevicius, 2003 in family Ischnacanthidae (Animalia-Chordata-Acanthodii-Ischnacanthiformes) - phonetic near match; Acanthophora Merrill, 1918 in family Araliaceae (Plantae-Magnoliophyta-Magnoliopsida-Apiales) - exact match
+
+Acrosterigma vlamigi|near|1|Acrosterigma vlamingi|Wilson &amp; Stevenson, 1977|11121471|Cardiidae|Animalia-Mollusca-Bivalvia-Veneroida|E|M||||Found the following exact or phonetic near matches on input genus name: Acrosterigma Dall, 1900 in family Cardiidae (Animalia-Mollusca-Bivalvia-Veneroida) - exact match
+
+Aeverrillia pilosa|none||||||||||||Found the following exact or phonetic near matches on input genus name: Aeverrillia Marcus, 1941 in family Aeverrilliidae (Animalia-Bryozoa-Gymnolaemata-Ctenostomata) - exact match
+
+Alcospira rosea|near|1|Alocospira rosea|Macpherson, 1956|10889877|Olividae|Animalia-Mollusca-Gastropoda-Neogastropoda|E|M||||(no exact or phonetic match on input genus found)
+
+Alliodoris hedley|near|2|Alloiodoris hedleyi|O'Donoghue, 1924|11888095|Discodorididae|Animalia-Mollusca-Gastropoda-Nudibranchia|E|M|Sebadoris fragilis|11463592||Found the following exact or phonetic near matches on input genus name: Aleodorus Say, 1839 in family Staphylinidae (Animalia-Arthropoda-Insecta-Coleoptera) - phonetic near match; Aleodorus Say, 1833 in family Staphylinidae (Animalia-Arthropoda-Insecta-Coleoptera) - phonetic near match
+
+Anadara articulata|near|2|Anadara auriculata|(Lamarck, 1819)|11118075|Arcidae|Animalia-Mollusca-Bivalvia-Arcoida|E|M|||Authority given in CoL2006/ITS as Lamarck.|Found the following exact or phonetic near matches on input genus name: Anadora Kerremans, 1898 in family Buprestidae (Animalia-Arthropoda-Insecta-Coleoptera) - phonetic near match; Anadara Moore, 1883 in family Danaidae (Animalia-Arthropoda-Insecta-Lepidoptera) - exact match; Anadara Deshayes, 1830 in family Mollusca (awaiting allocation) (Animalia-Mollusca-Mollusca (awaiting allocation)-Mollusca (awaiting allocation)) - exact match; Anadara Gray, 1847 in family Arcidae (Animalia-Mollusca-Bivalvia-Arcoida) - exact match; Anadaria Kobelt, 1910 in family Mollusca (awaiting allocation) (Animalia-Mollusca-Mollusca (awaiting allocation)-Mollusca (awaiting allocation)) - phonetic near match
+
+
+
+(etc.)
+
+-------------------
+
+If you copy this text locally, replace all instances of &quot;|&quot; with the tab character, and paste it into e.g. an Excel spreadsheet you should have what you want I believe, suitable for some more standardized processing or input to other systems, as compared the alternative/default format previously offered which was designed primarily for human reading on the screen.
+
+In some cases the nearest match returned may be lexically rather distant (as indicated by the value for &quot;sp_edit_distance&quot; where 0 = exact match, 1 = 1 character different, etc.) so the more distant matches should be viewed with some caution as compared to the nearer ones (in other words human review is still required to accept/reject in each case: you could say that the computer is providing a coarse filter and the human reviewer can then refine it according to their specialist knowledge and expectations). Also as previously stated, the reference database being searched (IRMNG) is not currently as complete at species level as it is for genera, so species names or combinations with no plausible exact near match may simply be awaiting entry to the reference name set and may well be correctly spelled.
+
+In addition (as pointed out by another off-list comment) the lexically nearest match might be in a taxonomically remote group from that of the input name and therefore misleading: in such a case, at least where the higher taxonomic affinities of the input names are known and are consistent (e.g. all land plants, all fishes), selection of the relevant higher taxonomic filter before searching will produce a more taxonomically meaningful result.
+
+Hoping this is of value to yourself and other list persons (and thanks for comments thus far on this facility). I also received another off-list comment requesting the same (or similar) as a web service - I am not quite sure what form that response should take at this time but will think further on it...
+
+Regards - Tony
+
+
+
+&gt; -----Original Message-----
+&gt; From: Quentin Groom [mailto:quentin.groom at br.fgov.be]
+&gt; Sent: Tuesday, 29 October 2013 11:51 PM
+&gt; To: Rees, Tony (CMAR, Hobart)
+&gt; Subject: Re: [Taxacom] Real time batch spell checking of scientific
+&gt; names now available via IRMNG
+&gt; 
+&gt; Hi Tony,
+&gt; thanks for posting this! I was just looking for such a service.
+&gt; However,
+&gt; the output isn't quite what I need and I think it might be worth
+&gt; considering in future versions.
+&gt; I want to be able to link the names I have in my document with
+&gt; corrected
+&gt; names. So my preferred output would be a comma separated file with the
+&gt; input name in the first column and the rest of the information in
+&gt; subsequent columns, whether there is a match or not.
+&gt; The very human readable output you have at the moment does allow me to
+&gt; cut and paste long lists as much as I want to.
+&gt; Regards
+&gt; Quentin
+
+&gt; Dr. Quentin Groom
+&gt; (Botany and Information Technology)
+&gt; National Botanic Garden of Belgium
+&gt; Domein van Bouchout
+&gt; B-1860 Meise
+&gt; Belgium
+&gt; 
+&gt; ORCID: 0000-0002-0596-5376
+
+&gt; 
+&gt; Tony.Rees at csiro.au wrote:
+&gt; &gt; Dear Taxacomers,
+&gt; &gt;
+&gt; &gt; Mindful of the present round of acronym-bashing, I thought I might
+&gt; let you know of a useful new feature added today to my own aggregated
+&gt; biodiversity database &quot;IRMNG&quot;: real-time spelling correction of
+&gt; multiple supplied species names (previously this feature was only
+&gt; activated on single supplied names for performance reasons, to avoid
+&gt; potentially lengthy delays, now worked around).
+&gt; &gt;
+&gt; &gt; Here's how to use it:
+&gt; &gt;
+&gt; &gt; - Take a list of species names including potentially misspelled ones
+&gt; (can also have authorities appended too as available), one per line,
+&gt; max. around 1,500-2,000 at a time depending on word length.
+&gt; &gt;
+&gt; &gt; ** Here is an example small set of real world marine species data I
+&gt; am currently working on for a user in my agency, from a field survey
+&gt; list, excluding names which already have an exact match in the main
+&gt; IRMNG list):
+&gt; &gt;
+&gt; &gt; Acanthophora glomerata
+&gt; &gt; Acrosterigma vlamigi
+&gt; &gt; Aeverrillia pilosa
+&gt; &gt; Alcospira rosea
+&gt; &gt; Alliodoris hedley
+&gt; &gt; Anadara articulata
+&gt; &gt; Ancilla cingulata
+&gt; &gt; Angula sphaeruia
+&gt; &gt; Anquipecten aurantiacus
+&gt; &gt; Arca avellana_MTQ
+&gt; &gt; Arca avellana_QMS
+&gt; &gt; Arcania foleolata
+&gt; &gt; Ashtoret planipes
+&gt; &gt; Australium tentoriformis
+&gt; &gt; Austrolabidia gracilipes
+&gt; &gt; Beania spinulosa
+&gt; &gt; Biflustra limosa
+&gt; &gt; Botryocladia skottsbergi
+&gt; &gt; Bufonia margaritula
+&gt; &gt; Bugula johnsoni
+&gt; &gt; Bursa thersites
+&gt; &gt; Calliostoma monile
+&gt; &gt; Callyspongia schultzi
+&gt; &gt; Cancilla fillaris
+&gt; &gt; Caulerpa urvilliana
+&gt; &gt;
+&gt; &gt; (and so on)
+&gt; &gt;
+&gt; &gt; - Go to the IRMNG data access page at
+&gt; <A HREF="http://www.cmar.csiro.au/datacentre/irmng/,">http://www.cmar.csiro.au/datacentre/irmng/,</A> copy-and-paste the list
+&gt; into the search box
+&gt; &gt;
+&gt; &gt; - Press &quot;check species names&quot;
+&gt; &gt;
+&gt; &gt; Look for &quot;Species names not found&quot; at the bottom (obviously, names
+&gt; found will be resolved first, however in this case there are none).
+&gt; &gt;
+&gt; &gt; After each name not found there will be information about whether at
+&gt; least the genus name is held in that form (for something, may not be
+&gt; the intended target of course) then either the nearest matching species
+&gt; name or names, or a &quot;no match&quot; message at species level. Click on any
+&gt; near match name to get the full taxonomic hierarchy, synonym status
+&gt; where known, and other information as presently held in the database.
+&gt; &gt;
+&gt; &gt; For the record IRMNG could not be built without drawing on other
+&gt; &quot;names aggregator&quot; activities (acronyms if you must) including
+&gt; Catalogue of Life (only 2006 version as yet), WoRMS (World register of
+&gt; Marine Species) and more - eventually also to include names from The
+&gt; Plant List when that data is re-usable as advised earlier today (thanks
+&gt; Rafa?l!) -
+&gt; &gt; building on the efforts of their respective aggregators of course
+&gt; (since entering names individually would not be tractable). It is also
+&gt; not complete at this time (only 1.9 million species names held, lots
+&gt; including many fossil species and certain higher plants still missing),
+&gt; but will be added to further as time and resources may be available.
+&gt; Once I have all The Plant List data added plus more recent updates to
+&gt; Catalogue of Life included it should be useful to more people again.
+&gt; &gt;
+&gt; &gt; I hope at least some on this list may find this feature useful in
+&gt; your work and I am very happy for you to recommend the site to others
+&gt; as appropriate.
+&gt; &gt;
+&gt; &gt; Regards to all- Tony
+&gt; &gt;
+&gt; &gt;
+&gt; &gt; Dr Tony Rees
+&gt; &gt; Manager | Divisional Data Centre
+&gt; &gt; Marine and Atmospheric Research
+&gt; &gt; CSIRO
+&gt; &gt; E Tony Rees at csiro.au T +61 3 6232 5318
+&gt; &gt; CSIRO Marine and Atmospheric Research, GPO Box 1538, Hobart, TAS
+&gt; 7001, Australia
+&gt; &gt; www.cmar.csiro.au/datacentre
+&gt; &gt; Manager, OBIS Australia regional Node, <A HREF="http://www.obis.au">http://www.obis.au</A>
+&gt; &gt; LinkedIn profile: <A HREF="http://www.linkedin.com/pub/tony-rees/18/770/36">http://www.linkedin.com/pub/tony-rees/18/770/36</A>
+&gt; &gt;
+&gt; &gt; _______________________________________________
+&gt; 
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="126318.html">[Taxacom] Norton H. Nickerson memorial?
+</A></li>
+        <LI>Next message: <A HREF="126320.html">[Taxacom] Thesis and new species
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#126319">[ date ]</a>
+              <a href="thread.html#126319">[ thread ]</a>
+              <a href="subject.html#126319">[ subject ]</a>
+              <a href="author.html#126319">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

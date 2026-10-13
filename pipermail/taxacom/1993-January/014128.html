@@ -1,0 +1,272 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> UU ENCODE Problems (For Beta Users of MONTANUS)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1993-January/014128.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">UU ENCODE Problems (For Beta Users of MONTANUS)</H1>
+    <B data-pagefind-meta="author">JsNO BAR---NUNN</B>
+    nunn at NUTMEG.CS.NTU.EDU.AU<BR>
+    <I data-pagefind-meta="date">Sat Jan 23 15:28:13 CST 1993</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="097281.html">John Franks - Electronic Journals
+</A></li>
+        <LI>Next message: <A HREF="049920.html">UU ENCODE Problems (For Beta Users of MONTANUS)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#014128">[ date ]</a>
+              <a href="thread.html#014128">[ thread ]</a>
+              <a href="subject.html#014128">[ subject ]</a>
+              <a href="author.html#014128">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1993</span><!--beginarticle-->
+<PRE>MONTANUS:
+---------
+
+Hello Beta Users,
+
+
+Many (some) users have reported problems of not knowing how to convert
+your UU encoded Mail message back to the self extracted excutable that
+will unarchive the MONTANUS beta contents.
+
+If you have access to archie.au (or any archie sit for that matter), then you
+can download an MSDOS uuconverter to do the job. Or if your using a UNIX
+machine, you can compile the following C source code.
+
+To do it, cut where it says to cut, and type in the following commands
+to compile it:
+
+&gt; cc -o uuconvert uuconvert.c
+
+
+This will comple the C source code. You should then have a UNIX excutable
+called &quot;uuconvert&quot;.
+
+
+to uu unencode the mail file, type in:
+
+
+&gt; uuconvert &lt;mail file&gt;
+
+
+You should then have an MSDOS executable called &quot;mont_12b.exe&quot;.
+Transfer this to your PC machine and run it. It will then self extract
+the beta package.
+
+
+
+--uuconvert.c--------Cut Here-------
+
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+#define TRUE    1
+#define FALSE   0
+#define DEC(c)  (((c) - ' ') &amp; 077)
+#define LENGTH  150
+
+extern void uuread();
+FILE *out = NULL;
+char *Outname = NULL;
+
+void main(argc, argv)
+int argc;
+char *argv[];
+{
+  int error=FALSE;
+  FILE *infile;
+  char *Progname = argv[0];
+
+  if (argv[1][0] == '-' &amp;&amp; argv[1][1] == 'o') {
+    ++argv;
+    --argc;
+    if (argv[0][2] == '\0') {
+      if ((Outname = *++argv) == NULL) {
+        fprintf(stderr, &quot;Usage: %s [-o outputfile] [inputfile ...]\n&quot;,
+ Progname);
+        exit(1);
+      }
+      else --argc;
+    }
+    else Outname = argv[0] + 2;
+  }
+  if (argc &lt;= 1)
+    uuread(stdin);
+  else
+    while (--argc &gt; 0 &amp;&amp; !error)
+      if (error = ((infile = fopen(*++argv, &quot;r&quot;)) == NULL))
+        fprintf(stderr, &quot;%s: Can't open '%s' for input.\n&quot;, Progname, *argv);
+      else
+        uuread(infile), fclose(infile);
+  exit(error);
+}
+
+
+void uuread(infile)
+FILE *infile;
+{
+  char *s2, *s1, *s0, *tmp_s;
+  int length;
+  static char s[3 * (LENGTH + 1)];
+  static int echo_on = FALSE, started = FALSE, just_finished = FALSE;
+  static int line_length = 0, lines_to_go = 0, firstline=FALSE;
+
+  s0 = s;
+  s1 = s0 + (LENGTH + 1);
+  s2 = s1 + (LENGTH + 1);
+
+  s0[0] = s1[0] = s2[0] = '\0';  /* Clear strings */
+
+  while (fgets(s0, LENGTH, infile) != NULL)
+  {
+    s0[LENGTH] = '\0';  /* Make sure string is terminated */
+
+    if (just_finished)
+      just_finished = FALSE; /* yea I don't why either */
+
+    if (!started)
+      {
+        if (strncmp(s0, &quot;begin &quot;, 6) == 0)
+          {
+            int mode;
+            char dest[128];
+            firstline=TRUE;
+            started = echo_on = TRUE, line_length = 0, lines_to_go = 0;
+            sscanf(s0, &quot;begin %o %s&quot;, &amp;mode, dest);
+            if (Outname == NULL) Outname = dest;
+            if ((out = fopen(Outname, &quot;w&quot;)) == NULL) perror(Outname), exit(4);
+          }
+      }
+    else  /* started */
+    {
+      length = strlen(s0);
+      if (line_length == 0)
+        line_length = length;
+
+      if (echo_on)
+      {
+        lines_to_go = 0;
+        if (s0[0] != 'M' || length != line_length)
+        {
+          echo_on = FALSE;
+          lines_to_go = 2;  /* Lines to go before 'end' is expected */
+          if (s0[0] == ' ' || s0[0] == '`')
+            lines_to_go = 1;
+        }
+      }
+      else  /* !echo_on */
+        if (s0[0] == 'M' &amp;&amp; length == line_length
+          /* Simple check for non-uuencoded line */
+          &amp;&amp; strncmp(s0+1, &quot;essage-ID: &quot;, 11)) /* (a3 at rivm.nl) 9 jul 1992 */
+            echo_on = TRUE;
+        else if (lines_to_go &gt; 0)
+          if (lines_to_go == 2)
+            if (s0[0] == ' ' || s0[0] == '`')
+              lines_to_go = 1;
+            else
+              lines_to_go = 0;  /* Unexpected line, so break off */
+          else if (lines_to_go == 1)
+            if (strcmp(s0, &quot;end\n&quot;) == 0)
+            {
+              doaline(s2);
+              doaline(s1);
+              lines_to_go = 0;  /* Done. Break off */
+              just_finished = TRUE;
+              started = FALSE;
+            }
+            else
+              lines_to_go = 0;  /* Unexpected line, so break off */
+    }
+
+    if (firstline)
+      firstline=FALSE;
+    else if (echo_on)
+      doaline(s0), s0[0] = '\0';
+
+    tmp_s = s2, s2 = s1, s1 = s0, s0 = tmp_s;
+  }
+}
+
+/*
+ * copy from in to out, decoding as you go along.
+ */
+doaline(s)
+     char s[];
+{
+  char *bp;
+  int n;
+  if ((n=DEC(s[0])) &gt; 0)
+    {
+      bp = &amp;s[1];
+      while (n &gt; 0)
+        outdec(bp, n), bp += 4, n -= 3;
+    }
+}
+
+/*
+ * output a group of 3 bytes (4 input characters).
+ * the input chars are pointed to by p, they are to
+ * be output to file f.  n is used to tell us not to
+ * output all of them at the end of the file.
+ */
+outdec(p, n)
+     char *p;
+{
+  int c1, c2, c3;
+
+  c1 = DEC(*p) &lt;&lt; 2 | DEC(p[1]) &gt;&gt; 4;
+  c2 = DEC(p[1]) &lt;&lt; 4 | DEC(p[2]) &gt;&gt; 2;
+  c3 = DEC(p[2]) &lt;&lt; 6 | DEC(p[3]);
+  if (n &gt;= 1) putc(c1, out);
+  if (n &gt;= 2) putc(c2, out);
+  if (n &gt;= 3) putc(c3, out);
+}
+
+--------Cut Here--------------------
+
+
+
+
+----------------------Jason Nunn (aka JsNO BAR----NUNN)------------------------
+    \o     Fishing TopEnd Style: &quot;Give me a tinny, a six pack of Powers, a
+-----|-D     throw net, and some hand lines, and a lot of bloody sun screen,
+.\____/.\\.. I'll catch the biggest Barra you've ever seen&quot; - I Wish :)
+-------------NORTHERN TERRITORY UNIVERSITY, DARWIN, NT, AUSTRALIA--------------
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="097281.html">John Franks - Electronic Journals
+</A></li>
+        <LI>Next message: <A HREF="049920.html">UU ENCODE Problems (For Beta Users of MONTANUS)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#014128">[ date ]</a>
+              <a href="thread.html#014128">[ thread ]</a>
+              <a href="subject.html#014128">[ subject ]</a>
+              <a href="author.html#014128">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

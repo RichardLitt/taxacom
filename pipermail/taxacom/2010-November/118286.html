@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Inappropriate accuracy of locality data
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Inappropriate%20accuracy%20of%20locality%20data&In-Reply-To=%3C4CF57185.2000203%40achapman.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="118295.html">
+   <LINK REL="Next"  HREF="118289.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2010-November/118286.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Inappropriate accuracy of locality data</H1>
+    <B data-pagefind-meta="author">Arthur Chapman</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Inappropriate%20accuracy%20of%20locality%20data&In-Reply-To=%3C4CF57185.2000203%40achapman.org%3E"
+       TITLE="[Taxacom] Inappropriate accuracy of locality data">taxacom3 at achapman.org
+       </A><BR>
+    <I data-pagefind-meta="date">Tue Nov 30 15:49:57 CST 2010</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="118295.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+        <LI>Next message: <A HREF="118289.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#118286">[ date ]</a>
+              <a href="thread.html#118286">[ thread ]</a>
+              <a href="subject.html#118286">[ subject ]</a>
+              <a href="author.html#118286">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2010</span><!--beginarticle-->
+<PRE>Good to see this issue raised again
+
+A lot of the points your raise, Bob are covered in the booklet by John 
+Wieczorek and myself that was done as part of the BioGeomancer project. 
+The reference is below.
+
+Chapman, A.D.and Wieczorek, J. (eds). (2006). /Guide to Best Practices 
+for Georeferencing/. BioGeomancer Consortium. Copenhagen: Global 
+Biodiversity Information Facility. 90pp. ISBN: 87-92020-00-3. 
+<A HREF="http://www2.gbif.org/BioGeomancerGuide.pdf">http://www2.gbif.org/BioGeomancerGuide.pdf</A>
+
+
+It is available on line, and we would appreciate any feedback as we are 
+discussing the possibility of doing a new version. We wish to cover 
+uncertainty in more depth, especially the possibility of using 
+foot-printed uncertainty rather than just the point-radius method most 
+are using now. This would use polygons and include things like 
+buffering, roads, etc. if you know it was collected along the river, or 
+the road, it doesn't make much sense to then make the uncertainty a 
+large circle for which parts are no where near the river/road etc.  
+Another example, may be where a collection is made along the coast with 
+500 meter uncertainty, but the point-radius method will give you a big 
+circle, part of which is out to sea. Clipping to a buffer of the coast 
+line (depending on scale of the coast line) will give a much more 
+realistic picture of the uncertainty.
+
+For Google Earth, I tend to use a conservative uncertainty of about 100 
+meters (sometimes greater), although I know that in most cases it is a 
+good bit better than that; depending on the area, and the accuracy for 
+which you can determine the location - not easy where there are no roads!
+*
+Cheers
+
+Arthur D. Chapman*
+
+
+On 1/12/2010 4:00 AM, <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom-request at mailman.nhm.ku.edu</A> wrote:
+&gt;<i> Message: 3
+</I>&gt;<i> Date: Tue, 30 Nov 2010 07:06:06 +1100
+</I>&gt;<i> From: Bob Mesibov&lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">mesibov at southcom.com.au</A>&gt;
+</I>&gt;<i> Subject: Re: [Taxacom] Inappropriate accuracy of locality data
+</I>&gt;<i> To: TAXACOM&lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom at mailman.nhm.ku.edu</A>&gt;
+</I>&gt;<i> Message-ID:&lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">20101130070606.09bb0c0c.mesibov at southcom.com.au</A>&gt;
+</I>&gt;<i> Content-Type: text/plain; charset=US-ASCII
+</I>&gt;<i>
+</I>&gt;<i> Many thanks for the on- and off-list comments.
+</I>&gt;<i>
+</I>&gt;<i> A separate issue to the one I posted about is the best way to record or report the spatial uncertainty around a locality. No matter how you write a lat/long, it's still a point - a mathematical point with no horizontal spread at all.
+</I>&gt;<i>
+</I>&gt;<i> In real life there's a spread. Some of it derives from the uncertainty of the GPS reading, but often there's another element: perhaps you collected 3 specimens over ca 0.25 ha, or your bottom-grabber was some distance from your boat, or you couldn't get a reading in the forest so you walked to a nearby road, got a GPS reading there and estimated an offset.
+</I>&gt;<i>
+</I>&gt;<i> Best practice is to record a locality plus an uncertainty. In museum databases I have seen this as a field named 'Accuracy', 'Precision', 'Reliability' or 'Uncertainty'. Darwin Core calls it UncertaintyInMetres and defines it as:
+</I>&gt;<i>
+</I>&gt;<i> &quot;The horizontal distance (in meters) from the given decimalLatitude and decimalLongitude describing the smallest circle containing the whole of the Location. Leave the value empty if the uncertainty is unknown, cannot be estimated, or is not applicable (because there are no coordinates). Zero is not a valid value for this term.&quot;
+</I>&gt;<i>
+</I>&gt;<i> with this comment:
+</I>&gt;<i>
+</I>&gt;<i> &quot;Example: &quot;30&quot; (reasonable lower limit of a GPS reading under good conditions if the actual precision was not recorded at the time), &quot;71&quot; (uncertainty for a UTM coordinate having 100 meter precision and a known spatial reference system).&quot;
+</I>&gt;<i>
+</I>&gt;<i> I have been recording uncertainty in my own collecting-events databases for many years, but I was only brave enough to start publishing them as part of locality data in 2009. No reviewer or editor has complained so far...
+</I>&gt;<i>
+</I>&gt;<i> You might be using Google Earth, as I do, for estimating locations where your GPS couldn't get a good position reading. Please be aware that Google Earth imagery is not always spot-on, and can be offset by ca 20 m or more from the correct location. A workaround is to get a GPS reading from a nearby landmark which can be clearly seen in the satellite image, to 'calibrate' your Google Earth estimate of the sampling site location.
+</I>&gt;<i> -- Dr Robert Mesibov Honorary Research Associate Queen Victoria Museum 
+</I>&gt;<i> and Art Gallery, and School of Zoology, University of Tasmania Home 
+</I>&gt;<i> contact: PO Box 101, Penguin, Tasmania, Australia 7316 Ph: (03) 
+</I>&gt;<i> 64371195; 61 3 64371195 Webpage: 
+</I>&gt;<i> <A HREF="http://www.qvmag.tas.gov.au/?articleID=570">http://www.qvmag.tas.gov.au/?articleID=570</A>
+</I>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="118295.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+	<LI>Next message: <A HREF="118289.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#118286">[ date ]</a>
+              <a href="thread.html#118286">[ thread ]</a>
+              <a href="subject.html#118286">[ subject ]</a>
+              <a href="author.html#118286">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

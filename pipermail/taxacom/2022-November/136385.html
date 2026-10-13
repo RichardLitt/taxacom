@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Taxacom: Management of "unnecessary" names in databases
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2022-November/136385.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Taxacom: Management of "unnecessary" names in databases</H1>
+    <B data-pagefind-meta="author">Peter Uetz</B>
+    uetz at vcu.edu<BR>
+    <I data-pagefind-meta="date">Mon Nov 21 10:47:37 CST 2022</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="136384.html">Taxacom: Management of "unnecessary" names in databases
+</A></li>
+        <LI>Next message: <A HREF="136386.html">Taxacom: Management of "unnecessary" names in databases
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#136385">[ date ]</a>
+              <a href="thread.html#136385">[ thread ]</a>
+              <a href="subject.html#136385">[ subject ]</a>
+              <a href="author.html#136385">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2022</span><!--beginarticle-->
+<PRE>
+The Reptile Database does not have a good solution for that, although it would be good to have one.
+
+(you can stop reading here, unless you want to have some insights in data storage in the Reptile Database :)
+
+
+?Unnecessary? names as mentioned by Carlos would go to our ?comment&quot; field, which is where we also have other taxonomic notes. Since we are primarily a species database, any names for higher taxa go to the record of the type species (of genera, usually also the type genus of a family etc.) including synonyms (the type species of valid genera and selected other higher taxa are also listed in a structured format in our downloadable spreadsheet).
+
+Since our database is primarily a species database, we stash away much of the higher level taxonomy in a catch-all &quot;higher taxon&quot; field, just to collect the names. However, we focus on the main categories, such as order, family, subfamily, as well as genus, species, and subspecies.
+
+This is not quite satisfactory but capturing whole phylogenetic trees, including their synonymies, is rather awkward in databases. NCBI Taxonomy (GenBank) does that by having complex lists of parent-child relationships but this is only useful for certain searches and for quick orientation where a species (or other rank) is in the overall hierarchy. They don?t capture ?unnecessary? names sensu Carlos as far as I can tell.
+
+On the plus side, phylogenies can always be generated from sequences, and it would be highly desirable to have a user-friendly mechanism to generate a tree for any named clade in GenBank.
+
+One problem is that you can technically name any clade in a phylogeny ? which doesn?t make much sense in a rank-based taxonomy, which for most practical purposes uses only a few major ranks (species, genus, family etc.). For instance, hardly any authors have used the names ?Digilimbus? and ?Schmidtanolis? for certain clades of anoles ? and honestly, I don?t see a need to name every freaking clade in a tree (NCBI doesn?t list Digilimbus or Schmidtanolis either).
+
+That said, the Reptile Database could easily dump such names into the ?higher taxon? field of the database, so that you could search for all species belonging to that clade, but if we did this for every published clade name it would be a lot of work and a lot of names that hardly anybody uses.
+
+I hope that?s not too confusing ?
+
+Peter
+
+
+
+
+&gt; On Nov 21, 2022, at 8:22 AM, Carlos Alberto Mart?nez Mu?oz &lt;biotemail at gmail.com&gt; wrote:
+&gt; 
+&gt; Dear Taxacomers,
+&gt; Sometimes it happens that scientific names at a given superrank or subrank are subsumed into each other. For a pair of two names, this often means that the only remaining name becomes &quot;unnecessary&quot; as it contributes nothing to the classification.
+&gt; For example, in a family with two subfamilies, one subfamily is considered to be nested within the other and therefore synonymized. The result is one family with one subfamily, the latter being now &quot;unnecessary&quot; from the classification point of view.
+&gt; 
+&gt; Sometimes it happens that a subordinal name is elevated to order, including a slightly different ending. No new suborders are proposed. The old suborder name is now &quot;unnecessary&quot; for the classification.
+&gt; 
+&gt; How are you handling these &quot;unnecessary&quot; names in your databases? Do you keep them in the backend but make them invisible in the frontend? Do you tag them with some qualifier or status? Do you delete them? Something else?
+&gt; 
+&gt; Kind regards,
+&gt; Carlos
+&gt; 
+&gt; Carlos A. Mart?nez Mu?oz
+&gt; Myriatrix &lt;<A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttp%3A%2F%2Fmyriatrix.myspecies.info%2F%26source%3Dgmail-imap%26ust%3D1669641901000000%26usg%3DAOvVaw2Wu_mDXQq8mZn_lGLqjXcs&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7Cb21fde2178864df26ec808dacbe01a9f%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638046460644872969%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=%2BG1IdL%2Fke99te%2FVyUDenkxlHdNNv95Wq2tZRrFhtbsk%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttp%3A%2F%2Fmyriatrix.myspecies.info%2F%26source%3Dgmail-imap%26ust%3D1669641901000000%26usg%3DAOvVaw2Wu_mDXQq8mZn_lGLqjXcs&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7Cb21fde2178864df26ec808dacbe01a9f%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638046460644872969%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=%2BG1IdL%2Fke99te%2FVyUDenkxlHdNNv95Wq2tZRrFhtbsk%3D&amp;amp;reserved=0</A>&gt;
+&gt; ResearchGate profile &lt;<A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%3A%2F%2Fwww.researchgate.net%2Fprofile%2FCarlos_Martinez-Munoz%26source%3Dgmail-imap%26ust%3D1669641901000000%26usg%3DAOvVaw0gJZBqAQwBVfbYIAIhxRzo&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7Cb21fde2178864df26ec808dacbe01a9f%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638046460644872969%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=CsU6%2FsOYriE2tIpqq6Mr6zGV5k722tQ0FBT5GVT%2B34M%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%3A%2F%2Fwww.researchgate.net%2Fprofile%2FCarlos_Martinez-Munoz%26source%3Dgmail-imap%26ust%3D1669641901000000%26usg%3DAOvVaw0gJZBqAQwBVfbYIAIhxRzo&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7Cb21fde2178864df26ec808dacbe01a9f%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638046460644872969%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=CsU6%2FsOYriE2tIpqq6Mr6zGV5k722tQ0FBT5GVT%2B34M%3D&amp;amp;reserved=0</A>&gt;
+&gt; Myriapod Morphology and Evolution &lt;<A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%3A%2F%2Fwww.facebook.com%2Fgroups%2F205802113162102%2F%26source%3Dgmail-imap%26ust%3D1669641901000000%26usg%3DAOvVaw01V6NQfWkwpV2HQ5RX6O3t&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7Cb21fde2178864df26ec808dacbe01a9f%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638046460644872969%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=5Ug5k1OoEIuFKz8Hy0FSJ9Qf0tAlNJrfGdLpbAq4FsM%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%3A%2F%2Fwww.facebook.com%2Fgroups%2F205802113162102%2F%26source%3Dgmail-imap%26ust%3D1669641901000000%26usg%3DAOvVaw01V6NQfWkwpV2HQ5RX6O3t&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7Cb21fde2178864df26ec808dacbe01a9f%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638046460644872969%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=5Ug5k1OoEIuFKz8Hy0FSJ9Qf0tAlNJrfGdLpbAq4FsM%3D&amp;amp;reserved=0</A>&gt;
+&gt; 
+&gt; 
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="136384.html">Taxacom: Management of "unnecessary" names in databases
+</A></li>
+        <LI>Next message: <A HREF="136386.html">Taxacom: Management of "unnecessary" names in databases
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#136385">[ date ]</a>
+              <a href="thread.html#136385">[ thread ]</a>
+              <a href="subject.html#136385">[ subject ]</a>
+              <a href="author.html#136385">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

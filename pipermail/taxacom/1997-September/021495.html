@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Probabilities on Phylogenetic Trees
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1997-September/021495.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Probabilities on Phylogenetic Trees</H1>
+    <B data-pagefind-meta="author">Richard Zander</B>
+    bryo at COMMTECH.NET<BR>
+    <I data-pagefind-meta="date">Mon Sep  8 13:55:53 CDT 1997</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="104648.html">names
+</A></li>
+        <LI>Next message: <A HREF="057287.html">Probabilities on Phylogenetic Trees
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#021495">[ date ]</a>
+              <a href="thread.html#021495">[ thread ]</a>
+              <a href="subject.html#021495">[ subject ]</a>
+              <a href="author.html#021495">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1997</span><!--beginarticle-->
+<PRE>Ted Schultz wrote:
+&gt;
+&gt; I am confused by Richard Zander's recent comments on Taxacom about how
+&gt; phylogenetic trees have low &quot;posterior probabilities.&quot;
+&gt;
+&gt; Three questions:
+&gt;
+&gt; 1) How do you calculate the posterior probabilities of phylogenetic trees?
+
+Read carefully the excellent paper of
+Mau, B., M. A. Newton &amp; B. Larget. 1996. Bayesian phylogenetic inference
+via Markov chain Monte Carlo methods. Tech. Rep. 961, Dept. of
+Statistics, University of Wisconsin, Madison, July 1996.
+at <A HREF="http://www.stat.wisc.edu/~newton/papers/abstracts/tr961a.html">http://www.stat.wisc.edu/~newton/papers/abstracts/tr961a.html</A>
+(download the postscript file). Nice explanation there.
+
+
+&gt; Where do you obtain the prior probabilities that are a necessary part of
+&gt; the calculation of posterior probability?  (As I understand it,
+&gt; maximum-likelihood values are not such probabilities.)
+
+Right. Prior probabilities are the probabilities of the hypotheses
+before knowledge of the data set. If there are three trees possible, the
+prior probabilities of each are 1/3. The regularity assumption is that
+all are of equal probability, prior to knowledge of the data set.
+
+&gt;
+&gt; 2) Where in a reading of Farris 1973 do you find a proof that phylogenetic
+&gt; trees have low posterior probability?
+
+That was my point, he left it out for some reason. By extention, his
+discussion that A tree one step longer than the shortest tree has in
+comparison a 1/4 probability of being correct means that you can sum the
+probabilities of all trees one step longer...and as A tree two steps
+longer has a 1/16 probablility then you must sum the probabilities of
+all trees two steps longer. The logic is clearly that two state changes
+are half as probable as one state change.
+
+&gt;
+&gt; 3) If a tree topology is 99% correct and 1% incorrect, does that tree fall
+&gt; into the category of &quot;incorrect&quot;?  If so, this might explain why any
+No.
+
+tree
+&gt; topology has a low probability of being 100% correct, but a high
+&gt; probability of being, say, 95% correct.  (I can't say for certain, however,
+&gt; since I don't know where these posterior probabilities are coming from.)
+&gt;
+&gt; A way of dealing with the fact that any given tree may have a low
+&gt; probability of being 100% correct (in parsimony or likelihood methods) is
+&gt; to include in your solution set multiple trees such that, together, you are
+&gt; confident (at, for instance, the 95% level) that the set includes the
+&gt; correct tree.  This &quot;error&quot; range on trees has been advocated for some
+Wonderful, if you can do so. Let's take the case of Bremer support.
+Suppose you have Bremer support for a subclade that indicates that the
+branch is stable for all trees 1, 2 and 3 steps longer than the shortest
+tree. That's a lot of trees, and they all have relatively higher
+posterior probability of being the same as the true tree than all the
+other trees possible. Now what must be proved, so that you have more
+evidence for than against, is that the sum of the probabilities of all
+trees through three steps longer than the shortest tree exceed .5. The
+cichlid fish study of 32 terminal taxa cited above deals with 10 to the
+40th power possible hypotheses (trees) (says Mau et al., p. 14). The sum
+of the posterior probablilities of the 14 most likely trees is .50. This
+is encouraging, and these trees (topologies are shown in parenthetical
+notation) are somewhat similar but subclades of subtopologies are not
+alike. Only two subtopologies occurred in all trees in the .5 cumulative
+credible region, these two consisting of 7 taxa and 5 taxa,
+respectively, and these groups fit a requirement for more evidence for
+than against. (The paper is dense, I may have misread something here.)
+THEN we come to whether the various assumptions (biological clock, other
+regularity impositions) really allow some kind of phylogenetic
+reconstruction, or are we just clustering, again, taxa by shared
+presumeably advanced traits and merely are interpreting this as
+phylogenetic reconstruction.
+
+
+
+--
+
+*******************************************************
+Richard H. Zander, Buffalo Museum of Science
+1020 Humboldt Pkwy, Buffalo, NY 14211 USA bryo at commtech.net
+*******************************************************
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="104648.html">names
+</A></li>
+        <LI>Next message: <A HREF="057287.html">Probabilities on Phylogenetic Trees
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#021495">[ date ]</a>
+              <a href="thread.html#021495">[ thread ]</a>
+              <a href="subject.html#021495">[ subject ]</a>
+              <a href="author.html#021495">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Renumbering DELTA character lists
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1994-November/015254.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Renumbering DELTA character lists</H1>
+    <B data-pagefind-meta="author">Mike Dallwitz</B>
+    miked at ENTO.CSIRO.AU<BR>
+    <I data-pagefind-meta="date">Thu Nov 17 12:22:11 CST 1994</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="098407.html">Job announcement
+</A></li>
+        <LI>Next message: <A HREF="051046.html">Renumbering DELTA character lists
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#015254">[ date ]</a>
+              <a href="thread.html#015254">[ thread ]</a>
+              <a href="subject.html#015254">[ subject ]</a>
+              <a href="author.html#015254">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1994</span><!--beginarticle-->
+<PRE>                                                               17 November 1994
+
+
+
+&gt; In the process of using the Delta program for my revision of
+&gt; Dracontium, I have to frequently modify the chars file by adding,
+&gt; removing, or changing sequencing of characters. After each
+&gt; modification, I have to renumber every character after the
+&gt; correction. Doing it one by one is really time consuming and it
+&gt; is easy to make more mistakes. I asked Hong Song, a computer
+&gt; expert at the Missouri Botanical Garden, to write a renumbering
+&gt; program [RENUM] to do the job.
+&gt;
+&gt; Guanghua Zhu &lt;zhu at mobot.org&gt;
+
+This program works well, but perhaps ought to carry a `data health' warning.
+Building up a good DELTA character list in isolation from its intended
+applications is difficult for an experienced user, and almost impossible for a
+novice.
+
+The first problem is avoiding errors in the syntax (which is not checked by
+RENUM). A misunderstanding of the syntax (such as omitting a delimiter) could
+lead to the same kind of error occurring hundreds of times in a long character
+list, and the need for extensive editing.
+
+Syntax errors, while looming large for the beginner, are trivial and relatively
+easily fixed. The difficult part of constructing a character list is optimizing
+the wording and taxonomic content. It is extremely difficult to foresee how
+these will impinge on various applications. If problems are not detected early
+in the process (particularly before large amounts of data have been entered),
+the necessary revisions can be very time-consuming.
+
+The recommended procedure for building up a DELTA data set is as follows.
+First, construct a fairly short character list, say 5-10 characters including
+examples of all character types, and a corresponding specifications file.
+(Experienced users can safely use a much larger list at this stage.) Check this
+list by running it through CONFOR. Next enter and check data for 2 or 3 taxa.
+Then try these data with ALL of the intended applications, e.g. generation of
+natural-language descriptions, generation of printed keys, cladistic and
+phenetic analyses, interactive identification and information retrieval. Then
+add a few more characters and taxa, and repeat the trials. If it is your first
+attempt at using the DELTA programs, it would be wise to ask a more experienced
+user (who need not have any knowledge of your subject matter) to comment on the
+data and the products at an early stage.
+
+The RENUM program is of little or no use in this process, as it does not
+renumber the other data and directives files (ITEMS, SPECS, TONAT, KEY,
+INTKEY.INI, etc.) The necessary procedures are described in Section 11 of the
+DELTA Primer.
+
+It is very important NOT to build up a data set while testing only one
+application, such as generation of natural-language descriptions, with the
+intention of doing the others when the data are complete. Doing so almost
+always leads to poor results, and the need for extensive revision. A related
+problem is postponing the specification of character dependencies until the
+data are complete. We have seen so many disasters arising from this that (at
+the suggestion of Leslie Watson) the next version of CONFOR will give a warning
+if there are more than 20 characters and dependencies have not been specified.
+
+Mike Dallwitz                                  Internet md at ento.csiro.au
+CSIRO Division of Entomology                   Fax +61 6 246 4000
+GPO Box 1700, Canberra ACT 2601, Australia     Phone +61 6 246 4075
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="098407.html">Job announcement
+</A></li>
+        <LI>Next message: <A HREF="051046.html">Renumbering DELTA character lists
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#015254">[ date ]</a>
+              <a href="thread.html#015254">[ thread ]</a>
+              <a href="subject.html#015254">[ subject ]</a>
+              <a href="author.html#015254">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

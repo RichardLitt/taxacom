@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] running PAUP
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2008-December/111449.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] running PAUP</H1>
+    <B data-pagefind-meta="author">Sergio Vargas</B>
+    sevragorgia at gmail.com<BR>
+    <I data-pagefind-meta="date">Thu Dec 11 16:14:17 CST 2008</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="111448.html">[Taxacom] Proposed ICZN amendments on electronic publishing
+</A></li>
+        <LI>Next message: <A HREF="111450.html">[Taxacom] Proposed ICZN amendments on electronic publishing
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#111449">[ date ]</a>
+              <a href="thread.html#111449">[ thread ]</a>
+              <a href="subject.html#111449">[ subject ]</a>
+              <a href="author.html#111449">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2008</span><!--beginarticle-->
+<PRE>Hi:
+
+A note on CIPRES. If the run takes more than 72 hrs it may be killed!!!
+
+You could also try this cluster:
+
+<A HREF="https://www.bioportal.uio.no/">https://www.bioportal.uio.no/</A>
+
+you need an account and a PAUP license, and the jobs are allowed to run...
+and run, and run!
+
+Now... in bioportal.uio.no PAUP doesn't run in parallel. You'll have a
+single machine running your analysis until completion. You will also need a
+batch file. A matrix of about 600 nucleotides and 80 taxa took about three
+weeks to finish using the following &quot;tricks&quot;.
+
+Some advice with PAUP, if you are running a bootstrap analysis you may want
+to turn the MULTTREES option off, this will speed up the analysis with
+little or no impact on the result. Furthermore, you can restrict the number
+of rearrangement PAUP does on each replicate. I've seen that the score of
+the tree does not change after about 10000 rearrangements, though this is
+data-set specific. You may want to check first, using say 2 or 3 reps, how
+many rearrangements are ok for your data set, and then limit the number of
+rearrangement per replicate. This will considerably speed the analysis.
+
+I am assuming, based on the size of your matrix, you have molecular data. If
+so, you could try GARLI for ML. I have access to a small cluster were I
+could run your data if you provide the garli batch file (I could though send
+you some example). Your matrix should take a couple of days to run, if every
+thing goes as expected (we are testing the cluster and GARLI).
+
+If you need a parsimony analysis you could try TNT, which allows more
+advance tree search techniques and it is free (as in free bier!). I you
+still want to use PAUP you could try PRAP to set a parsimony ratched with
+PAUP...
+
+If you send the command lines you are using to set PAUP, may be some could
+suggest some better tricks.
+
+good luck.
+
+Sergio Vargas, M.Sc.
+Center for Marine and Limnological Research
+University of Costa Rica
+
+-- 
+&quot;Si nos portamos bien, est? prometido, veremos las mismas im?genes y
+escucharemos los mismos sonidos y vestiremos las mismas ropas y comeremos la
+misma chatarra y estaremos solos de la misma soledad dentro de casas iguales
+en barrios iguales de ciudades iguales donde respiraremos la misma basura y
+serviremos a nuestros autom?viles con la misma devoci?n y responderemos a
+las ordenes de las mismas m?quinas en un mundo que ser? maravilloso para
+todo lo que no tenga piernas ni patas ni alas ni ra?ces&quot;
+
+E. Galeano
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="111448.html">[Taxacom] Proposed ICZN amendments on electronic publishing
+</A></li>
+        <LI>Next message: <A HREF="111450.html">[Taxacom] Proposed ICZN amendments on electronic publishing
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#111449">[ date ]</a>
+              <a href="thread.html#111449">[ thread ]</a>
+              <a href="subject.html#111449">[ subject ]</a>
+              <a href="author.html#111449">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

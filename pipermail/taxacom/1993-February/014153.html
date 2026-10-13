@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> New release of DELTA programs
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20New%20release%20of%20DELTA%20programs&In-Reply-To=%3Cmailman.594.1157126625.2564.taxacom%40mailman.nhm.ku.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="097308.html">
+   <LINK REL="Next"  HREF="049945.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1993-February/014153.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">New release of DELTA programs</H1>
+    <B data-pagefind-meta="author">Mike Dallwitz</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20New%20release%20of%20DELTA%20programs&In-Reply-To=%3Cmailman.594.1157126625.2564.taxacom%40mailman.nhm.ku.edu%3E"
+       TITLE="New release of DELTA programs">miked at ENTO.CSIRO.AU
+       </A><BR>
+    <I data-pagefind-meta="date">Wed Feb 10 13:58:32 CST 1993</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="097308.html">Macintosh Hypercard herbarium Toolkit
+</A></li>
+        <LI>Next message: <A HREF="049945.html">New release of DELTA programs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#14153">[ date ]</a>
+              <a href="thread.html#14153">[ thread ]</a>
+              <a href="subject.html#14153">[ subject ]</a>
+              <a href="author.html#14153">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>1993</span><!--beginarticle-->
+<PRE>New versions of the DELTA programs for MS-DOS are now available on the Taxacom
+FTP server. The files are in the directory /pub/software/delta/msdos of the
+anonymous FTP area at huh.harvard.edu.
+
+The distribution package consists of text files *.1st and self-expanding files
+*.exe. Download.1st contains this information about downloading the files,
+changes.1st contains the revision history of the programs, and delta.1st
+describes the procedure for installing the programs on an MS-DOS computer. The
+files must be transmitted in binary mode, set by the ftp command `binary'.
+(Failure to do so will result in the error message `HeaderC Error' when the
+.exe files are run.)
+
+Place the files in the directory C:\DELTA on your MS-DOS computer. Then follow
+the installation procedure described in delta.1st, but omit the XCOPY command.
+
+The date of this release is 9 February 1993. The changes from the previous
+release (15 October 1992) are as follows.
+
+
+CONFOR
+
+Version 2.06, 16 December 1992. The KEY STATES directive was implemented for
+TRANSLATE INTO DIST FORMAT. TRANSLATE INTO HENNIG FORMAT was modified to
+remove non-alphanumeric characters from item names. CHINESE FORMAT was
+modified to ensure that punctuation marks are not placed at the beginnings of
+lines.
+
+DELFOR
+
+Version 2.05, 4 February 1993. The directive CHINESE FORMAT was added. Checks
+for control characters in input files were removed. The program now processes
+the different forms of the INTKEY SET commands without warning messages. A bug
+causing failure to handle nested comments at the start of a line was fixed.
+
+INTKEY
+
+Version 3.03, 4 February 1993. Recall of previous commands was implemented.
+The responsiveness during BEST calculation was improved. A command DISPLAY
+CONTINUOUS was added. Altering the value of a controlling character does not
+now delete the dependent characters if they are consistent with the new value.
+Processing of an input file can now be terminated (by Alt+Stop) when an error
+occurs. Use of 8-bit ASCII characters (e.g. accented characters) was
+implemented. The lower to upper case translation table can be customized in
+the help file to allow the use of different code pages. The help file can now
+be specified on the DOS command line: INTKEY /h=filename (to allow the use of
+different language versions without renaming the help file to INTKEY.HLP). The
+indexes in the data files are recreated if any of the keywords do not match
+those in the help file. A message was added for displaying the name and
+address of the translator of a help file. Various bugs were fixed.
+
+TED
+
+Version 2.01, 5 February 1993. File names are now reported in error messages.
+The maximum length of edited lines was increased to 256. The program is now
+swapped out of conventional memory when shelling to DOS (the '*' command).
+Failure to find a box file specified on the command line now causes exit with
+error status 255. The status word `VRSN' was added. Ctrl/C and Ctrl/Break now
+cause exit from loops. Various bugs were fixed.
+
+TO
+
+21 December 1992. TO.COM, which replaces TO.BAT, is an enhancement of the MS-
+DOS CD command. The line
+    SET CDPATH=.;..;\
+should be added to AUTOEXEC.BAT (see TO.DOC for more information). TO is a
+renamed version of MYCD, by J. Martin Borden (att!granjon!marty or
+marty%garage.att.com).
+
+TYPSET
+
+Version 2.01, 5 February 1993. A driver was added for the HP Deskjet 500.
+Enter TYPSET /? at the MS-DOS prompt for a list of options.
+
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="097308.html">Macintosh Hypercard herbarium Toolkit
+</A></li>
+	<LI>Next message: <A HREF="049945.html">New release of DELTA programs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#14153">[ date ]</a>
+              <a href="thread.html#14153">[ thread ]</a>
+              <a href="subject.html#14153">[ subject ]</a>
+              <a href="author.html#14153">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

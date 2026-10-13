@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Atlantis Botanic Gardens Taxonomic Database
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Atlantis%20Botanic%20Gardens%20Taxonomic%20Database&In-Reply-To=%3C20061115114527.3a65ca77.mole%40morris.net%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="108193.html">
+   <LINK REL="Next"  HREF="108195.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2006-November/108194.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Atlantis Botanic Gardens Taxonomic Database</H1>
+    <B data-pagefind-meta="author">Paul J. Morris</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Atlantis%20Botanic%20Gardens%20Taxonomic%20Database&In-Reply-To=%3C20061115114527.3a65ca77.mole%40morris.net%3E"
+       TITLE="[Taxacom] Atlantis Botanic Gardens Taxonomic Database">mole at morris.net
+       </A><BR>
+    <I data-pagefind-meta="date">Wed Nov 15 10:45:27 CST 2006</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="108193.html">[Taxacom] Atlantis Botanic Gardens Taxonomic Database
+</A></li>
+        <LI>Next message: <A HREF="108195.html">[Taxacom] Seed plants of Fiji
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#108194">[ date ]</a>
+              <a href="thread.html#108194">[ thread ]</a>
+              <a href="subject.html#108194">[ subject ]</a>
+              <a href="author.html#108194">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2006</span><!--beginarticle-->
+<PRE>Eric,
+
+   Several others are doing the same sort of thing.  Unless the database
+is on the same machine as the client, or the taxonomic tree is small,
+designing how data is loaded into the tree control involves tradeoffs
+resulting from network transport time.  Both BioLink and the OBIS
+Indo-Pacific Mollusc project's database tool use tree controls to browse
+the taxonomic heirarchy, but approach the problem differently.  BioLink
+used an Active X control that requeried the database on opening each
+node of the tree.  The Indo-Pacifc mollusc database loads a set of nodes
+and all of their children into a Java Swing tree control.  Querying the
+database on opening each node for its children becomes unusable with a
+slow network connection, pre-loading an entire large tree becomes
+unusable with large taxonomic heirarchies.  With large trees and slow
+network latencies, adaptively adding child nodes trying to keep ahead of
+a user opening nodes on the control might be the best solution.  in the
+Indo-Pacific Mollusc Project the browser lets the user preload all of an
+entire subtree (a family) or a set of subtrees (several families),
+reducing the initial delay from that involved in loading the entire
+taxonomic heirarchy, and operating much faster than querying the
+database for children on each mouse click that opened a parent node.   
+
+<A HREF="http://data.acnatsci.org/obis/docs/usingtoolkit.html">http://data.acnatsci.org/obis/docs/usingtoolkit.html</A>
+
+Merry Snailing,
+-Paul
+
+On Wed, 15 Nov 2006 16:52:55 +0100
+Eric Gouda &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">e.j.gouda at bio.uu.nl</A>&gt; wrote:
+
+&gt;<i> As far as I know, it is the only taxonomic database presenting the 
+</I>&gt;<i> taxonomic data in a tree structure,
+</I>
+--------------
+Paul J. Morris
+Biodiversity Informatics Manager
+Harvard University Herbaria/Museum of Comparative Zoölogy
+<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">mole at morris.net</A>  AA3SD  PGP public key available
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="108193.html">[Taxacom] Atlantis Botanic Gardens Taxonomic Database
+</A></li>
+	<LI>Next message: <A HREF="108195.html">[Taxacom] Seed plants of Fiji
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#108194">[ date ]</a>
+              <a href="thread.html#108194">[ thread ]</a>
+              <a href="subject.html#108194">[ subject ]</a>
+              <a href="author.html#108194">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

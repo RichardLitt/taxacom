@@ -1,0 +1,271 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] iSpecies with Wikipedia
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20iSpecies%20with%20Wikipedia&In-Reply-To=%3CBAE27A1D-BF17-491D-AC15-0C716F8314F8%40bio.gla.ac.uk%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="110145.html">
+   <LINK REL="Next"  HREF="110148.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2008-March/110147.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] iSpecies with Wikipedia</H1>
+    <B data-pagefind-meta="author">Roderic Page</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20iSpecies%20with%20Wikipedia&In-Reply-To=%3CBAE27A1D-BF17-491D-AC15-0C716F8314F8%40bio.gla.ac.uk%3E"
+       TITLE="[Taxacom] iSpecies with Wikipedia">r.page at bio.gla.ac.uk
+       </A><BR>
+    <I data-pagefind-meta="date">Tue Mar 25 16:29:20 CDT 2008</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="110145.html">[Taxacom] iSpecies with Wikipedia
+</A></li>
+        <LI>Next message: <A HREF="110148.html">[Taxacom] iSpecies with Wikipedia
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#110147">[ date ]</a>
+              <a href="thread.html#110147">[ thread ]</a>
+              <a href="subject.html#110147">[ subject ]</a>
+              <a href="author.html#110147">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2008</span><!--beginarticle-->
+<PRE>Dear Andy,
+
+Thanks for the comments, most appreciated. My responses are inserted  
+below.
+
+On 25 Mar 2008, at 18:46, Andy Mabbett wrote:
+
+&gt;<i> I think that's an excellent move; though there are some bugs; and some
+</I>&gt;<i> potential features you might add.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> For instance, it works for both &quot;Pica pica&quot; and &quot;magpie&quot;, and for  
+</I>&gt;<i> &quot;Tyto
+</I>&gt;<i> alba&quot;, but not &quot;barn owl&quot;.
+</I>
+
+Although I might not explicitly state it, I only ever intended  
+iSpecies to hand bionomial names. It can return results for common  
+names, but this more accidental than anything else. In the same way,  
+I don't check whether the search string is actually a scientific  
+name. I could do this via uBio, althouh it doesn't have all names (yet).
+
+&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> In another case, searching for just &quot;pica&quot; returns:
+</I>&gt;<i>
+</I>&gt;<i>         Pica can refer to:
+</I>&gt;<i>
+</I>&gt;<i>                 * Pica (unit of measure), in typesetting and document
+</I>&gt;<i>                 layout
+</I>&gt;<i>
+</I>&gt;<i>                 * Pica (disorder), abnormal appetite for earth and  
+</I>&gt;<i> other
+</I>&gt;<i>                 non-foods
+</I>&gt;<i>
+</I>&gt;<i>                 * Pica (genus), a genus of magpie
+</I>&gt;<i>
+</I>&gt;<i>                 * Pica Press, a publishing imprint
+</I>&gt;<i>
+</I>&gt;<i>                 [...]
+</I>&gt;<i>
+</I>&gt;<i> Likewise, the result for &quot;Hobby&quot; is not appropriate. Perhaps it  
+</I>&gt;<i> would be
+</I>&gt;<i> a good idea if you tested for the presence of a taxobox, and, if  
+</I>&gt;<i> none is
+</I>&gt;<i> present, dropped the inclusion, or searched further using some form of
+</I>&gt;<i> heuristic?
+</I>
+
+I'll take a look at handling the disambiguation pages (which is what  
+you get for &quot;Pica&quot;). This is likely to be a pain. It's unlikely to be  
+a big issue for binomial names (unless Wikipedia has some bionomial  
+homonyms).
+
+
+&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> The GBIF map for &quot;pica pica&quot; shows all but one example as being in  
+</I>&gt;<i> South
+</I>&gt;<i> America (the other is in Africa - possibly a wrongly-signed  
+</I>&gt;<i> longitude?).
+</I>
+No idea, iSpecies simply displays what GBIF has. Some locality  
+records are clearly false (marine organisms on land, and visa versa)  
+and at some point somebody will hopefully do something about these  
+(see <A HREF="http://iphylo.blogspot.com/2007/11/gbif-data-evaluation.html">http://iphylo.blogspot.com/2007/11/gbif-data-evaluation.html</A> ).
+
+&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> You don't yet mention Wikipedia on your &quot;how it works&quot; page.
+</I>
+True, this was done in a hour or so before going in to work (i.e.,  
+not polished).
+
+&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> The image searches for a genus (e.g. &quot;Pica&quot;) or common name (e.g.
+</I>&gt;<i> &quot;Hobby&quot;) are often mostly or all false-positives. You might like to  
+</I>&gt;<i> add
+</I>&gt;<i> a Flickr image search, too. There are several ways in which you  
+</I>&gt;<i> could do
+</I>&gt;<i> this, including searches for plain text search, tags or machine-tags
+</I>&gt;<i> (e.g. &quot;taxonomy:genus=Pica&quot;, &quot;taxonomy:binomial=Alcedo_atthis&quot;). The
+</I>&gt;<i> latter would limit false positives. I'm happy to advise further if
+</I>&gt;<i> required, though I note we discussed machine tags in early February  
+</I>&gt;<i> this
+</I>&gt;<i> year.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> You could also search for images on Bioimages:
+</I>&gt;<i>
+</I>&gt;<i>         &lt;<A HREF="http://www.bioimages.org.uk/">http://www.bioimages.org.uk/</A>&gt;
+</I>&gt;<i>
+</I>&gt;<i> which uses Google for as a search engine; for example::
+</I>&gt;<i>
+</I>&gt;<i>         &lt;<A HREF="http://tinyurl.com/34ue8k">http://tinyurl.com/34ue8k</A>&gt;
+</I>&gt;<i>
+</I>
+As above, I only ever intended iSpecies to search for bionomials.
+
+I may add Flickr, but not Bioimages. I need APIs, and Bioimages  
+doesn't have one, which is why I use Yahoo image search. IMHO this is  
+the big obstacle to mashing up data -- the lack of web services.
+
+
+&gt;<i>
+</I>&gt;<i> Other possible links would be to the relevant entry on The National
+</I>&gt;<i> Biodiversity Network's Species Dictionary:
+</I>&gt;<i>
+</I>&gt;<i>         &lt;<A HREF="http://nbn.nhm.ac.uk/nhm/">http://nbn.nhm.ac.uk/nhm/</A>&gt;
+</I>&gt;<i>
+</I>&gt;<i> and WikiSpecies:
+</I>&gt;<i>
+</I>&gt;<i>         &lt;<A HREF="http://species.wikimedia.org/">http://species.wikimedia.org/</A>&gt;
+</I>&gt;<i>
+</I>&gt;<i>
+</I>
+Wikispecies is almost useless, and I don't want to make &quot;blind  
+links&quot;. The links iSpecies does report are from NCBI's LinkOut  
+service, so there's a good chance they exist and are relevant.
+
+
+&gt;<i> The long list of links above the map needs to be marked up as a list,
+</I>&gt;<i> and presented as with bullets or similar. Likewise, the list of  
+</I>&gt;<i> articles
+</I>&gt;<i> from Google.
+</I>&gt;<i>
+</I>
+I've finally gotten around to making the NCBI Linkout links a list,  
+but I won't do this for the literature just yet (I've got other  
+things to do there first).
+
+
+
+&gt;<i>
+</I>&gt;<i> Please use a DOCTYPE declaration (preferable HTML 4.01 STRICT), and
+</I>&gt;<i> validate your HTML - watch out especially for unescaped ampersands.
+</I>
+Validating Javascript-laden HTML is no fun, and not a priority right  
+now.
+
+
+&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> It would also be sensible to use more human-friendly URLs (which could
+</I>&gt;<i> also then be used for tags); so that, for example:
+</I>&gt;<i>
+</I>&gt;<i>   <A HREF="http://darwin.zoology.gla.ac.uk/~rpage/ispecies/pica+pica">http://darwin.zoology.gla.ac.uk/~rpage/ispecies/pica+pica</A>
+</I>&gt;<i>
+</I>&gt;<i> would do what is currently done by:
+</I>&gt;<i>
+</I>&gt;<i>   <A HREF="http://darwin.zoology.gla.ac.uk/~rpage/ispecies/?q=pica">http://darwin.zoology.gla.ac.uk/~rpage/ispecies/?q=pica</A> 
+</I>&gt;<i> +pica&amp;submit=Go
+</I>&gt;<i>
+</I>
+Good idea, I'll look at adding this.
+
+
+&gt;<i>
+</I>&gt;<i> I've mentioned the species microformat previously; it would be
+</I>&gt;<i> appreciated if you could also use that in your pages. Again, I'm happy
+</I>&gt;<i> to advise further.
+</I>&gt;<i>
+</I>
+Not yet convinced these are useful. I'm experimenting with hCard and  
+other formats in another context, but without applications that make  
+use of them there's not much point.
+
+Regards
+
+Rod
+
+
+
+
+&gt;<i> -- 
+</I>&gt;<i> Andy Mabbett
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Taxacom mailing list
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;<i>
+</I>
+----------------------------------------
+Professor Roderic D. M. Page
+Editor, Systematic Biology
+DEEB, IBLS
+Graham Kerr Building
+University of Glasgow
+Glasgow G12 8QP
+United Kingdom
+
+Phone: +44 141 330 4778
+Fax: +44 141 330 2792
+email: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">r.page at bio.gla.ac.uk</A>
+web: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+iChat: <A HREF="aim://rodpage1962">aim://rodpage1962</A>
+reprints: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/pubs.html">http://taxonomy.zoology.gla.ac.uk/rod/pubs.html</A>
+
+Subscribe to Systematic Biology through the Society of Systematic
+Biologists Website: <A HREF="http://systematicbiology.org">http://systematicbiology.org</A>
+Search for taxon names: <A HREF="http://darwin.zoology.gla.ac.uk/~rpage/portal/">http://darwin.zoology.gla.ac.uk/~rpage/portal/</A>
+Find out what we know about a species: <A HREF="http://ispecies.org">http://ispecies.org</A>
+Rod's rants on phyloinformatics: <A HREF="http://iphylo.blogspot.com">http://iphylo.blogspot.com</A>
+Rod's rants on ants: <A HREF="http://semant.blogspot.com">http://semant.blogspot.com</A>
+
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="110145.html">[Taxacom] iSpecies with Wikipedia
+</A></li>
+	<LI>Next message: <A HREF="110148.html">[Taxacom] iSpecies with Wikipedia
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#110147">[ date ]</a>
+              <a href="thread.html#110147">[ thread ]</a>
+              <a href="subject.html#110147">[ subject ]</a>
+              <a href="author.html#110147">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

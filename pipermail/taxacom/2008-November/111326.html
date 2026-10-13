@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] dissapearing data
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2008-November/111326.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] dissapearing data</H1>
+    <B data-pagefind-meta="author">Gregor Hagedorn</B>
+    g.m.hagedorn at gmail.com<BR>
+    <I data-pagefind-meta="date">Thu Nov 20 16:14:52 CST 2008</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="111325.html">[Taxacom] more on molecules
+</A></li>
+        <LI>Next message: <A HREF="111327.html">[Taxacom] dissapearing data
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#111326">[ date ]</a>
+              <a href="thread.html#111326">[ thread ]</a>
+              <a href="subject.html#111326">[ subject ]</a>
+              <a href="author.html#111326">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2008</span><!--beginarticle-->
+<PRE>Jim Croft wrote
+&gt; Doug Yanega took me to task about this off-line as well and I was
+&gt; lamenting that we have no technology independent electronic equivalent
+&gt; of the Rosetta Stone that we will be able to rely on for millenia (or
+&gt; even dare I say, decades).  Increasingly our media are becoming more
+&gt; and more fragile and evanescent as our knowledge base gets condemned
+&gt; to the transience of the web 3.0 blogosphere...  it is at once very
+&gt; exciting and very frightening...  I would not want to be part of the
+&gt; community that lost Dioscorides or Linneaus for humanity... or the
+&gt; protologue and typification of (name the organism of your choice)...
+
+I believe one of the problems is that we allow to couple information
+to software technologies: as in relational databases requiring
+information models optimized for a given set of use cases, or object
+oriented programming considering data a serialization of the OO class
+structures.
+
+Of course, we cannot have data without software. But the currently
+preferred programming paradigm of treating data as an appendix to
+functionality is one reason why information in Web x.0 are so
+transient. With every change of technology, only a small part of data
+is rescued.
+
+We need a technology general enough to capture any kind information,
+structured, unstructured, mixed. Able to give the creator of
+information the tools to define any mixture of syntax, semantics, or
+uncertainty. XML can do most of this (with a weak spot on
+uncertainty), but it is just a format and not a technology framework
+defining software. XML is great for specific software, but it made
+only limited (but certainly most welcome!) progress towards a long
+term, self documenting, human understandable data format.
+
+I believe that some of the less hierarchical, less structured and less
+function-specific approaches may have a better survival rate than
+others. Funny as it may seem, I would trust Wikipedia data a lot more
+than semantic webs (where each part of the information is spread over
+large parts of the internet). The mediawiki technology is homegrown,
+sometimes awkward, and does not even have a fully defined formal
+syntax. So it is not the technological excellence that is worth
+watching. And clearly, to a very large extent it is just the volume of
+information in a single place that socially defines the likelihood of
+survival.  But I believe it is worth looking for more:
+
+* Mediawiki enforces coherence (quite in contrast to normal
+&quot;distributed web thinking&quot;). By providing a platform as a service it
+still provides users with a web, albeit on a single management entity.
+* Mediawiki technically enforces media to be in the system itself, and
+most project socially enforce a limitation to web-linking. This
+greatly promotes stability.
+* It enforces and greatly supports a coarse grained structure of
+objects (&quot;pages&quot;).
+* However, rather than trying define reality and ideas into a fine
+grained structure inside the objects, it supports embedding structured
+data (templating) in semi-structured text, giving it huge flexibility.
+* Storing data in a flat list of objects avoids the problems involved
+in changing the preferred hierarchical view
+
+I believe that this is a successful, flexible and agile compromise,
+like putting paper pages into a book always was a compromise (why
+carry a heavy book when all you want are a few pages :-) ...). Some
+further observations:
+
+* Having a huge body of information forces software developers to
+maintain self-compatibility with old data
+* Perhaps for the same reason, adoption of new features is slow and conservative
+* Rather than providing many special-purpose software functionalities,
+Wikipedia has build a set of reusable primitives, including the
+templating method (and I think the primitives proposed by semantic
+media wiki are following the same path)
+* Due to the need to cope with a huge number or requests, Wikipedia is
+strongly focussed on cacheability of their data, a feature that
+greatly simplified features like permanently caching the full
+rendering of proofread versions (in FlaggedRevs).
+
+I am not claiming that the Mediawiki technology is the solution to all
+our problems. Of course, we all have hammers and keep finding nails.
+
+However, I do deplore that within the biodiversity community, we do
+not have a real big, generally accepted Mediawiki platform, to solve
+*together* some of the problems that could be solved *there*. Without
+forcing people to create a new piece of fragile software for every
+project, inventory, list of biodiversity projects, list of software,
+physical or information collections, etc.
+
+Gregor
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="111325.html">[Taxacom] more on molecules
+</A></li>
+        <LI>Next message: <A HREF="111327.html">[Taxacom] dissapearing data
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#111326">[ date ]</a>
+              <a href="thread.html#111326">[ thread ]</a>
+              <a href="subject.html#111326">[ subject ]</a>
+              <a href="author.html#111326">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

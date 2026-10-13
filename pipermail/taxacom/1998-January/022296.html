@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Affordable GPS systems
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1998-January/022296.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Affordable GPS systems</H1>
+    <B data-pagefind-meta="author">Gary Fewless</B>
+    fewlessg at GBMS01.UWGB.EDU<BR>
+    <I data-pagefind-meta="date">Thu Jan 29 13:25:51 CST 1998</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="105447.html">gnuplot, etc.
+</A></li>
+        <LI>Next message: <A HREF="058088.html">Affordable GPS systems
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#022296">[ date ]</a>
+              <a href="thread.html#022296">[ thread ]</a>
+              <a href="subject.html#022296">[ subject ]</a>
+              <a href="author.html#022296">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1998</span><!--beginarticle-->
+<PRE>There are several basic points to be made regarding use of gps
+receivers, if you are new to this arena.
+
+1. The accuracy cited by some manufacturers and many retailers of gps
+units relates to the internal precision of the instrument (often 5-30
+meters).  What they fail to tell you is that the signal provided by the
+satellite network intentionally introduces an error of up to 100 meters
+(for military security reasons). Therefore basic gps receivers do not
+provide readings which can be depended upon to be less than plus or minus
+100 meters.  The true location of your site is within a circle of radius
+100 meters around the location specified by your gps.  The location COULD
+be closer to the truth, but you cannot tell from the basic reading.
+Actually, the algorithm for the error is designed to produce 95% of
+readings within 100 meters, so a few readings may even exceed that
+distance, and of course many will be less.  Inexpensive units will NOT
+produce better accuracy, without add-on equipment, although the ads will
+try to imply this.
+
+It is even worse if you try to relocate this site again using gps,
+since, for example, the first reading may be off up to 100 meters to the
+east and the second reading at some future date could be off up to 100
+meters to the west.  This level of accuracy is fine for large scale
+purposes, but is less useful for locating specific study sites, individual
+plants or populations, etc.  The fact that any given reading COULD be more
+accurate or even that most readings will be more accurate is of no
+consolation if you don't know how accurate any particular reading is.  In
+the midwest (USA), better accuracy can be obtained with a good topo map
+and a little observation.
+
+2. The errors may be random, but they are NOT random on any short time
+scale.  I have seen several experiments conducted on the error and I have
+collected data on my own instrument (Trimble Scoutmaster) with the same
+result. If you take readings at 5 minute intervals you can see that the
+points &quot;wander&quot; about the theoretical circle of 100 meter radius,
+forming a curling, twisting line.  The data is NOT random within a
+period of even several hours, and the accuracy of your readings cannot be
+improved by averaging readings on the short term.  Indeed it is quite
+conceivable that an average could be more inaccurate than your initial
+reading. It would probably be more successful over the period of one or
+more days (some models provide for this option), but that is usually not
+an option.
+
+Within the wandering pattern of this almost constantly changing
+error lies the explanation for several of the replies to this post.
+As the data wanders about the area it periodically jumps or moves rapidly
+to some new location within the circle of probability and then begins its
+slower movements again.  This might explain the response which mentioned
+turning the unit off to reset it when it drifted off.  It also relates to
+the constantly changing altitudes mentioned by several people.  That is
+not a function of poor equipment, but rather of the changing error factor
+applied to the signal.  If you hold the unit still and observe for 10
+minutes or so you will see the lat/long vary as well. I have read several
+reports on GPS which suggest that the potential error in altitude is
+nearer to 200 meters.  I have clearly observed errors from known locations
+on usgs topos which significantly exceeded 100 meters in error for the
+altitude.
+
+The good news is that you can achieve better accuracy by using
+differential correction signals, provided by ground based equipment which
+precisely &quot;knows&quot; its own location and can calculate the error introduced
+by the satellite signals.  You can either buy an add-on unit to receive
+this signal in real-time or you can store the data point in your receiver
+and &quot;post process&quot; the data when you get back to the lab, if your gps also
+saves the time of the event.  Horizontal accuracy of about 5-10 meters is
+promised by the manufacturers and I have seen U.S Forest Service data
+which suggests that such accuracy is possible.  I don't know what the
+vertical accuracy is, but I suspect it is always going to be less than the
+horizontal accuracy.
+
+Real time differential units are basically specific to the individual
+receiver and are not cheap but most are in the hundreds of dollars
+category.  Then you must get the correction data which means you must
+either 1. buy a differentital beacon which you must set up and
+maintain (expensive - thousands of $$), 2. Pay for a service which
+supplies the signal (you will have to buy their differential receiver
+too),  3. get the data from some other source, some of which are free.  In
+the Great Lakes area and near other major waterways the U.S. Coast Gaurd
+provides differential signals for navigation for free (but you must buy
+from a third party the appropriate receiver to get the CG signal).  There
+is a lot of info on the web explaining all the aspects of gps and a quick
+search will turn up some good general explanations.
+
+If you choose the post processing route, you must find a source for the
+correction data (and it should be near your area of use) and you will need
+software to handle the data if you have numerous sites to correct.  The
+web site listed below is rich with information regarding data sources.
+
+<A HREF="http://www.cgrer.uiowa.edu/servers/servers_geodata.html#gps">http://www.cgrer.uiowa.edu/servers/servers_geodata.html#gps</A>
+
+If you can live with the 100 meter accuracy, there is no reason to spend
+more than $500 for a gps unit.  Several models by Garmin are in the
+$200-300 range and are suitable for basic work. They can be purchased from
+sporting magazines and sportsmans equipment stores.  Magellan and Trimble
+are two well known manufacturers with a broad range of models spanning the
+sub $1000 to &quot;big bucks&quot; range.  Several examples are listed in the
+&quot;Forestry Supplies, Inc.&quot; catalog.  I have used a Trimble Scoutmaster
+since 1995 and find it to be very sturdy and functional -- it has almost
+certainly been superceded by newer models by now.
+
+If you are serious about the more expensive equipment you may want to
+check out the publication &quot;GPS World&quot;, which is very expensive and hard
+to find, but it has a site on the web (I've lost the url temporarily) as
+well as a paper edition. If you have the big bucks then you can achieve
+much higher accuracies, down to the 1 or 2 millimeter range, but most
+biologists don't have the means or the need for that level of accuracy.
+
+You should also consider where you will be using the gps unit.  All gps
+receivers have some difficulty receiving the satellite signals if used
+under dense (particularly high moisture content) canopy, or in steep
+ravines, canyons etc., and remote areas are not likely to have
+differential information available.
+
+
+g fewless
+University of Wisconsin-Green Bay
+fewlessg at uwgb.edu
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="105447.html">gnuplot, etc.
+</A></li>
+        <LI>Next message: <A HREF="058088.html">Affordable GPS systems
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#022296">[ date ]</a>
+              <a href="thread.html#022296">[ thread ]</a>
+              <a href="subject.html#022296">[ subject ]</a>
+              <a href="author.html#022296">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

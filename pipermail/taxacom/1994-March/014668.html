@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Small bug in MacClade 3.04
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1994-March/014668.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Small bug in MacClade 3.04</H1>
+    <B data-pagefind-meta="author">John Bruner</B>
+    John_Bruner at BIOLOGY.UALBERTA.CA<BR>
+    <I data-pagefind-meta="date">Thu Mar 17 15:00:15 CST 1994</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="097824.html">Political Advocacy (fwd)
+</A></li>
+        <LI>Next message: <A HREF="050460.html">Small bug in MacClade 3.04
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#014668">[ date ]</a>
+              <a href="thread.html#014668">[ thread ]</a>
+              <a href="subject.html#014668">[ subject ]</a>
+              <a href="author.html#014668">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1994</span><!--beginarticle-->
+<PRE>                      Small bug in MacClade 3.04
+Dear MacClade Users:
+     I would like to bring to your attention a small bug involving
+the data editor of MacClade 3.04.  When coding for character
+states in MacClade, be very careful about using only numbers
+and no text with the numbers.  We have found that if the character
+states have opposite coding from their state number, MacClade will
+reverse the codes in your matrice if you scroll down that particular
+column of your matrice.   For example, Character One (number of predorsals)
+
+has 3 character states as follows:
+   Character state 1.0: 2 predorsals
+   Character state 1.1: 1 predorsal
+   Character state 1.2: 0 predorsals
+If the text &quot;predorsals&quot; is not included in the description of your
+character states and only
+numbers (2,1,0, respectively) are typed in, then character states 1.0 and
+1.2 will
+be reversed automatically by MacClade, if and only if, the worker happens to
+scroll
+down the column for character one.  This means that everywhere in your
+matrice
+where you thought you put in character state &quot;2&quot;, you will actually get &quot;0&quot;;
+and,
+everywhere you thought you put in &quot;0&quot;, you will actually get &quot;2&quot;. Character
+state 1.1. will not be affected. Remember this &quot;bug&quot; only occurs when
+opposite numbers are typed
+in (If the word is written, you are safe!). Also, a range of numbers, say
+&quot;2-1&quot; is
+okay to use.
+       This &quot;bug&quot; was discovered by Keith Jackson, a graduate student of Dr.
+Joseph S. Nelson,
+Department of Zoology, University of Alberta.
+       Cheers,
+       John Bruner
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="097824.html">Political Advocacy (fwd)
+</A></li>
+        <LI>Next message: <A HREF="050460.html">Small bug in MacClade 3.04
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#014668">[ date ]</a>
+              <a href="thread.html#014668">[ thread ]</a>
+              <a href="subject.html#014668">[ subject ]</a>
+              <a href="author.html#014668">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

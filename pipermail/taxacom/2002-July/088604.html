@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> G-Fit index in PAUP
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20G-Fit%20index%20in%20PAUP&In-Reply-To=%3C003201c22f36%242e1235c0%24715b7e82%40Brachylinga%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="088595.html">
+   <LINK REL="Next"  HREF="088606.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2002-July/088604.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">G-Fit index in PAUP</H1>
+    <B data-pagefind-meta="author">Mark Metz</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20G-Fit%20index%20in%20PAUP&In-Reply-To=%3C003201c22f36%242e1235c0%24715b7e82%40Brachylinga%3E"
+       TITLE="G-Fit index in PAUP">mmetz at LIFE.UIUC.EDU
+       </A><BR>
+    <I data-pagefind-meta="date">Fri Jul 19 10:08:41 CDT 2002</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="088595.html">G-Fit index in PAUP
+</A></li>
+        <LI>Next message: <A HREF="088606.html">G-Fit index in PAUP
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#88604">[ date ]</a>
+              <a href="thread.html#88604">[ thread ]</a>
+              <a href="subject.html#88604">[ subject ]</a>
+              <a href="author.html#88604">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2002</span><!--beginarticle-->
+<PRE>David,
+The RandTrees function in PAUP generates a sample set of trees from all
+possible trees from the data set.  In the parameters you tell it how many
+trees you want generated.  These are plotted as a distribution of trees
+based on the tree length.  From this distribution, a gamma 1 statistic can
+be calculated (see <A HREF="http://www.xycoon.com/skewness_gamma_1.htm">http://www.xycoon.com/skewness_gamma_1.htm</A>) which is
+measure of data skewness and independent of the phylogenetic nature of the
+data, per se.  This statistic can be compared to a table for significance of
+the skewness of the data (Ho = the distribution of the data is
+parametrically normal and g1calculated &lt;= g1critical; H1 = the distribution
+of the data is skewed and g1calculated &gt; g1critical).  The application is
+that if the sample trees are parametrically normally distributed, there is
+probably no signal in the data, it's random.  However, if the data is
+&quot;critically&quot; skewed then there is phylogenetic signal in the data, it is
+significantly different than random data.  One of the problems with this
+statistic as it is applied to minimum length tree searching is that the data
+needs very little signal to deviate from randomness, so the signal to noise
+ratio is still a problem and can confound any presumption of accuracy of the
+tree construction.
+I have the reference for applying this statistic to the distribution of
+mininum length trees around here somewhere, but I can't find it right now.
+I hope this helps.
+Mark
+
+----- Original Message -----
+From: &quot;Davide Sassi&quot; &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">d.sassi at MAIL.NET1.IT</A>&gt;
+To: &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">TAXACOM at USOBI.ORG</A>&gt;
+Sent: Thursday, July 18, 2002 2:46 PM
+Subject: Re: G-Fit index in PAUP
+
+
+&gt;<i> Yes, of course, but I cannot find anything dealing with the algorithm of
+</I>&gt;<i> this index. That is why I am addressing the list.
+</I>&gt;<i>
+</I>&gt;<i> At 15.04 17/07/02 -0600, you wrote:
+</I>&gt;<i> &gt;Davide Sassi wrote:
+</I>&gt;<i> &gt; &gt;Can anyone out there explain me please how is calculated in PAUP the
+</I>index
+&gt;<i> &gt; &gt;G-FIT which appears in CHARACTER DIAGNOSTICS (an option of
+</I>DESCRIBETREES)?
+&gt;<i> &gt;
+</I>&gt;<i> &gt;PAUP has a support website:  <A HREF="http://paup.csit.fsu.edu/index.html.">http://paup.csit.fsu.edu/index.html.</A>
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;         Una Smith
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;Los Alamos National Laboratory, MS K-710, Los Alamos, NM  87545
+</I>&gt;<i>
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="088595.html">G-Fit index in PAUP
+</A></li>
+	<LI>Next message: <A HREF="088606.html">G-Fit index in PAUP
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#88604">[ date ]</a>
+              <a href="thread.html#88604">[ thread ]</a>
+              <a href="subject.html#88604">[ subject ]</a>
+              <a href="author.html#88604">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

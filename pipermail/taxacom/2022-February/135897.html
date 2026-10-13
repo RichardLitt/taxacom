@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Taxacom: Tropicos and gender of names
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2022-February/135897.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Taxacom: Tropicos and gender of names</H1>
+    <B data-pagefind-meta="author">Scott Thomson</B>
+    scott.thomson321 at gmail.com<BR>
+    <I data-pagefind-meta="date">Wed Feb  9 13:05:18 CST 2022</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="135896.html">Taxacom: Tropicos and gender of names
+</A></li>
+        <LI>Next message: <A HREF="135898.html">Taxacom: Tropicos and gender of names
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#135897">[ date ]</a>
+              <a href="thread.html#135897">[ thread ]</a>
+              <a href="subject.html#135897">[ subject ]</a>
+              <a href="author.html#135897">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2022</span><!--beginarticle-->
+<PRE>Yeah Richard,
+
+I agree with you, just going through the mental excersise to try make it
+work. In the end text strings are not suitable primary keys. Also
+considering the names are not stable in their spelling, because of
+recombination and gender issues, it makes them even worse.
+
+Last night I was thinking if a hex conversion could work but no in the
+computers do off and on, 0 and 1, they dont do maybe very well.
+
+Cheers Scott
+
+On Wed, Feb 9, 2022, 3:52 PM Richard Pyle &lt;deepreef at bishopmuseum.org&gt; wrote:
+
+&gt; Thanks, Scott.  I definitely see where you?re coming from, but I think any
+&gt; effort to use the text-string literal ?name? as a ?key? in the sense of
+&gt; digital databases (i.e., ?Primary Key?) is not going to bear fruit.  The
+&gt; only context in which it makes sense is how GNI does it, where the literal
+&gt; UTF-8 character string (or perhaps more accurately, the hash of it) itself
+&gt; is the ?thing? being identified (i.e., the subset of all UTF-8 character
+&gt; strings that have ever been used as a label representing a scientific name
+&gt; of an organism).  The context in which such identified ?things? are useful
+&gt; is for tasks such as hunting for taxonomic name usages within OCR text from
+&gt; BHL scanned literature pages (for example).
+&gt;
+&gt;
+&gt;
+&gt; So while I agree with you that it would not be impossible to use
+&gt; text-string scientific names as a database ?key? for something other than a
+&gt; particular UTF-8 character string, I believe that it is sufficiently
+&gt; impractical that almost all use cases would find the cost/benefit ratio of
+&gt; doing so to be less desirable than the cost/benefit ratio of using other
+&gt; values as keys, with the text-string name being simply a property of the
+&gt; identified ?thing?.
+&gt;
+&gt;
+&gt;
+&gt; What text-string names are exceedingly GOOD for is serving as ?finding
+&gt; aids? (to borrow a concept from the Library &amp; Archive world) to discover
+&gt; information about biodiversity.  While these text-string names will not be
+&gt; perfect, they work extremely well for that purpose in the vast, vast, vast
+&gt; majority of cases.  To see this in action, type your favorite scientific
+&gt; name into a Google search box, and in the vast majority of cases the
+&gt; returned results will be relevant to the organism you had in mind.
+&gt;
+&gt;
+&gt;
+&gt; Aloha,
+&gt;
+&gt; Rich
+&gt;
+&gt;
+&gt;
+&gt; Richard L. Pyle, PhD
+&gt; Senior Curator of Ichthyology | Director of XCoRE
+&gt;
+&gt; *Bernice Pauahi Bishop Museum*
+&gt;
+&gt; 1525 Bernice Street, Honolulu, HI 96817-2704
+&gt;
+&gt; Office: (808) 848-4115;  Fax: (808) 847-8252
+&gt;
+&gt; eMail: deepreef at bishopmuseum.org
+&gt;
+&gt; BishopMuseum.org &lt;<A HREF="https://nam10.safelinks.protection.outlook.com/?url=http%3A%2F%2Fhbs.bishopmuseum.org%2Fstaff%2Fpylerichard.html&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C3e2cabc2c5b34083556a08d9ebff24e1%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637800303339626720%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&amp;amp;sdata=pabk6r69hMMtjTFYYxHTmUZ3w%2FGp4tK50hCDAT6RWN8%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=http%3A%2F%2Fhbs.bishopmuseum.org%2Fstaff%2Fpylerichard.html&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C3e2cabc2c5b34083556a08d9ebff24e1%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637800303339626720%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&amp;amp;sdata=pabk6r69hMMtjTFYYxHTmUZ3w%2FGp4tK50hCDAT6RWN8%3D&amp;amp;reserved=0</A>&gt;
+&gt;
+&gt; *Our Mission: Bishop Museum inspires our community and visitors through
+&gt; the exploration and celebration of the extraordinary history, culture, and
+&gt; environment of Hawai?i and the Pacific.*
+&gt;
+&gt;
+&gt;
+&gt; *From:* Scott Thomson &lt;scott.thomson321 at gmail.com&gt;
+&gt; *Sent:* Wednesday, February 9, 2022 8:05 AM
+&gt; *To:* Richard Pyle &lt;deepreef at bishopmuseum.org&gt;
+&gt; *Cc:* TAXACOM &lt;taxacom at lists.ku.edu&gt;
+&gt; *Subject:* Re: Taxacom: Tropicos and gender of names
+&gt;
+&gt;
+&gt;
+&gt; I think some misinterpreted my comment on recipe for a 3 year old.
+&gt;
+&gt;
+&gt;
+&gt; Its tongue in cheek comment said to software eng students to appreciate
+&gt; coding, was taught with OO coding.
+&gt;
+&gt;
+&gt;
+&gt; I can imagine how you could do this and it requires a little more
+&gt; imagination than most databases use. Each taxon needs a key and as the
+&gt; names are not immutable it makes it difficult though not impossible for the
+&gt; name to be the key. To get around the non-immutable name issue is doable
+&gt; with queries and a second database to reference language changes.
+&gt;
+&gt;
+&gt;
+&gt; Not impossible.
+&gt;
+&gt;
+&gt;
+&gt; Only AI can get better than current system.
+&gt;
+&gt;
+&gt;
+&gt; Cheers Scott
+&gt;
+&gt;
+&gt;
+&gt; On Wed, Feb 9, 2022, 2:47 PM Richard Pyle via Taxacom &lt;
+&gt; taxacom at lists.ku.edu&gt; wrote:
+&gt;
+&gt; &gt; It seems much simpler to wait until databasers grow up and can handle
+&gt; &gt; concepts beyond those aimed to fit in the grasp of a 3-year old?
+&gt;
+&gt; EXACTLY!  The databases should be designed to accommodate the information
+&gt; as it exists. It's a mistake to modify the information as it exists to
+&gt; accommodate the needs of databases.  We should not allow the tail to wag
+&gt; the dog...
+&gt;
+&gt; Aloha,
+&gt; Rich
+&gt; Adolescent* databaser
+&gt;
+&gt; [*better than a toddler databaser, but suffering from unwarranted &amp;
+&gt; unjustified self-confidence/self-righteousness, and eager to eventually
+&gt; grow up to the point of full maturity and wisdom]
+&gt;
+&gt; Richard L. Pyle, PhD
+&gt; Senior Curator of Ichthyology | Director of XCoRE
+&gt; Bernice Pauahi Bishop Museum
+&gt; 1525 Bernice Street, Honolulu, HI 96817-2704
+&gt; Office: (808) 848-4115;  Fax: (808) 847-8252
+&gt; eMail: deepreef at bishopmuseum.org
+&gt; BishopMuseum.org
+&gt; Our Mission: Bishop Museum inspires our community and visitors through the
+&gt; exploration and celebration of the extraordinary history, culture, and
+&gt; environment of Hawai?i and the Pacific.
+&gt;
+&gt;
+&gt;
+&gt; _______________________________________________
+&gt; Taxacom Mailing List
+&gt;
+&gt; Send Taxacom mailing list submissions to: taxacom at lists.ku.edu
+&gt; For list information; to subscribe or unsubscribe, visit:
+&gt; <A HREF="https://lists.ku.edu/listinfo/taxacom">https://lists.ku.edu/listinfo/taxacom</A>
+&gt; You can reach the person managing the list at: taxacom-owner at lists.ku.edu
+&gt; The Taxacom email archive back to 1992 can be searched at:
+&gt; <A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Ftaxacom.markmail.org%2F&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C3e2cabc2c5b34083556a08d9ebff24e1%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637800303339626720%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&amp;amp;sdata=iVLCEKycCAi4txyblR3rb0kBIjgBl2MKQPESYayJero%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Ftaxacom.markmail.org%2F&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C3e2cabc2c5b34083556a08d9ebff24e1%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637800303339626720%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&amp;amp;sdata=iVLCEKycCAi4txyblR3rb0kBIjgBl2MKQPESYayJero%3D&amp;amp;reserved=0</A>
+&gt;
+&gt; Nurturing nuance while assailing ambiguity for about 35 years, 1987-2022.
+&gt;
+&gt;
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="135896.html">Taxacom: Tropicos and gender of names
+</A></li>
+        <LI>Next message: <A HREF="135898.html">Taxacom: Tropicos and gender of names
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#135897">[ date ]</a>
+              <a href="thread.html#135897">[ thread ]</a>
+              <a href="subject.html#135897">[ subject ]</a>
+              <a href="author.html#135897">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

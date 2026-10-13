@@ -1,0 +1,313 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] formation of zoological names with Mc, Mac, etc.
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20formation%20of%20zoological%20names%20with%20Mc%2C%20Mac%2C%20etc.&In-Reply-To=%3CC2994967ABB5D54BB013821E4ABA60E1032889A3F1%40exvic-mbx03.nexus.csiro.au%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="113799.html">
+   <LINK REL="Next"  HREF="113804.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2009-September/113802.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] formation of zoological names with Mc, Mac, etc.</H1>
+    <B data-pagefind-meta="author">Tony.Rees at csiro.au</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20formation%20of%20zoological%20names%20with%20Mc%2C%20Mac%2C%20etc.&In-Reply-To=%3CC2994967ABB5D54BB013821E4ABA60E1032889A3F1%40exvic-mbx03.nexus.csiro.au%3E"
+       TITLE="[Taxacom] formation of zoological names with Mc, Mac, etc.">Tony.Rees at csiro.au
+       </A><BR>
+    <I data-pagefind-meta="date">Tue Sep  1 01:08:51 CDT 2009</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="113799.html">[Taxacom] formation of zoological names with Mc, Mac, etc.
+</A></li>
+        <LI>Next message: <A HREF="113804.html">[Taxacom] formation of zoological names with Mc, Mac, etc.
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#113802">[ date ]</a>
+              <a href="thread.html#113802">[ thread ]</a>
+              <a href="subject.html#113802">[ subject ]</a>
+              <a href="author.html#113802">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2009</span><!--beginarticle-->
+<PRE>Rich Pyle wrote:
+
+&lt;snip&gt;
+
+&gt;<i> The question is whether one can have a machine 
+</I>&gt;<i> look at a text string and *decide* which link should be used, 
+</I>&gt;<i> rather than having a human *tell* it (a &quot;time consuming 
+</I>&gt;<i> process&quot;); this is the crux of Francisco's point:
+</I>
+Yes, and also the crux of the services being developed around the Global
+Names Index, which are based on existing efforts to implement &quot;fuzzy
+matching&quot; [Tony Rees -- this is your cue...]
+
+That's not my forte, but what I'd like to see emerge from such services is
+not that the computers *decide* how to link, but rather use some sort of
+standard metric of liklihood, which the Human can use to make the final
+call.  Thus, though it may involve a human, I think the services could cut
+down the &quot;time consuming&quot; part dramatically (with access to the right
+databases, page images, etc.)  This is slightly different from how Doug
+described it, but ultimately it would end up being the same thing.  The easy
+matches (only one, high-probability match) would probably be accepted
+automatically in most cases; but the not-so-certain matches would be flagged
+for human scrutiny.  But even in those cases, if all the necessary resources
+are one mouse-click away (e.g., page images of original literature through
+BHL), then the job would be a LOT easier than it is now.
+
+&lt;/snip&gt;
+
+
+Okay, okay...
+
+Actually I do this all the time, as a part of the process of adding names to my IRMNG genera compilation - in essence I wish to sort &quot;incoming&quot; names according to whether or not they are already on the master list, and add them if new.
+
+To do this I need to match genus (and in some cases specific) names exactly or fuzzily, also cited authorities and years exactly or fuzzily, while also taking into account taxonomic placement as available. What I may end up with is (e.g.) a list of exact or near matches on scientific name pairs and degree of author similarity on a 0-1 scale using the &quot;compare_auth&quot; portion of taxamatch (you can test this yourself at <A HREF="http://www.cmar.csiro.au/datacentre/taxamatch-tests.htm">http://www.cmar.csiro.au/datacentre/taxamatch-tests.htm</A> if interested), additionally with other info as available e.g. higher taxonomy, cited publication info and nomenclatural notes, etc. There seems to be a numeric threshold of the computed authority similarity of around 0.2-0.4 below which *most* of the results appear likely to be different and above which *most* appear likely to be acceptably the same to a human eye: e.g. the following snippet, below. Actually the threshold is not really fixed, it seems to vary according to the characteristics of the data being compared too, but that's par for this particular course I guess.
+
+Basically in this case the machine does not replace the human reader but the pre-sorting that the algorithm can do makes the list a lot easier to scan and spot the exceptions.
+
+(I do similar things with searching for near matches on scientific names: use the algorithm to (1) determine if any near matches are present, and (2) present candidates for scrutiny in pre-sorted groups which are then easy to eyeball and for a human to accept or reject).
+
+I can expand on these further as desired, but this is probably enough except for those who may be gluttons for punishment!
+
+Regards - Tony
+
+--------
+
+Here's some sample output of my &quot;authority comparison&quot; values of real genus name pairs with identical spelling (in this case, for fungi) - i.e. either homonyms, or duplicates for which I only need one instance (where the authors are sufficiently different I deem it a new name i.e. homonym, and will upload it as such). In general the software should expand known author abbreviations to the full version, but in at least one case below, the selected abbreviation (Bat.) is either not on my list, or associated with a different name: in fact (on checking) it is on the list twice, first associated with Batenburg, and second with Batista - obviously undesirable, not sure what is the best way forward in this instance...)
+
+AUTHORITY_1
+AUTHORITY_2
+AUTH_SIMILARITY
+
+Junius ex Linnaeus, 1753
+Persoon, 1801
+0.0361
+
+Meschinelli, 1892
+A. Straus, 1950
+0.0417
+
+Tode, 1790
+E.M. Fries, 1832
+0.0494
+
+Meschinelli, 1898
+T.N. Hermann in B.S. Sokolov, 1979
+0.0503
+
+Arthur &amp; Bisby, 1921
+B. Renault, 1894
+0.0741
+
+(Persoon) Roussel, 1806
+S.F. Gray, 1821
+0.0847
+
+Linnaeus, 1753
+E.M. Fries, 1822
+0.1062
+
+Renault, 1896
+D. Ellis, 1916
+0.1217
+
+Sprengel, 1827
+Bosc ex E.M. Fries, 1829
+0.1351
+
+P. Micheli ex Persoon, 1794
+E.M. Fries, 1832
+0.1357
+
+Tode, 1790
+Tode ex Palisot de Beauvois in F. Cuvier, 1805
+0.2003
+
+Nees, 1816
+C.G.D. Nees ex A.T. Brongniart in F. Cuvier, 1824
+0.2026
+
+Link, 1815
+Link ex Brongniart in Willdenow in F. Cuvier, 1824
+0.22
+
+Nees, 1816
+C.G.D. Nees ex Brongniart in F. Cuvier, 1824
+0.2241
+
+C.C. Chen ex W.H. Ko, H.S. Chang, H.J. Su, C.C. Chen &amp; L.S. Leu, 1978
+C.-C. Chen, 1961
+0.2257
+
+Sowerby, 1803
+Persoon, 1822
+0.2289
+
+Nees &amp; T. Nees, 1818
+C.G.D. Nees ex Leman in F. Cuvier, 1821
+0.2384
+
+Link, 1809
+Link ex Wallroth in Bluff &amp; Fingerhuth, 1833
+0.2443
+
+Fell, Statzell, I.L. Hunter &amp; Phaff, 1970
+Fell et al., 1969
+0.2464
+
+Tode, 1790
+Tode ex Kunze &amp; J.K. Schmidt, 1823
+0.2487
+
+Link, 1816
+Link ex A.T. Brongniart in F. Cuvier, 1824
+0.2489
+
+Batista, 1960
+Bat.
+0.2539
+
+Kunze, 1817
+G. Kunze &amp; J.K. Schmidt ex E.M. Fries, 1832
+0.2594
+
+Ozkose, B.J. Thomas, D.R. Davies, G.W. Griff. &amp; Theodorou, 2001
+E. Ozkose et al., 2001
+0.2651
+
+Persoon, 1797
+(Persoon ex E.M. Fries) S.F. Gray, 1821
+0.269
+
+Sherwood, 1986
+M.A. Sherwood-Pike in F. Candoussau, K. Katomoto &amp; M.A. Sherwood-Pike, 1986
+0.2765
+
+Haller, 1768
+[Haller] E.M. Fries, 1821
+0.2772
+
+Korf, 1978
+R.P. Korf in R.P. Korf, R.N. Singh &amp; V.P. Tewari, 1978
+0.2818
+
+(Persoon) Roussel, 1806
+Persoon ex S.F. Gray, 1821
+0.2903
+
+Nees, 1816
+C.G.D. Nees ex S.F. Gray, 1821
+0.2911
+
+Kunze, 1817
+(Kunze ex Persoon) Steudel, 1824
+0.2911
+
+Nees, 1816
+C.G.D. Nees ex S.F. Gray, 1821
+0.2911
+
+Kunze, 1817
+[Kunze] E.M. Fries, 1821
+0.2924
+
+Schulzer, 1866
+S. Schulzer von Müggenburg in S. Schulzer von Müggenburg, A. Kanitz &amp; Knapp, 1866
+0.2927
+
+Tode, 1790
+Tode ex A.J.C. Corda, 1837
+0.2939
+
+Morais, Batista &amp; Massa, 1966
+Falcão de Morais et al., 1966 (Approved Lists, 1980)
+0.298
+
+Nees, 1816
+C.G.D. Nees ex E.M. Fries, 1832
+0.2991
+
+(etc.)
+.......
+
+
+Trappe, Castellano &amp; Amaranthus, 1996
+J.M. Trappe, M.A. Castellano &amp; M.P. Amaranthus, 1996
+0.7844
+
+Chesters &amp; Greenhalgh, 1964
+C.G.C. Chesters &amp; G.N. Greenhalgh, 1964
+0.7846
+
+Mougeot &amp; E.M. Fries, 1825
+Mougeot &amp; E.M. Fries ex E.M. Fries, 1825
+0.7846
+
+D. Hawksworth &amp; R. Santesson, 1990
+D.L. Hawksworth &amp; R. Santesson in H.M. Jahns, 1990
+0.7847
+
+Berkeley &amp; Broome, 1870
+M.J. Berkeley &amp; Broome, 1875
+0.7854
+
+Penzig &amp; Saccardo, 1898
+Penzig &amp; P.A. Saccardo, 1897
+0.7854
+
+Nylander, 1885
+Nylander in Hue, 1885
+0.7856
+
+F. Stevens, 1923
+F.L. Stevens, 1924
+0.7856
+
+P. Karsten, 1870
+P.A. Karsten, 1871
+0.7856
+
+(Nannenga-Bremekamp) Nannenga-Bremekamp, 1975
+(N.E. Nanninga-Bremekamp) N.E. Nannenga-Bremekamp, 1974
+0.7859
+
+K.D. Hyde &amp; Nakagiri, 1991
+K.D. Hyde &amp; Nakagiri In K.D. Hyde, 1991
+0.7865
+
+(etc.)
+
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="113799.html">[Taxacom] formation of zoological names with Mc, Mac, etc.
+</A></li>
+	<LI>Next message: <A HREF="113804.html">[Taxacom] formation of zoological names with Mc, Mac, etc.
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#113802">[ date ]</a>
+              <a href="thread.html#113802">[ thread ]</a>
+              <a href="subject.html#113802">[ subject ]</a>
+              <a href="author.html#113802">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

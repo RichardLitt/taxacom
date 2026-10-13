@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Character weighting
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2009-August/113672.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Character weighting</H1>
+    <B data-pagefind-meta="author">Jason Mate</B>
+    jfmate at hotmail.com<BR>
+    <I data-pagefind-meta="date">Wed Aug 19 16:13:18 CDT 2009</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="113671.html">[Taxacom] Morphology vs Molecular
+</A></li>
+        <LI>Next message: <A HREF="113673.html">[Taxacom] FW:  Morphology vs Molecular
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#113672">[ date ]</a>
+              <a href="thread.html#113672">[ thread ]</a>
+              <a href="subject.html#113672">[ subject ]</a>
+              <a href="author.html#113672">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2009</span><!--beginarticle-->
+<PRE>
+
+
+
+
+
+
+&gt;Pierre has a point. It is the analysis that is phenetic, not the
+traits. Okay, maybe I really meant analysis of molecular characters has
+much in common with phenetic analysis, particularly in equal weighting
+(excepting codon bias) to ensure no evolutionary contamination of the
+automatic classification.&quot;
+
+
+&gt; In one way, molecular is indeed phenetic. There is no weighting for phyletic importance. Well, there is one case, codon bias, in which selection on a pool of messenger RNA emphasizes one synonymous codon over another (if I have this right), but all other weighting (I think) is purely part of the analysis, e.g. avoiding 3rd codon positions because they may be over-saturated with changes. Basically the Dirichlet priors are all 1 in Bayesian analysis. In some cases certain site positions are weighted differently but I'm not sure how this is part of pre-weighting for phyletic importance.
+&gt; 
+&gt; (Now ask me what phyletic importance is.)
+
+I?ll ask you if you tell me how you arrive at it. Thanks to Pierre for succintly putting an end to &quot;molecular data is phenetic&quot; mantra. I will get into hot water with many but how do you weigh your characters objectively? I can see objectiveness in weighing based on codon position or transitions vs transversions or according to the aminoacid encoded. I can also see the objectiveness of character reweighting according to some measure of internal congruence (the idea being that you encourage the signal; of course doing this between datasets encourages the selection of an &quot;average&quot; phylogeny which might not be the species tree). But even these can arrive at &quot;funny&quot; results. In the case of extreme weighting (i.e. effectively 0 weight to 3rd codons) you can loose all resolution. 
+
+
+&gt;Richar wrote: Hope no one thought I agreed that differential lineage sorting meant
+that ancestors were so undifferentiated molecularly that molecular
+analysis was impossible if there was any evidence of different gene
+histories. No, no. I tend to subscribe to the common understanding that
+there is one species history, and that during speciation or at least
+isolation of two lineages from one, a process goes on that eliminates
+all but one of the ancestral polymorphisms in each of the new lineages,
+a process called reciprocal monophyly. New sets of polymorphisms are
+created, but these can be distinguished as derivative.
+....
+&gt;Right now I repeat my take on this, Grehan is right for wrong reasons.
+Molecular history shared by of a vast majority of gene sequences is
+correct but the traits shared by man and orang were salted away
+epigenetically in the ancestors of chimp and gorilla. Is there evidence
+for this? There is a lot of cases in the literature that major traits
+and trait complexes are conserved for hundreds of thousands of years,
+then apparently reactivated. I can give examples if anyone wants to
+investigate. Morphology is the interface with selection, and we cannot
+ignore it.
+
+
+&gt;Michael wrote: In fact retention of ancestral polymorphism is very common (there are
+more than 12 000 hits for 'incomplete lineage sorting' on Google) and
+'It is now well known that incomplete lineage sorting can cause serious
+difficulties for phylogenetic inference' (Maddison &amp; Knowles, 2006.
+Syst Bol. 55, 21-30). 
+
+
+I would argue that the problems with polymorphic lineages can often be overcome with wider sampling (more species) or several examplars of each species when dealing with closely related taxa. In any case polymorphism is only really a problem when dealing with sister species/subspecies. Extinction and drift will erase the information very quickly as Michael pointed out.
+
+&gt;If you have indels, which are very common in most of the widely used,
+longer sequences, two issues arise wrt identifying characters. The
+first is how you align sequences from different sources, because
+different multiple sequence alignment procedures (whether carried out
+first, or as part of direct optimisation) can give you different
+positional homologies. [It was interesting to see in that staphylinid
+paper recommended by Stephen Thorpe that the authors did separate
+analyses based on Clustal and MAFFT alignments. AFAIK this kind of
+catholic approach to alignment is rare. Most labs seem to pick their
+MSA method and stick with it.]
+
+
+ 
+
+
+&gt;The second issue is how you treat gaps in your analysis after
+alignment. You can ignore them entirely, and this amounts to character
+weighting because an indel is an evolutionary novelty. Alternatively,
+you can treat a gap as a fifth character state. Someone more familiar
+with the molecular phylogeny literature than I am may be able to say
+how often analyses are done both ways, and the results compared.
+
+
+ 
+
+
+&gt;'Ignore third codon' weighting for coding sequences can be avoided by
+doing an analysis of the amino acid sequence in its entirety. I'm not
+sure whether enough proteins are known yet to allow AA analyses to be
+useful at all taxonomic levels. There are also wonderful surprises
+lurking in the 'proteome'. I used to think (as a non-molecular
+taxonomist) that histone H3 was a very highly conserved nuclear protein
+with wonderful base-level variety. A few weeks ago I learned that H3
+paralogy is ...um ... a problem.
+
+
+I don?t know which approach is most common but neither is rare so take your pick. Indels are a nightmare if frequent and large but a blessing if uncommon. Many try to align insertions therefore assuming a common origin but considering how fast they tend to evolve it can cause problems aligning them. Long branch attraction often happens with chance &quot;homologies&quot; emerging if sufficiently long insertions occur. To that end some prefer to cull them and use them as characters added at the end. As for ignoring third codon, as I mentioned before, it is not very helpful in many instances. In particular in intrageneric studies (whatever a genus means) you can lose all the information. Also it often happens that only a few aminoacids flicker back and forth so you could get spurious results as they would be the only signal left. H3 shouldn?t affect you, me or John for that matter as it is too slowly evolving. Still, where did you readd about the H3 parology? I would like to check it out.
+
+
+Brian wrote&gt; The question of indels is interesting because it depends on your  
+approach. If you base your evaluation on similarity values you have to  
+work out whether you include these regions in the analysis - one often  
+removes them. However, these could be major evolutionary events with  
+much greater effects that single base changes. Does treating the whole  
+of the indel as a fifth base do justice to its &quot;significance&quot;?
+
+You could treat it as a whole &quot;character&quot;, i.e. as the whole gene. Indels can be really good at keeping sister taxa together but often tell you nothing about their relationships to other taxa.
+
+
+_________________________________________________________________
+Show them the way! Add maps and directions to your party invites. 
+<A HREF="http://www.microsoft.com/windows/windowslive/products/events.aspx">http://www.microsoft.com/windows/windowslive/products/events.aspx</A>
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="113671.html">[Taxacom] Morphology vs Molecular
+</A></li>
+        <LI>Next message: <A HREF="113673.html">[Taxacom] FW:  Morphology vs Molecular
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#113672">[ date ]</a>
+              <a href="thread.html#113672">[ thread ]</a>
+              <a href="subject.html#113672">[ subject ]</a>
+              <a href="author.html#113672">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Genus level wais index to USDA list of flowering plant genera
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Genus%20level%20wais%20index%20to%20USDA%20list%20of%20flowering%20plant%20genera&In-Reply-To=%3Cmailman.671.1157126627.2564.taxacom%40mailman.nhm.ku.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="097381.html">
+   <LINK REL="Next"  HREF="050022.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1993-April/014230.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Genus level wais index to USDA list of flowering plant genera</H1>
+    <B data-pagefind-meta="author">Jim Croft</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Genus%20level%20wais%20index%20to%20USDA%20list%20of%20flowering%20plant%20genera&In-Reply-To=%3Cmailman.671.1157126627.2564.taxacom%40mailman.nhm.ku.edu%3E"
+       TITLE="Genus level wais index to USDA list of flowering plant genera">jrc at ANBG.GOV.AU
+       </A><BR>
+    <I data-pagefind-meta="date">Sat Apr 17 21:32:17 CDT 1993</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="097381.html">A wais index for USDA list of Plant genus names
+</A></li>
+        <LI>Next message: <A HREF="050022.html">Genus level wais index to USDA list of flowering plant genera
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#14230">[ date ]</a>
+              <a href="thread.html#14230">[ thread ]</a>
+              <a href="subject.html#14230">[ subject ]</a>
+              <a href="author.html#14230">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>1993</span><!--beginarticle-->
+<PRE>Following the previous posting on this subject, the raw delimited
+datafiles of genera and synonyms have been combined and formatted with a
+perl script by Greg Whitbread (<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">ghw at anbg.gov.au</A>).
+
+The resulting file, genus-synonyms.txt is available from the same
+directories on the ANBG gopher (155.187.10.12 port 70) with the other
+USDA genera files.  It is c. 2 mbyte in size.
+
+Each record consists of an accepted genus name with family and authorship
+information, followed by indented generic synonyms.
+
+Each word in the generic entry is indexed and searchable.  Searching for
+a generic synonym will return the genus to which it belongs.
+
+The following is a sample record:
+
+-------------------------
+  MIMUSOPS                                              Sapotaceae
+     Linnaeus
+
+          ABEBAIA
+             Baehni
+             Gen Sapot
+
+          IMBRICARIA
+             A.L. Jussieu
+             Gen Sapot
+
+The following is the perl script that generated the genus-synonyms.txt
+file from the raw genus.dat and synonyms.dat files:
+
+#!/usr/local/bin/perl
+# perl script by Greg Whitbread (<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">ghw at anbg.gov.au</A>)
+
+open(SYN,&quot;../synonyms.dat&quot;);
+open(GEN,&quot;../genus.dat&quot;);
+
+while(&lt;SYN&gt;){
+        s/^&quot;//;
+        s/&quot;$//;
+        ($genus,$author,$ref,$acgen,$family,$altfam,$proto) = split(/&quot;,&quot;/);
+        $acgen =~ s/\?$//;
+        $synonym{$acgen} .= join(&quot;|&quot;,$genus,$author,$ref,$proto);
+        $synonym{$acgen} .= &quot;+&quot; if $synonym{$acgen};
+}
+
+while(&lt;GEN&gt;){
+        s/^&quot;//;
+        s/&quot;$//;
+        ($genus,$author,$ref,$family,$altfam,$proto) = split(/&quot;,&quot;/);
+        $family .= &quot; (alt. $altfam)&quot; if $altfam;
+        print &quot;-&quot; x 25;
+        $Ugenus = $genus;
+        $Ugenus =~ tr/a-z/A-Z/;
+        write;
+        if($synonym{$genus}){
+                (@syns) = split(/\+/,$synonym{$genus});
+                foreach ( @syns ) {
+                        ($Ugenus,$author,$ref,$proto) = split(/\|/);
+                        $Ugenus =~ tr/a-z/A-Z/;
+                        $Ugenus =~ s/^/        /;
+                        $author =~ s/^/        /;
+                        $ref =~ s/^/        /;
+                        $proto =~ s/^/        /;
+                        $family = &quot;&quot;;
+                        write;
+                }
+        }
+}
+format STDOUT =
+
+  @&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;    @&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+$Ugenus,$family
+~~   ^&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+         $author
+~~   ^&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+         $ref
+~~   ^&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+         $proto
+.
+
+
+cheers
+jim
+______________________________________________________________________________
+Jim Croft                  [Herbarium CBG]           internet: <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">jrc at anbg.gov.au</A>
+Australian National Botanic Gardens                     voice:  +61-6-2509 490
+GPO Box 1777, Canberra, ACT 2601, AUSTRALIA               fax:  +61-6-2509 599
+____Biodiversity Directorate, Australian National Parks &amp; Wildlife Service____
+
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="097381.html">A wais index for USDA list of Plant genus names
+</A></li>
+	<LI>Next message: <A HREF="050022.html">Genus level wais index to USDA list of flowering plant genera
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#14230">[ date ]</a>
+              <a href="thread.html#14230">[ thread ]</a>
+              <a href="subject.html#14230">[ subject ]</a>
+              <a href="author.html#14230">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

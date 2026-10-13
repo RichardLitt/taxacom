@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Why character-tracking doesn't happen?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Why%20character-tracking%20doesn%27t%20happen%3F&In-Reply-To=%3C48CA4896.7010701%40univ-rennes1.fr%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="110925.html">
+   <LINK REL="Next"  HREF="110927.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2008-September/110926.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Why character-tracking doesn't happen?</H1>
+    <B data-pagefind-meta="author">Pierre Deleporte</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Why%20character-tracking%20doesn%27t%20happen%3F&In-Reply-To=%3C48CA4896.7010701%40univ-rennes1.fr%3E"
+       TITLE="[Taxacom] Why character-tracking doesn't happen?">pierre.deleporte at univ-rennes1.fr
+       </A><BR>
+    <I data-pagefind-meta="date">Fri Sep 12 05:46:46 CDT 2008</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="110925.html">[Taxacom] Why character-tracking doesn't happen?
+</A></li>
+        <LI>Next message: <A HREF="110927.html">[Taxacom] Why character-tracking doesn't happen?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#110926">[ date ]</a>
+              <a href="thread.html#110926">[ thread ]</a>
+              <a href="subject.html#110926">[ subject ]</a>
+              <a href="author.html#110926">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2008</span><!--beginarticle-->
+<PRE>
+tentative nibbling...
+
+when I use standard parsimony to infer a tree, e.g. from morphological 
+or behavioral characters, my evolutionary assumption (model of character 
+evolution) is that these characters evolved independently (&quot;No Common 
+Mechanism&quot;), hence the analysis &quot;column by column&quot; is the sensical thing 
+to do rather than implementing a model of concerted evolution through ad 
+hoc procedures
+
+I interpret the &quot;robust&quot; parts of the tree as a likely phylogeny (even 
+if partially resolved)
+
+on this phylogeny I optimise the characters, and I obtain optimal 
+evolutionary scenarios, simple or complex (homoplastic)
+
+up to this point, I can't identify my approach with what you are 
+describing below (if not a tentative phylogeny, what is the tree, and 
+for what use?...): I rather explicitly try to infer a phylogeny (= a 
+sketchy historical explanation of the distribution of characters in taxa)
+and to make use of it : &quot;secondary&quot; inferences, effectively of the form 
+&quot;if this phylogeny is true, then...&quot;   
+
+
+if I understand well your proposition, the secondary inference of 
+homoplasy for some characters would make the phylogeny inacceptable
+
+I have no general philosophical objection to this: the question is 
+simply the degree of confidence (relative &quot;weight&quot; or &quot;cost&quot; in jargon) 
+you would put on your evolutionary model that homoplasy is impossible, 
+highly unlikely, slightly unlikely... for this or that character (please 
+note that &quot;homoplasy&quot; = scattered distribution on a phylogenetic tree 
+may come from different evolutionary processes, I do'nt develop this 
+point here but it contributes to the complexity of the problem; e.g. an 
+unlikely convergent character could be accepted as transferred through 
+an episode of hybridization)
+
+- suggestion for saving computing time in your approach: if you consider 
+that homoplay is impossible for some characters, you better introduce a 
+constraint in your analysis so that any topology  implying homoplasy for 
+these characters is discarded from the beginning - they can't pop up as 
+a result, your problem is limited to choosing among the remaining set of 
+topologies, possibly very limited in some cases (easy job if it boils 
+down to zero except a big unresolved radiation, an efficient protection 
+against any possible homoplasy - another being clique analysis: retain 
+only the subset of completely congruent characters and publish a nice 
+CI=1...)
+
+- limitation : of course you'll have to convince your pairs that you 
+know that homoplasy is impossible for the characters in question (or 
+that you can charge them with some relative &quot;weight&quot; or &quot;cost&quot; in the 
+analysis), and these considerations should be explicitely specified from 
+the start as an &quot;enriched&quot; model of evolutionary processes for phylogeny 
+inference from these characters;
+&quot;enriched&quot; or &quot;biased&quot; model, that is the question...
+
+best,
+
+Pierre
+
+
+
+Bob Mesibov wrote:
+&gt;<i> There were no serious nibbles at the bait I dangled here recently on
+</I>&gt;<i> character-tracking, i.e. investigating apparent homoplasy as a way to
+</I>&gt;<i> evaluate the plausibility of a phylogenetic hypothesis.
+</I>&gt;<i>
+</I>&gt;<i> I'm now aware that there are two philosophical objections to what I
+</I>&gt;<i> suggested. First, some cladists don't think of trees as history.
+</I>&gt;<i> Homoplasy is just a nuisance in their attempts to build a robust
+</I>&gt;<i> classification. This classification *reflects* history but isn't the
+</I>&gt;<i> same as history, so character-tracking would be meaningless.
+</I>&gt;<i>
+</I>&gt;<i> Second, some people accept homoplasy as an explanation for character or
+</I>&gt;<i> gene-history incongruence when *building* trees, but not as an
+</I>&gt;<i> explanation for *understanding* what happens in the tree they built.
+</I>&gt;<i>
+</I>&gt;<i> It works like this. A tree is built on an optimality criterion, say
+</I>&gt;<i> parsimony. Within this tree there's incongruence: not all the
+</I>&gt;<i> morphological characters, or all the sequences in a multi-locus gene
+</I>&gt;<i> set, will give the same tree when analysed separately. This incongruence
+</I>&gt;<i> is explained *after the fact* as due to homoplasy.
+</I>&gt;<i>
+</I>&gt;<i> The 'after-the-fact'er' stands by the phylogenetic hypothesis as simply
+</I>&gt;<i> the best available under the optimality criterion used in the analysis.
+</I>&gt;<i> It may or may not reflect historical reality. There is therefore no
+</I>&gt;<i> reason to track characters through the tree. My earlier, imagined, inner
+</I>&gt;<i> conversation - 'Hmmm. If this tree is correct, then this character must
+</I>&gt;<i> have had this interesting history...' - never happens. Optimality slays
+</I>&gt;<i> homoplasy, but there's no corpse.
+</I>&gt;<i>
+</I>&gt;<i> I think the same loss of information occurs when people build supertrees
+</I>&gt;<i> from separate phylogenetic hypotheses, or combine data before analysis
+</I>&gt;<i> using 'total evidence'. [Which is no such thing. It's short for 'data I
+</I>&gt;<i> can code and treat as equivalent and independent', and excludes relevant
+</I>&gt;<i> data that can't be coded in that manner.] Both methods give consensus
+</I>&gt;<i> trees in which the entities being 'treed' are nearly indefinable
+</I>&gt;<i> (Richard Zander says combining apples and oranges and lemons gives you
+</I>&gt;<i> fruit salad), and in which homoplasy is an explanation at a level deeper
+</I>&gt;<i> than the one at which the analysis operates.
+</I>&gt;<i>
+</I>&gt;<i> Do people working at this higher level think something like: 'The genes
+</I>&gt;<i> and/or morphological characters disagree. I don't know why and it's not
+</I>&gt;<i> feasible to investigate. All I know is that this is a pretty good tree
+</I>&gt;<i> based on sound methodology'??
+</I>&gt;<i>   
+</I>
+-- 
+Pierre Deleporte
+Université de Rennes 1
+CNRS UMR 6552 
+Station Biologique de Paimpont
+F-35380 Paimpont   FRANCE
+Téléphone : 02 99 61 81 63
+Técopie : 02 99 61 81 88
+
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="110925.html">[Taxacom] Why character-tracking doesn't happen?
+</A></li>
+	<LI>Next message: <A HREF="110927.html">[Taxacom] Why character-tracking doesn't happen?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#110926">[ date ]</a>
+              <a href="thread.html#110926">[ thread ]</a>
+              <a href="subject.html#110926">[ subject ]</a>
+              <a href="author.html#110926">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

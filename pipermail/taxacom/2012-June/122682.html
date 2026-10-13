@@ -1,0 +1,201 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] LSID versus names
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2012-June/122682.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] LSID versus names</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at bishopmuseum.org<BR>
+    <I data-pagefind-meta="date">Tue Jun 19 02:05:58 CDT 2012</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="122681.html">[Taxacom] Does the species name have to change when it
+	moves	genus?
+</A></li>
+        <LI>Next message: <A HREF="122683.html">[Taxacom] Does the species name have to change when it moves
+	genus?
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#122682">[ date ]</a>
+              <a href="thread.html#122682">[ thread ]</a>
+              <a href="subject.html#122682">[ subject ]</a>
+              <a href="author.html#122682">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2012</span><!--beginarticle-->
+<PRE>Yikes!
+
+I'm (reluctantly) breaking my relatively long-standing (though imperfect),
+self-imposed abstention from Taxacom in recent months.  The bulk of this
+discussion is either silly or grossly misdirected, so I'll ignore that bit
+(suffice it to say that Doug Yanega and Neal Evenhuis represent my
+perspective the best).  However, having just jumped into a
+distantly-relevant topic on another email list, I can't let some of this
+stuff go unchecked.
+
+First of all, it would be helpful (to me, at least) if we used a few terms
+correctly.  An LSID (Life Science Identifier) is a particular *kind* of GUID
+(Globally Unique Identfier).  Another *kind* of GUID is a UUID (Universally
+Unique Identfier).  There are other *kinds* of GUIDs (e.g., DOI).  To put it
+into terms more familiar to this audience, it might be helpful to think of
+the &quot;GUID&quot; as the genus, and &quot;LSID&quot;, &quot;UUID&quot;, and &quot;DOI&quot; as member species of
+that genus.
+
+No wait....on second thought, that will probably not be helpful.  Nevermind.
+
+In any case, this is *not* an LSID:
+B26AB2A6-972F-4A18-9D1D-486A980CF80F
+
+It is a UUID; and in this case, it was generated in the context of ZooBank.
+For complicated reasons that I touched on in my post sent to the other email
+list (but which are too technical to delve into here), ZooBank represents
+the UUIDs it generates in the form of an LSID.  In this case:
+urn:lsid:zoobank.org:act:B26AB2A6-972F-4A18-9D1D-486A980CF80F
+
+*That* is an LSID.  You can tell because it starts out with the prefix
+&quot;urn:lsid:...&quot;.  As a side note, you can also tell from the LSID (although
+you're technically not supposed to) that it was issued by ZooBank (the
+&quot;zoobank.org&quot; part), and that it represents a nomenclatural act (the &quot;act&quot;
+part).
+
+But I digress.
+
+So, if you think of it in terms of the genus/species analogy I mentioned
+(but then retracted) above, it might be helpful to think of ZooBank as a
+taxonomist who is treating &quot;UUID&quot; as a subspecies of &quot;GUID LSID&quot;, to yield
+&quot;GUID LSID UUID&quot;.
+
+No wait....on second thought, that will probably not be helpful.  Nevermind.
+Again.
+
+So that's the techno-nerd part of my commentary; and as pedantic as it may
+seem, this is as much to my mind as annoying as fingernails on a chalkboard,
+as regular participants of Taxacom would find the conflation of taxonomic
+names with taxonomic concepts.  Eeek!
+
+Getting more into the taxonomy side of things:  I have been playing with
+scientific names and computer databases since about 1988 or so; and if there
+is one thing that has been ABUNDANTLY clear from my experience, it is that
+text-string scientific names are WONDERFUL as (mostly) unique identifiers
+for use by human brains, and HORRIBLE as unique identifiers for use by
+computers.  There is a reason why ITIS did not follow the NODC convention
+for generating identifiers (am I dating myself here?)
+
+Here's just one of MANY examples why text-strings are not good as unique
+identifiers for names:
+<A HREF="http://www.google.com/search?q=Dr?s?phila+melanogaster">http://www.google.com/search?q=Dr?s?phila+melanogaster</A>
+(if you get more than one result, you cheated)
+
+Conversely, the various flavors of GUIDs (LSIDs, UUIDs, DOIs, etc.) are
+WONDERFUL (to varying degrees) as unique identifiers for use by computers;
+and HORRIBLE (to varying degrees) as unique identifiers for use by human
+beings.
+
+The answer is not rocket science:  the answer is for humans to continue
+using scientific names as (mostly) unique identifiers, and for computer
+databases to use proper GUIDs (of one flavor or another) as unique
+identifiers.  This is why I take great exception to Chris' earlier
+insinuation that GUIDs that are optimized for use by computer systems are
+somehow going to replace scientific names:
+
+&gt; The point is that a couple of small changes would have adapted the
+&gt; traditional ICZN to the modern computer world. BUT NO, the traditionalists
+&gt; refused to change. So, instead we are going to get ZooBANK with
+&gt;
+&gt; B26AB2A6-972F-4A18-9D1D-486A980CF80F E9541A64-EC44-4856-B2AB-
+&gt; B4E8400358F8 &amp;
+&gt; 1FDB5781-C8A0-4088-8D18-DCD5BB01C548 for our unique name! [or in the
+&gt; old fashion system, Rhopalopsole exigupspira Du &amp; Qian]
+
+So.... a couple things:
+
+1) UUIDs, LSIDs, and any other GUID used to represent a taxon name are not,
+themselves, intended as &quot;names&quot;.  Borrowing from Neal's example, the
+following are identifiers that are used by various informatics systems
+(i.e., computer databases):
+8C466CBE-3F7D-4DC9-8CBD-26DD3F57E212
+BD084528
+08320
+063463
+2682
+H00634762
+446007073
+219-68-2664
+<A HREF="http://hbs.bishopmuseum.org/staff/pylerichard.html">http://hbs.bishopmuseum.org/staff/pylerichard.html</A>
+<A HREF="http://www.linkedin.com/pub/richard-pyle/5/30a/234">http://www.linkedin.com/pub/richard-pyle/5/30a/234</A>
+...etc...
+[note: some of those numbers were adjusted slightly, to protect the guilty]
+
+As effective as all of these identifiers are for use by computer systems to
+distinguish me from all my homonymous brethren on this planet, I've no plans
+to abandon the moniker &quot;Richard Pyle&quot; when I introduce myself to new people.
+My *name* is &quot;Richard Pyle&quot;, no matter that different computer systems use
+different GUIDs to represent me.  Likewise, the *name* of the new species
+described by Du &amp; Qian in their 2011 article in ZooKeys is &quot;Rhopalopsole
+exiguspina&quot;, and even if later taxonomists combine it the species epithet
+with a different genus, nobody will ever think of its name as
+&quot;B26AB2A6-972F-4A18-9D1D-486A980CF80F&quot;.
+
+2) I'll give Chris the benefit of the doubt and assume that the reason he
+included three UUIDs (instead of one) in his example was not so much to make
+it look silly (as Neal suggested), but rather as a way of representing the
+&quot;Du &amp; Qian&quot; of the name+authorship &quot;Rhopalopsole exigupspira Du &amp; Qian&quot;.  As
+Neal pointed out, this belies a fundamental misunderstanding of how these
+identifiers are used.  In the case of the text-string name, you *NEED* to
+add the &quot;Du &amp; Qian&quot; for uniqueness, because there might be (now, or in the
+future), a homonymous &quot;Rhopalopsole exigupspira&quot; under a different
+authorship.  Let's ignore the historical reality that authors alone do not
+disambiguate all homonyms (indeed, Author+Year+Page appended to the name
+doesn't even eliminate all duplicates); the point is that UUIDs are (for any
+practical purpose) truly globally unique (again, as Neal already explained).
+Hence, it is silly to insinuate that you need the UUIDs for the authors when
+you have the UUID for the name.  This is taking a weakness of the
+name-string-as-identifier approach that Chris seems to advocate, and falsely
+transferring it to the computer-based identifier system.
+
+I had some more points to add here, but this message has gone on long
+enough.
+
+Aloha,
+Rich
+
+
+
+This message is only intended for the addressee named above.  Its contents may be privileged or otherwise protected.  Any unauthorized use, disclosure or copying of this message or its contents is prohibited.  If you have received this message by mistake, please notify us immediately by reply mail or by collect telephone call.  Any personal opinions expressed in this message do not necessarily represent the views of the Bishop Museum.
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="122681.html">[Taxacom] Does the species name have to change when it
+	moves	genus?
+</A></li>
+        <LI>Next message: <A HREF="122683.html">[Taxacom] Does the species name have to change when it moves
+	genus?
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#122682">[ date ]</a>
+              <a href="thread.html#122682">[ thread ]</a>
+              <a href="subject.html#122682">[ subject ]</a>
+              <a href="author.html#122682">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

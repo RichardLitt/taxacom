@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Terminology of trinomials
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2008-January/109727.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Terminology of trinomials</H1>
+    <B data-pagefind-meta="author">Andy Mabbett</B>
+    andy at pigsonthewing.org.uk<BR>
+    <I data-pagefind-meta="date">Tue Jan  1 10:12:34 CST 2008</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Next message: <A HREF="109728.html">[Taxacom] Terminology of trinomials
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#109727">[ date ]</a>
+              <a href="thread.html#109727">[ thread ]</a>
+              <a href="subject.html#109727">[ subject ]</a>
+              <a href="author.html#109727">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2008</span><!--beginarticle-->
+<PRE>In message &lt;003f01c84bc5$c2daaa50$2b4c4451 at magnifica2&gt;, Paul van
+Rijckevorsel &lt;dipteryx at freeler.nl&gt; writes
+
+&gt;From: &quot;Andy Mabbett&quot; &lt;andy at pigsonthewing.org.uk&gt;
+&gt;&gt; Specific details would be helpful, please.
+
+&gt;That is pretty hard. The Codes differ not only in their terminology,
+&gt;but also in their concepts and organization. A common characteristic of
+&gt;all the Codes is they are terribly precise in their terminology.
+&gt;Anybody who knows enough about one Code to say something meaningful
+&gt;about it is thereby conditioned against making an accurate statement on
+&gt;a detail in another Code. The safe course is to deal with only one Code
+&gt;at the time.
+
+Thank you for the explanation.
+
+I don't think it practical to have separate microformats for each Code
+(though I'm open to persuasion), so the thing to do is tease out the
+common ground and find, by looking at examples of what is already
+published (preferably on the web, as required by the microformats
+&quot;process&quot;), ways of dealing with any exceptions.
+
+That /might/ necessitate a generic property for the more obscure ranks,
+with a name/ value pair; like:
+
+        &lt;foo class=&quot;biota&quot;&gt;
+
+          &lt;foo class=&quot;binomen&quot;&gt;
+              Homo sapien
+          &lt;/foo&gt;
+
+          &lt;foo class=&quot;rank&quot;&gt;
+
+            &lt;foo class=&quot;name&quot;&gt;
+              subvarietas
+            &lt;/foo&gt;:
+
+            &lt;foo class=&quot;value&quot;&gt;
+              idaltu
+            &lt;/foo&gt;
+
+          &lt;/foo&gt;
+
+        &lt;/foo&gt;
+
+but that would require the name of the rank (in this example,
+&quot;subvarietas&quot;) to be published on the page.
+
+It might also be possible that class=&quot;rank&quot; could be replaced with
+class=&quot;infraspecies&quot; for ranks below species (or subspecies?) level,
+with the name of the infraspecies-rank being optional, so that either:
+
+        &lt;foo class=&quot;biota&quot;&gt;
+
+          &lt;foo class=&quot;binomen&quot;&gt;
+              Homo sapien
+          &lt;/foo&gt;
+
+          &lt;foo class=&quot;infraspecies&quot;&gt;
+
+            &lt;foo class=&quot;name&quot;&gt;
+              subvarietas
+            &lt;/foo&gt;:
+
+            &lt;foo class=&quot;value&quot;&gt;
+              idaltu
+            &lt;/foo&gt;
+
+          &lt;/foo&gt;
+
+        &lt;/foo&gt;
+
+or:
+
+        &lt;foo class=&quot;biota&quot;&gt;
+
+          &lt;foo class=&quot;binomen&quot;&gt;
+              Homo sapien
+          &lt;/foo&gt;
+
+          &lt;foo class=&quot;infraspecies&quot;&gt;
+              idaltu
+          &lt;/foo&gt;
+
+        &lt;/foo&gt;
+
+would be valid. The former obviously has more semantic richness.
+
+
+Are there websites, or other references, which compare and contrast the
+Codes' terminology? How many Codes are there?
+
+&gt;There is a feeling &quot;out there&quot; that it would be nice to have a single
+&gt;Code that would deal with all living organismes.
+
+Speaking as a taxonomy lay-person; that seems very sensible, if not
+overdue!
+
+
+We currently have a &quot;straw-man&quot; proposal:
+
+  &lt;<A HREF="http://microformats.org/wiki/species-brainstorming#Straw_man_proposal">http://microformats.org/wiki/species-brainstorming#Straw_man_proposal</A>&gt;
+
+on which your comments, here or there, will be welcome (but be aware
+that the class names will change). It's currently implemented on
+Wikipedia; see also:
+
+  &lt;<A HREF="http://species.wikimedia.org/wiki/Wikispecies:Microformat">http://species.wikimedia.org/wiki/Wikispecies:Microformat</A>&gt;
+
+for details of how to install a parser.
+
+I'm hoping to solidify that into a draft standard, over the next few
+weeks, but will need help from taxonomists.
+
+
+Happy New Year, everyone!
+
+-- 
+Andy Mabbett
+
+            *  Are you using Microformats, yet: &lt;<A HREF="http://microformats.org/">http://microformats.org/</A>&gt; ?
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Next message: <A HREF="109728.html">[Taxacom] Terminology of trinomials
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#109727">[ date ]</a>
+              <a href="thread.html#109727">[ thread ]</a>
+              <a href="subject.html#109727">[ subject ]</a>
+              <a href="author.html#109727">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Bremer support
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2005-November/094439.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Bremer support</H1>
+    <B data-pagefind-meta="author">Derek Sikes</B>
+    dsikes at UCALGARY.CA<BR>
+    <I data-pagefind-meta="date">Wed Nov 30 13:42:07 CST 2005</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="094441.html">Bremer support
+</A></li>
+        <LI>Next message: <A HREF="094440.html">quick MP searches (was Bremer support)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#094439">[ date ]</a>
+              <a href="thread.html#094439">[ thread ]</a>
+              <a href="subject.html#094439">[ subject ]</a>
+              <a href="author.html#094439">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2005</span><!--beginarticle-->
+<PRE>What a lot of people don't realize when using PAUP is that searches
+can spend (waste) large amounts of time on suboptimal islands/
+plateaus. This is why Rice et al.'s 1997 search using the rbcL 500
+dataset took 13 months. This problem can be avoided by using methods
+such as Nixon's Ratchet in NONA  (or use PAUPRat for PAUP), but even
+without the Ratchet PAUP can go much faster with the following search
+strategy:
+
+1. limit the number of trees swapped during each replicate to avoid
+swapping a suboptimal island to completion. This can be done in
+different ways. for example by setting in the branch swapping options
+(Mac version) the following: click the box to 'save no more than x
+trees &gt; score y (each rep)' and set x to a number like 10 or 5 and y
+equal to either a known shortest score or simply 1. PAUP will then
+burn through all the reps very quickly but doing only quick searches
+in each rep. (for non-mac versions see the nchuck command in the
+reference guide).
+
+2. When done with step 1 use the best trees found as the starting
+trees for an unconstrained search that will explore all swapping
+options (swap each island to completion).
+
+The agony, if one watches the search progress closely, is seeing the
+search swapping for many days (or weeks) on, say a tree island with
+length 1287 and when it is done with that rep and begins the next it
+finds a tree island of length 1260 within minutes! This means all
+those days spent exploring that 1287 island were wasted. Use the
+above strategy to prevent this.
+
+Yours,
+-Derek
+
+On 30-Nov-05, at 1:11 PM, Karl Magnacca wrote:
+
+&gt; I should clarify: it was NONA (which is also claimed to be much faster
+&gt; than PAUP; it may be used as the regular search engine for TNT but
+&gt; I'm not
+&gt; sure) that ran so much slower.  The search that failed to find the
+&gt; shortest trees in TNT was the special search technique for massive
+&gt; data
+&gt; sets.
+&gt;
+&gt;&gt; Well, I suppose different data sets will run differently, but in my
+&gt;&gt; original search for MP trees, an approximately 30-minute search in
+&gt;&gt; TNT
+&gt;&gt; yielded the same set of MP trees as the search in PAUP (500 random
+&gt;&gt; addition sequences, TBR branch swapping) which took *almost 2
+&gt;&gt; weeks* for a
+&gt;&gt; data set with 68 taxa and 120 morphological characters.
+&gt;
+&gt; What kind of computer are you using?  Unless it's a VIC-20, I can't
+&gt; imagine it possibly taking that long for PAUP to run unless something
+&gt; isn't working right.  The data set I was working with was 97 taxa,
+&gt; ~600
+&gt; informative DNA and 15 morphological characters, and it only took 10
+&gt; minutes for 100 replicates on a 266 Mhz computer.  On a new one it
+&gt; takes
+&gt; less than 2 minutes.
+&gt;
+&gt; Karl
+
+++++++++++++++++++++++++++++++++++++++++++++++
+Derek S. Sikes, Assistant Professor
+Division of Zoology
+Department of Biological Sciences
+University of Calgary
+2500 University Drive NW
+Calgary, Alberta, Canada, T2N 1N4
+
+dsikes at ucalgary.ca
+<A HREF="http://homepages.ucalgary.ca/~dsikes/sikes_lab.htm">http://homepages.ucalgary.ca/~dsikes/sikes_lab.htm</A>
+
+phone: 403-210-9819
+FAX:  403-289-9311
+
+&quot;Remember that Truth alone is the matter you are in Search after; and
+if you have been mistaken, let no Vanity reduce you to persist in
+your mistake.&quot; Henry Baker, London, 1785
+
+Entomological Society of Alberta:
+<A HREF="http://www.biology.ualberta.ca/courses.hp/esa/esa.htm">http://www.biology.ualberta.ca/courses.hp/esa/esa.htm</A>
+++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="094441.html">Bremer support
+</A></li>
+        <LI>Next message: <A HREF="094440.html">quick MP searches (was Bremer support)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#094439">[ date ]</a>
+              <a href="thread.html#094439">[ thread ]</a>
+              <a href="subject.html#094439">[ subject ]</a>
+              <a href="author.html#094439">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

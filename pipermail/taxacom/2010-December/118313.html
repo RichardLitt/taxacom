@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Inappropriate accuracy of locality data
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2010-December/118313.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Inappropriate accuracy of locality data</H1>
+    <B data-pagefind-meta="author">Arthur Chapman</B>
+    taxacom3 at achapman.org<BR>
+    <I data-pagefind-meta="date">Thu Dec  2 15:03:57 CST 2010</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="118312.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+        <LI>Next message: <A HREF="118314.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#118313">[ date ]</a>
+              <a href="thread.html#118313">[ thread ]</a>
+              <a href="subject.html#118313">[ subject ]</a>
+              <a href="author.html#118313">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2010</span><!--beginarticle-->
+<PRE>I agree with that Bob - and I said record to an *appropriate 
+precision*.  What I am suggesting not to do is to round even further.  
+It is best to record the most accurate position according to the 
+appropriate precision and then adding the uncertainty.
+
+Uncertainty when using a GPS is probably less important for biology as 
+mentioned already as it is below the parameters we need or biology.  But 
+when obtaining the georeferencing from other sources - a map, the 
+Readers Digest Atlas (yes people still do that!), Google Earth, etc. 
+then the Uncertainty can be important.  Also georeferencing legacy data 
+as mentioned by Doug where the uncertainty can be in thousands of meters 
+rather than tens, it is very important to document and record.
+
+One of my missions in life is to get people to record the uncertainty in 
+all their geo-locations - the user can then decide if the data is 
+accurate enough for their use or not.  If it is not documented then we 
+get misleading information such as a record that just says Tasmania with 
+a very precise point in the middle of the Island. Without the associated 
+Uncertainty - the user has no idea that it is not an accurate 
+representation of the specimen location.
+
+Two issues I see as important are 1). That the Uncertainty be recorded 
+and reported - very little of the data on GBIF shows the Uncertainty, 
+although there is a field there, and it is catered for by Darwin Core. 
+Obviously collections are either not recording Uncertainty, or are not 
+exporting it with the data and 2) that people extracting the data from 
+GBIF should extract that information, otherwise their analyses could be 
+rubbish where they are using what appears to be precise data, but the 
+Uncertainty may say 10,000 meters. I believe that if the lat and long 
+are extracted then Uncertainty is mandatory and automatically extracted 
+as well.
+
+Cheers
+
+Arthur
+
+On 3/12/2010 6:46 AM, Bob Mesibov wrote:
+&gt; Hi, Arthur.
+&gt;
+&gt; Many thanks for your comments, and I hope Taxacomers interested in this topic go to your 'best georeferencing practice' for more.
+&gt;
+&gt; However, I have to disagree with &quot;...rounding of the lat/long - i.e. reducing the precision of the recording, but this can also lead to problems (depending on the reduction in precision) as it moves the point as lat/long is only a point representation of the left hand bottom of grid square.&quot;
+&gt;
+&gt; Rounding off *does not* move the point. If you round off to an implied precision appropriate to the measurement, the point stays exactly where the instrument told you it was. The overaccurate measurement you read off the GPS screen was the instrument fantasising by calculating and including too many significant figures.
+&gt;
+&gt; As I suggested in an earlier post, this may be simpler to understand by using the analogy of a balance. Suppose the sensitivity of the balance is such that it can only weigh to the nearest 0.1 kg. Then the weight measurements you get from this balance are only meaningful to the nearest 0.1 kg. If you round off 55.4392 kg to 55.4 kg, you are not 'moving the weight' from 55.4392 kg to 55.4000 kg, because the 3 figures after 55.4 are meaningless.
+&gt;
+&gt; The meaningless extra figures you get from a GPS arise from a calculation within the gadget which preserves more figures than it should. The meaningless extra figures should be ignored.
+&gt;
+&gt; My GIS is even worse. It calculates positions to 0.000001 m, or one micron. When I digitise map data I get six significant figures after the decimal. I hope you're not going to suggest that rounding 355177.286149 m 355177 m is *moving* the point from 355177.286149 m to 355177.000000 m?
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="118312.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+        <LI>Next message: <A HREF="118314.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#118313">[ date ]</a>
+              <a href="thread.html#118313">[ thread ]</a>
+              <a href="subject.html#118313">[ subject ]</a>
+              <a href="author.html#118313">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

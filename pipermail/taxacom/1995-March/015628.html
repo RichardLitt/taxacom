@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Numeric characters: to range or not to range
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1995-March/015628.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Numeric characters: to range or not to range</H1>
+    <B data-pagefind-meta="author">Mike Dallwitz</B>
+    miked at ENTO.CSIRO.AU<BR>
+    <I data-pagefind-meta="date">Thu Mar  9 12:01:22 CST 1995</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="098784.html">Of cabbages and kings
+</A></li>
+        <LI>Next message: <A HREF="051420.html">Numeric characters: to range or not to range
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#015628">[ date ]</a>
+              <a href="thread.html#015628">[ thread ]</a>
+              <a href="subject.html#015628">[ subject ]</a>
+              <a href="author.html#015628">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1995</span><!--beginarticle-->
+<PRE>                                                                  9 March 1995
+
+&gt; From: Glenn Hunt (Australian Museum)
+&gt; To: Mike Dallwitz
+&gt;
+&gt; One problem is making some characters numeric. Although it would inject more
+&gt; scientific rigor it might be too burdensome to the user. I see the potential
+&gt; for having two levels of characters: a character at one level might be
+&gt; useful for coarse discrimination, for example, the relative separation of
+&gt; the genital and anal plates might be coded as three character states which
+&gt; in fact allows separation of major classical groups of oribatids. The user
+&gt; could do this speedily at a glance. At another level a more precise numeric
+&gt; coding would allow fine discrimination, say at the species level, in certain
+&gt; taxa. I would envisage that all species would be coded for the character at
+&gt; the coarse level but only those where discrimination is required would be
+&gt; coded at the finer level.
+
+Using numeric values directly, instead of in ranged form as multistate
+characters, is not significantly more difficult for the INTKEY user, although
+it is usually more work for the author to record actual numeric values.
+
+As an example, consider a character to give the length of a wing. It might be
+formulated as
+    #1. length of wing/ mm/
+or
+    #2. length of wing/ 1. up to 10mm/ 2. 10-30mm/ 3. 30mm or more/
+
+Consider a species where the wing length ranges from 17 to 19mm. This would be
+coded as 1,17-19 or 2,2. The former requires the author to measure several
+specimens, whereas the latter could be immediately entered just by glancing at
+the specimens. The user identifying a specimen with a wing 17mm long could
+also immediately enter 2,2, but could almost as easily estimate the length and
+enter, say, 1,15-20. The former eliminates species which are always less than
+10mm or more than 30mm, whereas the latter eliminates those which are always
+less than 15mm or always more than 20mm - a substantially better result, with
+little extra effort. The user has the option of getting a still better result
+by making the measurement and entering 1,17, thus eliminating species which
+are always less than 17mm or always more than 17mm.
+
+For species in which the wing lengths are near the boundaries between the
+ranges, for example, 9-11 or 11-13, both the author and the user will have to
+make measurements to use the multistate form of the character, or accept
+greatly reduced discrimination by entering both states: 2,1/2.
+
+Most taxonomists tend to avoid using numeric characters, partly because it is
+more work to record them, but also because they are not aware how good their
+discriminating power can be, even when there is substantial intra-taxon
+variability.
+
+Recording actual numeric values also has advantages for classification, and
+generation of printed keys. Most phenetic analysis programs can use the
+numeric data directly. For programs which can't use the data directly, it can
+be converted to multistate form (with the KEY STATES directive in CONFOR), and
+the boundaries between the states can be chosen and experimented with AFTER
+the data have been gathered.
+
+Mike Dallwitz                                  Internet md at ento.csiro.au
+CSIRO Division of Entomology                   Fax +61 6 246 4000
+GPO Box 1700, Canberra ACT 2601, Australia     Phone +61 6 246 4075
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="098784.html">Of cabbages and kings
+</A></li>
+        <LI>Next message: <A HREF="051420.html">Numeric characters: to range or not to range
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#015628">[ date ]</a>
+              <a href="thread.html#015628">[ thread ]</a>
+              <a href="subject.html#015628">[ subject ]</a>
+              <a href="author.html#015628">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

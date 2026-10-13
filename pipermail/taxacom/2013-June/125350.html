@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Data query
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-June/125350.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Data query</H1>
+    <B data-pagefind-meta="author">Stephen Thorpe</B>
+    stephen_thorpe at yahoo.co.nz<BR>
+    <I data-pagefind-meta="date">Tue Jun 25 18:45:52 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="125349.html">[Taxacom] Data query
+</A></li>
+        <LI>Next message: <A HREF="125351.html">[Taxacom] Data query, ETC.
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#125350">[ date ]</a>
+              <a href="thread.html#125350">[ thread ]</a>
+              <a href="subject.html#125350">[ subject ]</a>
+              <a href="author.html#125350">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>Rich Pyle verbulated: [quote]Suppose a bit more research reveals that &quot;aurantonotus&quot; was used as an adjective.? Oops!? Now it needs to be changed to &quot;Centropyge aurantonota&quot;.? How does WikiSpecies handle this?? Does it keep the identifier as <A HREF="http://species.wikimedia.org/wiki/Centropyge_aurantonotus">http://species.wikimedia.org/wiki/Centropyge_aurantonotus</A> and then display the name as &quot;Centropyge aurantonota&quot;?? If so, how will someone who knows the name via the correct spelling ever find the WikiSpecies page?? They just get this: <A HREF="http://species.wikimedia.org/wiki/Centropyge_aurantonota">http://species.wikimedia.org/wiki/Centropyge_aurantonota</A> -- and assume they need to create a new page.? Or, if you change the identifier to match the correct spelling, then what happens to anyone who ever linked to the old spelling?? Do those links just break?? Or does WikiSPecies re-direct from the old spelling to the correct one?? And what about when new genetic research reveals that the genus Xiphypops is good, and the name changes to Xiphypops aurantonotus?? What happens
+ to the WikiSpecies link?? What about the people who don't know Xiphypops is masculine, and try to find Xiphypops aurantonota?[unquote]
+?
+If further research resulted in a change to Centropyge aurantonota, then someone would redirect the page for Centropyge aurantonotus to a new page for?Centropyge aurantonota. Simple! Similarly, old combinations get redirected to new ones. Someone has to do the redirects (once), but then someone has to do something on your story, too. If someone tried to find Xiphypops aurantonota, even though this is an UNPUBLISHED incorrect spelling, then there would be no page, but fuzzy matching would likely alert them to the correct spelling, and it would be sensible for them to check out the species list on the genus page, anyway!
+?
+Actually, ideally, a database would store only a genus name, its gender, and the stem of the species name, and then autocreate the correct suffix, but that would be tricky as things are (in part because of the current Code's attempt to please everyone with (hopelessly vague) &quot;prevailing usage&quot; caveats on correct spellings) ...
+?
+Stephen
+
+
+________________________________
+From: Richard Pyle &lt;deepreef at bishopmuseum.org&gt;
+To: 'Stephen Thorpe' &lt;stephen_thorpe at yahoo.co.nz&gt;; Tony.Rees at csiro.au; mesibov at southcom.com.au 
+Cc: taxacom at mailman.nhm.ku.edu 
+Sent: Tuesday, 25 June 2013 10:41 PM
+Subject: RE: [Taxacom] Data query
+
+
+Here's another way to look at it:
+
+If you use names as identifiers, then EVERY human who EVER tries to link to that name will ALWAYS need to manually disambiguate.
+
+On the other hand, if you have hidden GUIDs working behind the scenes, then only ONE person needs to disambiguate it ONCE, after which NO ONE ever needs to disambiguate ever again.
+
+For example, suppose ZooBank used a URL along the lines of <A HREF="http://zoobank.org/Chromis(doesn&#x27;t">http://zoobank.org/Chromis(doesn&#x27;t</A> work, but pretend that it does).
+The result would be a disambiguation page along the lines of:
+
+Chromis Cuvier, 1814? (<A HREF="http://zoobank.org/B8F9F80D-5798-4342-810D-D8274164F8F1)">http://zoobank.org/B8F9F80D-5798-4342-810D-D8274164F8F1)</A>
+Chromis Gronow in Gray, 1854 (<A HREF="http://zoobank.org/EBF02DF4-0D67-4865-AFA1-A71FCB56BBBA)">http://zoobank.org/EBF02DF4-0D67-4865-AFA1-A71FCB56BBBA)</A>
+Chromis G?nther, 1862 (<A HREF="http://zoobank.org/94E77D5F-BCAE-4B06-8656-C02D2FE04E97)">http://zoobank.org/94E77D5F-BCAE-4B06-8656-C02D2FE04E97)</A>
+Chromis Oken &amp; Cuvier in Oken, 1817 (<A HREF="http://zoobank.org/754166A3-E1E3-401E-9FF3-1D9EBA20F8C8)">http://zoobank.org/754166A3-E1E3-401E-9FF3-1D9EBA20F8C8)</A>
+Chromis Plumier in Lac?p?de, 1801 (<A HREF="http://zoobank.org/9AE8FD1E-2B56-499D-8F54-CBB4170EBFA8)">http://zoobank.org/9AE8FD1E-2B56-499D-8F54-CBB4170EBFA8)</A>
+
+Then, suppose they wanted to link to the same record in the Catalog of Fishes.? If they only had a link for something like &quot;<A HREF="http://researcharchive.calacademy.org/research/ichthyology/catalog/Chromis">http://researcharchive.calacademy.org/research/ichthyology/catalog/Chromis</A>&quot;, then we'd get another disambiguation page for the five records in CoF.
+
+That means that EVERY TIME someone wants to jump from ZooBank to CoF or back, they'd need to pass through a disambiguation page.? To a human, this is merely annoying.? To a computer service, this is effectively a show-stopper.
+
+OK, so forget homonyms for a moment.
+
+I just took a look on WikiSPecies for one of the groups I did my PhD work on (genus Centropyge).
+
+It was really easy for me to find this page (+1 for names-as identifiers): 
+<A HREF="http://species.wikimedia.org/wiki/Centropyge">http://species.wikimedia.org/wiki/Centropyge</A>
+
+So far, so good.
+
+Then I took a closer look.? One of the species is Centropyge aurantonotus:
+<A HREF="http://species.wikimedia.org/wiki/Centropyge_aurantonotus">http://species.wikimedia.org/wiki/Centropyge_aurantonotus</A>
+
+Suppose a bit more research reveals that &quot;aurantonotus&quot; was used as an adjective.? Oops!? Now it needs to be changed to &quot;Centropyge aurantonota&quot;.? How does WikiSpecies handle this?? Does it keep the identifier as <A HREF="http://species.wikimedia.org/wiki/Centropyge_aurantonotusand">http://species.wikimedia.org/wiki/Centropyge_aurantonotusand</A> then display the name as &quot;Centropyge aurantonota&quot;?? If so, how will someone who knows the name via the correct spelling ever find the WikiSpecies page?? They just get this: <A HREF="http://species.wikimedia.org/wiki/Centropyge_aurantonota--">http://species.wikimedia.org/wiki/Centropyge_aurantonota--</A> and assume they need to create a new page.? Or, if you change the identifier to match the correct spelling, then what happens to anyone who ever linked to the old spelling?? Do those links just break?? Or does WikiSPecies re-direct from the old spelling to the correct one?? And what about when new genetic research reveals that the genus Xiphypops is good, and the name changes to Xiphypops aurantonotus?? What happens to the WikiSpecies link?? What
+ about the people who don't know Xiphypops is masculine, and try to find Xiphypops aurantonota?? Or what about the common misspelling of the genus: Xiphipops?
+
+And what about my good old friend Centropyge vrolikii?? And all the various names and spellings (Centropyge vroliki, Centropyge vrolicki, Holacanthus vrolikii, etc.)? Do we need redirections from all of these?
+
+Dirty buckets and human web pages work perfectly fine with names as identifiers.? Clean buckets need more precision to work effectively (and to do things that Dirty Buckets can only dream of doing).
+
+Rich
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="125349.html">[Taxacom] Data query
+</A></li>
+        <LI>Next message: <A HREF="125351.html">[Taxacom] Data query, ETC.
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#125350">[ date ]</a>
+              <a href="thread.html#125350">[ thread ]</a>
+              <a href="subject.html#125350">[ subject ]</a>
+              <a href="author.html#125350">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

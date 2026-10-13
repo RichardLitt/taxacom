@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Data query
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-June/125329.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Data query</H1>
+    <B data-pagefind-meta="author">Stephen Thorpe</B>
+    stephen_thorpe at yahoo.co.nz<BR>
+    <I data-pagefind-meta="date">Tue Jun 25 02:35:12 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="125328.html">[Taxacom] Data query
+</A></li>
+        <LI>Next message: <A HREF="125330.html">[Taxacom] Data query
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#125329">[ date ]</a>
+              <a href="thread.html#125329">[ thread ]</a>
+              <a href="subject.html#125329">[ subject ]</a>
+              <a href="author.html#125329">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>Actually Rich, you might think seriously about creating ZooBank URLs, in addition to, and which redirect to the current ones based on LSIDs, but based instead on the name, as Wikispecies does. This would greatly facilitate automatic link creation from WS to ZooBank ...
+
+
+
+________________________________
+From: Richard Pyle &lt;deepreef at bishopmuseum.org&gt;
+To: 'Stephen Thorpe' &lt;stephen_thorpe at yahoo.co.nz&gt;; Tony.Rees at csiro.au; mesibov at southcom.com.au 
+Cc: taxacom at mailman.nhm.ku.edu 
+Sent: Tuesday, 25 June 2013 6:55 PM
+Subject: RE: [Taxacom] Data query
+
+
+I slogged through this discussion, and found many things I agreed with, and
+many things I disagreed with, from all of the major contributors to the
+thread.? However, I did want to call attention to one point raised by
+several different people, that I STRONGLY agree with, and that I would like
+to see amplified repeatedly? and very loudly:
+
+Tony Rees said it this way:
+
+&gt; What we really need to aspire to is a network of linked systems 
+&gt; whereby changes and new content entered once can propagate 
+&gt; automatically elsewhere as needed rather than requiring manual input
+
+And again this way:
+
+&gt; Perhaps it is time to move the discussion on to related matters 
+&gt; such as how to possibly chain these systems together in the future 
+&gt; so that updates may more readily flow from the point of entry to 
+&gt; potentially multiple points of re-use...
+
+And then Stephen followed with this gem:
+?
+&gt; Well, one thing that stands out here is that the only honourable 
+&gt; thing to do, but is rarely done, is to provide links from a taxon 
+&gt; page in one project to the corresponding taxon pages in other 
+&gt; projects which may have better and more complete data on 
+&gt; that taxon, so as to give the user a chance of finding what 
+&gt; they want to know even if the project they have visited 
+&gt; doesn't have the data. Conversely, doing so will also highlight 
+&gt; how good the visited project is, if the linked projects have 
+&gt; less data, so it is win-win, really!
+
+YES!? YES! YES!!
+
+About two years ago, it became very clear to me that a small feature I added
+to my Taxonomer database back in the 1990's, and included in the first
+version of ZooBank back in 2008 (cross-linking identifiers) will almost
+certainly come to be known as one of the most important (if not *the* most
+important) contributions from GNUB/ZooBank to our community; which is a
+generic mechanism for cross-linking records to each other. 
+
+It's an incredibly simple data structure, and is now built in to the ZooBank
+website for Authors, References and Taxon Names (but it can easily be
+applied to any record in any table of the database).? When you're logged in
+to ZooBank and have access to a particular record for editing, you'll see a
+small link next to the &quot;Edit&quot; button for &quot;add external identifier&quot;. Click on
+this and you get a pop-up form that lets you create cross-links to other
+external databases.? Just for fun, I went to my old trusty example:
+<A HREF="http://zoobank.org/8BDC0735-FEA4-4298-83FA-D04F67C3FBEC">http://zoobank.org/8BDC0735-FEA4-4298-83FA-D04F67C3FBEC</A>
+
+and added a link to the Wikispecies page (Identifier Doimain = &quot;WikiSpecies
+Page&quot;; Identifier = &quot;Chromis_abyssus&quot;), and voil?!? A link from the ZooBank
+record to the WikiSpecies page is born!
+
+Now... a few caveats...? there is a buglet that prevents the closing of the
+pop-up form after you create such a link (just refresh the page to make it
+go away).? Also, it's only visible if you have edit access to a particular
+record in ZooBank.? Once we fix the buglet and beef up the protection code
+(to minimize bogus entries), we'll make this feature available to anyone
+with a login account for applying to any record (whether or not the user has
+edit access to the record).
+
+Our plan is to develop a generic service around this cross-linking mechanism
+such that anyone can harvest the cross-links for any record, and display
+them on their local page.? The REALLY cool part is this:? Once I link the
+ZooBank record to the Wikispecies page, the WoRMS page, the FishBase page,
+and so on....I've not only linked ZooBank to these other sources, we've also
+linked these other sources TO EACH OTHER. In the example I gave above
+(Chromis abyssus), I didn't just link ZooBank to WikiSpecies; I also linked
+WikiSpecies to BOLD, Bill Eschmeyer's Catalog of Fishes, Digimorph, EoL,
+FishBase, MorphBank, NCBI/GenBank, and WoRMS.? And, I've linked each of
+these databases to WikiSpecies (as well as each other).? The idea for the
+generic service would be for WoRMS to fire off its identifier (in this case,
+345844) to the service and get back the links to all the other databases.
+
+As Stephen says, the honorable data managers will see this as a no-brainer
+win-win.
+
+I'll post more on this service once we get it functional.
+
+Aloha,
+Rich
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="125328.html">[Taxacom] Data query
+</A></li>
+        <LI>Next message: <A HREF="125330.html">[Taxacom] Data query
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#125329">[ date ]</a>
+              <a href="thread.html#125329">[ thread ]</a>
+              <a href="subject.html#125329">[ subject ]</a>
+              <a href="author.html#125329">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

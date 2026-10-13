@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] GBIF updating
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20GBIF%20updating&In-Reply-To=%3CFE2B3D62E1A64E01.621959C4-C51D-4C26-9968-67E9C1E66632%40acompli.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="127531.html">
+   <LINK REL="Next"  HREF="080195.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2014-August/127533.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] GBIF updating</H1>
+    <B data-pagefind-meta="author">Roderic Page</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20GBIF%20updating&In-Reply-To=%3CFE2B3D62E1A64E01.621959C4-C51D-4C26-9968-67E9C1E66632%40acompli.com%3E"
+       TITLE="[Taxacom] GBIF updating">Roderic.Page at glasgow.ac.uk
+       </A><BR>
+    <I data-pagefind-meta="date">Fri Aug 22 22:50:40 CDT 2014</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="127531.html">[Taxacom] GBIF updating
+</A></li>
+        <LI>Next message: <A HREF="080195.html">[Taxacom] Example GBIF error
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#127533">[ date ]</a>
+              <a href="thread.html#127533">[ thread ]</a>
+              <a href="subject.html#127533">[ subject ]</a>
+              <a href="author.html#127533">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2014</span><!--beginarticle-->
+<PRE>Hi Bob,
+
+Regarding velvet worms in the sea (e.g., <A HREF="http://www.gbif.org/occurrence/478895404">http://www.gbif.org/occurrence/478895404</A>)  it would be nice to automatically check for these sorts of errors, especially given that GBIF &quot;knows&quot; that these taxa aren't marine, and it's reasonably easy to compute whether a given pair of latitude and longitude coordinates are in the sea or not.
+
+Looking at the OZCAM page in GBIF <A HREF="http://www.gbif.org/dataset/dce8feb0-6c89-11de-8225-b8a03c50a862">http://www.gbif.org/dataset/dce8feb0-6c89-11de-8225-b8a03c50a862</A> GBIF last harvested data a year ago, suggesting that the data ALA makes available to GBIF hasn't been updated since then. GBIF can only use of what people make available to it. I'll see if I can find out what's happening.
+
+Regards
+
+Rod
+
+Sent from Acompli&lt;<A HREF="http://t.acompli.com/ac_sig">http://t.acompli.com/ac_sig</A>&gt;
+
+_____________________________
+From: Bob Mesibov &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">mesibov at southcom.com.au</A>&lt;mailto:<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">mesibov at southcom.com.au</A>&gt;&gt;
+Sent: Saturday, August 23, 2014 2:57
+Subject: [Taxacom] GBIF updating
+To: TAXACOM &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom at mailman.nhm.ku.edu</A>&lt;mailto:<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom at mailman.nhm.ku.edu</A>&gt;&gt;
+
+
+If you search today (23 August 2014) for 'Tasmanipatus anophthalmus' and 'Tasmanipatus barretti' in GBIF you'll learn that they're velvet worms and that their habitat is (quote) Not marine (unquote). On the same species page, the map shows one record for each in the ocean, about 150 km west of Tasmania.I know both records well, since I was the collector for the first and co-collector for the second. The specimens were deposited in the Australian Museum. The Museum entered the label data in its database. Later the Museum uploaded its records to OZCAM (Online Zoological Collections of Australian Museums), which pushed them to ALA (Atlas of Living Australia), which sent them to GBIF. Somewhere along this pipeline 148 degrees longitude became 143 degrees and put the velvet worms in the ocean.I discovered the error in May 2013 and pointed it out to an ALA staffer. He found out for me that range-based outlier checks were only being done at ALA for terrestrial records, and these two records were marine. Expert-vetted distributions for other outlier tests were only available for fish and birds. He flagged the record in ALA, which meant that an email went to the Australian Museum querying the occurrence data.The Museum contacted me the same month. I corrected the records (and some others) for the Museum.In January 2014 I checked ALA. The two records had been fixed (although there two new, strange problems with the data and access to it). I have no idea how often GBIF 'synchronises' data with ALA, but 15 months after I notified their upstream provider about the location error, the velvet worms are still at sea. One of the species is IUCN Red-Listed as 'endangered', probably drowning.-- Dr Robert MesibovHonorary Research AssociateQueen Victoria Museum and Art Gallery, andSchool of Land and Food, University of TasmaniaHome contact:PO Box 101, Penguin, Tasmania, Australia 7316(03) 64371195; 61&lt;tel:64371195;%2061&gt; 3 64371195_______________________________________________Taxacom Mailing <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">ListTaxacom at mailman.nhm.ku.eduhttp</A>&lt;mailto:<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">ListTaxacom at mailman.nhm.ku.eduhttp</A>&gt;://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacomThe Taxacom Archive back to 1992 may be searched at: <A HREF="http://taxacom.markmail.orgCelebrating">http://taxacom.markmail.orgCelebrating</A> 27 years of Taxacom in 2014.
+
+If you search today (23 August 2014) for 'Tasmanipatus anophthalmus' and 'Tasmanipatus barretti' in GBIF you'll learn that they're velvet worms and that their habitat is (quote) Not marine (unquote). On the same species page, the map shows one record for each in the ocean, about 150 km west of Tasmania.
+
+I know both records well, since I was the collector for the first and co-collector for the second. The specimens were deposited in the Australian Museum. The Museum entered the label data in its database. Later the Museum uploaded its records to OZCAM (Online Zoological Collections of Australian Museums), which pushed them to ALA (Atlas of Living Australia), which sent them to GBIF. Somewhere along this pipeline 148 degrees longitude became 143 degrees and put the velvet worms in the ocean.
+
+I discovered the error in May 2013 and pointed it out to an ALA staffer. He found out for me that range-based outlier checks were only being done at ALA for terrestrial records, and these two records were marine. Expert-vetted distributions for other outlier tests were only available for fish and birds. He flagged the record in ALA, which meant that an email went to the Australian Museum querying the occurrence data.
+
+The Museum contacted me the same month. I corrected the records (and some others) for the Museum.
+
+In January 2014 I checked ALA. The two records had been fixed (although there two new, strange problems with the data and access to it). I have no idea how often GBIF 'synchronises' data with ALA, but 15 months after I notified their upstream provider about the location error, the velvet worms are still at sea. One of the species is IUCN Red-Listed as 'endangered', probably drowning.
+--
+Dr Robert Mesibov
+Honorary Research Associate
+Queen Victoria Museum and Art Gallery, and
+School of Land and Food, University of Tasmania
+Home contact:
+PO Box 101, Penguin, Tasmania, Australia 7316
+(03) 64371195; 61 3 64371195
+_______________________________________________
+Taxacom Mailing List
+<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom</A>
+The Taxacom Archive back to 1992 may be searched at: <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+
+Celebrating 27 years of Taxacom in 2014.
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="127531.html">[Taxacom] GBIF updating
+</A></li>
+	<LI>Next message: <A HREF="080195.html">[Taxacom] Example GBIF error
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#127533">[ date ]</a>
+              <a href="thread.html#127533">[ thread ]</a>
+              <a href="subject.html#127533">[ subject ]</a>
+              <a href="author.html#127533">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

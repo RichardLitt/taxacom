@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> # dots on maps
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1999-November/096803.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title"># dots on maps</H1>
+    <B data-pagefind-meta="author">Gerald Noonan</B>
+    carabid at MPM.EDU<BR>
+    <I data-pagefind-meta="date">Thu Nov  4 10:58:10 CST 1999</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="096786.html">Distribution maps on demand
+</A></li>
+        <LI>Next message: <A HREF="096801.html"># dots on maps
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#096803">[ date ]</a>
+              <a href="thread.html#096803">[ thread ]</a>
+              <a href="subject.html#096803">[ subject ]</a>
+              <a href="author.html#096803">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1999</span><!--beginarticle-->
+<PRE>Hugh Wilson and other colleagues have produced some very interesting comments
+about handling geographic distribution data. Below are some thoughts regarding
+such data.
+
+At 08:56 AM 11/4/99 -0500, Hugh Wilson wrote:
+  Creation and implementation of look-up tables or
+&gt;other devices to produce coordinate points that are not present on
+&gt;the label consumes time and and resources and the result often
+&gt;carries a significant element of potential error.
+
+        Obtaining latitude and longitude for specimens by using printed
+gazetteers and maps can indeed be very time-consuming. Several years ago I
+decided to move all the geographic information I process during research into
+GIS format and to use GIS software to analyze the biogeography of the insects I
+study. After spending time trying to determine coordinates from gazetteers and
+maps, I wrote a program called OmniMap. The currently available version of the
+program lets the user enter label data and speeds such entry by options such as
+allowing the user to have the program automatically enter into each new record
+repetitive data -- for example the name of the state, county, etc. I obtained a
+federal database of populated places in the United States and converted the
+latitude and longitude into the decimal form used by GIS programs.
+        The program greatly sped up the operation of entering label data and
+finding latitude and longitude coordinates for same for sites that were
+populated places in the United States. After the user enters information for a
+populated site, the program looks up the latitude and longitude for that site
+and inserts it into the current record.
+Other sites still had to be looked up in gazetteers and on maps. However, even
+for such sites, the program has some options for speeding up data entry -- for
+example it has a window for converting regular degrees into decimal format and
+inserting the decimal degrees into the current record.
+        Recently I took the public domain data on a federal CD-ROM and
+converted
+it into a database for use with OmniMap. This database has approximately 1.1
+million records. It contains all the sites found on U.S. topographic maps as
+well as a number of historic sites that no longer exist. Students have been
+using this larger database for a few weeks and find that obtaining latitude and
+longitude for U.S. sites is a relatively rapid and easy process.
+        Even more recently I obtained from the Defense Department a CD-ROM with
+a tab delimited file of more than 5 million foreign place names. This has been
+converted to a dBase compatible database with latitude and longitude for each
+place. I still have some work to do as regards writing code for having OmniMap
+take latitude and longitude values from this database. I probably will not get
+around to writing this code until early next year. There also are a few bugs
+regarding the U.S. database of 1.1 million records. When time permits, the
+program code will be updated and all databases put on the World Wide Web for
+use by colleagues -- probably first quarter of next year.
+        The limited version of OmniMap is available for anyone who wants. This
+is the version that uses the small database of populated places in the United
+States. It can be downloaded from
+<A HREF="http://www.mpm.edu/collect/invert/omnimap.html">http://www.mpm.edu/collect/invert/omnimap.html</A>
+
+        OmniMap was written several years ago in the DOS version of FoxPro. To
+my happy surprise the DOS version is able to handle the quite larger databases
+described above. -- the reason I don't simply put the large 1.1 million record
+U.S. database online is that I'm busy writing a grant proposal for the rest of
+the month and then will be away all of December. Minor changes in the program
+code are needed to fix some bugs that occasionally interrupt operation with the
+larger database. The foreign database will require some further massaging
+because of issues such as handling characters with accents or diacritical
+marks. The OmniMap program version that will be made available next year will
+also contain a number of improvements designed to speed data entry.
+        When the various larger databases are fully operational with OmniMap,
+they along with a new version of the program will be available for downloading
+from the World Wide Web.
+
+&gt;Most users (or potential users) on web-based floristic products are
+&gt;*not* academic or scientific specalists.  The rationale for mapping
+&gt;should involve the production of visualizations that will answer
+&gt;users questions, which are usually framed within a geographic context
+&gt;defined by political boundaries of some sort. .
+
+        Systematists should begin thinking about converting all their research
+geographic data into GIS format. Once the data are in such a format, GIS
+software can be used to quantify the biogeographic relationships between
+species and to do analyses that formerly were not possible. The databases can
+also be put online for downloading by colleagues. GIS compatible databases can
+be combined and partitioned as desired so that workers can do comparative
+biogeographic studies.
+        The databases can also be made available online with a variety of
+Internet GIS program servers that show World Wide Web users a map with symbols
+on it. The user can click on a symbol and have the GIS server program display
+the records on which the symbol is based. If desirable, analyses can even be
+done on the data displayed on the World Wide Web. (I hope to have my museum
+purchase such a server program under our K-12 license next year and will
+gradually put maps online.)
+
+&gt;&quot;The recent movement of mainframe-based GIS systems to the
+&gt;pc and associated software that allows web-based mapping products to
+&gt;be generated from these systems .... will probably produce a different future
+working environment &quot;
+
+        These programs can be surprisingly inexpensive. A few years ago I
+arranged for my museum to obtain a site license for ArcView. The license for
+this GIS program was under the K-12 program of Environmental Systems Research
+Institute and cost less than $400 for the entire museum. It lets us run as many
+copies of the program as desired. And the license includes the use of several
+thousand dollars worth of GIS data in the form of maps at many different
+scales, topographic data and contour lines, and ArcAtlas. The latter Atlas is a
+CD-ROM with very interesting GIS maps of climate zones, vegetation zones, zones
+based on soil type and amount of solar radiation, etc. The ArcAtlas allows
+biologists to examine distributions relative to a variety of factors such mean
+annual precipitation, temperatures, etc.
+        ArcView was originally a program designed for viewing data produced
+with
+ArcInfo--a program the typically requires a dedicated workstation. However,
+recent versions of ArcView have incorporated many features for analyzing and
+generating data. And ESRI has produced a variety of extensions which can be
+purchased to extend the analytical capabilities of ArcView. The extensions are
+very cheap for educational institutions.
+        I've found that ArcView with selected extensions provides a wealth of
+tools for analyzing biogeographic relationships. A manuscript is in press with
+the Journal of Biogeography showing some of the types of analyses that may be
+done. The interesting thing about ArcView is that while it can do very
+sophisticated analyses it can also be very easily used for simpler tasks such
+as making distribution maps. Typically a student can use the tutorial for the
+program and learn how to make maps and do the simpler types of analyses in just
+a few hours.
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="096786.html">Distribution maps on demand
+</A></li>
+        <LI>Next message: <A HREF="096801.html"># dots on maps
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#096803">[ date ]</a>
+              <a href="thread.html#096803">[ thread ]</a>
+              <a href="subject.html#096803">[ subject ]</a>
+              <a href="author.html#096803">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

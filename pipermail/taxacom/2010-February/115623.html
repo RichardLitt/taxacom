@@ -1,0 +1,206 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] the hurdle for all biodiv informatics initiatives
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2010-February/115623.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] the hurdle for all biodiv informatics initiatives</H1>
+    <B data-pagefind-meta="author">Stephen Thorpe</B>
+    s.thorpe at auckland.ac.nz<BR>
+    <I data-pagefind-meta="date">Wed Feb 17 20:07:58 CST 2010</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="115624.html">[Taxacom] FW:  In defense of DOIs
+</A></li>
+        <LI>Next message: <A HREF="115625.html">[Taxacom] the hurdle for all biodiv informatics initiatives
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#115623">[ date ]</a>
+              <a href="thread.html#115623">[ thread ]</a>
+              <a href="subject.html#115623">[ subject ]</a>
+              <a href="author.html#115623">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2010</span><!--beginarticle-->
+<PRE>&gt;But when computers commimicate [sic] with other computers (as is happening with increasing frequency, and is what is needed to *really* make computers useful tools for taxonomists), the computers should &quot;speak&quot; to each other in their own language
+
+A string is a string is a string to a computer. The string 'Feronia sodalis LeConte 1848' is just as good an identifier as the string 'urn:lsid:ubio.org:namebank:6755946', from the machine's perspective, surely? There seems to be a redundancy here ...
+
+________________________________________
+From: taxacom-bounces at mailman.nhm.ku.edu [taxacom-bounces at mailman.nhm.ku.edu] On Behalf Of Richard Pyle [deepreef at bishopmuseum.org]
+Sent: Thursday, 18 February 2010 2:02 p.m.
+To: 'taxacom at mailman.nhm.ku.edu'
+Subject: Re: [Taxacom] the hurdle for all biodiv informatics initiatives
+
+Wolfgang Lorenz wrote:
+
+&gt; Dear taxacomers,
+&gt; all those initiatives, wikispecies not less than the alliance
+&gt; of GBIF, EoL, CoL, etc. are still under preparation, not yet
+&gt; in full operation, so it seems we should be patient,
+&gt; especially since they take very different approaches and roles.
+
+The above sentence is spot-on, and one of the most thoughtful contributions
+to this series of threads, in my opinion.
+
+&gt; What we can make out, at this early stage, is the taxonomic
+&gt; names problem as probably THE major hurdle for all those
+&gt; projects!
+
+I couldn't agree more!!!
+
+&gt; Roderic Page's defense of DOIs for publications is
+&gt; quite understandable to me, but I'm in doubt when he writes:
+&gt; &gt;&gt;Lastly, imagine if we had similar services for the other things we
+&gt; &gt;&gt;care about, such as taxonomic names ..&lt;
+&gt;
+&gt; Taxonomic names are not just things like other things, but
+&gt; even if we take them as abstracted &quot;name objects&quot; only, -
+&gt; cannot we study plenty of examples out there to see the
+&gt; massive problem?
+
+Indeed; several of us have been doing that for quite some time now.
+
+&gt; And, isn't this a major reason why many taxonomists are so
+&gt; skeptical about what biodiversity informatics was doing so far?
+
+I don't follow the logic here. But more below.
+
+&gt; Take the nearctic beetle Cyclotrachelus sodalis (LeConte
+&gt; 1848) for just one of so many examples: six different generic
+&gt; combinations (objective synonyms) have been used for it.
+&gt; These six names are listed as separate species in the
+&gt; following name-aggregators, with a total of 18 (!!) different
+&gt; LSIDs so far:
+
+[etc.]
+
+I think you misunderstand the purpose of these services.  You say above that
+&quot;These six names are listed as separate species&quot; -- when in fact, these
+services do NOT assign LSIDs to &quot;species&quot; (by anyone's definition of that
+term).  The LSIDs are assigned to text strings purported to represent taxon
+names.  The text string &quot;Feronia sodalis&quot; is separate from &quot;Feronia sodalis
+LeConte 1848&quot;, which is why it shows up as two separate records in uBio.
+Now....I'm not a fan of assigning GUIDs to unique text strings, because the
+text strings themselves are unique; and hence there is not much advantage to
+creating a seprate identifier for the *text string*.  However, there are
+many, many other examples of why GUIDs (=persitent identifiers) can be
+*extremely* useful when assigned to taxon names and related information.
+
+&gt; Why do we need such identifiers and who can take control of it???
+&gt; Instead of machine-only-readable identifiers, which are
+&gt; obviously &quot;out of human control&quot; in so many examples, we
+&gt; could have perfectly stable, unique and readable Name Strings
+&gt; for each available name, registered and resolvable in a
+&gt; future ZooBank:
+&gt;
+&gt; ZS-Feronia_sodalis
+&gt; ZS-Feronia_sodalis/Eumolops_sodalis
+&gt; ZS-Feronia_sodalis/Evarthrus_sodalis
+&gt; ZS-Feronia_sodalis/Pterostichus_sodalis
+&gt; ZS-Feronia_sodalis/Cyclotrachelus_sodalis
+&gt; ZS-Feronia_sodalis/Abax_sodalis
+
+This approach seems very sensible to anyone who who has never needed to sort
+out homonyms.  If you add author and year, you can reduce the problem of
+homonymy, but you increase the problem of establishing a standard way of
+representing author &amp; year data.
+
+&gt; Together with such standardized name strings, Zoobank should
+&gt; store information that belongs to a name but does not form
+&gt; part of it, like
+&gt; author+date, page numbers, type information, grammar, etc.
+&gt; And the idea is that projects like GBIF, EoL, etc. could
+&gt; build upon these human-readable identifiers by just adding
+&gt; something like an usage instance number. E.g., GBIF, when it
+&gt; has parsed occurrence records for &quot;Cyclotrachelus sodalis
+&gt; Lec.&quot; and &quot;Abax sodalis&quot; it can assign human-readable
+&gt; ID-strings, perhaps in the following format:
+&gt;
+&gt; ZS-Feronia_sodalis/Cyclotrachelus_sodalis#2345
+&gt; ZS-Feronia_sodalis/Abax_sodalis#324
+&gt;
+&gt; With such standardized strings it should be much less of a
+&gt; problem for humans AND computers to know what's in those
+&gt; names. This is not the solution for ALL problems, of course,
+&gt; but a solid nomenclatural basis could bring us a huge step
+&gt; forward, IMHO ... or do I miss something?
+
+I don't think you're necessarily missing anything.  We already have a
+human-friendly way of displaying a taxon name; e.g. &quot;Feronia sodalis LeConte
+1848&quot;.  That's worked reasonably well for human brains for the past couple
+of centuries.  The only reason we're having a conversation about GUIDs is
+that -- as has been proven from decades of experience trying to use computer
+databases as tools to manage taxonomic information -- these sorts of
+human-friendly identifiers are not well suited to establishing resolvable
+links among digitized information.  The exceptions (homonyms, mis-spellings,
+etc.) seem rare to us, but even low-frequency exceptions to general rules
+create all sorts of confusion and complexity when we try to build robust
+computer databases as tools for taxonomists.  My point here is that when
+humans communicate with humans, or when computers communicate with humans,
+the human side of the equation should always see the human-friendly
+identifier. But when computers commimicate with other computers (as is
+happening with increasing frequency, and is what is needed to *really* make
+computers useful tools for taxonomists), the computers should &quot;speak&quot; to
+each other in their own language.
+
+Just as you would not want to confuse a human with
+&quot;urn:lsid:zoobank.org:act:44530E74-95E2-4F58-B1F0-9816AFD37772&quot;, neither
+would you want to confuse a computer with &quot;Corydoras sodalis  Nijssen &amp;
+Isbr?cker 1986&quot;.
+
+I was going to include an elaborate explanation of GNUB (which Paul Kirk
+alluded to), and how it has the potential to solve essentially *all* of
+these problems.  But I'm out of time right now.  Depending on how this
+thread goes, I may take the time to explain more.  Otherwise:  watch the GN*
+space (GNA/GNI/GNUB/GNOMA/CiteBank).
+
+Aloha,
+Rich
+
+
+
+_______________________________________________
+
+Taxacom Mailing List
+Taxacom at mailman.nhm.ku.edu
+<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+
+The Taxacom archive going back to 1992 may be searched with either of these methods:
+
+(1) <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+
+Or (2) a Google search specified as:  site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="115624.html">[Taxacom] FW:  In defense of DOIs
+</A></li>
+        <LI>Next message: <A HREF="115625.html">[Taxacom] the hurdle for all biodiv informatics initiatives
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#115623">[ date ]</a>
+              <a href="thread.html#115623">[ thread ]</a>
+              <a href="subject.html#115623">[ subject ]</a>
+              <a href="author.html#115623">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

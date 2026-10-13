@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Algorithms for misspelled taxon names
+	(was:	the	hurdle for all biodiv informatics initiatives)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2010-February/115818.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Algorithms for misspelled taxon names
+	(was:	the	hurdle for all biodiv informatics initiatives)</H1>
+    <B data-pagefind-meta="author">Tony.Rees at csiro.au</B>
+    Tony.Rees at csiro.au<BR>
+    <I data-pagefind-meta="date">Sun Feb 28 22:55:15 CST 2010</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="115817.html">[Taxacom] Scientific translation
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#115818">[ date ]</a>
+              <a href="thread.html#115818">[ thread ]</a>
+              <a href="subject.html#115818">[ subject ]</a>
+              <a href="author.html#115818">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2010</span><!--beginarticle-->
+<PRE>Dear Paul, all,
+
+One further comment... My initial stimulus to construct algorithms to deal with misspelled taxon names came from a desire to assist users who could not spell, to still be connected to the taxon data that they required, through a mechanism similar to (but pre-dating, and also still superior to in some respects) Google's &quot;did you mean&quot; function. It was not until I started an association with OBIS, which basically provides a gateway to multiple museum databases for marine species data, I discovered that the same problem was apparent at the data supplier end, i.e. different databases had different spellings for the same taxon (either knowingly, i.e. different opinions as to the correct spelling, or more often, unknowingly).
+
+One can of course speculate as to the reasons for the latter - probably a mixture of less highly trained staff doing the data entry, lack of resources to retrospectively check for internal or external consistency, or whatever, but the point is that these inconsistencies exist and without a tool to reconcile them, potentially valuable data or pointers to specimens may not be retrieved when desired.
+
+So these are the two main areas in which my approach has been used to date. Searching taxonomic literature is another area again, which may indeed produce either a lower or a different pattern of errors, however once OCR is introduced (e.g. in the Biodiversity Heritage Library and even Adobe/Google's own OCR of pdf documents presented as images), errors start to multiply again - sometimes wildly so depending on the quality of the original - so either my or others' algorithms will definitely be needed in that space as well.
+
+I should maybe also mention that this problem is by no means confined to OBIS; it occurs whenever existing data sets are merged, from whatever sources (including literature), just to different degrees. E.g. using the 2009 multi-author Decapoda paper previously cited, out of 2,700 or so genus names included I came across the following discrepancies versus (hopefully accurate) spellings of names already held; this time largely phonetic errors, but still not exclusively so:
+
+  Xenopthalmodes Richters, 1880 - should be Xenophthalmodes ?, e.g. refer Ng et al., 2008 and elsewhere
+
+  Speleophorus A. Milne-Edwards, 1865 - should be Speloeophorus ?, e.g. refer Ng et al., 2008 and elsewhere
+
+  Jilinicaris Schram, Shen, Vonk &amp; Taylor, 2000 - should be Jilinocaris ?, refer original description at <A HREF="http://www.jstor.org/stable/pdfplus/20106269.pdf">http://www.jstor.org/stable/pdfplus/20106269.pdf</A>   
+
+  Chalaroacheus De Man, 1902 - same spelling used in Ng et al., 2008; however the original spelling is Chalaroachaeus, refer <A HREF="http://www.biodiversitylibrary.org/page/25232894">http://www.biodiversitylibrary.org/page/25232894</A>
+
+  Barnardomia McLay, 1993 - should be Barnardromia ?, e.g. refer Ng et al., 2008 and elsewhere
+
+  Holthuisiana Bott, 1969 - should be Holthuisana ?, e.g. refer Ng et al., 2008 and elsewhere
+
+  Thelphusograpsus Lorenthey, 1902 - should be Telphusograpsus ?, e.g. refer Glaessner, 1969 and elsewhere
+
+  Liocarpiloides Klunzinger, 1913 - should be Liocarpilodes ?, e.g. refer Ng et al., 2008 and elsewhere
+
+  Physacheus Alcock, 1895 - same spelling used in Ng et al., 2008, however other sources have Physachaeus - which is correct?
+
+  Grypacheus Alcock, 1895 / Grypachaeus Alcock, 1895 - same issue as Physacheus/Physachaeus, above
+
+  Nobiliela Komatsu &amp; Takeda, 2003 should read Nobiliella, refer original description online at: <A HREF="http://www.mnhn.fr/publication/zoosyst/z03n3a3.pdf">http://www.mnhn.fr/publication/zoosyst/z03n3a3.pdf</A> 
+
+
+Now 11 cases out of 2700 is still quite a small error rate (less than 0.5%), but in my experience almost all large datasets/ compilations contain at least a sprinkling of errors, sometimes considerably more than this, which are certainly valuable to detect (and I am sure you would not disagree). In other data compilations I have looked at, it is not uncommon to find error (or discrepancy) rates of up to 2 or 3 percent; for example my own &quot;CAAB&quot; species-level database (for which others more qualified than I maintain relevant taxonomic names) turned out to have over 600 errors / inconsistencies against other data sources (out of some 25,000 taxa) when checked manually (an arduous task without TAXAMATCH) early in 2007; quite surprising for an expert-maintained system, but probably not an isolated case either.
+
+Of course there are also many, many authority discrepancies as previously touched upon, a topic for a later post maybe...
+
+Hoping the above is of some continuing interest,
+
+Regards - Tony
+
+
+
+
+-----Original Message-----
+From: taxacom-bounces at mailman.nhm.ku.edu [mailto:taxacom-bounces at mailman.nhm.ku.edu] On Behalf Of Tony.Rees at csiro.au
+Sent: Saturday, 27 February 2010 9:54 AM
+To: dipteryx at freeler.nl; taxacom at mailman.nhm.ku.edu
+Subject: [ExternalEmail] Re: [Taxacom] Algorithms for misspelled taxon names (was: the hurdle for all biodiv informatics initiatives)
+
+Paul (dipteryx at freeler.nl]) wrote:
+
+***
+I am glad to see that Tony is &quot;happy to speak further to this topic,&quot;; this is
+quite informative. This approach is different in focus from what I had in mind.
+The errors that are made in filling in a query window (or a spreadsheet as in
+the case of the fossil molluscs) look substantially different in nature from
+the variation I would expect in the literature and in databases. These are
+indeed misspellings, resulting from the interaction between a person
+(apparently in haste) and a keyboard. On the other hand the variation I saw
+in the GNI has a much narrower range (in line with what I encounter in the
+literature) and looks much more predictable.
+
+Paul
+
+-----
+
+Actually I think you will find many examples of misspelled names (not just authorities) in the GNI also - it's just that normally, one searches the GNI by an input name, and variant spellings therefore typically do not therefore show up (except at species level if one has not specified a species).
+
+In any case, you are probably right in that the errors made by non-experts and/or OCR may be less predictable than those made by professional taxonomists in the recent literature, but bear in mind that at least some of the misspellings reflect old, often hand written labels which themselves may be misspelled (but faithfully transcribed), or mis-transcribed, or perhaps both.
+
+I'd certainly be interested in the experiences of others in this area,
+
+Regards - Tony
+
+_______________________________________________
+
+Taxacom Mailing List
+Taxacom at mailman.nhm.ku.edu
+<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+
+The Taxacom archive going back to 1992 may be searched with either of these methods:
+
+(1) <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+
+Or (2) a Google search specified as:  site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+_______________________________________________
+
+Taxacom Mailing List
+Taxacom at mailman.nhm.ku.edu
+<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+
+The Taxacom archive going back to 1992 may be searched with either of these methods:
+
+(1) <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+
+Or (2) a Google search specified as:  site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="115817.html">[Taxacom] Scientific translation
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#115818">[ date ]</a>
+              <a href="thread.html#115818">[ thread ]</a>
+              <a href="subject.html#115818">[ subject ]</a>
+              <a href="author.html#115818">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

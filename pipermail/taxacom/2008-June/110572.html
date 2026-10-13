@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] uBio queries and apostrophes / single quotes
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2008-June/110572.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] uBio queries and apostrophes / single quotes</H1>
+    <B data-pagefind-meta="author">Ken-ichi Ueda</B>
+    kueda at ischool.berkeley.edu<BR>
+    <I data-pagefind-meta="date">Sat Jun 21 00:41:01 CDT 2008</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="110571.html">[Taxacom] Curtemonomma
+</A></li>
+        <LI>Next message: <A HREF="110573.html">[Taxacom] Towards a consensus higher classification oforganisms
+	(was: List of Orders of the world), misspellings, etc...
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#110572">[ date ]</a>
+              <a href="thread.html#110572">[ thread ]</a>
+              <a href="subject.html#110572">[ subject ]</a>
+              <a href="author.html#110572">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2008</span><!--beginarticle-->
+<PRE>Hi folks,
+
+I have run into a fun problem: it seems that single quotes and
+apostrophes break uBio's namebank_search XML web service and the
+search feature on their website.  Here's an example from the website:
+
+<A HREF="http://www.ubio.org/browser/search.php?search_all=Allen%27s%20Hummingbird">http://www.ubio.org/browser/search.php?search_all=Allen%27s%20Hummingbird</A>
+
+No results.  However their autocomplete feature resolves the single
+quote just fine, as you will see if you try the search manually, or
+check out their autocomplete endpoint:
+
+<A HREF="http://www.ubio.org/searchHelp.php?q=Allen%27s%20Hummingbird">http://www.ubio.org/searchHelp.php?q=Allen%27s%20Hummingbird</A>
+
+I suppose I could just parse the HTML fragments from
+<A HREF="http://www.ubio.org/searchHelp.php">http://www.ubio.org/searchHelp.php</A> instead of relying on their
+XML-based web services, but I'd prefer to stick with the XML if that's
+possible.
+
+Does anyone know if there's some way I can encode my request URL so
+that the single quote is preserved and I get a match?
+
+-Ken-ichi
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="110571.html">[Taxacom] Curtemonomma
+</A></li>
+        <LI>Next message: <A HREF="110573.html">[Taxacom] Towards a consensus higher classification oforganisms
+	(was: List of Orders of the world), misspellings, etc...
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#110572">[ date ]</a>
+              <a href="thread.html#110572">[ thread ]</a>
+              <a href="subject.html#110572">[ subject ]</a>
+              <a href="author.html#110572">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,220 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Phylogenetic Analysis
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1997-March/020449.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Phylogenetic Analysis</H1>
+    <B data-pagefind-meta="author">Martin Cavalluzzi</B>
+    martin at VIMS.EDU<BR>
+    <I data-pagefind-meta="date">Sun Mar  2 10:48:05 CST 1997</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="103602.html">Nomenclature: botanical tradition?
+</A></li>
+        <LI>Next message: <A HREF="056241.html">Phylogenetic Analysis
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#020449">[ date ]</a>
+              <a href="thread.html#020449">[ thread ]</a>
+              <a href="subject.html#020449">[ subject ]</a>
+              <a href="author.html#020449">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1997</span><!--beginarticle-->
+<PRE>Here is the compilation of the responses that I received regarding
+my inquiry on phylogenetic analysis packages.  I thank the 13 individuals
+who responded in a professional manner.  Their comments regarding
+the four packages that I asked about, as well as others that are new
+to me, are much appreciated. I also received one response &quot;flaming&quot; me for
+using TAXACOM instead of the Web (strange but true).
+
+URLs that have information on phylogenetic packages, analysis, and related
+topics:
+
+<A HREF="http://evolution.genetics.washington.edu/phylip/software.html">http://evolution.genetics.washington.edu/phylip/software.html</A>
+<A HREF="http://www.vims.edu/~mes/hennig/software.html">http://www.vims.edu/~mes/hennig/software.html</A>
+<A HREF="http://www.biosis.org/htmls/reviews/tn.html#plants">http://www.biosis.org/htmls/reviews/tn.html#plants</A>
+<A HREF="http://www.geocities.com/CapeCanaveral/Lab/1407/ZHANG-Daming_HomePage.html">http://www.geocities.com/CapeCanaveral/Lab/1407/ZHANG-Daming_HomePage.html</A>
+<A HREF="http://www.msu.edu/user/zhangd/">http://www.msu.edu/user/zhangd/</A>
+<A HREF="http://phylogeny.arizona.edu/tree/programs/programs.html">http://phylogeny.arizona.edu/tree/programs/programs.html</A>
+<A HREF="http://www.ucmp.berkeley.edu/subway/phylo/phylosoft.html">http://www.ucmp.berkeley.edu/subway/phylo/phylosoft.html</A>
+
+Comments regarding programs:
+
+
+PAUP: latest released version was 3.1.1, date 1993, released by the
+Illinois Natural History Survey.  This is now 'out of press' and
+unobtainable.  A new version PAUP* is in beta test and will be published by
+Sinauer sometime: maybe later this year if Dave Swofford can just get the
+last few bugs ironed out?
+
+PHYLIP: latest release is available from Joe Felsenstein's website at
+University of Washington. cost zero.
+
+Hennig86:  first and only version is numbered 1.1, date 1988.  It still is
+available from Steve Farris or several of his authorised distributors. cost
+$50.
+
+MacClade:  I think the latest is version 3.0.6.  It is published by
+Sinauer. cost something like $50-100 US.
+
+
+Merits of each package:::
+Well, MAcClade is not strictly a PHYLOGENETIC ANALYSIS package, its a
+tree-exploration/ character mapping on trees/ etc, package.  Its for Macs
+only.  It includes a rudimentary tree-search algorithm using an NNI branch
+swapper and operating on only one tree in memory at one time, but if you
+want a package to do cladistic tree searches this is not the one for you.
+However, if your scene is exploring alternative trees, mapping characters
+on trees, and generally indulging in what Willi Hennig called reciprocal
+illumination (ie, between intiial tree estimates and a developing data
+set), then MaClade is recommended.
+
+Phylip has cheapness on its side, and it does most things that the other
+phylogeny packages do.  It's a bit clumsy to use because the package
+consists of three-dozen or so programs each for a specific task and you
+have to keep track of infile and outfile names.  ALso, each program
+requires its own type of data: eg, parsimony on binary characters is
+separate from parsimony on protein characters is separate from parsimony on
+dna sequence characters, etc. (It does not do parsimony on multi-state
+characters, if ordered you can recode to additive binary, if unordered you
+may be stuck.)  You can't do total-evidence cladistic analyses with Phylip,
+combining different types of data.  The branch swappers are equivalent to
+PAUP 3.1.1's medium-weight SPR swapper but slower, meaning tree search is
+fairly effective for smallish data sets but gives out much earlier than the
+more powerful search engines, generally at about 30 taxa.  Phylip includes
+a good range of phenetic tree-building tools including such standard
+methods as UPGMA and NJ.
+
+PAUP 3.1.1 is strictly a cladistics package, and for Macs only.  It does
+not offer phenetic tree-building.  The data format is the same as for
+Maclade. (Well, more or less; at least the same file can be used.  PAUP
+actually accepts a wider range of input format than does MacClade, eg
+character weights in range 0-32767 as compared to 0-9999, maximum 32 states
+per character as compared to 26.  But for ordinary analyses the same file
+can be used in both programs.)  There's a full range of character-type,
+character-weight, etc options, mixed analyses can be done as easily as any
+other analyses, there are many options for tree searching and the branch
+swappers are fast and effective. Heuristic searches up to 75 or so taxa
+need no special search strategies, analyses with several hundred taxa have
+been attempted. Branch-&amp;-bound (ie, complete, non-heuristic) tree-search
+operates up to about 16-20 taxa (depending how messy your data is) but is
+not as fast as in PAUP* or Hennig86.  PAUP will do tree searches under
+topological constraints, and it's the only program which will do so.  It
+therefore is the only vehicle for techniques such as the FAITH T-PTP test
+for the significance of groups on trees.  PAUP 3.1.1 is an EXCELLENT
+all-round phylogenetic cladistics package.  Get one if you can, or get into
+collaboration with someone who has an authorized copy.
+
+Hennig86 is a PC cladistics package.  It is far, far, FAR less user
+friendly that PAUP 3.1.1, and the 'manual' is totally incomprehensible
+except to someone with a degree in c++.  Data matrices cannot have more
+than 999 characters (unlimited in PAUP).  Only 10 states per character,
+symbols 0-9 (32 in PAUP, symbols arbitrary).  Character types can be
+individually declared  but only as either ordered or unordered (many other
+options in PAUP, or invent your own data type via a cost-stepmatrix
+function). Character weights integer 0-9 (0-32767 PAUP). Branch-&amp;-bound
+algorithm faster than PAUP 3.1.1, about the same asin  PAUP*, with it you
+can get a complete list of every most-parsimonious tree for a 25-26 taxon
+data set in around 3 days. (As you probably know, the time taken for
+branch&amp;bound rises very steeply with the number of taxa: 10 taxa 1 minute,
+15 taxa 5 minutes, 20 taxa 10 minutes 25 taxa 3 days, 26 taxa 3 weeks, 27
+taxa 3 months, 28 taxa 10 years ...).  Hennig86 does not do
+random-addition-sequence searches or bootstraps at the press of a button
+(PAUP does, and lots more beside).  Add-on shells which call Hennig86 as a
+subroutine, such as Mark Siddal's package 'Random Cladistics', are
+available for doing some but not all of these things.  If you have large
+and messy data with lots of homoplasy, Hennig86 sometimes will find shorter
+trees than PAUP 3.1.1 -- but just as often PAUP 3.1.1 will find shorter
+trees than Hennig86.  This is because the two programs have different
+starting tree and branch swapping routines.  When I'm working with a large
+and messy morphological data set of &gt;50 taxa, if PAUP starts to give me
+multiple islands of trees I generally run the matrix once through Hennig86
+to check it can't find something shorter.
+
+PAUP* is the *Ferrari* of phylogenetics packages.  It combines the
+capability of PAUP 3.1.1 with faster algorithms all-round (including the
+all-important branch&amp;bound).  It has oodles of new features, data
+manipulations, tests relating to input (eg, partition homogeneity, PTP) and
+tree output (eg, bootstrap, T-PTP).  Also its no longer just a cladistics
+package, it offers all the phenetic methods found in Phylip PLUS many
+others: eg, you can apply any sequence evolution model ever invented (not
+just Kimura 2- or 3- parameter, but also many more) at the press of a
+button.  It does maximum likelihood analysis too -- and it is both fast
+(1000 times faster than Phylip) and more effective (because the likelihood
+search is operating in conjunctionn with the PAUP TBR swapper).  Run all
+sorts of tests, explore your data, exploreyour evolutionary model, evaluate
+your assumptions, do anything!   Finally PAUP*, like PAUP 3.1.1 and
+MacClade, will give a quality tree-print.
+
+----------------------------------------------------------------------------
+PAUP is undergoing revision, and is to be marketed soon by Sinauer; at
+present, it is unavailable, except by &quot;borrowing&quot; from those who have it.
+It only does Parsimony-type analysis, as the name implies (Phylogenetic
+Analysis Using Parsimony), but it has a very nice interface (on Mac) and
+is easy to get going with.
+
+PHYLIP you can get free from Joe Felsenstein, via the net at:
+<A HREF="http://evolution.genetics.washington.edu/phylip.html">http://evolution.genetics.washington.edu/phylip.html</A>
+It has versions for all platforms.  YOU MUST DOWNLOAD ALL THE
+DOCUMENTATION! Otherwise you'll have a hell of a time running things.  It
+has a variety of arcane details... i.e. it is NOT user friendly.  But I
+really like it because it is general and open-ended, much more flexible
+than PAUP (maybe the new edition of PAUP will be broader) and can do
+pretty much all sorts of phylogenetic analysis, can apply bootstrapping to
+any method, do consensus trees, etc.  Many of the routines are VERY fast,
+at least on PowerMac.
+
+MacClade is also marketed by Sinauer.  It is a file-editor and tree
+manipulator and a variety of other stuff.  It doesn't do phylogenetic
+analyses.
+
+Another free web-item is TreeView, for Mac or Windows from :
+<A HREF="http://taxonomy.zoology.gla.ac.uk/rod/treeview.html">http://taxonomy.zoology.gla.ac.uk/rod/treeview.html</A>
+It is very fast and useful way of looking at trees from Nexus treefiles.
+----------------------------------------------------------------------------
+
+
+Thank you for your time.
+
+Sincerely,
+
+Marty Cavalluzzi
+
+martin at vims.edu
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="103602.html">Nomenclature: botanical tradition?
+</A></li>
+        <LI>Next message: <A HREF="056241.html">Phylogenetic Analysis
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#020449">[ date ]</a>
+              <a href="thread.html#020449">[ thread ]</a>
+              <a href="subject.html#020449">[ subject ]</a>
+              <a href="author.html#020449">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

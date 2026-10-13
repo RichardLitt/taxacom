@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Guerilla science: what can we do in 10 days?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2009-May/112594.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Guerilla science: what can we do in 10 days?</H1>
+    <B data-pagefind-meta="author">joel sachs</B>
+    jsachs at csee.umbc.edu<BR>
+    <I data-pagefind-meta="date">Mon May 25 08:37:46 CDT 2009</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="112593.html">[Taxacom] PostDoc position available - Biodiversity and Climate
+	Research	Centre, Germany
+</A></li>
+        <LI>Next message: <A HREF="112595.html">[Taxacom] Centrally supported electronic archive
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#112594">[ date ]</a>
+              <a href="thread.html#112594">[ thread ]</a>
+              <a href="subject.html#112594">[ subject ]</a>
+              <a href="author.html#112594">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2009</span><!--beginarticle-->
+<PRE>Toby,
+
+This is awesome. We can combine this data (conservation status of 46,600 
+species) with the Biological Inventories of the World's Protected Areas 
+[1] to, for example, query for the vulnerable species in each park.
+
+PREFIX purl: &lt;<A HREF="http://purl.org/NET/biol/ns#">http://purl.org/NET/biol/ns#</A>&gt;
+PREFIX life: &lt;<A HREF="http://life.buzzword.org.uk/2009/terms/vocab#">http://life.buzzword.org.uk/2009/terms/vocab#</A>&gt;
+PREFIX lifeCat: &lt;<A HREF="http://life.buzzword.org.uk/2009/terms/categories#">http://life.buzzword.org.uk/2009/terms/categories#</A>&gt;
+PREFIX bioinv: &lt;<A HREF="http://bioinventory.ice.ucdavis.edu/2009/elements#">http://bioinventory.ice.ucdavis.edu/2009/elements#</A>&gt;
+
+SELECT DISTINCT ?population ?occurrence
+WHERE {
+             ?population life:assessment ?assessment .
+             ?assessment life:assessmentCategory lifeCat:VU .
+             ?population life:definingTaxonomy ?x .
+             ?x purl:name ?y .
+             ?occurrence bioinv:latin_name ?y .
+}
+
+Of greater significance, we can determine which species of concern are not 
+protected in any park. And the IUCN data should be of high utility in 
+citizen science monitoring.
+
+Note that the above query is matching on scientific name, an imprecise 
+heuristic. The Bioinventories database has ITIS TSNs for many, but not 
+close to all, occurrence records. We can use the new ITIS web service [2], 
+or maybe the SPARQL endpoint [3] to Allan Hollander's species resolver [4] 
+to get TSNs for the IUCN data. Matching on TSNs could then be the first 
+thing we try. When that fails, we can try to match on scientific name + 
+authorship.
+
+My guess is that even in the best of possible LSID worlds, there will 
+always be cases where heuristic approaches will be necessary for 
+determining species matches.
+
+A couple of other things:
+
+1. Have you considered putting the species name inside the URLs for the 
+pages? This would simplify human interaction with the data; would there be 
+a downside?
+
+2. I notice that the URI
+<A HREF="http://life.buzzword.org.uk/2009/terms/categories#assessment">http://life.buzzword.org.uk/2009/terms/categories#assessment</A>
+does not yet exist. This, of course, does not preclude us from using it in 
+data and queries. To me, this nicely illustrates that a URI can abdicate 
+one responsibility (resolution mechanism), while still performing another 
+(vocabulary term).
+
+Sincerely,
+Joel.
+
+1. <A HREF="http://bioinventory.ice.ucdavis.edu/rdf/">http://bioinventory.ice.ucdavis.edu/rdf/</A> , records undergoing change.
+2. <A HREF="http://www.itis.gov/ITISWebService/">http://www.itis.gov/ITISWebService/</A>
+3. <A HREF="http://ecoinfo.ice.ucdavis.edu/taxa/sparql">http://ecoinfo.ice.ucdavis.edu/taxa/sparql</A>
+4. e.g. <A HREF="http://ecoinfo.ice.ucdavis.edu/taxa/Gorilla_gorilla">http://ecoinfo.ice.ucdavis.edu/taxa/Gorilla_gorilla</A>
+
+
+
+On Thu, 21 May 2009, Toby A Inkster wrote:
+
+&gt; On 21 May 2009, at 20:03, joel sachs wrote:
+&gt;
+&gt;&gt; I'm mainly hoping for pointers to biodiversity data in RDF
+&gt;
+&gt;
+&gt; About a month ago I started an experiment in converting the IUCN Red List to 
+&gt; RDF. The IUCN's data licensing policies are not entirely clear, and I've not 
+&gt; been able to get a good answer from them as to whether this is OK, so until I 
+&gt; hear differently, this data and the URLs used should be considered unstable. 
+&gt; (If anyone here has contacts within IUCN who could clarify things, I'd love 
+&gt; to hear from them.)
+&gt;
+&gt; Anyway, this URL represents the population of Western Gorillas:
+&gt;
+&gt; 	<A HREF="http://life.buzzword.org.uk/2009/populations/9404#population">http://life.buzzword.org.uk/2009/populations/9404#population</A>
+&gt;
+&gt; The species is:
+&gt;
+&gt; 	<A HREF="http://life.buzzword.org.uk/2009/populations/9404#taxonomy">http://life.buzzword.org.uk/2009/populations/9404#taxonomy</A>
+&gt;
+&gt; And their IUCN assessment is:
+&gt;
+&gt; 	<A HREF="http://life.buzzword.org.uk/2009/populations/9404#assessment">http://life.buzzword.org.uk/2009/populations/9404#assessment</A>
+&gt;
+&gt; -- 
+&gt; Toby A Inkster
+&gt; &lt;mailto:mail at tobyinkster.co.uk&gt;
+&gt; &lt;<A HREF="http://tobyinkster.co.uk">http://tobyinkster.co.uk</A>&gt;
+&gt;
+&gt;
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="112593.html">[Taxacom] PostDoc position available - Biodiversity and Climate
+	Research	Centre, Germany
+</A></li>
+        <LI>Next message: <A HREF="112595.html">[Taxacom] Centrally supported electronic archive
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#112594">[ date ]</a>
+              <a href="thread.html#112594">[ thread ]</a>
+              <a href="subject.html#112594">[ subject ]</a>
+              <a href="author.html#112594">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

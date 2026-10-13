@@ -1,0 +1,258 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Data query
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-June/125362.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Data query</H1>
+    <B data-pagefind-meta="author">Tony.Rees at csiro.au</B>
+    Tony.Rees at csiro.au<BR>
+    <I data-pagefind-meta="date">Wed Jun 26 02:04:38 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="125361.html">[Taxacom] Data query
+</A></li>
+        <LI>Next message: <A HREF="125363.html">[Taxacom] Data query, ETC.
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#125362">[ date ]</a>
+              <a href="thread.html#125362">[ thread ]</a>
+              <a href="subject.html#125362">[ subject ]</a>
+              <a href="author.html#125362">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>Thanks Rich... all good... the sleeping giants are disturbed...
+
+One thing relevant to your explanation below: the species epithet is treated as a unique entity in zoology, yes, but in botany (most likely also in bacteriology, not sure) it is the original combination which is unique i.e. the species plus its original genus placement, not the epithet alone. If it is moved to a different genus a new combination is established with a new authorship (unlike in zoology), with the old one in brackets. In other words now we have a new &quot;thingy&quot; (needing a new ID) which has a relationship to the original &quot;thingy&quot; but is not the same. Forgive me if I have this wrong but I think you may need to encode slightly different rules for botanical and zoological usage in GNUB at least (not required in ZooBank for obvious reasons). I imagine those on the GNUB-constructing board / advisory panel / whatever from the botanical sphere will be across this, but it is not apparent from my reading of what you have written below (I think).
+
+Best - Tony (only mildly confused at this point, may get worse).
+
+
+&gt; -----Original Message-----
+&gt; From: Richard Pyle [mailto:deepreef at bishopmuseum.org]
+&gt; Sent: Wednesday, 26 June 2013 3:08 PM
+&gt; To: Rees, Tony (CMAR, Hobart); stephen_thorpe at yahoo.co.nz;
+&gt; mesibov at southcom.com.au
+&gt; Cc: taxacom at mailman.nhm.ku.edu
+&gt; Subject: RE: [Taxacom] Data query
+&gt; 
+&gt; I have to confess, it was a bit of baiting on my part.... to solicit
+&gt; something to the effect of:
+&gt; 
+&gt; &gt; No doubt ZooBank/GNUB has a take on this
+&gt; &gt; which will or may assist - Rich?
+&gt; 
+&gt; So, it's not a ZooBank thing, because ZooBank only deals in names &amp;
+&gt; nomenclatural Acts.  But, of course, ZooBank sits on top of GNUB, and
+&gt; the
+&gt; scope of GNUB is every TaxonNameUsage (TNU) ever.  The really cool
+&gt; thing
+&gt; about using TNUs as the core object for taxonomy, is that you can do a
+&gt; LOT
+&gt; of elegant stuff with them.
+&gt; 
+&gt; For those really interested in this technical stuff, read on.  For
+&gt; everyone
+&gt; else, PRESS DELETE NOW!  It only gets ugly from here.....
+&gt; 
+&gt; A TNU is an individual usage of an individual &quot;name&quot;.  The word &quot;name&quot;
+&gt; here
+&gt; applies to the terminal epithet only.  The essential attributes of a
+&gt; TNU are
+&gt; the a pointer to the Protonym for the name, a pointer to the reference
+&gt; in
+&gt; which the TNU occurred, the Rank that the Reference treated the name,
+&gt; the
+&gt; immediate taxonomic Parent of the name, whether or not it was valid,
+&gt; and
+&gt; exactly how it was spelled.  It's important to understand this basic
+&gt; structure in order o understand the answer to Tony's question (below).
+&gt; 
+&gt; So, let's take a simple example:
+&gt; 
+&gt; Linneaus 1758 established the genus name &quot;Aus&quot; and within it, the
+&gt; species
+&gt; name &quot;bus&quot;.  We therefore have two TNUs:
+&gt; 
+&gt; TNU	Prot	Reference	Rank	Valid	Parent	Spelling
+&gt; 1	1	Linn., 1758	Gen.	1	--	Aus
+&gt; 2	2	Linn., 1758	Sp.	2	1	bus
+&gt; 
+&gt; So, both of these TNUs are Protonyms (AKA &quot;original descriptions&quot;),
+&gt; because
+&gt; in both cases TNU=Prot.  Both were treated as valid taxa, because in
+&gt; both
+&gt; cases TNU=Valid.  We don't know what parent taxon Linn. 1758 placed the
+&gt; genus Aus in, but we can see that he places the species &quot;bus&quot; within
+&gt; the
+&gt; genus Aus (based on Parent=1).  And we see how Linnaeus spelled both
+&gt; names.
+&gt; 
+&gt; Now, suppose Smith 1950 reviews the group, and describes another
+&gt; species
+&gt; (Aus cus).  We now have 3 more TNUs:
+&gt; 
+&gt; TNU	Prot	Reference	Rank	Valid	Parent	Spelling
+&gt; 3	1	Sm., 1950	Gen.	3	--	Aus
+&gt; 4	2	Sm., 1950	Sp.	4	3	bus
+&gt; 5	5	Sm., 1950	Sp.	5	3	cus
+&gt; 
+&gt; You should see that Smith treated both of Linnaeus' names, spelled them
+&gt; the
+&gt; same way, and added a new Protonym (TNU=5) to establist the new speces
+&gt; &quot;Aus
+&gt; cus&quot;.
+&gt; 
+&gt; Now suppose Pyle comes along in 2012  and describes a new genus (&quot;Xus&quot;)
+&gt; for
+&gt; &quot;bus&quot;, and decides that &quot;cus&quot; is a synonym of &quot;bus&quot;:
+&gt; 
+&gt; TNU	Prot	Reference	Rank	Valid	Parent	Spelling
+&gt; 6	6	Pyle, 2012	Gen.	6	--	Xus
+&gt; 7	2	Pyle, 2012	Sp.	7	6	bus
+&gt; 8	5	Pyle, 2012	Sp.	7	--	cus
+&gt; 
+&gt; The key thing to note is that Pyle places Linnaeus' &quot;bus&quot; in his new
+&gt; genus
+&gt; &quot;Xus&quot;, and regards Smith's &quot;cus&quot; as a synonym of &quot;bus&quot; (Valid=7 for TNU
+&gt; 8).
+&gt; 
+&gt; If you can imagine extending this TNU table out to millions of
+&gt; individual
+&gt; usages, for names at all ranks, etc., you're basically capturing the
+&gt; essentials of every treatment and classification of every name that has
+&gt; ever
+&gt; been documented.  That's what GNUB is all about -- indexing these basic
+&gt; elements of every single TaxonNameUsage.
+&gt; 
+&gt; Now, on to Tony's question: How does GNUB manage multiple
+&gt; classifications?
+&gt; The way it works is through a structure we developed that maps an
+&gt; &quot;Accepted
+&gt; Taxonomy&quot; according to a particular &quot;MetaAuthority&quot;.  This is all
+&gt; explained
+&gt; in much more detail on pp. 35-36 of this publication:
+&gt; <A HREF="http://systbio.org/files/phyloinformatics/1.pdf">http://systbio.org/files/phyloinformatics/1.pdf</A> (note, what is referred
+&gt; to
+&gt; in that publication as an &quot;Assertion&quot; is what I now refer to as a
+&gt; &quot;TaxonNameUsage&quot;).
+&gt; 
+&gt; Catalog of Life is an example of a MetaAuthority, as is WoRMS, or
+&gt; WikiSpecies, or any individual taxonomist who wants to build a
+&gt; &quot;preferred&quot;
+&gt; classification. The way it works is that each MetaAuthority selects a
+&gt; particular TNU for each Protonym to represent their view.  The full
+&gt; classification is assembled from the set of MetaAuthority-selected
+&gt; TNUs.
+&gt; 
+&gt; So, suppose Rich Pyle is a MetaAuthority, and he prefers to follow his
+&gt; own
+&gt; 2012 classification.  His Accepted Taxonomy records would look
+&gt; something
+&gt; like this:
+&gt; 
+&gt; MA	Prot	TNU
+&gt; Pyle	6	6
+&gt; Pyle	2	7
+&gt; Pyle	5	8
+&gt; 
+&gt; According to this MetaAuthority (Pyle) the Genus &quot;Xus&quot; (Prot=6) should
+&gt; be
+&gt; treated according to Pyle, 2012 (TNU=6), which is as a valid genus .
+&gt; The
+&gt; species &quot;bus&quot; (Prot=2) is treated as a valid species within &quot;Xus&quot;
+&gt; (TNU=7).
+&gt; The species &quot;cus&quot; (Prot=5) is treated as a junior synonym of &quot;bus&quot;
+&gt; (TNU=8).
+&gt; 
+&gt; Now, let's say Tony Rees represents a different MetaAuthority.  He's
+&gt; got a
+&gt; bit of different view.  He thinks that &quot;cus&quot; is correctly treated as a
+&gt; synonym of bus, but he doesn't buy Pyle's argument for &quot;Xus&quot;, so he
+&gt; wants to
+&gt; place &quot;bus&quot; in &quot;Aus&quot;.  The Rees Accepted Taxonomy might look like this:
+&gt; 
+&gt; MA	Prot	TNU
+&gt; Rees	1	3
+&gt; Rees	2	4
+&gt; Rees	5	8
+&gt; 
+&gt; He thinks Aus (Prot=1) is a valid genus, so he's following Smith's
+&gt; treatment
+&gt; (TNU=3).  He thinks bus (Prot=2) is a valid species and belongs in the
+&gt; genus
+&gt; Aus, so he's following Smith's treatment for that name as well (TNU=4).
+&gt; But
+&gt; he agrees with Pyle that cus is properly considered a synonym, so for
+&gt; that
+&gt; name (Prot=5), he's following Pyle's treatment (TNU=8).
+&gt; 
+&gt; I've only touched the tip of the iceberg of how this work, but the
+&gt; important
+&gt; point is that using this &quot;MetaAuthority&quot; approach, you can have an
+&gt; unlimited
+&gt; number of classifications, and you can switch between them very
+&gt; quickly.
+&gt; Using this technique, we can do things like:
+&gt; &quot;Show me a checklist of the species of fishes from Johnston Atoll,
+&gt; presented
+&gt; according to the FishBase MetaAuthority.&quot;  What this would do is scour
+&gt; the
+&gt; database for all records of fishes from Johnston Atoll, no matter how
+&gt; they
+&gt; were originally identified, then translate them into the classification
+&gt; used
+&gt; by FishBase today.  With the click of the mouse button, you can take
+&gt; this
+&gt; same list and re-present it according to, say, the WoRMS
+&gt; classification, or
+&gt; Richard Pyle's personal classification, or any other MetaAuthority's
+&gt; classification.  This &quot;translation&quot; is done on the fly at query time,
+&gt; so you
+&gt; can pretty quickly compare two alternate classifications to see where
+&gt; they
+&gt; are the same, and where they differ.
+&gt; 
+&gt; Believe it or not, it's much simpler than it seems based on the
+&gt; description
+&gt; above.
+&gt; 
+&gt; OK, that's enough....
+&gt; 
+&gt; Rich
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="125361.html">[Taxacom] Data query
+</A></li>
+        <LI>Next message: <A HREF="125363.html">[Taxacom] Data query, ETC.
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#125362">[ date ]</a>
+              <a href="thread.html#125362">[ thread ]</a>
+              <a href="subject.html#125362">[ subject ]</a>
+              <a href="author.html#125362">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,222 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] the hurdle for all biodiv informatics initiatives
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2010-February/115657.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] the hurdle for all biodiv informatics initiatives</H1>
+    <B data-pagefind-meta="author">Stephen Thorpe</B>
+    s.thorpe at auckland.ac.nz<BR>
+    <I data-pagefind-meta="date">Fri Feb 19 17:14:33 CST 2010</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="115656.html">[Taxacom] Fwd: FW: You are invited to a national consultation on
+	"Advancing the Science of Taxonomy in India for,
+	Biodiversity Conservation" at ATREE, Bangalore Feb 23, 2010.
+</A></li>
+        <LI>Next message: <A HREF="115658.html">[Taxacom] early extant angiosperms
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#115657">[ date ]</a>
+              <a href="thread.html#115657">[ thread ]</a>
+              <a href="subject.html#115657">[ subject ]</a>
+              <a href="author.html#115657">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2010</span><!--beginarticle-->
+<PRE>Hi Paul,
+A frequent complaint you seem to voice about all biodiversity databases, including Wikispecies, is that they don't, by your estimation, contain much in the way of &quot;useful&quot; information. To my mind, however, they function to organise vast numbers references (preferably with links of some kind to those references) in a taxonomic way. The &quot;useful information&quot; is contained in the references, and not in the database per se. This is certainly how I view Wikispecies - a vast taxonomically organised library/bibliography, supplemented where possible with images...
+Cheers,
+Stephen
+
+________________________________________
+From: taxacom-bounces at mailman.nhm.ku.edu [taxacom-bounces at mailman.nhm.ku.edu] On Behalf Of dipteryx at freeler.nl [dipteryx at freeler.nl]
+Sent: Friday, 19 February 2010 10:52 p.m.
+To: taxacom at mailman.nhm.ku.edu
+Subject: Re: [Taxacom] the hurdle for all biodiv informatics initiatives
+
+Van: Richard Pyle [mailto:deepreef at bishopmuseum.org]
+Verzonden: do 18-2-2010 19:39
+
+&gt;&gt; ***
+&gt;&gt; OK, &quot;biodiversity informatics&quot; it is (BTW, when I took a
+&gt;&gt; course in bioinformatics it meant something different
+&gt;&gt; entirely from what is sketched above. There are a lot of
+&gt;&gt; terms that are confusing!)
+&gt;&gt; * * *
+
+&gt; Yes -- same here.  The term &quot;bioinformatics&quot; existed in our sense
+&gt; long before PCR was a mature technology.  But if you Google that
+&gt; term, you'll see that it's almost always used sensu stricto for
+&gt; DNA stuff.
+
+***
+Well, the course I took dealt with information processing by
+biotic systems.
+* * *
+
+&gt; Without launching into another HUGE email, I'll just say that this
+&gt; is how my own bio[diversity]informatics efforts began.  I spent
+&gt; perhaps a decade staunchly avoiding any sort of &quot;surrogate primary
+&gt; key&quot; (i.e., arbitrary number) in my data tables.  In fact, the first
+&gt; robust database I created -- the specimen database for Ichthyology
+&gt; at Bishop Museum -- *still* uses the set of three fields &quot;Genus&quot;,
+&gt; &quot;Species&quot;, &quot;Subspecies&quot; as the compound primary key for the taxonomy
+&gt; table.  But after a decade of beating my head against that
+&gt; ideological wall, I finally had to re-evaluate my position and
+&gt; embrace surrogate primary key fields (locally unique identifiers)
+&gt; in my databases. Now that I have a better understanding of what is
+&gt; needed to allow taxonomic data to flow across the internet, I have
+&gt; come to embrace GUIDs.  Basically, over the years of dealing with
+&gt; real-world taxonomy database issues, as I became both experienced
+&gt; and educated, I transitioned from a staunch opposition to any kind
+&gt; of identifier, to one of the loudest advocates of them.
+
+***
+Although I realize that using artificial identifiers (in the form
+of some kind of alphanumerical key/string) looks awkward and thus may
+raise instinctive objections with many who encounter them, I do not
+see any real problems with them, provided computers can read them
+unambiguously and as long humans are not obliged to deal with them
+(although for safety's sake they should have access!).
+
+The issue that I am focussing on is the information content that is
+accessed: which label unlocks what information? Just making a stack
+of labels (which is what any &quot;name&quot; is, a label) only results in a
+stack of labels, which is not necessarily of any use whatsoever.
+
+&gt;From a nomenclatural point of view there are two (and only two,
+no more!) items of prime importance:
+1) the scientific name (in its one correct spelling)
+2) the type
+In a database this (name + type) can be captured by a single
+alphanumerical key: it is a unique &quot;entity&quot;, a nomenclatural entity.
+Once this nomenclatural entity is included in a database, it is
+possible to attach a whole slew of nomenclatural information
+(what is its rank, who published it where, etc), which is very nice
+for completeness, and for quality control, but immaterial for
+information-access purposes. This is the easy part, but absolutely
+essential.
+
+Nomenclatural information, by itself, is not of practical value.
+Some names can be dealt with entirely from a nomenclatural
+perspective, by application of nomenclatural rules (Caryophyllus
+Mill. is an illegitimate name, a homotypic synonym of Dianthus L.)
+or by the Act of a higher nomenclatural authority. The difficult
+part in building a database is how to access actual information.
+Often it will be necessary to break things down to separate
+documented usages of a name; these then each to be linked to a
+particular taxon concept (like: Fantasia imaginensis as treated
+in the Flora Utopica), that is, a particular circumscription
+(which may correspond to a chresonym, or a collection of chresonyms,
+if you like). A database had better have a unique alphanumerical
+key for each circumscription, or it becomes a meaningless mess.
+* * *
+
+&gt;&gt; Text strings will never become consistent, nor stop multiplying.
+&gt;&gt; Not unless humans are excluded from the entire process.
+
+&gt; I think you misunderstood my point.  By &quot;consistent&quot; I didn't mean
+&gt; that we'd all share the same taxonomy and nomenclature.  I meant
+&gt; that we wouldn't have to continue to deal with variations like this:
+
+***
+Actually, that is exactly how I understood it. For practical purposes,
+there is an endless amount of variations. Not only won't this ever
+stabilize, but such a variation of a text string does not unlock and
+access useful information (for example, of the occurrences of spelling
+variation umpteen-and-one there may be three that refer to
+circumscription A, two to circumscription B and five to circumscription
+C, while of the occurrences of spelling variation umpteen-and-two
+there are six that refer to circumscription A, one to circumscription
+B and two to circumscription C, and on-and-on for all the other
+spelling variations). Documenting variations of text strings gets you
+nothing, except lots and lots of such text strings.
+* * *
+
+&gt;&gt; ***
+&gt;&gt; Actually, I do not see that the &quot;myriad text strings... are
+&gt;&gt; our only link ... to important information about
+&gt;&gt; biodiversity&quot; nor that they would be sufficient to access all
+&gt;&gt; the information. They are just what the &quot;biodiversity
+&gt;&gt; informatics&quot; people are dealing with.
+&gt;&gt; * * *
+
+&gt; OK, I don't follow.  Can you elaborate on how else we index
+&gt; information about biodiversity in published (and unpublished) forms?
+&gt; It seems to me that the entire REASON we use taxon names is to
+&gt; abstract the notion of a taxon concept in the form of a series
+&gt; of text characters, and that we use those text-character strings
+&gt; to label other information (specimens, images, DNA sequences,
+&gt; ecological datasets, taxonomic revisions, etc., etc.).
+
+***
+Well, my point is a very general one. There is a lot of information
+&quot;out there&quot; and our link to it is the names that are used; these names
+can roughly be subdivided into scientific, purporting-to-be-scientific,
+common and vernacular names. All of which may well have spelling
+variations, without these necessarily meaning much (or anything at all).
+* * *
+
+&gt; And it wasn't the &quot;biodiversity informatics people&quot; who created the mess.
+
+***
+Oh no, it probably safe to say that biodiversity is messy to begin with,
+and as for the myriad people who have been dealing with it ...
+* * *
+
+&gt; You can blame the &quot;biodiversity informatics people&quot; for a lot of
+&gt; things, but the mess of text-strings purported to represent scientific
+&gt; names that we now have to deal with is definitely not among those
+&gt; things.
+
+***
+That depends on how you phrase it ...
+
+Paul
+_______________________________________________
+
+Taxacom Mailing List
+Taxacom at mailman.nhm.ku.edu
+<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+
+The Taxacom archive going back to 1992 may be searched with either of these methods:
+
+(1) <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+
+Or (2) a Google search specified as:  site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="115656.html">[Taxacom] Fwd: FW: You are invited to a national consultation on
+	"Advancing the Science of Taxonomy in India for,
+	Biodiversity Conservation" at ATREE, Bangalore Feb 23, 2010.
+</A></li>
+        <LI>Next message: <A HREF="115658.html">[Taxacom] early extant angiosperms
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#115657">[ date ]</a>
+              <a href="thread.html#115657">[ thread ]</a>
+              <a href="subject.html#115657">[ subject ]</a>
+              <a href="author.html#115657">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

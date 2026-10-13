@@ -1,0 +1,204 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Propagation of bad sameAs statements
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Propagation%20of%20bad%20sameAs%20statements&In-Reply-To=%3C673001.2305.qm%40web114214.mail.gq1.yahoo.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="117587.html">
+   <LINK REL="Next"  HREF="117548.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2010-September/117590.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Propagation of bad sameAs statements</H1>
+    <B data-pagefind-meta="author">Stephen Thorpe</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Propagation%20of%20bad%20sameAs%20statements&In-Reply-To=%3C673001.2305.qm%40web114214.mail.gq1.yahoo.com%3E"
+       TITLE="[Taxacom] Propagation of bad sameAs statements">stephen_thorpe at yahoo.co.nz
+       </A><BR>
+    <I data-pagefind-meta="date">Fri Sep 10 19:10:40 CDT 2010</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="117587.html">[Taxacom] Propagation of bad sameAs statements
+</A></li>
+        <LI>Next message: <A HREF="117548.html">[Taxacom] Invert. Zool. Curator Position
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#117590">[ date ]</a>
+              <a href="thread.html#117590">[ thread ]</a>
+              <a href="subject.html#117590">[ subject ]</a>
+              <a href="author.html#117590">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2010</span><!--beginarticle-->
+<PRE>Joel,
+
+&gt;<i>I liked Jim's namespace example because, for us to share a common semantics, 
+</I>&gt;<i>it's easier to say &quot;Stephen_Thorpe:Ptinus_tectus&quot; than it is to express your 
+</I>&gt;<i>definition formally. In other words, I'd rather explore someone's headspace by 
+</I>&gt;<i>browsing their tag cloud than by translating their brain into OWL
+</I>
+The problem here is that I'm not even sure if &quot;Stephen_Thorpe:Ptinus_tectus&quot; has 
+much (any?) meaning, despite the fact that I have published on (the 
+nomenclature) of it! Faced with a random assortment of plain brown Ptinus 
+species, I have no concept of which of them would be P. tectus. I might be able 
+to work it out by direct comparision to authoritatively IDed specimens of P. 
+tectus, or by consulting literature revisions/descriptions, but this is outside 
+my &quot;headspace&quot;. Yet, I can meaningfully talk about the species in some contexts. 
+For example, I know that it is a well-known pest of stored products, and that it 
+is established in New Zealand, etc.
+
+Stephen
+
+
+
+________________________________
+From: joel sachs &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">jsachs at csee.umbc.edu</A>&gt;
+To: Stephen Thorpe &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">stephen_thorpe at yahoo.co.nz</A>&gt;
+Cc: Jim Croft &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">jim.croft at gmail.com</A>&gt;; <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom at mailman.nhm.ku.edu</A>
+Sent: Sat, 11 September, 2010 2:17:14 AM
+Subject: Re: [Taxacom] Propagation of bad sameAs statements
+
+Stephen,
+
+The invasive species definitions you complained about have nothing to do
+with Linked Data. They are in dbpedia because they are in Wikipedia.
+(Wikipedia introductions are mapped to dbpedia abstracts.) So you're free
+to change them at their source.
+
+That said, I'm kind of with you here. At last year's Phyloinformatics
+VoCamp, Mark Wilkinson had a slide along the lines of &quot;Because I said so!&quot;
+being an illegitimate answer to scientific questions. His point was
+that we need to build description logics that give necessary and
+sufficient conditions to classify all manner of instances.
+
+But with invasive species, it's almost all &quot;because I said so.&quot; That is,
+things are defined as invasive by being put on a list, often through
+treaty or legislation. So rather than give characteristics of invasive
+species that would be very hard for a classifier to compute, we can create a 
+class for each list of invaders, and then, for each
+species on the list, assert that it is a subclass. For example,
+
+&lt;owl:Class rdf:about=&quot;<A HREF="http://spire.umbc.edu/ethan/Alectoris_chukar">http://spire.umbc.edu/ethan/Alectoris_chukar</A>&quot;&gt;
+&lt;rdfs:subClassOf rdf:resource=&quot;#CaliforniaInvasiveAnimalsThing&quot; /&gt;
+&lt;/owl:Class&gt;
+
+(Whether we should be modeling species as classes is, of course, another 
+question.)
+
+Since conservation status also comes down to a species being on a
+list, we can deal with endangered, threatened, etc. species the same way. (We 
+did this during the Spire project and I'd be happy to share examples with those 
+interested.)
+
+So if you say that precise definitions of &quot;invasice species&quot; aren't
+helpful (or possible), I agree.
+
+What about precise definitions of individual taxa? How should we define
+the Chukar partrige? Morphologically? Genetically? Behaviourally? We can
+give descriptions, with various levels of precision, but, ultimately,
+&quot;Some taxonomist said so&quot; is the ultimate answer to why a population is
+classified a particular way. I liked Jim's namespace example because, for
+us to share a common semantics, it's easier to say 
+&quot;Stephen_Thorpe:Ptinus_tectus&quot; than it is to express your definition
+formally. In other words, I'd rather explore someone's
+headspace by browsing their tag cloud than by translating their brain into
+OWL.
+
+*That* said, I'd love to be proved wrong. For example, there were papers a few 
+years ago (e.g. 
+<A HREF="http://dcpapers.dublincore.org/ojs/pubs/article/viewFile/808/804">http://dcpapers.dublincore.org/ojs/pubs/article/viewFile/808/804</A>) about the 
+possibility of using OWL-DL as the basis for a polyclave key. A user would enter 
+some characteristics of the thing observed, and a classifier would decide what 
+things it could be. I'm curious to know how these efforts turned out. Maybe we 
+can have a &quot;DL-based key&quot; BoF at TDWG.
+
+Joel.
+
+
+On Thu, 9 Sep 2010, Stephen Thorpe wrote:
+
+&gt;<i> well, I did seriously offer a definition of &quot;invasive species&quot;, viz.
+</I>
+an invasive species is one which has a definite tendency to expand its range 
+into areas where it is unwanted
+
+Definitions which define them in terms of particular or general &quot;negative 
+effects&quot; of the species are not good, because there are a great many 
+possible particular effects and the general concept is not well-defined, unless 
+you define it as an &quot;unwanted effect&quot;, and then with a bit of simplification you 
+get my definition. Basically, it is invasive if border control wants to keep it 
+out ...
+
+Adding extra bits to the definition just serves to confuddle (my word!) the 
+issues ...
+
+
+
+________________________________
+From: Jim Croft &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">jim.croft at gmail.com</A>&gt;
+To: Stephen Thorpe &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">stephen_thorpe at yahoo.co.nz</A>&gt;
+Cc: joel sachs &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">jsachs at csee.umbc.edu</A>&gt;; <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom at mailman.nhm.ku.edu</A>
+Sent: Fri, 10 September, 2010 5:07:35 PM
+Subject: Re: [Taxacom] Propagation of bad sameAs statements
+
+On Fri, Sep 10, 2010 at 2:49 PM, Stephen Thorpe
+&lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">stephen_thorpe at yahoo.co.nz</A>&gt; wrote:
+&gt;<i> So, we define everything in terms of everything else, and end up with a huge
+</I>&gt;<i> circularity in which it is hard to see that we are any the wiser!
+</I>
+It only becomes circular if you let it.  If there are terms that tend
+to be ambiguous, just don't let them travel without the namespace or
+context in which they were defined.
+
+For invasive species, find a definition you like and anchor it (I
+would be really surprised if this term was not rigourously defined
+somewhere in a scientific or semi official context).  Or, if the
+definition does not cover what you want, make you own up and anchor it
+to that - then, when you start your chatter, people will know they are
+dealing with stephen.thorpe:invasive_species  which may or may not be
+the 'same_as' or 'near_as_damnit' tosomebody else's definition of the
+term.
+
+&gt;<i> Actually, I'm all for pedantry...
+</I>
+it has been noticed... :)
+
+jim
+-- _________________
+Jim Croft ~ <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">jim.croft at gmail.com</A> ~ +61-2-62509499 ~
+<A HREF="http://www.google.com/profiles/jim.croft">http://www.google.com/profiles/jim.croft</A>
+'A civilized society is one which tolerates eccentricity to the point
+of doubtful sanity.'
+ - Robert Frost, poet (1874-1963)
+
+
+      
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="117587.html">[Taxacom] Propagation of bad sameAs statements
+</A></li>
+	<LI>Next message: <A HREF="117548.html">[Taxacom] Invert. Zool. Curator Position
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#117590">[ date ]</a>
+              <a href="thread.html#117590">[ thread ]</a>
+              <a href="subject.html#117590">[ subject ]</a>
+              <a href="author.html#117590">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

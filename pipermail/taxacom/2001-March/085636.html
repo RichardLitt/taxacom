@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Z39.50 versus XML
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2001-March/085636.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Z39.50 versus XML</H1>
+    <B data-pagefind-meta="author">Stan Blum</B>
+    sblum at CALACADEMY.ORG<BR>
+    <I data-pagefind-meta="date">Tue Mar 13 11:04:24 CST 2001</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="085634.html">OOPs OPP PC MVT
+</A></li>
+        <LI>Next message: <A HREF="085631.html">Iberia again
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#085636">[ date ]</a>
+              <a href="thread.html#085636">[ thread ]</a>
+              <a href="subject.html#085636">[ subject ]</a>
+              <a href="author.html#085636">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2001</span><!--beginarticle-->
+<PRE>At 10:11 AM 3/13/01 -0500, Richard Zander wrote:
+&gt;----- Original Message -----
+&gt;From: &quot;Jim Croft&quot; &lt;jrc at ANBG.GOV.AU&gt;
+&gt;To: &lt;TAXACOM at USOBI.ORG&gt;
+&gt;Sent: Monday, March 12, 2001 7:17 AM
+&gt;Subject: Re: a grandiose but (hopefully) practical idea
+&gt;
+&gt; &gt; I don't like Zbig, not because the idea is flawed, but because it is based
+&gt; &gt; on Z39.50, and none of my applications can use it...  now, if they were to
+&gt; &gt; go down the XML route, we could upgrade browsers and start to party...
+&gt;
+&gt;A few details about how databases might be implemented in XML  to do much
+&gt;the same as Zbig would be real interesting, Jim. Could you give us a
+&gt;reference or a hint?
+
+To clarify this a bit, XML and Z39.50 are not comparable standards.  Z39.50
+can transport data in XML format, and actually does in the current ZBIG /
+Species Analyst network.  What would make Jim Croft happier, I suspect, is
+to implement ZBIG and similar systems using HTTP, the standard protocol
+underlying the Web.  I'm fairly certain the ZBIG / Species Analyst work is
+heading that direction, AND I believe the switch will be relatively
+transparent.  In other words, a user won't see any difference between data
+contributed via Z39.50 versus HTTP.  From the provider's prospective, it
+will be a relatively simple matter of installing new software, entering the
+correct parameters into a configuration file, and re-registering themselves
+with the portal.  (There may be differences in speed, but that remains to
+be seen.)
+
+Also of note: the &quot;Red Mundial de Informacion sobre Biodivesidad&quot; (REMIB)
+network (from CONABIO) uses HTTP but a simpler delimited file format; and
+the incipient &quot;European Natural History Specimen Information Network&quot;
+(ENHSIN) uses HTTP and XML.
+
+Species Analyst (ZBIG): <A HREF="http://habanero.nhm.ukans.edu/TSA/">http://habanero.nhm.ukans.edu/TSA/</A>
+REMIB:  <A HREF="http://www.conabio.gob.mx/remib/remib.html">http://www.conabio.gob.mx/remib/remib.html</A>
+ENHSIN: <A HREF="http://www.nhm.ac.uk/science/rco/enhsin/">http://www.nhm.ac.uk/science/rco/enhsin/</A>
+
+Bottom line:  don't let changes in protocol deter you -- technology will
+always be in a state of flux.  We need to make (and keep) data capture and
+&quot;data publication&quot; among the top priorities in systematics.
+
+-Stan
+
+----------------------------------------------
+Stanley D. Blum, Ph.D.
+Research Information Manager
+California Academy of Sciences
+Golden Gate Park
+San Francisco, CA 94118
+Office: 415-750-7032
+Fax:    415-750-7186
+<A HREF="http://www.calacademy.org/">http://www.calacademy.org/</A>
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="085634.html">OOPs OPP PC MVT
+</A></li>
+        <LI>Next message: <A HREF="085631.html">Iberia again
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#085636">[ date ]</a>
+              <a href="thread.html#085636">[ thread ]</a>
+              <a href="subject.html#085636">[ subject ]</a>
+              <a href="author.html#085636">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

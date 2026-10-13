@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Language tags for scientific names
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2008-June/110617.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Language tags for scientific names</H1>
+    <B data-pagefind-meta="author">Andy Mabbett</B>
+    andy at pigsonthewing.org.uk<BR>
+    <I data-pagefind-meta="date">Sat Jun 28 02:54:32 CDT 2008</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="110616.html">[Taxacom] Language tags for scientific names
+</A></li>
+        <LI>Next message: <A HREF="110618.html">[Taxacom] Language tags for scientific names
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#110617">[ date ]</a>
+              <a href="thread.html#110617">[ thread ]</a>
+              <a href="subject.html#110617">[ subject ]</a>
+              <a href="author.html#110617">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2008</span><!--beginarticle-->
+<PRE>In message
+&lt;CFE4C8AA9C89E744B4D0FE50DC5AE303E0C97F at exactn2-cbr.nexus.csiro.au&gt;,
+Donald.Hobern at csiro.au writes
+
+&gt;I agree it is important to consider how we should represent scientific
+&gt;names in XML data,
+
+I think this debate is about how to represent the language in which
+taxonomic names are rendered (in other words: &quot;Under what IETF-language
+code are taxonomic names classified?&quot;). The debate should be
+technologically neutral (in other words, forget XML, HTML, Dublin Core,
+etc.).
+
+[...]
+
+&gt;We need to ask:
+&gt;
+&gt;1. What do we (as the interested community) really want to represent by
+&gt;such codes?  When we want to give additional information about a
+&gt;particular scientific name (including e.g. code), why don't we just use
+&gt;proprietary tags (like the TDWG RDF TaxonName properties)?
+
+We must remember that this is one interested community, not THE total
+interested community. For example, a news site such as the BBC may wish
+to mark up taxonomic names in its news reports:
+
+        &lt;<A HREF="http://news.bbc.co.uk/1/hi/england/london/4743250.stm">http://news.bbc.co.uk/1/hi/england/london/4743250.stm</A>&gt;
+
+        Between 1977 and 2000, house sparrow (Passer domesticus) numbers
+        in the UK declined by 65%.
+
+to improve their accessibility for people using assertive technology,
+without caring which code is used, or even what a code is.
+
+&gt;2. Is this compatible with the intended use of the language tag?  If
+&gt;something is a proper name with no translation into different languages,
+&gt;what would ISO expect?  Is the language code in any way appropriate in
+&gt;such a case?
+
+Conversely, in what language are taxonomic names written? In the above
+example, is &quot;Passer domesticus&quot; written in English? Does it become
+German on a page written in German, and Taiwanese likewise? What
+pronunciation rules apply, in each case?
+
+[...]
+
+&gt;A single code, (null, &quot;zxx&quot;, &quot;tax&quot; or something) would encourage
+&gt;consistent interpretation better
+
+Better than the status quo, certainly; but not better than a more
+specific code.
+
+&gt;but I still think we are
+&gt;misunderstanding the point of the language tag.  Surely its primary role
+&gt;is in situations in which there may be different versions of some
+&gt;content in different languages and software may choose the most
+&gt;appropriate for a given user.
+
+No; langauge tags have no defined &quot;primary&quot; role, other than to indicate
+the language (or &quot;non-language&quot;) used. In fact, RFC 4646 states:
+
+        This document describes the structure, content, construction,
+        and semantics of language tags for use in cases where it is
+        desirable to indicate the language used in an information
+        object.
+
+        [...]
+
+        There are many reasons why one would want to identify the
+        language used when presenting or requesting information.
+
+        [...]
+
+        In addition, knowledge about the particular language used by
+        some piece of information content might be useful or even
+        required by some types of processing; for example,
+        spell-checking, computer- synthesized speech, Braille
+        transcription, or high-quality print renderings.
+
+&gt;This is not the case here and I suspect
+&gt;the ISO recommendation would be to use &quot;zxx&quot; or nothing at all.
+
+I'm not sure that the ISO would make any such recommendation; the
+relevant body is the IETF-languages group, and we may well need to ask
+them, having first clarified our collective preference, and outlined our
+use-cases.
+
+One such use-case would be spell checking, where &quot;zxx&quot; is unhelpful, but
+&quot;zxx-tx&quot; (or whatever) can tell a user agent to spell check against a
+dictionary of taxonomic terms.
+
+Likewise, &quot;zxx&quot; says nothing about how to pronounce the relevant text
+(is the &quot;ph&quot; in pronounced like an &quot;f&quot; in every language? How would a
+culture with no knowledge of that practice pronounce &quot;Drosophila&quot;?
+&quot;Dro-sop-hi-la&quot;?), but &quot;zxx-tx&quot; may indicate the pronunciation to be
+used.
+
+It may well be that, absent of other arguments, the IETF-languages group
+would suggest &quot;la-x-taxonomy&quot; or nothing at all.
+
+-- 
+Andy Mabbett
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="110616.html">[Taxacom] Language tags for scientific names
+</A></li>
+        <LI>Next message: <A HREF="110618.html">[Taxacom] Language tags for scientific names
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#110617">[ date ]</a>
+              <a href="thread.html#110617">[ thread ]</a>
+              <a href="subject.html#110617">[ subject ]</a>
+              <a href="author.html#110617">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

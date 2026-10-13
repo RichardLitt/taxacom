@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Why character-tracking doesn't happen?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Why%20character-tracking%20doesn%27t%20happen%3F&In-Reply-To=%3C1221350684.5690.4.camel%40bobs-dell640m%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="110948.html">
+   <LINK REL="Next"  HREF="110950.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2008-September/110949.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Why character-tracking doesn't happen?</H1>
+    <B data-pagefind-meta="author">Bob Mesibov</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Why%20character-tracking%20doesn%27t%20happen%3F&In-Reply-To=%3C1221350684.5690.4.camel%40bobs-dell640m%3E"
+       TITLE="[Taxacom] Why character-tracking doesn't happen?">mesibov at southcom.com.au
+       </A><BR>
+    <I data-pagefind-meta="date">Sat Sep 13 19:04:44 CDT 2008</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="110948.html">[Taxacom] Why character-tracking doesn't happen?
+</A></li>
+        <LI>Next message: <A HREF="110950.html">[Taxacom] Why character-tracking doesn't happen?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#110949">[ date ]</a>
+              <a href="thread.html#110949">[ thread ]</a>
+              <a href="subject.html#110949">[ subject ]</a>
+              <a href="author.html#110949">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2008</span><!--beginarticle-->
+<PRE>Unfortunately I won't be able to follow this discussion for the next few
+days, but it's a great read so far.
+
+Neil Bell wrote:
+
+&quot;In fact something like what you are suggesting happens informally all
+of 
+the time. Any tree immediately reveals homoplasies of particular 
+morphological features to anyone familiar with the organisms. Some of 
+these will be more credible than others, and this will act as a spur
+for 
+further research (e.g. further sampling) or critical examination of the 
+data or methodology. Some people seem to think that such an &quot;iterative&quot; 
+approach is unscientific, but like any search strategy I think it isn't 
+how you get there that matters, more how you evaluate your postion once 
+you are there.&quot;
+
+Hmmm. 'Informally'? Can you cite any papers in which trees were
+re-evaluated based on the credibility of their inferred homoplasies?
+
+Curtis Clark wrote:
+
+&quot;I'm not convinced after all these years that I was on the right track, 
+but the issues seemed obvious even then.&quot;
+
+Nice presentation, and slide no. 1 seems to be what Neil means by
+'iterative' (above), so the tautology angle is spot on.
+
+I notice, though, that your ITS+morphology analysis used combined data.
+This raises an issue I've been afraid to ask about molecular data,
+but... Here goes, the worst that can happen is that someone
+knowledgeable will call me an idiot.
+
+When you load a morphology matrix, you try not to include characters
+that are non-independent. A few shouldn't hurt the analysis (they'll
+keep appearing together as 'simultaneous' changes between nodes), but a
+lot might swamp other signals with their noise. Independent characters
+are better.
+
+When you infer phylogenies based on nucleic acid sequences, you assume
+that each position is independent, unless you're dealing with a
+protein-coding sequence, in which case you know that the third, 'wobble'
+position in a triad has some correlation with the first two positions,
+and you can correct for this. So the independence assumption should be
+OK for non-coding sequences?
+
+Well, no. The secondary structure of things like ribosomes, for example,
+is strongly conserved. This means that some substitutions in rDNA will
+require 'compensatory' substitutions elsewhere in the sequence, which
+means there's non-independence. There are ways to test for
+non-independence. For example, I've seen published work on
+autocorrelation and Fourier decomposition analyses of whole genomes
+which show periodicities in sequences forced by things like how
+chromosomes are put together (in eukaryotes) and how strands twist (in
+prokaryotes). But how do you do such tests on shorter sequences,
+especially when there are indels - interruptions scattered here and
+there?
+
+I used to think that each position in a nucleic acid sequence was a
+character. In fact, this is not how molecular phylogeny programs work. A
+multiple sequence alignment program first does its best to find matching
+patterns around indels. The five character states then analysed (A,T,G,C
+and missing) are states of an artificially created character - a
+vertical column in a multiple sequence alignment. This 'column'
+character varies from analysis to analysis, depending on which sequences
+are used. How can you test the independence of such things? Aren't all
+the columns covering an indel really a single entity, so that the A,T,G
+and C's in the 'non-indel' sequences at this point are non-independent?
+-- 
+Dr Robert Mesibov
+Honorary Research Associate
+Queen Victoria Museum and Art Gallery and
+School of Zoology, University of Tasmania
+Home contact: PO Box 101, Penguin, Tasmania, Australia 7316
+(03) 64371195; 61 3 64371195
+<A HREF="http://www.qvmag.tas.gov.au/mesibov.html">http://www.qvmag.tas.gov.au/mesibov.html</A>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="110948.html">[Taxacom] Why character-tracking doesn't happen?
+</A></li>
+	<LI>Next message: <A HREF="110950.html">[Taxacom] Why character-tracking doesn't happen?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#110949">[ date ]</a>
+              <a href="thread.html#110949">[ thread ]</a>
+              <a href="subject.html#110949">[ subject ]</a>
+              <a href="author.html#110949">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

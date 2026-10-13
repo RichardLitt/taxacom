@@ -1,0 +1,290 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Explicit vs implied linking
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2010-December/118297.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Explicit vs implied linking</H1>
+    <B data-pagefind-meta="author">Stephen Thorpe</B>
+    stephen_thorpe at yahoo.co.nz<BR>
+    <I data-pagefind-meta="date">Wed Dec  1 01:51:57 CST 2010</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="118296.html">[Taxacom] Explicit vs implied linking
+</A></li>
+        <LI>Next message: <A HREF="118298.html">[Taxacom] Explicit vs implied linking
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#118297">[ date ]</a>
+              <a href="thread.html#118297">[ thread ]</a>
+              <a href="subject.html#118297">[ subject ]</a>
+              <a href="author.html#118297">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2010</span><!--beginarticle-->
+<PRE>my *good friends* ZooKeys have a simple solution to this, their program can 
+detect whether the link is dead or not, and if it is, it can hide the link or at 
+least flag it somehow as dead. The way they actually do it is that the word 
+Wikispecies on a ZooKeys taxon profile is highlighted in bold if the link is 
+good.
+
+next problem?
+
+
+
+
+________________________________
+From: David Remsen (GBIF) &lt;dremsen at gbif.org&gt;
+To: Stephen Thorpe &lt;stephen_thorpe at yahoo.co.nz&gt;
+Cc: David Remsen (GBIF) &lt;dremsen at gbif.org&gt;; taxacom at mailman.nhm.ku.edu
+Sent: Wed, 1 December, 2010 8:42:50 PM
+Subject: Explicit vs implied linking
+
+
+Stephen,
+
+There is a very practical answer to your question and I've ground-truthed it to 
+some degree in my former work with uBio. ? The BioOne journals used the same 
+methodology to link to ITIS, ?by appending a name to the end of a URL and 
+casting it out as a link in case something stuck on the ITIS end. ? What they 
+found, ?and what I used to ask people is - If you click on the dead link once - 
+OK things happen. ? You click the second time and you get nothing. ? You gonna 
+click a third time? ?
+
+Generating an explicit index of links is trivial for structured data management 
+systems. ? ?It is easier to do it the way you suggest but my experience is that 
+stale links don't get used. ??
+
+DR
+
+
+On Nov 30, 2010, at 11:22 PM, Stephen Thorpe wrote:
+
+thanks David
+&gt;
+&gt;just one comment:
+&gt;
+&gt;&gt;The method you suggest, ?however, is not the best way to do this&lt;
+&gt;
+&gt;actually I rather think it *is* the best way
+&gt;
+&gt;GBIF has rather a tendency to overcomplicate matters, but if one has good honest 
+&gt;data, then simplicity is best
+&gt;
+&gt;why would you worry if the page actually existed or not? If it doesn't exist, 
+&gt;Wikispecies will tell you that it doesn't, and you can simply press the back 
+&gt;browser button to get back to GBIF. I don't see this as a problem. On the other 
+&gt;hand, if you only add links to pages that exist, then how do you keep up with 
+&gt;new pages as they?come?into existence at any time? If the link is already there, 
+&gt;then it will work *as soon as* the page comes into existence, without any work 
+&gt;needed by GBIF, which is surely preferable?
+&gt;
+&gt;IMHO, GBIF should concentrate on what it can provide that nobody else can (e.g., 
+&gt;maps of distributions from unpublished museum specimens, etc.), and provide 
+&gt;links to other information that Wikispecies, for one example, might be better at 
+&gt;providing ...
+&gt;
+&gt;Stephen
+&gt;
+&gt;
+&gt;
+________________________________
+From:?David Remsen (GBIF) &lt;dremsen at gbif.org&gt;
+&gt;To:?Stephen Thorpe &lt;stephen_thorpe at yahoo.co.nz&gt;
+&gt;Cc:?David Remsen (GBIF) &lt;dremsen at gbif.org&gt;;?taxacom at mailman.nhm.ku.edu
+&gt;Sent:?Wed, 1 December, 2010 11:03:53 AM
+&gt;Subject:?Re: PS: [Taxacom] saturday morning fun
+&gt;
+&gt;
+&gt;Perhaps because it's more complex than you think. ? I know exactly how to do it. 
+&gt;? I did say we don't have programmer capacity to add that functionality now. ? 
+&gt;In fact, ?we have a linking mechanism in place via the Global Names Index for 
+&gt;just this sort of thing. ? The method you suggest, ?however, is not the best way 
+&gt;to do this. ? Rather than concatenate any taxon name to the template you 
+&gt;provided, ?it would be better to generate an explicit link of only those pages 
+&gt;which actually exist and provide them as an index to globalnames.org
+&gt;
+&gt;
+&gt;This provides a systematic way to link multiple collections of links, ?it uses a 
+&gt;simple international data standard as the format for the index, and it works. ? 
+&gt;?That feature is on a feature request list as is, now, ?your recommendation.
+&gt;
+&gt;
+&gt;<A HREF="http://code.google.com/p/gbif-dataportal/issues/detail?id">http://code.google.com/p/gbif-dataportal/issues/detail?id</A>
+&gt;
+&gt;
+&gt;DR
+&gt;
+&gt;
+&gt;
+&gt;On Nov 30, 2010, at 9:35 PM, Stephen Thorpe wrote:
+&gt;
+&gt;David,
+&gt;&gt;
+&gt;&gt;I am utterly astonished that you currently lack the technical capacity to have a 
+&gt;&gt;link on each of your taxon pages 
+&gt;&gt;to?<A HREF="http://species.wikimedia.org/wiki/NAME_OF_TAXON">http://species.wikimedia.org/wiki/NAME_OF_TAXON</A>
+&gt;&gt;
+&gt;&gt;it is even odder that BHL also seem to lack such a capacity
+&gt;&gt;
+&gt;&gt;by contrast, my *friends* ZooKeys seem to have managed to do it just fine on 
+&gt;&gt;their taxon profiles facility ...
+&gt;&gt;
+&gt;&gt;Stephen
+&gt;&gt;
+&gt;&gt;
+&gt;&gt;?
+&gt;&gt;
+________________________________
+From:?David Remsen (GBIF) &lt;dremsen at gbif.org&gt;
+&gt;&gt;To:?Stephen Thorpe &lt;stephen_thorpe at yahoo.co.nz&gt;
+&gt;&gt;Cc:?David Remsen (GBIF) &lt;dremsen at gbif.org&gt;;?taxacom at mailman.nhm.ku.edu
+&gt;&gt;Sent:?Tue, 30 November, 2010 9:13:46 PM
+&gt;&gt;Subject:?Re: PS: [Taxacom] saturday morning fun
+&gt;&gt;
+&gt;&gt;
+&gt;&gt;
+&gt;&gt;
+&gt;&gt;Actually I think linking to wikispecies and other select databases (such as 
+&gt;&gt;species pages currently offered by GBIF national Nodes) is a great idea. ? In 
+&gt;&gt;fact, ?it would be done if we had the technical capacity to actively refactor 
+&gt;&gt;the data portal as it's on a feature request list. ? ?I hope we will be able to 
+&gt;&gt;add this as you suggest.
+&gt;&gt;
+&gt;&gt;
+&gt;&gt;As to the purity of my motives, ?I really don't know what that is all about.
+&gt;&gt;
+&gt;&gt;
+&gt;&gt;
+&gt;&gt;
+&gt;&gt;
+&gt;&gt;On Nov 29, 2010, at 10:58 PM, Stephen Thorpe wrote:
+&gt;&gt;
+&gt;&gt;PS: you see the bit where I become suspicious and start doubting your apparently 
+&gt;&gt;pure motives is this: it would be very technically easy and fully consistent 
+&gt;&gt;with your stated aims and motivations to simply?put on each of your taxon pages 
+&gt;&gt;a link to the corresponding Wikispecies page (for example, for 
+&gt;&gt;Mimus,<A HREF="http://species.wikimedia.org/wiki/Mimus,">http://species.wikimedia.org/wiki/Mimus,</A> and note that all Wikispecies 
+&gt;&gt;pages have this simple URL 
+&gt;&gt;structure<A HREF="http://species.wikimedia.org/wiki/NAME_OF_TAXON),">http://species.wikimedia.org/wiki/NAME_OF_TAXON),</A> perhaps saying 
+&gt;&gt;something like &quot;here you may find useful data on this taxon, though being open 
+&gt;&gt;edit, we cannot vouch for its accuracy&quot;. But this would require (1) genuinely 
+&gt;&gt;pure motives on your part; and (2) a grasp of the difference between theory and 
+&gt;&gt;reality (i.e., in theory Wikispecies is unreliable and a pointless waste of your 
+&gt;&gt;time, but in *reality* ...)
+&gt;&gt;&gt;
+&gt;&gt;&gt;
+&gt;&gt;&gt;
+&gt;&gt;&gt;
+________________________________
+From:?David Remsen (GBIF) &lt;dremsen at gbif.org&gt;
+&gt;&gt;&gt;To:?Stephen Thorpe &lt;stephen_thorpe at yahoo.co.nz&gt;
+&gt;&gt;&gt;Cc:?David Remsen (GBIF) &lt;dremsen at gbif.org&gt;;?taxacom at mailman.nhm.ku.edu
+&gt;&gt;&gt;Sent:?Tue, 30 November, 2010 10:30:05 AM
+&gt;&gt;&gt;Subject:?Re: [Taxacom] saturday morning fun
+&gt;&gt;&gt;
+&gt;&gt;&gt;Stephen, 
+&gt;&gt;&gt;
+&gt;&gt;&gt;
+&gt;&gt;&gt;Thanks for the summary. ?I'd be interested to hear what various Catalogue of 
+&gt;&gt;&gt;Life providers think of all this. ?I know some taxonomic sectors, ?like the 
+&gt;&gt;&gt;Lepidoptera, ?derived from LepIndex NHM-London, ?have not been thoroughly 
+&gt;&gt;&gt;reviewed, falling into your 'raw' category.
+&gt;&gt;&gt;
+&gt;&gt;&gt;
+&gt;&gt;&gt;You hit the nail on the head when you say it provides you with a starting point. 
+&gt;&gt;&gt;? We use it as a starting point too. ? We could forego this and simply leave the 
+&gt;&gt;&gt;raw data as it is but it seemed an improvement to go with it. ?We are trying to 
+&gt;&gt;&gt;expand the capacity to access other, perhaps more comprehensive or refined 
+&gt;&gt;&gt;sources, ?should they be offered or available. ? At the moment, that starting 
+&gt;&gt;&gt;place is the one of the few places we can go. ?Of course, flaking together 
+&gt;&gt;&gt;disparate sets of even high quality data introduces additional complications but 
+&gt;&gt;&gt;I'd be happy to take them on.
+&gt;&gt;&gt;
+&gt;&gt;&gt;
+&gt;&gt;&gt;I'm sure we (at least I) have not fully grasped all the ramifications of this. 
+&gt;&gt;&gt;?Ive tried to relay some of the complexities and a rationale behind what we are 
+&gt;&gt;&gt;faced with and do. ? I failed to mention the constraints we are under to improve 
+&gt;&gt;&gt;the issues raised this weekend. ?Until very recently we have had 2.5 programmers 
+&gt;&gt;&gt;working on the entirety of our infrastructure with nearly no resources for the 
+&gt;&gt;&gt;portal to fix these problems. ? This will change in 2011.
+&gt;&gt;&gt;
+&gt;&gt;&gt;
+&gt;&gt;&gt;Best,
+&gt;&gt;&gt;David
+&gt;&gt;&gt;
+&gt;&gt;&gt;
+&gt;&gt;&gt;On Nov 29, 2010, at 9:47 PM, Stephen Thorpe wrote:
+&gt;&gt;&gt;
+&gt;&gt;&gt;You mention some key issues here. Let me focus on just one of them?for the 
+&gt;&gt;&gt;moment, namely COL and its suitability as a data provider for GBIF. I suspect 
+&gt;&gt;&gt;that GBIF have basically just thought something like &quot;well, COL is an 
+&gt;&gt;&gt;aggregation of trusted specialist databases in a form that GBIF can use&quot; - but 
+&gt;&gt;&gt;the reality is *way* more complex. For me, when starting to compile a 
+&gt;&gt;&gt;Wikispecies page, I will often use COL as a *starting point only*, actually 
+&gt;&gt;&gt;little more than a convenient way of getting big lists of taxa formatted and put 
+&gt;&gt;&gt;on Wikispecies pages for further scrutiny. Sometimes, the COL?data is so 
+&gt;&gt;&gt;obviously worse than useless, that I don't use it at all, not *even* as a 
+&gt;&gt;&gt;starting point. The data providers from COL vary widely in nature. Some of them 
+&gt;&gt;&gt;are near complete for their group, others are highly fragmentary. Some are 
+&gt;&gt;&gt;*very* raw, others are quite well polished. Sometimes, there are problems in the 
+&gt;&gt;&gt;way that COL interprets the data from sources, so all sorts of synonyms get 
+&gt;&gt;&gt;interpreted as valid, etc. Another issue, which I don't fully understand yet, 
+&gt;&gt;&gt;and I could perhaps be mistaken (???), is that even in COL 2010, much of the 
+&gt;&gt;&gt;data seems to have been harvested in 2008 ... I would have thought that COL 2010 
+&gt;&gt;&gt;would have harvested its data in 2010. If not, then COL is running a couple of 
+&gt;&gt;&gt;years behind its own data providers, who will typically not be completely 
+&gt;&gt;&gt;up-to-date either. So, in summary, I would say that COL is nothing more than a 
+&gt;&gt;&gt;convenient *starting point* for building solid biodiversity data, and it 
+&gt;&gt;&gt;requires a fair amount of careful and informed interpretation, not to mention a 
+&gt;&gt;&gt;great deal of manual work to improve on it. I'm not sure that GBIF has fully 
+&gt;&gt;&gt;grasped this? For example, in COL, the family Scarabaeidae is actually what 
+&gt;&gt;&gt;would almost universally be called the subfamily Scarabaeinae of the family 
+&gt;&gt;&gt;Scarabaeidae, and this is not at all obvious. So, COL is actually quite good if 
+&gt;&gt;&gt;you want data on Scarabaeinae, but completely lacking in any data whatsoever on 
+&gt;&gt;&gt;the *huge* scarabaeid subfamilies Melolothinae and Rutelinae.
+&gt;&gt;&gt;&gt;Cheers,
+&gt;&gt;&gt;&gt;Stephen
+&gt;&gt;&gt;
+&gt;&gt;&gt;?
+&gt;&gt;
+&gt;&gt;?
+&gt;
+&gt;?
+
+
+
+      
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="118296.html">[Taxacom] Explicit vs implied linking
+</A></li>
+        <LI>Next message: <A HREF="118298.html">[Taxacom] Explicit vs implied linking
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#118297">[ date ]</a>
+              <a href="thread.html#118297">[ thread ]</a>
+              <a href="subject.html#118297">[ subject ]</a>
+              <a href="author.html#118297">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

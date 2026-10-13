@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Herbarium label-making programs and Biota
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1998-November/012128.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Herbarium label-making programs and Biota</H1>
+    <B data-pagefind-meta="author">Peter Rauch</B>
+    anamaria at GRINNELL.BERKELEY.EDU<BR>
+    <I data-pagefind-meta="date">Thu Nov  5 08:35:35 CST 1998</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="095281.html">Tiger Beetles of CT USA: a key to larvae
+</A></li>
+        <LI>Next message: <A HREF="047920.html">Herbarium label-making programs and Biota
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#012128">[ date ]</a>
+              <a href="thread.html#012128">[ thread ]</a>
+              <a href="subject.html#012128">[ subject ]</a>
+              <a href="author.html#012128">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1998</span><!--beginarticle-->
+<PRE>Please reply to Rob, not me. Peter
+---------Forwarded message---------
+Date: Thu, 5 Nov 1998 10:21:04 -0000
+From: Robert K. Colwell &lt;colwell at uconnvm.uconn.edu&gt;
+
+As the author/developer of Biota, I am replying to Michael Chamberland's
+message (and responses to it):
+
+&gt;    I've also used Biota, and found the output herbarium labels to be
+&gt;generally serviceable, but not very flexible or attractive.  Perhaps Biota
+&gt;output could be fed into a mail merge template in Microsoft Word, allowing
+&gt;for better control of fonts, italics, etc.  Has anyone tried this?
+
+Here's how to do it. Among the options that Biota's Herbarium Labels tool
+offers is &quot;Save label text to disk instead of printing.&quot; Whatever fields
+and field labels you have selected to be included in the label text are
+written to a disk file in plain text, with fields as rows, and records
+separated by a blank row. This format is easily transposed, in Word, to a
+format usable as a Word Mailmerge Data Source document (with fields as
+columns, records as rows) by (1) globally replacing all double paragraph
+marks (^p^p--record delimiters) with a temporary placeholder character
+(e.g. ##), (2) replacing all single paragraph marks (^p--field
+delimiters) with tabs (^t), then (3) replacing the placeholders (##) with
+single paragraph marks (^p). (4) Save as Text. (5) Add a header row with
+field names. Word Mailmerge (or Access or FileMaker) can read this
+standard tab-delimited format. (Since this is a bit clunky, albeit quick,
+you have inspired me to include a direct output to column format for
+herbarium labels in the next update of Biota....).
+
+The Herbarium Label text export option is included in Biota 1.3 and
+later, so if you have an earlier version, you will need to update by
+downloading the current version from the Biota website (address in my
+signature block, below). With Version 1.3, the Herbarium Labels tool
+offers nearly 50 options,in addition to standard core data.
+
+Just be clear about this, Biota neither a dedicated herbarium label
+application, nor a do-it-yourself database development application (like
+Access or FileMaker) but rather a full-featured, stand-alone, specimen
+database management application--now used in 24 countries, and 43 US
+States.
+
+Designing an herbarium label tool (for a general specimen database
+management application) that suits everyone is truly a daunting
+enterprise, as anyone who has tried will no doubt attest. Although there
+is certainly a core of common data elements, virtually all herbaria, and
+indeed, most botanical collectors, have different traditions for layout,
+fields, field labels, fonts, and auxiliary content--such as including
+meteorological data, ecological data, logos, and even maps. Entomologists
+and vertebrate biologists generally eschew such freedom of expression,
+and have settled on a more standard format, not because they are more
+disciplined, but because there is simply not enough space to express
+oneself on the tiny labels they use!
+
+Michael Chamberland also suggests:
+
+&gt;(I also
+&gt;think an Angiosperm database, extracted for Kartesz for example, would be a
+&gt;wonderful add-on to Biota, so that each independent user would not have to
+&gt;tell the program that Quercus was in the Fagaceae, for example).
+
+Since many alternative classifications exist for most higher taxa, I
+chose, instead, to make it very easy to import your own data for higher
+taxa in Biota. It is simple to import delimited-text tables of classified
+higher higher taxa (taxonomic flatfiles),including relational links, into
+a Biota data file, using Biota's Import Editor with the Merge Imported
+Records option. (See Manual Supplement 1, pages S59-S60.) With this
+option, you can even update existing data without bothering to delete
+duplications in the source file, since duplicate taxon names (the Key
+field in Biota higher taxon tables) are simply ignored and not imported.
+
+Robert Colwell
+
+
+&gt;(I also
+&gt;think an Angiosperm database, extracted for Kartesz for example, would be a
+&gt;wonderful add-on to Biota, so that each independent user would not have to
+&gt;tell the program that Quercus was in the Fagaceae, for example).
+
+
+_________
+Robert K. Colwell, Dept. of Ecology &amp; Evolutionary Biology, U-43
+University of Connecticut, Storrs, CT 06269-3042, USA
+Voice: 860-486-4395   Fax 860-486-3790
+colwell at uconnvm.uconn.edu
+Visit the Biota Website at <A HREF="http://viceroy.eeb.uconn.edu/biota">http://viceroy.eeb.uconn.edu/biota</A>
+&amp; the EstimateS Website at <A HREF="http://viceroy.eeb.uconn.edu/estimates.">http://viceroy.eeb.uconn.edu/estimates.</A>
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="095281.html">Tiger Beetles of CT USA: a key to larvae
+</A></li>
+        <LI>Next message: <A HREF="047920.html">Herbarium label-making programs and Biota
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#012128">[ date ]</a>
+              <a href="thread.html#012128">[ thread ]</a>
+              <a href="subject.html#012128">[ subject ]</a>
+              <a href="author.html#012128">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

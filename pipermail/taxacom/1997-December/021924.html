@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> references in databases
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1997-December/021924.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">references in databases</H1>
+    <B data-pagefind-meta="author">Robin Panza</B>
+    panzar at CLPGH.ORG<BR>
+    <I data-pagefind-meta="date">Thu Dec  4 10:54:23 CST 1997</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="105087.html">positivism and MOLECULAR BIOLOGY
+</A></li>
+        <LI>Next message: <A HREF="057716.html">references in databases
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#021924">[ date ]</a>
+              <a href="thread.html#021924">[ thread ]</a>
+              <a href="subject.html#021924">[ subject ]</a>
+              <a href="author.html#021924">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1997</span><!--beginarticle-->
+<PRE>&gt;1.  Do you have separate fields for each piece of information (e.g.
+&gt;author(s), date, title, publisher, etc.), or do you use only only a few
+&gt;fields that encompass most of the information?
+
+I have three suggestions/points:
+
+a) Choose your fields according to how you think you might wish to retrieve the
+information.  If you expect to want to find out what journals have published
+the most descriptions or you want a list by journal name, keep the citation
+separate from author/date/title.  If you want to generate a chronological list,
+keep dates separate.  If you think you want to retrieve data sorted by
+publisher, then keep that in it's own field, and so on.  If you simply want
+to be able to generate a bibliography, then you could leave the whole thing as
+one field.
+
+b) Since you're creating a relational database, you can also consider space
+(file size).  In particular, journals/books could be in a separate file from
+the list of citations (linked by a code to the main records).  This makes the
+main records smaller because it doesn't need space for journal names, and makes
+the overall system smaller, because there is not the redundancy of what can be
+a rather large field (journal/book title).  Anything you could (or would like
+to) pull out into a secondary file needs to be in its own field.
+
+c) It is generally easier to combine fields than to split them (although with
+some software it's difficult to do either).  Therefore, I suggest erring on the
+side of too many fields rather than too few.
+
+Robin K Panza                   panzar at clpgh.org
+Section of Birds, Carnegie MNH
+Pittsburgh  PA  15213  USA
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="105087.html">positivism and MOLECULAR BIOLOGY
+</A></li>
+        <LI>Next message: <A HREF="057716.html">references in databases
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#021924">[ date ]</a>
+              <a href="thread.html#021924">[ thread ]</a>
+              <a href="subject.html#021924">[ subject ]</a>
+              <a href="author.html#021924">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

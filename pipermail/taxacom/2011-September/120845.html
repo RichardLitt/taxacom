@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] labeling redescriptions properly
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20labeling%20redescriptions%20properly&In-Reply-To=%3C1315540682.4330.YahooMailNeo%40web114215.mail.gq1.yahoo.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="120844.html">
+   <LINK REL="Next"  HREF="120846.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2011-September/120845.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] labeling redescriptions properly</H1>
+    <B data-pagefind-meta="author">Stephen Thorpe</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20labeling%20redescriptions%20properly&In-Reply-To=%3C1315540682.4330.YahooMailNeo%40web114215.mail.gq1.yahoo.com%3E"
+       TITLE="[Taxacom] labeling redescriptions properly">stephen_thorpe at yahoo.co.nz
+       </A><BR>
+    <I data-pagefind-meta="date">Thu Sep  8 22:58:02 CDT 2011</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="120844.html">[Taxacom] labeling redescriptions properly
+</A></li>
+        <LI>Next message: <A HREF="120846.html">[Taxacom] labeling redescriptions properly
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#120845">[ date ]</a>
+              <a href="thread.html#120845">[ thread ]</a>
+              <a href="subject.html#120845">[ subject ]</a>
+              <a href="author.html#120845">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2011</span><!--beginarticle-->
+<PRE>we really need input from systems analysts and/or logicians!
+ a confusion seems to arise here for the following reason:
+ 
+suppose Smith and Brown both use the name Aus bus L. 1758
+ 
+they could be using the name with the same type but different taxonomic concepts  (different &quot;sensu&quot;), or with the same type and the same concept
+ 
+*but*, they could be using the name with different types! If so, one of them would be wrong, but what sense can we make of the use of a name with the wrong type?? Or, what about use of a name before and then after subsequent type designation?
+ 
+Also, if Smith or Brown doesn't specify the L. 1758 bit of Aus bus L. 1758, and there are homonyms, then what?
+ 
+Logically, 'sec' functions in ZooBank merely as a sort of LSID creator for a name used in a work, not Aus bus L. 1758 sec Smith 2000, but Aus bus sec 2000. It just means that Smith (2000) used the string 'Aus bus' as a scientific name. It leaves everything else open. But, Aus bus  L. 1758 sensu Smith 2000 means that Smith (2000) used a taxonomic concept that may very well be quite different to Linnaeus' concept, but which includes the type specimen of Aus bus  L. 1758. For example, Linnaeus used the genus Dermestes for just about any beetle found in domestic habitats, and the genus is still in use today, but Dermestes L. 1758 sensu current authors is a very different taxonomic concept.
+ 
+sensu  referes to a concept, but sec refers to a name in a work
+ 
+So, I can't say what your intention was in using 'sec' in ZooBank, I can only say how it functions in practice ...
+ 
+Stephen
+
+From: Richard Pyle &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">deepreef at bishopmuseum.org</A>&gt;
+To: 'Stephen Thorpe' &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">stephen_thorpe at yahoo.co.nz</A>&gt;; <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">gread at actrix.gen.nz</A>; <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom at mailman.nhm.ku.edu</A>
+Sent: Friday, 9 September 2011 3:04 PM
+Subject: RE: [Taxacom] labeling redescriptions properly
+
+&gt;<i> Aaaarrrggghhh!!!
+</I>&gt;<i> Here's the problem: 
+</I>&gt;<i> on ZooBank, we use sec in a nomenclatural sense, unrelated to the above
+</I>taxonomic sense!
+
+Well, not really.  My intent in GNUB (=ZooBank) was to indicate
+&quot;non-original author; usage of a name&quot;.  That is, a subsequent usage of a
+name, in contrast to the original usage of the name (original nomenclatural
+act that established the name under the Code).  In my mind, &quot;usage of a
+name&quot; encompases both nomenclatural and taxonomic usages of the name.  It's
+just a generic way of saying &quot;this name as used in this reference&quot;, in a way
+that avoids confusion with &quot;this name as established as new in this
+reference&quot;.
+
+&gt;<i> Consider NAME sensu Smith, 2000
+</I>&gt;<i> If Brown (2002) writes of the same taxonomic concept, 
+</I>&gt;<i> then Brown (2002) also uses NAME sensu Smith, 2000
+</I>
+You'll have to be more explicit in what you mean by &quot;NAME&quot; in this example.
+Consider Aus bus Linn. 1758 sensu Smith 2000.
+
+If Brown also makes reference to Aus bus Linn. 1758, then we have: Aus bus
+Linn. 1758 sensu Brown 2002.
+
+Then we have a separate question:  how does Aus bus Linn. 1758 sensu Smith
+2000 compare to Aus bus Linn. 1758 sensu Brown 2002?  Congruent?
+Overlapping? Contains/Contained In? Excludes?  And, for that matter, how
+does each compare with Aus bus Linn. 1758 sensu Linn. 1758?
+ 
+&gt;<i> but, nevertheless, in the ZooBank sense of sec, NAME sec Brown, 2002 
+</I>&gt;<i> is a distinct entity from NAME sec Smith, 2000, 
+</I>
+Yes.
+
+&gt;<i> even though both are just NAME sensu Smith, 2000!
+</I>
+No.
+
+It may well be that the taxon concept represented by NAME sensu Brown 2002
+is congruent with the taxon concept represented by NAME sensu Smith 2000
+(which, I think, is what you mean when you say they &quot;both are just NAME
+sensu Smith, 2000&quot;).
+ 
+&gt;<i> So, on my understanding, NAME &quot;sec sensu ZooBank&quot; [sorry!] 
+</I>
+Ouch!
+
+&gt;<i> Brown, 2002 just means a subsequent usage of NAME, not established as new
+</I>by Brown (2002), 
+
+Yes.
+
+&gt;<i> and has nothing to do with taxonomic concepts ... 
+</I>
+Not necessarily.  In ZooBank, you don't see any indication of taxonomy.  But
+in my mind, any usage instance carries both nomenclatural bits and taxonomic
+bits, and as far as I'm concerned, the &quot;sec&quot;/&quot;sensu&quot; convention should focus
+on usage instance labeling, and leave it to other metdata to deal with names
+stuff vs. concept stuff.
+
+Rich
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="120844.html">[Taxacom] labeling redescriptions properly
+</A></li>
+	<LI>Next message: <A HREF="120846.html">[Taxacom] labeling redescriptions properly
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#120845">[ date ]</a>
+              <a href="thread.html#120845">[ thread ]</a>
+              <a href="subject.html#120845">[ subject ]</a>
+              <a href="author.html#120845">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

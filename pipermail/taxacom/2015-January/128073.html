@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Impossible geocodes
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2015-January/128073.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Impossible geocodes</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at bishopmuseum.org<BR>
+    <I data-pagefind-meta="date">Fri Jan 30 13:12:43 CST 2015</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="128072.html">[Taxacom] References
+</A></li>
+        <LI>Next message: <A HREF="128074.html">[Taxacom] Impossible geocodes
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#128073">[ date ]</a>
+              <a href="thread.html#128073">[ thread ]</a>
+              <a href="subject.html#128073">[ subject ]</a>
+              <a href="author.html#128073">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2015</span><!--beginarticle-->
+<PRE>I agree with everything Bob says, except that I have no issue with arbitrarily precise DD values.  The obvious answer, I think, is that there should be no inferred precision without an explicit &quot;Uncertainty&quot; value (i.e., representing a radius around the arbitrarily precise point, thereby defining an area).  Although I guess one could argue that there is somewhat more confidence in inferring precision from DMS values, I think that argument is weak.  In other words, we should always assume that DMS values are likewise arbitrarily precise without an explicit &quot;Uncertainty&quot; value.
+
+Aloha,
+Rich
+
+&gt; -----Original Message-----
+&gt; From: Taxacom [mailto:taxacom-bounces at mailman.nhm.ku.edu] On Behalf
+&gt; Of mesibov at southcom.com.au
+&gt; Sent: Thursday, January 29, 2015 11:44 PM
+&gt; To: alec.mcclay at shaw.ca
+&gt; Cc: taxacom at mailman.nhm.ku.edu
+&gt; Subject: Re: [Taxacom] Impossible geocodes
+&gt; 
+&gt; Alex, I agree with you that DD is a more useful lat/lon format, although I
+&gt; don't agree with you that DMS is weird, there's a good reason for it. And
+&gt; DMS is a little bit better than DD for implying an uncertainty.
+&gt; 
+&gt; If I write a latitude in the form 43d 16m 23s S, you might guess the latitude is
+&gt; known to the nearest second, or roughly +/- 11 m at that latitude. If I write
+&gt; 43d 16m S, you might guess that the latitude is only known to the nearest
+&gt; minute, or roughly +/- 670 m.
+&gt; 
+&gt; In DD, the two latitudes to 4 decimal places are
+&gt; 
+&gt; -43.2731
+&gt; -43.2667
+&gt; 
+&gt; in both cases implying an uncertainty of +/- 4 m. You can't tell from looking at
+&gt; these DDs in uniform format (say, to 4 decimal places) that one had a much
+&gt; bigger uncertainty than the other, although you might if the number of
+&gt; places given reflected the uncertainty, say -43.27 for the second one (roughly
+&gt; +/- 400 m at that latitude).
+&gt; 
+&gt; By an interesting coincidence, the implied uncertainty in DMS-to-the-
+&gt; nearest-second is about the same as the horizontal uncertainty in a handheld
+&gt; GPS reading (unless conditions are exceptionally good). The DD-to-4-places
+&gt; uncertainty is optimistic for handheld GPS, and the DD-to-5-places you often
+&gt; see in published papers is +/- half a metre and evidences a religious faith in
+&gt; numbers. DMS is definitely handy for GPS-determined locations.
+&gt; 
+&gt; I would back DD 100% if it was always accompanied by a specified
+&gt; uncertainty, like the Darwin Core one: 'The horizontal distance (in
+&gt; meters) from the given decimalLatitude and decimalLongitude describing the
+&gt; smallest circle containing the whole of the location'. Unfortunately, that's not
+&gt; the case. Very few of the museum collection databases I've looked at even
+&gt; have an uncertainty field for location data, and if they do it's largely unfilled.
+&gt; 
+&gt; Until collectors and data compilers and georeferencers routinely add an
+&gt; uncertainty to their lat/lons, I prefer to see 43d 16m 23s S and 43d 16m S,
+&gt; because I know for sure there's a difference.
+&gt; 
+&gt; (Sending this from my old email as Taxacom doesn't seem to like my new
+&gt; one, robert.mesibov at gmail.com)
+&gt; 
+&gt; _______________________________________________
+&gt; Taxacom Mailing List
+&gt; Taxacom at mailman.nhm.ku.edu
+&gt; <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom</A>
+&gt; The Taxacom Archive back to 1992 may be searched at:
+&gt; <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt; 
+&gt; Celebrating 28 years of Taxacom in 2015.
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="128072.html">[Taxacom] References
+</A></li>
+        <LI>Next message: <A HREF="128074.html">[Taxacom] Impossible geocodes
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#128073">[ date ]</a>
+              <a href="thread.html#128073">[ thread ]</a>
+              <a href="subject.html#128073">[ subject ]</a>
+              <a href="author.html#128073">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

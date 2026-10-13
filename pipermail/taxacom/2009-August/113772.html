@@ -1,0 +1,314 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] formation of zoological names with Mc, Mac, etc.
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2009-August/113772.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] formation of zoological names with Mc, Mac, etc.</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at bishopmuseum.org<BR>
+    <I data-pagefind-meta="date">Mon Aug 31 15:36:25 CDT 2009</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="113771.html">[Taxacom] FW: formation of zoological names with Mc, Mac, etc.
+</A></li>
+        <LI>Next message: <A HREF="113773.html">[Taxacom] source of quote about keys
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#113772">[ date ]</a>
+              <a href="thread.html#113772">[ thread ]</a>
+              <a href="subject.html#113772">[ subject ]</a>
+              <a href="author.html#113772">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2009</span><!--beginarticle-->
+<PRE>&gt; But I still did not really understand the exact difference 
+&gt; between what you call natural and surrogate keys. Maybe an 
+&gt; example would be good to get the exact differences.
+
+OK, imagine a database of movies. All movies have an official title, but
+that title is not unique. Sometimes a movie gets re-made years later, so
+Title + Year would be a better way to uniquely identify a film.
+
+So, let's make a table of movies, that includes the Production Company and
+some rating for how good the movie is:
+
+TITLE				YEAR	COMPANY	RATING
+-------------------------------------------------
+Casablanca			1943	Warner Bros. 8.8
+Jaws				1975	Universal	 8.3
+Star Wars			1977	Lucasfilm	 8.8
+The Italian Job		1969	Oakhurst 	 7.3
+The Italian Job		2003	Paramount	 6.9
+[etc...]
+-------------------------------------------------
+
+Now, suppose I had a list of Actor names, and I wanted to link Actors to
+movies.  Do build this link, I need to uniquely identify each movie record.
+In the list above, the Natural Key is the combination of TITLE+YEAR.  So, my
+linked Actor list might look like this:
+
+TITLE				YEAR	ACTOR
+------------------------------------------------
+The Italian Job		1969	Michael Caine
+The Italian Job		1969	Noel Coward
+The Italian Job		1969	Benny Hill
+The Italian Job		1969	Raf Vallone
+The Italian Job		1969	Tony Beckley
+The Italian Job		2003	Mark Wahlberg
+The Italian Job		2003	Charlize Theron
+The Italian Job		2003	Donald Sutherland
+The Italian Job		2003	Jason Statham
+[etc...]
+------------------------------------------------
+
+In this case, the link between the movies table and the Actors table is made
+via the Natural Key combination of TITLE+YEAR.
+
+However, this process of linking tables via compound keys (=keys involving
+more than one field) can be quite cumbersome to deal with when developing
+databases.  Especially when you have 9 or 10 fields as was suggested for
+taxon names -- and even more especially if some of thse fields can be Null
+(empty) -- as in &quot;subspecies epithet&quot;.
+
+A much simpler solution is to create a Surrogate Key -- which is usually
+(always?) an arbitrary number.  For example, using a Surrogate Key on the
+Movies table above would give us:
+
+ID TITLE				YEAR	COMPANY	RATING
+------------------------------------------------------
+1  Casablanca			1943	Warner Bros. 8.8
+2  Jaws				1975	Universal	 8.3
+3  Star Wars			1977	Lucasfilm	 8.8
+4  The Italian Job		1969	Oakhurst 	 7.3
+5  The Italian Job		2003	Paramount	 6.9
+[etc...]
+-------------------------------------------------
+
+...which means to link to the Actors table, you only need to do this:
+
+MovID	ACTOR
+------------------------
+4	Michael Caine
+4	Noel Coward
+4	Benny Hill
+4	Raf Vallone
+4	Tony Beckley
+5	Mark Wahlberg
+5	Charlize Theron
+5	Donald Sutherland
+5	Jason Statham
+[etc...]
+------------------------
+
+The best kinds of Surrogate Keys are the ones that have no informatic
+content.  That is, they exist only to uniquely identify a specific record.
+The big problem with using Natural Keys to identify records (except as Human
+identifiers), is that they rely on fields that contain actual information.
+Sometimes, this is not a big problem.  But if a field contains information,
+Murphy's Law of Database Integrity is that someone, sometime, will want to
+change the information.  Sometimes, this is because the original record had
+a mistake (e.g., what if it was later discovered that the actualy release
+year for &quot;Casablanca&quot; was 1942).  Sometimes, people want to change the
+standard format for information.  For example, what if the managers of this
+database decided to change the title &quot;The Italian Job&quot; in the database to
+&quot;Italian Job, The&quot;.  Doing so in the Movie table would break all the links
+to the Actors table, if the link was made using the Natural Key -- unless
+referential integrity across all tables is maintained automatically or
+manually (i.e., as system is established that automatically cascades updates
+in the Movie table to the Actor table).
+
+But if using a Surrogate Key, like the integers above, then there is no
+information content in the ID field itself (its only purpose is to uniquely
+identify a record). Thus, no one is ever tempted to change it, because it
+can never be &quot;incorrect&quot;, and there is no reason to change the format, etc.
+When you see references to &quot;opaque&quot; identifiers, or identifier &quot;opacity&quot;,
+this is usually what is meant (i.e., that the object that the identifier
+refers to is not self-evident from the identifier itself, and no meaningful
+information about the object being identified is encoded or embedded within
+the identifier).
+
+Sorry for the long explanation -- but given that I foresee these kinds of
+questions becoming more common place as the taxonomic community begins to
+debate identifiers and LSIDs and UUIDs all that stuff, I thought it would be
+worthwhile to explain some of this stuff in some detail.
+
+&gt; If I understood you correctly,
+&gt; 
+&gt; Helix aspersa O.F. M?ller, 1774 should be a human identifier. 
+&gt; Others would be Helix aspersa O. F. M?ller, 1774, Helix 
+&gt; aspersa Mueller, 1774, Helix aspersa M?ller, 1774, Helix 
+&gt; aspersa O. M?ller 1774, Helix aspersa OF M?ller, 1774 or 
+&gt; Helix aspersa M?ller O.F. 1774 .
+
+Sure.  As long as a human can figure out what is meant, it's an appropriate
+human identifier.
+
+&gt; Natural keys? or surrogate keys?:
+&gt; 
+&gt; Helix aspersa M?ller, 1774
+&gt; Helix aspersa M?ller 1774
+&gt; helix-aspersa-m?ller-1774
+&gt; helix_aspersa_m?ller_1774
+&gt; helix-aspersa-muller-1774
+&gt; helix_aspersa_muller_1774
+&gt; helix_aspersa_muller_1774_01
+&gt; helix_aspersa_muller_1774_p0059_01
+&gt; helix_aspersa_muller_1774_used
+&gt; helix_aspersa_muller_1774_p0059_01_orig
+&gt; helix_aspersa_muller_1774_p0059_01_used
+
+I'm not sure exactly what you mean by the above.  If you concatinate all the
+components as one long text string separated by underscores, then you're
+collapsing a compound Natural Key into a single-field Natural Key.  But the
+compound key/single-field key issue is different from the Natural/Surrogate
+key issue; so in this case, I would still call all of these Natural Keys,
+because they are formed using that actual information that uniquely
+identifies a single record.
+
+&gt; hel7829_asp28473_mull747634
+&gt; 378thua3p4uht9p8q3ht
+&gt; h139857138957187
+&gt; 11702
+
+These are what I would call Surrogate Keys, assuming they are arbitrarily
+assigned to individual records and do not contain information about the
+object being identified.
+
+&gt; A shortcoming of numeral keys is that errors cannot easily be 
+&gt; recognized by humans, and that a central source must be 
+&gt; consulted to combine the name of the species with the key. 
+
+This &quot;shortcoming&quot; only applies if humans ever see or type these kinds of
+identifiers.  In fact, this gets to one of my biggest frustrations when
+discusing unique identifiers (hi, Rod...):
+
+We should use HUMAN IDENTIFERS when interacting with Humans.  The
+opaque/obscure/surrogate identifiers only exist to serve the needs of
+computer databases, and as such should be optimized for use by computer
+databases.  No human should ever see one (I am guilty of violating this in
+exposing ZooBank identifiers in human interfaces -- and this was a VERY
+tough decision for me to make -- but I did it only because the
+bioinformatics community and its relationship to unique identifiers is not
+yet mature, so I reluctantly exposed them for the time being until such time
+as the community matures a bit more on this). CERTAINLY, no human should
+ever type one into a computer (this applies to ZooBank identifiers, even
+when exposed to human eyeballs).
+
+&gt; So 
+&gt; I am asking myself if surrogate keys can combine elements of 
+&gt; natural keys, in a way that each databaser and taxonomist 
+&gt; would be able to create them easily without involving the 
+&gt; time consuming process of consulting a central source. For 
+&gt; that I would need to understand better where exactly you draw 
+&gt; the line between a natural and a surrogate key.
+
+Fair enough.  My database credentials are not hard-core enough to know
+exactly where to draw that line.  You can see what Wikipedia says about it
+here: 
+<A HREF="http://en.wikipedia.org/wiki/Surrogate_key">http://en.wikipedia.org/wiki/Surrogate_key</A>
+
+I guess I lean more towards the first of the two presented definitions; but
+I still maintain that they should be visible only to the application, and
+(in most cases) not to the user. The points I am trying to make are embedded
+in the bulleted list of points at the bottom of the &quot;Definition&quot; section of
+the Wikipedia page.  The only part I'm a little fuzzy on is whether the
+identifier should be visible to an application.  Certainly I think they
+should be -- but I don't think they should be visible to humans (except the
+database developers themselves, and as embedded in URLs and such).
+
+&gt; I could imagine that a databaser who likes to send out to 
+&gt; another database information connected to 20,000 names of 
+&gt; currently used specific taxa could easily create an automatic 
+&gt; program to convert data of 4 fields (1) Helix (2) aspersa (3) 
+&gt; M?ller (4) 1774 to produce a key 
+&gt; helix_aspersa_muller_1774_used, and the recipient would 
+&gt; understand this key.
+
+Yes, this would be a convenient way to collapse a compound natural key into
+a single-field natural key, which removes some of the hassles that
+databasers need to deal with.  But I would still not call this a Surrogate
+Key -- I would call it a concatenated Natural Key.
+ 
+&gt; I imagine this could be superior to a system in which the two 
+&gt; involved partners needed to consult a central source to find 
+&gt; the globally used identifiers for the 20,000 names.
+
+Superior in some contexts; inferior in others.
+
+If the Global Names Architecture (GNA) delivers on what the crafters of it
+intend it to deliver, then there will be a single set of opaque, globally
+unique, computer-friendly, human-unfriendly identifiers that can be
+replicated across all database systems.  In this sense, it is not
+&quot;centralized&quot;; but rather &quot;coordinated&quot;.
+
+When linking a dataset into this system for the first time, a database nerd
+such as myself would need to do a number of tricks along the lines of what
+you suggest -- that is, in one way or another the new dataset has to be
+reconciled against a dataset that incorporates the Globally shared
+identifiers.  Indeed, the &quot;Global Names Index&quot; (GNI), which is part of the
+GNA, exists exactly for this purpose -- to reconcile taxonomic databases
+against each other using clever algorithms and fuzzy matching protocols to
+reconcile taxonomic datasets.  Check it out at www.globalnames.org.  Still
+in development, but it's already quite useful.
+
+The permanent, shared, unique persistent identifiers will emerge from the
+Global Names Usage Bank (GNUB; still in very early-stage development).  In
+my vision for the GNA, the GNI will serve as a conduit to help people with
+taxon-name databases to link into the shared GNUB identifiers.  Any given
+database would only need to go through this process once; afterwhich it
+would be immediately cross-linked to all other taxonomic databases that have
+gone through the same linking process.  In my view, *THIS* is how the
+world's biodiversity data will eventually get cross-linked together.
+
+Well....darn it. I knew I should not have jumped into this thread!  Note to
+self: no more checking email after midnight.....
+
+Aloha,
+Rich
+
+Richard L. Pyle, PhD
+Database Coordinator for Natural Sciences
+  and Associate Zoologist in Ichthyology
+Department of Natural Sciences, Bishop Museum
+1525 Bernice St., Honolulu, HI 96817
+Ph: (808)848-4115, Fax: (808)847-8252
+email: deepreef at bishopmuseum.org
+<A HREF="http://hbs.bishopmuseum.org/staff/pylerichard.html">http://hbs.bishopmuseum.org/staff/pylerichard.html</A>
+
+
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="113771.html">[Taxacom] FW: formation of zoological names with Mc, Mac, etc.
+</A></li>
+        <LI>Next message: <A HREF="113773.html">[Taxacom] source of quote about keys
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#113772">[ date ]</a>
+              <a href="thread.html#113772">[ thread ]</a>
+              <a href="subject.html#113772">[ subject ]</a>
+              <a href="author.html#113772">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

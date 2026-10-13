@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> DCA
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20DCA&In-Reply-To=%3Cmailman.5646.1157126684.2564.taxacom%40mailman.nhm.ku.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="055008.html">
+   <LINK REL="Next"  HREF="055010.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1996-August/019218.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">DCA</H1>
+    <B data-pagefind-meta="author">James Lyons-Weiler</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20DCA&In-Reply-To=%3Cmailman.5646.1157126684.2564.taxacom%40mailman.nhm.ku.edu%3E"
+       TITLE="DCA">weiler at ERS.UNR.EDU
+       </A><BR>
+    <I data-pagefind-meta="date">Mon Aug 19 14:56:59 CDT 1996</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="055008.html">DCA
+</A></li>
+        <LI>Next message: <A HREF="055010.html">DCA
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#19218">[ date ]</a>
+              <a href="thread.html#19218">[ thread ]</a>
+              <a href="subject.html#19218">[ subject ]</a>
+              <a href="author.html#19218">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>1996</span><!--beginarticle-->
+<PRE>On Mon, 19 Aug 1996, Tim Dickinson wrote:
+
+&gt;<i> On Tue, 6 Aug 1996, Utteridge Timothy Michael Arthur wrote:
+</I>&gt;<i>
+</I>&gt;<i>
+</I>(some useful stuff on dca deleted&gt;
+
+&gt;<i> james lyons-weiler also responded to this posting, as follows (in
+</I>&gt;<i> part):
+</I>&gt;<i>
+</I>&gt;<i> &gt;...So far as what the [ordination] results mean, Tausch et al. (1995)
+</I>&gt;<i> &gt;J. Veg. Sci 6:897-902 have shown that any software package that conducts
+</I>&gt;<i> &gt;ordination analyses like PCA, DCA, and classification (cluster) analyses
+</I>&gt;<i> &gt;such as UPGMA or TWINSPAN have a MAJOR problem: their results depend on
+</I>&gt;<i> &gt;data entry order (which species comes first in the matrix, or which
+</I>&gt;<i> &gt;character is character #1).  That means that the software may settle on
+</I>&gt;<i> &gt;a different answer depending on a completelty arbitrary characteristic of
+</I>&gt;<i> &gt;the data.  The problem is due to the fact that multidimensional analyses
+</I>&gt;<i> &gt;are computationally complex, so the programmers have to use various
+</I>&gt;<i> &gt;estimation steps for eigenvalues.  If they didn't, the programs would take
+</I>&gt;<i> &gt;much longer to give an answer.
+</I>&gt;<i>
+</I>&gt;<i> well, i haven't seen the rausch et al. paper yet (i just sent off
+</I>&gt;<i> for a reprint, and haven't yet looked in the library for j. veg.
+</I>&gt;<i> sci.), but i did write an s-plus function to jumble the rows and
+</I>&gt;<i> columns of a symmetric resemblance matrix and find its
+</I>&gt;<i> eigenstructure each time. as far as i can tell it does what i said
+</I>&gt;<i> it does, and there is no difference in either the eigenvalues or the
+</I>&gt;<i> eigenvectors regardless of the sequence of rows and columns. s-plus
+</I>&gt;<i> is certainly a well-crafted piece of software, so maybe the problem
+</I>&gt;<i> identified by rausch et al. only crops up in less carefully
+</I>&gt;<i> programmed eigenanalysis routines. i can't see how the sequence of
+</I>&gt;<i> rows or columns in a data matrix could affect calculation of the
+</I>&gt;<i> resemblances themselves.
+</I>
+Data entry order does not influence the calculation of pairwise distances
+or similarity.  The problem comes with the estimation i.e., approximation
+of eigenvalues.
+
+&gt;<i> if this really is a problem perhaps
+</I>&gt;<i> someone can enlighten me.
+</I>&gt;<i>
+</I>Some matrices are worse than others on the entry order side of things.
+The problem is not knwoing whether or not the problem exist for a
+particular matrix.
+
+James
+
+_______________________________________________________________________________
+
+  \  /   /    \  /           JAMES LYONS-WEILER           ______________
+   \/   /      \/                                        |..............|
+    \  /       /                                         |..............|
+     \/       /              DOCTORAL PROGRAM IN         |..............|
+      \      /               ECOLOGY, EVOLUTION, AND     |...***........|
+       \    /                CONSERVATION BIOLOGY        |..*****.......|
+        \  /                                             |.******.......|
+         \/                  1000 VALLEY ROAD/186        |********......|
+    ______________           THE UNIVERSITY OF            --------------
+   | will perform |          NEVADA, RENO
+   |  statistical |          RENO, NEVADA 89512-0013
+   | phylogenetic |
+   | analyses for |         &quot;(Biology) is not religion; if it were, we'd
+   |    food      |          have a much easier time raising money.&quot;
+    --------------                       -Leon Lederman
+_______________________________________________________________________________
+
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="055008.html">DCA
+</A></li>
+	<LI>Next message: <A HREF="055010.html">DCA
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#19218">[ date ]</a>
+              <a href="thread.html#19218">[ thread ]</a>
+              <a href="subject.html#19218">[ subject ]</a>
+              <a href="author.html#19218">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

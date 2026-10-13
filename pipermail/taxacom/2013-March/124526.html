@@ -1,0 +1,215 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Page size of BHL generated PDFs
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Page%20size%20of%20BHL%20generated%20PDFs&In-Reply-To=%3C1364502835.7301.YahooMailNeo%40web126003.mail.ne1.yahoo.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="124522.html">
+   <LINK REL="Next"  HREF="124515.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-March/124526.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Page size of BHL generated PDFs</H1>
+    <B data-pagefind-meta="author">William Ulate Rodriguez</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Page%20size%20of%20BHL%20generated%20PDFs&In-Reply-To=%3C1364502835.7301.YahooMailNeo%40web126003.mail.ne1.yahoo.com%3E"
+       TITLE="[Taxacom] Page size of BHL generated PDFs">william_ulate_r at yahoo.com
+       </A><BR>
+    <I data-pagefind-meta="date">Thu Mar 28 15:33:55 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="124522.html">[Taxacom] Page size of BHL generated PDFs
+</A></li>
+        <LI>Next message: <A HREF="124515.html">[Taxacom] What exactly is or is not a Gondwanan distribution?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#124526">[ date ]</a>
+              <a href="thread.html#124526">[ thread ]</a>
+              <a href="subject.html#124526">[ subject ]</a>
+              <a href="author.html#124526">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>Dear BHL users,
+
+Thank you for your valuable reports and your suggestions for solutions.  We are currently looking at these issues and your recommendations for ways to improve our site.
+We will follow up with some of you directly if we are unable to determine the environment necessary to replicate these problems and we will post the solution(s) as soon as we have implemented one.  
+Please keep contributing your observations through our Feedback Form at <A HREF="http://www.biodiversitylibrary.org/contact">http://www.biodiversitylibrary.org/contact</A>  ( <A HREF="http://www.biodiversitylibrary.org/contact&#160;">http://www.biodiversitylibrary.org/contact </A>).
+
+Kind regards,
+
+William.
+
+William Ulate R. | 
+BHL Technical Director &amp; Global Coordinator | 
+Center for Biodiversity Informatics (CBI) | Missouri Botanical Garden, St. Louis MO |
+
+
+
+________________________________
+ From: Dean Pentcheff &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">pentcheff at gmail.com</A>&gt;
+To: &quot;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom at mailman.nhm.ku.edu</A>&quot; &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom at mailman.nhm.ku.edu</A>&gt; 
+Sent: Wednesday, March 27, 2013 6:45 PM
+Subject: Re: [Taxacom] Page size of BHL generated PDFs
+ 
+Apologies in advance for doing this all in English units, but it's what we
+are stuck with in the U.S.
+
+For the journal I looked at, I think the page height is really about 10&quot;
+and had a BHL image height of 2378 pixels. Hence it looks as though the
+pages are scanned at about 250 dots per inch (based on the single example I
+picked [N=1 science at its finest]).
+
+If we assume that the PDF-constructor somewhere slaps in a resolution of 72
+dots per inch (common for screen displays), then that yields the roughly
+3.5x enlargement of the resulting document.
+
+I suspect there's a setting in iTextSharp (which BHL is using to do the PDF
+generation) that needs to be tweaked to supply the actual dots-per-inch of
+the scan, preventing the default 72 dots-per-inch from being imposed on the
+document.
+
+-Dean
+-- 
+Dean Pentcheff
+<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">pentcheff at gmail.com</A>
+<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">dpentche at nhm.org</A>
+
+
+On Wed, Mar 27, 2013 at 1:31 PM, Dilrukshan Wijesinghe &lt;
+<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">dpwijesinghe at yahoo.com</A>&gt; wrote:
+
+&gt;<i> Yes, of course, you can adjust the page size via your PDF reader's page
+</I>&gt;<i> magnification/zoom setting or scale the pages for printing.
+</I>&gt;<i>
+</I>&gt;<i> But my point is that if I get BHL to generate a PDF and then view that PDF
+</I>&gt;<i> at 100% magnification the pages of the publication appear very much larger
+</I>&gt;<i> than they should be, requiring adjusting the PDF reader's magnification to
+</I>&gt;<i> 25%-50%. The preliminary pages which BHL adds to a PDF (BHL logo and source
+</I>&gt;<i> reference) are not affected and remain at normal size. The fact that there
+</I>&gt;<i> IS a problem is obvious if I compare the size of these preliminary pages
+</I>&gt;<i> and the size of the publication pages.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Perhaps someone connected with from BHL can comment?
+</I>&gt;<i>
+</I>&gt;<i> Priyantha
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> D. P. Wijesinghe
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">dpwijesinghe at yahoo.com</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ________________________________
+</I>&gt;<i>  From: &quot;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">metzlere at msu.edu</A>&quot; &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">metzlere at msu.edu</A>&gt;
+</I>&gt;<i> To: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> Cc: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">dpwijesinghe at yahoo.com</A>
+</I>&gt;<i> Sent: Wednesday, March 27, 2013 2:46 PM
+</I>&gt;<i> Subject: [Taxacom] Page size of BHL generated PDFs
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Dear Priyantha,
+</I>&gt;<i>
+</I>&gt;<i> I tried to duplicate your situation by going to the link you gave.  I use
+</I>&gt;<i> Adobe PDF X Pro, and everything worked just fine.  The PDF Reader allows me
+</I>&gt;<i> to adjust ths size of the page on the screen which gave me complete
+</I>&gt;<i> flexibility.
+</I>&gt;<i>
+</I>&gt;<i> I can save the PDF to my hard drive for later editing.
+</I>&gt;<i>
+</I>&gt;<i> If I want to print the page to my printer, my printer allows me to scale
+</I>&gt;<i> the page size so that bigger pages cn be reduced o fit.
+</I>&gt;<i>
+</I>&gt;<i> And, lastly, PDF files can be opened in Adobe Photoshop for resizing.
+</I>&gt;<i>
+</I>&gt;<i> Based on my experience and software, I find that BHL needs no adjustment.
+</I>&gt;<i>
+</I>&gt;<i> I understand frustration when things don't work the way you want.  Good
+</I>&gt;<i> luck.
+</I>&gt;<i>
+</I>&gt;<i> Eric
+</I>&gt;<i>
+</I>&gt;<i> Eric H. Metzler
+</I>&gt;<i> Alamogordo NM
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">metzlere at msu.edu</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Dilrukshan Wijesinghe <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">dpwijesinghe at yahoo.com</A> via msu.edu   11:34 AM (56
+</I>&gt;<i> minutes ago)
+</I>&gt;<i> to Steve, taxacom
+</I>&gt;<i> No, I am not scanning actual hardcopies, I am simply using BHL's PDF
+</I>&gt;<i> generating capability. If you have used this feature you might know that
+</I>&gt;<i>  you can select a range of pages (for example, a specific paper) from a
+</I>&gt;<i>  periodical in the BHL collection, e.g. Annals and Magazine of
+</I>&gt;<i> Natural History (<A HREF="http://www.">http://www.</A> biodiversitylibrary.org/bibliography/15774#/summary) and BHL will generate a PDF and email you the
+</I>&gt;<i> link for downloading the
+</I>&gt;<i> PDF. This is a very useful feature since you can build your own
+</I>&gt;<i>  collection of PDFs of the older taxonomic literature that might be of
+</I>&gt;<i>  interest to you. This feature used to work fine before but my recent
+</I>&gt;<i>  attempts have all
+</I>&gt;<i> resulted in page sizes much larger than the original. Not sure what
+</I>&gt;<i> needs to be adjusted on BHL.
+</I>&gt;<i>
+</I>&gt;<i> Priyantha
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> D. P. Wijesinghe
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">dpwijesinghe at yahoo.com</A>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Taxacom Mailing List
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;<i>
+</I>&gt;<i> The Taxacom Archive back to 1992 may be searched with either of these
+</I>&gt;<i> methods:
+</I>&gt;<i>
+</I>&gt;<i> (1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+</I>&gt;<i>
+</I>&gt;<i> (2) a Google search specified as:  site:
+</I>&gt;<i> mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+</I>&gt;<i>
+</I>&gt;<i> Celebrating 26 years of Taxacom in 2013.
+</I>&gt;<i>
+</I>_______________________________________________
+Taxacom Mailing List
+<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+
+The Taxacom Archive back to 1992 may be searched with either of these methods:
+
+(1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+
+(2) a Google search specified as:  site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+
+Celebrating 26 years of Taxacom in 2013.
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="124522.html">[Taxacom] Page size of BHL generated PDFs
+</A></li>
+	<LI>Next message: <A HREF="124515.html">[Taxacom] What exactly is or is not a Gondwanan distribution?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#124526">[ date ]</a>
+              <a href="thread.html#124526">[ thread ]</a>
+              <a href="subject.html#124526">[ subject ]</a>
+              <a href="author.html#124526">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Catching lat lon in wrong country errors
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2005-January/092994.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Catching lat lon in wrong country errors</H1>
+    <B data-pagefind-meta="author">John Irish</B>
+    jirish at MWEB.COM.NA<BR>
+    <I data-pagefind-meta="date">Tue Jan  4 11:37:12 CST 2005</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="092991.html">OT (sortof) Molecular Biology
+</A></li>
+        <LI>Next message: <A HREF="092995.html">OT (sortof) Molecular Biology
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092994">[ date ]</a>
+              <a href="thread.html#092994">[ thread ]</a>
+              <a href="subject.html#092994">[ subject ]</a>
+              <a href="author.html#092994">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2005</span><!--beginarticle-->
+<PRE>If you put your country polygons into a MySQL database, you can run a
+SQL query on it to determine whether a specific pair of coordinates fall
+within a specific polygon. For any non-rectangular country (like
+Namibia), this will be rather more accurate than testing a bounding box.
+
+If you are not running MySQL, maybe a sister institution is and they
+would be willing to remotely host the polygon database for you.
+Whichever scripting language you currently use to query ADL should also
+be able to query a MySQL database.
+
+A description of the MySQL function 'Within' is near the bottom of this
+page of the online MySQL manual:
+<A HREF="http://dev.mysql.com/doc/mysql/en/Functions_that_test_spatial_relationships_between_geometries.html">http://dev.mysql.com/doc/mysql/en/Functions_that_test_spatial_relationships_between_geometries.html</A>
+Basically you send it the coordinates and the polygon, and it returns
+true or false as expected. I have not yet used 'Within' myself, but am
+using some of MySQL's other spatial functions along with PHP with
+success. I expect something along the lines of
+
+&quot;SELECT Within (PointFromText ('YourLongitude', 'YourLatitude'), SELECT
+CountryPolygon FROM PolygonTable WHERE CountryName = 'TheName')&quot;
+
+should work.
+
+John
+
+--
+Dr. John Irish
+Tel./Fax +264-61-202-2038; Cell/SMS: +264-81-269-6602
+P.O. Box 21148, Windhoek
+Namibia Biosystematics Web Portal: <A HREF="http://www.biodiversity.org.na/index.php">http://www.biodiversity.org.na/index.php</A>
+
+&quot;The universe is full of magical things patiently waiting for our wits
+to grow sharper - E. Phillpots&quot;
+
+Steve Ginzbarg wrote:
+
+&gt; Mary Barkworth brought up the problem of how to catch errors where
+&gt; the lat lon for a specimen doesn't fall within the country where it
+&gt; was said to have been collected.
+&gt;
+&gt; The Alexandria Digital Library has fields w_b_coord, e_b_coord,
+&gt; n_b_coord, and s_b_coord. ADL Catalog records give
+&gt;
+&gt; titles:
+&gt; Alabama
+&gt; geographic-locations:
+&gt; Lat/Lon Bounding Box: North=35.07 South=29.76 East=-84.87 West=-88.5
+&gt;
+&gt; Is anyone who is using ADL as their geographic authority file making use
+&gt; of the bounding boxes of countries and their political subdivisions
+&gt; to check if a lat lon for a specimen actually falls within a
+&gt; rectangle containing the country and political subdivisions it is
+&gt; reported for?
+&gt;
+&gt; The Getty Thesaurus of Geographic Names
+&gt; <A HREF="http://www.getty.edu/research/conducting_research/vocabularies/tgn/ind">http://www.getty.edu/research/conducting_research/vocabularies/tgn/ind</A>
+&gt; ex.html gives only the centroid and not a bounding box.
+&gt;
+&gt; MicroCam for Windows by Scott A. Loomer, loomer at att.net, has the
+&gt; latitude and longitude of each point in the polygon forming the
+&gt; border of a country or political subdivision. One could calculate the
+&gt; area's bounding box by finding the maximum and minimum latitude and
+&gt; longitude of all the points forming the border. Is there a way to
+&gt; determine whether a latitude and longitude from a specimen is within
+&gt; the &quot;fill&quot; area of the polygon?
+&gt;
+&gt; Does anyone know of other geographic authority files that include
+&gt; bounding boxes for political subdivisions?
+&gt;
+&gt; The following response is from the HERBARIA list:
+&gt;
+&gt; From:   &quot;Mary Barkworth&quot; &lt;Mary at biology.usu.edu&gt;
+&gt;         To:     &lt;herbaria at scarab.science.oregonstate.edu&gt;
+&gt;         Subject:        [HERBARIA] Map problems
+&gt;         Date sent:      Mon, 20 Dec 2004 16:03:30 -0700
+&gt;
+&gt; Further to my question/comments about lat lon errors in our database
+&gt; (and the majority are correct, despite my phrasing in the message that
+&gt; triggered Steve's comment:
+&gt; The following from Russell, the student to whom I sent the email that
+&gt; started the thread:
+&gt;
+&gt; Steve asked:  Is there a way to determine whether a latitude and
+&gt; longitude from a specimen is within the &quot;fill&quot; area of the polygon?
+&gt; Yes, it's called the point-in-polygon algorithm.  Depending on how
+&gt; accessible the data in Microcam turn out to be, I'm looking forward to
+&gt; implementing it.  It's quite exciting to think that something I learned
+&gt; in a CS class will actually be put to use in the `real' world!
+&gt; Once we get it working, it won't be hard at all to stitch it into a
+&gt; lat/lon data entry form, so we will be able to flag all the current
+&gt; errors as well as prevent some future headaches.
+&gt;
+&gt; Hmm.  Herbaria are part of the real world? What a lovely thought!
+&gt;
+&gt; Mary
+&gt;
+&gt; _______________________________________________
+&gt; HERBARIA mailing list
+&gt; HERBARIA at scarab.science.oregonstate.edu
+&gt; <A HREF="http://scarab.science.oregonstate.edu/mailman/listinfo/herbaria">http://scarab.science.oregonstate.edu/mailman/listinfo/herbaria</A>
+&gt;
+&gt; -Steve Ginzbarg
+&gt;
+&gt; Steve Ginzbarg, Assistant Curator
+&gt; Herbarium (UNA)
+&gt; Department of Biological Sciences
+&gt; Box 870345
+&gt; The University of Alabama
+&gt; Tuscaloosa, AL 35487-0345
+&gt;
+&gt; (205) 348-1829, FAX: (205) 348-6460
+&gt; sginzbar at bsc.as.ua.edu
+&gt; .
+&gt;
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="092991.html">OT (sortof) Molecular Biology
+</A></li>
+        <LI>Next message: <A HREF="092995.html">OT (sortof) Molecular Biology
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092994">[ date ]</a>
+              <a href="thread.html#092994">[ thread ]</a>
+              <a href="subject.html#092994">[ subject ]</a>
+              <a href="author.html#092994">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

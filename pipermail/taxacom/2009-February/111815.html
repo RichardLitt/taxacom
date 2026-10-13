@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Biodiv Informatics Challenges
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Biodiv%20Informatics%20Challenges&In-Reply-To=%3C8CB5F020AE65CF4-10D4-1B08%40MBLK-M18.sysops.aol.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="111814.html">
+   <LINK REL="Next"  HREF="111816.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2009-February/111815.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Biodiv Informatics Challenges</H1>
+    <B data-pagefind-meta="author">faunaplan at aol.com</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Biodiv%20Informatics%20Challenges&In-Reply-To=%3C8CB5F020AE65CF4-10D4-1B08%40MBLK-M18.sysops.aol.com%3E"
+       TITLE="[Taxacom] Biodiv Informatics Challenges">faunaplan at aol.com
+       </A><BR>
+    <I data-pagefind-meta="date">Tue Feb 17 04:31:35 CST 2009</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="111814.html">[Taxacom] Taxonomy in Crisis @ Nature.Com
+</A></li>
+        <LI>Next message: <A HREF="111816.html">[Taxacom] Biodiv Informatics Challenges
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#111815">[ date ]</a>
+              <a href="thread.html#111815">[ thread ]</a>
+              <a href="subject.html#111815">[ subject ]</a>
+              <a href="author.html#111815">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2009</span><!--beginarticle-->
+<PRE>Dear all,
+when following the interesting TAXACOM thread on 'species pages' I was waiting that someone would point to the enormous current problems in retrieving relevant information on the internet. I didn't see such postings so here are some of my thoughts (&amp;dreams - I'm not IT-savvy enough, if at all...), on that issue:
+
+Most descriptions are published along with nomenclatural content which must be printed on paper since the internet is not (yet) accepted as a Code-compliant publication media. Not sure it will be accepted in the near future, but even if the change comes, the printed information will continue to play a major role. Therefore, scanning, digitization and markup of literature seems to be what is needed in the very first place. We have tools for extracting at least some taxonomic names from PDFs, but are we really able to work with that and combine it with info from other web resources in an &quot;industrialized&quot; manner? 
+Probably it is GBIF that could play a pioneer role in developing new strategies simply because it's in the nature of the project that is has to cope with more unresolved misspellings, synonyms, homonyms, in litteris names, etc. than any other major web project (just take a look into GBIF's &quot;kingdom unknown&quot; basket!). I believe we urgently do need what David Remsen has alluded to - an Electronic Catalogue of Names that can pick out at least available names from the salad.
+
+As for animal names, a first step could be an official ZooBank list of all principally available nomina,=2
+0knowing that these are not simply extractable from printed and electronic resources (e.g., the available nomen &lt;Cicindela trisignata&gt; was published by the name string &quot;C.Tri-Signata&quot;; the printed string &quot;N. Kratteri valonensis&quot; is available as &lt;Nebria valonensis&gt; even if it has never been used in that form; etc.).
+
+Then, what can we do with available nomina strings? Are they not useful for assigning unique identifiers to ascertained names? 
+For example, how about adding more information to LSIDs? In my imagination, a vetted (ascertained) name could be recognized as such by an human- &amp; computer-readable LSID-substring carrying information on its ascertained nomenclatural basis (and, in case of misspellings etc., pointing to its correct name basis). The benefits would be, in my mind, that vetted/ unvetted names could be distinguished easily and involvement of taxon experts would be facilitated (&amp; attracted) very much better than with those *cryptic* LSIDs that are in use so far. Once a name is ascertained, you can see it and the computer can know it by the composition of it's LSID; unvetted names would stay with computer-readable numbers only.
+
+E.g., 
+could an LSID for an ascertained taxonomic name in a GBIF occurrence record be something like:
+&lt;urn:lsid:gbif.org:ecat:ZS-Carabus_depressus=Licinus_depressus.19020147&gt; ?
+
+... building upon a basic LSID nomen substring issued by ZooBank:
+&lt;urn:lsid:iczn.org:zoobank:ZS-Carabus_depressus=Licinus_depressus&gt; ?
+
+The human- &amp; computer(?)-readable substrings in that imaginary example would be: 
+&quot;Z&quot; = animal na
+me governed by ICZN 
+&quot;S&quot; = name of species-group (&quot;G&quot; for genus-, &quot;F&quot; for family-group)
+&quot;Carabus depressus&quot; original generic combination (linking to type material)
+&quot;=Licinus depressus&quot; subsequent generic combination (up to here all metadata incl. author, date, name history, etc. would be resolvable via ZooBank)
+&quot;19020147&quot; unique GBIF ID for a name associated with a dataset (where the name could be a misspelling that should not be deleted from the record if it is a verbatim citation e.g. from a specimen label).
+
+Not thinkable? I know the devil is always in the details..., but where would IT savvy taxacomers say 'principally impossible'? 
+In my mind, one of THE challenges in biodiversity informatics - is how to distinguish unfinished (manuscript) and finished content (reviewed reliable publication). As for the issue of taxonomic names, maybe a difference in the LSID could be part of the solution?
+
+Cheers,
+Wolfgang
+---------------------------------
+Wolfgang Lorenz, Tutzing, Germany
+
+
+________________________________________________________________________
+AOL eMail auf Ihrem Handy! Ab sofort können Sie auch unterwegs Ihre AOL email abrufen. Registrieren Sie sich jetzt kostenlos.
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="111814.html">[Taxacom] Taxonomy in Crisis @ Nature.Com
+</A></li>
+	<LI>Next message: <A HREF="111816.html">[Taxacom] Biodiv Informatics Challenges
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#111815">[ date ]</a>
+              <a href="thread.html#111815">[ thread ]</a>
+              <a href="subject.html#111815">[ subject ]</a>
+              <a href="author.html#111815">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

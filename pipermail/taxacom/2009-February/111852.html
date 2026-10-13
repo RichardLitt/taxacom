@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Species pages (index)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Species%20pages%20%28index%29&In-Reply-To=%3C53A569A7477BDA44AB3F9F7D0042778202F52EA33208%40KEXCH00.ad.kew.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="111850.html">
+   <LINK REL="Next"  HREF="111851.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2009-February/111852.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Species pages (index)</H1>
+    <B data-pagefind-meta="author">Nicola Nicolson</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Species%20pages%20%28index%29&In-Reply-To=%3C53A569A7477BDA44AB3F9F7D0042778202F52EA33208%40KEXCH00.ad.kew.org%3E"
+       TITLE="[Taxacom] Species pages (index)">n.nicolson at rbgkew.org.uk
+       </A><BR>
+    <I data-pagefind-meta="date">Mon Feb 23 05:56:12 CST 2009</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="111850.html">[Taxacom] Species pages (index)
+</A></li>
+        <LI>Next message: <A HREF="111851.html">[Taxacom] FW: message for Taxacom mailing list
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#111852">[ date ]</a>
+              <a href="thread.html#111852">[ thread ]</a>
+              <a href="subject.html#111852">[ subject ]</a>
+              <a href="author.html#111852">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2009</span><!--beginarticle-->
+<PRE>Hi,
+
+Maybe you could try term boosting in Lucene to address this - at search time separate the search term into genus and species and give the genus part a higher priority. See :
+
+<A HREF="http://lucene.apache.org/java/2_3_2/queryparsersyntax.html#Boosting%20a%20Term">http://lucene.apache.org/java/2_3_2/queryparsersyntax.html#Boosting%20a%20Term</A>
+
+cheers,
+Nicky
+
+- Nicola Nicolson
+- Applications Development,
+- Royal Botanic Gardens, Kew,
+- Richmond, Surrey, TW9 3AB, UK
+- email: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">n.nicolson at rbgkew.org.uk</A>
+- phone: 020-8332-5712
+________________________________________
+From: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom-bounces at mailman.nhm.ku.edu</A> [<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom-bounces at mailman.nhm.ku.edu</A>] On Behalf Of Roger Hyam [<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">rogerhyam at mac.com</A>]
+Sent: 23 February 2009 10:53
+To: Kenneth Kinman
+Cc: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom at mailman.nhm.ku.edu</A>
+Subject: Re: [Taxacom] Species pages (index)
+
+Hi Ken,
+
+I am just using the default Lucene settings for string searching at
+the moment. I already had it pointed out that Wikipedia pages
+(particularly for mammals) have embedded navigation templates at the
+bottom that skews results.
+
+Really this is an argument for getting pages marked up with just a
+tiny bit of semantically rich information so we can link them rather
+than try and guess it from the text context.
+
+Thanks for your thoughts,
+
+Roger
+
+On 23 Feb 2009, at 02:56, Kenneth Kinman wrote:
+
+&gt;<i> Hi Roger,
+</I>&gt;<i>       I only spent a little time entering a few scattered species into
+</I>&gt;<i> your search so far, but actually found one proposed species of Homo
+</I>&gt;<i> that
+</I>&gt;<i> I had never heard of (although with just a skull-cap, its validity is
+</I>&gt;<i> regarded as very questionable).
+</I>&gt;<i>      But more to the point, one potential problem I found (which
+</I>&gt;<i> frankly can even be problematic on Google) is scoring.  When I entered
+</I>&gt;<i> Ursus maritimus, there are a lot of plants that score unexpectedly
+</I>&gt;<i> high
+</I>&gt;<i> (because their specific names are also maritimus).  One plant even
+</I>&gt;<i> scored higher than the Wikipedia article on &quot;polar bear&quot; (which really
+</I>&gt;<i> surprised me).  However, with a little tweaking, those kinds of
+</I>&gt;<i> scoring
+</I>&gt;<i> problems could probably be eliminated.
+</I>&gt;<i>          --------Ken
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i>
+</I>&gt;<i> Taxacom Mailing List
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;<i>
+</I>&gt;<i> The entire Taxacom Archive back to 1992 can be searched with either
+</I>&gt;<i> of these methods:
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+</I>&gt;<i>
+</I>&gt;<i> Or use a Google search specified as:  site:mailman.nhm.ku.edu/
+</I>&gt;<i> pipermail/taxacom  your search terms here
+</I>
+-------------------------------------------------------------
+Roger Hyam
+<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Roger at BiodiversityCollectionsIndex.org</A>
+<A HREF="http://www.BiodiversityCollectionsIndex.org">http://www.BiodiversityCollectionsIndex.org</A>
+-------------------------------------------------------------
+Royal Botanic Garden Edinburgh
+20A Inverleith Row, Edinburgh, EH3 5LR, UK
+Tel: +44 131 552 7171 ext 3015
+Fax: +44 131 248 2901
+<A HREF="http://www.rbge.org.uk/">http://www.rbge.org.uk/</A>
+-------------------------------------------------------------
+
+
+
+
+
+_______________________________________________
+
+Taxacom Mailing List
+
+<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+
+<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+
+The entire Taxacom Archive back to 1992 can be searched with either of these methods:
+
+<A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+
+Or use a Google search specified as:  site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="111850.html">[Taxacom] Species pages (index)
+</A></li>
+	<LI>Next message: <A HREF="111851.html">[Taxacom] FW: message for Taxacom mailing list
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#111852">[ date ]</a>
+              <a href="thread.html#111852">[ thread ]</a>
+              <a href="subject.html#111852">[ subject ]</a>
+              <a href="author.html#111852">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

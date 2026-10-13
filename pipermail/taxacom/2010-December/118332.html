@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Estimation in GPS positioning
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2010-December/118332.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Estimation in GPS positioning</H1>
+    <B data-pagefind-meta="author">Curtis Clark</B>
+    lists at curtisclark.org<BR>
+    <I data-pagefind-meta="date">Sun Dec  5 15:41:43 CST 2010</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="118331.html">[Taxacom] Last post on GPS accuracy
+</A></li>
+        <LI>Next message: <A HREF="118333.html">[Taxacom] Estimation in GPS positioning
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#118332">[ date ]</a>
+              <a href="thread.html#118332">[ thread ]</a>
+              <a href="subject.html#118332">[ subject ]</a>
+              <a href="author.html#118332">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2010</span><!--beginarticle-->
+<PRE>As I thought more about it, I realized that there is a kind of 
+&quot;precision&quot; that doesn't involve repeatability.If I have a measuring 
+stick gradated in meters, and I measure my height repeatedly (without 
+interpolation), it will always be 2 m. There will be no statistical 
+distribution. The precision of the measuring instrument is a fundamental 
+limitation in its construction and use.
+
+I imagine that GPS units have a similar fundamental precision: given a 
+spherical Earth in a vacuum :-), the maximum theoretical number of 
+satellites, and no electromagnetic interference, precision will be 
+limited by the antenna length of the unit, and, given an antenna of 
+infinite length, the wavelength of the radio signal and the accuracy of 
+the clocks in the satellites.
+
+No real-life situation ever comes close to this theoretical precision. 
+Real-life situations are subject to measurement error, which can be 
+treated as precision, but (if my pondering is correct) is not really the 
+same thing. I'd like to believe that the published &quot;accuracy&quot; is the 
+result of a sampling distribution under specified conditions, or, less 
+optimally, a simulated sampling distribution.
+
+And I wonder if it wouldn't be best, had we the data, to round to 
+theoretical precision, and add error estimates, preferably as probabilities.
+
+On 12/4/2010 5:54 PM, Bob Mesibov wrote:
+&gt; Fine. Now go to the Darwin Core's specification of position 'uncertainty', and tell me what (position) 43.1129 N 142.8837 E and (uncertainty) 30 m means, statistically.
+It means nothing, statistically. I'd like it to mean that the actual 
+measurement has a 95% probability of being within 30 m of the reported 
+measurement, but I doubt that's what it means.
+&gt; Not if the smaller uncertainty is contained within the larger uncertainty.
+I might agree, but that's not what I thought you meant. Certainly your 
+rounded example has a shifted ellipse relative to your unrounded, and 
+that still seems an unnecessary discarding of data.
+&gt; But repeatability doesn't come into the picture with one-off GPS measurements under field conditions with unknown measurement uncertainty. It's like measuring someone's weight just once on a balance with variable and unpredictable reliability. How does statistics help?
+Repeatability provides a framework for understanding single 
+measurements. Repeatability is what tells us that the balance is truly 
+unpredictable; otherwise it is just a surmise.
+
+-- 
+Curtis Clark                  <A HREF="http://www.csupomona.edu/~jcclark/">http://www.csupomona.edu/~jcclark/</A>
+Director, I&amp;IT Web Development                   +1 909 979 6371
+University Web Coordinator, Cal Poly Pomona
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="118331.html">[Taxacom] Last post on GPS accuracy
+</A></li>
+        <LI>Next message: <A HREF="118333.html">[Taxacom] Estimation in GPS positioning
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#118332">[ date ]</a>
+              <a href="thread.html#118332">[ thread ]</a>
+              <a href="subject.html#118332">[ subject ]</a>
+              <a href="author.html#118332">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

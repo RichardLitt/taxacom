@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] the hurdle for all biodiv informatics initiatives
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2010-February/115616.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] the hurdle for all biodiv informatics initiatives</H1>
+    <B data-pagefind-meta="author">Stephen Thorpe</B>
+    s.thorpe at auckland.ac.nz<BR>
+    <I data-pagefind-meta="date">Wed Feb 17 15:46:12 CST 2010</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="115615.html">[Taxacom] RE Taxacom / DOI
+</A></li>
+        <LI>Next message: <A HREF="115617.html">[Taxacom] the hurdle for all biodiv informatics initiatives
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#115616">[ date ]</a>
+              <a href="thread.html#115616">[ thread ]</a>
+              <a href="subject.html#115616">[ subject ]</a>
+              <a href="author.html#115616">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2010</span><!--beginarticle-->
+<PRE>Wolfgang Lorenz seems to be making the same point I was trying to make about identifiers for names. Like Wolfgang, I don't see why they have to be meaningless strings of numbers, when we could just normalise the name string, making it a perfectly good identifier for the (nominal) taxon. For example:
+
+Feronia sodalis
+urn:lsid:ubio.org:namebank:6755945
+Feronia sodalis LeConte 1848
+urn:lsid:ubio.org:namebank:6755946
+Feronia sodalis
+urn:lsid:organismnames.com:name:475805
+
+The only identifier here should be the normalised name string: Feronia sodalis LeConte 1848
+
+If the numeric identifier somehow encoded a taxonomic/nomenclatural history, linking it to other combinations, then that would be an advantage, but it doesn't, does it?
+
+________________________________________
+From: taxacom-bounces at mailman.nhm.ku.edu [taxacom-bounces at mailman.nhm.ku.edu] On Behalf Of Wolfgang Lorenz [faunaplan at googlemail.com]
+Sent: Wednesday, 17 February 2010 9:46 p.m.
+To: taxacom at mailman.nhm.ku.edu
+Subject: [Taxacom] the hurdle for all biodiv informatics initiatives
+
+Dear taxacomers,
+all those initiatives, wikispecies not less than the alliance of GBIF, EoL,
+CoL, etc. are still under preparation, not yet in full operation, so it
+seems we should be patient, especially since they take very different
+approaches and roles.
+What we can make out, at this early stage, is the taxonomic names problem as
+probably THE major hurdle for all those projects! Roderic Page's defense of
+DOIs for publications is quite understandable to me, but I'm in doubt when
+he writes:
+&gt;&gt;Lastly, imagine if we had similar services for the other things we care
+about, such as taxonomic names ..&lt;
+
+Taxonomic names are not just things like other things, but even if we take
+them as abstracted &quot;name objects&quot; only, - cannot we study plenty of examples
+out there to see the massive problem?
+And, isn't this a major reason why many taxonomists are so skeptical about
+what biodiversity informatics was doing so far?
+Take the nearctic beetle Cyclotrachelus sodalis (LeConte 1848) for just one
+of so many examples: six different generic combinations (objective synonyms)
+have been used for it. These six names are listed as separate species in the
+following name-aggregators, with a total of 18 (!!) different LSIDs so far:
+
+1.) Original binomen:
+Feronia sodalis
+urn:lsid:ubio.org:namebank:6755945
+Feronia sodalis LeConte 1848
+urn:lsid:ubio.org:namebank:6755946
+Feronia sodalis
+urn:lsid:organismnames.com:name:475805
+
+Subsequent generic combiations:
+2.)
+Eumolops sodalis Le Conte, 1848
+urn:lsid:ubio.org:namebank:1044312
+Eumolops sodalis
+urn:lsid:ubio.org:namebank:2936230
+
+3.)
+Evarthrus sodalis
+urn:lsid:ubio.org:namebank:7006280
+Evarthrus sodalis sodalis
+urn:lsid:ubio.org:namebank:7053291
+Evarthrus sodalis
+urn:lsid:organismnames.com:name:137618
+Evarthrus sodalis LeConte 1848
+urn:lsid:organismnames.com:name:4284542
+
+4.)
+Pterostichus sodalis
+urn:lsid:ubio.org:namebank:5814327
+Pterostichus sodalis LeConte 1848
+urn:lsid:ubio.org:namebank:5814328
+Pterostichus sodalis Lec.
+urn:lsid:organismnames.com:name:2319489
+Pterostichus sodalis LeConte 1848
+urn:lsid:organismnames.com:name:1424845
+
+5.)
+Cyclotrachelus sodalis
+urn:lsid:ubio.org:namebank:1666855
+Cyclotrachelus sodalis
+urn:lsid:organismnames.com:name:1437096
+
+6.)
+Abax sodalis Leconte 1848
+urn:lsid:ubio.org:namebank:548823
+Abax sodalis
+urn:lsid:ubio.org:namebank:2725681
+Abax sodalis Leconte 1848
+urn:lsid:catalogueoflife.org:
+taxon:de56c742-29c1-102b-9a4a-00304854f820:ac2009
+
+Why do we need such identifiers and who can take control of it???
+Instead of machine-only-readable identifiers, which are obviously &quot;out of
+human control&quot; in so many examples, we could have perfectly stable, unique
+and readable Name Strings for each available name, registered and resolvable
+in a future ZooBank:
+
+ZS-Feronia_sodalis
+ZS-Feronia_sodalis/Eumolops_sodalis
+ZS-Feronia_sodalis/Evarthrus_sodalis
+ZS-Feronia_sodalis/Pterostichus_sodalis
+ZS-Feronia_sodalis/Cyclotrachelus_sodalis
+ZS-Feronia_sodalis/Abax_sodalis
+
+Together with such standardized name strings, Zoobank should store
+information that belongs to a name but does not form part of it, like
+author+date, page numbers, type information, grammar, etc.
+And the idea is that projects like GBIF, EoL, etc. could build upon these
+human-readable identifiers by just adding something like an usage instance
+number. E.g., GBIF, when it has parsed occurrence records for
+&quot;Cyclotrachelus sodalis Lec.&quot; and &quot;Abax sodalis&quot; it can assign
+human-readable ID-strings, perhaps in the following format:
+
+ZS-Feronia_sodalis/Cyclotrachelus_sodalis#2345
+ZS-Feronia_sodalis/Abax_sodalis#324
+
+With such standardized strings it should be much less of a problem for
+humans AND computers to know what's in those names. This is not the solution
+for ALL problems, of course, but a solid nomenclatural basis could bring us
+a huge step forward, IMHO ... or do I miss something?
+
+Best regards,
+Wolfgang
+-----------------------------------------
+Wolfgang Lorenz, Tutzing, Germany
+_______________________________________________
+
+Taxacom Mailing List
+Taxacom at mailman.nhm.ku.edu
+<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+
+The Taxacom archive going back to 1992 may be searched with either of these methods:
+
+(1) <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+
+Or (2) a Google search specified as:  site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="115615.html">[Taxacom] RE Taxacom / DOI
+</A></li>
+        <LI>Next message: <A HREF="115617.html">[Taxacom] the hurdle for all biodiv informatics initiatives
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#115616">[ date ]</a>
+              <a href="thread.html#115616">[ thread ]</a>
+              <a href="subject.html#115616">[ subject ]</a>
+              <a href="author.html#115616">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Call: Taxonomic Data Provider Tool Developer
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Call%3A%20Taxonomic%20Data%20Provider%20Tool%20Developer&In-Reply-To=%3C455466E4.4080604%40gbif.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="108171.html">
+   <LINK REL="Next"  HREF="108175.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2006-November/108173.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Call: Taxonomic Data Provider Tool Developer</H1>
+    <B data-pagefind-meta="author">Donald Hobern</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Call%3A%20Taxonomic%20Data%20Provider%20Tool%20Developer&In-Reply-To=%3C455466E4.4080604%40gbif.org%3E"
+       TITLE="[Taxacom] Call: Taxonomic Data Provider Tool Developer">dhobern at gbif.org
+       </A><BR>
+    <I data-pagefind-meta="date">Fri Nov 10 05:47:48 CST 2006</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="108171.html">[Taxacom] Spider Calendars ready for order
+</A></li>
+        <LI>Next message: <A HREF="108175.html">[Taxacom] How the prokaryote code and our nomenclatural system works
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#108173">[ date ]</a>
+              <a href="thread.html#108173">[ thread ]</a>
+              <a href="subject.html#108173">[ subject ]</a>
+              <a href="author.html#108173">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2006</span><!--beginarticle-->
+<PRE>Call: Taxonomic Data Provider Tool Developer
+--------------------------------------------
+
+GBIF is seeking to simplify the integration of data relating to 
+nomenclature (scientific names) and taxonomy (classification of 
+organisms using scientific names) by developing tools to connect such 
+data more easily to the GBIF network.
+
+GBIF is addressing this issue in several ways:
+
+1. Working with the Species 2000 &amp; ITIS Catalogue of Life partnership 
+(<A HREF="http://www.sp2000.org/">http://www.sp2000.org/</A>) to promote the development of a network of 
+global species databases
+2. Enhancing the GBIF data portal (<A HREF="http://www.gbif.net/">http://www.gbif.net/</A>) to index 
+nomenclatural and taxonomic resources served over the web as 
+tab-delimited data sets
+3. Developing a data provider tool based on TDWG (<A HREF="http://www.tdwg.org/">http://www.tdwg.org/</A>) 
+data standards to support dynamic query of nomenclatural and taxonomic 
+data sets over the web (more complex for data providers than 2. above, 
+but offering a search interface)
+
+GBIF is seeking the services of a software developer to develop the data 
+provider tool (item 3 above).
+
+The tool should have the following features:
+
+1. Relational database (two version of same model in Access and MySQL) 
+corresponding to TDWG Taxon Concept Schema (TCS) v. 1.01 
+(<A HREF="http://www.tdwg.org/subgroups/tnc/tcs-schema-repository/">http://www.tdwg.org/subgroups/tnc/tcs-schema-repository/</A>)
+2. Customised provider tool using either the Python implementation 
+(pyWrapper, <A HREF="http://trac.pywrapper.org/">http://trac.pywrapper.org/</A>) or the PHP implementation 
+(forthcoming) of the TAPIR protocol, with five endpoints configured, one 
+for each class of data obect in TCS (Specimen, Publication, TaxonName, 
+TaxonConcept, TaxonRelationshipAssertion)
+3. Customisation of TAPIR configuration interfaces as required
+4. Interface to import tab-delimited file formats adopted by GBIF (see 
+item 2, above) into the TCS relational database
+
+The developer should have the following skills:
+
+1. Experience in web development using PHP or Python.
+2. Experience in modeling data structures using a relational database 
+(specifically MySQL and/or Access)
+3. Familiarity with TAPIR or one of the earlier TDWG data access 
+protocols (DiGIR, <A HREF="http://digir.sourceforge.net/,">http://digir.sourceforge.net/,</A> or BioCASe, 
+<A HREF="http://www.biocase.org/products/protocols/index.shtml">http://www.biocase.org/products/protocols/index.shtml</A>)
+4. Ability to plan and organise development work
+
+Familarity with the TDWG Taxon Concept Schema and general understanding 
+of the principles of nomenclature and taxonomy will be an advantage.
+
+The GBIF Secretariat expects to place a contract for a period of 
+approximately four months’ work.
+
+How to apply
+------------
+
+Interested applicants should send the following by e-mail to Donald 
+Hobern, GBIF Deputy Director for Informatics (<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">dhobern at gbif.org</A>) by 30 
+November 2006:
+
+1. Curriculum vitae
+2. Description of relevant experience and skills
+3. Details on availability
+4. Expected remuneration
+
+------------------------------------------------------------
+Donald Hobern (<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">dhobern at gbif.org</A>)
+Deputy Director for Informatics
+Global Biodiversity Information Facility Secretariat
+Universitetsparken 15, DK-2100 Copenhagen, Denmark
+Tel: +45-35321483 Mobile: +45-28751483 Fax: +45-35321480
+------------------------------------------------------------
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="108171.html">[Taxacom] Spider Calendars ready for order
+</A></li>
+	<LI>Next message: <A HREF="108175.html">[Taxacom] How the prokaryote code and our nomenclatural system works
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#108173">[ date ]</a>
+              <a href="thread.html#108173">[ thread ]</a>
+              <a href="subject.html#108173">[ subject ]</a>
+              <a href="author.html#108173">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> collection DB design question
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1996-December/019964.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">collection DB design question</H1>
+    <B data-pagefind-meta="author">Melissa C. Winans</B>
+    mcwinans at MAIL.UTEXAS.EDU<BR>
+    <I data-pagefind-meta="date">Fri Dec 13 11:48:46 CST 1996</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="103117.html">New PEET announcements available on NSF WWW page
+</A></li>
+        <LI>Next message: <A HREF="055756.html">collection DB design question
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#019964">[ date ]</a>
+              <a href="thread.html#019964">[ thread ]</a>
+              <a href="subject.html#019964">[ subject ]</a>
+              <a href="author.html#019964">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1996</span><!--beginarticle-->
+<PRE>At 08:49 PM 12/12/96 -0400, you wrote:
+&gt;For the sake of efficient design of cataloging databases, consider the
+&gt;following situation. Dr. X, who is at institution Y, borrows some specimens
+&gt;from our museum, and we dutifully record her name and address (in the
+&gt;computer, advanced beings that we are). Subsequently she moves to Z, and we
+&gt;not surprisingly update our address files accordingly. While this makes
+&gt;perfect sense, I was wondering if anyone knows of a situation in which we
+&gt;would NOT want to update a person's address, i.e., for historical reasons.
+&gt;For example, if Dr. X donated a collection of specimens while at Y, should
+&gt;the _accession_ record connected to that gift be updated when she moves to
+&gt;Z, or remain a static document? This question may sound trivial, but it
+&gt;affects the way our cataloging database will be designed. I think it would
+&gt;be easier if we didn't have to juggle multiple addresses for each person in
+&gt;the database itself. What about &quot;retiring&quot; previous addresses, with dates,
+&gt;to a separate file whenever a change is made, so the information isn't
+&gt;lost?
+
+Yes, there are reasons not to lose track of the previous address, just as
+you describe. If you are using a relational database management program such
+as dBASE or Paradox, the easiest way to do this is to divide your address
+data table, which normally would contain both names and addresses, into two
+tables, one for just the names and the second for the rest of the address,
+with a linking table between them.  That way you can have as many addresses
+for each name as you need without tying up space for extra addresses that
+would not always be used.  A typical way to set this up is as follows:
+
+Name table:
+        Record_ID_Number
+        Last_Name
+        First_Name
+        Title
+
+Address table:
+        Record_ID_Number
+        First_Address_Line
+          .
+          .
+        Last_Address_Line
+        City
+          .
+          .
+
+Name-address linking table:
+        Record_ID
+        Name_Record_ID
+        Address_Record_ID
+        Is_This_This_Person's_Current_Address
+        Date_Changed_(if_you_think_it's_relevant)
+
+Then in your loan file or any other table that needs to reference a person's
+name and address you would have a field for the Record_ID from the linking
+table that corresponds to the name/address combination you want.
+
+One good place to see an example of this is on the Univ. Calif. Mus.
+Paleontol. data model pages at:
+
+        <A HREF="http://www.berkeley.edu/museum/datamodel/noframes.html">http://www.berkeley.edu/museum/datamodel/noframes.html</A>
+****************************************************************
+Melissa C. Winans, Collection Manager (mcwinans at mail.utexas.edu)
+Vertebrate Paleontology Laboratory      Phone: 512-471-6087
+J.J. Pickle Research Campus               Fax: 512-471-5973
+University of Texas, 10100 Burnet Road, Austin, TX 78758
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="103117.html">New PEET announcements available on NSF WWW page
+</A></li>
+        <LI>Next message: <A HREF="055756.html">collection DB design question
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#019964">[ date ]</a>
+              <a href="thread.html#019964">[ thread ]</a>
+              <a href="subject.html#019964">[ subject ]</a>
+              <a href="author.html#019964">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

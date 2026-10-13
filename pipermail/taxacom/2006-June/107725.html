@@ -1,0 +1,347 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Taxon concepts and published names
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Taxon%20concepts%20and%20published%20names&In-Reply-To=%3C230508086C55BA4FA949D9423AACADBB0393EAE5%40ua-mail5.asnet.ua-net.ua.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="107723.html">
+   <LINK REL="Next"  HREF="107691.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2006-June/107725.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Taxon concepts and published names</H1>
+    <B data-pagefind-meta="author">Ginzbarg, Steve</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Taxon%20concepts%20and%20published%20names&In-Reply-To=%3C230508086C55BA4FA949D9423AACADBB0393EAE5%40ua-mail5.asnet.ua-net.ua.edu%3E"
+       TITLE="[Taxacom] Taxon concepts and published names">sginzbar at biology.as.ua.edu
+       </A><BR>
+    <I data-pagefind-meta="date">Mon Jun 26 15:09:31 CDT 2006</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="107723.html">[Taxacom] a Standard for Taxonomic Verification Qualifiers
+</A></li>
+        <LI>Next message: <A HREF="107691.html">[Taxacom] a Standard for Taxonomic Verification Qualifiers
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#107725">[ date ]</a>
+              <a href="thread.html#107725">[ thread ]</a>
+              <a href="subject.html#107725">[ subject ]</a>
+              <a href="author.html#107725">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2006</span><!--beginarticle-->
+<PRE>Robert,
+
+I have recently added a field 'AccordingTo' (sec) to our database where
+I can record (currently in free text, a drop-down list would be better)
+the reference used to make a determination. I have used it a couple
+times when I wanted to show that I had used a revision, not just a
+flora. It would be a good idea to start using it consistently.
+
+I looked at the Taxonomic Concept Transfer Schema,
+<A HREF="http://tdwg.napier.ac.uk,">http://tdwg.napier.ac.uk,</A> voted a TDWG standard in 2005. I agree that we
+should try to follow it. However I think we need short range goals as
+well as long range goals. As Theodore Roosevelt said, &quot;Keep your eyes on
+the stars but keep your feet on the ground.&quot; Before we can use a
+synonymy based on concepts we will need to agree on how to record
+concepts consistently when we database specimen determinations. Mapping
+the relationships of concepts to one another (includes, overlaps, etc.)
+is no small task. Major changes in concepts usually happen in taxonomic
+revisions. Floras follow these treatments. However, specimens may not
+key out in the same way when using a flora following a revision as when
+using the revision itself. Should the concepts be considered equivalent
+or not? 
+
+This brings me to the Ginzbarg Uncertainty Principal of taxonomy
+analagous to the Heisenberg Uncertainty Principal of quantum mechanics.
+Just as it is impossible to know both the exact position of a particle
+and the speed that it is moving, so it is impossible to know both the
+current distribution of a taxon and the taxon concept represented by the
+distribution. If we want to see the distribution of a particular taxon
+concept we can look at a published monograph. The monograph has the
+disadvantage, though, of being a snapshot in time while our databases
+can be continuously updated with new records. I think that GBIF should
+include a disclaimer to this effect.
+
+Very few specimen determinations made to date tell what reference was
+used. Our immediate need is a synonymy that can synthesize the
+information that is available now, i.e. data from specimens identified
+with published names only, the taxon concept not specified. The synonymy
+should be able to answer &quot;If the determination is published name A, can
+we say that the accepted published name is B or is it necessary to
+re-examine the specimen to determine what the accepted published name
+is?&quot;. Do we have such synonymies in botany? We have human-readable
+synonymies but not synonymies that would allow a computer to answer this
+question.
+
+The following database design would allow a computer to answer the
+question:
+
+Determination 00 -- 1 Published Names 1 -- 00 Synonym (Published Name [+
+&quot;some information&quot;]) 00 -- 1 Accepted Name
+
+(If a published name is not in the list of synonyms it is accepted.)
+
+Suppose a specimen has been determined as Species A. There are two
+concepts of species A listed in the synonymy, each having a different
+accepted name. Since the determinator only provided the published name
+and not a taxon concept, I don't know which concept was meant and have
+no basis for choosing one or the other. An accepted name cannot be
+determined. The specimen must be re-examined. On the other had there may
+be other synonymies which are unambiguous and an accepted name can be
+applied.
+
+Here is a design using the current BONAP database.
+
+Determination 00 -- 1 Synonyms (Published Name [including &quot;some
+information&quot;]) &amp; Accepted Names 00 -- 1 Accepted Name 
+
+With two important modifications the BONAP database design could meet
+this need. 
+
+1.) A list of all published names treated is needed to which published
+names of determinations could be matched and from which published names
+could be selected when recording a determination in a specimen database.
+Selecting from a list containing a mixture of published names and taxon
+concepts causes inconsistency in the recording of the names. A published
+name should be listed if a taxon concept of that name is treated as a
+synonym. It should also be listed if the name alone is listed, either as
+a synonym or an accepted name. The list needs to be separate from the
+list of synonyms and their accepted names.
+
+2.) As recommended in the Taxonomic Concept Transfer Schema the
+'AccordingTo' or more generally 'some kind of definition', e.g. &quot;p.p.&quot;
+should be recorded separately from the published name. Currently BONAP
+records the 'some kind of definition' in the same field as the authors
+of the name. At other times the &quot;some kind of definition&quot; replaces the
+authors, e.g. Lespedeza intermedia sensu Clewell, 1966 rather than
+Lespedeza intermedia (S. Wats.) Britt. sensu Clewell, 1966. Separating
+them would allow published names to be linked to their taxonomic
+concepts.
+
+A design using the Taxonomic Concept Transfer Schema is a refinement of
+the design proposed above.
+
+Determination concept 00 -- 1 Taxon Concepts 1 -- 00 Synonym concept 00
+-- 1 Accepted concept
+(If a taxon concept is not in the list of synonym concepts it is
+accepted.)
+
+-Steve Ginzbarg
+ 
+Steve Ginzbarg, Collections Manager
+Herbarium (UNA)
+Department of Biological Sciences
+Box 870345
+The University of Alabama
+Tuscaloosa, AL 35487-0345
+(205) 348-1829, FAX: (205) 348-6460
+<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">sginzbar at biology.as.ua.edu</A>
+<A HREF="http://bama.ua.edu/~bsc/herbarium/">http://bama.ua.edu/~bsc/herbarium/</A>
+
+&gt;<i> -----Original Message-----
+</I>&gt;<i> From: Robert K. Peet [mailto:<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">peet at unc.edu</A>] 
+</I>&gt;<i> Sent: Sunday, June 25, 2006 9:42 AM
+</I>&gt;<i> To: Ginzbarg, Steve
+</I>&gt;<i> Cc: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> Subject: Re: [Taxacom] a Standard for Taxonomic Verification 
+</I>&gt;<i> Qualifiers
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Steve,
+</I>&gt;<i> 
+</I>&gt;<i> If you are going to go through all the work of checking the 
+</I>&gt;<i> determinations of the specimens in your collection, you 
+</I>&gt;<i> should be sure to record in your database not just the names, 
+</I>&gt;<i> but the taxonomic concepts (name as used by some authority).  
+</I>&gt;<i> For example, record not just Andropogon virginicus L., but 
+</I>&gt;<i> Andropogon virginicus L. sec Radford et al 1968, or sec 
+</I>&gt;<i> Godfrey &amp; Wooten 1979, or sec FNA 2003, or sec Hitchcock &amp; 
+</I>&gt;<i> Chase 1950, or sec Bloomquest 1948, or sec Small 1933 --- 
+</I>&gt;<i> they are all different concepts of A. virginicus L. with 
+</I>&gt;<i> different sets of specimens circumscribed.
+</I>&gt;<i> 
+</I>&gt;<i> TDWG has adopted standards for concepts, and they are in the 
+</I>&gt;<i> design plans for future releases of database systems 
+</I>&gt;<i> associated with PLANTS, ITIS, GBIF, and SPECIFY.  They will 
+</I>&gt;<i> soon impact you directly. If you don't do the determinations 
+</I>&gt;<i> by concept now, you are likely to deeply regret it in a few 
+</I>&gt;<i> years when you have to do the work over again.  Take a look 
+</I>&gt;<i> at the county range maps on PLANTS for Andropogon virginicus 
+</I>&gt;<i> kin in NC-SC and you will see the problem.  They have lots of 
+</I>&gt;<i> dots for Andropogon virginicus, but these are not based on 
+</I>&gt;<i> the concepts used by PLANTS, as evidence by such taxa as A. 
+</I>&gt;<i> glaucopsis, A capillipes, A. glomeratus and A. gyrans being 
+</I>&gt;<i> listed for NC-SC with no county records.  In short, we cannot 
+</I>&gt;<i> trust any of those A. virginicus records in the maps because 
+</I>&gt;<i> all these other taxa were lumped in by Radford et al, which 
+</I>&gt;<i> is where the dots came from. 
+</I>&gt;<i> If future determinations are made to concept, we will know 
+</I>&gt;<i> where there are uncertainties, and where datasets (such as 
+</I>&gt;<i> for maps) can be merged and where not.
+</I>&gt;<i> 
+</I>&gt;<i> Bob Peet
+</I>&gt;<i> 
+</I>&gt;<i>   
+</I>&gt;<i> ======================================================================
+</I>&gt;<i>       Robert K. Peet, Professor &amp; Chair         Phone:  919-962-6942
+</I>&gt;<i>       Curriculum in Ecology, CB#3275            Fax:    919-962-6930
+</I>&gt;<i>       University of North Carolina              Cell:   919-368-4971
+</I>&gt;<i>       Chapel Hill, NC  27599-3275  USA          Email:  <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">peet at unc.edu</A>
+</I>&gt;<i>                     <A HREF="http://www.unc.edu/depts/ecology/">http://www.unc.edu/depts/ecology/</A>
+</I>&gt;<i>                   <A HREF="http://www.bio.unc.edu/faculty/peet/">http://www.bio.unc.edu/faculty/peet/</A>
+</I>&gt;<i>   
+</I>&gt;<i> ======================================================================
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> On Fri, 16 Jun 2006, Ginzbarg, Steve wrote:
+</I>&gt;<i> 
+</I>&gt;<i> &gt; At UNA we're are examining our AL specimens for the AL 
+</I>&gt;<i> vascular plant 
+</I>&gt;<i> &gt; checklist and atlas. When the current determination has 
+</I>&gt;<i> been confirmed 
+</I>&gt;<i> &gt; by herbarium staff, a pencil check mark is written on the 
+</I>&gt;<i> collection 
+</I>&gt;<i> &gt; or determination label. A check box in the record for the 
+</I>&gt;<i> &gt; determination in our database is also checked. (We don't 
+</I>&gt;<i> have the time 
+</I>&gt;<i> &gt; to annotate all the specimens where we concur with the 
+</I>&gt;<i> current det.) 
+</I>&gt;<i> &gt; Material deemed inadequate to make a positive determination, e.g. a 
+</I>&gt;<i> &gt; sterile specimen, does not receive a check and is not considered a 
+</I>&gt;<i> &gt; voucher for the checklist and atlas. We have a program that 
+</I>&gt;<i> displays 
+</I>&gt;<i> &gt; the AL county records. If the determination of a specimen from a 
+</I>&gt;<i> &gt; county has been confirmed by the staff of the institution 
+</I>&gt;<i> where it is 
+</I>&gt;<i> &gt; housed a black dot is shown in that county. I there is a 
+</I>&gt;<i> specimen with 
+</I>&gt;<i> &gt; a current det but the det has not been confirmed by staff 
+</I>&gt;<i> it shows as 
+</I>&gt;<i> &gt; a grey dot. If there were an element VerifiedByInstitution in 
+</I>&gt;<i> &gt; DarwinCore (&quot;Y&quot; if the determination has been confirmed by 
+</I>&gt;<i> the staff 
+</I>&gt;<i> &gt; of the institution in which it is housed) we could supply 
+</I>&gt;<i> GBIF with this information.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Some institutions do not provide the most recent 
+</I>&gt;<i> determination to GBIF 
+</I>&gt;<i> &gt; but rather the most recent determination that the herbarium staff 
+</I>&gt;<i> &gt; accepts (determined by an expert). While I personally would 
+</I>&gt;<i> want to be 
+</I>&gt;<i> &gt; very confident in my own determination before disagreeing with an 
+</I>&gt;<i> &gt; expert, I would not want to judge which determinations UNA should 
+</I>&gt;<i> &gt; provide to GBIF on the basis of name recognition of the determiner.
+</I>&gt;<i> &gt; Experts can make mistakes.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;&gt; -----Original Message-----
+</I>&gt;<i> &gt;&gt; From: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom-bounces at mailman.nhm.ku.edu</A>
+</I>&gt;<i> &gt;&gt; [mailto:<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom-bounces at mailman.nhm.ku.edu</A>] On Behalf Of 
+</I>&gt;<i> &gt;&gt; <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom2 at achapman.org</A>
+</I>&gt;<i> &gt;&gt; Sent: Thursday, June 15, 2006 5:26 PM
+</I>&gt;<i> &gt;&gt; To: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> &gt;&gt; Subject: [Taxacom] a Standard for Taxonomic Verification Qualifiers
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; I am currently examing the possibility of establishing a TDWG 
+</I>&gt;<i> &gt;&gt; Standard for Taxonomic Verification Qualifiers and am seeking 
+</I>&gt;<i> &gt;&gt; information from anyone currently using such qualifiers.  
+</I>&gt;<i> If you are 
+</I>&gt;<i> &gt;&gt; using one (or have suggestions for one), I would 
+</I>&gt;<i> appreciate a copy, 
+</I>&gt;<i> &gt;&gt; which can be sent to me off-line.
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; Later, I hope that we can start a WIKI discussion on the tdwg Web 
+</I>&gt;<i> &gt;&gt; site (<A HREF="http://www.tdwg.org">http://www.tdwg.org</A>), and a presentation is proposed for the 
+</I>&gt;<i> &gt;&gt; TDWG meeting in St Louis in October.
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; I am currently aware of three standards that are in use 
+</I>&gt;<i> (see attached 
+</I>&gt;<i> &gt;&gt; file):
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; 1. from Herbarium Information Standards and Protocols for the 
+</I>&gt;<i> &gt;&gt; Interchange of Data (HISPID) Vers. 3
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; 2. A similar one based on this and used by the Botanic Gardens 
+</I>&gt;<i> &gt;&gt; community International Transfer Format for Botanic Gardens Plant 
+</I>&gt;<i> &gt;&gt; Records (ITF) Vers. 2.0
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; 3. One used by the Australian National Fish Collection
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; In the Data Quality Document I prepared for GBIF lat year, I 
+</I>&gt;<i> &gt;&gt; suggested a two level standard that I would like to see some 
+</I>&gt;<i> &gt;&gt; discussion on. I believe that none are entirely suitable, and 
+</I>&gt;<i> &gt;&gt; possibly an incorporation of all four would be the best.
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; Chapman A.D. (2005). Principles of Data Quality. Report for the 
+</I>&gt;<i> &gt;&gt; Global Biodiversity Information Facility 2005. 61pp.
+</I>&gt;<i> &gt;&gt; Copenhagen: GBIF.
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; The reasons for such a standard I see as
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; 1. The need for improved documentation of quality with the 
+</I>&gt;<i> increasing 
+</I>&gt;<i> &gt;&gt; distribution of primary species data 2. The introduction 
+</I>&gt;<i> of privacy 
+</I>&gt;<i> &gt;&gt; legislation in many countries that is beginning to restrict the 
+</I>&gt;<i> &gt;&gt; distribution of people's names, including the names of 
+</I>&gt;<i> determiners of 
+</I>&gt;<i> &gt;&gt; specimens.  If we cannot exchange the name of the 
+</I>&gt;<i> determiner, we need 
+</I>&gt;<i> &gt;&gt; some other method to reliably document the confidence we 
+</I>&gt;<i> have in the 
+</I>&gt;<i> &gt;&gt; identification.
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; I look forward to your responses.
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; regards
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; Arthur D. Chapman
+</I>&gt;<i> &gt;&gt; Australian Biodiversity Information Services Toowoomba, Australia
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; _______________________________________________
+</I>&gt;<i> &gt; Taxacom mailing list
+</I>&gt;<i> &gt; <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> &gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;<i> &gt;
+</I>&gt;<i> 
+</I>&gt;<i>   ====================================================================
+</I>&gt;<i>   Robert K. Peet, Professor              Phone:  919-962-6942
+</I>&gt;<i>   Department of Biology, CB#3280         Fax:    919-962-6930
+</I>&gt;<i>   University of North Carolina           Cell:   919-368-4971
+</I>&gt;<i>   Chapel Hill, NC  27599-3280  USA       Email:  <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">peet at unc.edu</A>
+</I>&gt;<i> 
+</I>&gt;<i>               <A HREF="http://www.bio.unc.edu/faculty/peet/">http://www.bio.unc.edu/faculty/peet/</A>
+</I>&gt;<i>   ====================================================================
+</I>&gt;<i> 
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="107723.html">[Taxacom] a Standard for Taxonomic Verification Qualifiers
+</A></li>
+	<LI>Next message: <A HREF="107691.html">[Taxacom] a Standard for Taxonomic Verification Qualifiers
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#107725">[ date ]</a>
+              <a href="thread.html#107725">[ thread ]</a>
+              <a href="subject.html#107725">[ subject ]</a>
+              <a href="author.html#107725">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

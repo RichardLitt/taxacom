@@ -1,0 +1,219 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Consider using the draft &quot;species&quot; microformat...
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Consider%20using%20the%20draft%20%22species%22%20microformat...&In-Reply-To=%3C1A468645-93E9-431C-8A63-0ECBC3898227%40gbif.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="109600.html">
+   <LINK REL="Next"  HREF="109604.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2007-November/109603.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Consider using the draft &quot;species&quot; microformat...</H1>
+    <B data-pagefind-meta="author">David Remsen</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Consider%20using%20the%20draft%20%22species%22%20microformat...&In-Reply-To=%3C1A468645-93E9-431C-8A63-0ECBC3898227%40gbif.org%3E"
+       TITLE="[Taxacom] Consider using the draft &quot;species&quot; microformat...">dremsen at gbif.org
+       </A><BR>
+    <I data-pagefind-meta="date">Mon Nov  5 03:45:21 CST 2007</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="109600.html">[Taxacom] Consider using the draft &quot;species&quot; microformat...
+</A></li>
+        <LI>Next message: <A HREF="109604.html">[Taxacom] Consider using the draft 'species' microformat...
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#109603">[ date ]</a>
+              <a href="thread.html#109603">[ thread ]</a>
+              <a href="subject.html#109603">[ subject ]</a>
+              <a href="author.html#109603">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2007</span><!--beginarticle-->
+<PRE>
+It seems to me that the use of microformats in the context of this  
+discussion are not incompatible with the taxon name recognition  
+algorithms like TaxonGrab, FAT, or TaxonFinder (formerly FindIT).   
+They are referring to very different concepts.  One is the choice of  
+an applied markup scheme for tagging taxonomic content and the other  
+is a text processing tool for identifying untagged taxon names.  If  
+taxon names were explicitly tagged as taxon names you wouldn't need a  
+natural language processing tool to identify them would you?  To  
+address some of the questions raised below, there are disambiguation  
+mechanisms one can employ to reconcile false positives such as your  
+Baracus example using word sense disambiguation methods to infer the  
+context of the usage.  These tend to be &quot;expensive&quot; in terms of  
+processing time and speed however and it would certainly make life  
+easier if the original author went to the trouble to use the semantic  
+equivalent of a highlighter to tag their taxon concepts (not just the  
+names).  But for most existing (particularly print) content this isnt  
+the case.
+
+For species combinations the degree of homography drops dramatically,  
+particularly for actual (not derived) species names.  I'm not clear  
+on how tagging a canonical homonym using microformats disambiguates  
+the usage but I assume it has been addressed.
+
+I would think the more relevant issue would be a discussion of the  
+costs and benefits of using microformats vs a TDWG schema or whether  
+these are even mutually exclusive in the first place and provide use  
+cases of where one might be more effective, efficient or practical  
+than the other.   Ultimately I don't believe people will utilize any  
+of these if the only incentive is that they get to contribute to the  
+development and solidification of an emerging standard.  Nor will  
+they do it if the effort only serves the interests of someone else  
+even if that effort is minimal.  They will do it when it's worth  
+their while.  Incentivizing these activities is what will make them  
+happen.
+
+David Remsen
+
+
+On Nov 4, 2007, at 1:19 AM, Andy Mabbett wrote:
+
+&gt;<i> In message &lt;001801c81e67$a3ada4b0$eb08ee10$@ca&gt;, &quot;Shorthouse, David&quot;
+</I>&gt;<i> &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">dps1 at ualberta.ca</A>&gt; writes
+</I>&gt;<i>
+</I>&gt;&gt;&gt;<i> The microformat aims to make taxonomic names within the content of
+</I>&gt;&gt;&gt;<i> published web pages discoverable to parsing tools.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Rather than convincing a developer or web page author to mark-up  
+</I>&gt;&gt;<i> HTML that
+</I>&gt;&gt;<i> differentiates taxonomic names from the sea of other text in the  
+</I>&gt;&gt;<i> hope that
+</I>&gt;&gt;<i> there might someday be a parser,
+</I>&gt;<i>
+</I>&gt;<i> You appear to be under a misapprehension. There is already a parser.
+</I>&gt;<i>
+</I>&gt;<i> Furthermore, by the end of the year, that parsing ability should be
+</I>&gt;<i> built into the second most popular browser on the Internet, allowing
+</I>&gt;<i> people to more simply write their own parser, in the same way that the
+</I>&gt;<i> tens of thousands of extensions to Firefox currently available have  
+</I>&gt;<i> been
+</I>&gt;<i> written.
+</I>&gt;<i>
+</I>&gt;&gt;<i> I'd much rather see an organization like
+</I>&gt;&gt;<i> uBio first index all names and expose these as LSIDs. With names  
+</I>&gt;&gt;<i> parsed and
+</I>&gt;&gt;<i> exposed as LSIDs, the door is open to cross-domain querying and  
+</I>&gt;&gt;<i> aggregation.
+</I>&gt;<i>
+</I>&gt;<i> I don't doubt that that's a useful thing to happen; but I don't see it
+</I>&gt;<i> as a binary choice. Nor will it resolve many of the issues  
+</I>&gt;<i> addressed by
+</I>&gt;<i> the species microformat.
+</I>&gt;<i>
+</I>&gt;&gt;<i> uBio's FindIT already does parse published web pages and OCR'd  
+</I>&gt;&gt;<i> PDFs for
+</I>&gt;&gt;<i> taxonomic names and does so quite well without the need for  
+</I>&gt;&gt;<i> additional
+</I>&gt;&gt;<i> mark-up (e.g. <A HREF="http://www.biodiversitylibrary.org/">http://www.biodiversitylibrary.org/</A>).
+</I>&gt;<i>
+</I>&gt;<i> And then what does it do with them? Does it address the use-cases
+</I>&gt;<i> outlined for the species microformat? Does it cater for vernacular
+</I>&gt;<i> names? What happens when that service hits a false positive, such as
+</I>&gt;<i> &quot;Baracus&quot; in:
+</I>&gt;<i>
+</I>&gt;<i>         B. A. Baracus, a character on the television series The A-Team
+</I>&gt;<i>
+</I>&gt;<i>         &lt;<A HREF="http://en.wikipedia.org/wiki/Ba">http://en.wikipedia.org/wiki/Ba</A>&gt; ?
+</I>&gt;<i>
+</I>&gt;<i> The 'species' microformat directly addresses and can prevent such
+</I>&gt;<i> confusion.
+</I>&gt;<i>
+</I>&gt;<i> Unless it has changed since we last discussed it, FindIT does not act
+</I>&gt;<i> upon the page currently viewed in the browser (which is what happens
+</I>&gt;<i> with the microformat), but requires the page's URL to be manually
+</I>&gt;<i> submitted to it. Nor does it allow the user to select a service or
+</I>&gt;<i> services to which the parsed name is submitted.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;&gt;<i> Microformats have uses
+</I>&gt;&gt;<i> elsewhere for previously unstructured content and I think it  
+</I>&gt;&gt;<i> probably would
+</I>&gt;&gt;<i> be quite useful for common names on web pages. But, we already  
+</I>&gt;&gt;<i> have some
+</I>&gt;&gt;<i> structure with taxonomic names, an ever-growing index of all  
+</I>&gt;&gt;<i> names, and a
+</I>&gt;&gt;<i> parsing algorithm in production (parsing PDFs is more important at  
+</I>&gt;&gt;<i> this
+</I>&gt;&gt;<i> stage), so let's use these to our advantage.
+</I>&gt;<i>
+</I>&gt;<i> Again, why is this a binary choice?
+</I>&gt;<i>
+</I>&gt;&gt;<i> Microformats would be so much more attractive if we could point  
+</I>&gt;&gt;<i> users to
+</I>&gt;&gt;<i> existing parsers.
+</I>&gt;<i>
+</I>&gt;<i> I already did that, just today.
+</I>&gt;<i>
+</I>&gt;&gt;<i> It would also help to give providers a clear reason for
+</I>&gt;&gt;<i> expending effort marking up their content. At this stage of  
+</I>&gt;&gt;<i> microformat
+</I>&gt;&gt;<i> development, a content provider doesn't get anything in return for  
+</I>&gt;&gt;<i> keeping
+</I>&gt;&gt;<i> up with a standard in flux.
+</I>&gt;<i>
+</I>&gt;<i> They get to contribute to the development and solidification of an
+</I>&gt;<i> emerging standard. I realise that not everyone may wish, or be  
+</I>&gt;<i> able, to
+</I>&gt;<i> devote resources to this, but the invitation is made; and I've made it
+</I>&gt;<i> without suggesting - much less on false premise - that people turn  
+</I>&gt;<i> away
+</I>&gt;<i> from any other initiative.
+</I>&gt;<i>
+</I>&gt;<i> Your post seems to be a rehash of many issues I though we'd resolved
+</I>&gt;<i> nearly a year ago:
+</I>&gt;<i>
+</I>&gt;<i>   &lt;<A HREF="http://microformats.org/discuss/mail/microformats-discuss/2006-">http://microformats.org/discuss/mail/microformats-discuss/2006-</A> 
+</I>&gt;<i> December/007481.html&gt;
+</I>&gt;<i>
+</I>&gt;<i>   &lt;<A HREF="http://microformats.org/discuss/mail/microformats-discuss/2006-">http://microformats.org/discuss/mail/microformats-discuss/2006-</A> 
+</I>&gt;<i> December/007501.html&gt;
+</I>&gt;<i>
+</I>&gt;<i>   &lt;<A HREF="http://microformats.org/discuss/mail/microformats-discuss/2006-">http://microformats.org/discuss/mail/microformats-discuss/2006-</A> 
+</I>&gt;<i> December/007532.html&gt;
+</I>&gt;<i>
+</I>&gt;<i> -- 
+</I>&gt;<i> Andy Mabbett
+</I>&gt;<i>
+</I>&gt;<i>             *  Are you using Microformats, yet: &lt;<A HREF="http://">http://</A> 
+</I>&gt;<i> microformats.org/&gt; ?
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Taxacom mailing list
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;<i>
+</I>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="109600.html">[Taxacom] Consider using the draft &quot;species&quot; microformat...
+</A></li>
+	<LI>Next message: <A HREF="109604.html">[Taxacom] Consider using the draft 'species' microformat...
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#109603">[ date ]</a>
+              <a href="thread.html#109603">[ thread ]</a>
+              <a href="subject.html#109603">[ subject ]</a>
+              <a href="author.html#109603">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

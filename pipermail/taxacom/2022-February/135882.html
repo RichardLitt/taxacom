@@ -1,0 +1,297 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Taxacom: Tropicos and gender of names
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2022-February/135882.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Taxacom: Tropicos and gender of names</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at bishopmuseum.org<BR>
+    <I data-pagefind-meta="date">Tue Feb  8 15:24:23 CST 2022</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="135881.html">Taxacom: Protists
+</A></li>
+        <LI>Next message: <A HREF="135883.html">Taxacom: Protists
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#135882">[ date ]</a>
+              <a href="thread.html#135882">[ thread ]</a>
+              <a href="subject.html#135882">[ subject ]</a>
+              <a href="author.html#135882">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2022</span><!--beginarticle-->
+<PRE>Indeed!
+
+ 
+
+A big problem with the exploding plethora of identifiers for ?names? is that we have many different understandings of what ?thing? the identifier represents.  I often joke that if you put 10 taxonomists in a room, there will be at least 12 definitions for what a ?name? is.  There?s the obvious ?full combination? vs. ?individual epithet? distinction (kinda-sorta a botany vs. zoology distinction?ish), but there are dozens of other flavors of distinctions regarding whether two different ?things? are the same name, or a different name.  As a consequence, different databases with different assumptions about the essence of a ?name? will mint identifiers that do not align 1:1 with identifiers from other databases.  The approach taken for the Global Names initiative (which included IPNI folks in its development) is twofold. The Global Names Index (GNI) treats each literal UTF-8 character string (with some very basic massaging like elimination of redundant whitespace) as a unique ?thing?, and the identifier is actually a UUID hashed from the string itself. The Global Names Usage Bank (GNUB; the database behind ZooBank) assigns identifiers to individual name-usage instances (specific treatment of names within a specific Reference) as the ?thing?. This is done granularly, such that a name like ?Aus bus subsp. cus? represents three distinct taxonomic name usage instances with three separate identifiers, and the full combination (name sensu botanical perspective) is represented by the array of the three identifiers.
+
+ 
+
+This is not the place to expound on the subtle details, but the point is that text-string names should not be thought of as ?identifiers? in a computer/database sense (unless you treat the literal UFT-8 character string or hashed representation thereof as the ?thing?, in which case you don?t really have an identifier for a scientific name but rather for a specific sequence of UTF-8 characters).
+
+ 
+
+Aloha,
+
+Rich
+
+ 
+
+Richard L. Pyle, PhD
+Senior Curator of Ichthyology | Director of XCoRE
+
+Bernice Pauahi Bishop Museum
+
+1525 Bernice Street, Honolulu, HI 96817-2704
+
+Office: (808) 848-4115;  Fax: (808) 847-8252
+
+eMail: deepreef at bishopmuseum.org
+
+ &lt;<A HREF="https://nam10.safelinks.protection.outlook.com/?url=http%3A%2F%2Fhbs.bishopmuseum.org%2Fstaff%2Fpylerichard.html&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C2cc656ea3f834338235708d9eb4963bd%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637799523597893070%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&amp;amp;sdatatD2yukztUmFaa6OGXWEw9tH%2BJDm6CmkrNkHgBdE%2Bc%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=http%3A%2F%2Fhbs.bishopmuseum.org%2Fstaff%2Fpylerichard.html&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C2cc656ea3f834338235708d9eb4963bd%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637799523597893070%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&amp;amp;sdatatD2yukztUmFaa6OGXWEw9tH%2BJDm6CmkrNkHgBdE%2Bc%3D&amp;amp;reserved=0</A>&gt; BishopMuseum.org
+
+Our Mission: Bishop Museum inspires our community and visitors through the exploration and celebration of the extraordinary history, culture, and environment of Hawai?i and the Pacific.
+
+ 
+
+From: Rafa?l Govaerts &lt;R.Govaerts at kew.org&gt; 
+Sent: Tuesday, February 8, 2022 12:30 AM
+To: Richard Pyle &lt;deepreef at bishopmuseum.org&gt;; 'Sharkey, Michael J.' &lt;msharkey at uky.edu&gt;; taxacom at lists.ku.edu; 'Douglas Yanega' &lt;dyanega at gmail.com&gt;
+Subject: RE: Taxacom: Tropicos and gender of names
+
+ 
+
+Names can indeed not be identifiers, the IT team was struggling yesterday with the identical heterotypic homonyms Peperomia dusenii C.DC. and Peperomia dusenii C.DC. and it is not unusual in Botany to have homonyms even on the same page so even taking the entire protologue citation into account would not work.
+Fortunately IPNI has been providing stable identifiers for vascular plant names since the last millennium; unfortunately it seems that the IT nerds feel the necessity to come up with new IDs every few years, at every TDWG conference there is at least one talk from someone who came up with newer and better IDs. Botanists themselves have not been much better and most plant name databases use their own IDs like The Plant List, World Flora Online and even TROPICOS, even though that originally started from an IPNI download.
+There are stable, global IDs for plant names for more than 22 years; USE THEM ! 
+The tools exist to add them to your databases.
+Rafael
+
+
+-----Original Message-----
+From: Richard Pyle &lt;deepreef at bishopmuseum.org &lt;mailto:deepreef at bishopmuseum.org&gt; &gt; 
+Sent: 08 February 2022 09:48
+To: 'Sharkey, Michael J.' &lt;msharkey at uky.edu &lt;mailto:msharkey at uky.edu&gt; &gt;; Rafa?l Govaerts &lt;R.Govaerts at kew.org &lt;mailto:R.Govaerts at kew.org&gt; &gt;; taxacom at lists.ku.edu &lt;mailto:taxacom at lists.ku.edu&gt; ; 'Douglas Yanega' &lt;dyanega at gmail.com &lt;mailto:dyanega at gmail.com&gt; &gt;
+Subject: RE: Taxacom: Tropicos and gender of names
+
+CAUTION: This email originated from outside the organisation. Do not click links or open attachments unless you recognise the sender and know the content is safe.
+
+I'm not going to dive into this thread too deeply, but I will say that using text-string scientific names as unique identifiers for computers is not a viable proposition. Perhaps it made sense back in the previous century (pre-2000), but the idea of consistent scientific-name text strings for use as computer database identifiers is now long gone.
+
+The reality is that alternate spellings already exist in both paper and electronic form, so the job of the database is to track the variants and cross-link them. Think of scientific names more as &quot;finding aids&quot;, rather than identifiers. It's not the case that we need to standardize on scientific name spellings in order to make our databases work; rather, our databases should be designed to obviate the need for consistent spelling. In other words, in the modern computer era, we should be aiming for a paradigm where gender agreement (or abandonment thereof) is irrelevant to accessing electronic information cross-linked to scientific names. I think we're getting close to achieving that paradigm.
+
+Aloha,
+Rich
+
+Richard L. Pyle, PhD
+Senior Curator of Ichthyology | Director of XCoRE Bernice Pauahi Bishop Museum
+1525 Bernice Street, Honolulu, HI 96817-2704
+Office: (808) 848-4115; Fax: (808) 847-8252
+eMail: deepreef at bishopmuseum.org &lt;mailto:deepreef at bishopmuseum.org&gt; 
+BishopMuseum.org
+Our Mission: Bishop Museum inspires our community and visitors through the exploration and celebration of the extraordinary history, culture, and environment of Hawai?i and the Pacific.
+
+&gt; -----Original Message-----
+&gt; From: Taxacom &lt;taxacom-bounces at lists.ku.edu &lt;mailto:taxacom-bounces at lists.ku.edu&gt; &gt; On Behalf Of Sharkey, 
+&gt; Michael J. via Taxacom
+&gt; Sent: Monday, February 7, 2022 6:12 PM
+&gt; To: Rafa?l Govaerts &lt;R.Govaerts at kew.org &lt;mailto:R.Govaerts at kew.org&gt; &gt;; taxacom at lists.ku.edu &lt;mailto:taxacom at lists.ku.edu&gt; ; 
+&gt; Douglas Yanega &lt;dyanega at gmail.com &lt;mailto:dyanega at gmail.com&gt; &gt;
+&gt; Subject: Re: Taxacom: Tropicos and gender of names
+&gt;
+&gt; Does all of this discourse not make it obvious that gender agreement 
+&gt; is a Victorian era remnant that has no place in modern, machine-read, 
+&gt; names? We only need unique identifiers. Complete nonsense. Stick with 
+&gt; the original spelling regardless.
+&gt;
+&gt; Michael Sharkey
+&gt; The Hymenoptera Institute
+&gt; Professor Emeritus
+&gt; University of Kentucky
+&gt; (859) 396-1649
+&gt; msharkey at uky.edu &lt;mailto:msharkey at uky.edu&gt; 
+&gt; <A HREF="https://nam10.safelinks.protection.outlook.com/?url=http%3A%2F%2Fwww.s%2F&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C2cc656ea3f834338235708d9eb4963bd%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637799523597893070%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&amp;amp;sdata=vlPwfhU06PaapIqS0v%2FJFiKmxERMse0%2BYBgqd2uOl5Y%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=http%3A%2F%2Fwww.s%2F&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C2cc656ea3f834338235708d9eb4963bd%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637799523597893070%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&amp;amp;sdata=vlPwfhU06PaapIqS0v%2FJFiKmxERMse0%2BYBgqd2uOl5Y%3D&amp;amp;reserved=0</A>
+&gt; <A HREF="http://harkeylab.org%2F">http://harkeylab.org%2F</A>
+&gt; &amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C6d66
+&gt; a8985e934512a4ee08d9eab91b1b%7C3c176536afe643f5b96636feabbe3c1a
+&gt; %7C0%7C0%7C637798903019849628%7CUnknown%7CTWFpbGZsb3d8eyJW
+&gt; IjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C
+&gt; 3000&amp;amp;sdata=t75zZDse%2BAlKKK0Xze2AZHGh9YN2vmIYepmcVgZfT6U%3
+&gt; D&amp;amp;reserved=0
+&gt; ________________________________
+&gt; From: Taxacom &lt;taxacom-bounces at lists.ku.edu &lt;mailto:taxacom-bounces at lists.ku.edu&gt; &gt; on behalf of Douglas 
+&gt; Yanega via Taxacom &lt;taxacom at lists.ku.edu &lt;mailto:taxacom at lists.ku.edu&gt; &gt;
+&gt; Sent: Monday, February 7, 2022 7:35 PM
+&gt; To: Rafa?l Govaerts &lt;R.Govaerts at kew.org &lt;mailto:R.Govaerts at kew.org&gt; &gt;; taxacom at lists.ku.edu &lt;mailto:taxacom at lists.ku.edu&gt; 
+&gt; &lt;taxacom at lists.ku.edu &lt;mailto:taxacom at lists.ku.edu&gt; &gt;
+&gt; Subject: Re: Taxacom: Tropicos and gender of names
+&gt;
+&gt; CAUTION: External Sender
+&gt;
+&gt;
+&gt; On 2/7/22 2:16 PM, Rafa?l Govaerts wrote:
+&gt; &gt; Dear Doug,
+&gt; &gt; In Botany, the rule is that the original spelling should be 
+&gt; &gt; maintained unless it is against one of the articles.
+&gt; &gt; So e.g.
+&gt; &gt; <A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fipni">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fipni</A>
+&gt; &gt; .org%2Fn%2F77142913-
+&gt; 1&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C6d66
+&gt; &gt;
+&gt; a8985e934512a4ee08d9eab91b1b%7C3c176536afe643f5b96636feabbe3c1a
+&gt; %7C0%7C
+&gt; &gt;
+&gt; 0%7C637798903019849628%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wL
+&gt; jAwMDAiLCJ
+&gt; &gt;
+&gt; QIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&amp;amp;sdata=ol5a
+&gt; Qno5N
+&gt; &gt; ALTARWkgRLlR4LNhz80bXZfj7HWVFqmhw8%3D&amp;amp;reserved=0
+&gt; &gt; Zingiber tenuiscapus is not to be corrected to tenuiscapa as it is 
+&gt; &gt; correct as a noun.
+&gt; &gt;
+&gt; &gt; If a choice is possible, e.g. &quot;nanus&quot; in a masculine genus is 
+&gt; &gt; transferred to a feminine genus and if the author uses &quot;nanus&quot; then 
+&gt; &gt; that is not correctable as he treats it as a noun. Subsequent 
+&gt; &gt; authors must then follow that.
+&gt; &gt; Unless of course in the original publication it clearly indicated as 
+&gt; &gt; an adjective.
+&gt;
+&gt; Apparently the Tropicos database does not follow this rule.
+&gt;
+&gt; Zingiber is treated there as neuter, and it does not list this species.
+&gt; It does, however, list both &quot;didymoglossa&quot; and &quot;didymoglossum&quot; under 
+&gt; Zingiber, both citing the same author and date. There is also a &quot;longiglande&quot;
+&gt; which is grammatically impossible, and likewise would appear to be an 
+&gt; automated algorithm changing all &quot;-is&quot; endings to &quot;-e&quot;
+&gt; even if they are genitive noun forms like &quot;glandis&quot;.
+&gt;
+&gt; Again, I was making two points: (1) not all resources are trustworthy, 
+&gt; nor do they yield consistent results (2) given this, we would do well 
+&gt; to place the burden of gender agreement on authoritative nomenclatural 
+&gt; registries, rather than individual taxonomists.
+&gt;
+&gt; &gt;
+&gt; &gt; There are many published books indicating the gender of genera, 
+&gt; &gt; perhaps the best known is
+&gt; &gt;
+&gt; <A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.</A>
+&gt; &gt;
+&gt; <A HREF="http://bgbm.org%2FIAPT%2Fncu%2Fgenera%2FImprintRegVegNCU3.htm">http://bgbm.org%2FIAPT%2Fncu%2Fgenera%2FImprintRegVegNCU3.htm</A> &amp;amp;data
+&gt; %7C0
+&gt; &gt;
+&gt; 1%7Ctaxacom%40lists.ku.edu%7C6d66a8985e934512a4ee08d9eab91b1b%7C
+&gt; 3c1765
+&gt; &gt;
+&gt; 36afe643f5b96636feabbe3c1a%7C0%7C0%7C637798903019849628%7CUnk
+&gt; nown%7CTW
+&gt; &gt;
+&gt; FpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXV
+&gt; CI6
+&gt; &gt;
+&gt; Mn0%3D%7C3000&amp;amp;sdata=4Jx%2Fyd1JEARHwYqk370xgT%2BaorKi4OcE6
+&gt; 3yQphRMP3
+&gt; &gt; 0%3D&amp;amp;reserved=0
+&gt;
+&gt; This seems like precisely the sort of resource I am advocating for all 
+&gt; organismal names. If all botanists agree to adhere to whatever it says 
+&gt; in this source, *and* the names there are immune from being disputed 
+&gt; and changed, then it is EXACTLY what I am advocating: an authoritative nomenclatural registry.
+&gt;
+&gt; Peace,
+&gt;
+&gt; --
+&gt; Doug Yanega Dept. of Entomology Entomology Research Museum
+&gt; Univ. of California, Riverside, CA 92521-0314 skype: dyanega
+&gt; phone: (951) 827-4315 (disclaimer: opinions are mine, not UCR's)
+&gt;
+&gt; <A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffaculty">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffaculty</A>
+&gt; <A HREF="https://nam10.safelinks.protection.outlook.com/?url=http%3A%2F%2Fucr.edu%2F~heraty%2Fyanega.html&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C2cc656ea3f834338235708d9eb4963bd%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637799523597893070%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&amp;amp;sdata=pipAwwkZfLtruBilIv25VNdsqfTytsSCkpbqT0gzWAQ%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=http%3A%2F%2Fucr.edu%2F~heraty%2Fyanega.html&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C2cc656ea3f834338235708d9eb4963bd%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637799523597893070%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&amp;amp;sdata=pipAwwkZfLtruBilIv25VNdsqfTytsSCkpbqT0gzWAQ%3D&amp;amp;reserved=0</A>
+&gt; &amp;amp;data%7C01%7Ctaxacom%40list
+&gt; s.ku.edu%7C6d66a8985e934512a4ee08d9eab91b1b%7C3c176536afe643f5b9
+&gt; 6636feabbe3c1a%7C0%7C0%7C637798903019849628%7CUnknown%7CTWF
+&gt; pbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXV
+&gt; CI6Mn0%3D%7C3000&amp;amp;sdataåRDoV3T%2FlqSDreBGrWZQxx9rXvnQG6
+&gt; KXpu%2FPiB8cwo%3D&amp;amp;reserved=0
+&gt; &quot;There are some enterprises in which a careful disorderliness
+&gt; is the true method&quot; - Herman Melville, Moby Dick, Chap. 82 
+&gt; _______________________________________________
+&gt; Taxacom Mailing List
+&gt;
+&gt; Send Taxacom mailing list submissions to: taxacom at lists.ku.edu &lt;mailto:taxacom at lists.ku.edu&gt;  For
+&gt; list information; to subscribe or unsubscribe, visit:
+&gt; <A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Flists.ku%2F&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C2cc656ea3f834338235708d9eb4963bd%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637799523597893070%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&amp;amp;sdata=rHoPRezmi9vmYI2zNxh47O2ImEtha4R1h0ofrCnvSgw%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Flists.ku%2F&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C2cc656ea3f834338235708d9eb4963bd%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637799523597893070%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&amp;amp;sdata=rHoPRezmi9vmYI2zNxh47O2ImEtha4R1h0ofrCnvSgw%3D&amp;amp;reserved=0</A>
+&gt; .edu%2Flistinfo%2Ftaxacom&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu
+&gt; %7C6d66a8985e934512a4ee08d9eab91b1b%7C3c176536afe643f5b96636fea
+&gt; bbe3c1a%7C0%7C0%7C637798903019849628%7CUnknown%7CTWFpbGZsb
+&gt; 3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0
+&gt; %3D%7C3000&amp;amp;sdata=LpqUSgWsS7ouzbbdfC9vRw6R0%2FD%2Bc5Y%2FA
+&gt; 5mCT2ioEAk%3D&amp;amp;reserved=0
+&gt; You can reach the person managing the list at: 
+&gt; taxacom-owner at lists.ku.edu &lt;mailto:taxacom-owner at lists.ku.edu&gt;  The Taxacom email archive back to 1992 can be searched at:
+&gt; <A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Ftaxaco">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Ftaxaco</A>
+&gt; <A HREF="http://m.markmail.org%2F">http://m.markmail.org%2F</A>
+&gt; &amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C6d6
+&gt; 6a8985e934512a4ee08d9eab91b1b%7C3c176536afe643f5b96636feabbe3c1
+&gt; a%7C0%7C0%7C637798903019849628%7CUnknown%7CTWFpbGZsb3d8eyJ
+&gt; WIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7
+&gt; C3000&amp;amp;sdata=HXLl7byti%2BatNsYyFZjTFVpLWbjMkQ8xDUjZ35BQT6k%3
+&gt; D&amp;amp;reserved=0
+&gt;
+&gt; Nurturing nuance while assailing ambiguity for about 35 years, 1987-2022.
+&gt; _______________________________________________
+&gt; Taxacom Mailing List
+&gt;
+&gt; Send Taxacom mailing list submissions to: taxacom at lists.ku.edu &lt;mailto:taxacom at lists.ku.edu&gt;  For
+&gt; list information; to subscribe or unsubscribe, visit:
+&gt; <A HREF="https://lists.ku.edu/listinfo/taxacom">https://lists.ku.edu/listinfo/taxacom</A>
+&gt; You can reach the person managing the list at: 
+&gt; taxacom-owner at lists.ku.edu &lt;mailto:taxacom-owner at lists.ku.edu&gt;  The Taxacom email archive back to 1992 can be searched at:
+&gt; <A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Ftaxacom.markmail.org%2F&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C2cc656ea3f834338235708d9eb4963bd%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637799523597893070%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&amp;amp;sdata=raj0zRQeLrCrrgQVKtWMAXicfapc2H7AjwDu8wWvWb4%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Ftaxacom.markmail.org%2F&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C2cc656ea3f834338235708d9eb4963bd%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637799523597893070%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&amp;amp;sdata=raj0zRQeLrCrrgQVKtWMAXicfapc2H7AjwDu8wWvWb4%3D&amp;amp;reserved=0</A>
+&gt;
+&gt; Nurturing nuance while assailing ambiguity for about 35 years, 1987-2022.
+
+
+
+Disclaimer
+
+The information contained in this communication from the sender is confidential. It is intended solely for use by the recipient and others authorized to receive it. If you are not the recipient, you are hereby notified that any disclosure, copying, distribution or taking action in relation of the contents of this information is strictly prohibited and may be unlawful.
+
+This email has been scanned for viruses and malware, and may have been automatically archived by Mimecast Ltd, an innovator in Software as a Service (SaaS) for business. Providing a safer and more useful place for your human generated data. Specializing in; Security, archiving and compliance. To find out more Click Here &lt;<A HREF="https://nam10.safelinks.protection.outlook.com/?url=http%3A%2F%2Fwww.mimecast.com%2Fproducts%2F&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C2cc656ea3f834338235708d9eb4963bd%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637799523597893070%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&amp;amp;sdata=mU1JTLSINTq3FHUbZCXmO2fRrsBs%2F6QNEU2dbmoKJGE%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=http%3A%2F%2Fwww.mimecast.com%2Fproducts%2F&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C2cc656ea3f834338235708d9eb4963bd%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637799523597893070%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&amp;amp;sdata=mU1JTLSINTq3FHUbZCXmO2fRrsBs%2F6QNEU2dbmoKJGE%3D&amp;amp;reserved=0</A>&gt; .
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="135881.html">Taxacom: Protists
+</A></li>
+        <LI>Next message: <A HREF="135883.html">Taxacom: Protists
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#135882">[ date ]</a>
+              <a href="thread.html#135882">[ thread ]</a>
+              <a href="subject.html#135882">[ subject ]</a>
+              <a href="author.html#135882">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Imprecise locality records
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2000-August/084407.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Imprecise locality records</H1>
+    <B data-pagefind-meta="author">Bob Mesibov</B>
+    mesibov at SOUTHCOM.COM.AU<BR>
+    <I data-pagefind-meta="date">Tue Aug 22 19:59:28 CDT 2000</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="084404.html">Converting Township Range Section data to lat/lon
+</A></li>
+        <LI>Next message: <A HREF="084418.html">Imprecise locality records
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#084407">[ date ]</a>
+              <a href="thread.html#084407">[ thread ]</a>
+              <a href="subject.html#084407">[ subject ]</a>
+              <a href="author.html#084407">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2000</span><!--beginarticle-->
+<PRE>A widely used procedure for dealing with uncertain locality records in
+databases is to specify them as well-defined points in the main locator
+fields, then to add an appropriate uncertainty to a precision field.
+This uncertainty entry can be something like (plus or minus) '1 mile' or
+(plus or minus) '50 miles', and details (as Peter Rauch says) can be
+spelled out in the metadata.
+
+When plotting maps from such a database using GIS, you can use the
+uncertainty field to vary the size of the markers. Circular markers can
+be drawn by the GIS to be the same scale size as the diameter of the
+uncertainty entry: '50 miles' becomes a scale circle 100 miles in
+diameter.
+
+Lat/long and UTM coordinates are rectangular, not circular. The
+cartographically approved way to specify a locality is to identify the
+smallest rectangular box WITHIN WHICH the specimen is known to have been
+recorded, NOT the intersection of lat/long or UTM lines closest to the
+locality. In my part of the world, lat/long coordinates specify the
+northwest corner of the lat/long box containing a locality. In mapping
+such a locality using GIS, the point I would actually map is the CENTRE
+of that lat/long box.
+
+Converting between coordinate systems unavoidably creates an additional
+level of uncertainty, because different grids of boxes overlap in
+complex ways. There are really only two ways to deal with the problem.
+One is to reduce the scale of mapping, so that the difference in
+precision between good and poor locality information isn't so obvious.
+
+A harder but more satisfactory approach is to upgrade the precision of
+the original record. The taxonomic literature is rich in instances of
+locality corrections and clarifications, the result of taxonomists
+chasing up information in expedition reports, field notebooks and
+people's memories. Again in my own case, I was able to shrink a
+centipede locality from a 10 km square to a 2 km square by showing a
+good-quality topographic map to the original collector, 45 years after
+the event! It's the kind of tedious, nit-picking work that should only
+be done when precise locality information is taxonomically important.
+
+You're out of luck if the collector is long dead, there were never any
+field notes and the label says something like 'Brushy Creek', which
+wanders for 100 miles through a landscape lacking any other named
+features to which the collector could have referred. I've seen published
+maps in which such localities are shown as very large question marks
+over arbitrary points!
+
+Bob
+--
+Dr Robert Mesibov
+Honorary Research Associate
+Queen Victoria Museum and Art Gallery
+Home contact: PO Box 101, Penguin, Tasmania, Australia 7316
+(03) 6437 1195; international 61 3 6437 1195
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="084404.html">Converting Township Range Section data to lat/lon
+</A></li>
+        <LI>Next message: <A HREF="084418.html">Imprecise locality records
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#084407">[ date ]</a>
+              <a href="thread.html#084407">[ thread ]</a>
+              <a href="subject.html#084407">[ subject ]</a>
+              <a href="author.html#084407">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

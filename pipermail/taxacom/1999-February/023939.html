@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> data sharing
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20data%20sharing&In-Reply-To=%3Cmailman.10367.1157126741.2564.taxacom%40mailman.nhm.ku.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="107090.html">
+   <LINK REL="Next"  HREF="059731.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1999-February/023939.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">data sharing</H1>
+    <B data-pagefind-meta="author">Steve Ginzbarg</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20data%20sharing&In-Reply-To=%3Cmailman.10367.1157126741.2564.taxacom%40mailman.nhm.ku.edu%3E"
+       TITLE="data sharing">sginzbar at BIOLOGY.AS.UA.EDU
+       </A><BR>
+    <I data-pagefind-meta="date">Sun Feb 21 11:43:23 CST 1999</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="107090.html">Exchange days in Europe in 1999
+</A></li>
+        <LI>Next message: <A HREF="059731.html">data sharing
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#23939">[ date ]</a>
+              <a href="thread.html#23939">[ thread ]</a>
+              <a href="subject.html#23939">[ subject ]</a>
+              <a href="author.html#23939">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>1999</span><!--beginarticle-->
+<PRE>Dear Dave,
+
+I am very glad that the Z39.50 Biology Implementers Group (ZBIG) is
+working on developing a Z39.50 profile, dubbed the Darwin Core. It
+will provide a common language for data exchange which promises to
+make it possible to send a single query over the internet to multiple
+biological collection databases each using their own database
+structures (flat file, relational, object oriented), data fields and
+formats and to have the data returned in real time as if a single
+database was being queried. It will also allow participating databases
+shared access to taxonomic authority files. I am glad that the
+shared data exchange language is being developed and will be
+maintained by the biological sciences community. I don't see the
+development of the Darwin Core as a substitute for individual
+collection websites or sites like those being developed at TAMU which
+will provide public outreach to those not connected to the ZBIG network
+within the internet.
+
+Visitors to the ZBIG website at
+<A HREF="http://chipotle.nhm.ukans.edu/zbig/">http://chipotle.nhm.ukans.edu/zbig/</A>
+under The Darwin Core, The Collection Attributes, and The Taxon
+Attributes are encouraged to suggest changes or to help flesh out
+definitions by sending you an email. It would be helpful to see the
+profile attributes in something more approaching real time (last
+modified May 1, 1998) so that the comments I submit will be more
+relevant to the current draft. Here is my comment on the &quot;very
+preliminary list of attributes&quot;:
+
+Suggested changes to the Use Attributes for Biological Collections.
+
+Add an attribute Type Name
+Description: The name for which the specimen was designated as a type.
+Rational: Attribute 42 Type Status tells us if a specimen is a type
+but doesn't tell us for what scientific name it serves as type.
+Attribute 16 Scientific Name is the most recent determination of the
+specimen. A type specimen may or may not be a type of its accepted
+name. It is not always possible to determine from the accepted name
+what the Type Name of a type is. If the accepted name is a
+nomenclatural synonym of the Type Name, it would be possible to trace
+the synonomy back to the basionym which will in this case be the Type
+Name.
+
+Ex.: Type Name: Aster sonomensis E. Greene
+     Accepted Name: Aster chilensis Nees var. sonomensis (E. Greene) Jepson
+     Basionym of Accepted Name: Aster sonomensis E. Greene
+
+If on the other hand the accepted name is a taxonomic synonym of the
+Type Name it will be based on a different type and its basionym will
+not be the Type Name.
+
+Ex.: Type Name: Aster sonomensis E. Greene
+     Accepted Name: Symphyotrichum lentum (E. Greene) Nesom
+     Basionym of Accepted Name: Aster lentus E. Greene
+
+Suppose that the holotype of Aster sonomensis E. Greene has been
+destroyed and I want to examine the available isotypes in order to
+select a lectotype. I would not be able to find out in what
+institutions and collections they are housed using a Darwin Core
+Profile query based on Scientific Name and Type Status. If I knew
+attribute 25 Collector Name and the collector's collection number (for
+which no attribute has been assigned in the preliminary list) of the
+type I could obtain this information for some names. (This query would
+also be useful as it would return not only type specimens which have
+been recognized as such in the collections where they are housed as
+indicated by attribute 42 Type Status but also unrecognized types.)
+However many older descriptions do not give the collection number of
+the type. To locate all the recognized types for a taxonomic name a
+Type Name attribute will be needed.
+
+
+
+-Steve Ginzbarg
+
+Steve Ginzbarg, Assistant Curator
+Herbarium (UNA)
+Department of Biological Sciences
+Box 870345
+The University of Alabama
+Tuscaloosa, AL 35487-0345
+
+(205) 348-1829, FAX: (205) 348-6460
+<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">sginzbar at biology.as.ua.edu</A>
+
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="107090.html">Exchange days in Europe in 1999
+</A></li>
+	<LI>Next message: <A HREF="059731.html">data sharing
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#23939">[ date ]</a>
+              <a href="thread.html#23939">[ thread ]</a>
+              <a href="subject.html#23939">[ subject ]</a>
+              <a href="author.html#23939">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

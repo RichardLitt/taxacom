@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Taxacom: a class of errors in Worms (and similar databases)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2025-February/138075.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Taxacom: a class of errors in Worms (and similar databases)</H1>
+    <B data-pagefind-meta="author">Erikjan Rijkers</B>
+    er at xs4all.nl<BR>
+    <I data-pagefind-meta="date">Sun Feb 23 01:56:43 CST 2025</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="138074.html">Taxacom: Taxonomy in the public view
+</A></li>
+        <LI>Next message: <A HREF="138076.html">Taxacom: a class of errors in Worms (and similar databases)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#138075">[ date ]</a>
+              <a href="thread.html#138075">[ thread ]</a>
+              <a href="subject.html#138075">[ subject ]</a>
+              <a href="author.html#138075">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2025</span><!--beginarticle-->
+<PRE>Hello,
+
+This is a request to taxonomic database implementors/admins. The Worms 
+database is just an example.
+
+On page
+   <A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.marinespecies.org%2Faphia.php%3Fp%3Dtaxdetails%26id%3D344099&amp;data=05%7C02%7Ctaxacom%40lists.ku.edu%7Cdb706a3f81624b9121d908dd53dfa71c%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638758942239164273%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=Ae9MywLv2bBNWSDYVg19jB9MOsiaC0t0gU2E1BMjnR0%3D&amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.marinespecies.org%2Faphia.php%3Fp%3Dtaxdetails%26id%3D344099&amp;data=05%7C02%7Ctaxacom%40lists.ku.edu%7Cdb706a3f81624b9121d908dd53dfa71c%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638758942239164273%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=Ae9MywLv2bBNWSDYVg19jB9MOsiaC0t0gU2E1BMjnR0%3D&amp;reserved=0</A>
+
+There is the species name and a genus name:
+   Papasula abbotti Ridgway, 1893
+   Papasula Olson &amp; Warheit, 1988
+
+These are, of course, literature references. Ridgway in 1893 described 
+Sula abbotti [1]. It seems clear that parentheses are needed, like so:
+   Papasula abbotti (Ridgway, 1893)
+
+The year of the genus being more recent than the species name, i.e., 
+1988 &gt; 1893, already implied that parentheses are needed.
+
+It seems to me such cases can be easily found automatically and changes 
+could be made, perhaps also automatically, or at least flagged to the 
+editor(s) concerned as a change that is probably needed.
+
+Perhaps such changes or flagging could be implemented? It seems such a 
+small and simple improvement.
+
+Thanks,
+
+Erikjan Rijkers
+
+
+[1] <A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.biodiversitylibrary.org%2Fpage%2F15780967&amp;data=05%7C02%7Ctaxacom%40lists.ku.edu%7Cdb706a3f81624b9121d908dd53dfa71c%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638758942239184007%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=C9DSZ%2BCM6KNtu1HXJy65RlOiA%2F39PSHJ402ICEgNj4A%3D&amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.biodiversitylibrary.org%2Fpage%2F15780967&amp;data=05%7C02%7Ctaxacom%40lists.ku.edu%7Cdb706a3f81624b9121d908dd53dfa71c%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638758942239184007%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=C9DSZ%2BCM6KNtu1HXJy65RlOiA%2F39PSHJ402ICEgNj4A%3D&amp;reserved=0</A>
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="138074.html">Taxacom: Taxonomy in the public view
+</A></li>
+        <LI>Next message: <A HREF="138076.html">Taxacom: a class of errors in Worms (and similar databases)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#138075">[ date ]</a>
+              <a href="thread.html#138075">[ thread ]</a>
+              <a href="subject.html#138075">[ subject ]</a>
+              <a href="author.html#138075">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

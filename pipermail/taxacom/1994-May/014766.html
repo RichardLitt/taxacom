@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> codens
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1994-May/014766.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">codens</H1>
+    <B data-pagefind-meta="author">Robert Robbins</B>
+    rrobbins at GDB.ORG<BR>
+    <I data-pagefind-meta="date">Fri May  6 17:37:11 CDT 1994</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="097919.html">codens
+</A></li>
+        <LI>Next message: <A HREF="050558.html">codens
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#014766">[ date ]</a>
+              <a href="thread.html#014766">[ thread ]</a>
+              <a href="subject.html#014766">[ subject ]</a>
+              <a href="author.html#014766">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1994</span><!--beginarticle-->
+<PRE>On Fri, 6 May 1994, Julian Humphries wrote:
+
+&gt; I have a different take on this entire problem.  First of all, we need to
+&gt; admit several things:
+&gt;
+&gt; The problem, as I see it, is that people are assuming that the barcodes (or
+&gt; specimen data) in question need to reflect current institutional/discipline
+&gt; based abbreviations.  Lets admit that that goal is impossible and move on
+&gt; to a solution.
+
+Let me second Julian's point as strongly as possible.  Any attempt to
+produce stable identifiers with historical or present semantic content
+will fail.  Even if everybody were to agree, the existence of codens that
+looked familiar but in fact contained changed values would be a source of
+endless confusion.
+
+
+&gt;  If our primary purpose is to have labels on specimens that
+&gt; are uniquely identifiable to institution (and collection) all we need is a
+&gt; list of the players and a indentically long list of numbers.  Match 'em up
+&gt; and there you go.
+
+It's not likely to be quite that simple, but close.  If, as Julian noted,
+there may be duplicate accession numbers within different components of
+the same institution, then there is a need for a hierarchy of arbitrary
+numbers.  My phone number is 903 0041 within parts of Maryland and 301 903
+0041 in North America.  Internationally, it gets a bit longer.  The idea
+is the same.
+
+&gt; Leave it to computers to tell you what institution that
+&gt; bar code (data record) is associated with.  Nothing will prevent
+&gt; collections from adding on associated labels additional ways of notating
+&gt; their collection.
+
+Exactly!  The trick is to delegate responsibility to the lowest
+APPROPRIATE level.  Some central authority is responsible for translating
+arbitrary identifiers of sites; then the identified site is responsible
+for managing the next level (and on down) identifiers at that site.  When
+I dial an international telephone number, the US phone system parses the
+number enough to figure out what country and what phone district should
+receive the call, then the resposibility for resolving the local number
+devolves to that district.
+
+&gt; Note that this makes the job of creating unique identifiers much simpler
+&gt; (and cheaper).  All that is required is the assembly of lists of
+&gt; collections (of which there are lots of such lists) and the agreement that
+&gt; *somebody* is the source for the numbering scheme.  Whether this is ICZN or
+&gt; IUBS or IOPI or ASC doesn't really matter if we can agree that agency is
+&gt; the custodian.
+
+Note that the agency must be singular.  If multiple organizations claim to
+be the official keeper of the list, trouble arises.
+
+&gt;  I bet that someone with access to the net, a scanner and a
+&gt; good editor could create a 98% complete list in less than a month.  If I am
+&gt; right, money shouldn't be a factor.  Such a simple 1 to 1 correspondence
+&gt; could then easily be incorporated into any software that needed the data.
+
+This estimate is probably pretty good.  This is not a massive project.
+The problems associated with following it out to a logical conclusion are
+sociological, not technical.  What is needed is the clear realiztion that
+acronyms are always interpreted in a context.  When I lived in California
+I was surrounded by people who knew as surely as they knew anything that
+USC meant southern cal.  Here in the mid atlantic region, USC just as
+unambiguously means University of South Carolina.
+
+As Julian noted, there are things that a computer system does very well,
+and that is keep track of lots of information without requiring that any
+mnemonics be involved.  What a computer does extremely poorly is resolve
+information in which context is a crucial clue.  Few biologists would
+confuse the identical acronyms of a major botanical collection and that of
+a zoological collection, if the subject matter were herbarium sheets.
+Programing a computer to even that level of context resolution is not easy.
+
+Also, bear in mind that using aribtrary identifiers does not rule out the
+use of familiar acronyms in the software interface.  Type in USC, the
+system recognizes that an ambiguity exists (there are two different USCs
+in the system) and asks the users to clarify his/her intent.  Users could
+even store their own preferences, if the system were appropriately
+configured (when Jones is logged in, the default for USC is Southern Cal;
+for Smith, the default is South Carolina, etc...)
+
+The sine qua non of a working database is absolutely unambiguous, stable
+identifiers.  Absolutely unambiguous means ABSOLUTELY UNAMBIGUOUS, it does
+not mean mostly unambiguous, especially if you are a true scholar and
+understand the context.
+
+I recently read about a database designed for, and successfully used by,
+practicing physicians that suddenly failed hard when it was used for a
+different medical discipline.  The problem was that it had been designed
+to avoid those nasty, dehumanizing numbers so it identified patients by a
+combination of last-name, address, and birth-date.  This worked fine for
+its original area of application, which I think was geriatrics, but when
+it was first used in pediatrics it failed and failed hard.  Twins tend to
+have the same last-name, address, and birth-date.  And, they tend to see
+the same pediatrician.
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="097919.html">codens
+</A></li>
+        <LI>Next message: <A HREF="050558.html">codens
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#014766">[ date ]</a>
+              <a href="thread.html#014766">[ thread ]</a>
+              <a href="subject.html#014766">[ subject ]</a>
+              <a href="author.html#014766">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

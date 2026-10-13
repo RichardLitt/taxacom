@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> MSAccess 1/2
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2000-August/084398.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">MSAccess 1/2</H1>
+    <B data-pagefind-meta="author">Gail E. Kampmeier</B>
+    gkamp at UIUC.EDU<BR>
+    <I data-pagefind-meta="date">Mon Aug 21 13:16:02 CDT 2000</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="084396.html">conservation biology
+</A></li>
+        <LI>Next message: <A HREF="084399.html">MS Access 2/2
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#084398">[ date ]</a>
+              <a href="thread.html#084398">[ thread ]</a>
+              <a href="subject.html#084398">[ subject ]</a>
+              <a href="author.html#084398">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2000</span><!--beginarticle-->
+<PRE>Please excuse the cross posting, but several of you probably use Microsoft
+Access for your taxonomic databases and may not have seen the following
+post:
+
+****
+CERT Advisory CA-2000-16 Microsoft 'IE Script'/Access/OBJECT Tag
+Vulnerability
+
+   Original release date: August 11, 2000
+   Last revised: --
+   Source: CERT/CC
+
+   A complete revision history is at the end of this file.
+
+Systems Affected
+
+     * Internet Explorer 4.x, 5.x
+     * Microsoft Access 97 or 2000
+
+Overview
+
+   Under certain conditions, Internet Explorer can open Microsoft Access
+   database or project files containing malicious code and execute the
+   code without giving a user prior warning. Access files that are
+   referenced by OBJECT tags in HTML documents can allow attackers to
+   execute arbitrary commands using Visual Basic for Applications (VBA)
+   or macros.
+
+   A patch which protects against all known variants of attack exploiting
+   this vulnerability is now available. A workaround which was previously
+   suggested provided protection against one specific publicly-available
+   exploit using .mdb files but did not protect against attack using many
+   other Access file types. (See Appendix B for a complete list of file
+   types.)
+
+I. Description
+
+   Last month, a workaround for the &quot;IE Script&quot; vulnerability was
+   addressed in Microsoft Security Bulletin MS00-049: Subsection
+   &quot;Workaround for 'The IE Script' Vulnerability.&quot; Microsoft has just
+   re-released MS00-049, which now includes information about a patch for
+   this vulnerability. The CERT Coordination Center is issuing this
+   advisory to raise awareness in the Internet community about the need
+   to apply this patch to protect IE users against all variants of
+   attacks which can exploit this particular vulnerability.
+
+Initial Findings
+
+   Many of the initial public details about the vulnerability were
+   discussed on the SecurityFocus Bugtraq mailing list, as well as in a
+   SANS Flash Advisory:
+
+        <A HREF="http://www.securityfocus.com/bid/1398">http://www.securityfocus.com/bid/1398</A>
+        <A HREF="http://www.sans.org/newlook/resources/win_flaw.htm">http://www.sans.org/newlook/resources/win_flaw.htm</A>
+
+   This vulnerability in IE can be used to open Access data or project
+   files. (See Appendix B for a complete list of file types.) Visual
+   Basic for Application (VBA) code embedded within these files will then
+   execute. If a warning message appears (depending on the security
+   settings in IE), it will only do so after the code has been run.
+
+   Attackers exploit this vulnerability by placing OBJECT tags in HTML
+   files posted on malicious Web sites or transmitted via email or via
+   newsgroup postings. The OBJECT tag can look like
+
+        &lt;OBJECT data=&quot;database.mdb&quot; id=&quot;d1&quot;&gt;&lt;/OBJECT&quot;&gt;
+
+   Note, however, the file extension does not have to be .mdb; an
+   attacker may use any of the ones listed in Appendix B.
+
+   The Access file can then open before any warning messages are
+   displayed, regardless of the default security settings in either IE or
+   Access. Since Access files can contain VBA or macro code executed upon
+   opening the file, arbitrary code can be run by a remote intruder on a
+   victim machine without prior warning.
+
+   While this is not an ActiveX issue per se, since all Microsoft Office
+   documents are normally treated like ActiveX controls, by default
+   Microsoft Access files are treated as unsafe for scripting within the
+   IE Security Zone model. This vulnerability, however, can be used to
+   reference an Access file and execute VBA or macro code even if
+   scripting has been disabled in Internet Explorer.
+
+Other Vulnerable OBJECT tag extensions
+
+   In Microsoft Security Bulletin MS00-049, Microsoft initially provided
+   a workaround for this vulnerability which involved setting the Admin
+   password in MS Access. However, unlike with Access data files, setting
+   the Admin password will not protect against exploits using project
+   files (.ade, .adp). (See Appendix B.)
+
+   Because Access project files rely on SQL backends to authenticate
+   their requests, project files created without SQL content can bypass
+   the default authentication for such requests in MS Access. For more
+   information regarding Access project files, see
+
+        <A HREF="http://msdn.microsoft.com/library/techart/acaccessprojects.htm">http://msdn.microsoft.com/library/techart/acaccessprojects.htm</A>
+
+II. Impact
+
+   A remote intruder can send malicious HTML via an email message,
+   newsgroup posting, or downloaded Web page and may be able to execute
+   arbitrary code on a victim machine.
+
+end 1/2
+
+   Conditions for use, disclaimers, and sponsorship information
+
+   Copyright 2000 Carnegie Mellon University.
+
+   Revision History
+
+   August 11, 2000:  Initial release
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="084396.html">conservation biology
+</A></li>
+        <LI>Next message: <A HREF="084399.html">MS Access 2/2
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#084398">[ date ]</a>
+              <a href="thread.html#084398">[ thread ]</a>
+              <a href="subject.html#084398">[ subject ]</a>
+              <a href="author.html#084398">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

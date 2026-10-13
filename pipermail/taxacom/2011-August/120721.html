@@ -1,0 +1,209 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Visualizing Biodiversity
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2011-August/120721.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Visualizing Biodiversity</H1>
+    <B data-pagefind-meta="author">Olivier Rovellotti</B>
+    olivier_rovellotti at hotmail.com<BR>
+    <I data-pagefind-meta="date">Wed Aug 31 04:44:11 CDT 2011</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="120720.html">[Taxacom] Fw: Zootaxa Re: Monbiot editorial on academic publishing
+</A></li>
+        <LI>Next message: <A HREF="120722.html">[Taxacom] Visualizing Biodiversity
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#120721">[ date ]</a>
+              <a href="thread.html#120721">[ thread ]</a>
+              <a href="subject.html#120721">[ subject ]</a>
+              <a href="author.html#120721">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2011</span><!--beginarticle-->
+<PRE>Dear Tony, Rob
+
+I have played with Flex and Forced Directed graphs a few years ago:
+
+<A HREF="http://biodiversitydata.blogspot.com/2008/10/taxobrowser-alpha-is-online.htm">http://biodiversitydata.blogspot.com/2008/10/taxobrowser-alpha-is-online.htm</A>
+l
+<A HREF="http://biodiversitydata.blogspot.com/2009/10/taxobrowser-beta.html">http://biodiversitydata.blogspot.com/2009/10/taxobrowser-beta.html</A>
+Poster from TDWG 2009: <A HREF="http://www.tdwg.org/proceedings/article/view/630">http://www.tdwg.org/proceedings/article/view/630</A>
+
+I haven't spent much time on it lately as it never got funding but I can
+provide source code. 
+
+Forced Directed Graphs are fun (even more so in a mutlitouch environment)
+but not very practical for a day to day use. 
+They are self-organizing, therefore you never know where your taxon will be
+the next time you load the graph.
+
+Cheers
+
+Rovellotti Olivier
+
+Natural Solutions
+Mob : 00 33 (0)6 09 57 66 53
+Blog : biodiversitydata.blogspot.com
+Web : www.natural-solutions.eu
+
+
+
+
+
+-----Message d'origine-----
+De?: taxacom-bounces at mailman.nhm.ku.edu
+[mailto:taxacom-bounces at mailman.nhm.ku.edu] De la part de Roderic Page
+Envoy??: mercredi 31 ao?t 2011 09:41
+??: taxacom at mailman.nhm.ku.edu
+Objet?: Re: [Taxacom] Visualizing Biodiversity
+
+Dear Tony,
+
+OK, I'll take the bait.
+
+EOL's viewer is a treemap, for a less flashy version see
+<A HREF="http://darwin.zoology.gla.ac.uk/~rpage/tm/">http://darwin.zoology.gla.ac.uk/~rpage/tm/</A> which is pretty simple to
+implement. Another version I used for BioStor (since removed) is described
+here :
+<A HREF="http://iphylo.blogspot.com/2010/01/displaying-taxonomic-coverage-using.html">http://iphylo.blogspot.com/2010/01/displaying-taxonomic-coverage-using.html</A>
+
+One limitation of standard treemaps is that you don't get to see individual
+items. Quantum treemaps are a different approach which I quite like, see
+Mashing up NCBI and Wikipedia using treemaps for an example.
+
+Another approach is to display the classification as a tree. SpaceTrees are
+pretty, see
+<A HREF="http://iphylo.blogspot.com/2009/06/visualising-taxonomic-classifications.htm">http://iphylo.blogspot.com/2009/06/visualising-taxonomic-classifications.htm</A>
+l
+
+If you want simply to display relative numbers, and provide a way to drill
+down, then the treemap approach is probably the simplest. Implementation is
+relatively straightforward.
+
+Regards
+
+Rod
+
+On 31 Aug 2011, at 05:08, &lt;Tony.Rees at csiro.au&gt; &lt;Tony.Rees at csiro.au&gt; wrote:
+
+&gt; Dear Taxacomers,
+&gt; 
+&gt; In my efforts to produce a listing of all genera I end up with, among
+other things, summary data on higher levels of my taxonomic hierarchy plus
+the number of child taxa each contains (current example by phylum:
+<A HREF="http://www.marine.csiro.au/mirrorsearch/ir_search.list_phylum).">http://www.marine.csiro.au/mirrorsearch/ir_search.list_phylum).</A> I realise
+that this tabular approach is pretty much as unexciting as it gets so was
+wondering about an improved visual manner to present this type of
+information, preferably in the form  of a navigable hierarchy as per the
+present hyperlinks.
+&gt; 
+&gt; One example I have come across which seems really neat is Kris Urie's EOL
+Tree Viewer (aka &quot;VOLE&quot; - Viewer of life on EOL), for example starting point
+see <A HREF="http://kurie.github.com/EOL-tree-viewer/#COL,">http://kurie.github.com/EOL-tree-viewer/#COL,</A> however I was wondering
+whether taxacomers have more suggestions or personal favourites worth
+looking at. Of course I would also have to work out how to load in my data,
+but that's a detail maybe.
+&gt; 
+&gt; All suggestions / examples welcome (and may even be used on my site if I
+can figure out how to implement one or more of them). (Also I have a feeling
+that Rod Page may have some experience in this area). Of course it would
+also be nice if someone could take this on as a pet project for free,
+however I would never dream of asking such a thing (for comparison / light
+relief see <A HREF="http://www.27bslash6.com/p2p.html).">http://www.27bslash6.com/p2p.html).</A>
+&gt; 
+&gt; Regards - Tony
+&gt; 
+&gt; Tony Rees
+&gt; Manager, Divisional Data Centre,
+&gt; CSIRO Marine and Atmospheric Research, GPO Box 1538, Hobart, Tasmania 
+&gt; 7001, Australia
+&gt; Ph: 0362 325318 (Int: +61 362 325318)
+&gt; Fax: 0362 325000 (Int: +61 362 325000)
+&gt; e-mail: Tony.Rees at csiro.au
+&gt; Manager, OBIS Australia regional node, <A HREF="http://www.obis.org.au/">http://www.obis.org.au/</A> 
+&gt; Biodiversity informatics research activities: 
+&gt; <A HREF="http://www.cmar.csiro.au/datacentre/biodiversity.htm">http://www.cmar.csiro.au/datacentre/biodiversity.htm</A>
+&gt; Personal info: 
+&gt; <A HREF="http://www.fishbase.org/collaborators/collaboratorsummary.cfm?id66">http://www.fishbase.org/collaborators/collaboratorsummary.cfm?id66</A>
+&gt; 
+&gt; _______________________________________________
+&gt; 
+&gt; Taxacom Mailing List
+&gt; Taxacom at mailman.nhm.ku.edu
+&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt; 
+&gt; The Taxacom archive going back to 1992 may be searched with either of
+these methods:
+&gt; 
+&gt; (1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt; 
+&gt; (2) a Google search specified as:  
+&gt; site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+&gt; 
+
+---------------------------------------------------------
+Roderic Page
+Professor of Taxonomy
+Institute of Biodiversity, Animal Health and Comparative Medicine College of
+Medical, Veterinary and Life Sciences Graham Kerr Building University of
+Glasgow Glasgow G12 8QQ, UK
+
+Email: r.page at bio.gla.ac.uk
+Tel: +44 141 330 4778
+Fax: +44 141 330 2792
+AIM: rodpage1962 at aim.com
+Facebook: <A HREF="http://www.facebook.com/profile.php?id12517192">http://www.facebook.com/profile.php?id12517192</A>
+Twitter: <A HREF="http://twitter.com/rdmpage">http://twitter.com/rdmpage</A>
+Blog: <A HREF="http://iphylo.blogspot.com">http://iphylo.blogspot.com</A>
+Home page: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+
+_______________________________________________
+
+Taxacom Mailing List
+Taxacom at mailman.nhm.ku.edu
+<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+
+The Taxacom archive going back to 1992 may be searched with either of these
+methods:
+
+(1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+
+(2) a Google search specified as:  site:mailman.nhm.ku.edu/pipermail/taxacom
+your search terms here
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="120720.html">[Taxacom] Fw: Zootaxa Re: Monbiot editorial on academic publishing
+</A></li>
+        <LI>Next message: <A HREF="120722.html">[Taxacom] Visualizing Biodiversity
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#120721">[ date ]</a>
+              <a href="thread.html#120721">[ thread ]</a>
+              <a href="subject.html#120721">[ subject ]</a>
+              <a href="author.html#120721">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

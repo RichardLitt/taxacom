@@ -1,0 +1,237 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Security Advisory for Biolink users
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2001-March/085528.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Security Advisory for Biolink users</H1>
+    <B data-pagefind-meta="author">Paul J. Morris</B>
+    mole at MORRIS.NET<BR>
+    <I data-pagefind-meta="date">Fri Mar  2 15:36:40 CST 2001</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="085526.html">pictorial keys
+</A></li>
+        <LI>Next message: <A HREF="085524.html">Position available
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#085528">[ date ]</a>
+              <a href="thread.html#085528">[ thread ]</a>
+              <a href="subject.html#085528">[ subject ]</a>
+              <a href="author.html#085528">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2001</span><!--beginarticle-->
+<PRE> We are using Biolink <A HREF="http://www.biolink.csiro.au/">http://www.biolink.csiro.au/</A> at The Academy of
+Natural Sciences to support a project to compile a list of names of
+IndoPacific molluscs, and are beginning to use it for collections
+management.  In the course of setting up a complex Biolink installation
+with MS SQL Server 7, I have found two significant security issues.  I have
+detailed these in the advisory below.  If you are using, or considering
+using Biolink, don't let these issues deter you from using or evaluating
+Biolink.  This kind of issue is a normal part of the life cycle of a
+software product as complex as Biolink.
+-Paul
+--------------------------
+Paul J. Morris
+Biodiversity Information Manager, The Academy of Natural Sciences
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+***************** Security Advisory *******************
+Summary: 1) Security Model:  Biolink's security model allows valid
+users to gain full system administrator access to a SQL server housing
+Biolink tables.
+2) Blank sa password: In addition, Biolink installs with a blank sa
+password by default.  If this is not changed, unprivileged users can
+gain full system
+administrator access to the server.
+
+Systems affected:  The current release of Biolink, version 1.0 build
+365
+(and Biolink version 1.01), running as a normal installation with MS
+data access engine or an extended installation using SQL Server 7.
+Beta versions of Biolink may be vulnerable as well, but have not been
+tested.
+
+Severity: 1) Security Model: Any user with knowledge of a valid
+username and password can take full control of a SQL server housing
+Biolink processes, this includes issuing any commands that the process
+running the SQL server is able to issue.  Any user with any access
+(including read only) to any Biolink database on a server can gain
+full access to all databases on that server, and potentially all
+network resources that can be seen from that server.
+2) Blank sa password: Any arbitrary person may connect to a computer
+hosting a Biolink database and gain full control of the SQL server and
+can issue any commands that the process running the SQL server is able
+to issue.  For most Biolink installations, this means that any
+arbitrary person on the internet can take full control of a computer
+hosting Biolink.
+
+Description: 1) Security Model:  Biolink grants all new users sysadmin
+and securityadmin roles for the server.  Biolink then attempts to
+prevent these usernames from logging in to the SQL server via any
+other service by setting their password as their password prefixed by
+an underscore. This means that any Biolink user who realizes that
+Biolink sets their password as _password can log in to their SQL
+server and perform any system administration task on any database.  It
+is a simple matter to connect to a Biolink database from MS Access,
+SQL Server tools such as Query Analyzer, or using languages such as
+Java, C++, Visual Basic, and PHP.
+2) Blank sa password: By default, Biolink installs with a blank
+password for the system administrator (sa) account.  If the user does
+not change this password, any arbitrary person who can connect to
+their server over the internet can gain full control of it.  Blank sa
+passwords for SQL Server are a known exploit in the hacking community.
+
+
+Discussion:  1) Security Model: This is a typical example of attempted
+security through obscurity.  It is also a database administration
+problem, as the same user names cannot have access to both Biolink and
+non-Biolink databases on a single SQL server.  Changing the password
+with Biolink will prevent logins via other services to the SQL server,
+and changing it with SQL server will prevent logins to Biolink (unless
+the system administrator and the user both know about the _password
+issue).
+2) Blank sa password: Other vendors have released sql server databases
+with a default blank sa password, and the issue is fairly widely known
+in the
+hacking community.  Both MS SQL Server 7 and the data engine that
+ships with Biolink are easily identified on any computer connected to
+the internet by a probe to port 1433.  Probing port 1433 and
+attempting to connect as sa with a blank password is a known exploit
+in the hacking community.  The blank sa password leaves Biolink users
+wide open for attack, but is very easy for users to fix, simply by
+changing their sa password to something other than blank.
+
+Example security risks:
+a) A non privileged user (a valid Biolink user granted read only
+access a Biolink database) creates a database in MS Access and links
+Biolink tables to it, using their username and _+password to make an
+odbc connection.  This user then deletes data or alters data in
+Biolink tables without using  stored procedures and damages the
+referential integrity of the database.
+b) A non privileged user connects to a SQL server running Biolink by
+using enterprise manager, they then delete tables, and run a complete
+backup in  overwrite mode (you do have offsite copies of your backup
+files don't you....)
+
+Suggested Actions:
+For all Biolink users:
+1) Blank sa password:  Set the sa password to something other than a
+blank.  [Log in to Biolink with the username sa, then select Change
+Password from the user manager tab of the main menu.] This will
+prevent arbitrary users from taking control of your Biolink server.
+2) Security Model:  Do not create &quot;Guest&quot; or &quot;Visitor&quot; accounts for
+Biolink.  Create only accounts for trusted individual users, and
+delete these accounts as soon as these users are no longer allowed
+access to the data.  Be aware than any user who is granted any (even
+read only) access to a Biolink database can potentially remotely
+access all databases on that Biolink installation with full
+(read,update,delete) privileges.
+
+For most single computer Biolink installations these actions are all
+that will be necessary.
+
+Workaround for System administrators in complex Biolink installations:
+1) Revoke sysadmin and security admin privileges for all Biolink
+usernames, except for those who should have administration rights on
+all databases on the server.
+2) Create a new role for each Biolink database (e.g. biolinkusers) and
+grant select, update, delete, and insert privileges for each table in
+the database to that role.
+3) Add all users of each Biolink database to the new biolinkusers
+role.
+4) When setting the passwords of Biolink users from the console,
+prefix them with an underscore.
+5) If no services at your institution require it, close port 1433 in
+your firewall.
+6) Make sure that the SQL Server process runs as a user with limited
+access to the server resources, not as an NT administrator.
+
+This secures the server but leaves several unresolved problems:
+1) All users who log in to both Biolink and other services on the
+server will have to prefix their Biolink password with an underscore
+for all other services.
+2) Biolink users will now be unable to change their Biolink passwords
+from within Biolink unless they have been granted system
+administration privileges.   (altering the spUserPassswordUpdate
+procedure might be able to fix this but simply removing the
+@loginname= clause will leave users with Biolink user manager rights
+open to changing their own passwords by mistake)
+3) SQL server users who change their password in another service and
+then attempt to log in through Biolink will be unable to log in.
+4) As new users are created through Biolink each will need to have
+their rights changed.
+
+Disclaimer:
+The opinions expressed in this advisory are my own and not of any
+company.  Paul J. Morris disclaims any responsibility for the misuse
+of this information and is not liable for any damages caused by direct
+or indirect use of this information.
+***********************************************************
+2001 Jan 19 - Security advisory sent to Biolink developers.
+2001 Jan 22 - Reply from Biolink developers:
+&quot;Thanks very much for the details regarding user permissions, we'll
+revisit
+this and see if we can tighten things up a bit.&quot;
+2001 Jan 23 - Amplification of security issues sent to Biolink
+developers.
+2001 Feb 8 - Reply from Biolink developers indicating intent to
+resolve issue, but not specifying any dates for release of a patch, or
+plans for notification of user community.
+2001 Mar 2 - Release of security advisory to Taxacom following Bugtraq
+protocol:
+<A HREF="http://www.securityfocus.com/frames/?content=/forums/bugtraq/faq.html">http://www.securityfocus.com/frames/?content=/forums/bugtraq/faq.html</A>
+
+-----BEGIN PGP SIGNATURE-----
+Version: PGP for Personal Privacy 5.0
+Charset: noconv
+
+iQA/AwUBOp/oznqpJN7S1LMBEQKM8gCgzGuB6iT7dCId3bdjJT7eLqmauQIAoOOA
+AHl4T2epO6Y0z3mo50SnzW6X
+=H+mu
+-----END PGP SIGNATURE-----
+
+----------------------------------------------
+Paul J. Morris
+Biodiversity Information Manager
+The Academy of Natural Sciences, 1900 Ben Franklin Parkway
+Philadelphia, PA 19103  1-215-299-1161  fax 299-1170
+mole at morris.net  PGP Public Key availible.    AA3SD (ex KB2ZNW)
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="085526.html">pictorial keys
+</A></li>
+        <LI>Next message: <A HREF="085524.html">Position available
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#085528">[ date ]</a>
+              <a href="thread.html#085528">[ thread ]</a>
+              <a href="subject.html#085528">[ subject ]</a>
+              <a href="author.html#085528">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

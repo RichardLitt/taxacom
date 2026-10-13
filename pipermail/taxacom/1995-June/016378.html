@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Identification keys (xDelta-l)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1995-June/016378.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Identification keys (xDelta-l)</H1>
+    <B data-pagefind-meta="author">Mike Dallwitz</B>
+    miked at ENTO.CSIRO.AU<BR>
+    <I data-pagefind-meta="date">Fri Jun 16 17:52:50 CDT 1995</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="099535.html">Nat. Biol. Service
+</A></li>
+        <LI>Next message: <A HREF="052170.html">Identification keys (xDelta-l)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#016378">[ date ]</a>
+              <a href="thread.html#016378">[ thread ]</a>
+              <a href="subject.html#016378">[ subject ]</a>
+              <a href="author.html#016378">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1995</span><!--beginarticle-->
+<PRE>                                                                  16 June 1995
+
+&gt; From: Lawrence Kirkendall &lt;Lawrence.Kirkendall at ZOO.UIB.NO&gt;
+&gt; To: Taxacom
+
+&gt; For the (nonexpert-in-this-group) user trying to identify large numbers of
+&gt; specimens an enormous amount of time would be saved if THE MOST COMMON
+&gt; SPECIES CAME OUT FIRST! How many of you have taken that into
+&gt; consideration? Am I wrong in believing that, for most groups, 5-10 species
+&gt; will make up 50-75% or more of all _individuals_ in a museum collection?
+
+Our key-generation program, KEY, has parameters that can be set so that more
+abundant taxa tend to come out early in the key. As far as I know, no one has
+ever used this option in practice. The important consideration is actually not
+the relative abundance of a taxon, but the relative frequency with which the
+key will be used to identify the taxon. Common (or distinctive) taxa may tend
+to be well known, so that it may not be necessary to use a key to identify
+them. For example, there would be no point in making lions and tigers come out
+early in a key for identifying cats.
+
+&gt; In any given level, there are taxa that are very distinctive to the naive
+&gt; user. Much time would be saved if there were some sort of overview of
+&gt; these at the beginning of the identification process, perhaps before the
+&gt; key even begins.
+
+A closely related point was made in a Taxacom discussion last year. It was
+referring to INTKEY, but the same character-selection method is used in KEY.
+Here is an extract from my previous posting (`Response to comments on DELTA',
+27Apr94).
+
+    &gt; I feel that the search algorithm is the opposite of what it
+    &gt; should be. I would prefer a routine that separates the taxa
+    &gt; with unique characters FIRST.
+
+    There are many algorithms for choosing characters to be used in
+    identification, but as far as I know all of them look for characters that
+    divide the remaining taxa into subgroups that are as nearly equal as
+    possible. This tends to minimize the number of steps required in an
+    identification. For example, for a group of 100 taxa, the use of
+    characters which are optimal in this sense would lead to a key requiring 6
+    or 7 steps (characters) for an identification, whereas the use of
+    characters which split off one taxon at a time would lead to a key
+    requiring an average of 50 steps for an identification. If you need
+    further convincing, just try doing some INTKEY identifications choosing
+    characters from near the bottom of the `BEST' menu, rather than from the
+    top.
+
+    Another important consideration in choosing characters is the ease of use
+    or `reliability' of the characters. This is a subjective matter, which
+    often depends on the context in which the key will be used. In KEY (our
+    key-generation program) and INTKEY, reliabilities may be set for each
+    character. The relative importance attached to the reliability and the
+    separating power of a character are controlled by a parameter, RBASE,
+    which may be set by the user. By suitable choice of reliability and/or
+    RBASE, any character may be forced to be the `best' character (provided
+    that it has any separating power at all).
+
+    Characters which split one taxon from all the rest are often preferred by
+    taxonomists, and could be given high reliability to force their use.
+    However, such preferences should be examined critically. A distinction may
+    seem obvious to the expert who has a mental picture of all of the taxa.
+    Novices may make the distinction accurately when identifying a specimen of
+    the unusual taxon, but will they do so with other specimens, particularly
+    if they have never seen an example of the unusual taxon? How will the
+    overall accuracy of the identification be affected, taking into account
+    the much greater number of characters that will have to be used?
+
+No one should be contemplating constructing conventional keys as
+identification aids, as interactive identification is so much better. (There
+may be other reasons for constructing them; currently the main one is probably
+the editorial policy of some publications.) The main, potential advantages of
+interactive identification are: entry and deletion of characters in any order
+during an identification (allowing difficult or unavailable characters to be
+avoided); the ability to allow for errors (whether made by the user or in the
+data); the ability for the user to express uncertainty; direct handling of
+numeric values (i.e. without dividing into ranges); the practicality of using
+characters that are very variable within taxa; convenient access to notes and
+illustrations to clarify character definitions.
+
+Mike Dallwitz                                  Email md at ento.csiro.au
+CSIRO Division of Entomology                   Fax +61 6 246 4000
+GPO Box 1700, Canberra ACT 2601, Australia     Phone +61 6 246 4075
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="099535.html">Nat. Biol. Service
+</A></li>
+        <LI>Next message: <A HREF="052170.html">Identification keys (xDelta-l)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#016378">[ date ]</a>
+              <a href="thread.html#016378">[ thread ]</a>
+              <a href="subject.html#016378">[ subject ]</a>
+              <a href="author.html#016378">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

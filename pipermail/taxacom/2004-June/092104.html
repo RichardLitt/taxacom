@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> More on the 'cladistics' of sequences
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2004-June/092104.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">More on the 'cladistics' of sequences</H1>
+    <B data-pagefind-meta="author">pierre deleporte</B>
+    pierre.deleporte at UNIV-RENNES1.FR<BR>
+    <I data-pagefind-meta="date">Mon Jun 14 19:25:07 CDT 2004</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="092108.html">Clades, cladons, and "cladifications"
+</A></li>
+        <LI>Next message: <A HREF="092105.html">Clades, cladons, and "cladifications"
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092104">[ date ]</a>
+              <a href="thread.html#092104">[ thread ]</a>
+              <a href="subject.html#092104">[ subject ]</a>
+              <a href="author.html#092104">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2004</span><!--beginarticle-->
+<PRE>A 09:58 14/06/2004 -0400, John Grehan wrotet :
+&gt;My reference to 'latter' was to the cladistic analysis - not to the
+&gt;algorithm, although even though the same data matric can be analysed by
+&gt;a cladistic or phenetic algorithm I do think it makes a difference
+&gt;whether the data are phenetic (combination of unrecognized plesiomorphic
+&gt;and apomorphic characters) or cladistic (restricted to apomorphic
+&gt;states). Apologies for the lack of clarifity here
+
+Well, John, this statement means that, after all, tou still have understood 
+nothing of what has being explained on this list about phenetics,cladistics 
+and characters.
+
+Your recent statelment that you could have misunderstood cladistic courses 
+gave me some hope, but halas...
+
+- characters are not phenetic or cladistic in themselves (clear enough ?)
+- &quot;cladistic characters&quot; are not restricted to apomorphic states: the 
+putatively informative &quot;&quot;&quot;cladistic character&quot;&quot;&quot; has at least two states, 
+putatively plesiomorphic and putatively apomorphic. And you cannot put 
+close together (on the topology) the putatively apomorphic states without, 
+by the way, puttting close together the plesiomorphic states: they are 
+complementary as for their distribution on the unrooted topology. This is 
+why you can mogically dissociate uin the computing the infenrence of the 
+optimal topology (cladistically) from the rooting of this topology 
+(cladistically too). There is cladistic optimization of homology, and 
+cladistic rooting, and you can perform both separately in the order you 
+choose. Seemed to me that you agreed....
+
+&gt;I do not see how a cladistic algorithm can sort out primitive and
+&gt;derived characters if they are not identified in the first place.
+
+They are identified in the first place by the user poiting himself at the 
+outgroup. The programs does this. This is certainly the last time I will 
+repeat this point. Seems you simply don't care a bit of what is explained 
+on this list in this respect.
+
+&gt;For
+&gt;example, a character
+
+not a character, a character state
+
+&gt;  may be said to be shared between tax a and b
+&gt;because it is not in the outgroup,
+
+to be a putative synapomorphy between a and b, not simply &quot;shared&quot;,
+and putative synapomorphy has two independent copmponents :
+- putative homology (being close to one another on the unrooted topology)
+- and putative polarity (plesio-apomorphic states in the right order along 
+the branches of the rooted tree). By the way, you need the two states 
+(plesio / apomorphic) in order to polarize, hence the &quot;&quot;&quot;cladistic 
+character&quot;&quot;&quot; cannot be restricted to one state. Unless you would root the 
+apomorphy into nothing. You have to root apomorphy in plesiomorphy, not in 
+vacuum.
+
+&gt;but if the feature actually happens
+&gt;to be represented in the outgroup
+&gt;  in some way, the algorithm cannot know
+&gt;this without being told
+
+But you tell him: you tell the program what the outgroups are. The progam 
+will not invent this. And the program will deal with possible ambiguity in 
+the outgroups just like it deals with ambiguity inside the ingroup : the 
+cladistic way (see below).
+
+&gt;and if it is not told then it cannot come to
+&gt;that conclusion.
+
+But it is told, it is told that these and those groups are putative 
+ourtgroups (multiple outgroups analysis) and the possible ambiguity on one 
+character is resolved by other characters. This is the congruence 
+criterion, implementing Hennig's auxiliary principle of preferring homology 
+against homoplasy in phylogeny inference.
+
+How do you cope with ambiguity it the ingroup? Congruence criterion in the 
+standard cladistic tradition?
+Well, just do the same in the outgroup (multiple outgroups analysis, see 
+PAUP manual and Farris 72).
+All this is explained in any basic lecture in cladistics.
+
+
+&gt;John Grehan:
+&gt; &gt; 1. The DNA sequence data only represents an overall similarity of DNA
+&gt; &gt; sequences and is therefore not a necessary match for phylogeny;
+
+The sequence data cannot &quot;represent an overall similarity&quot; : overall 
+similarity is a property of the analysis, it is the criterion for phenetic 
+grouping of taxa, and thus it qualifies the analysis, not the sequence data.
+The aligned sequence data are just like your morphological data: a priori 
+statements of putative homology. And the outgroup criterion is just like 
+for your morphological data: a priori statements of putative polarity. 
+Cladistic analysis optimizes both, not overall similarity between taxa. And 
+the programs do perform cladistic analysis, which has nothing to do with 
+overall similarity between taxa (phenetic analysis).
+
+Once more, this statement of yours demonstrate that you don't get the point 
+of phenetic versus cladistic analysis, and persist in qualifying the data 
+themselves of being cladistic or phenetic. You have now shifted from single 
+characters to sequences, which changes nothing to your misunderstanding, it 
+reveals it instead.
+
+Seems to me that all this has already been explained on this list. Ad 
+nauseam and beyond.
+Is it possible that the comprehension problem is rooted in the congruence 
+criterion itself??? I'm now wondering...
+
+I apologize for people familiar with the basics of cladistic and phenetic 
+analysis (for jamming their mailbox with trivialities).
+
+Pierre
+
+
+Pierre Deleporte
+CNRS UMR 6552 - Station Biologique de Paimpont
+F-35380 Paimpont   FRANCE
+T?l?phone : 02 99 61 81 66
+T?l?copie : 02 99 61 81 88
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="092108.html">Clades, cladons, and "cladifications"
+</A></li>
+        <LI>Next message: <A HREF="092105.html">Clades, cladons, and "cladifications"
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092104">[ date ]</a>
+              <a href="thread.html#092104">[ thread ]</a>
+              <a href="subject.html#092104">[ subject ]</a>
+              <a href="author.html#092104">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

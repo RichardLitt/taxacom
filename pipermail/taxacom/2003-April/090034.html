@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Human and ape phylogeny
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Human%20and%20ape%20phylogeny&In-Reply-To=%3C5.0.2.1.2.20030404183900.01d47c60%40mailhost.univ-rennes1.fr%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="090032.html">
+   <LINK REL="Next"  HREF="090045.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2003-April/090034.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Human and ape phylogeny</H1>
+    <B data-pagefind-meta="author">pierre deleporte</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Human%20and%20ape%20phylogeny&In-Reply-To=%3C5.0.2.1.2.20030404183900.01d47c60%40mailhost.univ-rennes1.fr%3E"
+       TITLE="Human and ape phylogeny">pierre.deleporte at UNIV-RENNES1.FR
+       </A><BR>
+    <I data-pagefind-meta="date">Fri Apr  4 18:58:10 CST 2003</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="090032.html">Human and ape phylogeny
+</A></li>
+        <LI>Next message: <A HREF="090045.html">Human and ape phylogeny
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#90034">[ date ]</a>
+              <a href="thread.html#90034">[ thread ]</a>
+              <a href="subject.html#90034">[ subject ]</a>
+              <a href="author.html#90034">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2003</span><!--beginarticle-->
+<PRE>A 17:39 04/04/2003 +0200, René Zaragüeta-Bagils wrote :
+&gt;<i>Hi,
+</I>&gt;<i>I agree with John Grehan's arguments. But I should not focus only on this
+</I>&gt;<i>paper:
+</I>&gt;<i>
+</I>&gt;<i>- Molecular characters are NEVER polarized (so they are phenetic, in
+</I>&gt;<i>Grehan's sense)
+</I>
+Phenetics can certainly not be defined as &quot;no polarization&quot;.
+And molecular characters are polarized by the outgroup criterion when 
+treated with parsimony.
+
+&gt;<i>- The more general problem is that Farris' optimization (= cladistic
+</I>&gt;<i>computer programs) is flawed. Cladistics is supposed to be a way of testing
+</I>&gt;<i>a conjecture (initial hypothesis) of hierarchical relationships. However,
+</I>&gt;<i>Farris' optimization produces no hierarchies, but unrooted trees (something
+</I>&gt;<i>that some Americans call &quot;networks&quot;). There is only an isomorphism (~
+</I>&gt;<i>equivalence) between rooted trees and hierarchies. So an outgroup is needed,
+</I>&gt;<i>not because of cladistics, but because of Farris' implementation of
+</I>&gt;<i>cladistics used in computer programs.
+</I>&gt;<i>
+</I>&gt;<i>- Farris' optimization is flawed in (at least) another sense: if your
+</I>&gt;<i>hypothesis proposes a grouping of, say, animals having a tail, your computer
+</I>&gt;<i>program may tell you that there is a group characterized by... ABSENCE of
+</I>&gt;<i>tail. However, you never made this hypothesis. It is your computer program's
+</I>&gt;<i>hypothesis!
+</I>&gt;<i>
+</I>&gt;<i>There are other problems with Farris' optimization.
+</I>&gt;<i>
+</I>&gt;<i>A solution, nevertheless, exists: three-taxon analysis.
+</I>&gt;<i>
+</I>&gt;<i>René
+</I>&gt;<i>
+</I>&gt;<i>René Zaragüeta-Bagils
+</I>&gt;<i>Département Histoire de la Terre UMR 8569
+</I>&gt;<i>Equipe SICC (Systématique, Informatique, Cladistique et Chronologie)
+</I>&gt;<i>Muséum national d'Histoire naturelle
+</I>&gt;<i>8 rue Buffon
+</I>&gt;<i>75005 Paris - France
+</I>
+
+Hi René,
+
+Farris optimization, or Wagner trees, or standard parsimony analysis, is 
+not &quot;flawed&quot;, it just fits a particular model of evolution. You can allow 
+character reversals, and thus reversals can tend to &quot;support&quot; a clade, for 
+instance apomorphic reversal to &quot;loss of tail&quot; can support a clade. If this 
+agrees with your model of character evolution, it's OK. If not, use PAUP 
+&quot;stepmatrix&quot; tool and weight character step costs against reverals, and so 
+on for an illimited series of models with possible differential charcter 
+steps weighting...
+All depends on your model of character evolution.
+
+But if you really like phenetics, use three-taxon analysis in its last 
+versions : its a true, and unexpected, rediscovery of phenetics, by people 
+initially dealing with &quot;parsimony&quot; in the &quot;cladistic&quot; school.  3TA 
+implements no implicit or explicit notion of character evolution. Even the 
+basic notion of homology by descent between similar character states is 
+broken down by the splitting of characters into separate &quot;three taxon 
+statements&quot; treated independently. Different states of a same character and 
+different occurences of a same character state are split into peaces with 
+no return.
+
+This makes the method non-evolutionary, i.e. fitting no conceivable 
+evolutionary process, and thus non-phylogenetic at all.
+
+Phenetics did not care with evolution either, it was &quot;overall similarity 
+for overall similarity's sake&quot;, just so. Like 3TA is 3TA for 3TA's sake. 
+Just so.
+
+3TA has obviously no &quot;flaw&quot;, and cannot have any flaw, merely because it 
+has no model to implement, and thus provides no handle to evaluate its 
+adequacy.
+
+Reminds me of a least some version of &quot;Panbiogeography&quot;...   :-)
+
+best,
+Pierre
+
+
+Pierre Deleporte
+CNRS UMR 6552 - Station Biologique de Paimpont
+F-35380 Paimpont   FRANCE
+Téléphone : 02 99 61 81 66
+Télécopie : 02 99 61 81 88
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="090032.html">Human and ape phylogeny
+</A></li>
+	<LI>Next message: <A HREF="090045.html">Human and ape phylogeny
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#90034">[ date ]</a>
+              <a href="thread.html#90034">[ thread ]</a>
+              <a href="subject.html#90034">[ subject ]</a>
+              <a href="author.html#90034">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

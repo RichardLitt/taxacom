@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Language tags for scientific names
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2008-June/110611.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Language tags for scientific names</H1>
+    <B data-pagefind-meta="author">Donald.Hobern at csiro.au</B>
+    Donald.Hobern at csiro.au<BR>
+    <I data-pagefind-meta="date">Fri Jun 27 20:18:01 CDT 2008</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="110610.html">[Taxacom] Language tags for scientific names
+</A></li>
+        <LI>Next message: <A HREF="110612.html">[Taxacom] Language tags for scientific names
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#110611">[ date ]</a>
+              <a href="thread.html#110611">[ thread ]</a>
+              <a href="subject.html#110611">[ subject ]</a>
+              <a href="author.html#110611">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2008</span><!--beginarticle-->
+<PRE>I agree it is important to consider how we should represent scientific
+names in XML data, but I think this is all getting much too complex for
+the intended purpose and some of the suggestions are attempting to
+overload the language tag with a lot of additional non-linguistic
+information.
+
+We need to ask:
+
+1. What do we (as the interested community) really want to represent by
+such codes?  When we want to give additional information about a
+particular scientific name (including e.g. code), why don't we just use
+proprietary tags (like the TDWG RDF TaxonName properties)?
+
+2. Is this compatible with the intended use of the language tag?  If
+something is a proper name with no translation into different languages,
+what would ISO expect?  Is the language code in any way appropriate in
+such a case?  
+
+3. Will other software (outside our community) be able to do something
+sensible with what we put in the tag?  Do we know what various
+language-enabled XML software packages do with language tag values they
+have never seen before?  Do we know what they do with tag values
+starting &quot;zxx-&quot;?  Will they do anything inappropriate if we make sure
+that scientific names do not have any language tag at all?
+
+I believe it is an abuse of the language code to use it to identify the
+nomenclatural code, and something which may alienate non-taxonomic
+users.  A single code, (null, &quot;zxx&quot;, &quot;tax&quot; or something) would encourage
+consistent interpretation better, but I still think we are
+misunderstanding the point of the language tag.  Surely its primary role
+is in situations in which there may be different versions of some
+content in different languages and software may choose the most
+appropriate for a given user.  This is not the case here and I suspect
+the ISO recommendation would be to use &quot;zxx&quot; or nothing at all.
+
+Thanks,
+
+Donald 
+
+Donald Hobern, Director, Atlas of Living Australia
+CSIRO Entomology, GPO Box 1700, Canberra, ACT 2601
+Phone: (02) 62464352 Mobile: 0437990208 
+Email: Donald.Hobern at csiro.au
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="110610.html">[Taxacom] Language tags for scientific names
+</A></li>
+        <LI>Next message: <A HREF="110612.html">[Taxacom] Language tags for scientific names
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#110611">[ date ]</a>
+              <a href="thread.html#110611">[ thread ]</a>
+              <a href="subject.html#110611">[ subject ]</a>
+              <a href="author.html#110611">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> data sharing
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20data%20sharing&In-Reply-To=%3Cmailman.9867.1157126735.2564.taxacom%40mailman.nhm.ku.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="106591.html">
+   <LINK REL="Next"  HREF="059231.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1998-December/023439.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">data sharing</H1>
+    <B data-pagefind-meta="author">Dave Vieglais</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20data%20sharing&In-Reply-To=%3Cmailman.9867.1157126735.2564.taxacom%40mailman.nhm.ku.edu%3E"
+       TITLE="data sharing">vieglais at UKANS.EDU
+       </A><BR>
+    <I data-pagefind-meta="date">Sat Dec  5 23:46:41 CST 1998</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="106591.html">Teaching Plant Anatomy/Morphology
+</A></li>
+        <LI>Next message: <A HREF="059231.html">data sharing
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#23439">[ date ]</a>
+              <a href="thread.html#23439">[ thread ]</a>
+              <a href="subject.html#23439">[ subject ]</a>
+              <a href="author.html#23439">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>1998</span><!--beginarticle-->
+<PRE>I was not previously a subscriber to Taxacom, but a thread on data sharing
+was recently brought to my attention.  This response is to the thread in
+general, not specifically to Hugh Wilson who is referenced here as the
+access point to the thread.
+
+In response to a note from Hugh Wilson &lt;<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">wilson at bio.tamu.edu</A>&gt; from
+approximately December 04 1998.
+
+1. Audit trails.
+For publicly accessible information, auditing should not be required, and in
+fact, would be extremely difficult to implement in a reliable manner.
+Information that is considered sensitive in nature should not be provided in
+the public domain, but should instead be accessed through another layer of
+security that requires some sort of authentication.  Part of the
+authentication can be a statement indicating the use and limitations of the
+information being accessed.  Once access to an information resouce has gone
+through this step, it is a fairly simple matter to implement an audit trail,
+at least for the immediate use of the information.  Beyond a couple of
+itterations of use of a set of information, its source may or may not be so
+readily identified (but restrictions on splitting/merging of information for
+further redistribution could be a part of the original agreement enacted
+during the initial authentication).
+
+2. Specimen based information systems.
+Any distributed information system being developed using the WWW as the
+backbone (ie. the http protocol) is likely to fail.  HTTP is not designed
+for simultaneous, ordered, and systematic access to multiple information
+sources.  It *can* be done, but it is not a part of the protocol, and hence
+requires customization of the various levels of interaction to enable it
+(database, server scripts, information representation, client handling of
+the information).  Extensions to HTTP enabling more ordered access to
+information are being developed by the W3C, but these are a long way from
+becoming standards and hence do not provide an immediate solution.
+
+There are however, alternative protocols which have been designed
+specifically for distributed access to information resources using the
+internet.  One solid example is the ANSI/NISO Z39.50 standard for
+information retrieval (www.loc.gov/z3950).  It has been used extensively in
+the bibliographic community for a number of years (one can download a
+client - such as bookwhere: www.bookwhere.com) and instantly gain access to
+the catalogs of several hundred libraries around the world.  A query may for
+example be broadcast to each of these catalogs, and the results combined to
+provide a list of institutions, plus the relevant citation information.  The
+system is very successful for this purpose because it is designed
+spcifically for distributed access to remote databases.  A major part of its
+success lies with the development of a layer of abstraction between the
+actual database and what the client sees.  This abstraction layer or
+&quot;profile&quot; is a standard that is agreed upon by the community in which it is
+developed.  For example, the bibliographic community profile is called
+&quot;bib-1&quot; and it specifies the access points (terms which may be used in a
+query), the format of the results being returned (abstract record syntax)
+and how errors should be handled.  Similarly, the geospatial community has
+developed the &quot;geo&quot; profile for access to geospatial meta data.  CIMI
+(www.cimi.org) is another profile being developed specifically for access to
+museum information (art, history, etc).
+
+A group called &quot;ZBIG&quot; (Z39.50 biology implementors group-
+<A HREF="http://chipotle.nhm.ukans.edu/zbig">http://chipotle.nhm.ukans.edu/zbig</A> - the documentation is a little out of
+date, but is being worked on) has been developed with the intention of
+providing similar capability for natural history collections.  A result of
+this work is a tool we call the &quot;Species Analyst&quot;.  It is basically a z39.50
+client that enables applications like Excel or ArcView to perform Z39.50
+searches on collection databases, and retrieve the voucher information
+directly into the spreadsheet or as an arcview table where the information
+can be used for subsequent analysis (rather than just look at it as with a
+web browser interface).  For example, it is possible to submit a query to a
+dozen or so collections asking for all instances of a particular species.
+The zclient will query the collection databases, merge the results, and
+place them directly into your excel spreadsheet.  Access to the remote data
+is essentially transparent.
+
+The development of the ZBIG profile also includes access to taxonomic
+authority information.  The intent there is to provide a facility that will
+present relevant citation and other information about a particular species
+(essentially the meta data about a scientific name).  It will also support
+multiple classification schemes and the translation between schemes.
+
+A further component of the Species Analyst is the link to models predicting
+the distribution of species developed by Dave Stockwell at SDSC
+(<A HREF="http://biodi.sdsc.edu">http://biodi.sdsc.edu</A>).  With the Species Analyst, it is possible to post
+the Latitude Longitude from the voucher information to the model running on
+a high performance computation facility at SDSC.  The result is a map
+showing the predicted distribution of the organism represented by those
+data.  The map appears in the excel spreadsheet as a GIF image, or into the
+Arcview application as a GRID dataset that may be subsequently used for
+further analysis.
+
+More details about the Species Analyst may be had by examining the web page
+<A HREF="http://chipotle.nhm.ukans.edu/documentation/applications/ZDemo/ZDemo.htm">http://chipotle.nhm.ukans.edu/documentation/applications/ZDemo/ZDemo.htm</A>
+
+Z39.50 also includes an authentication mechanism, so auditing of access to
+databases and/or securing portions of the databases is a relatively trivial
+problem.
+
+The Z39.50 server developed by the ZBIG attaches to any ODBC compliant
+database.  Hence, the database being used to catalog the voucher information
+at an institution may also be accessed directly through Z39.50.
+
+Note also that once a distributed network is setup based on Z39.50, it is
+*easy* (approx. 1-2 days work for an experienced programmer) to provide
+access to the network through a HTTP interface.  Thus, one could readily
+implement a web page for every species that is built dynamically from the
+remote catalogs.  Or one for every collector, or one for every institution,
+one for every spatial region, ...
+
+It is important to note that the ZBIG profile and the Species Analyst are
+being developed as a community solution to the problem of access to our
+valuable collection catalogs.  As such, we intend to provide the species
+analyst (including the Z39.50 server and client software) completely free of
+charge to those that might be interested.  This includes the source code for
+the software.  It is not currently available because the software and
+profile are still in a state of development, and hence are not considered
+stable solutions as yet.  We expect a full release early in 1999.
+
+In summary, the technology for the distributed access to specimen data is
+available and will be publicly available early 1999.  Of course, one may
+only access information that is stored in electronic format and so it is
+strongly suggested that efforts are directed towards the far greater problem
+of capturing voucher data and storing it in reliable database systems.  Once
+the data is captured, it can be remotely accessed.  Easily.
+
+regards,
+  Dave V.
+
+---------
+David A. Vieglais
+The Natural History Museum and Biodiversity Research Center
+University of Kansas, Lawrence KS
+ph (785) 864 7792   fx (785) 864 5335
+
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="106591.html">Teaching Plant Anatomy/Morphology
+</A></li>
+	<LI>Next message: <A HREF="059231.html">data sharing
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#23439">[ date ]</a>
+              <a href="thread.html#23439">[ thread ]</a>
+              <a href="subject.html#23439">[ subject ]</a>
+              <a href="author.html#23439">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,405 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] validation of taxon names
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20validation%20of%20taxon%20names&In-Reply-To=%3C50A2A861-72ED-42AA-AEDA-8A4EF977C1E3%40bio.gla.ac.uk%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="121809.html">
+   <LINK REL="Next"  HREF="121816.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2012-February/121812.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] validation of taxon names</H1>
+    <B data-pagefind-meta="author">Roderic Page</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20validation%20of%20taxon%20names&In-Reply-To=%3C50A2A861-72ED-42AA-AEDA-8A4EF977C1E3%40bio.gla.ac.uk%3E"
+       TITLE="[Taxacom] validation of taxon names">r.page at bio.gla.ac.uk
+       </A><BR>
+    <I data-pagefind-meta="date">Thu Feb 16 10:24:38 CST 2012</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="121809.html">[Taxacom] validation of taxon names
+</A></li>
+        <LI>Next message: <A HREF="121816.html">[Taxacom] validation of taxon names
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#121812">[ date ]</a>
+              <a href="thread.html#121812">[ thread ]</a>
+              <a href="subject.html#121812">[ subject ]</a>
+              <a href="author.html#121812">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2012</span><!--beginarticle-->
+<PRE>Dear Armand,
+
+Yes, federated searches are problematic, and only scale with caching, so in effect you end up building a local database anyway.
+
+If there's a single entry point for the web service, and it is using a local database, then you could batch the queries and still get a reasonable response time.
+
+But if you have LOTS of names then having a local of the data copy is great. CouchDB is a wonderful tool, especially for semi-structured data. It excels at some things, but bulk checking of names probably isn't one of them (you'd probably get more joy doing an SQL join in a relational database then handing the names that don't match). 
+
+Regards
+
+Rod
+
+
+
+On 16 Feb 2012, at 13:12, Armand Turpel wrote:
+
+&gt;<i> Dear Roderic,
+</I>&gt;<i> 
+</I>&gt;<i> I have some doubts while reading the architecture description here:
+</I>&gt;<i> 
+</I>&gt;<i> <A HREF="http://www.biomedcentral.com/1471-2105/6/48">http://www.biomedcentral.com/1471-2105/6/48</A>
+</I>&gt;<i> 
+</I>&gt;<i> Amongst the problems your described, my experience is that web services are
+</I>&gt;<i> slow and technically difficult to maintain. I don’t think that such a
+</I>&gt;<i> service can handle my demand in the initial post of this thread. But there
+</I>&gt;<i> is a tool which is may worth to mention. Document based databases such as
+</I>&gt;<i> couchdb can solve a lot of those problems. Here an excerpt from the couchdb
+</I>&gt;<i> site:
+</I>&gt;<i> 
+</I>&gt;<i> “CouchDB is a peer based distributed database system. Any number of CouchDB
+</I>&gt;<i> hosts (servers and offline-clients) can have independent “replica copies”
+</I>&gt;<i> of the same database, where applications have full database interactivity
+</I>&gt;<i> (query, add, edit, delete). When back online or on a schedule, database
+</I>&gt;<i> changes are replicated bi-directionally...”
+</I>&gt;<i> 
+</I>&gt;<i> An other advantage of such a system is that it serves also as an
+</I>&gt;<i> application server from which applications can be replicated. Setup and
+</I>&gt;<i> maintaining a network based on this needs much less effort.
+</I>&gt;<i> 
+</I>&gt;<i> What do you think? As far as I know you have worked with couchdb:
+</I>&gt;<i> 
+</I>&gt;<i> <A HREF="http://iphylo.blogspot.com/2010/10/replicating-and-forking-data-in-2010.html">http://iphylo.blogspot.com/2010/10/replicating-and-forking-data-in-2010.html</A>
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> a+
+</I>&gt;<i> 
+</I>&gt;<i> arm
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 2012/2/16 Roderic Page &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">r.page at bio.gla.ac.uk</A>&gt;
+</I>&gt;<i> 
+</I>&gt;&gt;<i> Dear Tony,
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Yes, in many ways we are close, we just haven't put the bits together in
+</I>&gt;&gt;<i> one highly visible place that people can use.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> I used to run the &quot;Taxonomic Search Engine&quot; described in
+</I>&gt;&gt;<i> <A HREF="http://dx.doi.org/10.1186/1471-2105-6-48">http://dx.doi.org/10.1186/1471-2105-6-48</A> , which was an example of a
+</I>&gt;&gt;<i> federated search engine that queried multiple sources on the fly (a bit
+</I>&gt;&gt;<i> like <A HREF="http://botany.si.edu/ing/">http://botany.si.edu/ing/</A> but I used web services and extracted and
+</I>&gt;&gt;<i> reformatted the data rather than show results as web pages inside frames).
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> The two biggest problems were the source services going offline, or
+</I>&gt;&gt;<i> changing their web services (breaking my code). There also performance
+</I>&gt;&gt;<i> issues when doing &quot;live&quot; searching as opposed to searching a local list.
+</I>&gt;&gt;<i> You've covered all these issues nicely. There's also the problem of
+</I>&gt;&gt;<i> redundancy. Because some lists are aggregations of other lists, we can end
+</I>&gt;&gt;<i> up with the same source being represented several times in the results, but
+</I>&gt;&gt;<i> without the user being aware of this.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> I just think there's clearly scope for bringing these sorts of services
+</I>&gt;&gt;<i> together in one place and providing people with some tools to address the
+</I>&gt;&gt;<i> problems they face, rather than the chaotic landscape we present at the
+</I>&gt;&gt;<i> moment.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Regards
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Rod
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> On 16 Feb 2012, at 03:19, &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Tony.Rees at csiro.au</A>&gt; &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Tony.Rees at csiro.au</A>&gt; wrote:
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> Dear all,
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> My take on the issue/s below...
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> Basically what is sought is a taxonomic name reconciliation service
+</I>&gt;&gt;<i> (TNRS) - now, where have I heard that before...
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> In my mind this comprises three coupled components:
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> (1) a web (human and machine) interface to search a &quot;master list&quot; or
+</I>&gt;&gt;<i> global taxon register
+</I>&gt;&gt;&gt;<i> (2) a fuzzy match component to cope with misspelled queries
+</I>&gt;&gt;&gt;<i> (3) the master list itself.
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> Prototypes of just such a system have been in existence for several
+</I>&gt;&gt;<i> years, notably:
+</I>&gt;&gt;&gt;<i> - the GRIN Taxonomic Nomenclature Checker
+</I>&gt;&gt;<i> <A HREF="http://pgrdoc.bioversity.cgiar.org/taxcheck/">http://pgrdoc.bioversity.cgiar.org/taxcheck/</A> (the granddaddy of such
+</I>&gt;&gt;<i> systems), operating over the GRIN database for higher plants
+</I>&gt;&gt;&gt;<i> - my own IRMNG <A HREF="http://www.cmar.csiro.au/datacentre/irmng/,">http://www.cmar.csiro.au/datacentre/irmng/,</A> operating
+</I>&gt;&gt;<i> over many/most genus namesplus species names from catalogue of Life in the
+</I>&gt;&gt;<i> main, and more recently
+</I>&gt;&gt;&gt;<i> - the iPlant TNRS <A HREF="http://tnrs.iplantcollaborative.org/TNRSapp.html,">http://tnrs.iplantcollaborative.org/TNRSapp.html,</A>
+</I>&gt;&gt;<i> operatin g over the TROPICOS plant database
+</I>&gt;&gt;&gt;<i> - the World Register of Marine Species portal
+</I>&gt;&gt;<i> <A HREF="http://www.marinespecies.org/aphia.php">http://www.marinespecies.org/aphia.php</A> operating over its own data, and
+</I>&gt;&gt;&gt;<i> - the Australian &quot;National Species Lists&quot; search service
+</I>&gt;&gt;<i> <A HREF="http://biodiversity.org.au/service/taxamatch">http://biodiversity.org.au/service/taxamatch</A> (working over different
+</I>&gt;&gt;<i> master lists as their reference database) as mentioned by Greg; plus no
+</I>&gt;&gt;<i> doubt others I have not mentioned.
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> So we could say that the technical aspects of (1) and (2) are basically
+</I>&gt;&gt;<i> not a problem. The residual problem is the construction of the (actual or
+</I>&gt;&gt;<i> virtual) &quot;master list&quot;. An example of a virtual &quot;master list&quot; (for plants,
+</I>&gt;&gt;<i> at genus level only) is provided by the Index Nominum Genericorum (ING)
+</I>&gt;&gt;<i> portal at <A HREF="http://botany.si.edu/ing/">http://botany.si.edu/ing/</A> : entering a query in the first text
+</I>&gt;&gt;<i> box does a real time distributed search of designated resources which
+</I>&gt;&gt;<i> between them provide a (partly overlapping) coverage of most/all plant
+</I>&gt;&gt;<i> genus names, comprising ING itself, IPNI, Index Nominum Algarum, TROPICOS,
+</I>&gt;&gt;<i> and Index Fungorum in this instance (however without any fuzzy match
+</I>&gt;&gt;<i> function). This is one approach; benefits are the removal of the need for
+</I>&gt;&gt;<i> one site to hold all the names to search over, plus the removal of any
+</I>&gt;&gt;<i> synchronization issues between a remote &quot;point of truth&quot; for the records
+</I>&gt;&gt;<i> and a central cache of the data. Downsides are the fact that
+</I>&gt;&gt;<i> deduplication/data harmonization of potential duplicates from multiple
+</I>&gt;&gt;<i> sources is not done; multiple taxonomic concepts/hierarchies may be in use
+</I>&gt;&gt;<i> at the various providers; it is difficult to provide fuzzy search over
+</I>&gt;&gt;<i> remotely hosted data; plus if any provider is off line at time of query,
+</I>&gt;&gt;<i> their data are not searched.
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> The alternative is for remote provider content to be regularly crawled
+</I>&gt;&gt;<i> or exported, then cached centrally for the search process. This also
+</I>&gt;&gt;<i> provides the option for additional QA / data deduplication and
+</I>&gt;&gt;<i> harmonization and also notionally improved performance (provided that
+</I>&gt;&gt;<i> sufficient resources can be thrown at the one machine where the searches
+</I>&gt;&gt;<i> execute in real time). Disadvantages then include the need for continuous
+</I>&gt;&gt;<i> assembly and reassembly of the aggregate dataset, and the possibility of
+</I>&gt;&gt;<i> the central &quot;view&quot; of the data being out-of-synch with the latest changes
+</I>&gt;&gt;<i> at the provider; but something which can be managed in the main (as is
+</I>&gt;&gt;<i> already done my many similar &quot;aggregators&quot; of species distribution records).
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> So the residual question is, where are all the data - also in some
+</I>&gt;&gt;<i> cases, whose content is the most up-to-date / complete / authoritative /
+</I>&gt;&gt;<i> accepted in case of potential multiple sources; plus of course, filling
+</I>&gt;&gt;<i> gaps where currently there is no obvious source of content for a particular
+</I>&gt;&gt;<i> group or region. These are questions which concern key projects at the
+</I>&gt;&gt;<i> present time, exemplified by the Catalogue of Life partnership (Sp2000 plus
+</I>&gt;&gt;<i> ITIS) for extant data, other sources for data on fossils, and the &quot;Global
+</I>&gt;&gt;<i> Names&quot; partnership, to name a few. Others more qualified than myself can
+</I>&gt;&gt;<i> answer this question and look at associated issues of resourcing,
+</I>&gt;&gt;<i> persistence, data completeness, data sharing culture and the like but at
+</I>&gt;&gt;<i> least what we have is a start...
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> So the upshot of the above is:
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> - For plants, GRIN and iPlant already provide most of the desired
+</I>&gt;&gt;<i> functionality (also ING distributed search for genera)
+</I>&gt;&gt;&gt;<i> - for marine species, try WoRMS
+</I>&gt;&gt;&gt;<i> - for (e.g.) Australian species, Greg's &quot;NSLs&quot; project resources as
+</I>&gt;&gt;<i> above, for Europaean species, PESI <A HREF="http://www.eu-nomen.eu/portal/,">http://www.eu-nomen.eu/portal/,</A> and so
+</I>&gt;&gt;<i> on
+</I>&gt;&gt;&gt;<i> - for Cat. of Life species, plus genera from ING (plants) and
+</I>&gt;&gt;<i> Nomenclator Zoologicus (animals) plus elsewhere, my own IRMNG.
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> None of the above resources are as yet complete or completely populated
+</I>&gt;&gt;<i> (in my case, definitely not...) however they are not only pointers along
+</I>&gt;&gt;<i> the road but useable resources today.
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> How do we get to where we want to be? Improve the master list, keep it
+</I>&gt;&gt;<i> up-to-date, continuously improve the quality and completeness of the
+</I>&gt;&gt;<i> accessible data... But it does require a &quot;client focus&quot; which provides
+</I>&gt;&gt;<i> strong directions for the types of services to be provide, and their actual
+</I>&gt;&gt;<i> useability when accessed. (Who has the mandate / who pays are different
+</I>&gt;&gt;<i> issues of course).
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> Probably little of this is news to Taxacomers, but I thought I would
+</I>&gt;&gt;<i> just show that it is not all gloom and doom. And this is not to mention the
+</I>&gt;&gt;<i> myriad (and often excellent) taxon-specific database projects out there, of
+</I>&gt;&gt;<i> which Paul Kirk and Chris Thompson have already mentioned shining examples,
+</I>&gt;&gt;<i> to name but two... - most of which are already engaged in either Sp2000,
+</I>&gt;&gt;<i> Global Names Architecture, or both.
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> Regards - Tony
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> Tony Rees
+</I>&gt;&gt;&gt;<i> Manager, Divisional Data Centre,
+</I>&gt;&gt;&gt;<i> CSIRO Marine and Atmospheric Research,
+</I>&gt;&gt;&gt;<i> GPO Box 1538,
+</I>&gt;&gt;&gt;<i> Hobart, Tasmania 7001, Australia
+</I>&gt;&gt;&gt;<i> Ph: 0362 325318 (Int: +61 362 325318)
+</I>&gt;&gt;&gt;<i> Fax: 0362 325000 (Int: +61 362 325000)
+</I>&gt;&gt;&gt;<i> e-mail: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Tony.Rees at csiro.au</A>
+</I>&gt;&gt;&gt;<i> Manager, OBIS Australia regional node, <A HREF="http://www.obis.org.au/">http://www.obis.org.au/</A>
+</I>&gt;&gt;&gt;<i> Biodiversity informatics research activities:
+</I>&gt;&gt;<i> <A HREF="http://www.cmar.csiro.au/datacentre/biodiversity.htm">http://www.cmar.csiro.au/datacentre/biodiversity.htm</A>
+</I>&gt;&gt;&gt;<i> Personal info:
+</I>&gt;&gt;<i> <A HREF="http://www.fishbase.org/collaborators/collaboratorsummary.cfm?id=1566">http://www.fishbase.org/collaborators/collaboratorsummary.cfm?id=1566</A>
+</I>&gt;&gt;&gt;<i> LinkedIn profile: <A HREF="http://www.linkedin.com/pub/tony-rees/18/770/36">http://www.linkedin.com/pub/tony-rees/18/770/36</A>
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;<i> -----Original Message-----
+</I>&gt;&gt;&gt;&gt;<i> From: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom-bounces at mailman.nhm.ku.edu</A> [mailto:taxacom-
+</I>&gt;&gt;&gt;&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">bounces at mailman.nhm.ku.edu</A>] On Behalf Of Roderic Page
+</I>&gt;&gt;&gt;&gt;<i> Sent: Thursday, 16 February 2012 6:24 AM
+</I>&gt;&gt;&gt;&gt;<i> To: taxacom
+</I>&gt;&gt;&gt;&gt;<i> Subject: Re: [Taxacom] validation of taxon names
+</I>&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;<i> Dear Doug,
+</I>&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;<i> Regarding
+</I>&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;&gt;<i> #4 is something that cannot be objectively determined, because
+</I>&gt;&gt;&gt;&gt;&gt;<i> synonymy is almost invariably subjective.
+</I>&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;<i> presumably the fact that person x asserted that two names are synonyms
+</I>&gt;&gt;&gt;&gt;<i> can be determined objectively, and that's all we need to know.
+</I>&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;<i> Regards
+</I>&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;<i> Rod
+</I>&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;<i> On 15 Feb 2012, at 18:40, Doug Yanega wrote:
+</I>&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;&gt;<i> I would observe that, for zoological names, of the following list:
+</I>&gt;&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> 1. Is this a name?
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> 2. Is this the correct way to write it?
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> 3. Is this name currently in use?
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> 4. What other names are related to this name (e.g., synonyms,
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> lexical variants)?
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> 5. Where was this name published? Can I see that publication?
+</I>&gt;&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;&gt;<i> at least 1 and 5 are questions for which an objective and definitive
+</I>&gt;&gt;&gt;&gt;&gt;<i> answer (via application of the ICZN for #1) can be arrived at, and
+</I>&gt;&gt;&gt;&gt;&gt;<i> that the answer will not change. Thus, these are things which could
+</I>&gt;&gt;&gt;&gt;&gt;<i> be made part of a permanent public archive (hopefully, something like
+</I>&gt;&gt;&gt;&gt;&gt;<i> ZooBank).
+</I>&gt;&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;&gt;<i> #2 and 3 are things that can, in essence, be objectively determined
+</I>&gt;&gt;&gt;&gt;&gt;<i> under the Code, but are subject to the nuance of &quot;prevailing usage&quot; -
+</I>&gt;&gt;&gt;&gt;&gt;<i> that is, a sudden change in how taxonomists treat a name can shift
+</I>&gt;&gt;&gt;&gt;&gt;<i> the answer from &quot;no&quot; to &quot;yes&quot; (in both cases) or from &quot;yes&quot; to &quot;no&quot;
+</I>&gt;&gt;&gt;&gt;&gt;<i> (for #2). One hope that I have is that a mechanism for Registration
+</I>&gt;&gt;&gt;&gt;&gt;<i> can be implemented in the future which will prevent such fluctuation,
+</I>&gt;&gt;&gt;&gt;&gt;<i> and thus make the answers to 2 and 3 immutable, as well.
+</I>&gt;&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;&gt;<i> #4 is something that cannot be objectively determined, because
+</I>&gt;&gt;&gt;&gt;&gt;<i> synonymy is almost invariably subjective.
+</I>&gt;&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;&gt;<i> Realistically, then, this list represents a mixed bag of the
+</I>&gt;&gt;&gt;&gt;&gt;<i> immediately attainable, the potentially attainable, and the
+</I>&gt;&gt;&gt;&gt;&gt;<i> unattainable. It might be more productive to focus on the former
+</I>&gt;&gt;&gt;&gt;&gt;<i> categories, in terms of a community-wide goal. I'll further note that
+</I>&gt;&gt;&gt;&gt;&gt;<i> if taxonomists want a system of Registration that will result in
+</I>&gt;&gt;&gt;&gt;&gt;<i> permanently stable names, then they are probably going to have to
+</I>&gt;&gt;&gt;&gt;&gt;<i> insist upon it, *and* be willing to participate in the process
+</I>&gt;&gt;&gt;&gt;&gt;<i> (because such a process is likely to require public review). I'm not
+</I>&gt;&gt;&gt;&gt;&gt;<i> 100% sure whether botanical names would work exactly the same way,
+</I>&gt;&gt;&gt;&gt;&gt;<i> but I expect that the situation would be pretty much the same.
+</I>&gt;&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;&gt;<i> Peace,
+</I>&gt;&gt;&gt;&gt;&gt;<i> --
+</I>&gt;&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;&gt;<i> Doug Yanega        Dept. of Entomology         Entomology Research
+</I>&gt;&gt;&gt;&gt;<i> Museum
+</I>&gt;&gt;&gt;&gt;&gt;<i> Univ. of California, Riverside, CA 92521-0314        skype: dyanega
+</I>&gt;&gt;&gt;&gt;&gt;<i> phone: (951) 827-4315 (standard disclaimer: opinions are mine, not
+</I>&gt;&gt;&gt;&gt;<i> UCR's)
+</I>&gt;&gt;&gt;&gt;&gt;<i>            <A HREF="http://cache.ucr.edu/~heraty/yanega.html">http://cache.ucr.edu/~heraty/yanega.html</A>
+</I>&gt;&gt;&gt;&gt;&gt;<i> &quot;There are some enterprises in which a careful disorderliness
+</I>&gt;&gt;&gt;&gt;&gt;<i>       is the true method&quot; - Herman Melville, Moby Dick, Chap. 82
+</I>&gt;&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> ---------------------------------------------------------
+</I>&gt;&gt;<i> Roderic Page
+</I>&gt;&gt;<i> Professor of Taxonomy
+</I>&gt;&gt;<i> Institute of Biodiversity, Animal Health and Comparative Medicine
+</I>&gt;&gt;<i> College of Medical, Veterinary and Life Sciences
+</I>&gt;&gt;<i> Graham Kerr Building
+</I>&gt;&gt;<i> University of Glasgow
+</I>&gt;&gt;<i> Glasgow G12 8QQ, UK
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Email: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">r.page at bio.gla.ac.uk</A>
+</I>&gt;&gt;<i> Tel: +44 141 330 4778
+</I>&gt;&gt;<i> Fax: +44 141 330 2792
+</I>&gt;&gt;<i> AIM: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">rodpage1962 at aim.com</A>
+</I>&gt;&gt;<i> Facebook: <A HREF="http://www.facebook.com/profile.php?id=1112517192">http://www.facebook.com/profile.php?id=1112517192</A>
+</I>&gt;&gt;<i> Twitter: <A HREF="http://twitter.com/rdmpage">http://twitter.com/rdmpage</A>
+</I>&gt;&gt;<i> Blog: <A HREF="http://iphylo.blogspot.com">http://iphylo.blogspot.com</A>
+</I>&gt;&gt;<i> Home page: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Taxacom Mailing List
+</I>&gt;&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;&gt;<i> <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> The Taxacom archive going back to 1992 may be searched with either of
+</I>&gt;&gt;<i> these methods:
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> (1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> (2) a Google search specified as:  site:
+</I>&gt;&gt;<i> mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+</I>&gt;&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> 
+</I>&gt;<i> Taxacom Mailing List
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;<i> 
+</I>&gt;<i> The Taxacom archive going back to 1992 may be searched with either of these methods:
+</I>&gt;<i> 
+</I>&gt;<i> (1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+</I>&gt;<i> 
+</I>&gt;<i> (2) a Google search specified as:  site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+</I>&gt;<i> 
+</I>
+---------------------------------------------------------
+Roderic Page
+Professor of Taxonomy
+Institute of Biodiversity, Animal Health and Comparative Medicine
+College of Medical, Veterinary and Life Sciences
+Graham Kerr Building
+University of Glasgow
+Glasgow G12 8QQ, UK
+
+Email: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">r.page at bio.gla.ac.uk</A>
+Tel: +44 141 330 4778
+Fax: +44 141 330 2792
+AIM: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">rodpage1962 at aim.com</A>
+Facebook: <A HREF="http://www.facebook.com/profile.php?id=1112517192">http://www.facebook.com/profile.php?id=1112517192</A>
+Twitter: <A HREF="http://twitter.com/rdmpage">http://twitter.com/rdmpage</A>
+Blog: <A HREF="http://iphylo.blogspot.com">http://iphylo.blogspot.com</A>
+Home page: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="121809.html">[Taxacom] validation of taxon names
+</A></li>
+	<LI>Next message: <A HREF="121816.html">[Taxacom] validation of taxon names
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#121812">[ date ]</a>
+              <a href="thread.html#121812">[ thread ]</a>
+              <a href="subject.html#121812">[ subject ]</a>
+              <a href="author.html#121812">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

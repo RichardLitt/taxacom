@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Statistical power of KH and SH tests?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Statistical%20power%20of%20KH%20and%20SH%20tests%3F&In-Reply-To=%3CBAC44354-A65B-11D8-87ED-003065B9387A%40sfsu.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="091926.html">
+   <LINK REL="Next"  HREF="091934.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2004-May/091928.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Statistical power of KH and SH tests?</H1>
+    <B data-pagefind-meta="author">Peter Werner</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Statistical%20power%20of%20KH%20and%20SH%20tests%3F&In-Reply-To=%3CBAC44354-A65B-11D8-87ED-003065B9387A%40sfsu.edu%3E"
+       TITLE="Statistical power of KH and SH tests?">pgwerner at SFSU.EDU
+       </A><BR>
+    <I data-pagefind-meta="date">Sat May 15 03:36:31 CDT 2004</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="091926.html">Statistical power of KH and SH tests?
+</A></li>
+        <LI>Next message: <A HREF="091934.html">Statistical power of KH and SH tests?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#91928">[ date ]</a>
+              <a href="thread.html#91928">[ thread ]</a>
+              <a href="subject.html#91928">[ subject ]</a>
+              <a href="author.html#91928">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2004</span><!--beginarticle-->
+<PRE>&gt;<i> My understanding is that beta is 1 minus alpha.
+</I>
+No, that is *definitely not* the definition of beta. Alpha is the
+probability of making a Type I error and beta is the probability of
+making a Type II error. Its definitely *not* the case that if you have
+a, say, 5% probability of making a Type I error, you therefore have a
+95% chance of making a Type II error!
+
+Alpha and beta are related in the sense that if alpha is raised, beta
+is lowered, but not necessarily in a 1 minus x relationship. Beta,
+however, is lowered while retaining the same alpha level by raising the
+sample size (the reverse is also true - alpha is lowered while
+retaining the same beta level when sample size is raised). Ideally, you
+want both alpha and beta to be low.
+
+Statistical power is defined as 1 minus beta, though in practice the
+term &quot;statistical power&quot; is often used in a less exact/more vague sense
+to refer to utility and robustness of a given statistical test.
+
+&gt;<i> Not being able to reject a null hypothesis NEVER means you must accept
+</I>&gt;<i> it.
+</I>&gt;<i> You simply can't reject it.
+</I>
+Never? Even if a test has sufficient statistical power, that is, low
+beta? That's not my understanding. My understanding is that if beta is
+high, then failure to reject the null hypothesis (because p is higher
+than alpha) has precisely the meaning you've stated - you clearly can't
+reject the null hypothesis, but you can't accept it, either; hence,
+acceptance or rejection of the null hypothesis is uncertain. However,
+if beta is sufficiently low, when you fail to reject the null
+hypothesis, you can actually go so far as to accept the null
+hypothesis, since the chance of Type II error is sufficiently low.
+
+Peter
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="091926.html">Statistical power of KH and SH tests?
+</A></li>
+	<LI>Next message: <A HREF="091934.html">Statistical power of KH and SH tests?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#91928">[ date ]</a>
+              <a href="thread.html#91928">[ thread ]</a>
+              <a href="subject.html#91928">[ subject ]</a>
+              <a href="author.html#91928">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

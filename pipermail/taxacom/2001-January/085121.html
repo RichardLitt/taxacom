@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Users of BioLink -- feedback?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Users%20of%20BioLink%20--%20feedback%3F&In-Reply-To=%3C4.1.20010116082403.00b034c0%40a%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="085119.html">
+   <LINK REL="Next"  HREF="085120.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2001-January/085121.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Users of BioLink -- feedback?</H1>
+    <B data-pagefind-meta="author">Paul J. Morris</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Users%20of%20BioLink%20--%20feedback%3F&In-Reply-To=%3C4.1.20010116082403.00b034c0%40a%3E"
+       TITLE="Users of BioLink -- feedback?">mole at MORRIS.NET
+       </A><BR>
+    <I data-pagefind-meta="date">Tue Jan 16 09:51:27 CST 2001</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="085119.html">Users of BioLink -- feedback?
+</A></li>
+        <LI>Next message: <A HREF="085120.html">Users of BioLink -- feedback?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#85121">[ date ]</a>
+              <a href="thread.html#85121">[ thread ]</a>
+              <a href="subject.html#85121">[ subject ]</a>
+              <a href="author.html#85121">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2001</span><!--beginarticle-->
+<PRE>&gt;<i>&quot;Also, I have yet to discover if customized fields are available to the
+</I>&gt;<i>user.  Biota has a limited number of fields that could be customized, but
+</I>&gt;<i>not enough to accomplish adding the extra info I wanted to include. For
+</I>&gt;<i>example, ... the conservation status of each taxon based on various local,
+</I>&gt;<i>state, and federal resource agencies, conservation groups, etc.  Depending
+</I>&gt;<i>upon the taxon, it may have one to many conservation statuses depending upon
+</I>&gt;<i>who tracks it.&quot;
+</I>     Custom fields in Biolink are available in two forms: keywords and
+traits.  Both allow the user to add an unlimited list of new fields.
+Keywords work as a flexible controlled vocabulary.  You can specify keyword
+categories (e.g. conservation status) and a controlled vocabulary for each
+category (phrases such as endangered species, threatened, etc...).
+Biolink includes a phrase manager to allow privileged users to create and
+edit this controlled vocabulary, unfortunately it does not work properly in
+the current release version 1.0.  Picklists for the controlled vocabulary
+are generated from a select distinct query on the values currently in use
+in the database rather than from the phrases entered in the phrase manager.
+ The work around for this is to create a 'work around' record in the
+database and add all of the desired keywords to it.
+     Traits are very flexible fields - they can be set up to enter
+essentially any data that a user wants.  They can be used to import data
+that does not exactly map onto biolink's field structures.  Traits are a
+very flexible and powerful aspect of biolink, especially if you use biolink
+with the full version of  MS SQL Server 7.  With biolink and SQL Server, it
+is possible to import data that does not exactly map onto biolink fields
+into traits, and then manipulate it within sql server to fit biolink's
+structures.
+    Each taxon or specimen or publication record can be associated with as
+many keywords or traits as desired.   Multiple publications can be
+associated with at taxon.  Keywords, however, cannot be associated with a
+publication, except by storing the name of the source in a text 'qualifier'
+field for the keyword.  It is possible to set biolink up to track the
+conservation status of a taxon according to different authorities, but it
+will not be easy to run a search using the authorities (further detail
+below).
+    At ANSP we have been using Biolink since its initial release last
+summer to support a grant to capture all of the names of indopacific
+molluscs, and are beginning to try using it for managing collections
+information.   We have had reasonable success with multiple users in
+Australia and the US connecting to a biolink database at ANSP and entering
+data.   This has not been entirely without problems, and our biggest
+difficulty with biolink has been getting user support.
+
+-Paul
+---------------------
+Paul J. Morris, Biodiversity Information Manager
+The Academy of Natural Sciences
+1900 Benjamin Franklin Parkway, Philadelphia, PA  19103, USA
+215-299-1161   <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">mole at morris.net</A>  AA3SD  PGP public key available.
+-----
+How biolink handles references and keywords in a bit more detail:
+Each taxon has zero to many references.
+Each reference comes from one and only one publication
+A reference includes Reference type, page, and Qualifier (uncontrolled
+text) fields.
+(thus a reference can be identified as a source for conservation status
+information)
+Each taxon has zero to many keywords
+A keyword includes Keyword Type, Keyword Value, and Qualifier (uncontrolled
+text) fields
+Thus it is possible to record two sources for conservation status
+information about a taxon, but it is not possible to directly link these
+sources with the status (without an extensive work around: one could create
+a long list of reference types that includes each value for conservation
+status and use the reference type as a work around for a vouchered keyword,
+or one can duplicate the source information in the qualifier field for the
+keyword, but it will not be possible to control what gets typed into that
+field, and errors may creep in).
+
+Conversely, for associated taxa it is possible to link to a source for the
+information about the association
+Each taxon has zero to many associations with other taxa.
+Each association has zero to one reference.
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="085119.html">Users of BioLink -- feedback?
+</A></li>
+	<LI>Next message: <A HREF="085120.html">Users of BioLink -- feedback?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#85121">[ date ]</a>
+              <a href="thread.html#85121">[ thread ]</a>
+              <a href="subject.html#85121">[ subject ]</a>
+              <a href="author.html#85121">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

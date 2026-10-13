@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Database
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Database&In-Reply-To=%3C00fb01c173a1%2405f118a0%24300484cb%40ricardo%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="039657.html">
+   <LINK REL="Next"  HREF="087021.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2001-November/087020.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Database</H1>
+    <B data-pagefind-meta="author">Vr. Richard Bejsak-Colloredo-Mansfeld</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Database&In-Reply-To=%3C00fb01c173a1%2405f118a0%24300484cb%40ricardo%3E"
+       TITLE="Database">ricardo at ANS.COM.AU
+       </A><BR>
+    <I data-pagefind-meta="date">Fri Nov 23 08:59:50 CST 2001</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="039657.html">Database
+</A></li>
+        <LI>Next message: <A HREF="087021.html">Phormidium simplicissimum (Oscillatoriales) distribution
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#87020">[ date ]</a>
+              <a href="thread.html#87020">[ thread ]</a>
+              <a href="subject.html#87020">[ subject ]</a>
+              <a href="author.html#87020">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2001</span><!--beginarticle-->
+<PRE>I am using still database dbase IV.
+When I set up command &quot;carry on&quot; and I insert record anywhere in the
+database  by pushing one key &quot;F7&quot; it carry all the information from previous
+record to new one and I can retype only fields like Date of collecting,
+locality, etc and save me all the typing.
+
+The *.dbf file is easily imported to any database,spreadsheet or even
+wordprocessor, is very universal.
+
+Most difficult is to design. What fields do you need and size. important is
+that you see all the fields on ONE screen.
+I am enclosing sample from my database:
+
+Field definitions for Screen : D:TENEB.scr
+
+Page  Row  Col  Data Base    Field       Type   Width  Dec
+  1    2   21    TO         CODEGEBIEN     Character          8
+  1    2    5    TO         BOXNUMERO      Character          3
+  1    2   43    TO         CODEWINKLE     Character          7
+  1    5   14    TO         SUBFAMILY      Character         20
+  1    4   50    TO         SUPERTRIB      Character         20
+  1    5   50    TO         TRIBUS         Character         20
+  1    6   50    TO         SUBTRIBUS      Character         20
+  1    9   38    TO         SPECIE         Character         40
+  1   11   11    TO         AUTHOR         Character         34
+  1   14    2    TO         COUNTRY        Character         12
+  1   14   16    TO         LOCALITY       Character         33
+  1   14   51    TO         DAY            Character          2
+  1   14   54    TO         MONTH          Character          2
+  1   14   57    TO         YEAR           Character          4
+  1   14   62    TO         COLLECTOR      Character         15
+  1   16    9    TO         M              Numeric            2      0
+  1   16   22    TO         F              Numeric            2      0
+  1   16   35    TO         UNSTATED       Numeric            2      0
+  1   16   47    TO         TOTAL          Numeric            3      0
+  1   18    7    TO         NOTE           Character         70
+  1   19   67    TO         AREA           Character         10
+  1    9    2    TO         GENUS          Character         35
+  1   11    9    TO         BRACKET1       Character          1
+  1   11   51    TO         BRACKET2       Character          1
+  PICTURE X
+  1   19   14    TO         DISTRIBUTI     Character         47
+  1   10   19    TO         SYNONYM_OF     Character         35
+  1   11   54    TO         MYCODE         Character          7
+  1   11   62    TO         PAGE           Numeric            4      0
+  1    2   65    TO         CODEBEJSAK     Character         12
+  1   11   67    TO         TABLE          Character          4
+  1   11   72    TO         FIGURE         Character          6
+  1   11   46    TO         AUTHOR_YEA     Character          4
+  1   16   68    TO         TYPE_LOC       Character          4
+
+
+Content of page :  1 and How looks like on the screen of your computer
+
+
+ Box:XXX Code Gebien:XXXXXXXX Code Winkler:XXXXXXX   Code
+Bejsak:XXXXXXXXXXXX
+
+                                    SUPERTRIBUS : XXXXXXXXXXXXXXXXXXXX
+  SUBFAMILY : XXXXXXXXXXXXXXXXXXXX       TRIBUS : XXXXXXXXXXXXXXXXXXXX
+                                      SUBTRIBUS : XXXXXXXXXXXXXXXXXXXX
+
+  GENUS :                   Specie :
+  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   is synonym of : XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Cod:  page: table
+fig.
+  Author:X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX,XXXX X  XXXXXXX XXXX XXXX
+XXXXXX
+
+  Country :     Locality:                          Date:d/m/y    legitis:
+  XXXXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  XX.XX.XXXX
+XXXXXXXXXXXXXXX
+
+  Males :XX  Females :XX  Unstated:XX  TOTAL : XXX   typus located: XXXX
+
+ Note:
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ Distribution:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+AREA:XXXXXXXXXX
+
+
+
+----- Original Message -----
+From: &quot;Roland Eberwein&quot; &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">roland.eberwein at LANDESMUSEUM-KTN.AT</A>&gt;
+To: &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">TAXACOM at USOBI.ORG</A>&gt;
+Sent: Friday, November 23, 2001 5:30 AM
+Subject: Database
+
+
+Dear Listmembers,
+
+I have to manage several collections (approx. 200.000 herbarium sheets,
+spirit collection, paleobotanical collection, carpological collection,
+ethnobotanical collection, colour slides, paintings, historical instruments,
+handwritings, living plants (garden), ...) at the Carinthian Botanic Center,
+but we have no(!) database. I'm looking for a suitable software now and need
+your help. I would be glad to receive informations about your favourites and
+your experience with databases. Please reply to my personal email-address.
+
+Cordial thanks in advance
+Roland
+
+*********************************************************
+Mag. Dr. Roland K. Eberwein
+Carinthian Botanic Center
+Prof.-Dr.-Kahler-Platz 1
+A-9020 Klagenfurt
+Austria
+Tel.: ++43 (0)463 598983 11
+Fax: ++43 (0)463 598983 14
+E-Mail: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">roland.eberwein at landesmuseum-ktn.at</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="039657.html">Database
+</A></li>
+	<LI>Next message: <A HREF="087021.html">Phormidium simplicissimum (Oscillatoriales) distribution
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#87020">[ date ]</a>
+              <a href="thread.html#87020">[ thread ]</a>
+              <a href="subject.html#87020">[ subject ]</a>
+              <a href="author.html#87020">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

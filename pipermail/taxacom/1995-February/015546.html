@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> AutoDecay
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20AutoDecay&In-Reply-To=%3Cmailman.1974.1157126643.2564.taxacom%40mailman.nhm.ku.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="098699.html">
+   <LINK REL="Next"  HREF="051338.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1995-February/015546.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">AutoDecay</H1>
+    <B data-pagefind-meta="author">Torsten Eriksson</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20AutoDecay&In-Reply-To=%3Cmailman.1974.1157126643.2564.taxacom%40mailman.nhm.ku.edu%3E"
+       TITLE="AutoDecay">eriksson at OEB.HARVARD.EDU
+       </A><BR>
+    <I data-pagefind-meta="date">Wed Feb 15 04:36:00 CST 1995</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="098699.html">Search for ethnobotany studentship
+</A></li>
+        <LI>Next message: <A HREF="051338.html">AutoDecay
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#15546">[ date ]</a>
+              <a href="thread.html#15546">[ thread ]</a>
+              <a href="subject.html#15546">[ subject ]</a>
+              <a href="author.html#15546">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>1995</span><!--beginarticle-->
+<PRE>I've been told by my colleagues that there may be others out there who
+might want to use my auto decay tool. Here is a short description:
+
+Background
+In wanting to assess the node support in phylogenetic hypotheses, K. Bremer
+[The limits of amino acid sequence data in Angiosperm phylogenetic
+reconstruction. Evolution. 42: 795-803 (1988)] estimated how much longer a
+tree had to be before a particular node was lost. He did this by saving all
+shortest trees, the ones one step longer, and then computing a strict
+consensus tree. Then adding all cladograms two steps longer and
+&quot;consensing&quot; all together, noting which nodes collapsed at each step - and
+so on. The difference in length between the shortest three(s) and the
+tree(s) collapsing a certain node has then been used as an index of support
+for that node (&quot;Decay index&quot;).
+
+There is a problem with this approach: Trying to save all trees, say, 10
+steps longer than the shortest ones might be impossible for practical
+purposes due to limited time and computer memory. A solution was
+incorporated (although, it seems, not generally known) in PAUP [Swofford,
+D. L. PAUP: Phylogenetic Analysis Using Parsimony (Computer program).
+Smithsonian Institution, Washington. (1993)]. Swofford applied reverse
+constraints which accomplished the same function. However, and here is why
+I actually made this tool, it is kind of tedious to make the constraint
+trees needed to test all nodes in a tree.
+
+What Auto Decay does
+It reads a nexus file including a trees block with at least one tree. It
+decomposes this tree and creates constraint trees for every node. A PAUP
+command file is then made with all necessary commands to automatically run
+a reverse constraint analysis (batch file in PAUP) for every node in the
+tree. It then reads the PAUP log file and computes node support indices for
+all nodes.
+
+What Auto Decay is
+It is a Hypercard stack which means that an Apple Macintosh is needed. You
+will need Hypercard 2.0 or later and HyperCard Player is sufficient. You
+also need PAUP 3.1.1. It may be possible to run on older versions of PAUP -
+but I have not tried this. If you have only the older version it may be
+possible to get the PAUP updater from the PAUP FTP site.
+
+I supply the AutoDecay free of charge and on e-mail only. Send me an e-mail
+if you are interested.
+
+Torsten Eriksson
+<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">eriksson at oeb.harvard.edu</A>
+
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="098699.html">Search for ethnobotany studentship
+</A></li>
+	<LI>Next message: <A HREF="051338.html">AutoDecay
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#15546">[ date ]</a>
+              <a href="thread.html#15546">[ thread ]</a>
+              <a href="subject.html#15546">[ subject ]</a>
+              <a href="author.html#15546">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

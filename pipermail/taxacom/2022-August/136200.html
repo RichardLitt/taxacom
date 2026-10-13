@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Taxacom: Rather an informaticy question about botanical names
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40lists.ku.edu?Subject=Re:%20Re%3A%20Taxacom%3A%20Rather%20an%20informaticy%20question%20about%20botanical%20names&In-Reply-To=%3CCABEjCKPp27urdjOb895B1pbsMhtG3NH2W3LzhqQU-fJQaMMjLg%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="136199.html">
+   <LINK REL="Next"  HREF="136201.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2022-August/136200.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Taxacom: Rather an informaticy question about botanical names</H1>
+    <B data-pagefind-meta="author">Tony Rees</B> 
+    <A HREF="mailto:taxacom%40lists.ku.edu?Subject=Re:%20Re%3A%20Taxacom%3A%20Rather%20an%20informaticy%20question%20about%20botanical%20names&In-Reply-To=%3CCABEjCKPp27urdjOb895B1pbsMhtG3NH2W3LzhqQU-fJQaMMjLg%40mail.gmail.com%3E"
+       TITLE="Taxacom: Rather an informaticy question about botanical names">tonyrees49 at gmail.com
+       </A><BR>
+    <I data-pagefind-meta="date">Wed Aug 24 14:30:35 CDT 2022</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="136199.html">Taxacom: Rather an informaticy question about botanical names
+</A></li>
+        <LI>Next message: <A HREF="136201.html">Taxacom: Rather an informaticy question about botanical names
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#136200">[ date ]</a>
+              <a href="thread.html#136200">[ thread ]</a>
+              <a href="subject.html#136200">[ subject ]</a>
+              <a href="author.html#136200">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2022</span><!--beginarticle-->
+<PRE>Hi Mary,
+
+I took a look at the spreadsheet you supplied. In the first scientific name
+listed i.e. &quot;Acorus calamus L.&quot; it seems there is a regular space between
+the genus name and the species epithet, but a special character
+(non-breaking space, Unicode a0, apparently also designatable as U+00A0)
+before the authority; in addition, the name is presented as a hyperlink (in
+this case, <A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.ipni.org%2Fa%2F12653-1&amp;amp;data=05%7C01%7Ctaxacom%40lists.ku.edu%7C798274381e844f8a0c9108da86072750%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637969662526366839%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=DiOwW22011mfIv7olvyeB8F%2Fghw09NRoHU934xgllIY%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.ipni.org%2Fa%2F12653-1&amp;data=05%7C01%7Ctaxacom%40lists.ku.edu%7C798274381e844f8a0c9108da86072750%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637969662526366839%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=DiOwW22011mfIv7olvyeB8F%2Fghw09NRoHU934xgllIY%3D&amp;reserved=0</A>) but that goes to an IPNI page
+for the author, not the name, which is a bit weird...
+
+Anyway, as you have discovered, you can remove the hyperlinks by copying
+the column, then pasting (either back where it came from, or to a new
+column) via &quot;paste special&quot; &gt; values.
+
+Then you can remove the non breaking spaces by selecting one, copying it
+into the &quot;find&quot; section of &quot;find/replace&quot;, with a regular space in the
+&quot;replace with&quot; portion&quot;, and applying either just to that column, or the
+entire document (the latter might be a good idea but probably will not find
+anything else).
+
+Then (preferably operating on a copy of the column), use &quot;data&quot; &gt; &quot;text to
+columns&quot; &gt; &quot;delimited&quot; &gt; &quot;delimiter = space&quot; to split the column into
+multiple ones, the genus and species will then appear in the first and
+second ones, the authority will be further split depending on its
+complexity but can be reassembled via other methods if needed.
+
+There may be a way to do all the above via either an Excel function or a
+VBA macro but I am not sufficiently familiar with these to offer those
+solutions, though maybe others can...
+
+Hope this helps. I am not sure how the IPNI export was generated but if
+this is a feature, then others might find the above explanation/potential
+operations helpful as well.
+
+Feel free to message me further if you want my &quot;treated&quot; copy of the file,
+or report back to this list if you are able or not able to replicate these
+operations (or based on that information, can come up with a more
+elegant/efficient method).
+
+Regards - Tony
+
+Tony Rees, New South Wales, Australia
+<A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fabout.me%2FTonyRees&amp;amp;data=05%7C01%7Ctaxacom%40lists.ku.edu%7C798274381e844f8a0c9108da86072750%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637969662526366839%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=8631lHUUjSAF1kwzZsu%2BpzfIh6HwPVA51hBEri%2BJgEw%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fabout.me%2FTonyRees&amp;data=05%7C01%7Ctaxacom%40lists.ku.edu%7C798274381e844f8a0c9108da86072750%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637969662526366839%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=8631lHUUjSAF1kwzZsu%2BpzfIh6HwPVA51hBEri%2BJgEw%3D&amp;reserved=0</A>
+
+
+On Wed, 24 Aug 2022 at 13:54, Mary Barkworth via Taxacom &lt;
+<A HREF="https://lists.ku.edu/listinfo/taxacom">taxacom at lists.ku.edu</A>&gt; wrote:
+
+&gt;<i> A student has sent me a spreadsheet for uploading. One column is of names.
+</I>&gt;<i> He had them all linked to IPNI and they include the authors of the name. I
+</I>&gt;<i> need to strip the authors off. They are all at species rank, meaning I just
+</I>&gt;<i> need the first two words. Using Excel, I have removed the hyperlinks. Then
+</I>&gt;<i> I try to use the formula =TRIM(LEFT(d2, FIND(&quot;^&quot;,SUBSTITUTE(d2, &quot; &quot;,
+</I>&gt;<i> &quot;^&quot;,2)&amp;&quot;^&quot;))) to generate the pure binomial. It does not work. It does work
+</I>&gt;<i> if I manually delete the space between the name and the authors and then
+</I>&gt;<i> enter a space. Apparently, there is a hidden character linking the name to
+</I>&gt;<i> the authors.
+</I>&gt;<i>
+</I>&gt;<i> Here are a few of the entries that I am trying to fix.
+</I>&gt;<i> Arisaema jacquemontii Blume,
+</I>&gt;<i> Arisaema jacquemontii Blume,
+</I>&gt;<i> Arisaema jacquemontii Blume,
+</I>&gt;<i> Arisaema utile Hook.
+</I>&gt;<i> Arisaema utile Hook.
+</I>&gt;<i>
+</I>&gt;<i> Could someone help please? I tried exporting to a csv file, opening it in
+</I>&gt;<i> Notepad++ and then reexporting to Excel, but it did not work.
+</I>&gt;<i>
+</I>&gt;<i> Mary
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Taxacom Mailing List
+</I>&gt;<i>
+</I>&gt;<i> Send Taxacom mailing list submissions to: <A HREF="https://lists.ku.edu/listinfo/taxacom">taxacom at lists.ku.edu</A>
+</I>&gt;<i> For list information; to subscribe or unsubscribe, visit:
+</I>&gt;<i> <A HREF="https://lists.ku.edu/listinfo/taxacom">https://lists.ku.edu/listinfo/taxacom</A>
+</I>&gt;<i> You can reach the person managing the list at: <A HREF="https://lists.ku.edu/listinfo/taxacom">taxacom-owner at lists.ku.edu</A>
+</I>&gt;<i> The Taxacom email archive back to 1992 can be searched at:
+</I>&gt;<i> <A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Ftaxacom.markmail.org%2F&amp;amp;data=05%7C01%7Ctaxacom%40lists.ku.edu%7C798274381e844f8a0c9108da86072750%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637969662526366839%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;amp;sdata=vjMl2CHG72lFM9MGTEe20YRii62HwpeMEuE2LmsEyrI%3D&amp;amp;reserved=0">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Ftaxacom.markmail.org%2F&amp;data=05%7C01%7Ctaxacom%40lists.ku.edu%7C798274381e844f8a0c9108da86072750%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637969662526366839%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=vjMl2CHG72lFM9MGTEe20YRii62HwpeMEuE2LmsEyrI%3D&amp;reserved=0</A>
+</I>&gt;<i>
+</I>&gt;<i> Nurturing nuance while assailing ambiguity for about 35 years, 1987-2022.
+</I>&gt;<i>
+</I></PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="136199.html">Taxacom: Rather an informaticy question about botanical names
+</A></li>
+	<LI>Next message: <A HREF="136201.html">Taxacom: Rather an informaticy question about botanical names
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#136200">[ date ]</a>
+              <a href="thread.html#136200">[ thread ]</a>
+              <a href="subject.html#136200">[ subject ]</a>
+              <a href="author.html#136200">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

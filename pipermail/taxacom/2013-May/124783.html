@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Data quality of aggregated datasets
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-May/124783.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Data quality of aggregated datasets</H1>
+    <B data-pagefind-meta="author">Doug Yanega</B>
+    dyanega at ucr.edu<BR>
+    <I data-pagefind-meta="date">Tue May  7 15:21:17 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="124782.html">[Taxacom] Asking a paper
+</A></li>
+        <LI>Next message: <A HREF="124784.html">[Taxacom] Data quality of aggregated datasets
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124783">[ date ]</a>
+              <a href="thread.html#124783">[ thread ]</a>
+              <a href="subject.html#124783">[ subject ]</a>
+              <a href="author.html#124783">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>On 5/7/13 12:04 PM, Dave Vieglais wrote:
+&gt; In addition, the confidence associated with the error estimate should also be recorded. For example, does &quot;+/- 100m&quot; refer to the 95% confidence interval? Circular Error Probable (50%)? 3 sigma ellipse (98.9%)? etc.
+&gt;
+This sounds like what I mean by false precision. If your error radius is 
+&quot;The ballpark estimate for the wandering radius of this particular 
+entomologist after he parked his car&quot; then there is NO utility in trying 
+to assign confidence limits and probability values to that radius. If 
+you just say &quot;We arbitrarily draw a 2 km radius in order to accommodate 
+for all reasonable sources of error LESS than 2 km in extent&quot;, then, 
+likewise, no further parameters are necessary or appropriate. Even for 
+georeferences that I personally recorded using a GPS, I will at least 
+double the actual distance I walked from that point when providing an 
+error radius, rounded to the nearest multiple of 100 meters, just so it 
+is NOT necessary to specify anything more detailed - because it is 
+vastly simpler to just use a large enough error value to SUBSUME any of 
+the error values one could painstakingly calculate or quantify using 
+other means. Why would anyone bother trying to calculate a confidence 
+interval for a label that says only &quot;6.35 miles S of Chicago, IL&quot;, or 
+&quot;Delhi, India&quot;? Worrying about false precision just wastes time, since 
+it doesn't increase the value of one's data; that is, in effect, the 
+criterion that distinguishes *false* precision. More numbers, or more 
+decimal places, is valuable *only up to a point*. What is important, as 
+Rich Pyle notes, is ACCURACY.
+
+On 5/7/13 12:35 PM, Dean Pentcheff wrote:
+&gt; I agree. I see those &quot;elaborate best practices&quot; (as encoded by Chapman 
+&gt; &amp; Wieczorek in the Geomancer document) as a codification of 
+&gt; well-throught-through rules of thumb that can be applied in the 
+&gt; absence of other information. The key (in my mind) is that the 
+&gt; &quot;objective, and very precise&quot; estimates always yield to additional 
+&gt; information.
+&gt;
+&gt; In your example, the critical piece of additional information is 
+&gt; &quot;campground&quot;. If the hypothetical label was just &quot;4 mi E Logan&quot;, I 
+&gt; don't think you could do much better than the automatic estimated 
+&gt; location. But &quot;campground 4 mi E Logan&quot; lets you (yes you, an expert 
+&gt; :) snuffle around for that feature, find it, assess whether it's 
+&gt; likely to be the campground in question (how many other campgrounds 
+&gt; are in that area?), and if it seems reasonable, assign that as the 
+&gt; high-probability collection location.
+&gt;
+Actually, a human would still do much better than Biogeomancer if the 
+label was just &quot;4 mi E Logan&quot;, because it would start from the center of 
+the city, where a human would start from the edge AND measure along a 
+road. The bigger the city, and the more roads deviate from perfectly 
+straight, and along cardinal compass headings, the worse an automated 
+system will perform. One does not have to be an expert, one simply has 
+to realize that (1) human beings driving cars measure distances from 
+boundaries and landmarks, using their odometers, (2) roads can curve, 
+and (3) roads can go at angles other than increments of 45 degrees 
+relative to a starting point. Show me an automated georeferencing tool 
+that incorporates all three of those realities and I'll be the first 
+person to hail that tool as the answer to our prayers. For the time 
+being, I simply don't accept that you can get high-quality georef data 
+except by human analysis. Remember, empirical results indicate only 
+about a 40% match between the two protocols, and only 60% of records 
+overlap within a reasonable error radius.
+
+Sincerely,
+
+-- 
+Doug Yanega      Dept. of Entomology       Entomology Research Museum
+Univ. of California, Riverside, CA 92521-0314     skype: dyanega
+phone: (951) 827-4315 (disclaimer: opinions are mine, not UCR's)
+              <A HREF="http://cache.ucr.edu/~heraty/yanega.html">http://cache.ucr.edu/~heraty/yanega.html</A>
+   &quot;There are some enterprises in which a careful disorderliness
+         is the true method&quot; - Herman Melville, Moby Dick, Chap. 82
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="124782.html">[Taxacom] Asking a paper
+</A></li>
+        <LI>Next message: <A HREF="124784.html">[Taxacom] Data quality of aggregated datasets
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124783">[ date ]</a>
+              <a href="thread.html#124783">[ thread ]</a>
+              <a href="subject.html#124783">[ subject ]</a>
+              <a href="author.html#124783">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

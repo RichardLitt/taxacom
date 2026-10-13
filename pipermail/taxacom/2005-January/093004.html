@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Catching lat lon in wrong country errors
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2005-January/093004.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Catching lat lon in wrong country errors</H1>
+    <B data-pagefind-meta="author">John Irish</B>
+    jirish at MWEB.COM.NA<BR>
+    <I data-pagefind-meta="date">Fri Jan  7 07:41:12 CST 2005</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="093000.html">Catching lat lon in wrong country errors
+</A></li>
+        <LI>Next message: <A HREF="093005.html">Catching lat lon in wrong country errors
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#093004">[ date ]</a>
+              <a href="thread.html#093004">[ thread ]</a>
+              <a href="subject.html#093004">[ subject ]</a>
+              <a href="author.html#093004">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2005</span><!--beginarticle-->
+<PRE>Doug Yanega wrote:
+
+ &gt; I would have thought the idea
+ &gt; was to use an automated procedure only *after* a human has done the
+ &gt; georeferencing, in an attempt to catch any errors the *human* may
+ &gt; have made.
+
+This is what I thought, too.
+
+Scenario: human inputs locality data into database. Assume this includes
+both coordinates (from whatever source) and some indication of the
+administrative unit the locality is situated in (whether country,
+province, district or whatever). While the human can read a map and
+type, he/she regularly misreads or mistypes. The program checks whether
+the given coordinates are actually within the borders of that country
+(or other unit) and alerts the human if it is not. The mistake can be
+rectified immediately - in fact, grossly wrong data never even enters
+the database.
+
+This is not automated georeferencing, rather, automated (partial)
+verification of the results of human georeferencing. Partial because it
+isn't foolproof - wrong coordinates in the right country will not be
+flagged as errors. You can improve machine accuracy by using polygons
+instead of bounding boxes, as I suggested, and by using smaller polygons
+(e.g. districts instead of provinces).
+
+ &gt; In essence, I'm curious as to whether my impression - that it sounds
+ &gt; like people are talking as if the idea is to have the programs doing
+ &gt; the primary georeferencing, and humans doing the error-checking,
+ &gt; rather than the other way around - is because I'm not understanding
+ &gt; what people are saying, or because they actually *believe* that's the
+ &gt; proper approach?
+
+Nope, not me.
+
+John
+--
+Dr. John Irish
+Tel./Fax +264-61-202-2038; Cell/SMS: +264-81-269-6602
+P.O. Box 21148, Windhoek
+Namibia Biosystematics Web Portal: <A HREF="http://www.biodiversity.org.na/index.php">http://www.biodiversity.org.na/index.php</A>
+
+&quot;The universe is full of magical things patiently waiting for our wits
+to grow sharper - E. Phillpots&quot;
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="093000.html">Catching lat lon in wrong country errors
+</A></li>
+        <LI>Next message: <A HREF="093005.html">Catching lat lon in wrong country errors
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#093004">[ date ]</a>
+              <a href="thread.html#093004">[ thread ]</a>
+              <a href="subject.html#093004">[ subject ]</a>
+              <a href="author.html#093004">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

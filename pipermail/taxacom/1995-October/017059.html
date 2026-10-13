@@ -1,0 +1,251 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> latitude and longitude designation and collection data
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1995-October/017059.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">latitude and longitude designation and collection data</H1>
+    <B data-pagefind-meta="author">Gary Noonan</B>
+    carabid at MPM1.MPM.EDU<BR>
+    <I data-pagefind-meta="date">Tue Oct  3 14:42:20 CDT 1995</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="100212.html">latitude and longitude designation and collection data
+</A></li>
+        <LI>Next message: <A HREF="052851.html">latitude and longitude designation and collection data
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#017059">[ date ]</a>
+              <a href="thread.html#017059">[ thread ]</a>
+              <a href="subject.html#017059">[ subject ]</a>
+              <a href="author.html#017059">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1995</span><!--beginarticle-->
+<PRE>        Several thoughts occur regarding the interesting discussions to date
+about determining latitude and longitude.  One such thought is that I've
+written a program (the RESEARCH INTERFACE) that partly needs the latitude
+and longitude determination needs and want to update the program to meet all
+such needs. At this stage I would greatly appreciate additional input from
+my colleagues about their particular needs and requirements. Below is
+information first about my background in working with GIS technology and
+other computer matters. This is followed by information about the RESEARCH
+INTERFACE program and a plea for feedback.
+         I've worked with GIS software for several years, using both the DOS
+and Windows version of Atlas GIS and published a review of the DOS version
+in the June issue of Systematic Biology. Also I've extracted electronic
+geography files from the federal Digital Chart of the World and have made
+these available over the Internet.  The RESEARCH INTERFACE program that I
+wrote  is,among other things, expressly designed to speed the determining of
+latitude and longitude for records with locality data. I've been a member of
+several task forces that worked on data standards and have also mailed out
+proposed standards to entomologists and received their comments. Lastly, the
+research monographs I write typically deal with tens of thousands of specimens.
+         The RESEARCH INTERFACE program automatically determines latitude
+and longitude for places that correspond to a database of about 99.99
+percent of populated places in the U.S. When the program finds a unique
+combination of geographic data that corresponds to a similar combination in
+the database that accompanies it, the program automatically inserts a
+decimal latitude and longitude into the appropriate research database
+record. The program also inserts any missing political information such as
+the county for a particular record. If only a state and county are given,
+the program inserts a predetermined latitude and longitude for the county.
+The program marks a radio button field to record the degree of accuracy of
+the latitude and longitude. For example, 1 button notes at the degree
+information is for county only as opposed to for a given locality. I intend
+in future program versions to interface the RESEARCH INTERFACE with CD-ROMS
+that will contain latitude and longitude for the entire world.
+         The requisite data sets for the entire world will soon be available
+and will be in the public domain.
+         As noted by Al Newton the federal government has produced a GNIS
+CD-ROM listing more than 2 million place and feature names for the United
+States. This easy to use CD-ROM is preferable to most published gazetteers
+and atlases. The current version already has many historical places that no
+longer exist, and future versions will incorporate increasingly large
+numbers of such historical places. The inclusion of such places is
+particularly important when you are working with old specimens. Users can
+search the CD-ROM, review the search results on the screen, print them out
+or dump them into various files, including database files in DBF  format.
+Its possible to search for and find localities that are only partially
+spelled out on the specimen label. The federal data is public domain,
+available for exporting into programs, for distributing to colleagues free
+of charge, etc.
+         Various foreign countries have produced electronic gazetteers.
+However most such gazetteers are high priced. Data from the Canadian
+government costs more than $700 for the country, and the user has to sign a
+legal document promising member to provide the data to other people. This
+makes it impossible to include it with  free programs such as the RESEARCH
+INTERFACE. In fact since such foreign gazetteers would have to be merged
+electronically into a single gazetteer for use with the RESEARCH INTERFACE
+or other programs, the various foreign electronic data sets are of limited
+use as regards interfacing with data management software.
+         Many of you are probably familiar with the published set of
+gazetteers for most countries that were published by the U.S. government and
+are commonly called
+&quot;Board on geographic names &quot; gazetteers or CIA gazetteers, etc.. These
+printed gazetteers contain degrees and minutes (but no seconds) for foreign
+countries.  The gazetteers also provide the major administrative unit in
+which a feature occurs and identify a feature as a populated place,
+mountain, stream, etc. The government is working on a prototype set of
+CD-ROMS that will have the same information as the published gazetteers. The
+prototype set will be available later this year but will run only under
+Unix. I'm on the list of prototype reviewers and will post information to
+Taxacom about my evaluation of the prototypes.
+         Once the final set of foreign CD-ROMS is available, I want to take
+data from them and from the federal GNIS US  database and combine it into a
+set of CD-ROMS that will interface with the RESEARCH INTERFACE. Determining
+latitude and longitude for all features will then be as easy as it currently
+is for populated U.S. places with the RESEARCH INTERFACE. The latter program
+will then serve as an easy to use database engine in which researchers can
+determine latitude and longitude for sets of research specimens, and then
+upload the information back to museums that lent the specimens. The program
+will also be designed to import data from collections databases, determine
+latitude and longitude and then export back to the main collections
+databases--allowing for retrospective determinations when desired. It will
+also have features for producing databases for use in GIS software and for
+analyzing systematic data.
+         I have thought about seeking NSF support for producing this
+forthcoming version--some funds from somewhere will be needed. However,
+discussions with NSF staff and various colleagues suggest that first there
+must be a workshop in which systematists work together with GIS and
+information specialists to determine the very best way (most economical,
+most time saving, etc.) set of program standards for implementing the
+forthcoming version. For example, much greater input is needed from
+systematists about their needs. Much input is needed from GIS and other
+computer specialists about the best ways to solve such needs. Such a
+workshop would probably consist of approximately one third systematists and
+two thirds computer workers. It would analyze needs and provide a blueprint
+for implementing solutions. I then would seek NSF funding for the program
+version with the worldwide latitude and longitude databases. The new version
+would have many other features for data analysis.
+        Because some people may not have seen the announcements about the
+RESEARCH INTERFACE, I'll post an announcement separately. Separately so that
+you can delete it if you've already seen it. A bit of honesty!! I just
+discovered two bugs in the current version of the program and have fixed 1
+and am working on the other. If you are thinking about downloading a free
+copy, you might want to wait a week or so until I announced the fixed
+version is available at the FTP site.
+         Some questions on which I would appreciate feedback are as follows.
+First, I know that there are people using the RESEARCH INTERFACE because
+they contact me with questions. It would greatly help any future NSF
+proposal for enhancing the program if users could let me know that they do
+indeed use the program. Any such grant proposal would have to document
+current users and document any desire by systematists for a program that
+accesses databases for the entire world.
+         It would also be interesting to know how accurate you feel your
+data must be. My own experience in using GIS software is that typically I
+make a map that covers all or a significant portion of a continent or at
+least most of a major continental region. For such maps latitude and
+longitude values for just county data are actually quite useful. Think about
+how many square kilometers a dot actually covers on most maps, and you will
+see that most often we don't need to worry whether a site 3 miles east of
+Seattle is actually measured along a road, as the crow  flies, etc. Some
+studies of smaller areas (such as ecological studies) of course make require
+more precise data. For my own monograph type studies I've found that the
+degrees and minutes in the printed federal gazetteers for foreign countries
+provide sufficient accuracy for both regular maps in GIS and for thematic
+maps that illustrate variation in morphological characters between
+populations of species.
+         How many people think that a program that encompasses determine
+latitude and longitude on a worldwide basis would be useful? Would you
+encourage development of such a program?
+         What types of information should a program record to document the
+degree of accuracy for a given record as regards latitude and longitude?
+(The GIS workers who spend their entire careers working with GIS issues will
+no doubt provide some good ideas in any workshop. ) Your ideas and needs
+should be recorded now for use in any such possible workshop.
+         What other issues are you concerned with?
+          A NSF sponsored version of the RESEARCH INTERFACE can be
+implemented on various platforms. The current version is written to run
+under DOS and requires only a few megabytes of memory. However DOS is an
+operating system on the way out--2 generations behind Windows 95. The
+enhanced version could be written to run directly under Windows in FoxPro
+for Windows version 2.6. However, Microsoft is considering not selling many
+additional compilers for at version. The newest version of FoxPro is Visual
+Foxpro. This version uses object oriented programming while previous
+versions use the older xBase technology. Programming in object oriented
+programming and maintaining programs written in object oriented techniques
+are easier to do in the long run than are working with the older xBase
+programing conventions. The various data screens created in Visual Foxpro
+are extremely attractive from a graphics standpoint. Programs created in
+Visual Foxpro can be more user friendly than those implementing under older
+versions. The big problem however is that programs compiled under Visual
+Foxpro require at least eight megabytes of computer RAM to run. Microsoft
+assumes that most consumers will quickly move to more powerful computers
+with such memory. Indeed, many computers sold to consumers for household use
+have this much or more memory. However, systematists typically have very
+small equipment budgets. A computer with 16 megabytes of RAM and a 75
+megahertz Pentium processor costs about $2200 from vendors such as Dell. Is
+this too steep a hardware requirement for systematists?
+         If you are using the RESEARCH INTERFACE, what do you like and what
+do you dislike. Please be candid.
+        The program uses latitude and longitude rather than other units such
+as  UTM units. The problem as I understand it for the latter units is that
+they don't match up when countries are compared on a global basis.--I've
+never used UTM myself because GIS programs mostly work with latitude and
+longitude--Any comments on the accuracy of UTM units when used globally.
+         The RESEARCH INTERFACE currently uses decimal latitude and
+longitude because the DOS version of Atlas GIS preferred decimal to degrees
+minutes and seconds. I've often quite used to decimal degrees and find them
+conceptually easier to visualize than minutes and seconds with their darn 60
+units for minutes and 3600  units for seconds. Any comments about ease of
+use regarding decimal reverses the old fashioned minutes and seconds.
+(Windows version of Atlas GIS can use both methods. )
+         I would like the forthcoming version of the RESEARCH INTERFACE to
+be constructed so as to handle data for many different systematics
+disciplines. I know about the data standards for entomologists but need
+information about standards for other disciplines. If you are in a different
+discipline that has established standards, could you please send me a copy
+or let me know where I might obtain one.
+         Well, that's my questions for the moment. I'll appreciate any
+feedback you may care to give. Particularly interesting will be feedback
+about the desirability of what I am thinking of doing with the future
+version of the RESEARCH INTERFACE. Do you want such a version? A successful
+proposal to NSF would have to document that systematists desire the software
+tool in question. Also any suggestions for a more catchy program name will
+be greatly appreciated. Thanks for your patience in wading through this message.
+
+
+
+  *************************************************************
+  * Gary Noonan, Curator of Insects, Milwaukee Public Museum  *
+  * 800 W. Wells,  Milwaukee, Wisconsin 53233 USA             *
+  * and Adjunct Associate Professor of Zoology, University of *
+  * Wisconsin-Milwaukee carabid at mpm1.mpm.edu                  *
+  * voice (414) 278-2762  fax (414) 223-1396                  *
+  *************************************************************
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="100212.html">latitude and longitude designation and collection data
+</A></li>
+        <LI>Next message: <A HREF="052851.html">latitude and longitude designation and collection data
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#017059">[ date ]</a>
+              <a href="thread.html#017059">[ thread ]</a>
+              <a href="subject.html#017059">[ subject ]</a>
+              <a href="author.html#017059">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

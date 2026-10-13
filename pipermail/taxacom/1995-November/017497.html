@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Maintaining databases
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1995-November/017497.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Maintaining databases</H1>
+    <B data-pagefind-meta="author">Rob Colwell</B>
+    COLWELL at UCONNVM.UCONN.EDU<BR>
+    <I data-pagefind-meta="date">Thu Nov 30 15:01:51 CST 1995</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="100649.html">Botanical Database at http://db.mobot.org
+</A></li>
+        <LI>Next message: <A HREF="053289.html">Maintaining databases
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#017497">[ date ]</a>
+              <a href="thread.html#017497">[ thread ]</a>
+              <a href="subject.html#017497">[ subject ]</a>
+              <a href="author.html#017497">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1995</span><!--beginarticle-->
+<PRE>In the discussion of database maintenance, Gary Rosenberg and Doug
+Yanega have commented on protocols for speeding up the process of
+identifying or re-identifying specimens in a database, assuming that
+records already exist in the database for those specimens.
+
+Here's how we deal with this problem for the Arthropods of La Selva
+(ALAS) inventory in Costa Rica. A de novo inventory of a poorly-
+known biota requires constant updating of more and more accurate
+determinations, as specimens are sorted to finer and finer
+taxonomic levels and finally, one hopes, identified to species. We
+use the Biota biodiversity database management program to do this ,
+but the protocol could be implemented in other ways (respond
+directly to me if you want details about Biota):
+
+(1) Specimens are individually barcoded (pins, slides, vials) as they
+are prepared. (A not-required but efficient shortcut is to use
+sequential barcodes for all specimens from a single collecting-
+event--e.g. a single Malaise trap; then use Biota's first number/last
+number Series entry screen to create all the specimen records
+automatically and relate them to the record for the collection-
+event--collector(s), date, place, etc.)
+
+(2) Once each specimen has a barcode and a record in the database
+(linked to a collecting-event record), specimens from all collecting
+events pooled (or the specimens from 200 years of collecting in a
+museum) can then be sorted to any level commensurate with the
+expertise of the sorter (from rough-sorts to family by
+parataxonomists to species level sorts by specialists)--I mean the
+physical specimens are sorted, in this step.
+
+(3) Now suppose the visiting authority has lined up 100 specimens of
+Species 1, 50 of Species 2, and 20 of Species 3, etc. The specimens
+in each species category may or may not currently share any
+attributes in the database. You or an assistant simply sets up the
+computer with the determination for Species 1 (in Biota, you would
+fill in Species--or a temporary taxon name, see next; Determined By;
+and Date Determined in the Identify Specimen Series screen), then
+scan in the barcodes for all individuals or Species 1. (With Biota,
+this is a hands-off procedure; you set the barcode scanner to enter a
+carriage return character at the end of each barcode, which launches
+a script to add the Specimen record to a record set.) How long does
+it take? With practice, 3-6 seconds per specimen (slides are faster
+than vials or pinned material). So, 5-10 minutes per hundred
+specimens, with zero specimen code entry errors.
+
+(4) When done with the scanning for that species, the determination
+and associated info is added to the Specimen record for each species
+in the Record Set (at a button-click of the mouse, with Biota). The
+previous determination for these specimens should be automatically
+archived. In Biota, if the Determination History option is turned on,
+Biota handles this task by creating a Det History record for each
+specimen re-identified, automatically recording the previous det and
+determiner, who entered the change, when, and where (Specimen
+record, related Species record, or related Genus record); the new
+det, determiner, and det date are entered in the Specimen record.
+Step 4 takes one button click and a few seconds of computational
+time for several hundred records.
+
+(5) A note on &quot;Temporary Taxa&quot;: Suppose that Thayer and Newton
+identified several thousand staphylinid beetle specimens as
+subfamily Aleocharinae, but not to genus or species. How do you
+capture this useful information in a relational database (using the
+standard Linnean hierarchy) that needs a Species record and a Genus
+record to link Specimen records to Subfamily records? In the ALAS
+project, we solve this problem by creating Temporary Taxa records
+of the form: Species &quot;(Aleocharinae)&quot; in the Genus &quot;(Aleocharinae)&quot;,
+in the subfamily &quot;Aleocharinae&quot;, using parenthesis (no quotes) to
+indicate that the name is actually of a higher category and the
+identification incomplete. Thus all aleocharine staphylinid specimen
+records can be found by a top-down search on Subfamily
+Aleocharinae, whether the specimens have been determined to
+species, genus, or just subfamily. (Biota creates Temporary Taxa
+automatically, if requested: if you create an Order record
+Coleoptera, then Family, Genus, Species records for &quot;(Coleoptera)&quot;
+are ready and waiting for all those obscure beetles you can't identify
+to even to family.)
+
+In short, with barcodes (or magic bullet ID tags of the future, as
+long as they can communicate as surrogate keyboard input, as a
+barcode reader does), updating determinations in existing specimen
+records can be made utterly simple and quite acceptably fast: no
+piece of information need be entered more than once, and only the
+new determination need be entered by hand (or that, too, with
+barcodes; in the ALAS collection, we use species barcodes, under the
+unit tray species labels). Administrative/curational tasks such as
+loans and returns are greatly simplified as well. The argument that
+barcodesare clumsy to read is simply not borne out by our experience.
+Beginners have a rough time--but only for an hour or so. Like any
+repetitive manual task requiring dexterity and coordinaton, barcode
+entry is easier some people than others, and virtuosos do exist, but
+anyone can learn.
+
+Rob Colwell
+======================================================
+Robert K. Colwell
+Department of Ecology and Evolutionary Biology
+University of Connecticut, U-42
+Storrs, CT 06269-3042
+=====================
+E-mail colwell at uconnvm.uconn.edu
+***PLEASE NOTE THE NEW AREA CODE for northern. CT: 860***
+Voice (860) 486-4395
+Fax (860) 486-3790
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="100649.html">Botanical Database at http://db.mobot.org
+</A></li>
+        <LI>Next message: <A HREF="053289.html">Maintaining databases
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#017497">[ date ]</a>
+              <a href="thread.html#017497">[ thread ]</a>
+              <a href="subject.html#017497">[ subject ]</a>
+              <a href="author.html#017497">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,339 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] FW: formation of zoological names with Mc, Mac, et
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20FW%3A%20formation%20of%20zoological%20names%20with%20Mc%2C%20Mac%2C%20et&In-Reply-To=%3C67A948B7-8654-4E6D-843B-6E01D0BBDAF4%40gbif.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="113916.html">
+   <LINK REL="Next"  HREF="113939.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2009-September/113919.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] FW: formation of zoological names with Mc, Mac, et</H1>
+    <B data-pagefind-meta="author">David Remsen (GBIF)</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20FW%3A%20formation%20of%20zoological%20names%20with%20Mc%2C%20Mac%2C%20et&In-Reply-To=%3C67A948B7-8654-4E6D-843B-6E01D0BBDAF4%40gbif.org%3E"
+       TITLE="[Taxacom] FW: formation of zoological names with Mc, Mac, et">dremsen at gbif.org
+       </A><BR>
+    <I data-pagefind-meta="date">Thu Sep  3 04:07:12 CDT 2009</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="113916.html">[Taxacom] FW: formation of zoological names with Mc, Mac, et
+</A></li>
+        <LI>Next message: <A HREF="113939.html">[Taxacom] FW: formation of zoological names with Mc, Mac, et
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#113919">[ date ]</a>
+              <a href="thread.html#113919">[ thread ]</a>
+              <a href="subject.html#113919">[ subject ]</a>
+              <a href="author.html#113919">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2009</span><!--beginarticle-->
+<PRE>
+Just a couple of points regarding this thread.
+
+We use the term 'namestring' when referring to the literal orthography  
+of a name as it has been used in a particular instance because the  
+same name generally has many distinct orthographies.   A name may or  
+may not include authorship.  Authorship may or may not include a  
+publication year.  Authors are abbreviated, etc.    Processing  
+namestrings is necessary in this digital age and the reality of this  
+wide latitude in orthography presents special difficulties in  
+effectively grouping the right sets of namestrings together and  
+excluding the wrong ones.   This is less an issue when working with  
+single datasets but becomes significant when integrating data from  
+many sources.  It's amazing how many different ways a name can be  
+written and all are essentially correct, just more or less compete.
+
+Regarding name atomisation, we are quite close to being able to  
+effectively atomise 99.99% of all namestrings into distinct and  
+identified components so that the use of a parsed or unparsed  
+scientific name in data management practices will be less an issue  
+than it might be now.  The development of name parsing tools and  
+services is quite active at the moment and is currently testing  
+against rather esoteric orthographies. In fact,  we are interested in  
+finding cases that either break the parsers or are simply too  
+ambiguous to effectively parse.
+
+A reference implementation can be tried at <A HREF="http://globalnames.org/parsers/new">http://globalnames.org/parsers/new</A>
+
+Cheers,
+David Remsen
+
+----------------------------------------------------------------------------
+David Remsen, Senior Programme Officer
+Electronic Catalog of Names of Known Organisms
+Global Biodiversity Information Facility Secretariat
+Universitetsparken 15, DK-2100 Copenhagen, Denmark
+Tel: +45-35321472   Fax: +45-35321480
+Mobile +45 27201472
+Skype: dremsen
+----------------------------------------------------------------------------
+
+
+
+On Sep 3, 2009, at 10:37 AM, Kevin Richards wrote:
+
+&gt;<i> I believe the new DarwinCore schema has separate fields for  
+</I>&gt;<i> scientific name components:
+</I>&gt;<i>
+</I>&gt;<i> scientificName - full scientific name, author etc
+</I>&gt;<i> genus
+</I>&gt;<i> specificEpithet
+</I>&gt;<i> infraspecificEpithet
+</I>&gt;<i> scientificNameAuthorship
+</I>&gt;<i> etc
+</I>&gt;<i>
+</I>&gt;<i> same with most TDWG schemas (eg TCS, LSID vocabs)
+</I>&gt;<i>
+</I>&gt;<i> see <A HREF="http://rs.tdwg.org/dwc/terms/index.htm">http://rs.tdwg.org/dwc/terms/index.htm</A> for details
+</I>&gt;<i> also see <A HREF="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/DarwinCoreVersions">http://wiki.tdwg.org/twiki/bin/view/DarwinCore/DarwinCoreVersions</A> 
+</I>&gt;<i>  for a comparison of the darwin core versions.
+</I>&gt;<i>
+</I>&gt;<i> Kevin
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ________________________________________
+</I>&gt;<i> From: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom-bounces at mailman.nhm.ku.edu</A> [<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom-bounces at mailman.nhm.ku.edu</A> 
+</I>&gt;<i> ] On Behalf Of <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Tony.Rees at csiro.au</A> [<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Tony.Rees at csiro.au</A>]
+</I>&gt;<i> Sent: Thursday, 3 September 2009 7:14 p.m.
+</I>&gt;<i> To: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">s.thorpe at auckland.ac.nz</A>; <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">jim.croft at gmail.com</A>
+</I>&gt;<i> Cc: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> Subject: Re: [Taxacom] FW: formation of zoological names with Mc,  
+</I>&gt;<i> Mac, et
+</I>&gt;<i>
+</I>&gt;<i> Hi Steve,
+</I>&gt;<i>
+</I>&gt;<i> Well I *thought* Darwin Core had separate fields for scientific name  
+</I>&gt;<i> (&quot;scientificname&quot;) and author, however it appears I am wrong and the  
+</I>&gt;<i> intention is to hold a &quot;namestring&quot;, see <A HREF="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/ScientificName">http://wiki.tdwg.org/twiki/bin/view/DarwinCore/ScientificName</A>
+</I>&gt;<i>
+</I>&gt;<i> However the OBIS implementation of Darwin Core, with which I have  
+</I>&gt;<i> spent most of my experience over the past x years, *does* have  
+</I>&gt;<i> separate fields for &quot;scientificname&quot; and &quot;scientificnameauthor&quot;, see <A HREF="http://www.iobis.org/tech/provider/implementation/">http://www.iobis.org/tech/provider/implementation/</A> 
+</I>&gt;<i> , which is what I was (perhaps foolishly) expecting in the master  
+</I>&gt;<i> Darwin Core spec, since it is notionally an extension of DC - anyone  
+</I>&gt;<i> from TDWG care to comment?
+</I>&gt;<i>
+</I>&gt;<i> - Tony
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> -----Original Message-----
+</I>&gt;<i> From: Stephen Thorpe [mailto:<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">s.thorpe at auckland.ac.nz</A>]
+</I>&gt;<i> Sent: Thursday, 3 September 2009 5:06 PM
+</I>&gt;<i> To: Rees, Tony (CMAR, Hobart); <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">jim.croft at gmail.com</A>
+</I>&gt;<i> Cc: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> Subject: RE: [Taxacom] FW: formation of zoological names with Mc,  
+</I>&gt;<i> Mac, et
+</I>&gt;<i>
+</I>&gt;<i> Tony, Jim, list,
+</I>&gt;<i>
+</I>&gt;<i> I am getting a little confused if you guys are agreeing or  
+</I>&gt;<i> disagreeing with me!
+</I>&gt;<i> I am saying that EFFECTIVELY, the authority/date is part of the  
+</I>&gt;<i> name, albeit an optional part, despite the Code claiming that it  
+</I>&gt;<i> isn't, but at the same time treating it as if it is! The Code can  
+</I>&gt;<i> only prescribe things about names, NOT about auxiliary information.  
+</I>&gt;<i> The Code prescribes what the authority/date of a name is, so these  
+</I>&gt;<i> things are part of the name, albeit optional. Most databases/ 
+</I>&gt;<i> publications in the world today would have a single field called  
+</I>&gt;<i> 'Name', which would look like this:
+</I>&gt;<i>
+</I>&gt;<i> Name: Examplus primus Smith, 1970
+</I>&gt;<i>
+</I>&gt;<i> NOT like this:
+</I>&gt;<i>
+</I>&gt;<i> Name: Examplus primus
+</I>&gt;<i> Authority: Smith
+</I>&gt;<i> Date: 1970
+</I>&gt;<i>
+</I>&gt;<i> At least in entomology, when you put a determination label on a  
+</I>&gt;<i> specimen, you typically include authority date as part of the  
+</I>&gt;<i> identification (=as part of the name).
+</I>&gt;<i>
+</I>&gt;<i> OK, so we could play &quot;semantic revisionism&quot; and redefine name as  
+</I>&gt;<i> &quot;namestring&quot;, and say that the Code prescribes things about  
+</I>&gt;<i> namestrings, but why bother?
+</I>&gt;<i>
+</I>&gt;<i> One thing to be clear about is that I am certainly NOT in favour of  
+</I>&gt;<i> only citing e.g. Examplus primus, and leaving out the authority/ 
+</I>&gt;<i> date! What I AM saying is that we should NOT write things like  
+</I>&gt;<i> Examplus primus A.B. Smith, jr., October 20, 1970. Instead, if we  
+</I>&gt;<i> really want to know auxiliary info., then we should structure a  
+</I>&gt;<i> database more like this:
+</I>&gt;<i>
+</I>&gt;<i> Name: Examplus primus Smith, 1970
+</I>&gt;<i> Authority: A.B. Smith, jr. (born: January 1, 1900, in Utopia,  
+</I>&gt;<i> Lalaland)
+</I>&gt;<i> Publication date: October 20, 1970
+</I>&gt;<i>
+</I>&gt;<i> Cheers,
+</I>&gt;<i>
+</I>&gt;<i> Stephen
+</I>&gt;<i>
+</I>&gt;<i> ________________________________________
+</I>&gt;<i> From: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Tony.Rees at csiro.au</A> [<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Tony.Rees at csiro.au</A>]
+</I>&gt;<i> Sent: Thursday, 3 September 2009 6:38 p.m.
+</I>&gt;<i> To: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">jim.croft at gmail.com</A>; Stephen Thorpe
+</I>&gt;<i> Cc: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> Subject: RE: [Taxacom] FW: formation of zoological names with Mc,  
+</I>&gt;<i> Mac, et
+</I>&gt;<i>
+</I>&gt;<i> Jim, all,
+</I>&gt;<i>
+</I>&gt;<i> Well we are just talking semantics here - Stephen says the authority  
+</I>&gt;<i> is part of the name (which I agree it is not), you say the authority  
+</I>&gt;<i> as a qualifier to the name is generally redundant (which I disagree  
+</I>&gt;<i> with). David Remsen and GNA folk call the name and subsequent  
+</I>&gt;<i> authority (and possibly other qualifier) information the  
+</I>&gt;<i> &quot;namestring&quot;, I term I don't really love but will use in this  
+</I>&gt;<i> context...
+</I>&gt;<i>
+</I>&gt;<i> To see why namestrings are more useful than names is not hard, e.g.  
+</I>&gt;<i> take a look at any official nomenclatural stuff (ICZN in this  
+</I>&gt;<i> instance), e.g.
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://www.iczn.org/BZNJun2009opinions.html">http://www.iczn.org/BZNJun2009opinions.html</A>
+</I>&gt;<i>
+</I>&gt;<i> You will, I hope, see the liberal use of &quot;namestrings&quot; rather than  
+</I>&gt;<i> just &quot;names&quot;. ICZN certainly need to use these, and others to see  
+</I>&gt;<i> them, for all the reasons recently expounded as a part of this  
+</I>&gt;<i> thread, for as long as ambiguities or potential persist (which may  
+</I>&gt;<i> be some time...)
+</I>&gt;<i>
+</I>&gt;<i> Now, I would never put all of these elements in a single name field  
+</I>&gt;<i> in my database, since I do not have such a thing, however I  
+</I>&gt;<i> certainly have genus, species, authority (or author and date in  
+</I>&gt;<i> separate fields) and can perm them to reconstruct namestrings as  
+</I>&gt;<i> needed. Actually I would be surprised if you did not do the same??  
+</I>&gt;<i> This is quite different of course from primary keys, which in my  
+</I>&gt;<i> usage and many others', has nothing to do with these name elements,  
+</I>&gt;<i> for reasons previously discussed.
+</I>&gt;<i>
+</I>&gt;<i> Regards - Tony
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> -----Original Message-----
+</I>&gt;<i> From: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom-bounces at mailman.nhm.ku.edu</A> [mailto:<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom-bounces at mailman.nhm.ku.edu</A> 
+</I>&gt;<i> ] On Behalf Of Jim Croft
+</I>&gt;<i> Sent: Thursday, 3 September 2009 4:15 PM
+</I>&gt;<i> To: Stephen Thorpe
+</I>&gt;<i> Cc: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> Subject: Re: [Taxacom] FW: formation of zoological names with Mc,  
+</I>&gt;<i> Mac, et
+</I>&gt;<i>
+</I>&gt;<i> I am Jim Croft (aka James Reginald Croft, aka Kim Croft to his family,
+</I>&gt;<i> aka all maner of unpublishable appellations to his staff and
+</I>&gt;<i> colleagues).  The one born in Toorak Melbourne Australia on 28 May
+</I>&gt;<i> 1951.  The bureaucrat botanist, not the hellfire and brimstone Baptist
+</I>&gt;<i> minister, not the peace out hippie bookbinder.
+</I>&gt;<i>
+</I>&gt;<i> My name is not &quot;Jim Croft (Toorak) 1951&quot; - although it could be argued
+</I>&gt;<i> the implied information content is a little bit less ambiguous
+</I>&gt;<i>
+</I>&gt;<i> When it comes to names, plants and animals are no different... If you
+</I>&gt;<i> need to other information to sort out the use of the name, store and
+</I>&gt;<i> manage that information.  But don't glue it to the name.  Because you
+</I>&gt;<i> will never have enough and the end result will be unusable and
+</I>&gt;<i> unenforceable.
+</I>&gt;<i>
+</I>&gt;<i> I have had numerous arguments about this at the ANBG, saying that the
+</I>&gt;<i> use of author names on labels and other materials in the Gardens is a
+</I>&gt;<i> waste of time and space.  Other than a pathetically pretentious
+</I>&gt;<i> attempt to look scientific it serves no useful purpose.  The only
+</I>&gt;<i> people who need to invoke this information are nomenclaturalists when
+</I>&gt;<i> they need to sort out which name to apply to which taxon.  Once that
+</I>&gt;<i> is done and documented, no-one needs to see it.  Especially not the
+</I>&gt;<i> public.
+</I>&gt;<i>
+</I>&gt;<i> jim
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On Thu, Sep 3, 2009 at 8:25 AM, Stephen  
+</I>&gt;<i> Thorpe&lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">s.thorpe at auckland.ac.nz</A>&gt; wrote:
+</I>&gt;&gt;<i> Note that the author/date are in the name field (as they are in any  
+</I>&gt;&gt;<i> sensible taxonomic database), implying that they are part of the  
+</I>&gt;&gt;<i> name in some meaningful sense, despite an overly pedantic  
+</I>&gt;&gt;<i> interpretation of the Code denying this! I guess one of the many  
+</I>&gt;&gt;<i> inconsistencies in the Code is that it says author/date isn't part  
+</I>&gt;&gt;<i> of the name, but then treats it as part of the name in many  
+</I>&gt;&gt;<i> contexts...
+</I>&gt;<i>
+</I>&gt;<i> --
+</I>&gt;<i> _________________
+</I>&gt;<i> Jim Croft ~ <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">jim.croft at gmail.com</A> ~ +61-2-62509499 ~
+</I>&gt;<i> <A HREF="http://www.google.com/profiles/jim.croft">http://www.google.com/profiles/jim.croft</A>
+</I>&gt;<i> ... in pursuit of the meaning of leaf ...
+</I>&gt;<i> ... 'All is leaf' ('Alles ist Blatt') - Goethe
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i>
+</I>&gt;<i> Taxacom Mailing List
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;<i>
+</I>&gt;<i> The Taxacom archive going back to 1992 may be searched with either  
+</I>&gt;<i> of these methods:
+</I>&gt;<i>
+</I>&gt;<i> (1) <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+</I>&gt;<i>
+</I>&gt;<i> Or (2) a Google search specified as:  site:mailman.nhm.ku.edu/ 
+</I>&gt;<i> pipermail/taxacom  your search terms here
+</I>&gt;<i>
+</I>&gt;<i> Please consider the environment before printing this email
+</I>&gt;<i> Warning:  This electronic message together with any attachments is  
+</I>&gt;<i> confidential. If you receive it in error: (i) you must not read,  
+</I>&gt;<i> use, disclose, copy or retain it; (ii) please contact the sender  
+</I>&gt;<i> immediately by reply email and then delete the emails.
+</I>&gt;<i> The views expressed in this email may not be those of Landcare  
+</I>&gt;<i> Research New Zealand Limited. <A HREF="http://www.landcareresearch.co.nz">http://www.landcareresearch.co.nz</A>
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i>
+</I>&gt;<i> Taxacom Mailing List
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;<i>
+</I>&gt;<i> The Taxacom archive going back to 1992 may be searched with either  
+</I>&gt;<i> of these methods:
+</I>&gt;<i>
+</I>&gt;<i> (1) <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+</I>&gt;<i>
+</I>&gt;<i> Or (2) a Google search specified as:  site:mailman.nhm.ku.edu/ 
+</I>&gt;<i> pipermail/taxacom  your search terms here
+</I>&gt;<i>
+</I>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="113916.html">[Taxacom] FW: formation of zoological names with Mc, Mac, et
+</A></li>
+	<LI>Next message: <A HREF="113939.html">[Taxacom] FW: formation of zoological names with Mc, Mac, et
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#113919">[ date ]</a>
+              <a href="thread.html#113919">[ thread ]</a>
+              <a href="subject.html#113919">[ subject ]</a>
+              <a href="author.html#113919">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Inappropriate accuracy of locality data
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2010-December/118319.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Inappropriate accuracy of locality data</H1>
+    <B data-pagefind-meta="author">Dusty</B>
+    dlmcdonald at alaska.edu<BR>
+    <I data-pagefind-meta="date">Sat Dec  4 00:09:30 CST 2010</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="118318.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+        <LI>Next message: <A HREF="118320.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#118319">[ date ]</a>
+              <a href="thread.html#118319">[ thread ]</a>
+              <a href="subject.html#118319">[ subject ]</a>
+              <a href="author.html#118319">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2010</span><!--beginarticle-->
+<PRE>Since this is such an important topic and because there is a lot of
+misinformation in this thread, I though I'd gather and report some actual
+data. Please, don't take my word for any of this - grab your GPS and your
+mapping program of choice and try it for yourself.
+
+I found my mailbox on Google Earth, made sure my GPS (Garmin GPSmap96) was
+set to WGS84, plunked it onto my mailbox, and saved three waypoints, labeled
+One, Two, and Three, a minute or so apart. The first waypoint was created
+within a minute or so of turning the GPS on, and the unit was last powered
+up a couple states over. There was no attempt to let the GPS stabilize, and
+I did not use the &quot;create waypoint as average&quot; function. Then I rounded the
+coordinates to whole seconds, creating an additional waypoint named &quot;Bob.&quot;
+Mailbox Actual is the red cross, cleverly labeled &quot;mailbox.&quot;
+<A HREF="http://i.imgur.com/DArNY.png.">http://i.imgur.com/DArNY.png.</A>
+
+All three test points are within a couple meters of where Google thinks my
+mailbox lives as the data came from the GPS. My GPS was reporting between 17
+and 24 feet of error during this process. Had I been collecting mailboxes,
+I'd have probably called it 10m error, just because that's a nice round
+number that's larger than 24 feet. Had I rounded first, that error would not
+include my mailbox - my data would be erroneous simply because I had some
+strange idea about discarding perfectly usable data. There are four other
+mailboxes closer than mine to Waypoint Bob, which clearly limits the
+usability of the data for answering some questions (like &quot;exactly which
+mailbox are we talking about here?&quot;). The average of my actual waypoints
+would indeed be a new point, and there does seem to be a systematic bias, to
+the west in this case. The waypoints are all still much closer to Mailbox
+Actual than to the rounded point or any other mailbox. Your method of &quot;For
+GPS readings where the unit's declared 'accuracy' is less than 20 m, I
+personally use 25 m&quot; would, from the rounded point, entirely miss the actual
+mailbox. Surely it's not hard to imagine more biological questions that
+require the same sort of precision, nor to see the implications of
+misrepresented data in attempting to answer those types of questions.
+<A HREF="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/CoordinateUncertaintyInMeters">http://wiki.tdwg.org/twiki/bin/view/DarwinCore/CoordinateUncertaintyInMeters</A>
+
+&lt;snip&gt;
+
+Now please tell me how this:
+
+
+&gt; 41 52 38.84 N 87 39 08.48 W +/- 25 m
+&gt;
+&gt; is different from this:
+&gt;
+&gt; 41 52 39 N 87 39 08 W +/- 25 m
+&gt;
+&gt; as an *estimate* of the true position.
+&gt;
+
+<A HREF="http://i.imgur.com/1smVE.png">http://i.imgur.com/1smVE.png</A>
+
+They're different because they describe different points. A point 25m from
+one could be more than 25m from the other. The red line in the above image
+is 25m long, the yellow is 37. The following is a likely scenario.
+
+* The GPS reports 41 52 38.84 N 87 39 08.48 W
+* Actual error is ~25m
+* The actual position of interest is ~25m SE of 41 52 38.84 N 87 39 08.48 W
+* You round to 41 52 39 N 87 39 08 W, and use 25m as error
+* You have just created an error shape that does not include the actual
+point of interest.
+
+At the very least, your report of error is inaccurate.
+
+-D
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="118318.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+        <LI>Next message: <A HREF="118320.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#118319">[ date ]</a>
+              <a href="thread.html#118319">[ thread ]</a>
+              <a href="subject.html#118319">[ subject ]</a>
+              <a href="author.html#118319">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

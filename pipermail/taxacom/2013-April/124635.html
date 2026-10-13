@@ -1,0 +1,425 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] prolific species describers
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-April/124635.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] prolific species describers</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at bishopmuseum.org<BR>
+    <I data-pagefind-meta="date">Sat Apr 13 17:28:41 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="124634.html">[Taxacom] prolific species describers
+</A></li>
+        <LI>Next message: <A HREF="124636.html">[Taxacom] Apologies!
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124635">[ date ]</a>
+              <a href="thread.html#124635">[ thread ]</a>
+              <a href="subject.html#124635">[ subject ]</a>
+              <a href="author.html#124635">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>These are the kinds of questions we could answer in a split second with a
+fully-populated Global Names Usage Bank.  I know those sound like very empty
+and/or idealistic and/or na?ve words (fair enough).  But those words also
+happen to be true.
+
+I had never thought to do this sort of analysis before using GNUB, but It
+took me only about five minutes to write a query that produced the following
+list, filtered by &quot;Actinopterygii&quot; (only the top 20 records are shown; the
+total results included 3899 records):
+
+Name							Total	Valid	%
+Start	End
+----------------------------------------------------------------------------
+-----------------------------------
+Bleeker, Pieter						1952	829	42
+1836	1931
+Valenciennes, A.					1893	695	36
+1821	1986
+G?nther, Albert Charles Lewis Gotthilf			1646	913	55
+1857	1910
+Fowler, Henry Weed					1422	577	40
+1899	1977
+Jordan, David Starr					1325	684	51
+1875	2000
+Boulenger, George Albert				1135	791	69
+1881	1923
+Cuvier, Georges					1108	419	37	1798
+1986
+Steindachner, F.					1040	591	56
+1860	1970
+Regan, C. T.						909	569	62
+1902	1940
+Gilbert, Charles H.					788	601	76
+1878	2000
+Eigenmann, C. H.					751	537	71
+1887	1948
+Bloch, Marcus Elieser					706	265	37
+1779	1835
+Lac?p?de, Bernard Germain ?tienne de		617	140	22	1797
+1917
+Randall, John Ernest					593	568	95
+1955	2011
+Richardson, J.						538	205	38
+1823	1930
+Linnaeus, Carolus					471	363	77
+1758	1771
+Poey, F.						469	108	23
+1851	2000
+de Laporte Castelnau La Fert?-S?nect?re, Francis L.	464	106	22
+1855	1879
+Cope, Edward Drinker					437	168	38
+1861	1910
+Schneider, J. G.						431	118
+27	1801	1801
+
+I want to make something perfectly clear:  GNUB deserves exactly ZERO credit
+for the data behind these numbers.  In this case, because I filtered on
+Actinopterygii (ray-finned fishes), essentially all of the data come from
+Bill Eschmeyer's &quot;Catalog of fishes&quot;.  Those data include two major
+components:
+- Original descriptions of species (linked to literature citations)
+- &quot;Current status&quot; of each species (i.e., whether the species is currently
+regarded as valid, or as a junior synonym)
+
+So, what does GNUB contribute?  Two things:
+1) A data model that is both highly normalized (generalized), and is
+scalable to effectively all treatments of all taxon names throughout all
+history
+2) An architecture that allows leveraging myriad data sources (while
+attributing appropriate credit to those sources) to be able to answer
+questions that cannot be answered by any single data source
+
+It's worth unpacking these two things a bit more.
+
+1) The word &quot;normalized&quot; is geek-speak for how data models are designed.  A
+general trend is that normalized data models more finely atomize the data
+content.  More highly normalized data models tend to have far more tables
+and links between those tables, and generally make life difficult for anyone
+wanting to build a user-friendly interface to access and maintain data.
+Also, many (most?) datasets relating to biodiversity data that currently
+exist are not so highly normalized, and it is an amazingly difficult and
+time-consuming process to transform non-normalized (i.e., &quot;flat&quot;) data into
+a highly normalized structure (at least with any semblance of accuracy).
+However, once you get over that barrier of capturing &amp; parsing the data in a
+normalized form,  a normalized data model will be able to answer questions
+that weren't even conceived when the data model was designed.  
+
+The example above is a perfect case in point:  because the GNUB data model
+is highly normalized, it only took me about five minutes (far less time than
+it took me to write this email) to ask the question, &quot;How many species have
+been named by each author, how many of those names are still regarded as
+valid, and what was the range of years in which they published the new
+names?&quot;  As I said above, I never considered asking that question when the
+data model was originally designed, but because it's highly normalized, it
+was amazingly easy for me to ask this novel question, and get a real &amp;
+meaningful answer.  
+
+I'll also point out a couple of things about the dataset above:  first, it
+includes names established by individual people -- meaning that names
+established as &quot;Carl Linnarus&quot; and &quot;Carl von Linn?&quot; are both included for
+&quot;Linnaeus, Carolus&quot;.  The same is true for names established by, for
+example, &quot;Rofen, Robert R.&quot;, who also published under &quot;Harry, Robert R.&quot;
+(e.g., see: <A HREF="http://zoobank.org/01E53574-BB1F-4371-A3E6-DC145CEDF6ED).">http://zoobank.org/01E53574-BB1F-4371-A3E6-DC145CEDF6ED).</A>  Also,
+I tossed in the &quot;Start&quot; and &quot;End&quot; year for publishing new species just
+because it was incredibly easy to do.  There are a near infinite number of
+things I could also have calculated -- such as the average number of
+co-authors, the average number of new species per publication, the ratio of
+new species to new genera, or almost anything else someone might want to
+ask.
+
+2) Although the highly normalized data model makes it very easy to ask novel
+and previously unanticipated questions of this sort, the REAL power of GNUB
+comes from its core function to integrate information from myriad data
+sources.  I'll say this again for emphasis: :  GNUB deserves exactly ZERO
+credit for the data behind these numbers!  There is currently no logo for
+GNUB, and there is no reason why GNUB should ever take any credit for the
+data records themselves.  I've said this many times before, but it's always
+worth repeating:  GNUB is *NOT* simply &quot;yet another database; yet another
+acronym&quot; to compete with all the other alphabet soup of acronyms already
+generating, harvesting, aggregating, etc. data about scientific names.
+Rather, GNUB is intended to be the invisible architecture operating behind
+the scenes that allows all the other biodiversity datasets in the world to
+more seamlessly cross-link to each other. As I've also said many times
+before, an analogy for GNUB is the DNS system -- anyone who ever uses the
+internet relies on DNS, and almost nobody who uses the internet is aware of
+it.
+
+Why is there a need for something like GNUB?  The world has many, many data
+sources for taxon names.  The only areas we need more of those databases is
+for the taxonomic groups that are not yet included in any of the existing
+databases.  That's not really GNUB's role (although it certainly could serve
+in that capacity for taxonomic groups without another, more dedicated
+repository).  The real function of GNUB is to interconnect those different
+datasets that already exist, and thereby increase their functional utility
+by allowing them to cross-leverage each other.  
+
+For example, I chose to filter the above dataset on Actinopterygii because
+the bulk of Bill Eschmeyer's Catalog of Fishes is already indexed by GNUB,
+and therefore I knew I'd get a relatively comprehensive result set.
+Obviously the same is not true for the many existing datasets that are not
+yet included within the GNUB index.  Unfortunately, that makes it hard to
+see the advantage of GNUB, because you could get these same numbers directly
+from the Catalog of Fishes itself.  Granted, it would have taken a bit more
+than five minutes to do that (largely because CoF doesn't assign GUIDs to
+authors and cross-link aliases of authors), but that's more a function of
+normalization than data integration.  But CoF only tracks fish names, so
+Carl Linnaeus comes out at #16 in the list, with only 471 species.  What CoF
+can't do, is generate the following:
+
+Name						Total	Valid	%
+Start	End
+----------------------------------------------------------------------------
+--------------------------
+Linnaeus, Carolus				4559	4448	97	1758
+1789
+Bleeker, Pieter					2004	850	42	1836
+1931
+Valenciennes, A.				1933	711	36	1821
+1986
+G?nther, Albert Charles Lewis Gotthilf		1692	938	55	1857
+1910
+Fowler, Henry Weed				1450	588	40	1899
+1977
+Jordan, David Starr				1377	717	52	1875
+2000
+Sharp, David					1188	1188	100	1873
+1919
+Boulenger, George Albert			1139	794	69	1881
+1923
+Cuvier, Georges				1132	434	38	1798	1986
+Steindachner, F.				1053	597	56	1860
+1970
+Regan, C. T.					936	583	62	1902
+1940
+Gilbert, Charles H.				823	623	75	1878
+2000
+Perkins, Robert Cyril Layton			788	788	100	1899
+1938
+Hardy, D. Elmo					756	756	100	1953
+1981
+Bloch, Marcus Elieser				753	281	37	1779
+1835
+Eigenmann, C. H.				751	537	71	1887
+1948
+Lac?p?de, Bernard Germain ?tienne de	650	146	22	1797	1917
+Randall, John Ernest				622	597	95	1955
+2011
+Yamaguti, S.					581	581	100	1934
+1971
+Richardson, J.					554	213	38	1823
+1930
+
+This is the same query except not filtered by Actinopterygii.  Obviously,
+the data are still skewed heavily towards authors of fish names, because
+that's the skew of the content currently in GNUB.  I'd be much happier to
+see names like Charles Paul Alexander, Johann Christian Fabricius, Oldfield
+Thomas, Theodore Cockerell, Francis Walker and Maurice Pic (among the other
+names contributed so far in this thread).  But that won't happen until we
+focus more on importing larger datasets into the GNUB index.  Most of the
+effort so far has been building and testing the core infrastructure, rather
+than bulk-importing content. And, as I said before, bulk import is tedious
+when the content is coming from a flat dataset (because it must be parsed
+and normalized and cross-compared to what is already included in the GNUB
+index). But the infrastructure-building and -testing phase of GNUB
+development is now winding down, so the content importing process (e.g.,
+Sherborn, Hymenoptera Name Server, and many others already in the queue)
+will now begin to ramp up.  As it does, these sorts of questions will get
+more and more meaningful cross-taxon answers.
+
+Finally, this cross-taxon analysis is only part of the value of the data
+integration aspect of GNUB.  The other part is cross-service integration.
+For example, the query results above requires information on nomenclature
+(names described), information on taxonomy (percent currently regarded as
+valid; and also if you want to cluster by major group of organism, like
+Actinopterygii), and information on literature (Start and End years).  In
+the case of fishes, Bill Eschmeyer's database is primarily a nomenclator,
+but it also makes assertions about the current status of names -- so I was
+able to pull all that information together from essentially a single source.
+In many case, however, the same source does not provide all kinds of
+information.  What makes the data integration aspect of GNUB *really*
+powerful is that it would allow you to re-run this query instantly using a
+different authority for classification &amp; taxonomy.  For example, you could
+switch to seeing the % valid values as per current status asserted by
+FishBase, rather than CoF.  And, of course, you could do all sorts of cool
+analyses to compare individual taxonomies as treated by CoF vs. FisheBase
+vs. whoever.  And wouldn't it be nice to also tie-in BHL pages? And
+WikiSpecies pages? And CoL? And EoL? And WoRMS? And countless others?  And
+wouldn't it be nice to be able to jump directly to Museum records for type
+specimens?  And global distribution maps in GBIF based on current status
+according to (e.g.) Species2000?
+
+The Global Names Architecture (of which GNUB is only one component) is
+intended to facilitate exactly that sort of inter-database connectivity.
+Personally, I feel that the biggest barrier to its success is the
+understandable fear by many managers of large datasets that GNA/GNUB
+represents some sort of threat to their future operations.  My hope in this
+extremely long message is to convey the opposite.  Specifically, I will only
+consider this endeavor a success when the ratio of people who utilize GNUB
+services on a daily basis to people who *know* they are using GNUB services
+on a daily bases approaches that same ratio for all internet users compared
+to the tiny subset of users who understand the role that DNS and IP
+addresses play in their internet activities.  The goal is for users to be
+able to jump between all the different relevant datasets seamlessly with a
+single mouse click, without those users knowing why that jump is so
+seamless.  The users should only see the data-provider and service-provider
+web pages; and these same providers should be able to proudly display how
+often their datasets are used in these sorts of cross-discipline services
+(in the same way that many web pages proudly display their usage
+statistics).
+
+Damn -- I guess I'll never get that hour back.....
+
+Aloha,
+Rich
+
+P.S. Bonus points for those who: a) read all the way down to here; b)
+noticed something odd about the end year for a few rows in the first table
+above; and c) gives the literature citation that makes those odd values
+technically correct. Hint: the numbers in the lists above include
+unavailable names.
+
+
+
+&gt; -----Original Message-----
+&gt; From: taxacom-bounces at mailman.nhm.ku.edu [mailto:taxacom-
+&gt; bounces at mailman.nhm.ku.edu] On Behalf Of Ohl, Michael
+&gt; Sent: Saturday, April 13, 2013 6:21 AM
+&gt; To: Ken Kinman
+&gt; Cc: taxacom at mailman.nhm.ku.edu
+&gt; Subject: Re: [Taxacom] prolific species describers
+&gt; 
+&gt; Hi Ken,
+&gt; 
+&gt; I agree! Thanks for suggesting Oldfield Thomas for mammals.
+&gt; 
+&gt; So non-entomologists, please post numbers for any group, which are
+&gt; extraordinary in any taxon framework, even if much smaller than in
+&gt; entomology.
+&gt; 
+&gt; Cheers, Michael
+&gt; 
+&gt; Sent from my iPad
+&gt; 
+&gt; Am 13.04.2013 um 18:07 schrieb &quot;Ken Kinman&quot;
+&gt; &lt;kinman at hotmail.com&lt;mailto:kinman at hotmail.com&gt;&gt;:
+&gt; 
+&gt; Hi Michael,
+&gt; 
+&gt;         I don't think any vertebrate zoologists could compete with the
+&gt; entomologists for such numbers.  I remembered that Oldfield Thomas of the
+&gt; British Museum named large numbers of mammals, and I see that his
+&gt; biography on Wikipedia says that he named 2,000 species and subspecies.  I
+&gt; don't know if that number includes only recognized species and subspecies
+&gt; (many of his names are now merely synonyms of recognized species and
+&gt; subspecies).
+&gt; 
+&gt;                     -------------Ken
+&gt; 
+&gt; 
+&gt;
+----------------------------------------------------------------------------
+------------------
+&gt; -------------------
+&gt; 
+&gt; &gt; From: Michael.Ohl at mfn-berlin.de&lt;mailto:Michael.Ohl at mfn-berlin.de&gt;
+&gt; &gt; To:
+&gt; taxacom at mailman.nhm.ku.edu&lt;mailto:taxacom at mailman.nhm.ku.edu&gt;
+&gt; &gt; Date: Sat, 13 Apr 2013 13:53:02 +0000
+&gt; &gt; Subject: [Taxacom] prolific species describers
+&gt; &gt;
+&gt; &gt; Hi,
+&gt; &gt;
+&gt; &gt; I had expected that this request has already been posted in Taxacom, but
+&gt; my (very) quick search in the Taxacom archive resulted in nothing. So here
+it
+&gt; is (again?).
+&gt; &gt;
+&gt; &gt; I am trying to set up a list of the most prolific species describers in
+zoology.
+&gt; A few names immediately came to my mind, like Charles Paul Alexander with
+&gt; more than 11,000 names in Diptera, and Johann Christian Fabricius with
+more
+&gt; than 10,000 names across several insect orders. But there might be more!
+&gt; &gt;
+&gt; &gt; So please post your bid for higher or similar numbers! I will distribute
+a top-
+&gt; 10-list at the end.
+&gt; &gt;
+&gt; &gt; Although I am basically interested in the total number of names
+published
+&gt; by a single person, any further statistics are welcome, if available.
+Number of
+&gt; names still valid today, total number of genus- vs. species-group names
+....
+&gt; &gt;
+&gt; &gt; Cheers, Michael Ohl
+&gt; &gt;
+&gt; &gt; Museum fuer Naturkunde, Berlin
+&gt; &gt; _______________________________________________
+&gt; &gt; Taxacom Mailing List
+&gt; &gt; Taxacom at mailman.nhm.ku.edu&lt;mailto:Taxacom at mailman.nhm.ku.edu&gt;
+&gt; &gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt; &gt;
+&gt; &gt; The Taxacom Archive back to 1992 may be searched with either of these
+&gt; methods:
+&gt; &gt;
+&gt; &gt; (1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt; &gt;
+&gt; &gt; (2) a Google search specified as:
+&gt; site:mailman.nhm.ku.edu/pipermail/taxacom your search terms here
+&gt; &gt;
+&gt; &gt; Celebrating 26 years of Taxacom in 2013.
+&gt; _______________________________________________
+&gt; Taxacom Mailing List
+&gt; Taxacom at mailman.nhm.ku.edu
+&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt; 
+&gt; The Taxacom Archive back to 1992 may be searched with either of these
+&gt; methods:
+&gt; 
+&gt; (1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt; 
+&gt; (2) a Google search specified as:
+&gt; site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+&gt; 
+&gt; Celebrating 26 years of Taxacom in 2013.
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="124634.html">[Taxacom] prolific species describers
+</A></li>
+        <LI>Next message: <A HREF="124636.html">[Taxacom] Apologies!
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124635">[ date ]</a>
+              <a href="thread.html#124635">[ thread ]</a>
+              <a href="subject.html#124635">[ subject ]</a>
+              <a href="author.html#124635">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

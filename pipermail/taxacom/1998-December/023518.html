@@ -1,0 +1,254 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> data sharing
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20data%20sharing&In-Reply-To=%3Cmailman.9946.1157126736.2564.taxacom%40mailman.nhm.ku.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="106648.html">
+   <LINK REL="Next"  HREF="059310.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1998-December/023518.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">data sharing</H1>
+    <B data-pagefind-meta="author">Dave Vieglais</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20data%20sharing&In-Reply-To=%3Cmailman.9946.1157126736.2564.taxacom%40mailman.nhm.ku.edu%3E"
+       TITLE="data sharing">vieglais at UKANS.EDU
+       </A><BR>
+    <I data-pagefind-meta="date">Thu Dec 10 12:33:14 CST 1998</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="106648.html">Scaevola &amp; Ammophila Distribution
+</A></li>
+        <LI>Next message: <A HREF="059310.html">data sharing
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#23518">[ date ]</a>
+              <a href="thread.html#23518">[ thread ]</a>
+              <a href="subject.html#23518">[ subject ]</a>
+              <a href="author.html#23518">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>1998</span><!--beginarticle-->
+<PRE>&gt;<i> -----Original Message-----
+</I>&gt;<i> From: Biological Systematics Discussion List
+</I>&gt;<i> [mailto:<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">TAXACOM at cmsa.Berkeley.EDU</A>]On Behalf Of Hugh Wilson
+</I>&gt;<i> Sent: Thursday, December 10, 1998 10:20 AM
+</I>&gt;<i> To: Multiple recipients of list TAXACOM
+</I>&gt;<i> Subject: Re: data sharing
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On 10 Dec 98 at 7:11, Dave Vieglais &lt;<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">vieglais at UKANS.EDU</A>&gt; wrote:
+</I>&gt;<i>
+</I>&gt;<i> &gt; large amounts of unstructured textual information.  But I doubt
+</I>&gt;<i> any of the
+</I>&gt;<i> &gt; developers of thse search engines would suggest using them for ordered
+</I>&gt;<i> &gt; access to structured data (certainly their marketing folks might have
+</I>&gt;<i> &gt; another opinion), and would probably be amused at the suggestion.  The
+</I>&gt;<i> &gt; reason is quite simple- by exporting to a text file, and
+</I>&gt;<i> providing access
+</I>&gt;<i> &gt; via web search engines......
+</I>&gt;<i>
+</I>&gt;<i> My reference to full text indexing was not intended to imply that we
+</I>&gt;<i> should set up text indices for Alta-vista to search.  The general
+</I>&gt;<i> notion is to create a structured text file, index it, and then create
+</I>&gt;<i> a 'front end' that sends queries to it.  For users able to frame up a
+</I>&gt;<i> query URL, the front end can be bypassed.
+</I>
+Hmm.  You have just described a DBMS, albeit a rather simple one.  Rule
+number one of information management goes something like: Never, ever create
+your own database management system.  They exist. People have invested huge
+amounts of time and intellectual effort into creating them and optimizing
+them for all kinds of data.  Why disregard all this remendous achievment and
+simply put the data in a text file?  Is it not easier to keep the data in a
+database (access, dbase, whatever) and have your query posted directly
+against the database?  Are you suggesting that it is easier and less
+expensive to go through many steps of creating a text file and indexing it
+each time you update the database?  If you *must* go through a web
+interface, at least interface directly to the database (there are *many*
+tools for this- free or otherwise), rather than go through the painful
+process of rebuilding yet another flavor of the same thing.
+
+&gt;<i>
+</I>&gt;<i> &gt; Processing time is not typically an issue with properly setup
+</I>&gt;<i> DBMS systems.
+</I>&gt;<i> &gt; Certainly, text searching will usually be faster, but at the loss of a
+</I>&gt;<i> &gt; tremendous amount of functionality.  And yes, text files can be
+</I>&gt;<i> generated
+</I>&gt;<i> &gt; from any development system, but in doing so, it is widely
+</I>&gt;<i> recognized that
+</I>&gt;<i> &gt; information loss is inevitable.
+</I>&gt;<i>
+</I>&gt;<i> Take a look at the membership directory query system at the ASPT
+</I>&gt;<i> website at:
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://www.csdl.tamu.edu/FLORA/aspt/aspthome.htm">http://www.csdl.tamu.edu/FLORA/aspt/aspthome.htm</A>
+</I>&gt;<i> (select 'membership')
+</I>&gt;<i>
+</I>&gt;<i> The query page carries links to 'front end' systems that allow the
+</I>&gt;<i> user to query a full text index using a mouse.  The index originates
+</I>&gt;<i> as a DbaseIV file sent to me by the ASPT treasurer.  I convert it to
+</I>&gt;<i> a data table using an archaic, cheap, DOS-based database program and,
+</I>&gt;<i> using a simple (150 lines of code), home-built program, generate a
+</I>&gt;<i> structured text file (2 min. run - 1300+ records).  This is shipped
+</I>&gt;<i> to a UNIX server and indexed by me using a locally built webpage.
+</I>&gt;<i> There is *no* loss of information in this process and programed
+</I>&gt;<i> output allows the base data to be enhanced via insertion of
+</I>&gt;<i> browser-based email links and functional web links for ASPT members
+</I>&gt;<i> that cite a web page.  I update the system on almost a daily basis
+</I>&gt;<i> and full updates (new file from the treasurer) take about 10 minutes.
+</I>&gt;<i>  Also, the index is available for open URL query (avoiding the 'front
+</I>&gt;<i> end') if a user has an interest.  The URL:
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://www.csdl.tamu.edu/FLORA/cgi/aspt_query?focus=Amaranthaceae">http://www.csdl.tamu.edu/FLORA/cgi/aspt_query?focus=Amaranthaceae</A>
+</I>&gt;<i>
+</I>&gt;<i> will pull a listing of those ASPT members listing this family as an
+</I>&gt;<i> item research interest.
+</I>
+I will argue that there quite likely IS a loss of information.  The original
+database probably exists as more than a single table.  With this comes the
+relationships between data elements, plus the business rules and so forth
+associated with the maintenance of that data.  Simply dumping the data to a
+text file reduces the information content as you do not propogate these
+relationships and rules, let alone the field definitions and so forth.  Even
+if the characters are the same as in the original DB (i.e. the data is the
+same) the information content is reduced.  This information loss expands as
+the complexity of your data increases.
+
+Secondly, you argue that this is an inexpensive system.  Many steps are
+taken to propogate the information from the Dbase IV file through to a
+system that can be queried through your web interface.  This is fine if one
+enjoys that kind of activity, however, this is what computers were
+originally developed for.  It is a trivial matter to make your Dbase IV file
+directly accessable from the web with a  few lines of java or the language
+of your choice.  It would take say a day to setup a database interface
+through the web (about the same as you initially expended setting up the
+convoluted interface).  Then it is done.  You spend 10 minutes every day
+maintaining your interface as described above.  That's approximately an hour
+or so a week, 50 hours a year.  With a direct connection to the database,
+the additional maintenance time is zero.
+
+However, even through this system (direct connection to the database), you
+are *still* restricted to working with the information through a web
+browser.  By using a protocol designed for information retrieval (z39.50 +
+others), rather than information perusal (http), one could gain access to
+the data elements directly, rather than going through further tedious steps
+of translation.
+
+&gt;<i>
+</I>&gt;<i> &gt; search engine or a real DBMS).  Personally I wouldn't mind waiting a few
+</I>&gt;<i> &gt; seconds for the information to flow straight into my
+</I>&gt;<i> spreadsheet or GIS app
+</I>&gt;<i> &gt; or whatever in a nice orderly fashion, rather than having to
+</I>&gt;<i> cut and paste
+</I>&gt;<i> &gt; oddly formatted lumps out of my web browser screen (with the
+</I>&gt;<i> associated risk
+</I>&gt;<i> &gt; of messing things up).
+</I>&gt;<i>
+</I>&gt;<i> A 'real' DBMS requires 'real' server based DBMS costs, complexity,
+</I>&gt;<i> and administrative overhead that is beyond most collection managers.
+</I>&gt;<i> No doubt, for small applications - such as the ASPT membership
+</I>&gt;<i> directory cited above - Bill Gates and others will have local systems
+</I>&gt;<i> available that can be used by the general public, but larger datasets
+</I>&gt;<i> with broader functionality, if DBMS-based, will require a 'wait' at
+</I>&gt;<i> two levels, 1) on-line response time (seconds), and 2) development
+</I>&gt;<i> time (years and years, with endless symposia, workshops, and
+</I>&gt;<i> 'standards' debate so far).
+</I>
+Are you suggesting that collections are maintained as indexed text files?  I
+think that such a proposal doesn't require much response.  A small DBMS such
+as Access or even FileMaker can handle a few hundred thousand records
+easily.  There is really no need for Oracle or one of those big systems
+unless you are working with really big databases.  As in tables with &gt; 10E6
+records, and dozens of tables.
+
+I'm a little unsure about your comments on the development time.  The reason
+why standards take a long time to be completed is simply because they
+require a community agreement.  Standards for data interchange are very
+tedious things to develop (primarily becuase no one person can appreciate
+the needs of all others), but in those communities where they exist, there
+have been tremendous benefits.  The bibliographic, geospatial, astronomical,
+and financial domains have all adopted standards for data interchange and
+have never looked back.  Standard development continues to evolve in all of
+these as new protocols and desires for data interchange come to the fore.
+
+A standard for interchange of collections and taxonomic authority
+information *could* be obtained very rapidly if we all decided there was a
+pressing need for it, and focussed on solving the problem rather than
+expending energy on debating whether such standards are necessary.
+
+In anycase, for the type of system proposed by Hugh, standards are still
+required if any compatability between different instances is to be expected.
+The semantics of the query, the response of the server (errors or ok), and
+the syntax of the result set all need to be defined no matter what protocol
+is used.
+
+
+&gt;<i> In terms of relative on-line response time, three systems carry
+</I>&gt;<i> roughly similar sets of data and returns (text/map) for North
+</I>&gt;<i> American vascular plants:
+</I>&gt;<i>
+</I>&gt;<i> server-based DBMS:
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://www.mip.berkeley.edu/bonap/checklist_intro.html">http://www.mip.berkeley.edu/bonap/checklist_intro.html</A>
+</I>&gt;<i> <A HREF="http://plants.usda.gov/plants/">http://plants.usda.gov/plants/</A>
+</I>&gt;<i>
+</I>&gt;<i> and full text indexing (both text and map returns):
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://www.csdl.tamu.edu/FLORA/b98/check98.htm">http://www.csdl.tamu.edu/FLORA/b98/check98.htm</A>
+</I>&gt;<i>
+</I>&gt;<i> a few queries to each will demonstrate differences in responses to
+</I>&gt;<i> the client with regard to both speed and content
+</I>
+&gt;<i> Hugh D. Wilson
+</I>&gt;<i> Texas A&amp;M University - Biology
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">h-wilson at tamu.edu</A> (409-845-3354)
+</I>&gt;<i> <A HREF="http://www.csdl.tamu.edu/FLORA/Wilson/homepage.html">http://www.csdl.tamu.edu/FLORA/Wilson/homepage.html</A>
+</I>
+Yes, quite nice.  Each of them responded very rapidly with no discernable
+difference in response time except the Plants system.  A quick check
+indicated a very slow network connection between Denver and what appears to
+be Fort Collins.  Hence the the slower response percieved there is most
+likely due to some network hardware problems rather than the performance of
+the database as such.
+
+regards,
+  Dave V.
+
+---------------------
+Dave Vieglais
+Natural History Museum and Biodiversity Research Center
+phone (785) 864 4540 fax (785) 864 5335
+
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="106648.html">Scaevola &amp; Ammophila Distribution
+</A></li>
+	<LI>Next message: <A HREF="059310.html">data sharing
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#23518">[ date ]</a>
+              <a href="thread.html#23518">[ thread ]</a>
+              <a href="subject.html#23518">[ subject ]</a>
+              <a href="author.html#23518">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

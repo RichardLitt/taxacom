@@ -1,0 +1,310 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Wanted: a page on marking up
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2007-May/108884.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Wanted: a page on marking up</H1>
+    <B data-pagefind-meta="author">P. Bryan Heidorn</B>
+    pheidorn at uiuc.edu<BR>
+    <I data-pagefind-meta="date">Wed May 16 09:32:53 CDT 2007</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="108883.html">[Taxacom] []  E-mail address of Prof. Pierre Quezel
+</A></li>
+        <LI>Next message: <A HREF="108885.html">[Taxacom] [Fwd: Hymenoptera positions]
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#108884">[ date ]</a>
+              <a href="thread.html#108884">[ thread ]</a>
+              <a href="subject.html#108884">[ subject ]</a>
+              <a href="author.html#108884">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2007</span><!--beginarticle-->
+<PRE>Xiaoya Tang successfully defended her dissertation on a related topic  
+last week and will be polishing up her dissertation document over the  
+next couple of months. I am copying her here.
+
+In Xiaoya takes a different approach from Hong. Hong can identify the  
+topics of sentences and clauses and mark them inline, that is inside  
+the original text itself. MARTT can identify many of the parts of  
+plants and their properties.  Xiaoya aims at information extraction  
+of a smaller set of features creating a document independent of the  
+original containing the character and state information. It pulls out  
+the shapes of leaves, the lengths and widths, margins and a few other  
+features. Xiaoya's method has less breadth than Hong's method but  
+more depth. Both use supervised learning methods but very different  
+algorithms. As a consequence, I would suspect that Xiaoya's method  
+might take weeks or months to adapt to grasses while Hong could move  
+much more quickly but at a shallower level.
+
+Which method you use really depends on your goals. If you want to  
+make multiple entry keys Xiaoya's method is best. He dissertation  
+proved that search of flora using the extracted features + full text  
+is better than full text search alone. If you want to mark-up  
+original text then Hong's method is best.
+
+-- Bryan
+-- 
+--------------------------------------------------------------------
+   P. Bryan Heidorn
+   Graduate School of Library and Information Science
+   University of Illinois at Urbana-Champaign
+   pheidorn at uiuc.edu
+   (V)217/ 244-7792     (F)217/ 244-3302
+   <A HREF="http://www.uiuc.edu/goto/heidorn">http://www.uiuc.edu/goto/heidorn</A>
+   Online Calendar: <A HREF="http://www.uiuc.edu/goto/heidorncalendar">http://www.uiuc.edu/goto/heidorncalendar</A>
+
+
+On May 16, 2007, at 9:13 AM, Hong Cui wrote:
+
+&gt; Dear Mary,
+&gt;
+&gt; Realizing the variations in formatting and information content  
+&gt; among different collections of taxonomic descriptions, we try to  
+&gt; design an approach that can mark up the semantics of the  
+&gt; information from different taxonomic collections, yet not requires  
+&gt; lots of knowledge engineering efforts from   taxonomists. The idea  
+&gt; is to let the computer to learn some knowledge about the taxon  
+&gt; domain from some marked examples and then use the learned knowledge  
+&gt; to mark new descriptions. In the first step we used our system  
+&gt; MARTT to mark FNA, FoC, and FNCT to the clause level. The marked  
+&gt; collections can be searched at <A HREF="http://hong.fims.uwo.ca/gsdl/cgi-bin/">http://hong.fims.uwo.ca/gsdl/cgi-bin/</A> 
+&gt; library.exe. This should give you an idea about the markup  
+&gt; granularity MARTT currently can produce with very minimal human  
+&gt; intervention. We are currently working on character-level markup.
+&gt;
+&gt; Currently the system has learned some good knowledge about a good  
+&gt; number of families, but we have not processed any grass collection  
+&gt; yet. One good collection like yours would be a great source for  
+&gt; MARTT to learn about grass, then it should be able to mark other  
+&gt; grass collections with ease.
+&gt;
+&gt; Depending on your needs, another system we recently developed  
+&gt; should be able to convert your descriptions into an XML format with  
+&gt; clause-level markup in a &quot;quick-and-dirty&quot; way in hours/days.
+&gt;
+&gt; I'd be glad to continue this discussion with you.
+&gt;
+&gt; Hong
+&gt;
+&gt; ----- Original Message -----
+&gt; From: &quot;Weitzman, Anna&quot; &lt;WEITZMAN at si.edu&gt;
+&gt; Date: Tuesday, May 15, 2007 9:32 am
+&gt; Subject: RE: [Taxacom] Wanted: a page on marking up
+&gt; To: Donat Agosti &lt;agosti at amnh.org&gt;, Mary Barkworth  
+&gt; &lt;Mary at biology.usu.edu&gt;, Taxacom at mailman.nhm.ku.edu
+&gt; Cc: Terry Catapano &lt;thc4ster at gmail.com&gt;, Christiana Klingenberg  
+&gt; &lt;christiana at ameisen-net.de&gt;, Guido Sautter &lt;sautter at ira.uka.de&gt;,  
+&gt; Hong Cui &lt;hcui7 at uwo.ca&gt;, &quot;P. Bryan Heidorn&quot; &lt;pheidorn at uiuc.edu&gt;
+&gt;
+&gt; &gt; Dear Mary,
+&gt; &gt;
+&gt; &gt; The way in which we mark up taxonomic work is being addressed by
+&gt; &gt; several groups at the moment, and is subject to a TDWG group's
+&gt; &gt; work.  Currently we do not have an agreed standard, but
+&gt; &gt; some generalities and possibilities are beginning to
+&gt; &gt; appear.
+&gt; &gt;
+&gt; &gt; Two key questions are: &quot;'what do we want to put into XML?&quot; and
+&gt; &gt; &quot;how detailed do we need the atomisation of the content of the  
+&gt; paper?&quot;
+&gt; &gt;
+&gt; &gt; We can take a broad brush approach, and identify the different
+&gt; &gt; components of a paper.  This is much the way that most
+&gt; &gt; schemas have developed, and is the overall approach of the
+&gt; &gt; taxonX.  This clearly is a baseline, upon which we might
+&gt; &gt; build further as needed.
+&gt; &gt;
+&gt; &gt; Within that, we might want to focus on characters, in order to
+&gt; &gt; be able to extract them and use them in conjunction with the
+&gt; &gt; species/ taxa / concepts to build, for example, keys,
+&gt; &gt; descriptions coming from several sources, or field guides, some
+&gt; &gt; examples of automating this have been done at University of
+&gt; &gt; Illinois with Bryan Heidorn, especially by Hong Cui, one of his
+&gt; &gt; former students.
+&gt; &gt;
+&gt; &gt; We might also wish to focus on the nomenclatural, taxonomic,
+&gt; &gt; citation and specimen side of the data.  This is the
+&gt; &gt; approach we have taken with taXMLit
+&gt; &gt; (<A HREF="http://www.sil.si.edu/digitalcollections/bca/status.cfm">http://www.sil.si.edu/digitalcollections/bca/status.cfm</A> &lt;https:// 
+&gt; webaccess.si.edu/exchweb/bin/redir.asp?URL=<A HREF="http://www.sil.si.edu/">http://www.sil.si.edu/</A> 
+&gt; digitalcollections/bca/status.cfm&gt;  ).  The implementation of this  
+&gt; will include interoperability with TDWG standards for names and  
+&gt; specimen data, and allow simultaneous access to literature elements  
+&gt; and to specimen data, catalogues and other distributed resources.   
+&gt; Currently we have marked up a set of taxonomic publications,  
+&gt; including a volume of the Biologia Centrali-Americana, and are  
+&gt; developing the implementation, a preliminary version of which we  
+&gt; plan to show at the TDWG meeting in Bratislava.
+&gt; &gt;
+&gt; &gt; We are also working on instructions for using taXMLit to mark up
+&gt; &gt; taxonomic documents.  That said, the long-term solution is
+&gt; &gt; to develop tools (which we and others are working on) to parse
+&gt; &gt; these documents into such a format using computer capabilities,
+&gt; &gt; including simple logic but also artificial intelligence
+&gt; &gt; ('machine learning').  The latter has been used in other
+&gt; &gt; areas, including molecular bioinformatics and there are
+&gt; &gt; developments that we should be able to use to our advantage in
+&gt; &gt; taxonomy.
+&gt; &gt; Anna &amp; Chris
+&gt; &gt;
+&gt; &gt; Anna L. Weitzman, PhD
+&gt; &gt; Informatics, Botany and Biodiversity Research
+&gt; &gt; National Museum of Natural History
+&gt; &gt; Smithsonian Institution
+&gt; &gt;
+&gt; &gt; 202.633.0846
+&gt; &gt; weitzman at si.edu
+&gt; &gt;
+&gt; &gt; Christopher H.C. Lyal, PhD
+&gt; &gt; Beetle Diversity and Evolution Programme,
+&gt; &gt; Department of Entomology,
+&gt; &gt; The Natural History Museum,
+&gt; &gt; Cromwell Road,
+&gt; &gt; London SW7 5BD
+&gt; &gt; UK
+&gt; &gt; tel: +44 (0) 207 942 5113
+&gt; &gt; fax: +44 (0) 207 942 5661
+&gt; &gt; e-mail c.lyal at nhm.ac.uk
+&gt; &gt;
+&gt; &gt; ________________________________
+&gt; &gt;
+&gt; &gt; From: taxacom-bounces at mailman.nhm.ku.edu on behalf of Donat Agosti
+&gt; &gt; Sent: Tue 15-May-07 8:30 AM
+&gt; &gt; To: 'Mary Barkworth'; Taxacom at mailman.nhm.ku.edu
+&gt; &gt; Cc: 'Terry Catapano'; 'Christiana Klingenberg'; 'Guido Sautter'
+&gt; &gt; Subject: Re: [Taxacom] Wanted: a page on marking up
+&gt; &gt;
+&gt; &gt;
+&gt; &gt;
+&gt; &gt; Dear Mary
+&gt; &gt;
+&gt; &gt; We developed a mark-up schema for taxonomic work (taxonx
+&gt; &gt; (<A HREF="http://taxonx.org">http://taxonx.org</A> &lt;<A HREF="http://taxonx.org/">http://taxonx.org/</A>&gt; )), started to mark
+&gt; &gt; up literature (eg the ant literature
+&gt; &gt; of Madagascar (<A HREF="http://antbase.org/databases/madagascar.htm)">http://antbase.org/databases/madagascar.htm)</A> and
+&gt; &gt; plan to
+&gt; &gt; build a dedicated treatment server so the descriptions can
+&gt; &gt; easily be
+&gt; &gt; accessed. For the mark up process we developed (and are still in
+&gt; &gt; the process
+&gt; &gt; of refining it) a semiautomatic program (goldenGate
+&gt; &gt; <A HREF="http://idaho.ipd.uka.de/GoldenGATE/).">http://idaho.ipd.uka.de/GoldenGATE/).</A> You can download it and
+&gt; &gt; find there
+&gt; &gt; also a manual.
+&gt; &gt;
+&gt; &gt; Taxonx is a leight weight
+&gt; &gt; (<A HREF="http://wiki.cs.umb.edu/twiki/bin/view/Ants/WebHome)">http://wiki.cs.umb.edu/twiki/bin/view/Ants/WebHome)</A> schema
+&gt; &gt; which can be
+&gt; &gt; integrated into publisher's schema, and which builds upon
+&gt; &gt; existing schemas
+&gt; &gt; and standards.
+&gt; &gt;
+&gt; &gt; If you have any questions, please contact us at any time
+&gt; &gt;
+&gt; &gt; Good luck and welcome to the party
+&gt; &gt;
+&gt; &gt; Donat
+&gt; &gt;
+&gt; &gt; -----Original Message-----
+&gt; &gt; From: taxacom-bounces at mailman.nhm.ku.edu
+&gt; &gt; [mailto:taxacom-bounces at mailman.nhm.ku.edu] On Behalf Of Mary
+&gt; &gt; BarkworthSent: Tuesday, May 15, 2007 1:51 PM
+&gt; &gt; To: Taxacom at mailman.nhm.ku.edu
+&gt; &gt; Subject: [Taxacom] Wanted: a page on marking up
+&gt; &gt;
+&gt; &gt; This arises indirectly from the EoL discussion but it is not that.
+&gt; &gt; There have been many posts about marking things up so they can
+&gt; &gt; be found.
+&gt; &gt; Is there an abc level page on how to do this? Written for
+&gt; &gt; someone so old
+&gt; &gt; she can remember electric typewriters as being new? I have
+&gt; &gt; servers with
+&gt; &gt; a fair amount of taxonomic content on the Web (see
+&gt; &gt; <A HREF="http://herbarium.usu.edu/webmanual/">http://herbarium.usu.edu/webmanual/</A> and <A HREF="http://utc.usu.edu/keys/">http://utc.usu.edu/keys/</A>
+&gt; &gt; )  With
+&gt; &gt; Marina Olanova's help I have a translation of Tsvelev's 2006 global
+&gt; &gt; treatment of Glyceria almost ready to post.  It contains a
+&gt; &gt; discussion,listing of species with publication information and
+&gt; &gt; some comments, and a
+&gt; &gt; key, and a list of excluded species. It would be nice if this
+&gt; &gt; could be
+&gt; &gt; found a year from now because it was marked up correctly.
+&gt; &gt;
+&gt; &gt; I would be delighted to mark these up so it would be easier for  
+&gt; people
+&gt; &gt; to find them. I am working on putting key words in the headers, but
+&gt; &gt; reading about the semantic Web and following these discussions,
+&gt; &gt; I have
+&gt; &gt; the impression there are better ways to do this. So, those of
+&gt; &gt; you who
+&gt; &gt; know - please - is there a Web page that explains how in words
+&gt; &gt; of one
+&gt; &gt; syllable?  Or do I simply define my own mark up language at
+&gt; &gt; the top of
+&gt; &gt; the document?
+&gt; &gt;
+&gt; &gt; My suspicion is that there are others like myself who would make  
+&gt; their
+&gt; &gt; work more accessible if they knew how - hence my public decision of
+&gt; &gt; admit ignorance. I have already seen some of the grass descriptions
+&gt; &gt; appear, with minor changes (rounding of limits to the nearest
+&gt; &gt; 0.5 mm) on
+&gt; &gt; other pages with a somewhat different format. The print
+&gt; &gt; publication that
+&gt; &gt; they come from was cited, slightly inaccurately but it was a
+&gt; &gt; reasonableattempt.
+&gt; &gt;
+&gt; &gt; Mary
+&gt; &gt;
+&gt; &gt; _______________________________________________
+&gt; &gt; Taxacom mailing list
+&gt; &gt; Taxacom at mailman.nhm.ku.edu
+&gt; &gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt; &gt;
+&gt; &gt;
+&gt; &gt;
+&gt; &gt;
+&gt; &gt; _______________________________________________
+&gt; &gt; Taxacom mailing list
+&gt; &gt; Taxacom at mailman.nhm.ku.edu
+&gt; &gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt; &gt;
+&gt; &gt;
+&gt; &gt;
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="108883.html">[Taxacom] []  E-mail address of Prof. Pierre Quezel
+</A></li>
+        <LI>Next message: <A HREF="108885.html">[Taxacom] [Fwd: Hymenoptera positions]
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#108884">[ date ]</a>
+              <a href="thread.html#108884">[ thread ]</a>
+              <a href="subject.html#108884">[ subject ]</a>
+              <a href="author.html#108884">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

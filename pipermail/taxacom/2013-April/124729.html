@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] ZooBank Progress
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-April/124729.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] ZooBank Progress</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at bishopmuseum.org<BR>
+    <I data-pagefind-meta="date">Sun Apr 28 14:08:56 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="124728.html">[Taxacom] Lemurs was Bubble Science
+</A></li>
+        <LI>Next message: <A HREF="124730.html">[Taxacom] Fwd: Bubble science
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124729">[ date ]</a>
+              <a href="thread.html#124729">[ thread ]</a>
+              <a href="subject.html#124729">[ subject ]</a>
+              <a href="author.html#124729">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE> 
+&gt; If it's done manually it might be worth to correct some other names that
+&gt; were linked by ZooBank to the Linnean 1758 work.
+
+Yes, exactly!  Part of the process of cross-linking is to compare discrepancies.  We've found that in most datasets that we cross-link against, there are a relatively small fraction of discrepancies.  For example, out of 50,000 names, there might be only a few hundred discrepancies -- usually involving the date of publication, correct authorship, or the exact orthography of the name.  This means that it's a very manageable task to investigate each one of the discrepancies. Also, I've found that no database is perfect.  Some are better than others, to be sure -- but one can never assume that one database is always correct -- which means that it's important to examine the discrepancies individually.  Indeed, this is one of the main reasons why we wanted to establish this link with BHL -- to make it easier to resolve discrepancies.
+
+&gt; My understanding is that ZooBank is a data resource where available names
+&gt; are contained. Unavailable names should probably not be contained at all,
+&gt; and if yes, they should clearly be marked as such.
+&gt; I am not sure how names should be treated which were initially made
+&gt; available and later suppressed.
+
+This is an issue that has been debated since ZooBank was first conceived.  In 2008, at a Commissioners meeting in Paris, it was determined that ZooBank *would* include unavailable names, and that those names would be clearly marked not only as unavailable, but also give the reason(s) why the name is unavailable.  We already have a very robust data model to deal with this (which I'd be happy to describe, if anyone is interested).  But as with most aspects of ZooBank development, the tricky part is how to implement it (devil is always in the details).  One of the things in the works is a policy on data verification in ZooBank.  Right now, the focus is on building the core infrastructure of ZooBank, populating it with restrospective content, and building tools to streamline the capture of prospective content.  However, what people *really* want from ZooBank is a definitive declaration of whether or not any particular name is available under the Code.  This is the entire process of content verification.  So far, we focused only on registration (these are two very different things).
+
+&gt; Example:
+&gt; <A HREF="http://zoobank.org/NomenclaturalActs/1E691819-76A8-492D-8AE1-DA84F9103CF8">http://zoobank.org/NomenclaturalActs/1E691819-76A8-492D-8AE1-DA84F9103CF8</A>
+&gt; Acarus telarius Linn?us, 1758 - this name should somehow be marked as
+&gt; suppressed (ICZN Op. 968).
+&gt; There were many other such names established in the 1758 work, which
+&gt; were totally or partly suppressed by the Commission.
+
+Yes, indeed!  In fact, one of the projects we've been working on (with LARGE thanks to Charles Hussey, and also to Rod Page who defined the article boundaries of historical BZN volumes in BHL) is a complete database of Opinions.  This is effectively complete (still needs some verification, though), and will be one of the new features added to ZooBank this summer.  But again, we need to sort out exactly how this sort of thing will be implemented on the ZooBank website, and what the policy is for editing these sorts of things, etc.
+
+Many thanks for pointing out the individual issues related to Linneaus names.  This sort of thing is EXTREMELY helpful!  I will definitely use these as test cases when we implement the next set of features involving ZooBank record verification/validation.  But again, it probably can't be implemented until later this summer (northern hemisphere summer, that is).
+
+&gt; Maybe some other systematic things could be fixed.
+&gt; 
+&gt; - Remove the long s throughout the original spellings, and replace it at all
+&gt; instances by the short s. 
+
+In this case, we want to maintain the precise orthography as it originally appeared on the printed page -- in al respects.  Basically, if a UTF-8 character exists for a particular glyph, we want to capture it as such.  The main exceptions are that all-caps words are not faithfully captured as such, and other stylistic attributes (e.g., boldface, small-caps, when original names were not italicized, etc.) will not be captured.  But characters such as the long s and dipthong &quot;?&quot; will be captured as originally printed on the page.
+
+The next step is to build the correct algorithm to transform these things, so that the Code-corrected &quot;original spelling&quot; can be generated automatically.  In most cases, this is easy to do -- but there are some tricky ones (e.g., see Art. 32.5.2.1. -- which would require us to know whether the root word is German or not; or some of Art. 32.5.2.4.).  This is one more example of features currently in the works, that will be introduced over time as they rise up the priority list, and as appropriate policies are drafted and ratified.
+
+
+&gt; Example Musca Linn?us, 1758, this name was
+&gt; spelled Musca with long s at some occasions and MUSCA at others, MUSCA is
+&gt; usually converted to Musca with short s. So all specific names should
+&gt; correctly be combined with Musca with short s.
+
+This is a slightly separate issue (multiple spellings of the same genus name, and how they map to the species they are combined with).  The new GNUB data model (not yet implemented) deals with this by capturing separately the verbatim name-string, and the separate name components.  At the moment, this sort of issue is rare enough that it has not risen up the priority &quot;to-do&quot; list.  But it's definitely on the list.
+
+&gt; Also, the long s is not cited consistently. Example:
+&gt; <A HREF="http://zoobank.org/NomenclaturalActs/D2B4DA70-35AE-4D87-9E34-E219FC8E3DA0">http://zoobank.org/NomenclaturalActs/D2B4DA70-35AE-4D87-9E34-E219FC8E3DA0</A>
+&gt; Ostrea Pu&amp;#383;io Linn?us, 1758 - here Pusio with long s and Ostrea with
+&gt; short s, both had the long s in the original source.
+
+This is another example of the previous.  The genus was rendered as OSTREA on p. 696 (<A HREF="http://www.biodiversitylibrary.org/pagethumb/727611),">http://www.biodiversitylibrary.org/pagethumb/727611),</A> so the genus is captured as such in the database (minus the all-caps).  I only see &quot;O?trea&quot; in the page header.  Is it rendered this way somewhere else?
+
+&gt; - Consider presenting a field &quot;original spelling&quot; and another field &quot;correct
+&gt; spelling&quot;. This would probably reduce confusion. In the correct spelling field
+&gt; the species would not appear capitalised, and diacritics would be removed.
+
+Yes!  This is already part of the plan.  It just needs to rise up the priority list for implementation.
+
+&gt; - I am confused by the statement &quot;Fossil: No&quot; in the ZooBank data result set.
+&gt; Is this nomenclaturally relevant?
+
+It's not a Code-relevant issue, but it is a useful piece of information (just like type locality, figures, and page number).
+
+&gt; Is there an exact definition for the term &quot;fossil&quot;? Since when does a taxon
+&gt; need to be extinct for obtaining the attribute &quot;fossil&quot;?
+
+If you read the help section for this particular field (click on the blue icon when registering a new name, or editing an existing name), it explains it thusly:
+
+&quot;If this new name is based on fossil material, select this checkbox. Otherwise, leave the checkbox unselected.&quot;
+
+In other words, it only applies to species-group names, and it is a specific indication of the nature of the name-bearing type material.  Technically, if the type specimen of Latimeria chalumnae had been a fossil, and then it was later discovered alive, this would be &quot;Fossil: Yes&quot;.  However, I am not aware of any case where a name is established based on a fossilized type, and then later discovered (at the species level) to be extant.  Generally such cases are described as separate species.
+
+&gt; Can we be sure that all molluscs and brachiopods named in the early Linnean
+&gt; works were recent?
+
+Nope.  Neither can we be sure that all the page numbers are correct, or all the type localities are correct -- or any number of other things.  That doesn't mean the data field should be eliminated.  It just means we have to deal with cases that prove to be inaccurate (or unknown).
+
+&gt; Would it not be better to remove the statement, to avoid running the risk to
+&gt; give an incorrect information?
+
+I don't think so, but I'd be interested in hearing opinions from others on this.  As I already said, there is no such thing as a perfect database.  One of the things Rob Whitton constantly reminds me of is not to let the &quot;perfect&quot; be the enemy of the &quot;good&quot;.  I tend to be a perfectionist on thses sorts of things (as many database managers are).  But sometimes it's better to just get what you have out there, and then provide a crowd-sourcing mechanism to get it corrected.
+
+&gt; Example:
+&gt; <A HREF="http://zoobank.org/NomenclaturalActs/04B5D5F4-648A-489F-ADE9-2C13971F8A69">http://zoobank.org/NomenclaturalActs/04B5D5F4-648A-489F-ADE9-2C13971F8A69</A>
+&gt; Anomia Gryphus Linn?us, 1758. Here a fossil species was described, and in
+&gt; Zoobank it was marked as &quot;Fossil: No&quot;.
+
+Many thanks for the correction!  I have already implemented it on ZooBank (it took me 7 seconds to correct this -- but you did the hard part of finding the error, and made it extremely easy for me by providing the link).
+
+I want to thank you again for providing all of these VERY VALUABLE corrections to names in ZooBank.  I will study them in more detail (along with your other recent messages), and will likely come back to you with follow-up questions.
+
+Aloha,
+Rich
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="124728.html">[Taxacom] Lemurs was Bubble Science
+</A></li>
+        <LI>Next message: <A HREF="124730.html">[Taxacom] Fwd: Bubble science
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124729">[ date ]</a>
+              <a href="thread.html#124729">[ thread ]</a>
+              <a href="subject.html#124729">[ subject ]</a>
+              <a href="author.html#124729">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

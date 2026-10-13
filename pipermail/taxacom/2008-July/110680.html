@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Language tags for scientific names
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Language%20tags%20for%20scientific%20names&In-Reply-To=%3C5cf66b430807011349w1eb18817q8461ad9e66236adf%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="110678.html">
+   <LINK REL="Next"  HREF="110684.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2008-July/110680.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Language tags for scientific names</H1>
+    <B data-pagefind-meta="author">Robert Huber</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Language%20tags%20for%20scientific%20names&In-Reply-To=%3C5cf66b430807011349w1eb18817q8461ad9e66236adf%40mail.gmail.com%3E"
+       TITLE="[Taxacom] Language tags for scientific names">rhuber at wdc-mare.org
+       </A><BR>
+    <I data-pagefind-meta="date">Tue Jul  1 15:49:54 CDT 2008</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="110678.html">[Taxacom] Language tags for scientific names
+</A></li>
+        <LI>Next message: <A HREF="110684.html">[Taxacom] Language tags for scientific names
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#110680">[ date ]</a>
+              <a href="thread.html#110680">[ thread ]</a>
+              <a href="subject.html#110680">[ subject ]</a>
+              <a href="author.html#110680">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2008</span><!--beginarticle-->
+<PRE>Hi Dave,
+
+There is the TDWG TCS based ontology for taxon names (
+<A HREF="http://rs.tdwg.org/ontology/voc/TaxonName">http://rs.tdwg.org/ontology/voc/TaxonName</A>) which is used for LSID metadata
+which could be used for your example..
+
+best regards,
+Robert
+
+
+2008/7/1 Dave Vieglais &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">vieglais at ku.edu</A>&gt;:
+
+&gt;<i> The W3C candidate recommendation RDFa (
+</I>&gt;<i> <A HREF="http://www.w3.org/TR/xhtml-rdfa-primer/">http://www.w3.org/TR/xhtml-rdfa-primer/</A> ) provides some guidelines for
+</I>&gt;<i> embedding RDF markup (i.e. data) within HTML (i.e. a visual rendering)
+</I>&gt;<i> that while not directly related to the question over language tags
+</I>&gt;<i> (which, since scientific names are by definition language neutral, do
+</I>&gt;<i> not require, and so should not have, a language tag), is nonetheless a
+</I>&gt;<i> useful strategy that can be adopted at low expense by this community.
+</I>&gt;<i>
+</I>&gt;<i> Using RDFa,  one could write:
+</I>&gt;<i>
+</I>&gt;<i> &lt;p xmlns:dwc='<A HREF="http://tdw.org/tcs/elements/1.0/">http://tdw.org/tcs/elements/1.0/</A>'
+</I>&gt;<i>   xmlns:dc='<A HREF="http://purl.org/dc/elements/1.1/">http://purl.org/dc/elements/1.1/</A>'&gt;
+</I>&gt;<i>    &lt;span style='font-style: italic;' typeof='tdwg:organism'&gt;
+</I>&gt;<i>      &lt;span property='dwc:ScientificName'&gt;Bufo Marinus&lt;/span&gt;
+</I>&gt;<i>      &lt;span style='display:none;'
+</I>&gt;<i>          property='dc:identifier'&gt;urn:lsid:catalogueoflife.org:
+</I>&gt;<i> taxon:df2ca61e-29c1-102b-9a4a-00304854f820:ac2008&lt;/span&gt;
+</I>&gt;<i>    &lt;/span&gt;
+</I>&gt;<i> stars in the highly acclaimed
+</I>&gt;<i>  &lt;span property='dc:created'&gt;1988&lt;/span&gt;
+</I>&gt;<i> film
+</I>&gt;<i>  &quot;&lt;span property='dc:title'&gt;Cane Toads&lt;/span&gt;&quot;
+</I>&gt;<i> by
+</I>&gt;<i>  &lt;span property='dc:creator'&gt;Mark Lewis&lt;/span&gt;.
+</I>&gt;<i> &lt;/p&gt;
+</I>&gt;<i>
+</I>&gt;<i> instead of:
+</I>&gt;<i>
+</I>&gt;<i>  Bufo marinus stars in the highly acclaimed 1988 film &quot;Cane Toads&quot; by
+</I>&gt;<i> Mark Lewis.
+</I>&gt;<i>
+</I>&gt;<i> To the human reader, the information is the same, but the individual
+</I>&gt;<i> data elements are readily identified as something interesting by a
+</I>&gt;<i> parser. Microformats and GRDDL provide similar mechanisms, though it
+</I>&gt;<i> is not clear which if any, is &quot;better&quot; though all prevail over the
+</I>&gt;<i> current situation with no data markup.
+</I>&gt;<i>
+</I>&gt;<i> To be useful, this example does of course require at least a
+</I>&gt;<i> vocabulary defining the elements &quot;ScientificName&quot; and &quot;organism&quot; which
+</I>&gt;<i> in this example exist within the fictitious namespace of
+</I>&gt;<i> &quot;<A HREF="http://tdw.org/tcs/elements/1.0/">http://tdw.org/tcs/elements/1.0/</A>&quot;.  This issue remains regardless of
+</I>&gt;<i> which mechanism is used to express the content (pure RDF, RDFa, GRDDL,
+</I>&gt;<i> microformats).  Hopefully I am wrong in that such a vocabulary has not
+</I>&gt;<i> yet been defined by the TDWG (or some other group) and someone could
+</I>&gt;<i> direct interested implementers to the appropriate locations for this
+</I>&gt;<i> information and perhaps even some recommendations for HTML authors on
+</I>&gt;<i> how they can utilize such definitions within their documents.
+</I>&gt;<i>
+</I>&gt;<i> regards,
+</I>&gt;<i>  Dave V.
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Taxacom mailing list
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;<i>
+</I>
+
+
+-- 
+Dr. Robert Huber,
+
+WDC-MARE / PANGAEA - www.pangaea.de
+Stratigraphy.net - www.stratigraphy.net
+_____________________________________________
+MARUM - Institute for Marine Environmental Sciences (location)
+University Bremen
+Leobener Strasse
+POP 330 440
+28359 Bremen
+Phone ++49 421 218-65593, Fax ++49 421 218-65505
+e-mail <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">rhuber at wdc-mare.org</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="110678.html">[Taxacom] Language tags for scientific names
+</A></li>
+	<LI>Next message: <A HREF="110684.html">[Taxacom] Language tags for scientific names
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#110680">[ date ]</a>
+              <a href="thread.html#110680">[ thread ]</a>
+              <a href="subject.html#110680">[ subject ]</a>
+              <a href="author.html#110680">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

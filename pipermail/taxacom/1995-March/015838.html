@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Interactive identification
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1995-March/015838.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Interactive identification</H1>
+    <B data-pagefind-meta="author">Mike Dallwitz</B>
+    miked at ENTO.CSIRO.AU<BR>
+    <I data-pagefind-meta="date">Mon Mar 27 18:11:06 CST 1995</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="099012.html">Classif. and Species - Part
+</A></li>
+        <LI>Next message: <A HREF="051630.html">Interactive identification
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#015838">[ date ]</a>
+              <a href="thread.html#015838">[ thread ]</a>
+              <a href="subject.html#015838">[ subject ]</a>
+              <a href="author.html#015838">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1995</span><!--beginarticle-->
+<PRE>                                                                 27 March 1995
+
+&gt; From: Renaud Fortuner &lt;fortuner at math.u-bordeaux.fr&gt;
+&gt; To: Taxacom
+&gt;
+&gt; You must agree that a procedure which can deal with ANY probabilities is by
+&gt; nature &quot;better&quot; (i.e., more general) than one which is restricted to the
+&gt; extreme of the range.
+
+It would seem that I do agree, because on 21 March, I wrote: &quot;I don't doubt
+that probabilistic methods are important or essential in some fields. I would
+like to incorporate them in INTKEY ...&quot;. I have added this to my list of
+desirable attributes of identification programs.
+
+&gt; I believe we have another problem of terminology here. Multistate, numeric,
+&gt; and text are types of characters. Dichotomy is a method of identification.
+&gt; You can use dichotomy with any type of character.
+
+There IS a potential problem. On 24 March, I wrote: &quot;Renaud is referring to
+dichotomous identification procedures, in which, at each step, the remaining
+taxa are divided into those which match the specimen, and those which don't.&quot;
+I wrote this because I thought that there was a possibility that you might be
+misunderstood. A contrast is often made between dichotomous keys (those using
+only 2-state characters) and polychotomous keys (those allowing characters
+with 3 or more states). In your sense, these are both dichotomous.
+
+&gt; Your example of how the red-white-blue flower character is treated in Delta
+&gt; is exactly what I had in mind when I said &quot;rigidity&quot; or lack of flexibility.
+&gt; ... In my system, you would define the character as : structure = flower,
+&gt; descriptor = color, states = red, white, blue, pink ... It's a WYSIWYWD
+&gt; system: what you see is what you write down! If the unknown has spotted
+&gt; flower, the user just adds &quot;spotted&quot; to the list of states. ... When I want
+&gt; to say &quot;pink&quot;, I prefer to write &quot;pink&quot; than &quot;6,1-3&lt;pink&gt;&quot; [i.e. white
+&gt; to red (pink)], but I suppose this is a question of personal taste.
+
+Call it personal taste if you like; I prefer to call it taxonomic judgement.
+Writing down a feature (e.g. flower) followed by all the terms that have ever
+been used to describe an aspect of that feature (e.g. colour) does not usually
+lead to a sound and useful character definition. Taken to an extreme, this
+approach could lead to a separate state for every taxon. Such a `character'
+would be taxonomically almost useless, as all it would tell us is that the
+taxa are all different. To get comparative data, we need to know which taxa
+are similiar, so the number of states needs to be kept reasonably small.
+
+If you find a specimen that doesn't fit comfortably into existing state
+definitions, it's not good enough to `just add' a suitable term to the list of
+states. If the character is changed at all, it needs to be completely
+rethought. For example, perhaps the `colour' character needs to be become two
+or more: `hue' and `saturation'; or `whether uniformly coloured', `background
+(or only) colour', `secondary colour'. Or perhaps a state definition needs to
+be modified: `white' changed to `pale'. Even if an extra state is added, the
+boundaries of existing states may move: what might have been considered near
+enough to white when the contrasting state was red, might now be closer to
+pink. None of these changes can be made lightly once substantial numbers of
+taxa have already been coded, because, in principle, every coding will need to
+be re-examined in the light of the new character definition(s).
+
+For the above reasons, it is essential that the recording system be CAPABLE of
+using existing character states, plus a qualifying comment. This doesn't, of
+course, prevent you from redefining characters if necessary.
+
+&gt; The important point is, are you able to enter information in the middle of
+&gt; an identification session? I mean, suppose you have been working for a
+&gt; while, narrowed down your choices to a couple of species, then you discover
+&gt; that flower color is an important character, but that your unknown is pink
+&gt; and pink does not appear in the list of existing states. Can you, without
+&gt; closing your identification tools, open a &quot;schema tool&quot;, add the word &quot;pink&quot;
+&gt; to the list of state, go back to your ID tool, and continue from there? If
+&gt; you can do this with Delta, fine. If not, you need an updated system.
+
+INTKEY is only an identification program, and cannot modify its data. However,
+in a multitasking environment, it is easy to open another application to alter
+the data, without exiting from INTKEY. There is no way to continue with an
+incomplete identification using the new data, but this requirement, far from
+being important, doesn't make any sense. You don't know what data to add
+(apart from the new state description) until the identification has been
+completed, as far as possible, and a decision made as to whether the specimen
+is a new variant of an existing taxon, or belongs to a new taxon.
+
+&gt; The INTKEY &quot;error tolerance&quot; parameter is a clever way to make the best of a
+&gt; bad method (dichotomy), but it is far from perfect. If the threshold is set
+&gt; at 2 you will have: first error = 0% degradation; second error 0%
+&gt; degradation; third error = 100% degradation. You have diminished the risk of
+&gt; having degradation occur (at the expense of a loss in discrimination,
+&gt; obviously), but when the user goes over the threshold, degradation is total.
+&gt; This is hardly what I would call graceful. By contrast, a similarity
+&gt; coefficient degrades gracefully because of its very nature.
+
+The error tolerance is simply a threshold controlling which taxa are displayed
+as the `remaining' taxa, and which taxa are considered in the calculation of
+the `best' characters to use next. For example, if you had used 3 characters
+up to the current point in an identification, the default error tolerance of 0
+would let you see only those taxa that did not differ from the specimen. By
+setting the tolerance to 1, you would see those that differed in 0 or 1
+characters. If you set the tolerance to 3, you would see all the taxa. You can
+freely move the value up and down at any time. By the way, how does your
+program calculate the `best' characters, if it can't make some assumption
+about the taxa that remain to be separated?
+
+The `number of differences' used by INTKEY is, of course, a (dis)similarity
+measure. It differs from the measures usually used in phenetic analysis in
+that the contribution of each character is always 0 or 1 (not a fraction), and
+in not being normalized by dividing by the number of characters used.
+
+&gt; How would you enter metadata, for example, even if new fields were added to
+&gt; the Delta format? For example, how would you say that all color characters
+&gt; are ambiguous?
+
+SET RELIABILITY COLOR,0
+(Or, equivalently, click on `Set' in the menu bar; in the menu which appears,
+click on `Reliability; in the dialog box which appears, click on `color'; in
+the entry box which appears, enter `0'.)
+
+Mike Dallwitz                                  Internet md at ento.csiro.au
+CSIRO Division of Entomology                   Fax +61 6 246 4000
+GPO Box 1700, Canberra ACT 2601, Australia     Phone +61 6 246 4075
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="099012.html">Classif. and Species - Part
+</A></li>
+        <LI>Next message: <A HREF="051630.html">Interactive identification
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#015838">[ date ]</a>
+              <a href="thread.html#015838">[ thread ]</a>
+              <a href="subject.html#015838">[ subject ]</a>
+              <a href="author.html#015838">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

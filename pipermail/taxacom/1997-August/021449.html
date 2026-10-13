@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Taxaonomic database structure
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1997-August/021449.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Taxaonomic database structure</H1>
+    <B data-pagefind-meta="author">Doug Yanega</B>
+    dyanega at MONO.ICB.UFMG.BR<BR>
+    <I data-pagefind-meta="date">Fri Aug 29 20:32:15 CDT 1997</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="104604.html">Taxaonomic database structure
+</A></li>
+        <LI>Next message: <A HREF="057241.html">Taxaonomic database structure
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#021449">[ date ]</a>
+              <a href="thread.html#021449">[ thread ]</a>
+              <a href="subject.html#021449">[ subject ]</a>
+              <a href="author.html#021449">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1997</span><!--beginarticle-->
+<PRE>Norm Johnson wrote:
+
+&gt;Here's another option for encoding taxonomic names (no matter what kingdom
+&gt;you're dealing with).  Since we're dealing with a hierarchy, it's possible to
+&gt;get by with just a single table.  It needs only have the taxon identifier
+&gt;(name, id number, whatever) and the corresponding identifier for its parent.
+&gt; Of course, that parent has a parent, on down/up to the most inclusive taxon in
+&gt;your database.  We're using Oracle as our RDBMS and it has a nice SQL add-on
+&gt;feature that facilitates traversing such hierarchies.
+
+It is, of course, also possible to exploit the relational database
+structure and use only a single table for all the bi/tri/quatrinomials
+together, though this puts a little bit more of a premium on having a data
+entry person who has a good memory. In other words, if species 00001 is
+&quot;Xus (Zus) yus yus&quot;, species 00002 is &quot;Xus (Zus) yus wus&quot;, species 00003 is
+&quot;Xus (Zus) yus ssp. undet.&quot;, species 00004 is &quot;Xus (Xus) tus tus&quot;, and so
+forth, then EACH complete taxon name only has to be typed in manually ONE
+time in the entire process of creating the database and entering all the
+data. ID entry is solely a 5-digit number, then, in the above case.
+Ultimately, this saves a LOT of effort, at the tradeoff of having the data
+entry person need to look up species numbers for unfamiliar taxa. Of
+course, if one is entering data in an organized manner, all specimens of
+each taxon should be getting entered together, and no long lookup time is
+required. The *program* will then place the appropriate name in a field
+whenever one needs to see the actual taxon name while scanning records or
+generating reports, with no need for typing it. If any portion of the name
+changes, then it only needs to be changed in one place, not every record
+(and if it's something like the genus name, then one can always do a global
+search/replace, which is hard to avoid even when one has a nested hierarchy
+as Norm suggested). As ever, there's more than one way to skin the
+proverbial cat.
+
+Peace,
+
+Doug Yanega    Depto. de Biologia Geral, Instituto de Ciencias Biologicas,
+Univ. Fed. de Minas Gerais, Cx.P. 486, 30.161-970 Belo Horizonte, MG   BRAZIL
+phone: 031-448-1223, fax: 031-44-5481  (from U.S., prefix 011-55)
+                  <A HREF="http://www.icb.ufmg.br/~dyanega/">http://www.icb.ufmg.br/~dyanega/</A>
+  &quot;There are some enterprises in which a careful disorderliness
+        is the true method&quot; - Herman Melville, Moby Dick, Chap. 82
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="104604.html">Taxaonomic database structure
+</A></li>
+        <LI>Next message: <A HREF="057241.html">Taxaonomic database structure
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#021449">[ date ]</a>
+              <a href="thread.html#021449">[ thread ]</a>
+              <a href="subject.html#021449">[ subject ]</a>
+              <a href="author.html#021449">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

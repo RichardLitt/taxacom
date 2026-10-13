@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> quick MP searches (was Bremer support)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2005-November/094440.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">quick MP searches (was Bremer support)</H1>
+    <B data-pagefind-meta="author">Leah Larkin</B>
+    llarkin at UNM.EDU<BR>
+    <I data-pagefind-meta="date">Wed Nov 30 13:55:42 CST 2005</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="094439.html">Bremer support
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#094440">[ date ]</a>
+              <a href="thread.html#094440">[ thread ]</a>
+              <a href="subject.html#094440">[ subject ]</a>
+              <a href="author.html#094440">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2005</span><!--beginarticle-->
+<PRE>Derek Sikes suggests an excellent strategy for avoiding swapping on
+suboptimal islands in PAUP.  He gives directions for the search using
+the graphical-user interface in the Mac version of PAUP.  The
+following commands will do the exact same thing in the command-line
+version.  I call this the &quot;Bob Barker&quot; approach (see Larkin et al.,
+in press, Molecular Phylogenetic and Evolution), in honor of the
+timeless &quot;Price Is Right&quot; strategy of bidding a dollar when you think
+everyone else has overbid.
+
+        hsearch enforce=no start=stepwise addseq=random nreps=10000
+nchuck=5 chuckscore=1;
+        hsearch enforce=no start=current chuckscore=no;
+
+nchuck is the &quot;X&quot; in Derek's instructions
+chuckscore is the &quot;Y&quot; (the $1 bid)
+
+-Leah
+
+&gt;What a lot of people don't realize when using PAUP is that searches
+&gt;can spend (waste) large amounts of time on suboptimal islands/
+&gt;plateaus. This is why Rice et al.'s 1997 search using the rbcL 500
+&gt;dataset took 13 months. This problem can be avoided by using methods
+&gt;such as Nixon's Ratchet in NONA  (or use PAUPRat for PAUP), but even
+&gt;without the Ratchet PAUP can go much faster with the following search
+&gt;strategy:
+&gt;
+&gt;1. limit the number of trees swapped during each replicate to avoid
+&gt;swapping a suboptimal island to completion. This can be done in
+&gt;different ways. for example by setting in the branch swapping options
+&gt;(Mac version) the following: click the box to 'save no more than x
+&gt;trees &gt; score y (each rep)' and set x to a number like 10 or 5 and y
+&gt;equal to either a known shortest score or simply 1. PAUP will then
+&gt;burn through all the reps very quickly but doing only quick searches
+&gt;in each rep. (for non-mac versions see the nchuck command in the
+&gt;reference guide).
+&gt;
+&gt;2. When done with step 1 use the best trees found as the starting
+&gt;trees for an unconstrained search that will explore all swapping
+&gt;options (swap each island to completion).
+&gt;
+&gt;The agony, if one watches the search progress closely, is seeing the
+&gt;search swapping for many days (or weeks) on, say a tree island with
+&gt;length 1287 and when it is done with that rep and begins the next it
+&gt;finds a tree island of length 1260 within minutes! This means all
+&gt;those days spent exploring that 1287 island were wasted. Use the
+&gt;above strategy to prevent this.
+&gt;
+&gt;Yours,
+&gt;-Derek
+&gt;
+&gt;On 30-Nov-05, at 1:11 PM, Karl Magnacca wrote:
+&gt;
+&gt;&gt;I should clarify: it was NONA (which is also claimed to be much faster
+&gt;&gt;than PAUP; it may be used as the regular search engine for TNT but
+&gt;&gt;I'm not
+&gt;&gt;sure) that ran so much slower.  The search that failed to find the
+&gt;&gt;shortest trees in TNT was the special search technique for massive
+&gt;&gt;data
+&gt;&gt;sets.
+&gt;&gt;
+&gt;&gt;&gt;Well, I suppose different data sets will run differently, but in my
+&gt;&gt;&gt;original search for MP trees, an approximately 30-minute search in
+&gt;&gt;&gt;TNT
+&gt;&gt;&gt;yielded the same set of MP trees as the search in PAUP (500 random
+&gt;&gt;&gt;addition sequences, TBR branch swapping) which took *almost 2
+&gt;&gt;&gt;weeks* for a
+&gt;&gt;&gt;data set with 68 taxa and 120 morphological characters.
+&gt;&gt;
+&gt;&gt;What kind of computer are you using?  Unless it's a VIC-20, I can't
+&gt;&gt;imagine it possibly taking that long for PAUP to run unless something
+&gt;&gt;isn't working right.  The data set I was working with was 97 taxa,
+&gt;&gt;~600
+&gt;&gt;informative DNA and 15 morphological characters, and it only took 10
+&gt;&gt;minutes for 100 replicates on a 266 Mhz computer.  On a new one it
+&gt;&gt;takes
+&gt;&gt;less than 2 minutes.
+&gt;&gt;
+&gt;&gt;Karl
+&gt;
+&gt;++++++++++++++++++++++++++++++++++++++++++++++
+&gt;Derek S. Sikes, Assistant Professor
+&gt;Division of Zoology
+&gt;Department of Biological Sciences
+&gt;University of Calgary
+&gt;2500 University Drive NW
+&gt;Calgary, Alberta, Canada, T2N 1N4
+&gt;
+&gt;dsikes at ucalgary.ca
+&gt;<A HREF="http://homepages.ucalgary.ca/~dsikes/sikes_lab.htm">http://homepages.ucalgary.ca/~dsikes/sikes_lab.htm</A>
+&gt;
+&gt;phone: 403-210-9819
+&gt;FAX:  403-289-9311
+&gt;
+&gt;&quot;Remember that Truth alone is the matter you are in Search after; and
+&gt;if you have been mistaken, let no Vanity reduce you to persist in
+&gt;your mistake.&quot; Henry Baker, London, 1785
+&gt;
+&gt;Entomological Society of Alberta:
+&gt;<A HREF="http://www.biology.ualberta.ca/courses.hp/esa/esa.htm">http://www.biology.ualberta.ca/courses.hp/esa/esa.htm</A>
+&gt;++++++++++++++++++++++++++++++++++++++++++++++
+
+
+--
+Leah Larkin, Ph.D.
+Research Assistant Professor
+Department of Biology
+MSC03 2020, 167 Castetter Hall
+1 University of New Mexico
+Albuquerque, NM 87131-0001
+(505) 277-2388 (Lab)    (505) 239-6036 (Cell)
+(505) 277-4225 (Museum) (505) 277-0304 (FAX)
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="094439.html">Bremer support
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#094440">[ date ]</a>
+              <a href="thread.html#094440">[ thread ]</a>
+              <a href="subject.html#094440">[ subject ]</a>
+              <a href="author.html#094440">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,266 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] PygmyBrowse &amp; myNature
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2006-September/108028.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] PygmyBrowse &amp; myNature</H1>
+    <B data-pagefind-meta="author">Adorian Ardelean</B>
+    ardelean at aquaecology.de<BR>
+    <I data-pagefind-meta="date">Mon Sep 25 09:18:14 CDT 2006</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="108029.html">[Taxacom] SpiralFrog
+</A></li>
+        <LI>Next message: <A HREF="108030.html">[Taxacom] DNA homologies
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#108028">[ date ]</a>
+              <a href="thread.html#108028">[ thread ]</a>
+              <a href="subject.html#108028">[ subject ]</a>
+              <a href="author.html#108028">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2006</span><!--beginarticle-->
+<PRE>Hi Rod &amp; David,
+
+Concerning trees: coincidentally, at the requests 
+of some users of myNature portal, I work also on 
+a similar mini project: a classification browser 
+that goes through the content of the database.
+
+Of course a big tree loads slow. Here, in this 
+particular case I wanted to make the tree also 
+more content sensitive: I wanted to load sister 
+groups and children nodes only if there is some 
+content in the database (we do not want hundreds 
+of nodes for exotic orchid species for example if 
+we have only data for temperate species from 
+Romania. Although the source tree is huge (700k 
+nodes) the thing loads relatively fast because it 
+loads only the parts that are needed.  Basically, 
+I break the process of tree loading in 3 major 
+steps: get_tree_path, get_sister_groups, get_children_nodes.
+Even in this short form the tree is still 
+informative and allows browsing downward on 
+sister clades (without additional clicks).
+Next step of course would be some SAXAJ 
+implementation for both panels: classification 
+tree and the content panel. This would allow 
+browsing content, changing filtering conditions, 
+display options without reloading page every time such a change was made.
+
+<A HREF="http://mybiosis.org/nature/portal.php?pagename=higher_taxon_classify&amp;BLOCKID=3&amp;CHILDID&amp;324&amp;dataset=PLANTS">http://mybiosis.org/nature/portal.php?pagename=higher_taxon_classify&amp;BLOCKID=3&amp;CHILDID&amp;324&amp;dataset=PLANTS</A>
+
+<A HREF="http://mybiosis.org/nature/portal.php?pagename=higher_taxon_classify&amp;BLOCKID=5&amp;CHILDID=2&amp;dataset=INVERTEBRATA">http://mybiosis.org/nature/portal.php?pagename=higher_taxon_classify&amp;BLOCKID=5&amp;CHILDID=2&amp;dataset=INVERTEBRATA</A>
+
+NOTE: This is just a very basic prototype. 
+Potential problems you may see in the tree are 
+not of the algorithm itself but due to the 
+mapping of resources on the tree (the mapping 
+algorithm which is apart from the tree building 
+algorithm, needs some consideration regarding 
+homonyms; but this is a different story). I have 
+to mention that parts of the tree come through 
+webservice interaction with CU*STAR database 
+(some speed may be gain there if this would be an in house solution).
+
+All the best,
+Adorian
+
+
+At 12:59 PM 9/22/2006, Shorthouse, David wrote:
+
+&gt;An alternative solution if the tree isn't too large (e.g. for a subset of
+&gt;taxonomic groups) is to make use of the raw xml with a stylesheet like the
+&gt;following: <A HREF="http://www.devx.com/getHelpOn/Article/11874/0/page/5">http://www.devx.com/getHelpOn/Article/11874/0/page/5</A> and
+&gt;available for Nearctic spiders here:
+&gt;<A HREF="http://canadianarachnology.dyndns.org/data/canada_spiders/xmltree/xmltree2.x">http://canadianarachnology.dyndns.org/data/canada_spiders/xmltree/xmltree2.x</A>
+&gt;ml. What you might also want to consider Rod is how to have different
+&gt;branches of the tree expanded at the same time. ZooBank's rather trivial
+&gt;problem can be solved if they just used &lt;&lt; onClick=&quot;whatever; return false&quot;
+&gt; &gt;&gt; to prevent the page from jumping up to the top with every click event.
+&gt;
+&gt;David P. Shorthouse
+&gt;------------------------------------------------------
+&gt;Department of Biological Sciences
+&gt;CW-403, Biological Sciences Centre
+&gt;University of Alberta
+&gt;Edmonton, AB   T6G 2E9
+&gt;Phone: 1-780-492-3080
+&gt;mailto:dps1 at ualberta.ca
+&gt;<A HREF="http://canadianarachnology.webhop.net">http://canadianarachnology.webhop.net</A>
+&gt;<A HREF="http://arachnidforum.webhop.net">http://arachnidforum.webhop.net</A>
+&gt;------------------------------------------------------
+&gt;
+&gt;-----Original Message-----
+&gt;From: taxacom-bounces at mailman.nhm.ku.edu
+&gt;[mailto:taxacom-bounces at mailman.nhm.ku.edu] On Behalf Of Roderic Page
+&gt;Sent: Friday, September 22, 2006 10:28 AM
+&gt;To: TAXACOM
+&gt;Subject: [Taxacom] PygmyBrowse
+&gt;
+&gt;After being so rude about ZooBank, I've decided to try and be a little more
+&gt;constructive.
+&gt;
+&gt;One thing which did annoy me about ZooBank's web site was the way the
+&gt;taxonomic tree was displayed (constructive stuff coming, promise). It
+&gt;rapidly became huge, and every time the node was clicked on the page
+&gt;reloaded, and bounced you back to the top. Trying to navigate through
+&gt;chordates, for example, was a nightmare.
+&gt;
+&gt;I stumbled across the PygmyBrowse tree browser (see
+&gt;<A HREF="http://iphylo.blogspot.com/2006/09/pygmybrowse.html">http://iphylo.blogspot.com/2006/09/pygmybrowse.html</A> for details and links to
+&gt;the original work), and thought this might be a useful approach to the
+&gt;difficult problem of navigating large trees.
+&gt;
+&gt;You can view a demo online at
+&gt;<A HREF="http://linnaeus.zoology.gla.ac.uk/~rpage/pygmy/">http://linnaeus.zoology.gla.ac.uk/~rpage/pygmy/</A> . It's at the toy stage, but
+&gt;is &quot;live&quot; and is displaying a real classification (in this case the ITIS
+&gt;animal classification). It has limitations (after all, it was knocked
+&gt;together in a coffee shop while avoiding actual work). The search only works
+&gt;for taxa whose name comprises a single word (i.e., you won't find species
+&gt;names), and not all it's features work in Microsoft Internet Explorer (which
+&gt;manages to follow most, but not all web standards). It works fine in Firefox
+&gt;and Safari.
+&gt;
+&gt;It doesn't actually do much (you'll see the taxon and ITIS tsn number
+&gt;displayed for each taxon you click on), but what I'm interested in is any
+&gt;comments on whether this is a useful approach to navigating trees, which is
+&gt;a common task in our area.
+&gt;
+&gt;For the technically minded, it's written in PHP, uses AJAX, and ITIS is
+&gt;stored in a MySQL database. If that means anything to you you'll realise how
+&gt;easy it is to do this. If, however, it reads like gibberish, then you'll
+&gt;realise that I'm just trying to show off by drowning you in acronyms.
+&gt;
+&gt;Regards
+&gt;
+&gt;Rod
+&gt;
+&gt;------------------------------------------------------------------------
+&gt;----------------------------------------
+&gt;Professor Roderic D. M. Page
+&gt;Editor, Systematic Biology
+&gt;DEEB, IBLS
+&gt;Graham Kerr Building
+&gt;University of Glasgow
+&gt;Glasgow G12 8QP
+&gt;United Kingdom
+&gt;
+&gt;Phone:    +44 141 330 4778
+&gt;Fax:      +44 141 330 2792
+&gt;email:    r.page at bio.gla.ac.uk
+&gt;web:      <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+&gt;iChat:    aim://rodpage1962
+&gt;reprints: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/pubs.html">http://taxonomy.zoology.gla.ac.uk/rod/pubs.html</A>
+&gt;
+&gt;Subscribe to Systematic Biology through the Society of Systematic
+&gt;Biologists Website:  <A HREF="http://systematicbiology.org">http://systematicbiology.org</A>
+&gt;Search for taxon names: <A HREF="http://darwin.zoology.gla.ac.uk/~rpage/portal/">http://darwin.zoology.gla.ac.uk/~rpage/portal/</A>
+&gt;Find out what we know about a species: <A HREF="http://ispecies.org">http://ispecies.org</A>
+&gt;Rod's rants on phyloinformatics: <A HREF="http://iphylo.blogspot.com">http://iphylo.blogspot.com</A>
+&gt;Rod's rants on ants: <A HREF="http://semant.blogspot.com">http://semant.blogspot.com</A>
+&gt;
+&gt;
+&gt;_______________________________________________
+&gt;Taxacom mailing list
+&gt;Taxacom at mailman.nhm.ku.edu
+&gt;<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt;
+&gt;
+&gt;_______________________________________________
+&gt;Taxacom mailing list
+&gt;Taxacom at mailman.nhm.ku.edu
+&gt;<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt;
+&gt;
+&gt;
+&gt;--
+&gt;No virus found in this incoming message.
+&gt;Checked by AVG Free Edition.
+&gt;Version: 7.1.405 / Virus Database: 268.12.7/454 - Release Date: 9/21/2006
+
+
+
+----------
+Adorian Ardelean Dr.
+
+AquaEcology
+Stresemanstr. 46
+27570 Bremerhaven
+Germany
+phone: 0471-140-475
+&lt;<A HREF="http://aquaecology.de">http://aquaecology.de</A>&gt;<A HREF="http://aquaecology">http://aquaecology</A>&lt;<A HREF="http://aquaecology.de">http://aquaecology.de</A>&gt;.de
+
+
+----------
+proiectul myNature
+str. Rascoala din 1907 nr 12
+Timisoara 300325
+Romania
+
+&lt;<A HREF="http://mybiosis.org/nature/portal.php?pagename=firstpage">http://mybiosis.org/nature/portal.php?pagename=firstpage</A>&gt;<A HREF="http://mybiosis.org/nature/portal.php?pagename=firstpage">http://mybiosis.org/nature/portal.php?pagename=firstpage</A> 
+[a biodiversity-database]
+&lt;<A HREF="http://mybiosis.org/nature/portal.php?pagename­orian">http://mybiosis.org/nature/portal.php?pagename­orian</A>&gt;<A HREF="http://mybiosis.org/nature/portal.php?pagename­orian">http://mybiosis.org/nature/portal.php?pagename­orian</A> 
+CV]
+&lt;<A HREF="http://mybiosis.org/romanianorchids/">http://mybiosis.org/romanianorchids/</A>&gt;<A HREF="http://mybiosis.org/romanianorchids/">http://mybiosis.org/romanianorchids/</A> 
+[Romanian Orchids]
+&lt;<A HREF="http://greendorf.com/">http://greendorf.com/</A>&gt;<A HREF="http://greendorf.com">http://greendorf.com</A> [botanical illustration]
+&lt;<A HREF="http://www.ubio.org/">http://www.ubio.org/</A>&gt;<A HREF="http://www.ubio.org">http://www.ubio.org</A>
+<A HREF="http://portal.ubio.org">http://portal.ubio.org</A>
+&lt;<A HREF="http://microscope.mbl.edu/">http://microscope.mbl.edu/</A>&gt;<A HREF="http://microscope.mbl.edu">http://microscope.mbl.edu</A>
+<A HREF="http://starcentral.mbl.edu/biopedia">http://starcentral.mbl.edu/biopedia</A>
+<A HREF="http://starcentral.mbl.edu/custar">http://starcentral.mbl.edu/custar</A>
+
+Yahoo messenger: transylvaniasan
+AOL messenger: transylvaniasan
+
+Ne vom ?ntoarce ?ntr-o zi...
+Si cei de azi cu pasii grei
+Nu ne-or vedea, nu ne-or simti,
+Cum vom intra ?ncet ?n ei.
+Radu Gyr
+
+
+----------
+
+-------------- next part --------------
+
+
+No virus found in this outgoing message.
+Checked by AVG Free Edition.
+Version: 7.1.405 / Virus Database: 268.12.8/455 - Release Date: 9/22/2006
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="108029.html">[Taxacom] SpiralFrog
+</A></li>
+        <LI>Next message: <A HREF="108030.html">[Taxacom] DNA homologies
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#108028">[ date ]</a>
+              <a href="thread.html#108028">[ thread ]</a>
+              <a href="subject.html#108028">[ subject ]</a>
+              <a href="author.html#108028">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

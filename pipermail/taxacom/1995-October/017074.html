@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> latitude and longitude designation and collection data
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1995-October/017074.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">latitude and longitude designation and collection data</H1>
+    <B data-pagefind-meta="author">Konstantin Savov</B>
+    kps at FLORIN.MSK.SU<BR>
+    <I data-pagefind-meta="date">Fri Oct  6 22:43:32 CDT 1995</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="100229.html">PLANT MOLECULAR SYSTEMATIST POSITION - University of Maryland
+</A></li>
+        <LI>Next message: <A HREF="052866.html">latitude and longitude designation and collection data
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#017074">[ date ]</a>
+              <a href="thread.html#017074">[ thread ]</a>
+              <a href="subject.html#017074">[ subject ]</a>
+              <a href="author.html#017074">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1995</span><!--beginarticle-->
+<PRE>On Oct 2, 21:08, Doug Yanega wrote:
+k&gt; Subject: Re: latitude and longitude designation and collection data
+k&gt;
+k&gt; Konstantin Savov &lt;kps at florin.msk.su&gt;
+k&gt; made many good points, but when he says:
+k&gt;
+k&gt; &gt;1.  You always should find a proper sources to get coordinates of
+k&gt; &gt;localities (gazeteers, maps, etc.).  For example, ten years ago I had a
+k&gt; &gt;lot of problems with collections even from central part of Russia
+k&gt; &gt;(proper maps was not available here, anybody had to get special
+k&gt; &gt;permission to work with true maps).  When I received good maps, it
+k&gt; &gt;became much easier to make labels for my own collections and find
+k&gt; &gt;coordinates for old herbarium.
+k&gt; &gt;
+k&gt; &gt;It's very useful to get a digital map with settlements, rivers, etc.
+k&gt; &gt;But it is more important to have good maps and gazeteers in any form,
+k&gt; &gt;from my point of view.  In any case, you should spent a lot of time
+k&gt; &gt;searching for a point needed on a map or checking gazeteers - it is very
+k&gt; &gt;hard to automate the process.
+k&gt;
+k&gt; this assumes the luxury of a manageable amount of material. For a
+
+Unfortunately, it's only possible to deal with manageable amount of
+material. :-)  If you have very large collection, you can work with
+relatively small parts of it (e.g., involved in some projects).
+
+k&gt; collection like ours, with over 6 million insects, using maps is
+k&gt; impractical - it would almost be better, faced with this, to wait a decade
+k&gt; or two for fast, &quot;smart&quot; software and terabyte memory CD-ROM maps than to
+
+Have you over 6 million _insects_ or 6 million of _localities_?  In
+order to find lat/long you should work with localities.   Number
+of localities is usually less than number of specimens.  So, it's
+very important to use lat/long found for locality each time you have
+specimen collected there.
+
+Is digital map supported by GIS software better than printed one?  It
+highly depends on software quality and hardware resources available.
+That's another story.  Actually, you can have just now very powerful and
+&quot;smart&quot; system.  You should get powerful database server (e.g., HP or
+DEC) and graphical workstations (e.g., Sun or SGI) with both database
+and GIS running under Unix.  I have software solutions for such hardware
+and operation systems.  You can get or prepare yourself a digital map
+needed (incl.  settlements, roads and topography and some other
+information you need).  Your idea concerning measuring distances along
+curved lines is very interesting and can be realized in GIS-application
+in rather short time.
+
+As a result, you'll have a computerized version (rather expensive one)
+of the same map you are using now in paper form.  Plus some additional
+tools.  You'd save a lot of time using those tools, but you'll have to
+perform just the same operations while searching for lat/long of a
+locality.  You'll just work with different media.
+
+k&gt; spend that time finding data manually and be less than 1/5th finished (if
+k&gt; we assume 1 technician working 40 hours a week, able to look up 20
+k&gt; localities per hour - which is generous - it would take 144 years to finish
+k&gt; the job). Until the operation can be performed in a matter of seconds per
+
+So, your only hope is a set of algorithms for finding a proper
+geographical object (e.g., point with lat/long) on a map using text
+written on a label.  If I understand you correctly, you need automatic
+text recognition, lexical analysis and very intellectual search through
+huge databases of geographic names.  All options mentioned should be
+included in one package.
+
+Well, you'd get it five or ten years later.  I'm not sure such a system
+will help you significantly.  Text recognition wouldn't work with
+handwritten labels well enough, analysers will have problems with
+different languages, absence of plain text on labels, shortcuts and so
+on.  You'll also have a lot of problems with old names, alternative
+forms of the same name, etc.  while searching for geographic object
+needed in a database.  Surely, you'll have to check your data manually
+in any case.  Any software tools will help you with rather simple
+operations.  However, it's not bad.
+
+k&gt; locality, we're probably better off not bothering looking up lat/long data
+k&gt; on old material as a general practice, but rather leave it (as we tend to
+k&gt; now) to the specialist who is doing a biogeographic study with a given
+k&gt; taxon.
+
+That's right!  This point is closely related to the recent discussion
+concerning curating and cataloging.  I think it's only possible to treat
+huge amounts of material step-by-step.  Electronic catalogs and
+lat/long data would be a result (and not the main one) of other
+projects.
+If any project involving data
+from your collection will add some information to collection database,
+you would have rather large database in several years.  It'd be also
+workable to enter all new collections in a database obligatory.  It
+would be acceptable, if you have the following at your site:
+
+        - _multiuser_ database available for all specialists working
+        with your collection (incl. Internet access via online,
+        Mosaic, etc.),
+
+        - software, which helps you in collection management
+        (printing labels, loans registration, etc.), so, it returns
+        time needed for entering data in a database;
+
+        - software, which is useful for every-day work of different
+        kinds (simple system designed for cataloging or lat/long data
+        only is not suitable for other tasks, as a rule),
+
+        - data exchange.
+
+Coordinates are only a small part of this problem.  In order to work
+with lat/long, you should have a database with localities and
+specimens stored.
+
+k&gt;         As for new material, we've obtained a GPS unit here, and folks
+k&gt; occasionally remember to bring it with them in the field, but it's going to
+k&gt; take some time before it becomes routine. At least we can print labels
+k&gt; small enough now that adding lat/long data won't make the labels too
+k&gt; cumbersome (there's just so much you can squeeze in 10 X 15 mm)...all sorts
+
+That's a problem.
+
+k&gt; of practical difficulties arise with insects that don't quite plague other
+k&gt; taxonomists, at least not to the same extent.
+k&gt; Sincerely,
+k&gt;
+k&gt; Doug Yanega       Illinois Natural History Survey, 607 E. Peabody Dr.
+k&gt; Champaign, IL 61820 USA      phone (217) 244-6817, fax (217) 333-4949
+k&gt;  affiliate, Univ. of Illinois Urbana-Champaign, Dept. of Entomology
+k&gt;   &quot;There are some enterprises in which a careful disorderliness
+k&gt;         is the true method&quot; - Herman Melville, Moby Dick, Chap. 82
+k&gt;-- End of excerpt from Doug Yanega
+
+
+
+--
++------------------------------------------------------------------------------+
+|        Konstantin Savov        |     DataX/FLORIN, Inc.    Moscow, Russia    |
+|                                |       Advanced Data Management Systems      |
+|   E-mail:  kps at florin.msk.su   |   Voice: (095)158-9520  Fax: (095)158-5700  |
++------------------------------------------------------------------------------+
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="100229.html">PLANT MOLECULAR SYSTEMATIST POSITION - University of Maryland
+</A></li>
+        <LI>Next message: <A HREF="052866.html">latitude and longitude designation and collection data
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#017074">[ date ]</a>
+              <a href="thread.html#017074">[ thread ]</a>
+              <a href="subject.html#017074">[ subject ]</a>
+              <a href="author.html#017074">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

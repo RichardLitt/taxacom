@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Updated TDWG BioBlitz RDF Example with Pivot View and
+	Data Browsing
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2011-February/119124.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Updated TDWG BioBlitz RDF Example with Pivot View and
+	Data Browsing</H1>
+    <B data-pagefind-meta="author">Peter DeVries</B>
+    pete.devries at gmail.com<BR>
+    <I data-pagefind-meta="date">Wed Feb 23 15:58:07 CST 2011</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="119123.html">[Taxacom] Order Campanulales (worth maintaining?)
+</A></li>
+        <LI>Next message: <A HREF="119125.html">[Taxacom] Postdoctoral Fellowship at Australian National Insect
+ Collection - Weevil Systematics
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#119124">[ date ]</a>
+              <a href="thread.html#119124">[ thread ]</a>
+              <a href="subject.html#119124">[ subject ]</a>
+              <a href="author.html#119124">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2011</span><!--beginarticle-->
+<PRE>I have updated my earlier revision of the TDWG BioBlitz RDF.
+
+I commend Joel for his RDF and think that any suboptimality was because of
+problems in trying to use the existing Darwin Core as Linked Data.
+
+Some earlier issues that have been fixed in the new examples are:
+
+1) The names for people were not standardized. Even as a text string you
+could not find who collected what.
+    To fix this I created URI's for all the individuals involved and linked
+the occurrences to the URI for the person that made the observation
+
+2) The names for species were not standardized or spell checked.
+    It took a while but I was able to figure out what I think people &quot;meant&quot;
+by the various name and linked them to species concepts.
+    For those occurrences with multiple identifications, I linked the last
+identification to the occurrences species concept.
+    *Future BioBlitz's might benefit from a pick list at least to genus.
+
+3) Virtuoso out of the box does not recognize &quot;associatedMedia&quot; as an image
+that can be displayed. In order to get these to show up on the map view I
+had to add each image as a foaf:depiction.
+    Also associatedMedia is a bit vague and this should probably be broken
+into different media types like images, sounds etc.
+
+4) In my other RDF representations I make statement about the geonames
+locations in which the species concept was observed so the continent, state
+and county have &quot;expectationsOf&quot; the species and the species is &quot;expectedIn&quot;
+those areas. I have added these statements to the example RDF so that both
+the locations and the species concepts are linked to the occurrences.
+
+5) I added in my proposed &quot;area&quot; so that it is easy to see what species were
+observed near each other. Since there was no measure of radius in these
+longitude and latitudes I made the radius 100 meters.
+    Normally I would estimate the radius for a GPS reading to be within 10
+meters but some of these observations were made where the GPS reading was
+taken and the readings were given only to two decimals.
+
+Area = long, lat; radius in meters following the ietf proposal but with the
+precision of the long and lat standardized
+example &quot;geo:41.53000000,-70.67000000;u0&quot;
+
+The example data are available at the following URL's
+
+Occurrences:
+<A HREF="http://lod.taxonconcept.org/tdwg2010bioblitz/TechnoBioblitzOccurrences_dates.rdf">http://lod.taxonconcept.org/tdwg2010bioblitz/TechnoBioblitzOccurrences_dates.rdf</A>
+
+
+People: <A HREF="http://lod.taxonconcept.org/people/tdwg2010bioblitz.rdf">http://lod.taxonconcept.org/people/tdwg2010bioblitz.rdf</A>
+
+This bit.ly link will show clickable map with all the occurrences. (It is a
+little slow to load)
+
+
+The actual URL is &lt;
+<A HREF="http://lsd.taxonconcept.org/isparql/view/?queryÞSCRIBE%20%3Fx%20WHERE%20%7B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%3Fx%20%3Chttp://www.w3.org/1999/02/22-rdf-syntax-ns%23type%3E%20%3Chttp://rs.tdwg.org/dwc/terms/%23Occurrence%3E.%0A%7D%0A&amp;endpoint=/sparql&amp;resultview=map&amp;maxrows">http://lsd.taxonconcept.org/isparql/view/?queryÞSCRIBE%20%3Fx%20WHERE%20%7B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%3Fx%20%3Chttp://www.w3.org/1999/02/22-rdf-syntax-ns%23type%3E%20%3Chttp://rs.tdwg.org/dwc/terms/%23Occurrence%3E.%0A%7D%0A&amp;endpoint=/sparql&amp;resultview=map&amp;maxrows</A> &gt;
+
+But I don't expect that will go through everyone's emails correctly.
+
+This Pivot view shows occurrences by investigator
+<A HREF="http://bit.ly/eW3fgm">http://bit.ly/eW3fgm</A>&lt;<A HREF="http://bit.ly/eW3fgm">http://bit.ly/eW3fgm</A>&gt;
+
+Here is are view of two of the records, note how you can browse between
+people, species concepts, identifications, areas etc.
+
+<A HREF="http://lsd.taxonconcept.org/describe/?url=http://www.cs.umbc.edu/~jsachs/occurrences/tdwg2010bioblitz_5">http://lsd.taxonconcept.org/describe/?url=http://www.cs.umbc.edu/~jsachs/occurrences/tdwg2010bioblitz_5</A>&lt;<A HREF="http://lsd.taxonconcept.org/describe/?url=http://www.cs.umbc.edu/~jsachs/occurrences/tdwg2010bioblitz_5&amp;sidB7&amp;urilookup=1">http://lsd.taxonconcept.org/describe/?url=http://www.cs.umbc.edu/~jsachs/occurrences/tdwg2010bioblitz_5&amp;sidB7&amp;urilookup=1</A>&gt;
+
+<A HREF="http://lsd.taxonconcept.org/describe/?url=http://www.cs.umbc.edu/~jsachs/occurrences/tdwg2010bioblitz_2603">http://lsd.taxonconcept.org/describe/?url=http://www.cs.umbc.edu/~jsachs/occurrences/tdwg2010bioblitz_2603</A>
+
+Here is a browsable view of one of the areas bit.ly  <A HREF="http://bit.ly/hBtVFL">http://bit.ly/hBtVFL</A>
+
+
+<A HREF="http://lsd.taxonconcept.org/describe/?url=geo:41.53000000,-70.67000000;u%3D100">http://lsd.taxonconcept.org/describe/?url=geo:41.53000000,-70.67000000;u%3D100</A>
+
+Here is the view of the species concept for the Honey Bee that is now linked
+to these occurrence records.
+
+<A HREF="http://bit.ly/g1zzJC">http://bit.ly/g1zzJC</A>
+
+In summary, I think it make sense to follow LOD best practices because this
+maximizes the utility of the data and allows you to take advantage of all
+the available tools.
+
+ &lt;<A HREF="http://bit.ly/eW3fgm">http://bit.ly/eW3fgm</A>&gt;Respectfully,
+
+- Pete
+---------------------------------------------------------------
+Pete DeVries
+Department of Entomology
+University of Wisconsin - Madison
+445 Russell Laboratories
+1630 Linden Drive
+Madison, WI 53706
+TaxonConcept Knowledge Base &lt;<A HREF="http://www.taxonconcept.org/">http://www.taxonconcept.org/</A>&gt; / GeoSpecies
+Knowledge Base &lt;<A HREF="http://lod.geospecies.org/">http://lod.geospecies.org/</A>&gt;
+About the GeoSpecies Knowledge Base &lt;<A HREF="http://about.geospecies.org/">http://about.geospecies.org/</A>&gt;
+------------------------------------------------------------
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="119123.html">[Taxacom] Order Campanulales (worth maintaining?)
+</A></li>
+        <LI>Next message: <A HREF="119125.html">[Taxacom] Postdoctoral Fellowship at Australian National Insect
+ Collection - Weevil Systematics
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#119124">[ date ]</a>
+              <a href="thread.html#119124">[ thread ]</a>
+              <a href="subject.html#119124">[ subject ]</a>
+              <a href="author.html#119124">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

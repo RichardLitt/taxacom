@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Maximum Taxon names within a single Parent
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Maximum%20Taxon%20names%20within%20a%20single%20Parent&In-Reply-To=%3CNCBBLOIBJEMNABMOGEMGEEFEFAAA.deepreef%40bishopmuseum.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="088101.html">
+   <LINK REL="Next"  HREF="088111.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2002-May/088102.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Maximum Taxon names within a single Parent</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Maximum%20Taxon%20names%20within%20a%20single%20Parent&In-Reply-To=%3CNCBBLOIBJEMNABMOGEMGEEFEFAAA.deepreef%40bishopmuseum.org%3E"
+       TITLE="Maximum Taxon names within a single Parent">deepreef at BISHOPMUSEUM.ORG
+       </A><BR>
+    <I data-pagefind-meta="date">Fri May 24 02:45:49 CDT 2002</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="088101.html">Maximum Taxon names within a single Parent
+</A></li>
+        <LI>Next message: <A HREF="088111.html">List order (was: Maximum Taxon names within a single Parent)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#88102">[ date ]</a>
+              <a href="thread.html#88102">[ thread ]</a>
+              <a href="subject.html#88102">[ subject ]</a>
+              <a href="author.html#88102">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2002</span><!--beginarticle-->
+<PRE>&gt;<i> There certainly is! The genus Hieracium contains far more than
+</I>&gt;<i> 5000 species, it is routinely devided into subgenera and sections
+</I>&gt;<i> but some of the latter are still very large, e.g. H. sect.
+</I>&gt;<i> Hieracium contains more than 570 species in Sweden alone.
+</I>
+Thanks to Torbjörn, and to the many people who responded off-list!  I've
+never participated in a Taxacom thread in which I didn't learn something
+new, and this was certainly no exception.
+
+I know my original question was a bit out of left-field, but I'd like to
+follow up a little more, with some elaboration of why I'm asking.
+
+Specifically, I need to know what the maximum number of &quot;valid&quot; child-level
+taxon names included within a single, most proximal parent-level taxon name
+that have ever been, or likely ever will be, cited within a single
+reference. The number of taxon names regarded as junior synonyms within the
+Reference don't matter, and it also doesn't matter if a reference included
+e.g. 5,000 species within a genus, as long as those species are subdivided
+into intermediate groupings (i.e., subgenera, sections, etc.). The number
+I'm looking for is the maximum number of child-taxa (at any rank) within the
+most proximal, direct parent-taxon (at any rank), as cited in a Reference.
+
+Now, here's more elaboration on why I'm asking:
+
+Throughout much of the history of taxonomic nomenclature, many authors of
+References have attempted to convey/assert their interpretations of
+phylogenetic placement of same-rank taxon names by listing those names in a
+non-alphabetical sequence within their respective parent taxon names. For
+instance, in many published fish checklists, the families are arranged in
+some sort of &quot;phylogenetic&quot; sequence, rather than simple alphabetical order.
+I would like to provide a means in my database of capturing this
+sorting-within-parent information, as asserted by authors of said
+references.  In the vast majority of cases, this practice of conveying
+phylogeny through name seqencing is limited to the rank of family and
+higher.  However, there are some taxonomic references that have extended the
+practice to lower-level ranks as well.
+
+I want to ensure that the database design does not ever limit the ability
+for storing this sort of information, so I want to err on the side of
+increased capability.  However, for very technical reasons that I won't
+elaborate on here (but would be happy to discuss off-list with anyone who is
+interested), the smaller the number I allow, the better the database
+performance and storage efficiency will be. Again, for technical reasons,
+there are several &quot;threshold&quot; values for this number, the first of which was
+256 (clearly not sufficient).  The complete set of threshold values are:
+
+10
+36
+256
+1,296
+4,096
+32,768
+
+According to the off-list responses I've received, the current front-runner
+for &quot;species-within-genus-without-intermediate-groupings&quot; is in the range of
+about 1,500 -- so this means I'd probably go with the option that provides
+me with 4,096 values (unless, of course, some author has previously or will
+someday list all 5,000 species of Hieracium non-alphabetically and without
+reference to subgeneric groupings...).
+
+However, because the phylogenetic sorting pracice usually involves taxa at
+the rank of family and above, I'm also entertaining the idea of designing
+the system with smaller/simpler threshold values for ranks of family (or
+perhaps genus) and higher; and a larger threshold for species and perhaps
+Genus as well.
+
+So...my follow-up questions to this list are:
+
+1. What threshold value is &quot;safe&quot; for ranks of family and higher?  Would 256
+cover me for for all these ranks, or should I opt for 1,296?
+2. Same question, but for Genus-level ranks (incl. subgenus, section, etc.).
+Would 1,296 safely cover me, or should I go with 4,096?
+3. Same question, but for species-level ranks. Is 4,096 enough, or should I
+bump it up to 32K?
+
+Many thanks again to those who have expressed an interest in this question,
+and my apologies to those who see it as inbox clutter...
+
+Aloha,
+Rich
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="088101.html">Maximum Taxon names within a single Parent
+</A></li>
+	<LI>Next message: <A HREF="088111.html">List order (was: Maximum Taxon names within a single Parent)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#88102">[ date ]</a>
+              <a href="thread.html#88102">[ thread ]</a>
+              <a href="subject.html#88102">[ subject ]</a>
+              <a href="author.html#88102">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

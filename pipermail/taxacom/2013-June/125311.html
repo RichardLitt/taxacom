@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Data query
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-June/125311.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Data query</H1>
+    <B data-pagefind-meta="author">Stephen Thorpe</B>
+    stephen_thorpe at yahoo.co.nz<BR>
+    <I data-pagefind-meta="date">Mon Jun 24 20:28:37 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="125310.html">[Taxacom] Data query
+</A></li>
+        <LI>Next message: <A HREF="125312.html">[Taxacom] Data query
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#125311">[ date ]</a>
+              <a href="thread.html#125311">[ thread ]</a>
+              <a href="subject.html#125311">[ subject ]</a>
+              <a href="author.html#125311">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>&gt;What *are* appropriate data structures for storing the complex relationships involved in taxonomic, nomenclatural and bibliographic data?&lt;
+?
+That's probably the problem ... every acronym either has their own &quot;acrocentric&quot; answer to that question, designed in part to exclude rivals, or they haven't got a clue! Also, there doesn't seem to be any attempt to explore the possibilities here within Wikispecies, say, rather than starting over and building a new?infrastructure from scratch. It would be very easy to extend the templates that Wikispecies already uses, so that, for example, an original combination or synonym is tagged as such with a template like this {{template name|data}}, so a machine could start at {{ and end at }} and know what sort of data was in between (i.e template name) ...
+?
+Stephen
+
+
+________________________________
+From: Bob Mesibov &lt;mesibov at southcom.com.au&gt;
+To: stephen_thorpe at yahoo.co.nz; Tony.Rees at csiro.au 
+Cc: Rod Page &lt;r.page at bio.gla.ac.uk&gt;; TAXACOM &lt;taxacom at mailman.nhm.ku.edu&gt;; Richard Pyle &lt;deepreef at bishopmuseum.org&gt; 
+Sent: Tuesday, 25 June 2013 1:13 PM
+Subject: Re: [Taxacom] Data query
+
+
+Stephen Thorpe wrote:
+
+&quot;You mean until we have one place where anyone can &quot;just do it&quot; and add missing data at their leisure with minimum fuss, to help build a comprehensive catalogue of world biota ... oh, wait! We do have such a place ... Wikispecies!&quot;
+
+Tony Rees wrote:
+
+&quot;Also, most informatics persons (biological data specialists) would probably contend that there are more appropriate data structures than wikispecies for bulk importing, internal data management and review, bulk queries (including machine-machine as well as human), and bulk export of relevant content (which is why the bulk of present taxonomic information resides in databases, with web pages as by-products, rather than in web pages as their native format).&quot;
+
+I'm having trouble understanding Tony's argument. Wikispecies is not primarily a data storage and management structure. It's the equivalent of the 'web pages as by-products' made from databases, a way to get the results of taxonomic activity made widely known. Stephen builds web pages by hand, databasers export web pages from their databases, but in both cases the information put online comes from the taxonomic literature, yes? From the point of view of the Web user looking at the information, there's no in-principle difference. Wikispecies is less complete than some databases, but on the other hand Wikispecies is often more up to date, and sometimes more accurate.
+
+It's not a criticism of Wikispecies to say that it's no good for 'bulk importing, internal data management and review, bulk queries (including machine-machine as well as human), and bulk export of relevant content'. That's like criticising cars because they don't fly like airplanes do. But they get you from A to B just the same.
+
+It's also not a criticism of database managers to say that they don't allow just anyone to edit their data, the way Wikispecies does, at the Web-output stage. Database managers ask that users suggest their edits 'off-Web', so the database can be changed, then the changes exported to the Web. It's a different mechanism for editing.
+
+Which brings me back to that first post of mine, that pushed some unintended buttons. What *are* appropriate data structures for storing the complex relationships involved in taxonomic, nomenclatural and bibliographic data? And are those structures capable of being marked up on a webpage? If so, then the gap between Wikispecies and Big Databases disappears. The marked-up page can be generated by a database, or built/edited by hand.
+
+I asked if anyone had experience with graph databases because they seem to me to be the logical way to store and manipulate objects ('nodes' = names, authors, publications, type specimens...) and relationships ('published by', 'cited by', 'synonym of'...). Doing this with RDBMS and joins seems to be out of the question for anything but very simple cases.
+-- 
+Dr Robert Mesibov
+Honorary Research Associate
+Queen Victoria Museum and Art Gallery, and
+School of Agricultural Science, University of Tasmania
+Home contact:
+PO Box 101, Penguin, Tasmania, Australia 7316
+(03) 64371195; 61 3 64371195
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="125310.html">[Taxacom] Data query
+</A></li>
+        <LI>Next message: <A HREF="125312.html">[Taxacom] Data query
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#125311">[ date ]</a>
+              <a href="thread.html#125311">[ thread ]</a>
+              <a href="subject.html#125311">[ subject ]</a>
+              <a href="author.html#125311">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

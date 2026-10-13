@@ -1,0 +1,216 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Taxonomic index, anyone?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1997-February/020352.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Taxonomic index, anyone?</H1>
+    <B data-pagefind-meta="author">Stan Blum</B>
+    sblum at BISHOP.BISHOP.HAWAII.ORG<BR>
+    <I data-pagefind-meta="date">Sun Feb 23 13:05:36 CST 1997</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="103503.html">lecto- and neotypifications
+</A></li>
+        <LI>Next message: <A HREF="056144.html">Taxonomic index, anyone?
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#020352">[ date ]</a>
+              <a href="thread.html#020352">[ thread ]</a>
+              <a href="subject.html#020352">[ subject ]</a>
+              <a href="author.html#020352">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1997</span><!--beginarticle-->
+<PRE>At 03:37 PM 2/22/97 EST, Una Smith wrote:
+&gt;Compared to the molecular biology community databases available on the
+&gt;Internet now, a complete taxonomic index would be inconsequential in
+&gt;terms of either size or complexity.  If we could agree on a format for
+&gt;submission of data, and someone would provide surplus disk space on an
+&gt;Internet host, we'd be in business.
+
+The following &quot;assessment of the taxonomy problem&quot; was written more than SIX
+years ago, but it is still so true, not to mention entertaining, that I
+think it deserves (re-)reading today.  I am posting it without permission of
+the author, so I beg his forgiveness, and would ask that you not be overly
+critical if some of it strikes you as dated.
+
+Enjoy,
+
+Stan Blum
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+By way of introduction, my name is Robert Robbins and I am with
+the National Science Foundation in the capacity of Staff
+Associate for Biotic Information Resources Development.  My
+assignment is to &quot;worry&quot; about the development of computer
+applications in biology and to do what I can to facilitate those
+efforts.  In the past year, I have had the opportunity to meet
+with many biologists involved in establishing biological
+databases.  From all of those meetings, one generalization stands
+out:
+
+The difficulty of building biological databases is always grossly
+underestimated.
+
+For example, a recent posting on the MATRIX bulletin board
+included the observation that establishing a complete biological
+taxonomic database might just be a &quot;nice medium-sized project&quot;
+with which to get the Matrix started.  I have spent some time in
+the last few months contemplating the scope of just such a
+project and I have consulted with several experts in systematics
+to get some notion of the number of elements involved.  The
+following is a description that I just drew up that attempts to
+quantify the taxonomy database problem.
+
+According to my estimates (presented below), this is not a
+&quot;medium-sized project.&quot;
+
+DISCUSSION OF DEVELOPING AN ALL-INCLUSIVE TAXONOMIC DATABASE
+
+One example of a biological data problem that is challenging (at
+least on a performance level), but which tends to be ignored, is
+simply representing the taxonomic classification of all living
+and fossil species.  This is highly structured data, well tended
+and standardized by fairly fussy people.  It would certainly seem
+like a good place to start with the computerization (i.e.,
+MATRIXIFICATION) of biological knowledge.  Doing so is not
+entirely trivial.  The taxonomy can be structured as a simple,
+singly rooted tree with branches of unbalanced length (ranging
+from seven to perhaps as many as 25 nodes between root and leaf).
+Each node has associated with it a level name (i.e., taxonomic
+level such as PHYLUM or CLASS or ORDER) and an actual node name
+(i.e., the specific phylum or class or order, such as CHORDATA,
+MAMMALIA, CARNIVORA).  Certain taxonomic levels will exist on all
+branches (PHYLUM, CLASS ORDER, FAMILY, GENUS, SPECIES), whereas
+others will exist only on some branches (TRIBE, SUBORDER, etc).
+A minor complication is that the same level goes by different
+level names on different branches (zoologists call the topmost
+level PHYLUM whereas botanists use DIVISION).  A larger
+complication is that in the real world some of the branches are
+usually in dispute -- that is, there may be different versions of
+the branches below, say, PHYLUM mollusca with two or more
+different experts offering their own revisions (i.e.,
+classifications) of all subgroups on that branch.  Thus, to be
+really useful, such a database would have to be capable of
+holding different versions for any or all branches.
+
+If the database were fully populated with all established
+biological species (living and extinct) the tree would have on
+the order of 20,000,000 leaves (not to mention lots of higher
+nodes).  To complicate things, probably every other node would
+have anywhere from one to several synonyms.
+
+Such a database might be implemented in a relational database as
+(essentially) a binary relation, with each tuple representing one
+arc of the tree (graph).  Navigating the table would then be a
+matter of developing code to do transitive closure operations on
+a multi-million leafed tree with version control (and the
+authority representations that come with version control). Since
+relational database products do not support transitive closure
+operations, this will have to be developed locally.  As the texts
+(e.g., Ullman's latest) point out, doing transitive closure
+operations using recursive rules in logic programming is a piece
+of cake.  However, using logic programming on a 20-million leaf
+tree structure is not likely, to my understanding, to produce
+anything vaguely resembling acceptable performance.
+
+So, as I see it, developing an adequate computer-based approach
+for handling the taxonomy of living things is a real challenge.
+How does the typical biologist comment on this?  Answer, &quot;Of
+course, we'll have to keep track of what organism is involved,
+but that's straight forward.&quot;  Uh huh, real straight forward.
+
+To begin a quantitative estimate of the time required to build
+such a database, let us first consider only the problem of
+identifying and entering the taxonomic names into the database.
+On the assumption that there are approximately 25 million named
+taxa (at the species and higher levels) and on the assumptions
+that there are about half again as many synonyms, we have
+approximately 37.5 million names that will have to be processed
+and entered into the database.  This processing will require that
+(a) the name be identified, (b) the spelling be verified, (c) the
+role of the name be established (legitimate name, synonym, etc),
+(d) the name typed into the database, and (e) the database entry
+be proofread and verified.  Allowing the magnificent total of six
+seconds for each of these tasks, we see that processing and
+entering each name into the database will require approximately
+30 seconds.
+
+Thus, the processing and entry of all names will require
+something on the order of 1.1 billion seconds.  Assuming a 40-hour
+work week and two weeks vacation per year, this converts into
+about 156 person years of work.  At 15,000 per year per
+keyboardist, the cost will be over $2,000,000.00 for data
+processing and entry alone.  If we argue that the full processing
+of a given name will take more than an average of 30 seconds, the
+cost obviously gets higher, fast.  Five minutes per name is not a
+very high estimate when all of the steps are included.  At five
+minutes per, data processing and entry turns into a 1500 person
+year project with a cost of over $20,000,000.00.
+
+Since the entire $20,000,000.00 amounts to less than 2/3 of the
+budget overrun for the ground control software for the Hubble
+Space telescope, on might suggest that this is in fact a medium-
+sized project.  At the same time, one could argue that the $20
+million (which, by the way, includes NO costs associated with the
+development of the system) probably approaches (or exceeds) the
+total amount of grant support that will be available in any given
+year for all biological database efforts, thereby making this
+something more than a &quot;nice, medium-sized project.&quot;
+
+
+Robert J. Robbins
+Biotic Systems and Resources
+National Science Foundation
+
+
+Oh yes, one more thing.  From the point of view of a systematic
+biologist, a taxonomic database is not complete unless it
+includes some system for referencing and describing the actual
+physical museum specimens associated with each name (in
+systematic biology, one is permitted to coin a name for a species
+only if one can provide one or more museum specimens to verify
+and validate the description that is given for the species).  It
+is estimated that more than 300,000,000 voucher specimens may
+exist.
+
+Now, assuming that a really fast worker can collect and process
+the necessary information for one voucher specimen in a bout 15
+seconds...
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="103503.html">lecto- and neotypifications
+</A></li>
+        <LI>Next message: <A HREF="056144.html">Taxonomic index, anyone?
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#020352">[ date ]</a>
+              <a href="thread.html#020352">[ thread ]</a>
+              <a href="subject.html#020352">[ subject ]</a>
+              <a href="author.html#020352">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Language tags for scientific names
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2008-June/110623.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Language tags for scientific names</H1>
+    <B data-pagefind-meta="author">Donald.Hobern at csiro.au</B>
+    Donald.Hobern at csiro.au<BR>
+    <I data-pagefind-meta="date">Sat Jun 28 07:25:39 CDT 2008</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="110622.html">[Taxacom] Nuttall's species at PH, holotypes vs. lectotypes?
+</A></li>
+        <LI>Next message: <A HREF="110624.html">[Taxacom] Nuttall's species at PH, holotypes vs. lectotypes?
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#110623">[ date ]</a>
+              <a href="thread.html#110623">[ thread ]</a>
+              <a href="subject.html#110623">[ subject ]</a>
+              <a href="author.html#110623">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2008</span><!--beginarticle-->
+<PRE>Thanks, Gregor,
+
+Some clarifications:
+
+&gt;&gt; 1. What do we (as the interested community) really want to represent
+by
+&gt;&gt; such codes?  When we want to give additional information about a
+&gt;&gt; particular scientific name (including e.g. code), why don't we just
+use
+&gt;&gt; proprietary tags (like the TDWG RDF TaxonName properties)?
+&gt;
+&gt; a) Because current technology of RDF does not seem to support markup
+&gt; of text in publications (xhtml, PDF, etc.) very well. This issue is
+&gt; not primarily about cases where the scientific name is an atomized
+&gt; piece of data.
+
+Actually this seems precisely to be about when we want to indicate that
+a string within a longer section of text is to be treated as an atomised
+piece of data.
+
+&gt; b) RDF is limited to RDF-based applications like XMP, but cannot be
+&gt; extended to more general xml-schema based data exchange, including
+&gt; EML, SDD or TaxonX.
+&gt; 
+&gt; Please correct me if am wrong, I may not be up to date!
+
+I actually simply intended that we should consider adopting the
+vocabularies from TaxonName (or the equivalent TCS, if you prefer) and
+find safe ways (i.e. ways that will not disrupt unsuspecting parsers) to
+wrap scientific names in XHTML, PDF or whatever else.  As I have
+explained before, I see the RDF vocabularies as the most appropriate way
+for us currently to represent our entity-relationship modelling but that
+we will reuse the terms and implied structures in other contexts (XHTML
+micro-tags, XML Schema structures, etc.).
+
+&gt;&gt; 2. Is this compatible with the intended use of the language tag?  If
+&gt;&gt; something is a proper name with no translation into different
+languages,
+&gt;&gt; what would ISO expect?  Is the language code in any way appropriate
+in
+&gt;&gt; such a case?
+&gt;
+&gt; zxx is a standard ISO and IETF code for this case, nothing proposed to
+&gt; introduce here.
+&gt; 
+&gt; zxx is especially important for binary media objects: many images are
+&gt; zxx, but some may be language specific.
+&gt;
+&gt; About processing: since xml:lang is part of the xml specification, any
+&gt; xml processor is known how to behave on a low level.
+
+This is what I want to be sure about.  If we are doing this, we should
+be sure that the most popular processors and (more importantly)
+applications using xml:lang do indeed do what we expect.  If an
+application user has indicated that their language is French and the
+application accordingly displays only French text and perhaps English as
+the default when French is not available, will it display text marked
+&quot;zxx&quot; or will it treat this the same way it might treat Chinese or
+Arabic text?  The software probably does work as we expect, but this is
+the kind of real world example that xml:lang is intended to make
+possible and we should make sure we understand it correctly.
+
+&gt;&gt; I believe it is an abuse of the language code to use it to identify
+the
+&gt;&gt; nomenclatural code, and something which may alienate non-taxonomic
+&gt;&gt; users.  A single code, (null, &quot;zxx&quot;, &quot;tax&quot; or something) would
+encourage
+&gt;&gt; consistent interpretation better, but I still think we are
+&gt;&gt; misunderstanding the point of the language tag.  Surely its primary
+role
+&gt;&gt; is in situations in which there may be different versions of some
+&gt;&gt; content in different languages and software may choose the most
+&gt;&gt; appropriate for a given user.  This is not the case here and I
+suspect
+&gt;&gt; the ISO recommendation would be to use &quot;zxx&quot; or nothing at all.
+&gt;
+&gt; I have no problem if a consensus emerges that the nomenclatural codes
+&gt; should not be considered here.
+&gt;
+&gt; I disagree with your last point. Language tags are important for many
+&gt; purposes, including presentation or screen or for readers, for spell
+&gt; checking of documents with mixed language use (most people have to use
+&gt; several languages in parallel rather than choosing one). When using
+&gt; scientific organisms names in Chinese, arab, or hebrew texts,
+&gt; appropriate language tags would inform software on script, reading
+&gt; direction, etc.
+
+Surely it is the use of different Unicode characters which should
+control which script, reading direction, etc. is used, not the xml:lang
+tag?  
+
+Best wishes,
+
+Donald
+
+Donald Hobern, Director, Atlas of Living Australia
+CSIRO Entomology, GPO Box 1700, Canberra, ACT 2601
+Phone: (02) 62464352 Mobile: 0437990208 
+Email: Donald.Hobern at csiro.au
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="110622.html">[Taxacom] Nuttall's species at PH, holotypes vs. lectotypes?
+</A></li>
+        <LI>Next message: <A HREF="110624.html">[Taxacom] Nuttall's species at PH, holotypes vs. lectotypes?
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#110623">[ date ]</a>
+              <a href="thread.html#110623">[ thread ]</a>
+              <a href="subject.html#110623">[ subject ]</a>
+              <a href="author.html#110623">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

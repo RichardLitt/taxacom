@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Database - summary
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Database%20-%20summary&In-Reply-To=%3CD21A20CD84607E409F314E31F0F68D8AA1CE8A%40cricket-be.ento.csiro.au.%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="087272.html">
+   <LINK REL="Next"  HREF="087273.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2002-January/087263.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Database - summary</H1>
+    <B data-pagefind-meta="author">Steve at </B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Database%20-%20summary&In-Reply-To=%3CD21A20CD84607E409F314E31F0F68D8AA1CE8A%40cricket-be.ento.csiro.au.%3E"
+       TITLE="Database - summary">Steve at 
+       </A><BR>
+    <I data-pagefind-meta="date">Thu Jan 17 15:00:43 CST 2002</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="087272.html">Database - summary
+</A></li>
+        <LI>Next message: <A HREF="087273.html">Database - summary
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#87263">[ date ]</a>
+              <a href="thread.html#87263">[ thread ]</a>
+              <a href="subject.html#87263">[ subject ]</a>
+              <a href="author.html#87263">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2002</span><!--beginarticle-->
+<PRE>No question that Access (and FoxPro, FileMakerPro, etc) work very well for
+moderate-sized databases, certainly up into the low 100,000's of rows per
+table.  They also work in multi-user environments but hit the wall much
+sooner than things like Oracle and SQLServer.  The real problem, however, is
+with scaling.  It's not a problem viewing an entire table with many
+thousands of rows, but it doesn't work with 200,000 rows or when data is
+normalised across 3 or 4 tables.  It's certainly getting better, but the
+larger and more complex the data gets the more careful you need to be and
+the less suitable raw Access/FoxPro/FileMaker interfaces become.
+
+Regarding web-serving of images from BioLink, no problem.  We can provide an
+active server page (ASP) and stored procedure code to anyone interested
+(both are only a handful of lines).  You can also set up a virtual directory
+with IIS and SQLServer2000 and publish images with a simple SELECT statement
+embedded in a web page.
+
+The reason the BioLink Team hasn't developed general Web access tools is
+two-fold: first, we feel our time is better spent making sure BioLink works
+well and second there are so many web development options and environments
+out there that it seems silly to try and compete with them.
+DreamWeaver/FrontPage/Pick-Your-Favotite-Tool all work very well and we
+suggest giving them a try.
+
+We personally use DreamWeaver UltraDev and ASP for publishing BioLink data.
+We're currently working on a new site and plan to make the ASP code and
+SQLServer stored procedures freely available when complete.  However, there
+are clearly strong views about web development methods with no clear
+winners.  Essentially every web site is different even when they contain
+essentially the same information.  From a software developer's perspective
+it's a nightmare.
+
+Our original hope was that BioLink would provide robust data collection and
+storage tools and individual users could then publish the data as they
+needed with minimal help from us.  That's one of the reasons for choosing
+SQLServer - it has a wide range of third-party tools for data access and
+there are lots of people out there how know how to work with it.  While it
+is still challenging to publish databases on web sites it's not all that
+hard, especially with the help of appropriate tools.
+
+Finally, as a special deal to all you dedicated TAXACOM participants, we're
+prepared to send you a copy of the latest version of BioLink at no cost.
+Just send us your mailing details and what you plan to use BioLink for
+(taxonomic group, area of study) and we'll mail you a CD.  It doesn't get
+much better than that ;-).
+
+Thanks, Steve Shattuck and the BioLink Team
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="087272.html">Database - summary
+</A></li>
+	<LI>Next message: <A HREF="087273.html">Database - summary
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#87263">[ date ]</a>
+              <a href="thread.html#87263">[ thread ]</a>
+              <a href="subject.html#87263">[ subject ]</a>
+              <a href="author.html#87263">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

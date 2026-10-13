@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> database integrity
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1993-May/014267.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">database integrity</H1>
+    <B data-pagefind-meta="author">Arthur Chapman</B>
+    arthur at ERIN.GOV.AU<BR>
+    <I data-pagefind-meta="date">Fri May  7 11:18:23 CDT 1993</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="097423.html">Bacterial ID Software
+</A></li>
+        <LI>Next message: <A HREF="050059.html">database integrity
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#014267">[ date ]</a>
+              <a href="thread.html#014267">[ thread ]</a>
+              <a href="subject.html#014267">[ subject ]</a>
+              <a href="author.html#014267">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1993</span><!--beginarticle-->
+<PRE>&gt; &gt;&gt;From TAXACOM at HARVARDA.HARVARD.EDU Thu May  6 12:46:16 1993
+&gt; &gt;&gt;Date:         Wed, 5 May 1993 19:49:45 PDT
+&gt; &gt;&gt;Reply-To: Barry Roth &lt;barryr at UCMP1.BERKELEY.EDU&gt;
+&gt; &gt;&gt;Sender: Biological Systematics Discussion List
+ &lt;TAXACOM at HARVARDA.HARVARD.EDU&gt;
+&gt; &gt;&gt;From: Barry Roth &lt;barryr at UCMP1.BERKELEY.EDU&gt;
+&gt; &gt;&gt;Subject:      database integrity
+&gt; &gt;&gt;X-To:         taxacom at harvarda.harvard.edu
+&gt; &gt;&gt;To: Multiple recipients of list TAXACOM &lt;TAXACOM at HARVARDA.HARVARD.EDU&gt;
+&gt; &gt;&gt;Content-Length: 823
+&gt; &gt;&gt;
+&gt; &gt;&gt;Colleague Rob Guralnick's posting makes me think there is a
+&gt; &gt;&gt;natural law that might be expressed like this:  information
+&gt; &gt;&gt;degrades in proportion to distance from its originator.
+
+Both in time and space!
+
+&gt; &gt;&gt;
+&gt; &gt;&gt;The principle also seems to operate in biodiversity/natural
+&gt; &gt;&gt;heritage databases.  Solid information that originated with
+&gt; &gt;&gt;systematists may get diluted, overwritten, or incomprehensibly
+&gt; &gt;&gt;edited ...  This was not addressed in the February 1993 ASC
+&gt; &gt;&gt;Newsletter article on conservation databases.
+
+This is very much the case.  ERIS - Environmental Resources Information
+System run by ERIN, the Environmental Resources Information Network in
+Australia uses, wherever possible, primary data, along with custodial
+arangements for data management.
+
+We use species names, etc. in the database, but wherever possible also
+obtain specimen records.  The concept of &quot;Taxon&quot; is not an easy one to
+adequately cope with in a database deign, much the same as for most other
+classified data.  With classified data, if a classification changes
+then the underlying data can not be reassigned unless one also includes the
+primary data in the database.  This is particularly so if one uses a
+classified data element as the main key to the database - for example
+taxonomic names.  If taxon changes, is split etc., then what is meant
+by data included under the original name.  This is very relevant with
+biological names, even more so than most other classified data, as with our
+present nomenclatural systems, when a taxon is split one portion (i.e. that
+portion containing the type) retains the original name.  What is now meant
+by that &quot;name&quot;?  e.g. Eucalyptus wandoo was split into 19 different species,
+only one of which retains the name &quot;Eucalyptus wandoo&quot;.  If you have data
+in a database under the name &quot;Eucalyptus wandoo&quot; what does that mean?  If
+you have the original, primary, data, then it can be reassigned - particularly
+if that data is the original specimen data.
+
+As far as is possible, ERIN uses a distributed concept with respect to its
+databases.  We &quot;own&quot; very little data, and obtain data through collaborative
+custodial arrangements whereby the custodial agency (often a museum of
+herbarium) regularly supplies updates of their data as changes occur.  This
+also alleviates the problem that has often occurred in the past where several
+versions of one dataset may exist.
+
+&gt; &gt;&gt;
+&gt; &gt;&gt;Should management of biodiversity/natural heritage databases be
+&gt; &gt;&gt;kept in the hands of systematists and collection managers, who
+&gt; &gt;&gt;have a personal stake in the quality of the information?  With
+&gt; &gt;&gt;the sanctions of peer review to keep us honest?
+
+I don't necessarily agree that &quot;management&quot; of biodiversity/natural heritage
+databases be kept in the hands of systematists and collection managers,
+however both must have regular input into the currency of those databases.
+To imply that only systematists and collection managers &quot;have a personal
+stake in the quality of the information&quot; is quite misleading, as many users
+such as environmental managers, policy makers, researchers and even legal
+practioners have a personal stake in the quality and accuracy of the data.
+In many cases, systematists, unless working on a particular group, have
+little interest in other data that may be within their institution.  It is
+also a fact of life that very few systematic/taxonomic institutions maintain
+any tracking of lineage with respect to the data (there are exceptions), or
+record information on data/attribute accuracy/error etc.
+
+In other cases, much survey data do not have voucher collections
+that can be checked by systematists.  In some of these cases, the data can be
+flagged such that a warning as to the accuracy of the data may pop up at
+the data analysis stage.  The data may be very good for certain analysis
+but not for others.  The same applies to specimen data that may be very
+accurate from a taxonomic point of view, but at the same time, quite inaccurate
+in its geocoding or positional accuracy.  Again, a flag needs to be placed
+to indicate accuracy.  For this type of data to be of most value,
+all fields should include some form of accuracy rating, and where possible
+all data and datafields should include some statement (in a meta-database) as
+to error in the dataset/datafield etc.  Some people  also go so far as to
+suggest that systematists should be rated as to their accuracy in providing
+identifications.  This is however, next to impossible, as too many variables
+enter the equation with different groups (is the person an expert in that
+group?), variation in time (was the identification made at the beginning
+of his/her revision or near completion?), certainty etc.
+
+Data quality, data accuracy and error etc. are major issues that need to be
+more fully addressed.  By data quality, I refer to the STDS (Spatial Data
+Transfer Standard) definition viz, &quot;An essential distinguishing
+characteristic necessary for [spatial] data to be fit for use&quot;.  Fitness for
+use is the important criteria here as data that may be quite inaccurate in
+some respects, may be perfectly fit for a particular use.  One example I
+like to refer to is a specimen record that may only be recorded to
+within one degree (c. 200-250km).  This may be quite adequate if all one wants
+to know is if the record occurs on a particular continent or in a particular
+State for example.  It would not be of any value if you wanted to know on
+which side of the hill it occurred on, or whether it was in a particular
+reserve or not.  The record would be of high quality in the first case and
+of low quality in the second.  Quality is thus very much a relative attribute.
+
+Taxonomic name is only one of many attributes that much of this data includes.
+To put it in the hands of just systematists, or just geographers, etc. is
+not the question that should be asked.  The baseline question is
+are we using primary data, and can we easily update our records whenever one of
+the attributes of the primary data changes.
+
+With respect to the question of data accuracy, data quality and error, I am
+convenor of a subcommittee of TDWG (International Working Group for Taxonomic
+Databases in Plant Sciences) looking at these questions.  I would be very
+interested in any feedback on those issues.  I will shortly be preparing
+a paper on these issues which I will circulate widely for comment.
+
+&gt; &gt;&gt;
+&gt; &gt;&gt;Barry Roth
+&gt; &gt;&gt;Museum of Paleontology
+&gt; &gt;&gt;University of California, Berkeley
+&gt; &gt;&gt;barryr at ucmp1.berkeley.edu
+&gt; &gt;&gt;Phone: (415) 387-8538
+&gt; &gt;&gt;
+
+
+arthur
+
+________________________________________________________________________________
+Arthur D. Chapman  [Scientific Coordinator, Biogeographic Information, ERIN]
+
+Environmental Resources Information Network     internet: arthur at erin.gov.au
+GPO Box 636, Canberra,                             voice: +61-6-2500 376
+ACT 2601, AUSTRALIA                                  fax: +61-6-2500 360
+
+
+----- End Included Message -----
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="097423.html">Bacterial ID Software
+</A></li>
+        <LI>Next message: <A HREF="050059.html">database integrity
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#014267">[ date ]</a>
+              <a href="thread.html#014267">[ thread ]</a>
+              <a href="subject.html#014267">[ subject ]</a>
+              <a href="author.html#014267">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

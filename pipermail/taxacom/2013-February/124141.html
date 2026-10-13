@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Procedure request
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Procedure%20request&In-Reply-To=%3CCAN1%2BHk-C9PsjmP29Kr408K2tx936NEy2zKRYcn9UM5q9P%2BCAuw%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="124139.html">
+   <LINK REL="Next"  HREF="124143.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-February/124141.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Procedure request</H1>
+    <B data-pagefind-meta="author">David Campbell</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Procedure%20request&In-Reply-To=%3CCAN1%2BHk-C9PsjmP29Kr408K2tx936NEy2zKRYcn9UM5q9P%2BCAuw%40mail.gmail.com%3E"
+       TITLE="[Taxacom] Procedure request">pleuronaia at gmail.com
+       </A><BR>
+    <I data-pagefind-meta="date">Mon Feb  4 09:47:41 CST 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="124139.html">[Taxacom] Procedure request
+</A></li>
+        <LI>Next message: <A HREF="124143.html">[Taxacom] Procedure request
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#124141">[ date ]</a>
+              <a href="thread.html#124141">[ thread ]</a>
+              <a href="subject.html#124141">[ subject ]</a>
+              <a href="author.html#124141">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>&gt;<i>  What is the value of bootstrap that can be considered acceptable for an
+</I>&gt;<i> array of 61 characters for 40 species? I feel that the bootstrap is very
+</I>&gt;<i> sensitive to the size of the data matrix, so for morphological traits,
+</I>&gt;<i> generally much less numerous than molecular ones, one cannot expect an
+</I>&gt;<i> equally high support. Is my statement correct? Are there any references
+</I>&gt;<i> dealing with this specific issue?
+</I>
+The relative values will be complicated by the fact that morphological
+traits are typically selected for analysis because they are thought to
+be reasonably informative, whereas molecular data tends to get
+analyzed as a complete sequence, with much less exclusion of
+homoplasous characters.  This tends to lower support values for
+molecular data.
+
+I don't immediately know of a paper exactly on the relation of
+bootstrap values to matrix size and character type, but would not be
+at all surprised if a search through back issues of Systematic Biology
+or the like turned one up; certainly there would be many studies on
+the general sensitivity of bootstrapping to various factors.
+
+&gt;<i> Is it correct to insert more than one species with an identical set of
+</I>&gt;<i> characters, that is, the same state for each character in the matrix? Could
+</I>&gt;<i> this introduce biases in the results? Are there any published work
+</I>&gt;<i> concerning this case?
+</I>
+This can cause problems.  A previous version of the MrBayes manual
+mentioned this as potentially creating errors, though I didn't find it
+in the most recent (and not yet complete) version.  It also will give
+you poorer resolution in parsimony.  Although common sense says that
+two identical taxa ought to group together, computers have no common
+sense.  When you tell the computer to measure how parsimonious the
+various trees are, the computer will find, for example, that a subset
+of two identical taxa plus a very similar third one is equally
+parsimonious under any arrangement of the three.
+
+Thus, eliminating duplicates is probably generally advisabel unless
+the analytical technique explicitly says that it can handle them.  Of
+course, this is easier said than done-checking a large data set for
+duplicates can be rather tedious, especially if you also may have
+varying amounts of missing data and want to select the one with the
+most data.
+
+-- 
+Dr. David Campbell
+Visiting Professor
+Department of Natural Sciences
+Gardner-Webb University
+Boiling Springs NC 28017
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="124139.html">[Taxacom] Procedure request
+</A></li>
+	<LI>Next message: <A HREF="124143.html">[Taxacom] Procedure request
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#124141">[ date ]</a>
+              <a href="thread.html#124141">[ thread ]</a>
+              <a href="subject.html#124141">[ subject ]</a>
+              <a href="author.html#124141">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

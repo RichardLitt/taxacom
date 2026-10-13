@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Impossible geocodes
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2015-January/128068.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Impossible geocodes</H1>
+    <B data-pagefind-meta="author">mesibov at southcom.com.au</B>
+    mesibov at southcom.com.au<BR>
+    <I data-pagefind-meta="date">Fri Jan 30 03:43:49 CST 2015</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="128067.html">[Taxacom] Fwd: Butterflies of the World
+</A></li>
+        <LI>Next message: <A HREF="128069.html">[Taxacom] Impossible geocodes
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#128068">[ date ]</a>
+              <a href="thread.html#128068">[ thread ]</a>
+              <a href="subject.html#128068">[ subject ]</a>
+              <a href="author.html#128068">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2015</span><!--beginarticle-->
+<PRE>Alex, I agree with you that DD is a more useful lat/lon format, although I
+don't agree with you that DMS is weird, there's a good reason for it. And
+DMS is a little bit better than DD for implying an uncertainty.
+
+If I write a latitude in the form 43d 16m 23s S, you might guess the
+latitude is known to the nearest second, or roughly +/- 11 m at that
+latitude. If I write 43d 16m S, you might guess that the latitude is only
+known to the nearest minute, or roughly +/- 670 m.
+
+In DD, the two latitudes to 4 decimal places are
+
+-43.2731
+-43.2667
+
+in both cases implying an uncertainty of +/- 4 m. You can't tell from
+looking at these DDs in uniform format (say, to 4 decimal places) that one
+had a much bigger uncertainty than the other, although you might if the
+number of places given reflected the uncertainty, say -43.27 for the
+second one (roughly +/- 400 m at that latitude).
+
+By an interesting coincidence, the implied uncertainty in
+DMS-to-the-nearest-second is about the same as the horizontal uncertainty
+in a handheld GPS reading (unless conditions are exceptionally good). The
+DD-to-4-places uncertainty is optimistic for handheld GPS, and the
+DD-to-5-places you often see in published papers is +/- half a metre and
+evidences a religious faith in numbers. DMS is definitely handy for
+GPS-determined locations.
+
+I would back DD 100% if it was always accompanied by a specified
+uncertainty, like the Darwin Core one: 'The horizontal distance (in
+meters) from the given decimalLatitude and decimalLongitude describing the
+smallest circle containing the whole of the location'. Unfortunately,
+that's not the case. Very few of the museum collection databases I've
+looked at even have an uncertainty field for location data, and if they do
+it's largely unfilled.
+
+Until collectors and data compilers and georeferencers routinely add an
+uncertainty to their lat/lons, I prefer to see 43d 16m 23s S and 43d 16m
+S, because I know for sure there's a difference.
+
+(Sending this from my old email as Taxacom doesn't seem to like my new
+one, robert.mesibov at gmail.com)
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="128067.html">[Taxacom] Fwd: Butterflies of the World
+</A></li>
+        <LI>Next message: <A HREF="128069.html">[Taxacom] Impossible geocodes
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#128068">[ date ]</a>
+              <a href="thread.html#128068">[ thread ]</a>
+              <a href="subject.html#128068">[ subject ]</a>
+              <a href="author.html#128068">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

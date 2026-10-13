@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> FW: unpublished names - narrowing the scope
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2003-October/090890.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">FW: unpublished names - narrowing the scope</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at BISHOPMUSEUM.ORG<BR>
+    <I data-pagefind-meta="date">Wed Oct 22 17:38:43 CDT 2003</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="090886.html">Subject: Sale of Zoo Record
+</A></li>
+        <LI>Next message: <A HREF="090891.html">Subject: Sale of Zoo Record
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#090890">[ date ]</a>
+              <a href="thread.html#090890">[ thread ]</a>
+              <a href="subject.html#090890">[ subject ]</a>
+              <a href="author.html#090890">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2003</span><!--beginarticle-->
+<PRE>&gt; But we 
+&gt; are faced also with a number of herbarium specimens (this means 
+&gt; it concerns a particular plant and not just a name), deposited in 
+&gt; public herbaria, which were given a new name, often by a real 
+&gt; authority concerning the genus, who mentions his name (as the 
+&gt; future author of the new taxon) and the addition sp. nov. / type, 
+&gt; while it never came to any published description. I understand 
+&gt; very well the thesis Dont cite these names, we have difficulties 
+&gt; enough with the published ones but Im not sure whether ignoring 
+&gt; these botanical entities (by not using their names) is a good 
+&gt; scientific approach. 
+
+I've given this particular issue a fair bit of thought, as we face a similar problem here at Bishop Museum (primarily in our botanical and entomological collections, but also in other collections).
+
+First of all, I agree with others about the dangers that such names can pose. Indeed, the main &quot;issue&quot; we face at Bishop Museum is making sure that such names do not trickle into our online databases (or even, as has happened in a couple of cases, into publications).  The solution, however, is NOT to purge all such names from existence (i.e., delete them from databases and strike them from determination tags).
+
+The problem ultimately falls on the institution that houses the labeled specimens.  In other words, it's an issue concerning specimen databases within natural history collections.  The &quot;problem&quot; begins when a researcher borrows specimens or visits a museum, and identifies specimens with a taxon name that said researcher is planning to publish (presumably soon).  The name then finds its way into the institution's specimen database, where it joins all the other &quot;real&quot; (i.e., nomenclaturally available) names. So far, the &quot;problem&quot; is a non-problem; this is what is *supposed* to happen as part of the taxonomic process.  
+
+Where it actually becomes a real &quot;problem&quot;, is when those names are not carefully isolated or qualified, and fall into unknowing hands -- either via other researchers (taxonomists and non-taxonomists alike) who examine the same specimens, or when specimen databases are wholesale put up on a web site (or otherwise distributed) without filtering out the unpublished names.
+
+The first part of the solution falls into the &quot;Well, DUH!!&quot; category; which is that these unpublished names need to be CLEARLY indicated as such, both on the specimen determination tags, and within the database.  What's not so obvious is how, exactly, to implement this.  Techniques for marking the determination labels are something that must be decided by each collection.  As for the database flag, there are, of course, many ways to do this, either by the incorporation of one or more dedicated fields, or by using existing fields in a pre-defined way (e.g., populating a &quot;Year of Description&quot; field with &quot;MS&quot; or &quot;In Press&quot;; or putting the unpublished epithets within &quot;quotes&quot;; etc.)
+
+The way I've decided to handle it is by creating a dedicated taxonomic &quot;rank&quot; for this purpose.  In addition to the usual Family, Genus, Species, yadda, yadda, yadda ranks, we have a few that are &quot;special&quot; ranks, for names that generally fall outside the realm of traditional Codes of Nomenclature.  Cultivar is one example (although there is a Code for cultivar names).  Another is &quot;Unnamed&quot;, which is where we apply all sorts of &quot;sp. 1&quot; kinds of descriptors.  The relevant one here that I've defined is &quot;MSName&quot; (wasn't that one of the new applications included in yesterday's release of MS Office 2003??? God, I hope not.... :-) )  When assigned to this Rank, a taxon name is assumed to be part of an ongoing systematic research effort, and will presumably be formally published sometime in the future.  When we know that it has been published, we update the database for that name accordingly.
+
+A more subtle aspect of this whole problem, however, is how long you give to the researcher to get the dang name published.  It may legitimately require years (perhaps even decades) to complete some massively huge systematic monograph, so the time clock ought to be fairly long.  But at some point, it becomes clear that the name will probably never be published (e.g., long after the researcher who provided the name has died).  If I'm not mistaken, this is the main thrust of Dr. Mathieu's question (geez, Rich...it took you a while to come around to the point...).
+
+The question then becomes: do you cling to the name, or do you purge it from the system altogether?  The temptation is to purge it -- especially if you've been really careful about not letting the unpublished name slip out.  But speaking as a database nerd, I would urge you NOT to purge it, on the grounds that information is empowering.  The name might have somehow slipped out in the past, and if it did, you'll want to be able to give the name some context. Also, the same name may very-well have been applied to other specimens in other collections. This has two implications for your collection: first, establishing that link with another collection might help track down the probable current identity of the critter/weed. Second, the *other* collection might not have as rigorous a protocol for preventing the escape of unpublished names.  If the &quot;other guy&quot; let it out, then someone may come back to you to find out what it is.  If you've purged it from your database, you've lost an opportunity to provide biological context to an otherwise undocumented string of characters.
+
+When faced with a case where a specimen's current Determination points to an unpublished name that, for all intents and purposes will probably never be published, I recommend that you do whatever it takes to get the specimen re-determined under a different (validly published) name, and archive the unpublished name as yet another string of characters that was once applied to the specimen.
+
+I'll be delighted if any of the above was in anyway helpful to anyone....
+
+Aloha,
+Rich
+
+Richard L. Pyle
+Natural Sciences Database Coordinator, Bishop Museum
+1525 Bernice St., Honolulu, HI 96817
+Ph: (808)848-4115, Fax: (808)847-8252
+email: deepreef at bishopmuseum.org
+<A HREF="http://www.bishopmuseum.org/bishop/HBS/pylerichard.html">http://www.bishopmuseum.org/bishop/HBS/pylerichard.html</A>
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="090886.html">Subject: Sale of Zoo Record
+</A></li>
+        <LI>Next message: <A HREF="090891.html">Subject: Sale of Zoo Record
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#090890">[ date ]</a>
+              <a href="thread.html#090890">[ thread ]</a>
+              <a href="subject.html#090890">[ subject ]</a>
+              <a href="author.html#090890">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

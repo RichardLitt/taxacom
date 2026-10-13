@@ -1,0 +1,327 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Species Pages - where are the online descriptions?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Species%20Pages%20-%20where%20are%20the%20online%20descriptions%3F&In-Reply-To=%3C3338A796-9FEA-47E2-BD02-0936CE347735%40ku.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="111711.html">
+   <LINK REL="Next"  HREF="111714.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2009-February/111713.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Species Pages - where are the online descriptions?</H1>
+    <B data-pagefind-meta="author">Dave Vieglais</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Species%20Pages%20-%20where%20are%20the%20online%20descriptions%3F&In-Reply-To=%3C3338A796-9FEA-47E2-BD02-0936CE347735%40ku.edu%3E"
+       TITLE="[Taxacom] Species Pages - where are the online descriptions?">vieglais at ku.edu
+       </A><BR>
+    <I data-pagefind-meta="date">Mon Feb  2 17:57:07 CST 2009</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="111711.html">[Taxacom] Species Pages - where are the online descriptions?
+</A></li>
+        <LI>Next message: <A HREF="111714.html">[Taxacom] Species Pages - where are the online descriptions?/time per page
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#111713">[ date ]</a>
+              <a href="thread.html#111713">[ thread ]</a>
+              <a href="subject.html#111713">[ subject ]</a>
+              <a href="author.html#111713">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2009</span><!--beginarticle-->
+<PRE>Yes, having some standard vocabulary and constructs would be very  
+helpful, and as you suggest an initial step is to use well defined and  
+described identifiers for the various terms, much as has been done  
+with the Dublin Core.  Similarly, drawing terms from well defined  
+schemas and vocabularies such as OBOE, Darwin Core, EML, and so forth  
+goes a long way towards providing semantically interoperable content  
+on these types of pages.  So yes, gathering together a few of the  
+commonly used and/or well defined schemas and term sets will be very  
+helpful to those of us interested in presenting information that can  
+be reused and machine interpreted fairly easily.
+
+Unfortunately, the page you mentioned has some problems being parsed  
+as RDFa.  Perhaps try something like, for example:
+
+&lt;td class=&quot;ordername&quot;&gt;&lt;a href=&quot;/Archaeognatha/&quot;&gt;Archaeognatha&lt;/a&gt;&lt;/td&gt;
+
+changes to:
+
+&lt;td class=&quot;ordername&quot;&gt;&lt;a href=&quot;/Archaeognatha/&quot;  
+property=&quot;dwc:Order&quot;&gt;Archaeognatha&lt;/a&gt;&lt;/td&gt;
+
+and add xmlns:dwc=&quot;<A HREF="http://rs.tdwg.org/dwc/terms/">http://rs.tdwg.org/dwc/terms/</A>&quot; to the list of  
+namespaces.
+
+This wouldn't do anything more than indicate that the string  
+&quot;Archaeognatha&quot; is a taxonomic order, but it does at least add some  
+semantic meaning to the term that can be determined with fairly simple  
+processing.
+
+
+
+
+On Feb 2, 2009, at 16:42 , Peter DeVries wrote:
+
+&gt;<i> Thanks Dave,
+</I>&gt;<i>
+</I>&gt;<i> I have been working a little with RDFa, but I had some problems with  
+</I>&gt;<i> getting my rails created pages to validate.
+</I>&gt;<i>
+</I>&gt;<i> Eventually I would like to refactor these so they work correctly  
+</I>&gt;<i> with RDFa.
+</I>&gt;<i>
+</I>&gt;<i> In the meantime, it would be useful to have some standard vocabulary  
+</I>&gt;<i> that we can all agree on to tie the RDF or RDFa information
+</I>&gt;<i> together.
+</I>&gt;<i>
+</I>&gt;<i> Here is a page of mine in RDFa, but it would be nice to have it  
+</I>&gt;<i> marked up in a standard but more useful vocabulary.
+</I>&gt;<i>
+</I>&gt;<i>  <A HREF="http://insects.entomology.wisc.edu/">http://insects.entomology.wisc.edu/</A>
+</I>&gt;<i>
+</I>&gt;<i> Thanks!
+</I>&gt;<i>
+</I>&gt;<i> - Pete
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On Mon, Feb 2, 2009 at 4:26 PM, Dave Vieglais &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">vieglais at ku.edu</A>&gt; wrote:
+</I>&gt;<i> Hi Peter,
+</I>&gt;<i> This is pretty much in line with my suggestion yesterday of using  
+</I>&gt;<i> RDFa in existing pages to provide some semantic tagging of content.   
+</I>&gt;<i> The advantage of RDFa over plain RDF is that the pages require  
+</I>&gt;<i> little change (they are still valid HTML) yet can be easily parsed  
+</I>&gt;<i> as RDF.  RDFa is described at <A HREF="http://www.w3.org/TR/xhtml-rdfa-">http://www.w3.org/TR/xhtml-rdfa-</A> 
+</I>&gt;<i> primer/ and a couple of very simple examples of relevance are  
+</I>&gt;<i> available at <A HREF="http://code.google.com/p/darwincore/wiki/Example_RDFa.">http://code.google.com/p/darwincore/wiki/Example_RDFa.</A>
+</I>&gt;<i>
+</I>&gt;<i> regards,
+</I>&gt;<i>  Dave V.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On Feb 2, 2009, at 15:56 , Peter DeVries wrote:
+</I>&gt;<i>
+</I>&gt;<i> Hi Roger,
+</I>&gt;<i> I thought that this might also be a good opportunity to suggest that  
+</I>&gt;<i> we work
+</I>&gt;<i> out a standard RDF markup
+</I>&gt;<i> that describes species and family information that exists on web  
+</I>&gt;<i> pages.
+</I>&gt;<i>
+</I>&gt;<i> I was thinking something that tied a page to a specific taxon concept.
+</I>&gt;<i>
+</I>&gt;<i> For instance, this page
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://eco.bcb.iastate.edu/mosquito/browse_species2.php?spcID=364">http://eco.bcb.iastate.edu/mosquito/browse_species2.php?spcID=364</A>
+</I>&gt;<i>
+</I>&gt;<i> Has information about this species concept
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://species.geospecies.org/spec_concept_uuid/84b8badd-b899-40ea-8f89-f39f3048c270/">http://species.geospecies.org/spec_concept_uuid/84b8badd-b899-40ea-8f89-f39f3048c270/</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Which is also known by this species concept (your uri)
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://tdwg....">http://tdwg....</A>
+</I>&gt;<i>
+</I>&gt;<i> You would also need the backward link so.
+</I>&gt;<i>
+</I>&gt;<i> This species concept <A HREF="http://tdwg....">http://tdwg....</A>
+</I>&gt;<i>
+</I>&gt;<i> has a web page about it at
+</I>&gt;<i> <A HREF="http://eco.bcb.iastate.edu/mosquito/browse_species2.php?spcID=364">http://eco.bcb.iastate.edu/mosquito/browse_species2.php?spcID=364</A>
+</I>&gt;<i>
+</I>&gt;<i> If there was some standard markup these could be loaded into a  
+</I>&gt;<i> knowledge
+</I>&gt;<i> base and queried.
+</I>&gt;<i>
+</I>&gt;<i> I was thinking of doing something like this since I am starting to  
+</I>&gt;<i> get too
+</I>&gt;<i> many pages for species and I don't
+</I>&gt;<i> want to keep adding additional fields to my species, family, and order
+</I>&gt;<i> database tables.
+</I>&gt;<i>
+</I>&gt;<i> It would make more sense to have some common ontology that we could  
+</I>&gt;<i> all
+</I>&gt;<i> use.
+</I>&gt;<i>
+</I>&gt;<i> I was thinking of modeling these species pages as subclasses of
+</I>&gt;<i> foaf:Document here are some examples
+</I>&gt;<i>
+</I>&gt;<i> speciesWikipediaPage
+</I>&gt;<i> speciesEOLPage
+</I>&gt;<i> speciesIowaMosquitoesPage
+</I>&gt;<i>
+</I>&gt;<i> You can see this in the lastest GeoSpecies Ontology
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://rdf.geospecies.org/ont/gsontology.owl">http://rdf.geospecies.org/ont/gsontology.owl</A>
+</I>&gt;<i>
+</I>&gt;<i> To avoid problems and recognize subtle difference in species  
+</I>&gt;<i> concepts it
+</I>&gt;<i> might need to have support for more
+</I>&gt;<i> than one species concept. Most of these pages probably apply to  
+</I>&gt;<i> several
+</I>&gt;<i> variations of what is a species, but
+</I>&gt;<i> it make some sense to allow the concept authors some discretion as to
+</I>&gt;<i> whether a page about African Aedes vexans
+</I>&gt;<i> pertains to a species concept about North American Aedes vexans.
+</I>&gt;<i>
+</I>&gt;<i> What do you think?
+</I>&gt;<i>
+</I>&gt;<i> - Pete
+</I>&gt;<i>
+</I>&gt;<i> On Sun, Feb 1, 2009 at 4:58 AM, Roger Hyam &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">rogerhyam at mac.com</A>&gt; wrote:
+</I>&gt;<i>
+</I>&gt;<i> Hi,
+</I>&gt;<i>
+</I>&gt;<i> I am looking for websites that have good &quot;Species Pages&quot;. By species
+</I>&gt;<i> page I mean (and this is my definition) a page that contains a
+</I>&gt;<i> description of the species and not a page that simply lists the
+</I>&gt;<i> nomenclature associated with the acceptance of a name. You could send
+</I>&gt;<i> the URL of a species page to a student who didn't know what the
+</I>&gt;<i> organism was and they could use it to confirm the identity of a
+</I>&gt;<i> specimen.
+</I>&gt;<i>
+</I>&gt;<i> An example of what I think of as a species page is  the Fishbase page
+</I>&gt;<i> for Gadus morhua (Atlantic Cod):
+</I>&gt;<i> <A HREF="http://www.fishbase.org/Summary/SpeciesSummary.php?id=69">http://www.fishbase.org/Summary/SpeciesSummary.php?id=69</A>
+</I>&gt;<i> There is a lot of information on this page and a description of the
+</I>&gt;<i> organism can be gleaned from it.
+</I>&gt;<i>
+</I>&gt;<i> This FloraBase page is another example:
+</I>&gt;<i> <A HREF="http://florabase.calm.wa.gov.au/browse/profile/26">http://florabase.calm.wa.gov.au/browse/profile/26</A>
+</I>&gt;<i> Very brief but attempts to define the taxon.
+</I>&gt;<i>
+</I>&gt;<i> Wikipedia has a good page for cod but there isn't a good taxon
+</I>&gt;<i> description so it is a borderline species page
+</I>&gt;<i> <A HREF="http://en.wikipedia.org/wiki/Gadus_morhua">http://en.wikipedia.org/wiki/Gadus_morhua</A>
+</I>&gt;<i>
+</I>&gt;<i> Catalogue of Life has a goal of producing a page for every species and
+</I>&gt;<i> it aims to do this by combining pre-existing data I believe but I
+</I>&gt;<i> wonder where this data is.
+</I>&gt;<i> Their page on badger comes from Arkive (<A HREF="http://www.arkive.org/">http://www.arkive.org/</A>) which
+</I>&gt;<i> is an imaging database <A HREF="http://eol.org/pages/328046">http://eol.org/pages/328046</A> and their page on
+</I>&gt;<i> cod comes from Fishbase <A HREF="http://eol.org/pages/206692">http://eol.org/pages/206692</A>
+</I>&gt;<i>
+</I>&gt;<i> Pages I don't consider Species Pages are:
+</I>&gt;<i>
+</I>&gt;<i> Catalogue of Life has a page that comes from Fishbase but that chucks
+</I>&gt;<i> out the &quot;useful&quot; information and only maintains the nomenclature.
+</I>&gt;<i> <A HREF="http://www.catalogueoflife.org/show_species_details.php?record_id=5347829">http://www.catalogueoflife.org/show_species_details.php?record_id=5347829</A>
+</I>&gt;<i>
+</I>&gt;<i> The ITIS page is similar to the CoL page
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&amp;search_value=164712">http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&amp;search_value=164712</A>
+</I>&gt;<i>
+</I>&gt;<i> Likewise Fauna Europaea page for Meles meles (Badger) lacks a
+</I>&gt;<i> description because it is a nomenclatural database.
+</I>&gt;<i> <A HREF="http://www.faunaeur.org/full_results.php?id=305312">http://www.faunaeur.org/full_results.php?id=305312</A>
+</I>&gt;<i>
+</I>&gt;<i> I'd like to build a list of sites offering &quot;real&quot; species page
+</I>&gt;<i> information - with descriptions. At the moment it seems like the major
+</I>&gt;<i> source of these pages are electronic versions of the literature. We
+</I>&gt;<i> have good descriptions in sources like eFloras.org
+</I>&gt;<i> <A HREF="http://www.efloras.org/florataxon.aspx?flora_id=5&amp;taxon_id=242417133">http://www.efloras.org/florataxon.aspx?flora_id=5&amp;taxon_id=242417133</A>
+</I>&gt;<i> and I hope BHL will be a source. This is a shame as these pages
+</I>&gt;<i> typically lack large numbers of images and the possibility of
+</I>&gt;<i> including other media.
+</I>&gt;<i>
+</I>&gt;<i> I'd be grateful for any suggestions of sites that contain species
+</I>&gt;<i> pages (as per my definition).
+</I>&gt;<i>
+</I>&gt;<i> Many thanks,
+</I>&gt;<i>
+</I>&gt;<i> Roger
+</I>&gt;<i>
+</I>&gt;<i> BTW: I'd rather use the term &quot;Taxon Page&quot; as these things could apply
+</I>&gt;<i> at any rank but there seems to be a consensus to call them Species
+</I>&gt;<i> Pages no matter what rank they apply to and people are typically
+</I>&gt;<i> interested in species.
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i>
+</I>&gt;<i> Taxacom Mailing List
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;<i>
+</I>&gt;<i> The entire Taxacom Archive back to 1992 can be searched with either of
+</I>&gt;<i> these methods:
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+</I>&gt;<i>
+</I>&gt;<i> Or use a Google search specified as:  site:
+</I>&gt;<i> mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> -- 
+</I>&gt;<i> ---------------------------------------------------------------
+</I>&gt;<i> Pete DeVries
+</I>&gt;<i> Department of Entomology
+</I>&gt;<i> University of Wisconsin - Madison
+</I>&gt;<i> 445 Russell Laboratories
+</I>&gt;<i> 1630 Linden Drive
+</I>&gt;<i> Madison, WI 53706
+</I>&gt;<i> ------------------------------------------------------------
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i>
+</I>&gt;<i> Taxacom Mailing List
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;<i>
+</I>&gt;<i> The entire Taxacom Archive back to 1992 can be searched with either  
+</I>&gt;<i> of these methods:
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+</I>&gt;<i>
+</I>&gt;<i> Or use a Google search specified as:  site:mailman.nhm.ku.edu/ 
+</I>&gt;<i> pipermail/taxacom  your search terms here
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> -- 
+</I>&gt;<i> ---------------------------------------------------------------
+</I>&gt;<i> Pete DeVries
+</I>&gt;<i> Department of Entomology
+</I>&gt;<i> University of Wisconsin - Madison
+</I>&gt;<i> 445 Russell Laboratories
+</I>&gt;<i> 1630 Linden Drive
+</I>&gt;<i> Madison, WI 53706
+</I>&gt;<i> ------------------------------------------------------------
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="111711.html">[Taxacom] Species Pages - where are the online descriptions?
+</A></li>
+	<LI>Next message: <A HREF="111714.html">[Taxacom] Species Pages - where are the online descriptions?/time per page
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#111713">[ date ]</a>
+              <a href="thread.html#111713">[ thread ]</a>
+              <a href="subject.html#111713">[ subject ]</a>
+              <a href="author.html#111713">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,236 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> interactive keys
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2006-March/094951.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">interactive keys</H1>
+    <B data-pagefind-meta="author">Kevin Thiele</B>
+    K.Thiele at CBIT.UQ.EDU.AU<BR>
+    <I data-pagefind-meta="date">Tue Mar 14 08:02:45 CST 2006</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="094953.html">interactive keys
+</A></li>
+        <LI>Next message: <A HREF="094954.html">TCS examples
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#094951">[ date ]</a>
+              <a href="thread.html#094951">[ thread ]</a>
+              <a href="subject.html#094951">[ subject ]</a>
+              <a href="author.html#094951">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2006</span><!--beginarticle-->
+<PRE>&gt;From Alessandra Batptisa
+
+&gt;A piece of advice I have for the ones who want to build their own
+&gt;interactive keys: even if you use LUCID to publish your key, build your
+&gt;database in DELTA, and only export it to LUCID when it is time to publish
+&gt;the key. Delta allows for better control of the database, and helps you to
+&gt;avoid stupid mistakes and build a more consistent database.
+&gt;Yes, you will have to learn two programs rather than only one. It will pay
+&gt;off though.
+
+-------------
+Two brief comments on this (not designed to get into a large debate about
+the relative merits of different programs)
+
+1. Alessandra's comment is a good one in one way - it's an excellent idea to
+make use of whatever platform suits for whatever purpose, and move data
+between them as necessary (see point 2 below). However, there is one problem
+with the DELTA data format (with respect to interactive identification)
+which works against Alessandra's solution. With respect to IntKey, DELTA
+only allows you to record whether a character state is present or absent in
+a taxon (or uncertain for the whole character). Lucid is much richer in this
+respect (it allows a character state to be scored
+present/absent/rare/uncertain/not scored/present-by-misinterpretation). The
+last of these is very important - if you have a state that is actually
+absent in a taxon but a user may misinterpret it as present (or vice versa),
+then using DELTA you have only two choices - code for the strict truth (in
+which case most users will go astray here) or encode false data (clearly a
+bad idea). Think of a key that includes Euphorbia and has characters like
+petals:present/absent flowers:bisexual/unisexual. This circumstance (when
+you want to pre-empt a likely user mistake but maintain the integrity of the
+data while doing it) is very common in keys, and is pretty much the only
+reason why I advise people against using DELTA to build interactive keys.
+Many DELTA data sets have false data recorded in them because of this
+problem, and in my experience these false data are virtually unrecoverable.
+
+2. The Structure of Descriptive Data (SDD) standard (an initiative of TDWG)
+is designed to allow descriptive data to be transported freely between
+different platforms, hopefully +/- losslessly. SDD is a platform-independent
+XML schema that captures most of the good features of most of the
+interactive identification/descriptive data programs. Proprietorial data
+formats have bedeviled this field in the past, and SDD may help solve that -
+at least, if the main programs become SDD compliant and allow import/export
+of SDD documents. For more information, see
+<A HREF="http://160.45.63.11/Projects/TDWG-SDD/index.html">http://160.45.63.11/Projects/TDWG-SDD/index.html</A>
+
+Cheers - k
+
+-----Original Message-----
+From: Taxacom Discussion List [mailto:TAXACOM at LISTSERV.NHM.KU.EDU] On Behalf
+Of Alessandra R. Batptista
+Sent: Tuesday, 14 March 2006 3:24 AM
+To: TAXACOM at LISTSERV.NHM.KU.EDU
+Subject: Re: [TAXACOM] interactive keys
+
+Chris, the &quot;public&quot; does not come to our door no matter what we do.
+However, I'm affraid that those who pointed out that people do not use the
+interactive keys do have a point. We are currently doing our 3rd key, two
+have been available online for over 6 months:
+<A HREF="http://www.ars.usda.gov/Main/docs.htm?docid=11385">http://www.ars.usda.gov/Main/docs.htm?docid=11385</A>
+I have never received any comments, corrections or acknowledgement of
+usage from anyone. My best guess is that people don't use them.
+A piece of advice I have for the ones who want to build their own
+interactive keys: even if you use LUCID to publish your key, build your
+database in DELTA, and only export it to LUCID when it is time to publish
+the key. Delta allows for better control of the database, and helps you to
+avoid stupid mistakes and build a more consistent database.
+Yes, you will have to learn two programs rather than only one. It will
+pay off though.
+Alessandra Rung
+
+On Fri, 10 Mar 2006, Mike Dallwitz wrote:
+
+&gt; Christian Thompson wrote:
+&gt;
+&gt;&gt; I would like to see the public embrace interactive keys. But having
+&gt;&gt; produced
+&gt;&gt; one (fruit fly key in Intkey and Lucid) ... I am sorry to say after 8
+years
+&gt;&gt; the Public has not come to my door.
+&gt;
+&gt; Anita Cholewa wrote:
+&gt;
+&gt;&gt; With respect to the public and online interactive keys ...  if it's not
+&gt;&gt; simple to use they'll leave the site quickly.
+&gt;
+&gt; Lyn Craven wrote:
+&gt;
+&gt;&gt; For producers of interactive keys, the Windows version of DELTA is a lot
+&gt;&gt; easier to use than the original. ... If I can use an interactive package
+to
+&gt;&gt; produce a key, anyone can.
+&gt;
+&gt; It is harder (both technically and taxonomically) to _produce_ an
+&gt; interactive key than to use one. But, as Lyn points out, producing
+&gt; interactive keys with modern software is not particularly difficult,
+&gt; technically.
+&gt;
+&gt; The technical basics of using Intkey for identification are extremely
+simple
+&gt; and intuitive.
+&gt;
+&gt; (1) The available characters are automatically displayed in the 'best'
+order
+&gt; for identification. Click on any character.
+&gt;
+&gt; (2) The character states, with illustrations if available, are displayed.
+&gt; Click on a state and press OK (or Cancel if you decide you don't want to
+use
+&gt; the character after all).
+&gt;
+&gt; (3) Repeat until only one taxon remains.
+&gt;
+&gt; Most other interactive-key programs are not quite this easy to use, but
+are
+&gt; not much more difficult. Even young children can do it if the characters
+are
+&gt; simple enough (see, for example, 'Butterflies and Moths: Demonstration of
+an
+&gt; Interactive Key' <A HREF="http://delta-intkey.com/lep/index.htm).">http://delta-intkey.com/lep/index.htm).</A>
+&gt;
+&gt; Unfortunately, if you want to make the _most effective_ use of interactive
+&gt; identification, you need a program with certain features (see 'Principles
+of
+&gt; Interactive Keys' <A HREF="http://delta-intkey.com/www/interactivekeys.htm),">http://delta-intkey.com/www/interactivekeys.htm),</A> and,
+&gt; horror of horrors, you need to learn a few techniques. The most important
+&gt; are:-
+&gt;
+&gt; (1) Use the characters near the top of the 'best' list, unless you have a
+&gt; reason for doing otherwise.
+&gt;
+&gt; (2) If you are uncertain which state applies to your specimen, select all
+&gt; the states that you think might apply, or use another character. Don't
+guess
+&gt; except as a last resort. (This is particularly difficult for people who
+are
+&gt; used to conventional keys, where guessing is an important part of the
+&gt; procedure.)
+&gt;
+&gt; (3) Check your identification against the available material (e.g. full or
+&gt; diagnostic descriptions, illustrations). If it seems to be incorrect,
+&gt; increase the error tolerance and continue the identification as before.
+&gt;
+&gt; (4) If you used error tolerance to reach an identification, press the
+button
+&gt; provided (in Intkey) to find out what your mistake was (or, possibly, what
+&gt; the mistake in the database was).
+&gt;
+&gt; This is not rocket science - you would think that anyone could learn it in
+a
+&gt; few minutes. But apparently they can't or won't.
+&gt;
+&gt; Extracting information from a database is just as easy, but people are
+&gt; reluctant to do so, preferring to try to extract it laboriously from
+&gt; natural-language descriptions generated from the database. This is such a
+&gt; problem that we now place a warning at the bottom of each description,
+along
+&gt; the following lines.
+&gt;
+&gt; &quot;This description is offered for casual browsing only. We strongly advise
+&gt; against extracting comparative information from it. This is much more
+easily
+&gt; achieved using the interactive key, which allows access to the character
+&gt; list, illustrations, full and partial descriptions, diagnostic
+descriptions,
+&gt; differences and similarities between taxa, lists of taxa exhibiting
+&gt; specified attributes, summaries of attributes within groups of taxa,
+&gt; geographical distribution, genera included in each family, classifications
+&gt; (Dahlgren; Dahlgren, Clifford, and Yeo; Cronquist; APG), and notes on the
+&gt; APG classification.&quot;
+&gt;
+&gt; It remains to be seen whether this will have any effect.
+&gt;
+&gt; --
+&gt; Mike Dallwitz
+&gt; Contact information: <A HREF="http://delta-intkey.com/contact/dallwitz.htm">http://delta-intkey.com/contact/dallwitz.htm</A>
+&gt; DELTA home page: <A HREF="http://delta-intkey.com">http://delta-intkey.com</A>
+&gt;
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="094953.html">interactive keys
+</A></li>
+        <LI>Next message: <A HREF="094954.html">TCS examples
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#094951">[ date ]</a>
+              <a href="thread.html#094951">[ thread ]</a>
+              <a href="subject.html#094951">[ subject ]</a>
+              <a href="author.html#094951">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

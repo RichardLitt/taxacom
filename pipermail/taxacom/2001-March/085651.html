@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> XML, etc. [was Re: a grandiose but (hopefully) practical idea]
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2001-March/085651.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">XML, etc. [was Re: a grandiose but (hopefully) practical idea]</H1>
+    <B data-pagefind-meta="author">David Nicolson</B>
+    Nicolson.David at NMNH.SI.EDU<BR>
+    <I data-pagefind-meta="date">Thu Mar 15 10:09:48 CST 2001</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="085650.html">Distribution information for Tiaris
+</A></li>
+        <LI>Next message: <A HREF="085652.html">Position Announcement
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#085651">[ date ]</a>
+              <a href="thread.html#085651">[ thread ]</a>
+              <a href="subject.html#085651">[ subject ]</a>
+              <a href="author.html#085651">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2001</span><!--beginarticle-->
+<PRE>I'm glad to hear these discussions going on. I feel it is appropriate to add
+a few comments at this point, based on experience working inside ITIS (not
+that this entitles me to any particular respect, but just because some
+issues do come to the fore when you work on any given project). I know Doug
+(and others, recently) have had trouble downloading data from ITIS in
+certain formats, and our IT team is working on that now, so I won't address
+the ability to get the data.
+
+It appears that Doug was trying to make a point about the
+&quot;incomprehensibility&quot; of the various information interchange formats, and
+used ITIS import/export formats as a case-in-point when he gave example of
+the &quot;ITIS-style&quot; text format (which I don't recognize offhand). He's got a
+point, and I am personally all for a simplified output that would meet
+broader needs. Still, although the formulation of those formats predates my
+time at ITIS, I know there are reasons that make most kinds of &quot;simple&quot;
+formats problematic when dealing with large or cross-group datasets on
+either end.
+
+One set of issues that come to mind involves homonymy and the inclusion of
+&quot;auct non.&quot; &amp; such misidentifications in checklists that are present in some
+datasets; I'm sure most of you are aware that the same name can be used for
+different things. A bare name is not guaranteed to be sufficient to
+uniquely identify what you're talking about. In that sense I feel strongly
+that authors are not &quot;gravy&quot; at all, but are a critical component of any
+system that needs to exchange name data with other systems.
+
+Assuming that data exchange does happen at some point (not trying to beg the
+point, but trying to address a related issue), I also feel that a unique &amp;
+stable numbering system is a prerequisite, even if different systems use
+different schemes internally... As keystroke errors (heaven forbid! But any
+system will have some!) are found fixed over time a name may lose it's
+ability to continue to reliably map between systems over time... A unique &amp;
+stable number will not change, so once you've mapped it between systems
+you're set (one could use it to detect changes in status &amp; linkages).
+
+So for information exchange, I don't think that &quot;Apoidea Colletidae
+Colletinae Colletes&quot; really cuts it, except perhaps for highly specific
+tasks where the user is aware of the limitations and possible problems it
+may impose on them, and able to deal with those issues systematically.
+
+Are the ITIS information exchange formats complex? Yes, but (I believe) not
+unduly so. I suspect that anyone interested in substantive data exchange
+between one or more large or broad systems would need a complex format,
+regardless of the protocols used to encapsulate and transfer the data. Can a
+simpler system be developed? I certainly hope so, but I retain a bit of
+skepticism for the reasons mentioned above.
+
+Here is an example, from a download intended for import into our Taxonomic
+Workbench software:
+...
+[TU]|573895||Apomyrma||||||||valid||TWG standards
+met|complete|2001||2001-03-13 15:26:46|573817||80389|||5|180|
+[TA]|80389|Brown, Gotwald &amp; Levieux, 1971|5|
+[RF]|||573895|SRC|120|N|N|||
+[OS]SRC||120|website|Hymenoptera Name
+Server|0.021|01/18/2001|<A HREF="http://atbi.biosci.ohio-state.edu:8880/hymenoptera/n">http://atbi.biosci.ohio-state.edu:8880/hymenoptera/n</A>
+omenclator.home_page|
+...
+To decode, off the top of my head (bracketed code is for table name,
+Taxonomic Units, Taxon Authors, Referece Links, Other Sources]...
+1st case is:
+TU table|taxonomic serial number (TSN, our unique stable
+code)|indicator1|name1|indicator2|name2|indicator3|name3|indicator4|name4|un
+named indicator|usage|unacceptability
+reason|credibility|completeness|currency|[unused sort field]|initial time
+stamp|parent tsn|taxon author ID|[unused]|[unused]|kingdom ID|rank ID|
+2nd case...
+TA table|author ID|author|kingdom ID|
+3rd case...
+RF table|[unused here]|[unused here]|TSN|reference prefix (type)|reference
+ID|original description indicator|[unused here]|[unused here]|[unused here]|
+last case...
+OS table ref prefix(type)|[unused]|source ID|source
+type|source|version|aquisition date|cource comment|
+...
+
+YES, it is complicated, but everything you need to connect all the data
+elements is there for you, whether you intend to end up in a flat file
+system or a relational database, etc. You can also opt to turn off some
+ancillary tables (references, vernaculars, etc.), but right now the minimum
+is the TU &amp; TA tables (main table &amp; author table). Descriptions for the data
+structure and elements are available on the ITIS site.
+
+My point (and a point made by several people) is that complicated data
+systems can communicate effectively now if there is agreement on data flow,
+content, arrangement, and so on. Others have pointed out that there are
+tools available to translate between different protocols on a whole mess of
+systems (ODBC, etc.), including Mac-based tools (though I haven't used
+them). It does require some time &amp; effort learning to put these to good use.
+
+I agree that such modes for information transfer should be further
+standardized, and that such efforts should be broad &amp; inclusive, and allow
+for some kind of &quot;lowest common denominator&quot; approaches too. Efforts by TDWG
+and the FGDC to promote the development of standards are important in this
+regard...
+
+OK, I've rambled enough...
+
+Cheers,
+Dave
+David Nicolson
+Data Development Coordinator, Integrated Taxonomic Information System
+Nicolson.David at nmnh.si.edu
+&quot;Nihil sumas necesse est...&quot;
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="085650.html">Distribution information for Tiaris
+</A></li>
+        <LI>Next message: <A HREF="085652.html">Position Announcement
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#085651">[ date ]</a>
+              <a href="thread.html#085651">[ thread ]</a>
+              <a href="subject.html#085651">[ subject ]</a>
+              <a href="author.html#085651">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

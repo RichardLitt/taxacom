@@ -1,0 +1,255 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] FW: formation of zoological names with Mc, Mac, et
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20FW%3A%20formation%20of%20zoological%20names%20with%20Mc%2C%20Mac%2C%20et&In-Reply-To=%3C1ff243760909081629k1975ecbh7b4c15c901d5d6b2%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="114020.html">
+   <LINK REL="Next"  HREF="114003.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2009-September/114124.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] FW: formation of zoological names with Mc, Mac, et</H1>
+    <B data-pagefind-meta="author">Dean Pentcheff</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20FW%3A%20formation%20of%20zoological%20names%20with%20Mc%2C%20Mac%2C%20et&In-Reply-To=%3C1ff243760909081629k1975ecbh7b4c15c901d5d6b2%40mail.gmail.com%3E"
+       TITLE="[Taxacom] FW: formation of zoological names with Mc, Mac, et">pentcheff at gmail.com
+       </A><BR>
+    <I data-pagefind-meta="date">Tue Sep  8 18:29:38 CDT 2009</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="114020.html">[Taxacom] FW: formation of zoological names with Mc, Mac, et
+</A></li>
+        <LI>Next message: <A HREF="114003.html">[Taxacom] FW: formation of zoological names with Mc, Mac, et
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#114124">[ date ]</a>
+              <a href="thread.html#114124">[ thread ]</a>
+              <a href="subject.html#114124">[ subject ]</a>
+              <a href="author.html#114124">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2009</span><!--beginarticle-->
+<PRE>Yes, yes, yes, yes. yes:  Richard, your answer strikes me as right on target.
+
+As to how things got represented in the database I last built... in
+retrospect, it's a bit quaint. And a good illustration of why some
+experience and some expertise are needed in these things.
+
+I began with the project goal of using the database to build a paper
+publication (genus list) accompanied by a full bibliographic record
+for each name-stringy-thingy.
+
+With what I now fully understand was an amusingly naive approach, I
+planned to generate the final document by using the EndNote
+bibliographic reference system to plug in the author/year parts of the
+namestrings based on links to the references. (The references
+originate in yet another database [not EndNote], but that's a whole
+other story.)
+
+It will come as no surprise that, while that scheme worked for many
+(actually most) of the genera, it served as an excellent education
+tool on how curiously screwy those name-string-things can actually be.
+
+And, as in this dicussion in this mailing list, each of the many
+participants in the project was quite sure what the rules were and
+what the formats should be. And, like the discussion in this mailing
+list, no two of us agreed.
+
+Which leads to the related topic of just what the various parts of the
+namestring are for and why they should be there. There is so much
+disagreement on this (legitimate, I think -- many different purposes
+are served in different instances), that I'm strongly in favor of
+atomizing the hell out of this information. Users are then free to
+create the namestring they need. That doesn't address digesting
+existing data. But for holding and promulgating data, the smaller the
+bits, the better the product.
+
+-Dean
+-- 
+Dean Pentcheff
+<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">pentcheff at gmail.com</A>
+
+On Sat, Sep 5, 2009 at 1:28 AM, Richard Pyle&lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">deepreef at bishopmuseum.org</A>&gt; wrote:
+&gt;<i>
+</I>&gt;<i> No, in a database it would be most sensible to have something like this:
+</I>&gt;<i>
+</I>&gt;<i> TaxonNameUsageID: 62D43041-06BE-45A3-8D6B-D3853F0B3121
+</I>&gt;<i> ProtonymID: 62D43041-06BE-45A3-8D6B-D3853F0B3121
+</I>&gt;<i> ReferenceID: 13798543-078E-4B8E-B176-52DF4D0173EB
+</I>&gt;<i> TaxonRank: Genus
+</I>&gt;<i> NameElement: Goneplax
+</I>&gt;<i> [Plus a few other fields...]
+</I>&gt;<i>
+</I>&gt;<i> The fact that TaxonNameUsageID=ProtonymID tells us that this record
+</I>&gt;<i> represents the original creation event for this genus name.
+</I>&gt;<i>
+</I>&gt;<i> The ReferenceID would resolve to the full bibliographic citation for Leach,
+</I>&gt;<i> 1814.  Part of the metadata in the resolved Reference would be a
+</I>&gt;<i> ParentReferenceID, which might look something like this:
+</I>&gt;<i> 42E69941-A574-4E4E-901E-14EAC95F3CF4. Resolving the ParentReferenceID would
+</I>&gt;<i> give us the full bibliographic citation for Leach, 1813-1815.
+</I>&gt;<i>
+</I>&gt;<i> Oh, and before anyone starts qivering with fear about those ID values that
+</I>&gt;<i> look sooooo scary; keep in mind that the only thing a human would likely see
+</I>&gt;<i> is something along the lines of:
+</I>&gt;<i>
+</I>&gt;<i> &quot;Goneplax Leach, 1814 [in Leach, 1813-1815]&quot;
+</I>&gt;<i>
+</I>&gt;<i> Or
+</I>&gt;<i>
+</I>&gt;<i> &quot;Goneplax Leach 1814 [in Leach, 1813-1815]&quot;
+</I>&gt;<i>
+</I>&gt;<i> Or
+</I>&gt;<i>
+</I>&gt;<i> &quot;Goneplax Leach [in Leach]&quot;
+</I>&gt;<i>
+</I>&gt;<i> Or....whatever the personal preference of the end-user is for formatting
+</I>&gt;<i> such things.
+</I>&gt;<i>
+</I>&gt;<i> The database doesn't care how its data are formatted for a human -- that's
+</I>&gt;<i> something only humans care about.  What the database cares about is that
+</I>&gt;<i> nothing else on the planet uses any of the 3 identifiers listed above
+</I>&gt;<i> (62D43041-06BE-45A3-8D6B-D3853F0B3121; 13798543-078E-4B8E-B176-52DF4D0173EB;
+</I>&gt;<i> 42E69941-A574-4E4E-901E-14EAC95F3CF4), and that these identifiers always
+</I>&gt;<i> resolve to the same &quot;thing&quot;. And, of course, the database cares about how to
+</I>&gt;<i> resolve these identifiers, and that the resolution service returns a result
+</I>&gt;<i> that it understands.  In the example given, the assumption is that the
+</I>&gt;<i> database resolves these identifiers internally, against its own data tables.
+</I>&gt;<i> If it needed to resolve the identifiers from an external application or
+</I>&gt;<i> service, then the identifiers would need to be wrapped in an appropriate
+</I>&gt;<i> resolution prefix -- like a URL, or an LSID, or a DOI.
+</I>&gt;<i>
+</I>&gt;<i> Oh, and when the human sees the name + authors in the preferred format, each
+</I>&gt;<i> component would likely be a hyperlink to the associated full metadata.
+</I>&gt;<i>
+</I>&gt;<i> Speaking as a (gradually) reformed
+</I>&gt;<i> taxonomist-who-designs-databases-like-a-taxonomist-would-design-a-database,
+</I>&gt;<i> I can say that as a general rule, taxonomists who design databases like a
+</I>&gt;<i> taxonomist would design a database (myself included) are lousy database
+</I>&gt;<i> designers.
+</I>&gt;<i>
+</I>&gt;<i> Aloha,
+</I>&gt;<i> Rich
+</I>&gt;<i>
+</I>&gt;<i> P.S. the example above is actually dumbed down a bit. Besides the missing
+</I>&gt;<i> fields (most of which are equally obtuse identifiers), the &quot;TaxonRank&quot; would
+</I>&gt;<i> most likely be &quot;TaxonRankID&quot;, and would (most likely) be another identifier
+</I>&gt;<i> that resolves to a pre-defined taxonomic rank.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;&gt;<i> -----Original Message-----
+</I>&gt;&gt;<i> From: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom-bounces at mailman.nhm.ku.edu</A>
+</I>&gt;&gt;<i> [mailto:<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom-bounces at mailman.nhm.ku.edu</A>] On Behalf Of
+</I>&gt;&gt;<i> Stephen Thorpe
+</I>&gt;&gt;<i> Sent: Friday, September 04, 2009 6:32 PM
+</I>&gt;&gt;<i> To: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">fwelter at gwdg.de</A>; <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;&gt;<i> Subject: Re: [Taxacom] FW: formation of zoological names with
+</I>&gt;&gt;<i> Mc, Mac, et
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> But in a database, it would be most sensible to have it like this:
+</I>&gt;&gt;<i> Name: Goneplax Leach, 1814
+</I>&gt;&gt;<i> Original publication: Leach (1813-1815)
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> ________________________________________
+</I>&gt;&gt;<i> From: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom-bounces at mailman.nhm.ku.edu</A>
+</I>&gt;&gt;<i> [<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom-bounces at mailman.nhm.ku.edu</A>] On Behalf Of Francisco
+</I>&gt;&gt;<i> Welter-Schultes [<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">fwelter at gwdg.de</A>]
+</I>&gt;&gt;<i> Sent: Saturday, 5 September 2009 5:21 p.m.
+</I>&gt;&gt;<i> To: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;&gt;<i> Subject: Re: [Taxacom] FW: formation of zoological names with
+</I>&gt;&gt;<i> Mc, Mac, et
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> &gt; Goneplax Leach, 1814 [in Leach, 1813-1815]
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> The name of the genus is Goneplax Leach, 1814, but if there
+</I>&gt;&gt;<i> is a divergence between nomenclaturally and bibliographically
+</I>&gt;&gt;<i> relevant years, I also would recommend to cite a name in a
+</I>&gt;&gt;<i> way Dean proposed here. Or if there is a divergence between
+</I>&gt;&gt;<i> authors (Boettger, 1909 in Wohlberedt 1909). This is often
+</I>&gt;&gt;<i> done, and can be very helpful to find the original source,
+</I>&gt;&gt;<i> especially in rarely cited names. It is not ruled so by the
+</I>&gt;&gt;<i> Code, but makes much sense. If there was a movment in the
+</I>&gt;&gt;<i> community to incorporate this into the ICZN Code, I would be
+</I>&gt;&gt;<i> in favour of this idea.
+</I>&gt;&gt;<i> I would not use a comma between author and year in a
+</I>&gt;&gt;<i> bibliographical citation.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Francisco
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> University of Goettingen, Germany
+</I>&gt;&gt;<i> www.animalbase.org
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Taxacom Mailing List
+</I>&gt;&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;&gt;<i> <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> The Taxacom archive going back to 1992 may be searched with
+</I>&gt;&gt;<i> either of these methods:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> (1) <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Or (2) a Google search specified as:
+</I>&gt;&gt;<i> site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms
+</I>&gt;&gt;<i> here _______________________________________________
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Taxacom Mailing List
+</I>&gt;&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;&gt;<i> <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> The Taxacom archive going back to 1992 may be searched with
+</I>&gt;&gt;<i> either of these methods:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> (1) <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Or (2) a Google search specified as:
+</I>&gt;&gt;<i> site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i>
+</I>&gt;<i> Taxacom Mailing List
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;<i>
+</I>&gt;<i> The Taxacom archive going back to 1992 may be searched with either of these methods:
+</I>&gt;<i>
+</I>&gt;<i> (1) <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+</I>&gt;<i>
+</I>&gt;<i> Or (2) a Google search specified as:  site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+</I>&gt;<i>
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="114020.html">[Taxacom] FW: formation of zoological names with Mc, Mac, et
+</A></li>
+	<LI>Next message: <A HREF="114003.html">[Taxacom] FW: formation of zoological names with Mc, Mac, et
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#114124">[ date ]</a>
+              <a href="thread.html#114124">[ thread ]</a>
+              <a href="subject.html#114124">[ subject ]</a>
+              <a href="author.html#114124">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

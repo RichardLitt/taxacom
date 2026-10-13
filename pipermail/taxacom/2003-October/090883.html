@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> taxonomic authorities (was unpublished names)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2003-October/090883.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">taxonomic authorities (was unpublished names)</H1>
+    <B data-pagefind-meta="author">Dusty McDonald</B>
+    fndlm at UAF.EDU<BR>
+    <I data-pagefind-meta="date">Tue Oct 21 14:55:26 CDT 2003</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="090880.html">unpublished names
+</A></li>
+        <LI>Next message: <A HREF="090881.html">University of Iowa Herbarium - Update
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#090883">[ date ]</a>
+              <a href="thread.html#090883">[ thread ]</a>
+              <a href="subject.html#090883">[ subject ]</a>
+              <a href="author.html#090883">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2003</span><!--beginarticle-->
+<PRE>*********** REPLY SEPARATOR  ***********
+
+On 10/21/2003 at 2:28 PM Doug Yanega wrote:
+
+&gt;Michael Vincent wrote:
+&gt;
+&gt;&gt;I agree wholeheartedly with Barry.  Unpublished names should remain just
+&gt;&gt;that.  We have enough to deal with without having to trace down names that
+&gt;&gt;have never been published.  It takes enough of my time to trace down those
+&gt;&gt;that ARE published, especially infraspecific names!
+&gt;
+&gt;This goes back to something Chris Thompson was saying recently:
+&gt;
+&gt;&gt;Now while nomina nuda do not have types, they may and hopefully have
+&gt;&gt;associated taxonomic vouchers. Likewise for mis-identification, etc.
+&gt;&gt;These voucher specimens are critical for the proper assignment of these
+&gt;&gt;unavailable names. And this leads to a common problem I find with some
+&gt;&gt;nomenclatural databases: That is, they only include available names. BUT
+&gt;&gt;many users do not know what are available names, etc., they only know
+&gt;&gt;that they have an apparent scientific name and they want to know what is
+&gt;&gt;the proper / correct / valid name for the organism that is being written
+&gt;&gt;about, etc.
+
+We at the UAM are thinking along these lines, but we've only been able to implement a small portion of it so far due to our database structure. Our taxonomy authority files are available at <A HREF="http://arctos.museum.uaf.edu:8080/cgi-bin/uam_db/taxonomy.cgi">http://arctos.museum.uaf.edu:8080/cgi-bin/uam_db/taxonomy.cgi</A> and, in a development environment, at <A HREF="http://hispida.museum.uaf.edu:8080/Public/TaxonomySearch.cfm.">http://hispida.museum.uaf.edu:8080/Public/TaxonomySearch.cfm.</A> Additionally, we allow queries by comon names on our development database query application, <A HREF="http://hispida.museum.uaf.edu:8080/Public/SpecimenSearch.cfm.">http://hispida.museum.uaf.edu:8080/Public/SpecimenSearch.cfm.</A> We have only minimal data available, with source authorities particularly sparse. Querying for Puma concolor will demonstrate the capabilities of our system. Querying for Felis concolor, catamount, cougar, mountain lion, or puma will produce the same results.
+
+&gt;&gt;
+&gt;&gt;So while Bradysia ocellatus (Comstock) is not an available name, it is
+&gt;&gt;frequently used as one for the common little black gnat found in the
+&gt;&gt;soil and frequently found in homes where it emerges from the soil of
+&gt;&gt;potted plants, etc. So, it is useful to know what specimens Comstock had
+&gt;&gt;when he mis-used the name Cecidomyia ocellatus Osten Sacken.
+&gt;
+&gt;We have here a situation where there are conflicting needs. At one
+&gt;extreme, we have people who simply use taxonomic information, and -
+&gt;in general - aren't going to care about nomina nuda and the like, and
+&gt;will simply wish to know things like (1) what the present accepted
+&gt;name is for taxon X (2) what the presently accepted sub-taxa are
+&gt;contained in higher taxon Y (e.g., checklists, catalogs, authority
+&gt;files). At the other extreme, we have revisionary taxonomists, for
+&gt;whom every little detail, no matter how obscure, is potentially
+&gt;valuable in clarifying the muddle of nomenclature they are compelled
+&gt;to deal with. Any nomenclatural database designed solely to satisfy
+&gt;one of these two extremes of the user spectrum is not going to be
+&gt;entirely satisfactory to users at the other extreme; an ideal
+&gt;resource should be set up so the user can toggle a switch to go from
+&gt;&quot;all names&quot; to &quot;all valid names&quot; to &quot;all available names&quot; at will. To
+&gt;my knowledge, there are no such resources.
+
+Such a system is possible by implementing a thesaurus, which we've proposed to do in league with MVZ if we're awarded appropriate NSF funding in January. In such a system, one can track much more than our simple system allows. For example, relationships within (&quot;child taxa of&quot;), among (&quot;synonym of&quot;) and about (&quot;described by&quot;) taxa are all possible. The interfaces for such a system have not been developed, but could include as many user-definable filters as needed (ranging from &quot;show me everything recorded about taxon A&quot; to &quot;show me possible scientific names for this common name&quot;) to provide the desired results.
+
+If funded, the taxonomic thesaurus will be published as a freely available webservice.
+
+Even Chris' database of
+&gt;Diptera interface, which has a box called &quot;Valid name&quot; into which you
+&gt;can enter search criteria, will retrieve *invalid* names using this
+&gt;search option (e.g., if your search is for all species in, say, the
+&gt;genus Microdon, then as long as the name Microdon itself is valid,
+&gt;the search will proceed, and give all 515 names presently placed in
+&gt;Microdon, whether each is itself valid or not), so users must still
+&gt;examine each name retrieved by a search one by one to determine which
+&gt;ones are the valid names in the list. This may be fine for a
+&gt;revisionary taxonomist, but it is very confusing for other users who
+&gt;simply wish to get a list of valid species in the genus. Hopefully,
+&gt;future nomenclatural databases WILL be designed to accommodate the
+&gt;needs of users in a more customizable manner, so we won't have to
+&gt;debate whether or not we should be keeping track of unpublished
+&gt;names, etc. We *should* keep track of everything possible, but allow
+&gt;users to decide what they want to see.
+&gt;
+&gt;The issue of all the effort involved in tracking and recording things
+&gt;like unpublished names or - as Chris proposed - misidentifications,
+&gt;then comes down to the individual taxonomist working on a group and
+&gt;entering data into a nomenclatural database. It is a tremendous
+&gt;burden to the person doing the work (and that's their choice!), but
+&gt;it is a small burden for a database, and the potential benefits to
+&gt;future researchers of not having to re-do all the detective work are
+&gt;significant. One can't deny there may be times when one wishes to
+&gt;know, for example, that when Horne discussed &quot;Xylocopa chloroptera
+&gt;Lepeletier&quot; in 1870, he was in fact looking at misidentified
+&gt;specimens, and writing about a species in a different subgenus,
+&gt;Xylocopa auripennis iridipennis Lepeletier (so, the database would
+&gt;list X. chloroptera sensu Horne, 1870 under iridipennis); but IN
+&gt;GENERAL no one except a diehard Xylocopa taxonomist would *ever* care
+&gt;about the sloppy identifications performed by some obscure 1870
+&gt;scientist, published in some obscure paper in which no nomenclatural
+&gt;actions were taken. Likewise, if some high-school general biology
+&gt;textbook comes out in print with the name &quot;Dropsohila melongaster&quot;,
+&gt;this is certainly a citable Lapsus Calami, but it is so close to
+&gt;inconsequential that one can't justify having it show up in a
+&gt;nomenclatural database whenever someone asks for a list of taxa in
+&gt;the genus Drosophila. Again, if someone *wishes* to input such
+&gt;unavailable names into a nomenclatural database, then it should be
+&gt;possible for them to do so, but the users should decide upon the
+&gt;output: it just requires a proper interface, as discussed above. With
+&gt;user-defined output, the debate goes away, and we can database
+&gt;anything and everything we like.
+&gt;--
+&gt;
+&gt;Doug Yanega        Dept. of Entomology         Entomology Research Museum
+&gt;Univ. of California - Riverside, Riverside, CA 92521
+&gt;phone: (909) 787-4315 (standard disclaimer: opinions are mine, not UCR's)
+&gt;              <A HREF="http://cache.ucr.edu/~heraty/yanega.html">http://cache.ucr.edu/~heraty/yanega.html</A>
+&gt;   &quot;There are some enterprises in which a careful disorderliness
+&gt;         is the true method&quot; - Herman Melville, Moby Dick, Chap. 82
+
+
+-
+Dusty McDonald
+Programmer
+University of Alaska Museum
+907 Yukon Drive
+Fairbanks, AK 99775
+Ph: 907-474-7108
+Fax: 907-474-1987
+fndlm at uaf.edu
+<A HREF="http://arctos.museum.uaf.edu:8080/">http://arctos.museum.uaf.edu:8080/</A>
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="090880.html">unpublished names
+</A></li>
+        <LI>Next message: <A HREF="090881.html">University of Iowa Herbarium - Update
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#090883">[ date ]</a>
+              <a href="thread.html#090883">[ thread ]</a>
+              <a href="subject.html#090883">[ subject ]</a>
+              <a href="author.html#090883">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

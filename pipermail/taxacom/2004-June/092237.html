@@ -1,0 +1,282 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> More GBIF questions (was: ITIS)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2004-June/092237.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">More GBIF questions (was: ITIS)</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at BISHOPMUSEUM.ORG<BR>
+    <I data-pagefind-meta="date">Thu Jun 24 10:00:43 CDT 2004</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="092234.html">More GBIF questions (was: ITIS)
+</A></li>
+        <LI>Next message: <A HREF="092217.html">ITIS (an explanation of GBIF's data integration activities)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092237">[ date ]</a>
+              <a href="thread.html#092237">[ thread ]</a>
+              <a href="subject.html#092237">[ subject ]</a>
+              <a href="author.html#092237">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2004</span><!--beginarticle-->
+<PRE>&gt; &gt;One way to reduce (certainly not eliminate) such over-description is 
+&gt; &gt;to, as Meredith has already described, provide a service to 
+&gt; access all 
+&gt; &gt;existing names. It is this goal about which I preach.
+&gt; 
+&gt; Access to names *and opinions*, that is. The latter is a very 
+&gt; different issue, but an absolute necessity. 
+
+By &quot;opinions&quot;, I assume you mean alternate concepts for names?  That's
+where the work that the SEEK folks are doing kicks in. And, yes, I agree
+-- as per my earlier names/concepts diatribe, I think both are very
+important things to track, and should be thought of as distinct entities
+(although my own aproach to structuring the data anchors all names to
+the &quot;brith&quot; concept implied by the original description -- but that's a
+technical issue).
+
+&gt; Along these lines, Roger wrote:
+&gt; 
+&gt; &gt;I believe what we need, in botany, is the equivelent of a 
+&gt; central 'meta'
+&gt; &gt;directory of names. This directory would store all published names ( 
+&gt; &gt;could be based on IPNI as a starting point ) and opinions 
+&gt; about those 
+&gt; &gt;names. No data would be discarded. Interfaces (through SOAP 
+&gt; or simple 
+&gt; &gt;http calls) would be provided for other databases to reflect their 
+&gt; &gt;opinions on the names, give an indication of what other data 
+&gt; they carry 
+&gt; &gt;on these names and provide a link to the data. Anyone at any 
+&gt; time would 
+&gt; &gt;be able to log in and provide a comment on a name or submit 
+&gt; a new one. 
+&gt; &gt;There would be no moderation only abuse control. The whole dataset 
+&gt; &gt;would be served over the net and would be available as a download or 
+&gt; &gt;snail-mailed CD-ROM on a monthly snapshot basis. There will be news 
+&gt; &gt;feeds and watch lists so you can be notified of new entries 
+&gt; in the categories you are working on.
+
+I'll take this opportunity to say that what Roger describes is
+essentially EXACTLY how I would envision it working; but like Doug --
+I'd like to see it applied to all names.
+
+Back to Doug:
+
+&gt; We need this for all taxa, not just plants, and (as above) on
+&gt; *proposed* taxon names, as well as those already published. 
+
+One of the things that Doug and I have butted heads on in the past is
+the &quot;all at once&quot; approach, vs. the &quot;baby steps&quot; approach (e.g., while I
+would like to see the Code changes in the way Doug envisions, I'd rather
+work up to that in stages).  Doug: do you think that a system that
+allows commentary/feedback/etc. on existing names could function without
+simultaneously instigating the rules for new names?  Or must the two
+necessarily be developed/implemented together?
+
+&gt; But consider the practical consequences of trying to treat 
+&gt; &quot;opinions about a name&quot; as a simple data element linked to a 
+&gt; name, and you'll see one of the things that worries me about 
+&gt; this particular approach:
+&gt; 
+&gt; Pat Curator, who has just taken a position at a small 
+&gt; institution whose collection hasn't been curated in 50 years, 
+&gt; wishes to organize the taxa (plants, animals, whatever), and 
+&gt; submits a set of queries designed to give a listing of taxa 
+&gt; such that all synonyms are listed under each species, each 
+&gt; species is in a genus, each genus is in a family, and each 
+&gt; family is in an order. Not too much to ask, right?
+&gt; But if the &quot;opinions&quot; data is not used to build a 
+&gt; classification, poor Pat is going to find that a substantial 
+&gt; number of species-level taxon names will (a) have more than 
+&gt; one alternative opinion whether they are synonyms or not, (b) 
+&gt; have more than one alternative opinion what genus they belong 
+&gt; to, (c) have more than one alternative opinion what family 
+&gt; the genus belongs to, and (d) have more than one alternative 
+&gt; opinion what families are in each order. Pat might need to 
+&gt; sit down and plow through all the literature at each level of 
+&gt; the hierarchy, for anywhere up to thousands of taxa, in order 
+&gt; to arrive at a single functional classification. Let's face 
+&gt; it: MOST users of names aren't themselves experts, and aren't 
+&gt; equipped to decide for themselves whether to follow, say, 
+&gt; Opus' 1933 standard versus Soenso's 1996 cladistic analysis 
+&gt; versus Whozis' 2002 molecular phylogeny.
+
+Having lived in essentially Pat's shoes for more than a decade, I know
+these issues very well.  Indeed, these are the issues that have shaped
+my own approach to solving the related information management issues
+(<A HREF="http://www.phyloinformatics.org/pdf/1.pdf).">http://www.phyloinformatics.org/pdf/1.pdf).</A>  In a nutshell:  specimens
+have been identified to a taxon name by some (known or unknown)
+determiner. When the determiner assigned the name to the specimen (or
+perhaps more correctly, assigned the specimen to the name), the
+determiner had in mind a taxonomic concept associated with that name,
+within the scope/circumscription of which the specimen belonged.  Thus,
+the link between a specimen and a name comes via a concept.
+
+When you have a data structure that tracks taxonomic concepts that are
+rooted in names, and you link the specimens to the concepts, many of
+these problems disappear (given a decent body of concept mapping, which
+doesn't really exist yet, but which the SEEK folks and others are
+working hard on, and which will exist in our professional lifetimes).
+The specimen maintains the name that appears on its label, SEC the known
+or unknown person who identified it as such.  That establishes a link to
+what I call a &quot;Protonym&quot; (basically the Basionym).  Given the Basionym,
+you then would have access to the current status of that Basionym SEC
+any number of sources (the Museum's curator, any number of publications,
+ITIS, Species 2000, Catalog of Fishes, IPNI, KEW, whatever...).  Thus,
+the specimen can be located no matter whose concept you choose to
+follow.
+
+&gt; I maintain that what may seem perfectly logical, objective, 
+&gt; and ideal to those who are designing such names databases - 
+&gt; to wit, the &quot;hands-off&quot; approach to opinions (and, 
+&gt; effectively, all classificatory matters) - stands to leave a 
+&gt; LOT of nomenclatural data almost completely worthless to a 
+&gt; large community of potential users.
+
+I think quite the opposite -- but I suspect I'm simply not understanding
+your point.
+
+&gt; Part of the &quot;sociology&quot; of the taxonomic community that needs 
+&gt; to be developed alongside names databases is a working 
+&gt; consensus classification, and - more to the point - this 
+&gt; needs to be an
+&gt; *interactive* and *ongoing* portion of the data resource, and 
+&gt; not based solely on published classificatory opinions (I 
+&gt; believe that there is much more authoritative taxonomic 
+&gt; opinion that resides in the heads of living taxonomists than 
+&gt; can ever be published, and if we stick with the tradition 
+&gt; that nothing is of any merit until it is printed on paper, we 
+&gt; are crippling ourselves). 
+
+I agree with the point that documentation of concepts (opinions) should
+not be restricted to publications only. But I'm not sure there needs to
+be any proactive effort to move towards a consensus classification.  I
+think the differences of opinion should be embraced (not discouraged),
+and eventually a consensus will emerge on its own.  In cases where
+&quot;reasonable people may disagree&quot;, you simply maintain who thinks what
+about each name.
+
+&gt; Without a resource that puts forth 
+&gt; a consensus opinion to all users (with appropriate caveats, 
+&gt; obviously), we are failing to address one of the most serious 
+&gt; objections that the critics of taxonomy are (and have been)
+&gt; making: that you can almost never get a straight answer from 
+&gt; a taxonomist when you want to know what the name is for 
+&gt; something and where it fits in the classification. I 
+&gt; understand why GBIF wants to steer clear of it, and &quot;not take 
+&gt; sides&quot; when compiling a list of all taxon names, but we can't 
+&gt; neglect the very real need to
+&gt; *simultaneously* develop a single authoritative 
+&gt; classification framework into which those names will fit. 
+
+I can see both needs being accomodated by the same system.  For the
+taxonomist, all of the historical alternate opinions can be resented
+right up front.  For the educated non-taxonomist, a distilled set of the
+leading current alternatives could be presented -- I imagine some sort
+of automatic algorithm analagous to Google's PageRank approach that uses
+various criteria to &quot;rank&quot; each alternate according to how many others
+have followed it and how recently, and maybe a bunch of other factors as
+well.  Then, for the layman, there could be the equivalent of Google's
+&quot;I'm Feeling Lucky&quot; option. None of this would require any proactive
+effort to converge on taxonomic consensuses (is that a word? maybe
+&quot;consensi&quot;?), nor any major changes in the sociology of taxonomists
+(other than getting them to be willing to document their opionons
+electronically).
+
+&gt; Name compilation efforts undertaken in a classificatory 
+&gt; vacuum aren't going to serve the larger user community to the 
+&gt; degree needed, and I think a greater effort should be made to 
+&gt; develop a mechanism by which taxonomists can arrive at a 
+&gt; public consensus.
+
+I don't think the modern names lists are being created in a
+classificatory vacuum.  Usually there are at least two alternatives
+considered (the original, and the current).  Eschmeyer's Catalog of
+Fishes usually provides a bunch of historical alternative uses, *and* he
+provides his own &quot;consensus&quot; perspective as well.
+
+&gt; This would not require much more than what Roger mentioned 
+&gt; above, and what Rich and I have also proposed in the past: 
+&gt; &quot;news feeds and watch lists so you can be notified of new 
+&gt; entries in the categories you are working on&quot;. This can be 
+&gt; applied to classificatory matters just as well as to purely 
+&gt; nomenclatural ones. 
+
+Absolutely!
+
+&gt; A single central website can accomplish 
+&gt; this - the software and logistics are, in fact, trivial.
+&gt; Beyond funding, I see no serious obstacles other than 
+&gt; tradition and egotism preventing us from building a single 
+&gt; Tree of Life - with each taxonomist choosing the branches 
+&gt; therein upon which they will focus their efforts. With 
+&gt; active, day-to-day participation by everyone in the taxonomic 
+&gt; community, this could easily become a reality.
+
+Other than a push towards a &quot;Single Tree of Life&quot;, we are (as usual) in
+complete agreement.  I understand what you mean in terms of the need for
+non-specialists to have just one &quot;correct&quot; answer, and I think that a
+taxonomic algorithm for &quot;I'm Feeling Lucky&quot; could be objectively
+developed.  The way I imagine it, the Museum specimens can all keep
+their names as the label currently indicates (even if that label is 100
+years old), and the name can be translated, in real time, any time, to
+the current &quot;I'm Feeling Lucky&quot; name (or to the current ITIS name, or to
+the current IPNI name, or to the current Eschmeyer name, or to whatever
+authority's name that the curator wants to follow by default).  All of
+this translation would happen in real time, at the Curator's computer,
+whenever a query is run or a search is made.  It would be an on-call web
+service, and as Doug already pointed out, the IT aspects of it are
+relatively trivial. The Museum label would only change when someone
+actually examines the specimen, and asserts a new determination for it.
+
+We can all have dreams, can't we?
+
+Aloha,
+Rich
+
+===========================Richard L. Pyle, PhD
+Ichthyology, Bishop Museum
+1525 Bernice St., Honolulu, HI 96817
+Ph: (808)848-4115, Fax: (808)847-8252
+email: deepreef at bishopmuseum.org
+<A HREF="http://www.bishopmuseum.org/bishop/HBS/pylerichard.html">http://www.bishopmuseum.org/bishop/HBS/pylerichard.html</A>
+ 
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="092234.html">More GBIF questions (was: ITIS)
+</A></li>
+        <LI>Next message: <A HREF="092217.html">ITIS (an explanation of GBIF's data integration activities)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092237">[ date ]</a>
+              <a href="thread.html#092237">[ thread ]</a>
+              <a href="subject.html#092237">[ subject ]</a>
+              <a href="author.html#092237">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

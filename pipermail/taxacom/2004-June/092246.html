@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> More GBIF questions (was: ITIS)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2004-June/092246.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">More GBIF questions (was: ITIS)</H1>
+    <B data-pagefind-meta="author">Charles Hussey</B>
+    c.hussey at NHM.AC.UK<BR>
+    <I data-pagefind-meta="date">Fri Jun 25 09:28:21 CDT 2004</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="092241.html">ITIS (an explanation of GBIF's data integration  activities)
+</A></li>
+        <LI>Next message: <A HREF="092249.html">Nicrophorus Central update &amp; server test
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092246">[ date ]</a>
+              <a href="thread.html#092246">[ thread ]</a>
+              <a href="subject.html#092246">[ subject ]</a>
+              <a href="author.html#092246">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2004</span><!--beginarticle-->
+<PRE>This is proving a very stimulating thread that demonstrates the value of
+TAXACOM - would that more of the people posting could make it to TDWG
+meetings (www.tdwg.org) as it would be good to be able to talk face to face.
+
+I thought that it might be worth mentioning some of the experience that we
+are gaining from managing the National Biodiversity Network Species
+Dictionary as this is, in a way, a microcosm of GBIF's ECAT (rather than
+Catalogue of Life/ITIS). The Dictionary aspires to become the master list of
+what is found in Britain and exists to deliver authoritative lists to the UK
+recording community, supports taxonomies used by Government Agencies (such
+as the Environment Agency), and informs decision-makers. It is also there to
+support other NBN initiatives such as the NBN Gateway, which is now serving
+access to over 15 million observation records (www.searchnbn.net) - and
+which will shortly be searchable through the GBIF portal.
+
+The Dictionary follows the NBN &quot;classic&quot; data model, developed by Charles
+Copp
+(<A HREF="http://www.bgbm.org/biodivinf/docs/archive/Copp_C_2000_-_NBN_Data_Model.pdf">http://www.bgbm.org/biodivinf/docs/archive/Copp_C_2000_-_NBN_Data_Model.pdf</A>
+), which Charles has now evolved and transformed to become the BioCASE
+thesaurus model
+<A HREF="http://www.biocase.org/Doc/Results/WP4/D9CompleteDraftThesaurusModel.pdf.">http://www.biocase.org/Doc/Results/WP4/D9CompleteDraftThesaurusModel.pdf.</A>
+The Dictionary is able to handle taxon concepts (using TAXON_VERSION and
+TAXON_VERSION_RELATION tables).
+
+The Dictionary is assembled from a collection of checklists (over 170 to
+date). Formerly these were published (static) lists but we are now starting
+to incorporate dynamic (maintained) checklists. Many of the checklists,
+although of value in terms of coverage, may lack an internal hierarchy and
+may omit authorities for names. Given that we have many overlapping lists,
+we have assembled a great confusion of names (as, I expect, will any project
+that attempts to search across multiple datasets) and, for groups that we
+have examined in detail, we are finding the ratio of well-formed recommended
+names to all other names (vernaculars, synonyms, incomplete names and
+orthographic variants) is 1:9 (i.e. only 10% are valid). We don't edit
+names! - we aim to be able to deliver a given checklist verbatim (besides
+which, ownership of the data resides with the list providers). So, we are
+finding that the provision of a name-server service is essential to provide
+coherence to our data sets. We can only do this for groups where we are
+already in possession of a comprehensive, authoritative and maintained
+checklist. We can then map all names in the Dictionary belonging to that
+group (finding them all is a challenge in itself) to a recommended name.
+This makes it possible to enter any name, find its recommended name and then
+work backwards to find all other associated names; thus providing a vital
+query-expansion tool.
+
+Some specific points that I should like to make are:
+1) Bringing names from many sources together into a &quot;data warehouse&quot; greatly
+facilitates error detection (which can be fed back to the data providers.
+2) Mapping names to build a name-server is resource intensive and cannot be
+fully automated. Many mappings are relatively obvious, but some will always
+require expert scrutiny (Many people are involved in helping to build the
+Species Dictionary. We shall be encouraging online feedback to report errors
+and omissions, but these will be referred to owners of the maintained lists
+and all editing is currently done off-line).
+3) Whilst publicly accessible names services (such as the GSDs with full
+synonymy provided by Species 2000) are very valuable resources, we have
+found that when linking to &quot;real&quot; data sources (unit level data sets of
+specimen or observation records), the name-server has to incorporate all
+manner of names that transgress rules of nomenclature yet which have to be
+included if accurate results are to be returned in searches.
+4) Hence, in the Dictionary, &quot;erroneous&quot; names are not discarded - they may
+actually be in common usage amongst recorders (some bat names spring to
+mind). Importantly, they are often out on the web and need to be included in
+search strings.
+5) It is important (to my mind) that the developing schemas allow assertions
+to be made about names (so-and-so said, on such-and-such a date, that this
+version of a name is well-formed and represents current usage in Britain).
+We are investigating aspects of the semantic web (RDF and ontologies) to
+support this.
+
+I hope to be able to present more on our name-server work at the CODATA
+Conference in November (<A HREF="http://www.codata.org/04conf/).">http://www.codata.org/04conf/).</A>
+
+PS I hesitate to recommend the Dictionary website to you
+(www.nhm.ac.uk/nbn/) - it is in need of an overhaul and does not adequately
+represent the current state of the Dictionary project.
+
+Charles Hussey,
+
+Science Data Co-ordinator,
+Data and Digital Systems Team,
+Library and Information Services,
+The Natural History Museum,
+Cromwell Road,
+London SW7 5BD
+United Kingdom
+
+Tel. +44 (0)207 942 5213
+Fax. +44 (0)207 942 5559
+e-mail c.hussey at nhm.ac.uk
+Species Dictionary project: www.nhm.ac.uk/nbn/
+Nature Navigator: www.nhm.ac.uk/naturenavigator/
+
+
+Charles Hussey,
+
+Science Data Co-ordinator
+Library and Information Services
+
+Tel. Ext. 5213
+Fax. Ext. 5559
+e-mail c.hussey at nhm.ac.uk
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="092241.html">ITIS (an explanation of GBIF's data integration  activities)
+</A></li>
+        <LI>Next message: <A HREF="092249.html">Nicrophorus Central update &amp; server test
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092246">[ date ]</a>
+              <a href="thread.html#092246">[ thread ]</a>
+              <a href="subject.html#092246">[ subject ]</a>
+              <a href="author.html#092246">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Numeric taxonomic code of NODC
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1994-July/014924.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Numeric taxonomic code of NODC</H1>
+    <B data-pagefind-meta="author">Stan Blum</B>
+    MNHOD025 at SIVM.BITNET<BR>
+    <I data-pagefind-meta="date">Tue Jul  5 12:18:20 CDT 1994</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="098077.html">Numeric taxonomic code of NODC
+</A></li>
+        <LI>Next message: <A HREF="050716.html">Numeric taxonomic code of NODC
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#014924">[ date ]</a>
+              <a href="thread.html#014924">[ thread ]</a>
+              <a href="subject.html#014924">[ subject ]</a>
+              <a href="author.html#014924">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1994</span><!--beginarticle-->
+<PRE>The NODC is moving further into the modern world.  In collaboration
+with several other federal agencies, they are working on developing
+a new system to manage (in the near term) a controled vocabulary of
+taxonomic names and a single (preferred) classification.  Their new
+system is based on a relational model, which -- I belive -- includes
+includes a single taxonomic name entity, with appropriate subtypes,
+and a recursive relationship (foreign key) on this TAXON_NAME entity
+to record the classification.  The surrogate key for the TAXON_NAME
+entity is an &quot;information-less&quot; integer.
+
+The reasons for moving to this new model are not just the migration
+to a new (modern) hardware-software platform, but also the
+maintainence problems inherent in the old model -- where the classifica-
+tion was imbedded in the &quot;serial number&quot; of an individual taxon name.
+(Change the classification; change the serial number of the name.)
+
+The folks in this group have also come to realize that they would
+prefer taxonomists to maintain authoritative representation of this
+information.
+
+For a slightly more modern view of taxonomic name information, see the
+the Association of Systematics Collections &quot;Report of the Biological
+Collections Data Standards Workshop&quot; 1992, available on the ftp/gopher
+server at huh.harvard.edu, and also (I think) on life.anu.edu.au  .
+That model explicitly recognizes taxonomic names as distinct from taxa,
+and ultimately will provide an even greater storage/retrieval precision
+in the management of biological data.
+
+Stan Blum
+mnhod025 at sivm.si.edu
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="098077.html">Numeric taxonomic code of NODC
+</A></li>
+        <LI>Next message: <A HREF="050716.html">Numeric taxonomic code of NODC
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#014924">[ date ]</a>
+              <a href="thread.html#014924">[ thread ]</a>
+              <a href="subject.html#014924">[ subject ]</a>
+              <a href="author.html#014924">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

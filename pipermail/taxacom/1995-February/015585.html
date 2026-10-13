@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Producing images of line drawings for screen display
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Producing%20images%20of%20line%20drawings%20for%20screen%20display&In-Reply-To=%3Cmailman.2013.1157126643.2564.taxacom%40mailman.nhm.ku.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="098741.html">
+   <LINK REL="Next"  HREF="051377.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1995-February/015585.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Producing images of line drawings for screen display</H1>
+    <B data-pagefind-meta="author">Mike Dallwitz</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Producing%20images%20of%20line%20drawings%20for%20screen%20display&In-Reply-To=%3Cmailman.2013.1157126643.2564.taxacom%40mailman.nhm.ku.edu%3E"
+       TITLE="Producing images of line drawings for screen display">miked at ENTO.CSIRO.AU
+       </A><BR>
+    <I data-pagefind-meta="date">Mon Feb 27 16:32:40 CST 1995</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="098741.html">email for Margaret B. Davis
+</A></li>
+        <LI>Next message: <A HREF="051377.html">Producing images of line drawings for screen display
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#15585">[ date ]</a>
+              <a href="thread.html#15585">[ thread ]</a>
+              <a href="subject.html#15585">[ subject ]</a>
+              <a href="author.html#15585">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>1995</span><!--beginarticle-->
+<PRE>                                                              27 February 1995
+
+&gt;<i> From: &quot;Marie-Claude Lariviere&quot; &lt;<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">LariviereM at landcare.cri.nz</A>&gt;
+</I>&gt;<i> To: <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">md at ento.csiro.au</A> (Mike Dallwitz)
+</I>&gt;<i>
+</I>&gt;<i> I have run into a few problems while preparing images for use in INTKEY.
+</I>&gt;<i>
+</I>&gt;<i> The procedure I used is as follows:
+</I>&gt;<i>
+</I>&gt;<i> 1. Originally my master images were scanned as line art, 600 DPI and saved
+</I>&gt;<i> as .pcx. At that time I wasn't using DELTA and the images were prepared to
+</I>&gt;<i> produce a high resolution camera-ready hard copy for publication.
+</I>&gt;<i>
+</I>&gt;<i> 2. For INTKEY, I decided to use the above images and convert them to the
+</I>&gt;<i> required .gif format.
+</I>&gt;<i>
+</I>&gt;<i> 3. For this, the above .pcx files were converted to greyscale images,
+</I>&gt;<i> imported in Corel DRAW 4.0 where text, symbols etc were added, and exported
+</I>&gt;<i> as .gif files (640X480, 256 colours, 150 DPI).
+</I>&gt;<i>
+</I>&gt;<i> The results are a bit disappointing, i.e., they appear much coarser than the
+</I>&gt;<i> images provided in the beetle-larvae CD-ROM. Did you use a special technique
+</I>&gt;<i> to obtain those wonderful smooth images?
+</I>
+The following extract from my Introduction to Computer Images (Taxacom ftp
+server, file pub/delta/graphics/images.txt, modified today) partly answers
+your questions.
+
+   Colour images should be scanned with 24 bits per pixel, and line drawings
+   with 8 bits per pixel (i.e. 256 grey levels, NOT as `line art' with 1 bit
+   per pixel).
+
+   The scaling method built into scanning software is often very poor. It is
+   best to do no scaling at this stage (`100%' scaling), or restrict it to
+   integer factors (25%, 50%, 200%; not 33%). Note that there may be an
+   interaction with the dots-per-inch (dpi) setting, which should be set to
+   the `native' setting of the scanner (usually 300dpi or 600dpi). If you want
+   to check the quality of scaling, use line drawings with fine lines; poor
+   scaling usually shows up as discontinuities in the lines.
+
+   Line drawings can be stored compactly as GIF or compressed TIFF files with
+   16 or 256 grey levels. Using 16 or 256 grey levels gives smoother lines
+   than 2 levels (black and white). Using 256 levels does not give noticeably
+   better results than 16 levels, and produces larger files. However, it is
+   best to use 256 levels until any touching up, such as cleaning up the
+   background and increasing the contrast, has been done.
+
+   Line drawings tend to become greyer when scaled to reduce the image size,
+   particularly when the lines are fine. The appearance of the scaled versions
+   can be improved by darkening the lines. This can be done by changing the
+   `gamma' of the image (provided the background of the original image has
+   been made pure white, which should be done routinely). For example, the
+   following Image Alchemy command will convert all GIF file in the current
+   directory to a maximum size of 640x480 and 16 grey levels, with moderate
+   darkening, and place the output files in the subdirectory `scaled'.
+      alchemy -g -d -b -c16 -+ -Xb640 -Yb480 -Gi1.0 -Go0.7 -o *.gif scaled
+   Lower values of `Go' (`gamma output') give more darkening.
+
+Scaling will make your `line art' (black and white) images look smooth,
+provided there is a substantial reduction (say 50%) and a good scaling method
+is used.
+
+It's often difficult to know exactly what high-level graphics programs like
+CorelDraw are doing to the images. You may be able to get better results by
+experimentation, or by getting advice from an expert in that program. You may
+get more predictable results by using an image editor, where you are editing
+the bitmap images directly, and don't go through the `export' step. There is
+an image editor in the Corel package, but it seems to be less powerful than
+editors such as Photoshop and Picture Publisher. The beetle-larvae images were
+mainly done with Photoshop.
+
+Mike Dallwitz                                  Internet <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">md at ento.csiro.au</A>
+CSIRO Division of Entomology                   Fax +61 6 246 4000
+GPO Box 1700, Canberra ACT 2601, Australia     Phone +61 6 246 4075
+
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="098741.html">email for Margaret B. Davis
+</A></li>
+	<LI>Next message: <A HREF="051377.html">Producing images of line drawings for screen display
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#15585">[ date ]</a>
+              <a href="thread.html#15585">[ thread ]</a>
+              <a href="subject.html#15585">[ subject ]</a>
+              <a href="author.html#15585">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Language tags for scientific names
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2008-June/110657.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Language tags for scientific names</H1>
+    <B data-pagefind-meta="author">Gregor Hagedorn</B>
+    g.m.hagedorn at gmail.com<BR>
+    <I data-pagefind-meta="date">Sun Jun 29 04:03:10 CDT 2008</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="110656.html">[Taxacom]  Language tags for scientific names
+</A></li>
+        <LI>Next message: <A HREF="110658.html">[Taxacom] Language tags for scientific names
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#110657">[ date ]</a>
+              <a href="thread.html#110657">[ thread ]</a>
+              <a href="subject.html#110657">[ subject ]</a>
+              <a href="author.html#110657">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2008</span><!--beginarticle-->
+<PRE>Jim Croft proposes:
+
+&lt;Representation&gt;
+  &lt;Label xml:lang=&quot;en&quot;&gt;Japanese Maple&lt;/Label&gt;
+  &lt;Label xml:lang=&quot;de&quot;&gt;F?cher-Ahorn&lt;/Label&gt;
+  &lt;Label name_lsid=&quot;yadda.yadda.yadda&quot;&gt;Acer palmatum&lt;/Label&gt;
+  &lt;Label concept_lsid=&quot;bhaj.blah.blah&quot;&gt;Acer palmatum&lt;/Label&gt;
+ &lt;/Representation&gt;
+
+Yes, that would be possible. Lets assume name_lsid and concept_lsid
+are in some unique namespace. And lets not discuss whether the Mozilla
+foundation or Microsoft LSID resolvers to Firefox and Internet
+Explorer and Wikipedia will add name_lsid to mediawiki software or
+others to their content management systems.
+
+The problem I see is that general software would need to know the xml
+attributes names for TDWG concepts, NIH concepts, publication lsids,
+geoname classes according to a few dozen standards, person name
+classes, etc. (representation here is meant not as definition, but as
+method enabling software that does not fully understand all parts of
+the object definition to present human users with a representation). I
+therefore believe that using a general method **in addition** to what
+you propose may be helpful:
+
+&lt;Representation&gt;
+  &lt;Label xml:lang=&quot;en&quot;&gt;Japanese Maple&lt;/Label&gt;
+  &lt;Label xml:lang=&quot;de&quot;&gt;F?cher-Ahorn&lt;/Label&gt;
+  &lt;Label xml:lang=&quot;zxx-scitaxname&quot; name_lsid=&quot;yadda.yadda.yadda&quot;&gt;Acer
+palmatum&lt;/Label&gt;
+ &lt;/Representation&gt;
+
+(xml:)lang is supported in RDF as well as xml or html. It is a very
+general solution many system would fall back to in the absence of
+understanding more detailed markup.
+
+I therefore think that Rich is wrong in assuming the proposal is meant
+to be a solution to all problems; it is only meant to solve some
+problems in a way that is very widely usable rather than a special
+purpose solution.
+
+However, we have a more serious problem in our current implementation
+of SDD identification keys (and you may call that a design problem of
+SDD, but then SDD is the first truly multilingual TDWG xml standard I
+know off). xml:lang tags in any xml processor will be inherited.
+Originally SDD required language tags throughout, but since most
+datasets are and will be monolingual, we changed this to allow a
+single language point as well. Reality thus looks like:
+
+&lt;Dataset xml:lang=&quot;de&quot;&gt;
+...
+&lt;Representation&gt;
+  &lt;Label&gt;F?cher-Ahorn&lt;/Label&gt;
+  &lt;Label xml:lang=&quot;en&quot;&gt;Japanese Maple&lt;/Label&gt;
+  &lt;Label name_lsid=&quot;yadda.yadda.yadda&quot;&gt;Acer
+palmatum&lt;/Label&gt;
+ &lt;/Representation&gt;
+&lt;/Dataset&gt;
+
+that is, Acer palmatum is German (any xml parser will return &quot;de&quot; when
+asked what the value of xml:lang on  &lt;Label
+name_lsid=&quot;yadda.yadda.yadda&quot;&gt;Acer palmatum&lt;/Label&gt; is).
+
+A processor would thus show it as German (moderate problem when
+dealing with grammar, spelling, prounouniation) but it would NEVER
+show it when the user selects English content (Big Problem). This is
+the background reason that brings me to propose this here. The thanks
+are due to Edwin from the ETI to have brought this to the point that
+we need to deal with it.
+
+For the Key to Nature identification keys we have to find a solution
+for this and I hoped we could find a general agreement. From the
+responses so far, with only Andy and Thomas supporting the proposal
+(thanks!) it seems we will have to go for a private solution
+(zxx-x-scitax) instead. I would have liked to support Andy in
+attempting to register either a tag or subtag, but this has no chance
+of success without wider support from the community.
+
+Gregor
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="110656.html">[Taxacom]  Language tags for scientific names
+</A></li>
+        <LI>Next message: <A HREF="110658.html">[Taxacom] Language tags for scientific names
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#110657">[ date ]</a>
+              <a href="thread.html#110657">[ thread ]</a>
+              <a href="subject.html#110657">[ subject ]</a>
+              <a href="author.html#110657">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

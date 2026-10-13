@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> auto-linking names
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2005-November/094359.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">auto-linking names</H1>
+    <B data-pagefind-meta="author">David Remsen</B>
+    dremsen at MBL.EDU<BR>
+    <I data-pagefind-meta="date">Tue Nov 15 09:42:27 CST 2005</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="094357.html">Assistant professorship in Plant Ecology at Uppsala, Sweden
+</A></li>
+        <LI>Next message: <A HREF="094361.html">GBIF: ECAT Programme Officer Position Vacant in April 2006
+              Advertised
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#094359">[ date ]</a>
+              <a href="thread.html#094359">[ thread ]</a>
+              <a href="subject.html#094359">[ subject ]</a>
+              <a href="author.html#094359">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2005</span><!--beginarticle-->
+<PRE>LinkIT reads a URL and identifies any scientific names on the page.
+It then matches these names against indexes of authority lists or
+collections we have mapped and, if the name exists in those indexes,
+creates a URL to that site.  Point it at a publication list of fish
+articles for example, and auto-link all fish names to FishBase.  A
+list of mushroom pictures can be immediately linked to Index
+Fungorum.  Some journals link species names to ITIS as a matter of
+course without checking if the names are actually recorded in ITIS.
+LinkIT only builds links when they exist in the source index.
+
+<A HREF="http://namebank.ubio.org/tools/linkit.php">http://namebank.ubio.org/tools/linkit.php</A>
+
+We built this originally to as a way to play around with our name
+recognition algorithms but increasingly are exploring it as a way to
+narrow the gap between expert systems and more generalized content
+providers.   Instead of manually mapping one name at a time one can
+simply drop in a button.  The original content and links are not
+impacted and the linking out is a dynamic option.  Multiple buttons
+or a drop-down menu could link out to different content.  One button
+links out to Fishbase for example, while another rebuilds the page
+linked to NCBI or CBOL or TreeBase.  Imagine an Index Fungorum button
+that fungal authors can drop into their publication list and
+instantly point to IF or a GBIF button that selectively adds a link
+to any name for which GBIF has information.
+
+An additional output parameter takes the array of names and displays
+it's representative ITIS classification within a division.  We will
+add a Species 2000 display as well as we explore various interface
+issues.
+
+Perhaps even more interesting (at least to us) is how many names
+exist in content but are NOT included within these collections.  Our
+plan is to continue to develop the application and try to deploy it
+within library applications.
+
+Any feedback would be appreciated.  Yes, there are limitations.
+Homonyms remain problematic although our name-recognition algorithm
+does locate author names and can disambiguate some.  Sites that
+include external javascript files that reference images may not
+display correctly.
+
+We would also love to add additional indices to link out to.  It
+makes more sense to pass them on to expert content rather than our
+provisional namebank record.
+
+Thank you for your time,
+David Remsen
+
+_______________________________________________
+David Remsen
+uBio Project Manager
+Marine Biological Laboratory
+Woods Hole, MA 02543
+508-289-7632
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="094357.html">Assistant professorship in Plant Ecology at Uppsala, Sweden
+</A></li>
+        <LI>Next message: <A HREF="094361.html">GBIF: ECAT Programme Officer Position Vacant in April 2006
+              Advertised
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#094359">[ date ]</a>
+              <a href="thread.html#094359">[ thread ]</a>
+              <a href="subject.html#094359">[ subject ]</a>
+              <a href="author.html#094359">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

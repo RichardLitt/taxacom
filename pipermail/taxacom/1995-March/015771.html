@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Identification methodology
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1995-March/015771.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Identification methodology</H1>
+    <B data-pagefind-meta="author">Mike Dallwitz</B>
+    miked at ENTO.CSIRO.AU<BR>
+    <I data-pagefind-meta="date">Tue Mar 21 13:25:35 CST 1995</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="098933.html">No subject
+</A></li>
+        <LI>Next message: <A HREF="051563.html">Identification methodology
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#015771">[ date ]</a>
+              <a href="thread.html#015771">[ thread ]</a>
+              <a href="subject.html#015771">[ subject ]</a>
+              <a href="author.html#015771">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1995</span><!--beginarticle-->
+<PRE>                                                                 21 March 1995
+
+&gt; From: Renaud Fortuner &lt;fortuner at math.u-bordeaux.fr&gt;
+&gt;
+&gt; Rigor in Delta? I believe a better term would be rigidity.
+
+I don't believe you could substantiate this. The DELTA programs are very
+flexible in that they have large numbers of options which may be combined in
+various ways to serve a wide variety of purposes (sometimes even ones that I
+had not envisaged). In fact, this flexibility is one of the major sources of
+criticism of the programs, particularly of INTKEY. We have addressed this
+problem by providing the `simplified' mode of operation in the Windows version
+of INTKEY.
+
+If you just mean that the programs don't have all the features that you and
+other users might want, then I agree with you. We are working on it.
+
+&gt; In any cases, I would like to ask a couple of question to Mike Dallwitz.
+&gt; When we met in 1990 (at the ARTISYST workshop in California), I asked you
+&gt; how I could enter intraspecific variability using Delta (ISV, the percentage
+&gt; of individuals in a species that exhibit a particular state of a character)
+&gt; and you said that this type of information could be added to a &quot;comment&quot;
+&gt; field. Then I asked about metadata and you said to put it in the comment
+&gt; field also, which would make it kind of crowded.
+&gt;
+&gt; The question is, is this still true or have you modified the Delta standard
+&gt; to provide for ISV and metadata?
+
+The current version of CONFOR (our main program for processing DELTA data),
+allows the use of `inner comments' for metadata, e.g.
+    4,2&lt;at the tip &lt;material from WA not yet seen&gt;&gt;
+These can be omitted from natural-language descriptions at the option of the
+user. The problem with storing probabilities in comments, e.g.
+    4,2/1&lt;4%&gt;
+(i.e. for character 4, 96% of individuals have state 2 and 4% state 1) is not
+so much the `crowding' of information (which is no worse than in conventional
+printed descriptions), as the fact that the current software can't use the
+information except in natural-language descriptions. The planned new CONFOR
+will interpret this information, and various other types too, and will be able
+to hide or display the various types of information at the request of the
+user.
+
+Information about the new DELTA data format can be found in the files
+newdelta.txt and newdelta.ps at
+    <A HREF="ftp://muse.bio.cornell.edu/pub/delta/standard">ftp://muse.bio.cornell.edu/pub/delta/standard</A>
+The new types of information are still incorporated in the syntax of
+`comments', for compatibility with the present format, and to make it simpler
+for programs to ignore the extra information. This need not concern the user,
+who will not normally look directly at the DELTA-format files.
+
+&gt; I see in your list of requirements that a program should give &quot;Similarities
+&gt; between taxa. Whether the program can find the similarities between members
+&gt; of a set of taxa.&quot;
+&gt;
+&gt; Excellent, but does this mean just the list of characters that are
+&gt; identical in the unknown and a particular species, or are we talking of
+&gt; computing a coefficient of overall similarity?
+
+INTKEY has some flexibility in that the user can specify whether, for example,
+`state 1 or state 2' matches `state 2 or state 3', but does not compute the
+similarity measures normally used for phenetic analysis. Another of our
+programs, DIST, calculates a distance matrix, and yet another, NSIM, displays
+this information in a readable form, listing the nearest neighbours of each
+taxon.
+
+&gt; More generally speaking, is Delta still doing dichotomous keys only (or
+&gt; variants such as multiple entry keys) or have you moved to other methods of
+&gt; identification?
+
+By `dichotomous' I presume you mean `deterministic' or `non-probabilistic'. In
+that case, the answer is `no'. I don't doubt that probabilistic methods are
+important or essential in some fields. I would like to incorporate them in
+INTKEY, and have thought about ways of doing so. However, we must set
+priorities, and I think that most taxonomists prefer to use deterministic
+methods if possible. (For one thing, the data are easier to gather.) It's
+generally more important to cope with the possibility of errors in using
+deterministic data, which is done by INTKEY's error-tolerance mechanism. For
+some further thoughts on this, see
+
+Dallwitz, M. J. (1992). A comparison of matrix-based taxonomic identification
+systems with rule-based systems. In `Proceedings of IFAC Workshop on Expert
+Systems in Agriculture', pp. 215-8. (Ed. F. L. Xiong.) (International Academic
+Publishers: Beijing.)
+
+&gt; Even more generally, I am curious to know what people think of dichotomy. I
+&gt; am asking Taxacom recipients to answer the little survey below directly to
+&gt; my address. I'll compile the results and post on Taxacom in about a week.
+
+I look forward to seeing the results of the survey, but I think there is a
+danger of a `silent majority' effect.
+
+Mike Dallwitz                                  Internet md at ento.csiro.au
+CSIRO Division of Entomology                   Fax +61 6 246 4000
+GPO Box 1700, Canberra ACT 2601, Australia     Phone +61 6 246 4075
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="098933.html">No subject
+</A></li>
+        <LI>Next message: <A HREF="051563.html">Identification methodology
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#015771">[ date ]</a>
+              <a href="thread.html#015771">[ thread ]</a>
+              <a href="subject.html#015771">[ subject ]</a>
+              <a href="author.html#015771">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

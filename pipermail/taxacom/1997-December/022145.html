@@ -1,0 +1,225 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> OZ Project Newsletter
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1997-December/022145.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">OZ Project Newsletter</H1>
+    <B data-pagefind-meta="author">Laura A. Green</B>
+    redgreen at EAGLE.CC.UKANS.EDU<BR>
+    <I data-pagefind-meta="date">Wed Dec 31 11:24:50 CST 1997</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="105300.html">Job announcement, biodiversity information manager
+</A></li>
+        <LI>Next message: <A HREF="057937.html">OZ Project Newsletter
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#022145">[ date ]</a>
+              <a href="thread.html#022145">[ thread ]</a>
+              <a href="subject.html#022145">[ subject ]</a>
+              <a href="author.html#022145">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1997</span><!--beginarticle-->
+<PRE>News from the OZ Collections Software Development Project
+30 December 1997
+
+
+&gt;From Jim Beach (OZ project Principal Investigator,
+jbeach at eagle.cc.ukans.edu).=20
+
+As 1997 comes to the end, the OZ Project Release Team would like to report
+on their recent activities with various OZ design and implementation tasks.
+ Since fundamentally changing our technical approach in September from the
+Visual Basic language to Borland's Delphi, the Team has been modeling and
+testing various OZ subsystem designs as they report below.  &quot;Zoe,&quot; which
+was to be the Windows replacement for MUSE, had been under development for
+several months in 1996 &amp; 1997, but despite our best efforts at life
+support, Zoe turned out to be a false start.  In September we relegated
+&quot;Zoe&quot; to the digital compost heap and began anew. We reassessed and
+redoubled efforts at requirements analysis, modeling, and design.  The OZ
+Project Team has made outstanding progress in a short four months of time.
+OZ is now well specified and about to enter the coding phase.  Laura Green,
+as OZ Project Manager, has exceeded all reasonable expectations for guiding
+the Team through this challenging period with her exceptional
+organizational and coordination skills.  In addition to leading weekly
+meetings with our programmer/analysts, she has negotiated international
+contracts, anticipated and structured every stage of the development
+process, and steered us through the turbulent waters of the Zoe to OZ
+transformation. Laura and the entire OZ Release Team are doing a
+superlative job and we at KU are proud of them.  The entire Team is
+enthusiastically preparing for the OZ First Customer Ship (&quot;FCS&quot;) date this
+coming Fall.=20
+
+Here are the progress reports from the OZ Team with e-mail addresses,
+should you desire additional details. The OZ team would like to wish
+everyone a blissful holiday and our best wishes for 1998.
+
+From: Laura Green (OZ Project Manager, redgreen at ukans.edu). =20
+In order to put the OZ Software on the road to release it was necessary to
+design a fast-track release schedule.  Starting mid-September, we
+implemented a rigorous release life cycle model for the Project.  This
+model contains achievable product development and release milestones with
+defined completion requirements and associate risk management.  To put this
+into plain English, we designed a multi-phase schedule with defined tasks
+for systems analysis, programming, documentation, training, and
+user-support.  The schedule also includes outlets for the identification of
+possible problem areas.  I am pleased to report we are currently
+on-schedule in the development phase of the Release Model.
+
+With the help of Dr. Stan Blum, we redesigned the OZ data model.  It now
+includes relevant components from the Association of Systematics
+Collections Reference Model for Biological Collections (
+<A HREF="http://gizmo.lbl.gov/DM_TOOLS/OPM/BCSL/BCSL.html">http://gizmo.lbl.gov/DM_TOOLS/OPM/BCSL/BCSL.html</A> ), and the University of
+California Museum of Vertebrate Zoology Collections Information Model
+(<A HREF="http://www.mip.berkeley.edu/mvz/cis.html).">http://www.mip.berkeley.edu/mvz/cis.html).</A>
+
+The OZ database prototype (the program work in progress) is 75% designed.
+We started with a &quot;wish-list&quot; of features and refined it to meet the
+general needs of: Herpetology, Ichthyology, Mammalogy, Ornithology,
+Paleontology, Entomology, General Invertebrates, and Botany. =20
+
+In addition, we have now:
+=B7 designed a web interface,
+=B7 created a plan for data migration for users of other systems
+=B7 generated an editable Taxonomic Dictionary for several disciplines
+=B7 written a security system, and
+=B7 created a fully-customizable user interface.
+
+Every Monday the Release Team meets to go over assigned tasks and pin-point
+problems areas that may impact product release.  We review the previous
+week's progress and measure gains against the priority list of OZ features.
+By the middle of January we will complete the planning phase of OZ and be
+midway through development. All preliminary prototyped features will be
+recorded in the OZ Functional Specifications Document. This document will
+be available on our web site around late-January.
+
+The tremendous amount of support we have received from the collections
+community has been inspiring to all of us.  We not only feel we are
+creating a quality product, but that we will be contributing significantly
+to the work of so many dedicated collections professionals and researchers.
+For me, it is a pleasure to see this project unfold.
+
+
+From: Magnus Thorne (OZ Programmer, trichar at eagle.cc.ukans.edu). =20
+I'm working on the web interface for OZ databases.  We will distribute OZ
+with an integrated and highly configurable Web server which will run on the
+same Windows 95 or Windows NT machine as the OZ database in order to
+provide a live HTML link to collection catalogs. (To provide direct web
+access to OZ data, this feature will require that your OZ database PC be
+connected through your local network to the Internet.).
+
+Because the WWW server/OZ database interface code will build queries
+against the database, I am also working on OZ's querying code.  I decided
+to use an API program in place of a CGI script to interface the WWW server
+to the database because of the considerable performance gain.  As the usage
+of your OZ web site grows, the web interface will be able to keep up
+handily.  Our aim is to configure the distributed version, so that the web
+interface is simple to set up and customize.  We will distribute HTML page
+templates for web query screens but the interface will allow you to edit
+our HTML templates to customize them to your liking by adding text,
+graphics, or other design elements to your pages.=20
+
+You may have concerns about your data going online via the web, but the OZ
+security subsystem will have a 'web security level'.  You will be able to
+configure which specimen information you wish to have accessible online.
+The security will be hard coded directly into the web interface, so there
+will be no way to bypass it.
+
+
+From: Todd Kofford (OZ Programmer, tkofford at eagle.cc.ukans.edu). =20
+In recent months, I have worked on source code control systems (SCCS) for
+the OZ project and on developing a security module for the OZ application.
+
+In addition, I have been evaluating several available Windows reporting
+tools/packages which could be integrated into our Delphi source code.  The
+primary evaluation criteria for a fully integrated reporting tool were
+discussed and compiled into a checklist.  The checklist has served as the
+basis for comparing the available tools/packages.  We are currently leaning
+toward a product called &quot;Piparti&quot; from Digital Metaphors
+(www.digital-metaphors.com), which provides sophisticated report design and
+layout functions.  I am still evaluating many of the functions and features
+OZ will need to handle the diversity and nuances of printed reports of
+various kinds including labels, catalog reports, loan invoices, bottle
+labels, among other types.  We recently sent out a network request for
+additional samples of herbarium specimen labels to assess their design and
+layout requirements.  Many thanks to all of you who kindly mailed and faxed
+us examples.  They have proven most useful.
+
+
+From: Tim Noble (OZ Programmer (timo at eagle.cc.ukans.edu).
+Much of my time has been spent completing the OZ data model.  Many people,
+including Stan Blum, Jim Beach, John Simmons, Kate Shaw, as well as other
+collection managers and curators at the KU Natural History Museum have
+aided in this task. =20
+
+I have also been working with Laura Green to develop a reasonably simple
+and 'intuitive' interface to the database that will allow people to fully
+utilize OZ's power and flexibility without having to delve too deeply into
+details of the design. Other tasks have included investigating geographic
+name databases (which we may distribute with OZ or allow users to 'plug in'
+to OZ) and designing a query builder.
+
+
+From: Glenn Garneau (OZ Programmer, ghglenn at kuhub.cc.ukans.edu). =20
+As the Data Integration Specialist for the OZ Project, I have been working
+with several existing MUSE data sets to determine the kinds of issues that
+arise when data are moved into the OZ database, which is built on a much
+more complete and complex data model than was MUSE.  Data migration between
+two markedly different data models is not without its challenges, but I am
+confident we will develop sound and useful tools for migrating collection
+data from MUSE to OZ in the coming months.  Our first data management
+priority will be to migrate current MUSE sites who wish to convert.  We
+will also provide migration services for non-MUSE sites as appropriate to
+the mission of the project.  We also plan to provide tools through which a
+site may import either taxonomic or collection records into the OZ system.=
+=20
+
+
+Contact us!
+
+The OZ Project
+Dyche Hall-Natural History Museum
+The University of Kansas
+Lawrence, KS 66045-2454
+
+ozlab at ukans.edu
+(785) 864-3803 phone
+(785) 864-5010 fax
+<A HREF="http://www.nhm.ukans.edu/~ozlab">http://www.nhm.ukans.edu/~ozlab</A>
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="105300.html">Job announcement, biodiversity information manager
+</A></li>
+        <LI>Next message: <A HREF="057937.html">OZ Project Newsletter
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#022145">[ date ]</a>
+              <a href="thread.html#022145">[ thread ]</a>
+              <a href="subject.html#022145">[ subject ]</a>
+              <a href="author.html#022145">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

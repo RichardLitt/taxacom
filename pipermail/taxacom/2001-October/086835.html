@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> names &amp; numbers
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2001-October/086835.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">names &amp; numbers</H1>
+    <B data-pagefind-meta="author">Doug Yanega</B>
+    dyanega at POP.UCR.EDU<BR>
+    <I data-pagefind-meta="date">Mon Oct 15 09:59:31 CDT 2001</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="086833.html">I am looking for email of Runov
+</A></li>
+        <LI>Next message: <A HREF="086836.html">More on Biogeographic memory
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#086835">[ date ]</a>
+              <a href="thread.html#086835">[ thread ]</a>
+              <a href="subject.html#086835">[ subject ]</a>
+              <a href="author.html#086835">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2001</span><!--beginarticle-->
+<PRE>Richard Pyle wrote:
+
+&gt;To do it right, you only need two separate entities:  NAMES, and ASSERTIONS
+&gt;(=circumscriptions).  Everything you enter into the database is OBJECTIVE -
+&gt;no opinions by the data gatherers required.  If ITIS or some other agency
+&gt;wants to select one particular taxonomy, then they need only designate one
+&gt;assertion record for each name record to serve as the &quot;current&quot; or &quot;correct&quot;
+&gt;circumscription of that name. From a data concept perspective, it's pretty
+&gt;straightforward.  The real work is in trudging through all those
+&gt;publications to capture all those taxonomic assertions in electronic form.
+&gt;
+&gt;Incidentally, you need not restrict it to just &quot;published&quot; references.  Any
+&gt;identification of a Museum specimen can serve as an assertion, just as any
+&gt;unpublished pers. comm. from an expert.
+
+I don't think this claim applies to higher classification, however:
+most people have databases designed in a strict &quot;parent:child&quot;
+hierarchy. If taxon X belongs to subfamily Y of family Z in one
+classification, and to tribe A of subfamily B of family C in another,
+you have VERY different parent:child links all leading down to the
+same terminal taxon. If anything, this sort of variant supra-generic
+classification is probably *more* common (in terms of numbers of
+species involved) than disagreement about species and genus placement.
+Maybe others here will see a simple workaround to accommodate it, but
+I don't - it's an extremely complex thing to do. I think it
+necessitates a disassociation of the terminal taxa and the
+alternative hierarchies within the data (in other words, taxa are
+stored *without* being classified, and the phylogenies are stored as
+separate data sets, so you only get the computer to spit out a
+classification for a taxon after you choose which phylogeny you wish
+to view), OR, you stick with the default, reliance on a single
+classification. Right now, *all* the major on-line databases,
+including ITIS, choose the latter option; a single, invariant higher
+classification. You can't have a child link to two different parents,
+so ITIS will presumably *never* be able to designate alternative
+classifications above the terminal taxa - unless they radically
+change their data structure.
+
+Peace,
+--
+
+Doug Yanega        Dept. of Entomology         Entomology Research Museum
+Univ. of California - Riverside, Riverside, CA 92521
+phone: (909) 787-4315 (standard disclaimer: opinions are mine, not UCR's)
+            <A HREF="http://entmuseum9.ucr.edu/staff/yanega.html">http://entmuseum9.ucr.edu/staff/yanega.html</A>
+   &quot;There are some enterprises in which a careful disorderliness
+         is the true method&quot; - Herman Melville, Moby Dick, Chap. 82
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="086833.html">I am looking for email of Runov
+</A></li>
+        <LI>Next message: <A HREF="086836.html">More on Biogeographic memory
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#086835">[ date ]</a>
+              <a href="thread.html#086835">[ thread ]</a>
+              <a href="subject.html#086835">[ subject ]</a>
+              <a href="author.html#086835">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,295 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] How to trace publications based on collections in specific herbaria and/or museums?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20How%20to%20trace%20publications%20based%20on%20collections%20in%0A%20specific%20herbaria%20and/or%20museums%3F&In-Reply-To=%3CCAE0MQeGGcStdofg1xxnHw1Hv3orQ6jZmbGcgDYrpRvOmCVrqTg%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="121652.html">
+   <LINK REL="Next"  HREF="121655.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2012-January/121653.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] How to trace publications based on collections in specific herbaria and/or museums?</H1>
+    <B data-pagefind-meta="author">Peter DeVries</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20How%20to%20trace%20publications%20based%20on%20collections%20in%0A%20specific%20herbaria%20and/or%20museums%3F&In-Reply-To=%3CCAE0MQeGGcStdofg1xxnHw1Hv3orQ6jZmbGcgDYrpRvOmCVrqTg%40mail.gmail.com%3E"
+       TITLE="[Taxacom] How to trace publications based on collections in specific herbaria and/or museums?">pete.devries at gmail.com
+       </A><BR>
+    <I data-pagefind-meta="date">Wed Jan 18 12:02:25 CST 2012</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="121652.html">[Taxacom] How to trace publications based on collections in	specific herbaria and/or museums?
+</A></li>
+        <LI>Next message: <A HREF="121655.html">[Taxacom] How to trace publications based on collections in specific herbaria and/or museums?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#121653">[ date ]</a>
+              <a href="thread.html#121653">[ thread ]</a>
+              <a href="subject.html#121653">[ subject ]</a>
+              <a href="author.html#121653">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2012</span><!--beginarticle-->
+<PRE>The leadership's policy is similar to one we had at a NIH Microscopy lab -
+that is that scientists using the facility were supposed to cite the
+facility in published papers.
+This was so that the NIH could justify the expense of funding a shared
+facility.
+Unfortunately, there was no system to ensure that this was done, and
+although many did cite the facility others did not.
+
+I think that without some outside pressure there is little reason for
+facilities to give their specimens unique IDs, and several reasons not to:
+    There are the risks of getting it wrong and looking bad
+    There are the questions about how this will be paid for and maintained
+overtime
+    There are the problems of a unclear vision on how this should be done,
+with some concern that filling in all the &quot;required&quot; metadata would be
+expensive.
+
+However, I was thinking that there might be some easy way to get moving in
+this direction without having to change much.
+That would be to have information on each specimen in a collection
+accessible via a clean URL. (a specimen page)
+
+Wikipedia is down today (<A HREF="http://en.wikipedia.org/wiki/Clean_URL">http://en.wikipedia.org/wiki/Clean_URL</A>)
+
+In general, a clean URL is stable, and does not incorporate elements
+specific to a particular database or framework.
+
+This would give the &quot;specimen page&quot; a URI, which is useful, but different
+from a true URI for the specimen itself.
+
+For example here are example of clean URLs:
+&lt;<A HREF="http://lod.taxonconcept.org/ses/v6n7p.html">http://lod.taxonconcept.org/ses/v6n7p.html</A>&gt;
+&lt;<A HREF="http://eol.org/pages/311910/overview">http://eol.org/pages/311910/overview</A>&gt;
+
+* &lt; <A HREF="http://data.gbif.org/species/2435099/">http://data.gbif.org/species/2435099/</A>&gt; (but not stable)
+
+* This are clean, in a sense, but the taxon page is not tied to a specific
+integer like 2435099, so they are not useful stable identifiers for a
+particular taxon page.
+
+For example, it seems that most of my links to GBIF are now broken.
+
+The URL below is not &quot;clean&quot;  because it incorporates characters than need
+to be escaped or they would change if the data was moved to a different
+database and web framework:
+
+&lt;
+<A HREF="http://mcz-28168.oeb.harvard.edu/mcz/FMPro?-DB=Image.fm&amp;-Lay=web&amp;-Format=images.htm&amp;Species_ID=4871&amp;-Find">http://mcz-28168.oeb.harvard.edu/mcz/FMPro?-DB=Image.fm&amp;-Lay=web&amp;-Format=images.htm&amp;Species_ID=4871&amp;-Find</A>
+&gt;<i>
+</I>
+* I like this site a lot as a model for e-type pages but think it would be
+better with cleaner URL's
+
+That would mean that the vocabulary and semantic markup could be decided
+later, but at least someone could refer to a specimen via it's specimen
+page URL.
+
+Later there might need to be a mapping of IDs for the actual specimen
+(since the same specimen might be present in different collections and have
+multiple pages)
+
+The result would be a unique page URL for each specimen in a collection,
+without having to move to a completely, and somewhat intimidating, fully
+semantic representation.
+
+&gt;<i>From this relatively easy step we could work toward something even better.
+</I>
+Respectfully,
+
+- Pete
+
+On Wed, Jan 18, 2012 at 8:36 AM, Roderic Page &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">r.page at bio.gla.ac.uk</A>&gt; wrote:
+
+&gt;<i> This is one of the &quot;use cases&quot; I had in mind when discussing the potential
+</I>&gt;<i> uses for digital identifiers for specimens (see blog post
+</I>&gt;<i> <A HREF="http://iphylo.blogspot.com/2012/01/yet-another-reason-why-we-need-specimen.html">http://iphylo.blogspot.com/2012/01/yet-another-reason-why-we-need-specimen.html</A>)
+</I>&gt;<i>
+</I>&gt;<i> The request to find all papers citing museum material is, in principle,
+</I>&gt;<i> reasonable, but the museum has failed to provide the tools to make this
+</I>&gt;<i> happen. I'd be tempted to respond to the museum administrators with an
+</I>&gt;<i> explanation of why answering their query efficiently would require the
+</I>&gt;<i> museum to have digital identifiers for their specimens (in the same way we
+</I>&gt;<i> have identifiers for articles).
+</I>&gt;<i>
+</I>&gt;<i> At the same time, I'd be tempted to make the short trip to GBIF ask why
+</I>&gt;<i> they've been so tardy in addressing this issue.
+</I>&gt;<i>
+</I>&gt;<i> I'm aware that this doesn't help you in the short term. Various ways to
+</I>&gt;<i> tackle the problem might be:
+</I>&gt;<i>
+</I>&gt;<i> 1. Search Google Scholar for the museum name in the year 2011 (if the
+</I>&gt;<i> authors use the abbreviation they are likely to explain what it means.
+</I>&gt;<i>
+</I>&gt;<i> 2. Retrieve a list of all animal and plant names published in 2011, get
+</I>&gt;<i> the associated publications and search for the museum's name (much of this
+</I>&gt;<i> could be automated once the PDFs are downloaded)
+</I>&gt;<i>
+</I>&gt;<i> 3. Search GenBank using museum specimen abbreviation codes to find
+</I>&gt;<i> sequences (and associated publications) obtained from material from the
+</I>&gt;<i> museum.
+</I>&gt;<i>
+</I>&gt;<i> Regards
+</I>&gt;<i>
+</I>&gt;<i> Rod
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On 18 Jan 2012, at 10:32, Ib Friis wrote:
+</I>&gt;<i>
+</I>&gt;<i> &gt; Dear Taxacom-readers,
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; It is getting more and more necessary for taxonomists to demonstrate
+</I>&gt;<i> &gt; that they are useful and used. This does not only apply to the
+</I>&gt;<i> &gt; individual scientists, but also to institutions with taxonomic
+</I>&gt;<i> &gt; collections, such as museums and herbaria.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; In an attempt to live up to that increasing demand for documentation,
+</I>&gt;<i> &gt; the leadership of the Natural History Museum of Denmark has issued an
+</I>&gt;<i> &gt; order to its curatorial staff - The staff members are requested to
+</I>&gt;<i> &gt; document which publications from 2011, written entirely by external
+</I>&gt;<i> &gt; scientists, that in one way or another are based on material in the
+</I>&gt;<i> &gt; collections of the Museum. It is added that &quot;this may be difficult, but
+</I>&gt;<i> &gt; very important for the documentation of the use of the collections. Try
+</I>&gt;<i> &gt; to get all the scientists that borrow material to inform you about their
+</I>&gt;<i> &gt; publications and supplement this information with your own search within
+</I>&gt;<i> &gt; reasonable limits.&quot;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; To find publications that are based on collections in the Natural
+</I>&gt;<i> &gt; History Museum of Denmark is indeed a difficult task. As curator of the
+</I>&gt;<i> &gt; herbarium of vascular plants at the Museum, I know that my particular
+</I>&gt;<i> &gt; section of the Museum has 950 outstanding loans to scientists all over
+</I>&gt;<i> &gt; the world, including institutions in the developing countries. The loans
+</I>&gt;<i> &gt; of herbarium specimens are normally made to institutions, not directly
+</I>&gt;<i> &gt; to individual scientists, so even if I wrote to all 950 and asked them
+</I>&gt;<i> &gt; if they have published anything on our collections in 2011, I am not
+</I>&gt;<i> &gt; sure that the message would reach all.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; A more practicable solution might be to use digital search for
+</I>&gt;<i> &gt; electronic publications that quote the herbarium acronym. However, for
+</I>&gt;<i> &gt; the herbaria of the Natural History Museum of Denmark, which is situated
+</I>&gt;<i> &gt; in Copenhagen, this acronym is &quot;C&quot;. We have normally been rather proud
+</I>&gt;<i> &gt; to be an old institution that has a single character as its acronym, but
+</I>&gt;<i> &gt; in this case it is rather unfortunate, like it must be for other well
+</I>&gt;<i> &gt; known herbaria with acronyms like &quot;A&quot;, &quot;B&quot;, &quot;E&quot;, &quot;F&quot;, &quot;G&quot;, &quot;H&quot;, &quot;J&quot;,
+</I>&gt;<i> &gt; &quot;K&quot;, &quot;L&quot;, &quot;M&quot;, &quot;N&quot;, &quot;O&quot;, &quot;P&quot;, &quot;Q&quot;, &quot;R&quot;, &quot;S&quot;, &quot;U&quot;, &quot;V&quot;, &quot;Y&quot; and &quot;Z&quot;.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; In publications, material from our herbarium at &quot;C&quot; is normally referred
+</I>&gt;<i> &gt; to in text strings of one of the following forms: &quot;(C)&quot;, &quot;(C, &quot;, &quot;, C,&quot;
+</I>&gt;<i> &gt; or &quot; C)&quot;. But a search in for example Google Scholar or other search
+</I>&gt;<i> &gt; engines  result in overflow of thousands and thousands of hits, even
+</I>&gt;<i> &gt; when these text strings are combined with other relevant words such as
+</I>&gt;<i> &gt; &quot;botany&quot;, &quot;plants&quot;, etc. - It can be added that this is a specific
+</I>&gt;<i> &gt; problem for the botanists - the curators of the zoological and
+</I>&gt;<i> &gt; geological collections are lucky that their collections have acronyms
+</I>&gt;<i> &gt; with a characteristic sting of four letters.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Has any of the Taxacom-readers good ideas about how it might be possible
+</I>&gt;<i> &gt; to specifically document answers to the (unfortunately relevant)
+</I>&gt;<i> &gt; question about the use of the botanical collections of the Copenhagen
+</I>&gt;<i> &gt; Natural History Museum - and of other herbaria with similarly
+</I>&gt;<i> &gt; insignificant acronyms?
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Hoping for a good idea and with best wishes,
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Ib Friis
+</I>&gt;<i> &gt; Professor, dr. scient., curator of vascular plants
+</I>&gt;<i> &gt; Natural History Museum of Denmark, Copenhagen
+</I>&gt;<i> &gt; <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">ibf at snm.ku.dk</A>
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; _______________________________________________
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Taxacom Mailing List
+</I>&gt;<i> &gt; <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> &gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; The Taxacom archive going back to 1992 may be searched with either of
+</I>&gt;<i> these methods:
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; (1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; (2) a Google search specified as:  site:
+</I>&gt;<i> mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+</I>&gt;<i> &gt;
+</I>&gt;<i>
+</I>&gt;<i> ---------------------------------------------------------
+</I>&gt;<i> Roderic Page
+</I>&gt;<i> Professor of Taxonomy
+</I>&gt;<i> Institute of Biodiversity, Animal Health and Comparative Medicine
+</I>&gt;<i> College of Medical, Veterinary and Life Sciences
+</I>&gt;<i> Graham Kerr Building
+</I>&gt;<i> University of Glasgow
+</I>&gt;<i> Glasgow G12 8QQ, UK
+</I>&gt;<i>
+</I>&gt;<i> Email: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">r.page at bio.gla.ac.uk</A>
+</I>&gt;<i> Tel: +44 141 330 4778
+</I>&gt;<i> Fax: +44 141 330 2792
+</I>&gt;<i> AIM: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">rodpage1962 at aim.com</A>
+</I>&gt;<i> Facebook: <A HREF="http://www.facebook.com/profile.php?id=1112517192">http://www.facebook.com/profile.php?id=1112517192</A>
+</I>&gt;<i> Twitter: <A HREF="http://twitter.com/rdmpage">http://twitter.com/rdmpage</A>
+</I>&gt;<i> Blog: <A HREF="http://iphylo.blogspot.com">http://iphylo.blogspot.com</A>
+</I>&gt;<i> Home page: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i>
+</I>&gt;<i> Taxacom Mailing List
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;<i>
+</I>&gt;<i> The Taxacom archive going back to 1992 may be searched with either of
+</I>&gt;<i> these methods:
+</I>&gt;<i>
+</I>&gt;<i> (1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+</I>&gt;<i>
+</I>&gt;<i> (2) a Google search specified as:  site:
+</I>&gt;<i> mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+</I>&gt;<i>
+</I>
+
+
+-- 
+------------------------------------------------------------------------------------
+Pete DeVries
+Department of Entomology
+University of Wisconsin - Madison
+445 Russell Laboratories
+1630 Linden Drive
+Madison, WI 53706
+Email: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">pdevries at wisc.edu</A>
+TaxonConcept &lt;<A HREF="http://www.taxonconcept.org/">http://www.taxonconcept.org/</A>&gt;  &amp;
+GeoSpecies&lt;<A HREF="http://about.geospecies.org/">http://about.geospecies.org/</A>&gt; Knowledge
+Bases
+A Semantic Web, Linked Open Data &lt;<A HREF="http://linkeddata.org/">http://linkeddata.org/</A>&gt;  Project
+--------------------------------------------------------------------------------------
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="121652.html">[Taxacom] How to trace publications based on collections in	specific herbaria and/or museums?
+</A></li>
+	<LI>Next message: <A HREF="121655.html">[Taxacom] How to trace publications based on collections in specific herbaria and/or museums?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#121653">[ date ]</a>
+              <a href="thread.html#121653">[ thread ]</a>
+              <a href="subject.html#121653">[ subject ]</a>
+              <a href="author.html#121653">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

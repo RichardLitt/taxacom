@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] iSpecies with Wikipedia
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20iSpecies%20with%20Wikipedia&In-Reply-To=%3C7nzLkKKgiU6HFwy%24%40pigsonthewing.org.uk%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="110140.html">
+   <LINK REL="Next"  HREF="110147.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2008-March/110145.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] iSpecies with Wikipedia</H1>
+    <B data-pagefind-meta="author">Andy Mabbett</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20iSpecies%20with%20Wikipedia&In-Reply-To=%3C7nzLkKKgiU6HFwy%24%40pigsonthewing.org.uk%3E"
+       TITLE="[Taxacom] iSpecies with Wikipedia">andy at pigsonthewing.org.uk
+       </A><BR>
+    <I data-pagefind-meta="date">Tue Mar 25 13:46:56 CDT 2008</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="110140.html">[Taxacom] iSpecies with Wikipedia
+</A></li>
+        <LI>Next message: <A HREF="110147.html">[Taxacom] iSpecies with Wikipedia
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#110145">[ date ]</a>
+              <a href="thread.html#110145">[ thread ]</a>
+              <a href="subject.html#110145">[ subject ]</a>
+              <a href="author.html#110145">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2008</span><!--beginarticle-->
+<PRE>In message &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">451EF75C-2233-49D9-92D1-22C12D834020 at bio.gla.ac.uk</A>&gt;, Roderic
+Page &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">r.page at bio.gla.ac.uk</A>&gt; writes
+
+&gt;<i>As an experiment I've added snippets of Wikipedia content to the
+</I>&gt;<i>iSpecies results. If iSpecies finds an article in Wikipedia it displays
+</I>&gt;<i>the first 100 words form the article, plus a link to the article
+</I>&gt;<i>itself. It's a bit crude, and parsing Wikimedia output is painful, but
+</I>&gt;<i>I think it adds to the results. I'd welcome any feedback.
+</I>
+I think that's an excellent move; though there are some bugs; and some
+potential features you might add.
+
+
+For instance, it works for both &quot;Pica pica&quot; and &quot;magpie&quot;, and for &quot;Tyto
+alba&quot;, but not &quot;barn owl&quot;.
+
+
+In another case, searching for just &quot;pica&quot; returns:
+
+        Pica can refer to:
+
+                * Pica (unit of measure), in typesetting and document
+                layout
+
+                * Pica (disorder), abnormal appetite for earth and other
+                non-foods
+
+                * Pica (genus), a genus of magpie
+
+                * Pica Press, a publishing imprint
+
+                [...]
+
+Likewise, the result for &quot;Hobby&quot; is not appropriate. Perhaps it would be
+a good idea if you tested for the presence of a taxobox, and, if none is
+present, dropped the inclusion, or searched further using some form of
+heuristic?
+
+
+The GBIF map for &quot;pica pica&quot; shows all but one example as being in South
+America (the other is in Africa - possibly a wrongly-signed longitude?).
+
+
+You don't yet mention Wikipedia on your &quot;how it works&quot; page.
+
+
+The image searches for a genus (e.g. &quot;Pica&quot;) or common name (e.g.
+&quot;Hobby&quot;) are often mostly or all false-positives. You might like to add
+a Flickr image search, too. There are several ways in which you could do
+this, including searches for plain text search, tags or machine-tags
+(e.g. &quot;taxonomy:genus=Pica&quot;, &quot;taxonomy:binomial=Alcedo_atthis&quot;). The
+latter would limit false positives. I'm happy to advise further if
+required, though I note we discussed machine tags in early February this
+year.
+
+
+You could also search for images on Bioimages:
+
+        &lt;<A HREF="http://www.bioimages.org.uk/">http://www.bioimages.org.uk/</A>&gt;
+
+which uses Google for as a search engine; for example::
+
+        &lt;<A HREF="http://tinyurl.com/34ue8k">http://tinyurl.com/34ue8k</A>&gt;
+
+
+Other possible links would be to the relevant entry on The National
+Biodiversity Network's Species Dictionary:
+
+        &lt;<A HREF="http://nbn.nhm.ac.uk/nhm/">http://nbn.nhm.ac.uk/nhm/</A>&gt;
+
+and WikiSpecies:
+
+        &lt;<A HREF="http://species.wikimedia.org/">http://species.wikimedia.org/</A>&gt;
+
+
+The long list of links above the map needs to be marked up as a list,
+and presented as with bullets or similar. Likewise, the list of articles
+from Google.
+
+
+Please use a DOCTYPE declaration (preferable HTML 4.01 STRICT), and
+validate your HTML - watch out especially for unescaped ampersands.
+
+
+It would also be sensible to use more human-friendly URLs (which could
+also then be used for tags); so that, for example:
+
+  <A HREF="http://darwin.zoology.gla.ac.uk/~rpage/ispecies/pica+pica">http://darwin.zoology.gla.ac.uk/~rpage/ispecies/pica+pica</A>
+
+would do what is currently done by:
+
+  <A HREF="http://darwin.zoology.gla.ac.uk/~rpage/ispecies/?q=pica+pica&amp;submit=Go">http://darwin.zoology.gla.ac.uk/~rpage/ispecies/?q=pica+pica&amp;submit=Go</A>
+
+
+I've mentioned the species microformat previously; it would be
+appreciated if you could also use that in your pages. Again, I'm happy
+to advise further.
+
+-- 
+Andy Mabbett
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="110140.html">[Taxacom] iSpecies with Wikipedia
+</A></li>
+	<LI>Next message: <A HREF="110147.html">[Taxacom] iSpecies with Wikipedia
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#110145">[ date ]</a>
+              <a href="thread.html#110145">[ thread ]</a>
+              <a href="subject.html#110145">[ subject ]</a>
+              <a href="author.html#110145">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

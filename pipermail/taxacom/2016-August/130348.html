@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] taxonomic names databases
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20taxonomic%20names%20databases&In-Reply-To=%3C4aa30367-e392-87bd-b1eb-4f68ea19a237%40acis.ufl.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="130346.html">
+   <LINK REL="Next"  HREF="130277.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2016-August/130348.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] taxonomic names databases</H1>
+    <B data-pagefind-meta="author">godfoder</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20taxonomic%20names%20databases&In-Reply-To=%3C4aa30367-e392-87bd-b1eb-4f68ea19a237%40acis.ufl.edu%3E"
+       TITLE="[Taxacom] taxonomic names databases">godfoder at acis.ufl.edu
+       </A><BR>
+    <I data-pagefind-meta="date">Wed Aug 31 15:47:25 CDT 2016</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="130346.html">[Taxacom] taxonomic names databases
+</A></li>
+        <LI>Next message: <A HREF="130277.html">[Taxacom] taxonomic names databases
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#130348">[ date ]</a>
+              <a href="thread.html#130348">[ thread ]</a>
+              <a href="subject.html#130348">[ subject ]</a>
+              <a href="author.html#130348">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2016</span><!--beginarticle-->
+<PRE>This is a great example of identifier cross linking in action and 
+working pretty well. I think that, even if you disagree with GBIF's 
+choices in constructing the backbone, that this level of cross linking 
+among disparate taxonomies is incredibly valuable. It would be great if 
+we could search every database for any identifier of our choosing and 
+expect a result such as your proposed searching of GBIF and OTT based on 
+IRMNG IDs. I think GBIF is working to enable that at least to some 
+extent, although the API call I expected to do this did not work: 
+<A HREF="http://api.gbif.org/v1/species?datasetKey=0938172b-2086-439c-a1dd-c21cb0109ed5&amp;sourceid=10561410">http://api.gbif.org/v1/species?datasetKey=0938172b-2086-439c-a1dd-c21cb0109ed5&amp;sourceid=10561410</A> 
+. For now though, we're still a ways away from that goal.
+
+Although this is liable to get my head bitten off, I think that this 
+cross linking makes GBIF's taxon identifiers much more valuable than 
+IRMNG's even if they are potentially less correct (hang on, don't lynch 
+me just yet) scientifically. The (oversimplified) theory behind Google's 
+famous page rank algorithm is that a node on a graph can be ranked based 
+on the number of inbound and outbound links. This turns out to be a 
+fantastic basis for ranking the relevance of a huge amount of different 
+types of information. GBIF has done the work to build out the outbound 
+links from their taxonomic identifiers, as well as building a whole 
+internal link network between taxonomy and occurrence data. For projects 
+with limited resources looking to inter-relate data this means that 
+whether you're a data aggregator, species modeling project , working on 
+a competing backbone, or focused on a specific taxonomic niche knowing 
+the GBIF taxonIDs of your subjects is very useful.
+
+This doesn't mean I think that other taxonomies and projects should 
+abandon their own identifiers, quite to the contrary. I think that local 
+identifiers often capture a level of specificity that is virtually 
+impossible to represent in aggregated data sets. What I do think, is 
+that projects like IRMNG who are looking to capture value for 
+themselves, should actively seek out and integrate these high value 
+identifiers into their own databases. If both Index Fungorum and IRMNG 
+did this, it would be possible to link the two databases based on their 
+shared knowledge of GBIF IDs. It would also make it much easier in the 
+future to do a cross walk between the two database to directly 
+incorporate each-others identifiers since you could start from that 
+shared knowledge.
+
+- Alex
+
+On 08/31/2016 03:18 PM, Tony Rees wrote:
+&gt;<i> Thinking a step further (again, possibly only talking to myself here
+</I>&gt;<i> :) ), even some of the above &quot;cross linking&quot; between datasets could
+</I>&gt;<i> potentially be outsourced, further spreading that load - at least some
+</I>&gt;<i> of the building blocks are there (but not the IRMNG &lt;&gt; ION mapping
+</I>&gt;<i> anywhere else at this time, so far as I can see).
+</I>&gt;<i>
+</I>&gt;<i> For example, IRMNG data dumps are already used (as one component) in
+</I>&gt;<i> &quot;taxonomic backbone&quot; building exercise by GBIF, Open Tree of Life,
+</I>&gt;<i> Encyclopedia of Life, Atlas of Living Australia and possibly others,
+</I>&gt;<i> and this process will/should be refreshed with new releases of IRMNG
+</I>&gt;<i> and other data sources. To do this, such &quot;name aggregators&quot; will
+</I>&gt;<i> already be comparing names and identifiers from IRMNG to those from
+</I>&gt;<i> other sources and most likely, keeping whatever mappings they make
+</I>&gt;<i> &quot;somewhere&quot;, maybe even exposing them, as here for the previously used
+</I>&gt;<i> example (species name in Diptera):
+</I>&gt;<i>
+</I>&gt;<i> Open Tree: <A HREF="https://tree.opentreeoflife.org/opentree/argus/ottol@4474544/Aagaardia-protensa">https://tree.opentreeoflife.org/opentree/argus/ottol@4474544/Aagaardia-protensa</A>
+</I>&gt;<i> GBIF: <A HREF="http://www.gbif.org/species/1446570">http://www.gbif.org/species/1446570</A>
+</I>&gt;<i> (the relevant page on EOL does not appear to have mapped the IRMNG
+</I>&gt;<i> entry, but no matter).
+</I>&gt;<i>
+</I>&gt;<i> Now, so far as I know there is not a publicly advertised way to search
+</I>&gt;<i> Open Tree, GBIF or EOL by IRMNG ID, but from purely a technical
+</I>&gt;<i> viewpoint, there is no reason why there could not be. For example
+</I>&gt;<i> taking the Open Tree page, that then already maps IRMNG: 10561410 to
+</I>&gt;<i> both OTT: 4474544 and GBIF: 1446570, and the GBIF page maps the IRMNG
+</I>&gt;<i> entry to the same one in GBIF (1446570) and also to 4 other data
+</I>&gt;<i> databases (&quot;checklists&quot; in GBIF speak) plus whatever occurrence data
+</I>&gt;<i> GBIF may hold.
+</I>&gt;<i>
+</I>&gt;<i> The upshot of the above is that if one could search the above systems
+</I>&gt;<i> by IRMNG identifier, with certain caveats (such as the relevant cross
+</I>&gt;<i> mapping being correctly done) IRMNG what not need to know what
+</I>&gt;<i> identifiers Open Tree, GBIF etc. were using for the same names (these
+</I>&gt;<i> could be retrieved on the fly or even not needed) and in addition,
+</I>&gt;<i> could leverage whatever additional links such systems have already
+</I>&gt;<i> made.
+</I>&gt;<i>
+</I>&gt;<i> For example, in my previous post I said it would be nice for a user
+</I>&gt;<i> (human or machine) to be able to go from fungal records in IRMNG to
+</I>&gt;<i> the relevant entry in Index (or Species) Fungorum, which might for
+</I>&gt;<i> example contain the original literature for a particular taxon name
+</I>&gt;<i> and save IRMNG the task of compiling that. It turns out that this
+</I>&gt;<i> should already be possible : for example the Open Tree page for the
+</I>&gt;<i> fungus Amanita caesarea already lists the following:
+</I>&gt;<i>
+</I>&gt;<i> Reference taxonomy:
+</I>&gt;<i> OTT: 769441
+</I>&gt;<i>
+</I>&gt;<i> Source taxonomy:
+</I>&gt;<i> Index Fungorum: 208468
+</I>&gt;<i> NCBI: 67695
+</I>&gt;<i> GBIF: 5452695
+</I>&gt;<i> GBIF: 5240269
+</I>&gt;<i> IRMNG: 10381934
+</I>&gt;<i>
+</I>&gt;<i> This means they have already cross mapped IRMNG: 10381934 to Index
+</I>&gt;<i> Fungorum: 208468, saving me the trouble, and there *should* be a way
+</I>&gt;<i> to provide users with a route to go from the (presently bare bones)
+</I>&gt;<i> IRMNG page here:
+</I>&gt;<i> <A HREF="http://www.irmng.org/aphia.php?p=taxdetails&amp;id=10381934">http://www.irmng.org/aphia.php?p=taxdetails&amp;id=10381934</A> to the
+</I>&gt;<i> equivalent in IF:
+</I>&gt;<i> <A HREF="http://www.indexfungorum.org/Names/namesrecord.asp?RecordID=208468">http://www.indexfungorum.org/Names/namesrecord.asp?RecordID=208468</A>
+</I>&gt;<i>
+</I>&gt;<i> Which contains the original publication information &quot;Citations in
+</I>&gt;<i> published lists or literature: Saccardo's Syll. fung. V: 8; XII: 905;
+</I>&gt;<i> XIX: 44&quot; as well as the magic additional link &quot;Page Image for
+</I>&gt;<i> Protologue:&quot; which points here:
+</I>&gt;<i> <A HREF="http://www.librifungorum.org/Image.asp?ItemID=82&amp;ImageFileName=0252b.jpg">http://www.librifungorum.org/Image.asp?ItemID=82&amp;ImageFileName=0252b.jpg</A>
+</I>&gt;<i>
+</I>&gt;<i> Now that's looking like a win (thanks, Paul and the Open Tree folk in
+</I>&gt;<i> this instance).
+</I>&gt;<i>
+</I>&gt;<i> Comments, anyone?
+</I>&gt;<i>
+</I>&gt;<i> Regards - Tony
+</I>&gt;<i>
+</I>&gt;<i>
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="130346.html">[Taxacom] taxonomic names databases
+</A></li>
+	<LI>Next message: <A HREF="130277.html">[Taxacom] taxonomic names databases
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#130348">[ date ]</a>
+              <a href="thread.html#130348">[ thread ]</a>
+              <a href="subject.html#130348">[ subject ]</a>
+              <a href="author.html#130348">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

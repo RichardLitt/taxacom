@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Taxaonomic database structure
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1997-August/021440.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Taxaonomic database structure</H1>
+    <B data-pagefind-meta="author">John McNeill</B>
+    johnm at ROM.ON.CA<BR>
+    <I data-pagefind-meta="date">Fri Aug 29 13:55:10 CDT 1997</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="104592.html">Taxaonomic database structure
+</A></li>
+        <LI>Next message: <A HREF="057232.html">Taxaonomic database structure
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#021440">[ date ]</a>
+              <a href="thread.html#021440">[ thread ]</a>
+              <a href="subject.html#021440">[ subject ]</a>
+              <a href="author.html#021440">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1997</span><!--beginarticle-->
+<PRE>Jim:
+
+I am not a database expert, but there are a couple of nomenclatural
+points that are relevant and depend on whether the database is for
+organisms falling under the botanical code or the zoological one.
+
+As you use the term &quot;infraspecies name&quot;, I assume that you may be a
+botanist as zoologists recognise only the one rank, that of
+subspecies.  For names of organisms treated nomenclaturally as plants,
+you really only need three fields (genus, specific epithet, and
+infraspecific epithet), plus a tag field to indicate the infraspecific
+rank, because homonymy runs across the infraspecific ranks within any
+one species (ICBN Art. 53.5).  Of course, if you want your database to
+reflect a particular infraspecific classification (e.g. to which
+subspecies a variety is assigned), you would need more, but three are
+all that are needed nomenclaturally.
+
+On the other hand if your database deals only with &quot;animals&quot;, you
+could probably get away with only two fields (with rank tags in each),
+i.e. that for the genus (or genus-group) and that for the
+species-group, because under the &quot;principle of Coordination&quot; (ICZN
+Art. 46 (a)), and species is ipso facto also published as a subspecies
+AND VICE-VERSA.
+
+In the above, I am assuming that you are not seeking to include any
+higher classification (family etc.) in the database, nor, at least for
+organisms treated as plants, any infrageneric classification, though
+as the Principle of Coordination also applies at the genus group (ICZN
+Art. 43 (a)), subgenera in an animal database could be accommodated
+(again with a rank tag).
+
+The situation for a bacterial database would be essentially the same
+as a botanical one, except that, as the Bacteriological Code does not
+recognize any infraspecific rank other than subspecies, no rank tag
+field is necessary.
+
+For discussion of database structure with particular reference to
+plant species, see Berendsohn in the May issue of Taxon.
+
+John McNeill
+
+---------------------------------------------------------------------------
+  John McNeill, Director Emeritus, Royal Ontario Museum,
+  100 Queen's Park, Toronto, Ontario, M5S 2C6, Canada.
+  Tel. and fax # 416-586-5744  e-mail: johnm at rom.on.ca
+---------------------------------------------------------------------------
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="104592.html">Taxaonomic database structure
+</A></li>
+        <LI>Next message: <A HREF="057232.html">Taxaonomic database structure
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#021440">[ date ]</a>
+              <a href="thread.html#021440">[ thread ]</a>
+              <a href="subject.html#021440">[ subject ]</a>
+              <a href="author.html#021440">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,270 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Periodical and book list
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2007-January/108501.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Periodical and book list</H1>
+    <B data-pagefind-meta="author">Roderic Page</B>
+    r.page at bio.gla.ac.uk<BR>
+    <I data-pagefind-meta="date">Mon Jan 22 13:55:16 CST 2007</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="108500.html">[Taxacom] morphology in molecular phylogeny
+</A></li>
+        <LI>Next message: <A HREF="108502.html">[Taxacom] Periodical and book list
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#108501">[ date ]</a>
+              <a href="thread.html#108501">[ thread ]</a>
+              <a href="subject.html#108501">[ subject ]</a>
+              <a href="author.html#108501">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2007</span><!--beginarticle-->
+<PRE>I think this is a good idea (although I still think if we were truly  
+serious we'd look at serving DOIs, they will be picked up by  
+publishers, LSIDs probably won't be), but that's another issue.
+
+The complication here is deciding whether two references are the same  
+or not. In other words, if say I merge ant literature from two  
+different sources (such as FORMIS and Hymenoptera Name Server), can I  
+avoid giving two different identifiers for the same reference? We  
+would need reasonable means of deciding whether two alternative ways  
+of writing the same reference (or variations on journal names, or  
+author names) were just that, alternatives.
+
+I also think for this project to be actually useful, it should  
+provide a web service where somebody could see whether a given paper  
+exists in the database (i.e., has a GUID). OpenURL provides an  
+obvious model for a query interface, namely a URL with a standard  
+list of parameters. This is how I discover whether ant papers already  
+have a DOI (see <A HREF="http://semant.blogspot.com/">http://semant.blogspot.com/</A> 
+2006_08_01_semant_archive.html).
+
+So, what I propose is this:
+
+1. A database of taxonomic literature is created, seed with files  
+from anybody willing to contribute.
+
+2. For all references in that database, existing GUIDs are searched  
+for (e.g., DOIs and Handles)
+
+3. A OpenURL service is created whereby a user can submit  
+bibliographic details and the service returns a match (with some  
+indication of how good the match is), and a GUID (either existing  
+DOI, or whatever type of GUID the database supports.
+
+This would require some work on recognising matching references (see  
+<A HREF="http://del.icio.us/rdmpage/bibliographic-references">http://del.icio.us/rdmpage/bibliographic-references</A> for some pointers).
+
+I always thought this would be the quickest, easiest way of providing  
+a useful service and demonstrating the utility of GUIDs and metadata  
+to the broader community.
+
+Regards
+
+Rod
+
+
+
+On 22 Jan 2007, at 03:21, Robert K. Peet wrote:
+
+&gt;
+&gt; Hi Roger,
+&gt;
+&gt; What we really need is a set of GUIDs for individual references,  
+&gt; not just
+&gt; journals/books.  At present we have a set of DOI's used by Crossref,
+&gt; endnote-based standards imbedded in EML and VegBank, a simple stub  
+&gt; in TCS
+&gt; (for lack of a standard) and ABCD, and any number of standards if  
+&gt; you look
+&gt; around.  The only way to be able to communciate efficiently is with  
+&gt; some
+&gt; GUID system for individual references.  My take on the GUID meeting  
+&gt; last
+&gt; February at NESCent is that we as a community have pretty much  
+&gt; converged
+&gt; on LSIDs, and you seemed to agree. Why don't we just establish an
+&gt; LSID-based reference repository and let folks start contributing their
+&gt; critical references? I would be happy to submit a few thousand,  
+&gt; were you
+&gt; to set it up   :-) .
+&gt;
+&gt; Cheers,
+&gt; Bob
+&gt;
+&gt;    
+&gt; ======================================================================
+&gt;       Robert K. Peet, Professor &amp; Chair         Phone:  919-962-6942
+&gt;       Curriculum in Ecology, CB#3275            Fax:    919-962-6930
+&gt;       University of North Carolina              Cell:   919-368-4971
+&gt;       Chapel Hill, NC  27599-3275  USA          Email:  peet at unc.edu
+&gt;                     <A HREF="http://www.unc.edu/depts/ecology/">http://www.unc.edu/depts/ecology/</A>
+&gt;                   <A HREF="http://www.bio.unc.edu/faculty/peet/">http://www.bio.unc.edu/faculty/peet/</A>
+&gt;    
+&gt; ======================================================================
+&gt;
+&gt;
+&gt; On Wed, 17 Jan 2007, Roger Hyam wrote:
+&gt;
+&gt;&gt; I am interested in conducting a social experiment.
+&gt;&gt;
+&gt;&gt; It would be very useful when combining taxonomic data from multiple
+&gt;&gt; databases if there were  globally unique identifiers for major
+&gt;&gt; taxonomic publications (periodicals/serials and books). One could
+&gt;&gt; then supplement a reference citation like
+&gt;&gt;
+&gt;&gt; Edinb.J. Bot. 47(2): 89-200 (1990)
+&gt;&gt;
+&gt;&gt; with an LSID and/or a URL that will tell the user that
+&gt;&gt;
+&gt;&gt; Edinb. J. Bot. is the Edinburgh Journal of Botany published by HMSO
+&gt;&gt; in Edinburgh. It may also give other alias' it is known by and a note
+&gt;&gt; might say that it is a continuation of Notes from the Royal Botanic
+&gt;&gt; Garden Edinburgh.
+&gt;&gt;
+&gt;&gt; It would enable the user to merge the data with people who have used
+&gt;&gt; other abbreviations for the same publication title - possibly without
+&gt;&gt; human interaction.
+&gt;&gt;
+&gt;&gt; Lookup services could be created that went from abbreviation to full
+&gt;&gt; journal title.
+&gt;&gt;
+&gt;&gt; The trouble is that the major lists of publications (e.g. BPH, TL2
+&gt;&gt; etc) are either:
+&gt;&gt;
+&gt;&gt; -  are not available electronically.
+&gt;&gt; -  are available on a subscription basis.
+&gt;&gt; -  are hopelessly out of date.
+&gt;&gt; -  can not be added to instantly (if the one you want to use isn't
+&gt;&gt; cited).
+&gt;&gt; -  are not freely distributable (i.e. you can't download the whole
+&gt;&gt; lot and use them as a lookup table in your database or re-distribute
+&gt;&gt; them as part of a product or archive them to keep you data safe)
+&gt;&gt;
+&gt;&gt; I am thinking that this is an ideal test case to see if the
+&gt;&gt; 'community' could build a freely distributable list that helps us
+&gt;&gt; all. The list would:
+&gt;&gt;
+&gt;&gt; - only include 'top level' publications i.e. periodicals, books,
+&gt;&gt; multi volume works. It is assumed that it is relatively easy to
+&gt;&gt; unambiguously identify a location within such publications via
+&gt;&gt; volume, part, and page/plate numbers.
+&gt;&gt; - contain a simple set of fields for each publication.
+&gt;&gt; - would be entirely freely distributable. i.e. a complete copy could
+&gt;&gt; be downloaded under a LGPL or creative commons type license.
+&gt;&gt; - contributors would be acknowledged in a contributors list, but
+&gt;&gt; nothing more.
+&gt;&gt; - users could comment on entries and submit new entries in real time.
+&gt;&gt; - would be a key into/integrate with current and future digitization
+&gt;&gt; efforts.
+&gt;&gt;
+&gt;&gt; I have three questions:
+&gt;&gt;
+&gt;&gt; 1) Has it already been done?
+&gt;&gt;
+&gt;&gt; 2) If this system were available now and populated with the majority
+&gt;&gt; of publications would you use it? Would it be useful?
+&gt;&gt;
+&gt;&gt; 3) Do you (or some one you know) have a database containing details
+&gt;&gt; of titles of periodicals or books that you could export data from as
+&gt;&gt; a contribution to seed the list? If so how many records would there
+&gt;&gt; be and what subject areas (within biodiversity studies) would they
+&gt;&gt; cover?
+&gt;&gt;
+&gt;&gt; You can mail me off list if you don't want to commit to anything in
+&gt;&gt; front of everyone.
+&gt;&gt;
+&gt;&gt; This is still a thought experiment at the moment. I'll mail a high
+&gt;&gt; level summary of replies I get back to the list.
+&gt;&gt;
+&gt;&gt; All the best,
+&gt;&gt;
+&gt;&gt; Roger Hyam
+&gt;&gt;
+&gt;&gt;
+&gt;&gt;
+&gt;&gt;
+&gt;&gt;
+&gt;&gt;
+&gt;&gt;
+&gt;&gt; _______________________________________________
+&gt;&gt; Taxacom mailing list
+&gt;&gt; Taxacom at mailman.nhm.ku.edu
+&gt;&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt;&gt;
+&gt;
+&gt;   ====================================================================
+&gt;   Robert K. Peet, Professor              Phone:  919-962-6942
+&gt;   Department of Biology, CB#3280         Fax:    919-962-6930
+&gt;   University of North Carolina           Cell:   919-368-4971
+&gt;   Chapel Hill, NC  27599-3280  USA       Email:  peet at unc.edu
+&gt;               <A HREF="http://www.bio.unc.edu/faculty/peet/">http://www.bio.unc.edu/faculty/peet/</A>
+&gt;   ====================================================================
+&gt;
+&gt; _______________________________________________
+&gt; Taxacom mailing list
+&gt; Taxacom at mailman.nhm.ku.edu
+&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt;
+
+----------------------------------------
+Professor Roderic D. M. Page
+Editor, Systematic Biology
+DEEB, IBLS
+Graham Kerr Building
+University of Glasgow
+Glasgow G12 8QP
+United Kingdom
+
+Phone: +44 141 330 4778
+Fax: +44 141 330 2792
+email: r.page at bio.gla.ac.uk
+web: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+iChat: aim://rodpage1962
+reprints: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/pubs.html">http://taxonomy.zoology.gla.ac.uk/rod/pubs.html</A>
+
+Subscribe to Systematic Biology through the Society of Systematic
+Biologists Website: <A HREF="http://systematicbiology.org">http://systematicbiology.org</A>
+Search for taxon names: <A HREF="http://darwin.zoology.gla.ac.uk/~rpage/portal/">http://darwin.zoology.gla.ac.uk/~rpage/portal/</A>
+Find out what we know about a species: <A HREF="http://ispecies.org">http://ispecies.org</A>
+Rod's rants on phyloinformatics: <A HREF="http://iphylo.blogspot.com">http://iphylo.blogspot.com</A>
+Rod's rants on ants: <A HREF="http://semant.blogspot.com">http://semant.blogspot.com</A>
+
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="108500.html">[Taxacom] morphology in molecular phylogeny
+</A></li>
+        <LI>Next message: <A HREF="108502.html">[Taxacom] Periodical and book list
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#108501">[ date ]</a>
+              <a href="thread.html#108501">[ thread ]</a>
+              <a href="subject.html#108501">[ subject ]</a>
+              <a href="author.html#108501">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> data sharing
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20data%20sharing&In-Reply-To=%3Cmailman.9857.1157126735.2564.taxacom%40mailman.nhm.ku.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="059219.html">
+   <LINK REL="Next"  HREF="059221.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1998-December/023429.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">data sharing</H1>
+    <B data-pagefind-meta="author">Julian Humphries</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20data%20sharing&In-Reply-To=%3Cmailman.9857.1157126735.2564.taxacom%40mailman.nhm.ku.edu%3E"
+       TITLE="data sharing">jmhbs at UNO.EDU
+       </A><BR>
+    <I data-pagefind-meta="date">Fri Dec  4 13:55:41 CST 1998</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="059219.html">Panbiogeographic works
+</A></li>
+        <LI>Next message: <A HREF="059221.html">data sharing
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#23429">[ date ]</a>
+              <a href="thread.html#23429">[ thread ]</a>
+              <a href="subject.html#23429">[ subject ]</a>
+              <a href="author.html#23429">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>1998</span><!--beginarticle-->
+<PRE>At 11:07 AM 12/4/98 -0800, Peter Rauch wrote:
+&gt;<i>If used data are to be well-understood (by the user), then I'd argue
+</I>&gt;<i>that the audit trail for those data should be made available to the user
+</I>&gt;<i>of the data.
+</I>
+I think Peter and others arguing for a strong audit trail and public
+access to such a feature might not be fully appreciative of the
+complexities involved at both the data managment and public
+access points in the system.
+
+Hugh Wilson advocates getting data into systems on online in
+as straightfoward and rapid a system as possible.  Taken to an
+extreme this certainly could result in some pretty poor correlations
+between the original catalog data and its current form in an online
+database.  But to implement an audit trail as defined by U Smith
+
+&quot;audit trail&quot; is &quot;record history&quot;;  an audit trail allows future
+curators to painlessly, effortlessly reconstruct any and all changes
+made to a record, if necessary, and recover any prior instance of the
+record&quot;
+
+is a monumental programming effort.  It is unclear how Peter would
+handle the delay in acquisition and display of data that would result if we
+waited on a system that behaves as above.  I am pretty sure there
+are none available today for natural history museums.  What Hugh
+seems to be saying is that if we wait on these features until we start
+the process of computerization and online access, we will have
+missed the boat.  So while it might be a great goal,  we need to
+getting going and do something now before collections are relegated
+to an even lower status that they have today.
+
+To give a few examples of the difficulty of audit trail system design
+and management, let me give a few examples of problems we faced
+in attempting to design a data management system with full audit trails.
+
+You have to decide what is a &quot;change&quot; and where to log
+it.  For example if a data entry person mistypes a record and goes
+back to change it right away, is that change?  If not, how and where do
+you distinguish. (I can tell you focus groups responded that they wanted
+control over what was audited but didn't want it to take any extra effort,
+hows
+that for unrealistic).  Are changes recorded at the record or field level?
+
+Do you distinguish between changes that are mass updates
+(e..g changing Brasil to Brazil) from individual record changes?
+
+Rollback systems in commercial databases produce
+huge (really huge) files if you don't commit the changes, so
+the goal of &quot;easy&quot; undo's for the life of a database is not
+realistic.
+
+Do searches look at the audit trail records?
+
+How do you distinguish between specimens literally reidentified
+from simple nomenclatural updates (an very important issue
+for the &quot;quality of data&quot; issue).
+
+How do you display the record history on a 10 table joined
+view?  This might be a typical edit form for a catalog entry,
+and is already overloaded with information.  Where do you
+add previous version of dozens of fields?
+
+This is just a sampling of the issues involved and I dare say
+that few if any have been solved in any system in use today
+and none in online access systems (interface design issues
+get really tricky in a web interface).
+
+The critical issue seems to be a disagreement on the costs/benefits
+of more complex, more featured data acquistion and management
+software.   Its very easy (we all might agree even),  to say that we want
+these 100 features in our curatorial system.  But if we put a time
+and dollar cost on each (both development and staff time) and then
+add a data quality/data retrieval/data value benefit to each feature
+we would only come to a single solution if we all agreed on the numbers.
+Does the audit trail feature increase development and curatorial
+staff costs by 5%, 15% or 25%.  I am not sure but the answer to that
+would certainly help focus the debate.
+
+Julian Humphries
+
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="059219.html">Panbiogeographic works
+</A></li>
+	<LI>Next message: <A HREF="059221.html">data sharing
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#23429">[ date ]</a>
+              <a href="thread.html#23429">[ thread ]</a>
+              <a href="subject.html#23429">[ subject ]</a>
+              <a href="author.html#23429">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

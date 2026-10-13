@@ -1,0 +1,336 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] FW: cladistic analysis for morphological characters
+ -- UPGMA is not cladistics
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2012-November/123888.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] FW: cladistic analysis for morphological characters
+ -- UPGMA is not cladistics</H1>
+    <B data-pagefind-meta="author">Dan Lahr</B>
+    dlahr at ib.usp.br<BR>
+    <I data-pagefind-meta="date">Sat Nov 17 08:42:51 CST 2012</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="123887.html">[Taxacom] pro-iBioshphere project Web Site launched
+</A></li>
+        <LI>Next message: <A HREF="123889.html">[Taxacom] FW: cladistic analysis for morphological characters
+ -- UPGMA is not cladistics
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#123888">[ date ]</a>
+              <a href="thread.html#123888">[ thread ]</a>
+              <a href="subject.html#123888">[ subject ]</a>
+              <a href="author.html#123888">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2012</span><!--beginarticle-->
+<PRE>I agree with Dick, that is quite an unusual claim. Similarity methods are
+the fastest.  If something is so large that it would actually &quot;take too
+long&quot; to run UPGMA, then it would probably be impossible to analyze under
+ML or Bayesian frameworks, and likely parsimony as well.  Just seems like
+the person confused methods.  I have seen instances where people have used
+NJ or UPGMA for seriously large datasets, but these are usually
+bioinformatics people asking specific questions, they know the pitfalls (or
+should).  It may also be common practice among genetics labs if they are
+looking at very recently diverging entities (pathogenic bacterial lineages
+perhaps) where using probabilistic models would make very little difference
+-- lineages have not had time to saturate different substitution sites, but
+you always have the issue of convergent hits.
+
+More interestingly though, you raise an issue that has always bothered me:
+people using multiple reconstructions methods.  I'll start by saying I do
+not have a strong stance nor the answers to this question.
+
+In principle, it seems philosophically incoherent -- you should choose a
+strategy and stick with it, many of the different analytical methods are
+logically incompatible.  It is also naive to think that in some situations
+different methods would yield different results, provided you do things
+correctly.  And if they end up yielding distinct results, what do you do
+with them?  For instance, the biggest strength and at the same time
+Achilles heel of Bayesian methods is that you can define &quot;priors&quot;, which
+are basically distributions of values that you believe, a priori, should
+contain your answer.  To simplify, if you were trying to estimate which
+exact spot an object would hit after you release it, your prior could say
+that the general direction it should move is the floor, because we are
+standing on Earth with a gravitational effect.  However, most people define
+flat priors (meaning they don't believe a priori that any result is more
+likely than another), which in practice this makes the analyses equivalent
+to ML (this is my interpretation, I may be wrong).  I have done this myself
+many times (the power of editors) but I feel like we need to be more
+explicit in our logical choices.
+
+cheers,
+
+Dan
+
+
+On Thu, Nov 15, 2012 at 1:51 PM, Ashley Nicholas &lt;Nicholasa at ukzn.ac.za&gt;wrote:
+
+&gt;  Thanks for the insight Dan,
+&gt;
+&gt;
+&gt;
+&gt; Sadly I do know of some labs that still routinely using phenetics
+&gt; particularly Nearest Neighbor. When I queried this, I was told by a
+&gt; colleague  that UPGMA, although the preferred method, took too much
+&gt; computation time!!!! Which I found disturbing given that science is all
+&gt; about maximizing and not minimizing the uncertainty of results. I must say
+&gt; though that these labs also routinely run Maximum Likelihood and Bayesian
+&gt; Analyses using the same gene sequences. I guess they do this to assess if
+&gt; there is any congruence in the results of all three analytical methods?
+&gt;
+&gt;
+&gt;
+&gt; Regards
+&gt;
+&gt; Ashley
+&gt;
+&gt; ---------------------------------------------------
+&gt; Ashley Nicholas (PhD)
+&gt; Associate Professor &amp; Curator Ward Herbarium
+&gt; School of Life Science,  Westville Campus
+&gt;
+&gt; University of KwaZulu-Natal,
+&gt;
+&gt; Private Bag X54001,
+&gt; Durban, 4000, South Africa
+&gt; Tel.:+27-31-260 7719 Fax.: +27-31-260 2029
+&gt;
+&gt;
+&gt; <A HREF="http://lifesciences.ukzn.ac.za/Staff/Biodiversity/biodiv_evo_staff/Durban/nicholasa.aspx">http://lifesciences.ukzn.ac.za/Staff/Biodiversity/biodiv_evo_staff/Durban/nicholasa.aspx</A>
+&gt; nicholasa at ukzn.ac.za
+&gt;
+&gt; ----------------------------------------------------
+&gt;
+&gt; Empirical scientists do not deal with the truth, we deal with hypotheses.
+&gt; At their best these hypotheses are insightful and predictive, however,
+&gt; nonetheless experience has shown that they are often only a poor
+&gt; approximation of reality and therefor the truth. ? Ashley Nicholas
+&gt;
+&gt; ?-------------------------------------------------------------------
+&gt;
+&gt;
+&gt;
+&gt; *From:* daniel.lahr at gmail.com [mailto:daniel.lahr at gmail.com] *On Behalf
+&gt; Of *Dan Lahr
+&gt; *Sent:* 14 November 2012 19:46
+&gt; *To:* Ashley Nicholas
+&gt; *Cc:* taxacom at mailman.nhm.ku.edu
+&gt;
+&gt; *Subject:* Re: [Taxacom] FW: cladistic analysis for morphological
+&gt; characters -- UPGMA is not cladistics
+&gt;
+&gt;
+&gt;
+&gt; Hi Ashley,
+&gt;
+&gt;
+&gt;
+&gt; &quot;Analogous (rather than homologous) base pair sequences are probably less
+&gt; common than in morphology -- so maybe molecular systematists can get away
+&gt; with approximating it to an evolutionary tree.&quot;
+&gt;
+&gt;
+&gt;
+&gt; It is most certainly not.  There are only 4 options for a site (ATCG), 5
+&gt; if you count indels, and convergent hits are highly likely.  Molecular
+&gt; systematists or anyone that cares about molecular evolution cannot get away
+&gt; with that, and that is why probabilistic methods are used instead of
+&gt; similarity methods.  These assume a model of evolution to infer how many
+&gt; substitutions actually took place in a specific site, even though what you
+&gt; may see in modern terminals are the same base pairs for a given site.  One
+&gt; of the trickiest parts is to flesh apart homology from convergence in
+&gt; molecular sequences, and a lot of money and intellect is poured into that
+&gt; very issue.
+&gt;
+&gt;
+&gt;
+&gt; I am not following this thread, so not sure if this is what you meant, in
+&gt; which case I apologize. I just wanted to clarify that molecular
+&gt; systematists do NOT rely on similarity methods of historical
+&gt; reconstruction.  If you do see such a case in a paper newer than 1990?s,
+&gt; then it is a glaring omission from the reviewers and editor.
+&gt;
+&gt;
+&gt;
+&gt; Kind regards,
+&gt;
+&gt;
+&gt;
+&gt; Dan
+&gt;
+&gt;
+&gt;
+&gt; On Tue, Nov 13, 2012 at 10:01 AM, Ashley Nicholas &lt;Nicholasa at ukzn.ac.za&gt;
+&gt; wrote:
+&gt;
+&gt; John you are right,
+&gt;
+&gt; UPGMA is a phenetics method and is not eplicitly evolutionary. It only
+&gt; measures similarity, and similarity is not always a good indicator of
+&gt; descent from a common ancestor. This is especially true in flowering plants
+&gt; where convergent evolution/homoplasy is rife.
+&gt;
+&gt; Analogous (rather than homologous) base pair sequences are probably less
+&gt; common than in morphology -- so maybe molecular systematists can get away
+&gt; with approximating it to an evolutionary tree. However, in the end it is
+&gt; not an explicit evolutionary tree -- and this needs to be acknowledged
+&gt; rather than ignored (which is what usually happens). However, no matter
+&gt; what, the resulting phenogram is a hypothesis. This hypothesis is as valid
+&gt; as any other hypothesis (until falsified) -- and probably carries some
+&gt; interesting insightes and may generate some interesting questions for
+&gt; further explorations.
+&gt;
+&gt; The text books say a minum of 60 characters is needed but I would think
+&gt; the number of characters needed would depend on the size of the group being
+&gt; analysed. Some statistician has probably established this??
+&gt;
+&gt; Regards
+&gt; Ashley
+&gt;
+&gt; -----Original Message-----
+&gt; From: taxacom-bounces at mailman.nhm.ku.edu [mailto:
+&gt; taxacom-bounces at mailman.nhm.ku.edu] On Behalf Of John Grehan
+&gt; Sent: 10 November 2012 17:08
+&gt; To: Sami Rabei
+&gt; Cc: TAXACOM
+&gt; Subject: Re: [Taxacom] cladistic analysis for morphological characters
+&gt;
+&gt; In my opinion its ok to make a cladistic analysis for any number of
+&gt; characters. It just depends where those characters are clustered within the
+&gt; group analyzed as to the result. I suspect that unless the characters are
+&gt; dispersed throughout the 44 species, there will be some clades that have
+&gt; some measure of good support, others that do not, and others that whose
+&gt; relationships are unresolved.
+&gt;
+&gt; I'm a bit out of touch with all methods, but I recall UPGMA is a phenetic
+&gt; method?
+&gt;
+&gt; John Grehan
+&gt;
+&gt; On Sat, Nov 10, 2012 at 6:45 AM, Sami Rabei &lt;samirabei at mans.edu.eg&gt; wrote:
+&gt;
+&gt; &gt; Dear All
+&gt; &gt;
+&gt; &gt; I have 81 morphological characters for 44 species. it is right to make
+&gt; &gt; a cladistic analysis for them. If it is ok which program I can use
+&gt; &gt; it.On the other hand I did UPGMA .
+&gt; &gt;
+&gt; &gt; Many Thanks in advance
+&gt; &gt;
+&gt; &gt; All the best.
+&gt; &gt;
+&gt; &gt; Sami Rabei
+&gt; &gt;
+&gt; &gt; <A HREF="http://mansoura.academia.edu/SamiRabei">http://mansoura.academia.edu/SamiRabei</A>
+&gt; &gt;
+&gt; &gt; ----------------------------------
+&gt; &gt; With my Best Wishes
+&gt; &gt; Sami Hussein Rabei, Ph.D.
+&gt; &gt; Botany Department
+&gt; &gt; Faculty of Science,
+&gt; &gt; Damietta University
+&gt; &gt; New Damietta , Post Box 34517
+&gt; &gt; Damietta
+&gt; &gt; Egypt .
+&gt; &gt;
+&gt; &gt; Tel. Mobile:   002 0127 3601618
+&gt; &gt; Tel. Work:     002 057 2403981
+&gt; &gt; Tel. Home:    002 057 2403108
+&gt; &gt; Fax:              002 057 2403868
+&gt; &gt;
+&gt; &gt; _______________________________________________
+&gt; &gt;
+&gt; &gt; Taxacom Mailing List
+&gt; &gt; Taxacom at mailman.nhm.ku.edu
+&gt; &gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt; &gt;
+&gt; &gt; The Taxacom archive going back to 1992 may be searched with either of
+&gt; &gt; these methods:
+&gt; &gt;
+&gt; &gt; (1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt; &gt;
+&gt; &gt; (2) a Google search specified as:  site:
+&gt; &gt; mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+&gt; &gt;
+&gt; _______________________________________________
+&gt;
+&gt; Taxacom Mailing List
+&gt; Taxacom at mailman.nhm.ku.edu
+&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt;
+&gt; The Taxacom archive going back to 1992 may be searched with either of
+&gt; these methods:
+&gt;
+&gt; (1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt;
+&gt; (2) a Google search specified as:  site:
+&gt; mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+&gt; ==== Please find our Email Disclaimer here--&gt;:
+&gt; <A HREF="http://www.ukzn.ac.za/disclaimer">http://www.ukzn.ac.za/disclaimer</A> ===&gt;
+&gt; _______________________________________________
+&gt;
+&gt; Taxacom Mailing List
+&gt; Taxacom at mailman.nhm.ku.edu
+&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt;
+&gt; The Taxacom archive going back to 1992 may be searched with either of
+&gt; these methods:
+&gt;
+&gt; (1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt;
+&gt; (2) a Google search specified as:  site:
+&gt; mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+&gt;
+&gt;
+&gt;
+&gt;
+&gt;
+&gt; --
+&gt; ___________________
+&gt; Daniel J. G. Lahr, PhD
+&gt; Dept of Zoology, Univ. of Sao Paulo, Brazil
+&gt;  ==== Please find our Email Disclaimer here--&gt;:
+&gt; <A HREF="http://www.ukzn.ac.za/disclaimer">http://www.ukzn.ac.za/disclaimer</A> ===&gt;
+
+
+
+-- 
+___________________
+Daniel J. G. Lahr, PhD
+Dept of Zoology, Univ. of Sao Paulo, Brazil
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="123887.html">[Taxacom] pro-iBioshphere project Web Site launched
+</A></li>
+        <LI>Next message: <A HREF="123889.html">[Taxacom] FW: cladistic analysis for morphological characters
+ -- UPGMA is not cladistics
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#123888">[ date ]</a>
+              <a href="thread.html#123888">[ thread ]</a>
+              <a href="subject.html#123888">[ subject ]</a>
+              <a href="author.html#123888">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

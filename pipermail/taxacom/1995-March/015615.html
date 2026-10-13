@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Publicly available DELTA data; Watson's Angiosperm families
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1995-March/015615.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Publicly available DELTA data; Watson's Angiosperm families</H1>
+    <B data-pagefind-meta="author">Mike Dallwitz</B>
+    miked at ENTO.CSIRO.AU<BR>
+    <I data-pagefind-meta="date">Tue Mar  7 16:08:41 CST 1995</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="098768.html">Angiosperm Families - INTKEY Package
+</A></li>
+        <LI>Next message: <A HREF="051407.html">Publicly available DELTA data; Watson's Angiosperm families
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#015615">[ date ]</a>
+              <a href="thread.html#015615">[ thread ]</a>
+              <a href="subject.html#015615">[ subject ]</a>
+              <a href="author.html#015615">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1995</span><!--beginarticle-->
+<PRE>                                                                  7 March 1995
+
+&gt; From: bwilliam at oyster.smcm.edu (Bill Williams)
+&gt; To: Delta-l
+&gt;
+&gt; Is there somewhere a list of all publicly available DELTA data sets? I have
+&gt; a couple of undergraduate students trying to get INTKEY up and running for
+&gt; possible student use, and they'd very much like to find some North American
+&gt; angiosperm data (they [and I!] find the &quot;ANGIO&quot; data intimidating because it
+&gt; has so many families [and characters!] they've never heard of).
+
+The only publicly available data sets I know of are those on the DELTA
+gopher/ftp areas (<A HREF="ftp://muse.bio.cornell.edu/pub/delta">ftp://muse.bio.cornell.edu/pub/delta</A> and
+<A HREF="ftp://spider.ento.csiro.au/delta).">ftp://spider.ento.csiro.au/delta).</A> I would be happy to add other interactive
+identification packages, whether using DELTA/INTKEY or other software. If you
+send me a contribution, please archive the files in a self-extracting file
+(preferably using LHA). Also, please include a short file Download.1st
+containing a BRIEF description of the package and instructions for downloading
+and installing it.
+
+You should be able to overcome your problems with Leslie Watson's Angiosperm-
+families INTKEY package. Most of the information you need is in the file
+ANGIO.1ST which accompanies the package. Here are some relevant extracts,
+together with my additional comments. (For brevity, the INTKEY operations are
+given in their command-line forms, but they can all be invoked via the menus.)
+
+    Subsets [of the taxa] which should be more or less representative of large
+    world regions can be obtained by using the `geographical distribution'
+    character (accessible via the keyword `distrib'), which has been provided
+    especially for this purpose. For example, to obtain a subset for North
+    America, enter state 12 of this character, followed by INCLUDE TAXA
+    REMAINING or SET FIX ON.
+
+INCLUDE TAXA REMAINING will make all subsequent operations apply to only the
+North American taxa (as recorded). SET FIX ON will `fix' the distribution
+character so that it is not cleared when a new identification is started. The
+latter method has the advantage that the `fixed' character is subject to the
+error-tolerance mechanism, so that a family not recorded from North America
+can still be identified.
+
+    [Alternatively,] taxon keywords, representing subsets of the taxa, can be
+    defined via lists of names. Lists for a few geographical regions are
+    provided with the data. For example, the file AUSTRALIA.TAX defines a
+    keyword AUSTRALIA for all the the families represented in Australia. The
+    definition can be invoked in INTKEY, when required, by the FILE command:
+        FILE INPUT AUSTRALIA.TAX
+    The keyword can then be used with any command requiring a set of taxa. In
+    particular, if you enter
+        INCLUDE TAXA AUSTRALIA
+    you will be working exclusively with the Australian subset. To resume
+    working with the full data set, enter
+        INCLUDE TAXA ALL
+
+To make things easier for students, you can use this method to restrict
+operation to even smaller subsets of taxa, for example, for the state, the
+university campus, or a set of specimens being used in a practical class. Any
+of the above methods can be incorporated in the initialization file,
+INTKEY.INI, so that the restricted set of taxa is the one seen when the
+program is started.
+
+    Detailed information on particular characters and states is available via
+    the character notes. If you are uncertain how particular character states
+    are being applied, use the program to obtain lists of families
+    exemplifying them, and examine representatives available locally (SET
+    MATCH E (Exact) should be invoked, to eliminate taxa that are variable for
+    the characters in question). Some of the `characters', though clearly
+    contributing to the usefulness of the data, are not taxonomic characters
+    in the normal sense (geographical distributions, numbers of genera and
+    species per family, synonyms etc.). ... When attempting identifications,
+    you will normally wish to exclude from consideration such quasi-
+    characters, and esoteric characters such as anatomy, physiology and
+    cytology. The character keyword NONDIFF has been provided, for convenience
+    in excluding the kinds of characters which will not normally be required
+    for routine identification. Enter
+        EXCLUDE CHAR NONDIFF
+    to invoke it.
+
+You can take this further by defining and using additional keywords to exclude
+(or include) characters that you think inappropriate (or appropriate) for the
+level of knowledge of the users. Again, this reduction in the number of
+available characters can be done in INTKEY.INI.
+
+    Botanists with sufficient knowledge of plant families to select characters
+    for their known reliability and diagnostic value will use the system more
+    efficiently than others. The interactive technique, however, makes
+    reliable identification more accessible for persons without specialist
+    knowledge, and its use will help them acquire it. If you are at a loss
+    where to start with a specimen, first scan the character list for any
+    characters you feel you can confidently use. ... Such obvious and
+    relatively unambiguous features as phyllotaxy, habit (herb/tree), aromatic
+    foliage, gland dots, will be found to have great diagnostic value. ...
+
+    Contributions of descriptive data and illustrations suitable for improving
+    and extending the database would be welcomed, and appropriately
+    acknowledged in the displays and in the accompanying literature.
+
+Character illustrations, and additions or improvements to the character notes
+would also be welcomed, and quickly incorporated in new releases of the
+package.
+
+Mike Dallwitz                                  Internet md at ento.csiro.au
+CSIRO Division of Entomology                   Fax +61 6 246 4000
+GPO Box 1700, Canberra ACT 2601, Australia     Phone +61 6 246 4075
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="098768.html">Angiosperm Families - INTKEY Package
+</A></li>
+        <LI>Next message: <A HREF="051407.html">Publicly available DELTA data; Watson's Angiosperm families
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#015615">[ date ]</a>
+              <a href="thread.html#015615">[ thread ]</a>
+              <a href="subject.html#015615">[ subject ]</a>
+              <a href="author.html#015615">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

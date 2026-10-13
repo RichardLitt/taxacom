@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> interactive keys and others
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2006-March/094940.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">interactive keys and others</H1>
+    <B data-pagefind-meta="author">Mike Dallwitz</B>
+    M.J.Dallwitz at NETSPEED.COM.AU<BR>
+    <I data-pagefind-meta="date">Mon Mar 13 17:19:11 CST 2006</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="094939.html">Palm pilots - possibly a better usage &amp; interactive keys
+</A></li>
+        <LI>Next message: <A HREF="094945.html">Delta and other taxonomic databases: an inquiry
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#094940">[ date ]</a>
+              <a href="thread.html#094940">[ thread ]</a>
+              <a href="subject.html#094940">[ subject ]</a>
+              <a href="author.html#094940">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2006</span><!--beginarticle-->
+<PRE>Mary Barkworth wrote:
+
+&gt; One quickly becomes aware of how unparallel many of our descriptions are.
+&gt; This is not completely bad - a key is supposed to be a shortcut to
+&gt; identification, whatever its format. A description, if we separate them from
+&gt; keys for a moment, should be permitted to contain more than is in the key -
+&gt; if more is known. Otherwise we find ourselves limiting what is in the
+&gt; description. There should be similar core information in all descriptions.
+&gt; It is also helpful if there is a level of uniformity in phrasing throughout
+&gt; - but again, one may wish to enhance the information about some aspects for
+&gt; taxa that one knows particularly well. If we require absolute parallelism,
+&gt; we lose the additional information that is available, something that is not
+&gt; helpful. Yes, it would be lovely if one could then go out and obtain the
+&gt; additional information for all other species; that is not always feasible.
+&gt; Should we conceal what is known in order to keep parallelism?
+
+By 'parallel', I assume you mean descriptions in which corresponding parts
+exist in all the descriptions, e.g.
+     petals red
+     petals scarlet
+     petals blue
+
+This is neither necessary nor sufficient in data intended for use in
+identification (or classification). The requirement is for _comparative_
+descriptions, i.e. those based on properly formed characters. The list of terms
+
+     petals
+         1. red
+         2. scarlet
+         3. blue
+
+is not a character, because the 'states' are not mutually exclusive. I call
+it a pseudocharacter, because its structure makes it look like a character,
+and it would be accepted as a character by any program for processing
+descriptive data. (I realise that there are other uses of the term.)
+
+I completely agree with what you say about not limiting what is in the
+description. In DELTA format, non-comparative information is easily
+incorporated in the form of text 'characters' and comments, without
+compromising the data for comparative purposes. For example, a character
+could be defined as
+
+     petals
+         1. red
+         2. blue
+
+and the above data recorded as
+
+     petals red
+     petals red (scarlet)
+     petals blue
+
+It's certainly not necessary, or even advisable, to record every character
+for every taxon (provided that your software copes properly with this). The
+effort required to do that would be better spent in adding data where they
+are most needed. The 'Diagnose' option in Intkey gives guidance in this. It
+finds sets of taxa that are not separated, or are not separated with
+sufficient redundancy to provide alternative characters for identification.
+This is important so that users have a choice of characters, and for the
+proper operation of error tolerance. When these areas of deficiency have
+been found, they can be improved by recording relevant missing data (if any)
+in existing characters, or by adding extra characters to separate the
+problem taxa, and recording them for those taxa.
+
+--
+Mike Dallwitz
+Contact information: <A HREF="http://delta-intkey.com/contact/dallwitz.htm">http://delta-intkey.com/contact/dallwitz.htm</A>
+DELTA home page: <A HREF="http://delta-intkey.com">http://delta-intkey.com</A>
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="094939.html">Palm pilots - possibly a better usage &amp; interactive keys
+</A></li>
+        <LI>Next message: <A HREF="094945.html">Delta and other taxonomic databases: an inquiry
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#094940">[ date ]</a>
+              <a href="thread.html#094940">[ thread ]</a>
+              <a href="subject.html#094940">[ subject ]</a>
+              <a href="author.html#094940">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

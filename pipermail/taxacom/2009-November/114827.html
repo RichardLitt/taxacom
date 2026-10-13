@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Scientific name vs Scientific name string
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2009-November/114827.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Scientific name vs Scientific name string</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at bishopmuseum.org<BR>
+    <I data-pagefind-meta="date">Thu Nov 19 13:36:39 CST 2009</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="114826.html">[Taxacom] Scientific name vs Scientific name string
+</A></li>
+        <LI>Next message: <A HREF="031511.html">[Taxacom] Scientific name vs Scientific name string
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#114827">[ date ]</a>
+              <a href="thread.html#114827">[ thread ]</a>
+              <a href="subject.html#114827">[ subject ]</a>
+              <a href="author.html#114827">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2009</span><!--beginarticle-->
+<PRE>Hi Francisco,
+
+&gt; the ICZN Code's definition for &quot;scientific name&quot; given in the 
+&gt; Glossary (&quot;scientific name as opposed to vernacular name&quot;) 
+&gt; includes the definition I gave. The ICZN Code's definitions 
+&gt; for such terms are not always consistent with the use of such 
+&gt; terms in the spoken language or in the Oxford English 
+&gt; dictionary (and then we have to be cautious). They are 
+&gt; included there to explain the meanings of these terms in the 
+&gt; ICZN Code, often because their meaning is ambiguous and their 
+&gt; use in the Code represents only a portion of the entire 
+&gt; ranges of meanings of such terms in biological sciences, in 
+&gt; broader natural sciences or generally in the English language.
+
+I agree with all of these points, and I do not think that anything in my
+previous post contradicts them.
+
+&gt; &gt; In other words, &quot;Homo sapiens&quot; is two
+&gt; &gt; names: one genus-group name and one species-group name (the latter 
+&gt; &gt; often referred to as an &quot;epithet&quot;).
+&gt; I disagree and do not interprete the Code in this way. Homo 
+&gt; sapiens is the one and single name of a species-group taxon, 
+&gt; as defined in the Glossary (a binomen is *one* scientific 
+&gt; name, not two). The compound &quot;sapiens&quot; (taken alone) is not a 
+&gt; name in the sense of the Code.
+
+You are certainly free to disagree in terms of what *you* mean by a
+scientific name, but the Code's glossary seems pretty clear on what the ICZN
+Code means.  The first clue is in the definition of &quot;name&quot;:
+
+&quot;(3) An *element* of the name of a species-group taxon&quot; [emphasis added]
+
+How else can the word &quot;element&quot; be defined in this context (names of
+species-group taxa) except in the sense that &quot;Homo sapiens&quot; contains two
+elements, and thus two names?
+
+More explicitly, from the definition of &quot;scientific name&quot;:
+
+&quot;The scientific name of a taxon at any rank above the species group consists
+of one name; that of a species, two names (a binomen); and that of a
+subspecies, three names (a trinomen)&quot;
+
+That's about as explicit as it gets:  a binomen is *two* names, and a
+trinomen is *three* names.
+
+Can you point to any passage in the Code that defines &quot;name&quot; the way you do
+(i.e., that &quot;Homo sapiens&quot; is *one* name)?
+
+&gt; In any case I agree with you that is is highly desireable to 
+&gt; use terms that cannot lead to serious misunderstandings.
+
+Yes.  Of course, the problem is that different communities have different
+lexicons, and as such choose terms with specific meanings intuitive to them,
+but counterintuitive to other communities.  One of these days I'm going to
+create a list of &quot;troublesome words&quot; in biodiversity informatics.  Talk to a
+computer programmer about the meaning of words such as &quot;Class&quot;, &quot;Type&quot;,
+&quot;Name&quot;, etc., and I guarantee there will be some very serious
+misunderstandings (see the earlier thread where we discussed &quot;natural
+keys&quot;).
+ 
+&gt; I would not use the term &quot;string&quot; in non-electronic environments. 
+
+I don't know that the term &quot;name-string&quot; has been used in any context other
+than electronic &quot;environements&quot; (another word that means something different
+to a biologist!); but I tend to agree that the term &quot;string&quot; in this context
+has a very meaning than it does to a general audience (who may think of
+twisted or braided strands of twine, used to tie, for example, one's shoes).
+And, of course, a physicist would think in terms of something else
+altogether.....
+
+&gt; A string in the sense of the 
+&gt; dictionary I am using is a chain of characters. 
+
+Yes -- that is the sense in which it is intended for the term &quot;name-string&quot;,
+as used by the biodiversity informatics (hence: electronic information
+implied) community.
+
+&gt; An incorrectly spelled specific name is the same specific 
+&gt; name as the correctly spelled one, but not the same genus 
+&gt; species string.
+
+This is *exactly* why we needed to distinguish the notion of a &quot;name-string&quot;
+(exact orthography as represented in some context, mis-spelled or
+otherwise), from what we cumbersomely refer to as a &quot;name-object&quot; (the
+abstract notion of a taxon name, as governed by the Code, which has an
+essence that transcends the characters used to represent it on a printed
+page or in a computer database).  Properties of a &quot;name-object&quot; include
+links to published nomenclatual acts, type specimens, and other such things
+governed by the Codes.  As for &quot;name-strings&quot;, we even went so far as to
+define them as electronic text represented by binary information encoded via
+UTF-8 (which was what was implid by the word &quot;Unicode&quot; in the LinneanCore
+definition). 
+
+&gt; &gt; relatively broad adoption and consistent usage of the term 
+&gt; &gt; &quot;name-string&quot;, which is shorter to type than &quot;a text-string 
+&gt; purported 
+&gt; &gt; to represent a scientific name&quot;.
+&gt; Both terms are equally inaccurate and ambiguous, they can 
+&gt; represent anything. 
+
+To you; yes.  To those of us who invented the term for our internal
+conversations, they are not only accurate, but they are unambiguous, and
+have GREATLY facilitated our conversations about developing standards and
+associated protocols for the electronic exchange and integration of
+taxonomic information.  If you want to define new terms that are more
+intuitive (or, to use your word, &quot;accurate&quot;) for your community, then by all
+means please do so.  But at the same time, please do not add confusion to
+conversations in *our* community, which we have fought very hard to overcome
+by defining terms that make sense to *us*, and facilitate *our*
+conversations very effectively.  Note that I have generally not used the
+term &quot;name-string&quot; on Taxacom (a different community), except in response to
+specific questions about how it is meant in the context of biodiversity
+informatics.
+
+&gt; I would prefer to use terms that have a 
+&gt; much narrower range of possible misunderstandings. Taxon name 
+&gt; author string, genus species string, 
+&gt; genus-species-author-year combination, self explaining terms 
+&gt; like these. 
+
+Hmmm....maybe we have a different interpretation of the meaning of the word
+&quot;misunderstanding&quot; (or perhaps it's the word &quot;narrower&quot; that we interpret
+differently)?  Like I said, if you find these terms more intuitive, and you
+are working in a community that feels likewise, then by all means, establish
+proper definitions for them.  But be careful!  Certain other subcommunities
+within the realm of biodiversity tend to want to acronym-ize everything, so
+before you know it, we'll be discussing GSAYCs and GSS's.  Ugh.....
+
+&gt; Don't use expressions for which the reader needs 
+&gt; to know the usage history and who are the persons widely 
+&gt; considered to be important enough to have the right to define 
+&gt; the meaning of such terms.  
+
+Agreed -- which is why I try not to use terms like &quot;name-string&quot; in a forum
+like Taxacom, unless I am explicit about how I am using the term.
+
+&gt; Also consider that not every scientist is so firm in English 
+&gt; as you are. 
+
+On this issue, I am very-much aware!  As proof of my convictions, when the
+ICZN voted on whether the official version of the Code should be represented
+in only one language (English), as opposed to the current two official
+languages (English and French), I belive I was the only Commissioner who did
+not vote &quot;Yes&quot;.  Indeed, during the break afterward, Philippe Bouchet (the
+French Commissioner who advocated abolishing the French version as co-equal
+to the English version in terms of official interpretations of meaning) gave
+me a bit of a hard time (in good fun, of course) for not supporting his
+cause. 
+
+But in the realm of biodiversity informatics, it seems that English (or,
+rather, Computer Geek-speak-influenced English) tends to dominate the oral
+and written conversations.  This was not my decision; nor do I think it's
+fair.  
+
+Aloha,
+Rich
+
+Richard L. Pyle, PhD
+Database Coordinator for Natural Sciences
+  and Associate Zoologist in Ichthyology
+Department of Natural Sciences, Bishop Museum
+1525 Bernice St., Honolulu, HI 96817
+Ph: (808)848-4115, Fax: (808)847-8252
+email: deepreef at bishopmuseum.org
+<A HREF="http://hbs.bishopmuseum.org/staff/pylerichard.html">http://hbs.bishopmuseum.org/staff/pylerichard.html</A>
+
+
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="114826.html">[Taxacom] Scientific name vs Scientific name string
+</A></li>
+        <LI>Next message: <A HREF="031511.html">[Taxacom] Scientific name vs Scientific name string
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#114827">[ date ]</a>
+              <a href="thread.html#114827">[ thread ]</a>
+              <a href="subject.html#114827">[ subject ]</a>
+              <a href="author.html#114827">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] AMNH, spiders, and LSIDs
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2008-January/109767.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] AMNH, spiders, and LSIDs</H1>
+    <B data-pagefind-meta="author">Ricardo Scachetti Pereira</B>
+    ricardo at tdwg.org<BR>
+    <I data-pagefind-meta="date">Tue Jan 15 06:59:03 CST 2008</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="109766.html">[Taxacom] LSIDs as tags (was: AMNH, spiders, and LSIDs)
+</A></li>
+        <LI>Next message: <A HREF="109768.html">[Taxacom] stop the ads from now please
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#109767">[ date ]</a>
+              <a href="thread.html#109767">[ thread ]</a>
+              <a href="subject.html#109767">[ subject ]</a>
+              <a href="author.html#109767">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2008</span><!--beginarticle-->
+<PRE>    Hi all,
+
+    In theory, there is nothing wrong with issuing LSIDs without 
+resolving them. The only hard and fast rule is that you cannot assign 
+the same LSID to more than one object.
+
+    There are a couple of practical problems, however:
+
+1) People will expect to be able to resolve the LSIDs they come across. 
+If you (or an automated agent) get a reference (LSID) to an object, you 
+(or the agent) may want to know what it points to, and you'll do that by 
+trying to resolve it. Applications will try to resolve them directly 
+using the LSID resolution protocol, while humans may try to resolve them 
+using a proxy, like <A HREF="http://lsid.tdwg.org/.">http://lsid.tdwg.org/.</A> If your LSID doesn't resolve, 
+that's a usability problem, much like the dreaded 404 error - page not 
+found. We've experienced an example of that when Rod and Kevin tried to 
+resolve the LSIDs given in the beginning of this thread.
+
+2) There are also technical implications associated with the choice of 
+each part of the LSIDs one mints that affects the deployment of 
+resolvers. The best way to take these implications into consideration is 
+to try to deploy a resolver *while* you are defining the parts of your 
+LSIDs. If you define your LSIDs long before you deploy your resolver, 
+there will be technical consequences that you will have to live with 
+(forever!?) when you deploy your resolver. In a few cases, you may not 
+even be able to deploy the resolver at all (if you make a bad choice of 
+an LSID authority identification - the domain name in the LSID, for 
+example).
+
+    That's why we recommend in the TDWG LSID Applicability Statement 
+that LSIDs should be resolvable (recommendation #6). You can find that 
+document at <A HREF="http://www.tdwg.org/standards/150">http://www.tdwg.org/standards/150</A> (click the &quot;Download&quot; link 
+- it's a MS-Word document for now as it is under review in the TDWG 
+Standards Track.)
+
+    In the next few days we are about to release a set of LSID authority 
+implementation guides that addresses some of the issues I mention above. 
+Those documents will help people mint LSIDs but they won't replace good 
+hands-on experience that you get by deploying your resolvers.
+
+    I hope this helps.
+
+    Cheers,
+
+Ricardo
+
+
+Roderic Page wrote:
+&gt; I take your point. But, if I was to publish a web site with lots of  
+&gt; URL links, none of which actually worked, would anybody take me  
+&gt; seriously? I suspect not. I wonder what the wider community is to  
+&gt; make of LSIDs which don't actually do anything ... might they wonder  
+&gt; what the fuss about LSIDs is all about?
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="109766.html">[Taxacom] LSIDs as tags (was: AMNH, spiders, and LSIDs)
+</A></li>
+        <LI>Next message: <A HREF="109768.html">[Taxacom] stop the ads from now please
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#109767">[ date ]</a>
+              <a href="thread.html#109767">[ thread ]</a>
+              <a href="subject.html#109767">[ subject ]</a>
+              <a href="author.html#109767">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

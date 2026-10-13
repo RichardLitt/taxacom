@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Google, Wikipedia, and EOL
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Google%2C%20Wikipedia%2C%20and%20EOL&In-Reply-To=%3C84662112-FEE4-4C12-92FA-7F19D57F7258%40bio.gla.ac.uk%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="113869.html">
+   <LINK REL="Next"  HREF="113808.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2009-September/113870.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Google, Wikipedia, and EOL</H1>
+    <B data-pagefind-meta="author">Roderic Page</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Google%2C%20Wikipedia%2C%20and%20EOL&In-Reply-To=%3C84662112-FEE4-4C12-92FA-7F19D57F7258%40bio.gla.ac.uk%3E"
+       TITLE="[Taxacom] Google, Wikipedia, and EOL">r.page at bio.gla.ac.uk
+       </A><BR>
+    <I data-pagefind-meta="date">Wed Sep  2 09:42:02 CDT 2009</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="113869.html">[Taxacom] Google, Wikipedia, and EOL
+</A></li>
+        <LI>Next message: <A HREF="113808.html">[Taxacom] formation of zoological names with Mc, Mac, etc.
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#113870">[ date ]</a>
+              <a href="thread.html#113870">[ thread ]</a>
+              <a href="subject.html#113870">[ subject ]</a>
+              <a href="author.html#113870">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2009</span><!--beginarticle-->
+<PRE>Dear Dmitry,
+
+There are several ways to parse Wikipedia:
+
+1. Parse just the templates (such as Taxobox, Cite, etc.) and tags  
+(such as &lt;ref&gt;, which gives the core stuff such as taxon names and  
+bibliographic details.
+
+2. Parse links. In the case of taxonomic pages redirects are typically  
+taxonomic synonyms
+
+3. Parse the body of the text itself (as distinct from the text that  
+is marked up)
+
+I've been focussing on 1 &amp; 2.  DBpedia.org does much the same.
+
+I think if Wikipedia is to be more useful for us, then we will need to  
+introduce more templates to structure the text (e.g., providing basic  
+nomenclatural details).
+
+Semantic Mediawiki is cool, and I've played a little with it (e.g., <A HREF="http://itaxon.org/wikidev/Chromis_circumaurea">http://itaxon.org/wikidev/Chromis_circumaurea</A> 
+  ) It enables some useful queries to be constructed, which makes it  
+much more powerful than Mediawiki by itself.
+
+If I were to create a &quot;page per species&quot; web site from scratch, I'd  
+use Semantic Mediawiki. Indeed I may well resurrect the iTaxon project  
+to explore this some more.
+
+FreeBase is also cool, and they are doing some neat stuff.
+
+But, it seems to me that the big issue here is not so much technology  
+(which is important), but getting people to create/edit/use the site,  
+and given that we are in the long tail business, I wonder whether we  
+should go where the crowd is.
+
+Regards
+
+Rod
+
+
+On 2 Sep 2009, at 15:21, Dmitry Mozzherin wrote:
+
+&gt;<i> One problem we do have with Wikipedia and EOL approaches, is that
+</I>&gt;<i> information is mostly not atomized, which makes it quite
+</I>&gt;<i> expensive/impossible to use for any kind of data mining/data
+</I>&gt;<i> shuffling/reasoning.
+</I>&gt;<i>
+</I>&gt;<i> What are your thoughts about this? Do projects like Freebase
+</I>&gt;<i> (<A HREF="http://www.freebase.com/view/en/bird">http://www.freebase.com/view/en/bird</A>) or semantic wiki deserve more
+</I>&gt;<i> attention?
+</I>&gt;<i>
+</I>&gt;<i> Dima
+</I>&gt;<i>
+</I>&gt;<i> On Tue, Sep 1, 2009 at 8:56 AM, Roderic Page&lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">r.page at bio.gla.ac.uk</A>&gt;  
+</I>&gt;<i> wrote:
+</I>&gt;&gt;<i> Dear All,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I've written a short blog post looking at what sites Google returns
+</I>&gt;&gt;<i> when you search for all mammal species by scientific name. Can't say
+</I>&gt;&gt;<i> I'm surprised by the results, but the magnitude of the difference
+</I>&gt;&gt;<i> between Wikipedia and the rest is quite striking.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> The post is at <A HREF="http://iphylo.blogspot.com/2009/09/google-wikipedia-and-eol.html">http://iphylo.blogspot.com/2009/09/google-wikipedia-and-eol.html</A>
+</I>&gt;&gt;<i>   (or <A HREF="http://tinyurl.com/n7ey68">http://tinyurl.com/n7ey68</A> is that gets mangled).
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Regards
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Rod
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> ---------------------------------------------------------
+</I>&gt;&gt;<i> Roderic Page
+</I>&gt;&gt;<i> Professor of Taxonomy
+</I>&gt;&gt;<i> DEEB, FBLS
+</I>&gt;&gt;<i> Graham Kerr Building
+</I>&gt;&gt;<i> University of Glasgow
+</I>&gt;&gt;<i> Glasgow G12 8QQ, UK
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Email: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">r.page at bio.gla.ac.uk</A>
+</I>&gt;&gt;<i> Tel: +44 141 330 4778
+</I>&gt;&gt;<i> Fax: +44 141 330 2792
+</I>&gt;&gt;<i> AIM: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">rodpage1962 at aim.com</A>
+</I>&gt;&gt;<i> Facebook: <A HREF="http://www.facebook.com/profile.php?id=1112517192">http://www.facebook.com/profile.php?id=1112517192</A>
+</I>&gt;&gt;<i> Twitter: <A HREF="http://twitter.com/rdmpage">http://twitter.com/rdmpage</A>
+</I>&gt;&gt;<i> Blog: <A HREF="http://iphylo.blogspot.com">http://iphylo.blogspot.com</A>
+</I>&gt;&gt;<i> Home page: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Taxacom Mailing List
+</I>&gt;&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;&gt;<i> <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> The Taxacom archive going back to 1992 may be searched with either  
+</I>&gt;&gt;<i> of these methods:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> (1) <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Or (2) a Google search specified as:  site:mailman.nhm.ku.edu/ 
+</I>&gt;&gt;<i> pipermail/taxacom  your search terms here
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>
+---------------------------------------------------------
+Roderic Page
+Professor of Taxonomy
+DEEB, FBLS
+Graham Kerr Building
+University of Glasgow
+Glasgow G12 8QQ, UK
+
+Email: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">r.page at bio.gla.ac.uk</A>
+Tel: +44 141 330 4778
+Fax: +44 141 330 2792
+AIM: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">rodpage1962 at aim.com</A>
+Facebook: <A HREF="http://www.facebook.com/profile.php?id=1112517192">http://www.facebook.com/profile.php?id=1112517192</A>
+Twitter: <A HREF="http://twitter.com/rdmpage">http://twitter.com/rdmpage</A>
+Blog: <A HREF="http://iphylo.blogspot.com">http://iphylo.blogspot.com</A>
+Home page: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+
+
+
+
+
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="113869.html">[Taxacom] Google, Wikipedia, and EOL
+</A></li>
+	<LI>Next message: <A HREF="113808.html">[Taxacom] formation of zoological names with Mc, Mac, etc.
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#113870">[ date ]</a>
+              <a href="thread.html#113870">[ thread ]</a>
+              <a href="subject.html#113870">[ subject ]</a>
+              <a href="author.html#113870">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

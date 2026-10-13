@@ -1,0 +1,225 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Chameleons, GBIF, and the Red List
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Chameleons%2C%20GBIF%2C%20and%20the%20Red%20List&In-Reply-To=%3CCAN1%2BHk9j-3XDiYvkEwiAUR8NhCDOCYYjmt4LotJ-RLD%2BuseHGA%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="127564.html">
+   <LINK REL="Next"  HREF="127586.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2014-August/127575.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Chameleons, GBIF, and the Red List</H1>
+    <B data-pagefind-meta="author">David Campbell</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Chameleons%2C%20GBIF%2C%20and%20the%20Red%20List&In-Reply-To=%3CCAN1%2BHk9j-3XDiYvkEwiAUR8NhCDOCYYjmt4LotJ-RLD%2BuseHGA%40mail.gmail.com%3E"
+       TITLE="[Taxacom] Chameleons, GBIF, and the Red List">pleuronaia at gmail.com
+       </A><BR>
+    <I data-pagefind-meta="date">Mon Aug 25 13:31:54 CDT 2014</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="127564.html">[Taxacom] Chameleons, GBIF, and the Red List
+</A></li>
+        <LI>Next message: <A HREF="127586.html">[Taxacom] Chameleons, GBIF, and the Red List
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#127575">[ date ]</a>
+              <a href="thread.html#127575">[ thread ]</a>
+              <a href="subject.html#127575">[ subject ]</a>
+              <a href="author.html#127575">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2014</span><!--beginarticle-->
+<PRE>Overall, I haven't had much occasion to use GBIF-type data.  As far as I
+can tell, it's a good compiler of data and useful for seeing what has been
+reported.  The virus/insect confusion might point to flaws in data
+aggregation.  I encountered a case (in another database) where a snail was
+being misreported as a sponge; an error report yielded the reply to go
+contact the source datasets.  After some effort in finding how to get to
+those, it turned out that the datasets were correct and the flaw was a
+confusion between homonyms in the aggregator.
+
+But the problem is not so much that GBIF is flawed.  Rather, the overall
+data model is flawed.  Part of the reason that GBIF gets perceived as not
+very useful is that searching for a taxon may yield dozens of hits,
+but practically all are different versions of aggregators each citing no
+more than a supposed taxonomic name, possibly correctly placed in higher
+taxonomy.  Having a good data aggregator is useful; having dozens of
+varying quality is not.
+
+Instead of the model being something like:
+                           Expert
+        Expert  |   Expert
+                 \      |    /
+Source ---&gt;    GBIF - Expert
+                 /      |    \
+        Expert  |   Expert
+                           Expert
+
+the model at present is often
+
+Source ---&gt; aggregation ----&gt; non-expert thinks he's getting expert
+information
+
+No one wants to fund or take responsibility for data accuracy.  Projects
+are all about how many records are entered, and the less time you spend on
+checking accuracy, the more records you can enter.  There's not much
+incentive for experts to volunteer to fix someone else's data, especially
+when there's no funding to generate good data.
+
+Freshwater mollusks are perhaps the most urgent conservation need out there
+(in terms of percent imperilment of a fairly diverse group).  But a quick
+look at Unionidae on GBIF reveals several problems:
+Nomenclatural: Wrong author and date for the family (should be Rafinesque,
+1820); incorrect original spelling &quot;Christadens&quot; of the unnecessary
+replacement name Cristadens is listed as an accepted genus...  various
+misspellings, gender agreement...
+
+Some cited genera belong in other families.  This may account for the fact
+that it is mapped in South America, New Guinea, Australia, and New Zealand,
+where only other families occur.  It doesn't account for the oceanic dots
+that have nothing similar to Unionidae present there.  Conversely, unionids
+occur almost anywhere with fairly reliable freshwater in North America and
+Eurasia, so there are a lot of blanks where there shouldn't be (again,
+Russia is poorly represented)
+
+Poor updating: several faunas have received significant taxonomic attention
+in the past decade or so, but the data don't reflect those well.  Some of
+the taxonomic assignments are a century or more out of date.
+
+Of course, these all reflect problems in GBIF's input rather than in GBIF
+itself as an aggregator.  But it suggests that the percentage of inaccurate
+data is quite high, enough to give misleading results if you treated it as
+up to data and authoritative.  Particularly as Unionidae have a high level
+of attention as often being imperiled, the results don't lead to optimism
+about less well-studied groups.
+
+GBIF of itself is a useful tool, but the quality of data being aggregated
+is too low to produce reliable results.  Unless there's funding for
+taxonomic expertise to review data before it is uploaded, the problem will
+persist.  Even when corrections are made, the error has already made it
+into the flock of aggregators and thus continues to be available to other
+aggregators.
+
+
+
+On Mon, Aug 25, 2014 at 2:58 AM, Richard Pyle &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">deepreef at bishopmuseum.org</A>&gt;
+wrote:
+
+&gt;<i> Hi Bob,
+</I>&gt;<i>
+</I>&gt;<i> &gt; What's wrong with
+</I>&gt;<i> &gt; sources &gt; GBIF &gt; expert &gt; 'Checklist of fishes of the Northwestern
+</I>&gt;<i> Hawaiian
+</I>&gt;<i> &gt; Islands'
+</I>&gt;<i> &gt; (freely available online, readily update-able, compilers easily
+</I>&gt;<i> contacted)?
+</I>&gt;<i>
+</I>&gt;<i> Because that's a very one-dimensional view of the data.  It's not as if the
+</I>&gt;<i> only value of the occurrence records we cite is to fulfill our one narrow
+</I>&gt;<i> goal (species occurrence in one geographic area), so why should the &quot;end
+</I>&gt;<i> game&quot; for this information be such a specific synthesis?
+</I>&gt;<i>
+</I>&gt;<i> The model should be something like:
+</I>&gt;<i>                            Expert
+</I>&gt;<i>         Expert  |   Expert
+</I>&gt;<i>                  \      |    /
+</I>&gt;<i> Source ---&gt;    GBIF - Expert
+</I>&gt;<i>                  /      |    \
+</I>&gt;<i>         Expert  |   Expert
+</I>&gt;<i>                            Expert
+</I>&gt;<i>
+</I>&gt;<i> [Not sure how that ASCII art will hold up through Taxacom....]
+</I>&gt;<i>
+</I>&gt;<i> Each expert gains something from the data (in our case, to help flesh out
+</I>&gt;<i> our checklist).   The open question is how the value-added
+</I>&gt;<i> information/cleanup by the experts can trickle back to the source -- either
+</I>&gt;<i> directly, or via GBIF.  I suspect the general picture Rod outlined may be
+</I>&gt;<i> what ends up happening
+</I>&gt;<i>
+</I>&gt;<i> &gt; or
+</I>&gt;<i> &gt; sources &gt; GBIF &gt; expert &gt; sources (straightaway) *and* 'Checklist' &gt; GBIF
+</I>&gt;<i> &gt; (eventually)
+</I>&gt;<i>
+</I>&gt;<i> Yes -- that's closer to it, I think.
+</I>&gt;<i>
+</I>&gt;<i> &gt; Please think first of users, not GBIF.
+</I>&gt;<i>
+</I>&gt;<i> When did I ever give you the impression that I thought anything other than
+</I>&gt;<i> that?????
+</I>&gt;<i>
+</I>&gt;<i> &gt; You admitted that you hadn't been following this thread closely, so:
+</I>&gt;<i> &gt; (1) from a single source, like a museum, GBIF may have *less information*
+</I>&gt;<i> &gt; than the source database. That might be because the source didn't use the
+</I>&gt;<i> &gt; GBIF IPT, or because a Procrustean truncator like OZCAM/ALA sat in-
+</I>&gt;<i> &gt; between, or because it's too hard for staff to finagle their database
+</I>&gt;<i> fields
+</I>&gt;<i> &gt; into Darwin Core format. If the source database is or could be online,
+</I>&gt;<i> it's an
+</I>&gt;<i> &gt; alternative and superior data source *for the same record*, and GBIF
+</I>&gt;<i> should
+</I>&gt;<i> &gt; link to it.
+</I>&gt;<i> &gt; (2) the single-source record included in GBIF may be wrong. It's been
+</I>&gt;<i> &gt; corrected (for taxonomy, or geography, or whatever) and is now available
+</I>&gt;<i> in
+</I>&gt;<i> &gt; upgraded form at another location on the Web. Until your 'sources &gt; GBIF
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; expert &gt; GBIF (eventually) &gt; sources (ultimately)' pipeline completes,
+</I>&gt;<i> GBIF
+</I>&gt;<i> &gt; should link to the other location.
+</I>&gt;<i>
+</I>&gt;<i> OK, thanks for clarifying.  Agreed.
+</I>&gt;<i>
+</I>&gt;<i> Aloha,
+</I>&gt;<i> Rich
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Taxacom Mailing List
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom</A>
+</I>&gt;<i> The Taxacom Archive back to 1992 may be searched at:
+</I>&gt;<i> <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+</I>&gt;<i>
+</I>&gt;<i> Celebrating 27 years of Taxacom in 2014.
+</I>&gt;<i>
+</I>
+
+
+-- 
+Dr. David Campbell
+Assistant Professor, Geology
+Department of Natural Sciences
+Box 7270
+Gardner-Webb University
+Boiling Springs NC 28017
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="127564.html">[Taxacom] Chameleons, GBIF, and the Red List
+</A></li>
+	<LI>Next message: <A HREF="127586.html">[Taxacom] Chameleons, GBIF, and the Red List
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#127575">[ date ]</a>
+              <a href="thread.html#127575">[ thread ]</a>
+              <a href="subject.html#127575">[ subject ]</a>
+              <a href="author.html#127575">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

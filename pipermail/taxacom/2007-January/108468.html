@@ -1,0 +1,216 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Periodical and book list
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2007-January/108468.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Periodical and book list</H1>
+    <B data-pagefind-meta="author">Roderic Page</B>
+    r.page at bio.gla.ac.uk<BR>
+    <I data-pagefind-meta="date">Wed Jan 17 12:06:03 CST 2007</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="108467.html">[Taxacom] Fellowship undergraduate opportunities at the Academy of
+ Natural Sciences
+</A></li>
+        <LI>Next message: <A HREF="108469.html">[Taxacom] Fwd: WebCite -  archiving system for webreferences
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#108468">[ date ]</a>
+              <a href="thread.html#108468">[ thread ]</a>
+              <a href="subject.html#108468">[ subject ]</a>
+              <a href="author.html#108468">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2007</span><!--beginarticle-->
+<PRE>Dear Roger,
+
+Regarding periodicals I take it that you want GUIDs for publications  
+(i.e., the journal), not individual articles. The obvious GUID is ISSN,  
+which could probably be obtained for a lot of journals by screen  
+scraping HTML and URLs (for example, several journal web sites use SICI  
+identifiers for articles, which embed ISSN's as part of the  
+identifiers). In the same way, one could pull out a bunch of PubMed XML  
+records (doing a search on &quot;new species&quot;, for example) and associate  
+journal names with ISSNs.
+
+Regarding alternative variants of journal names, anybody who has a  
+EndNote or Reference Manager library on their computer is likely to  
+have a collection of journal names and abbreviations. These could  
+easily be used to populate a database.
+
+
+One large source which springs to mind is the FORMIS ant bibliograpy,  
+available as EndNote files  
+(<A HREF="http://www.ars.usda.gov/research/docs.htm?docid003&amp;page=3),">http://www.ars.usda.gov/research/docs.htm?docid003&amp;page=3),</A> and  
+which has over 2000 journal names, most with long and short names. Here  
+are some sample records:
+
+Bull. Agric. Congo Belge	Bulletin Agricole du Congo Belge
+Bull. Am. Mus. Nat. Hist.	Bulletin of the American Museum of Natural  
+History
+Bull. Ann. Soc. Entomol. Belg.	Bulletin et Annales de la Soci?t?  
+Entomologique de Belgique (Bruxelles)
+Bull. Ann. Soc. Entomol. Fr.	Bull. Ann. Soc. Entomol. Fr.
+Bull. Ann. Soc. R. Entomol. Belg.	Bulletin et Annales de la Soci?t?  
+Royale Entomologique de Belgique (Bruxelles)
+
+There are also tools for extracting bibliographic details from  
+citations (see  
+<A HREF="http://ispecies.blogspot.com/2006/01/automatic-extraction-of-">http://ispecies.blogspot.com/2006/01/automatic-extraction-of-</A> 
+references.html).
+
+Regards
+
+Rod
+
+
+
+On 17 Jan 2007, at 12:41, Roger Hyam wrote:
+
+&gt; I am interested in conducting a social experiment.
+&gt;
+&gt; It would be very useful when combining taxonomic data from multiple
+&gt; databases if there were  globally unique identifiers for major
+&gt; taxonomic publications (periodicals/serials and books). One could
+&gt; then supplement a reference citation like
+&gt;
+&gt; Edinb.J. Bot. 47(2): 89-200 (1990)
+&gt;
+&gt; with an LSID and/or a URL that will tell the user that
+&gt;
+&gt; Edinb. J. Bot. is the Edinburgh Journal of Botany published by HMSO
+&gt; in Edinburgh. It may also give other alias' it is known by and a note
+&gt; might say that it is a continuation of Notes from the Royal Botanic
+&gt; Garden Edinburgh.
+&gt;
+&gt; It would enable the user to merge the data with people who have used
+&gt; other abbreviations for the same publication title - possibly without
+&gt; human interaction.
+&gt;
+&gt; Lookup services could be created that went from abbreviation to full
+&gt; journal title.
+&gt;
+&gt; The trouble is that the major lists of publications (e.g. BPH, TL2
+&gt; etc) are either:
+&gt;
+&gt; -  are not available electronically.
+&gt; -  are available on a subscription basis.
+&gt; -  are hopelessly out of date.
+&gt; -  can not be added to instantly (if the one you want to use isn't
+&gt; cited).
+&gt; -  are not freely distributable (i.e. you can't download the whole
+&gt; lot and use them as a lookup table in your database or re-distribute
+&gt; them as part of a product or archive them to keep you data safe)
+&gt;
+&gt; I am thinking that this is an ideal test case to see if the
+&gt; 'community' could build a freely distributable list that helps us
+&gt; all. The list would:
+&gt;
+&gt; - only include 'top level' publications i.e. periodicals, books,
+&gt; multi volume works. It is assumed that it is relatively easy to
+&gt; unambiguously identify a location within such publications via
+&gt; volume, part, and page/plate numbers.
+&gt; - contain a simple set of fields for each publication.
+&gt; - would be entirely freely distributable. i.e. a complete copy could
+&gt; be downloaded under a LGPL or creative commons type license.
+&gt; - contributors would be acknowledged in a contributors list, but
+&gt; nothing more.
+&gt; - users could comment on entries and submit new entries in real time.
+&gt; - would be a key into/integrate with current and future digitization
+&gt; efforts.
+&gt;
+&gt; I have three questions:
+&gt;
+&gt; 1) Has it already been done?
+&gt;
+&gt; 2) If this system were available now and populated with the majority
+&gt; of publications would you use it? Would it be useful?
+&gt;
+&gt; 3) Do you (or some one you know) have a database containing details
+&gt; of titles of periodicals or books that you could export data from as
+&gt; a contribution to seed the list? If so how many records would there
+&gt; be and what subject areas (within biodiversity studies) would they
+&gt; cover?
+&gt;
+&gt; You can mail me off list if you don't want to commit to anything in
+&gt; front of everyone.
+&gt;
+&gt; This is still a thought experiment at the moment. I'll mail a high
+&gt; level summary of replies I get back to the list.
+&gt;
+&gt; All the best,
+&gt;
+&gt; Roger Hyam
+&gt;
+&gt;
+&gt;
+&gt;
+&gt;
+&gt;
+&gt;
+&gt; _______________________________________________
+&gt; Taxacom mailing list
+&gt; Taxacom at mailman.nhm.ku.edu
+&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt;
+&gt;
+------------------------------------------------------------------------ 
+----------------------------------------
+Professor Roderic D. M. Page
+Editor, Systematic Biology
+DEEB, IBLS
+Graham Kerr Building
+University of Glasgow
+Glasgow G12 8QP
+United Kingdom
+
+Phone:    +44 141 330 4778
+Fax:      +44 141 330 2792
+email:    r.page at bio.gla.ac.uk
+web:      <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+iChat:    aim://rodpage1962
+reprints: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/pubs.html">http://taxonomy.zoology.gla.ac.uk/rod/pubs.html</A>
+
+Subscribe to Systematic Biology through the Society of Systematic
+Biologists Website:  <A HREF="http://systematicbiology.org">http://systematicbiology.org</A>
+Search for taxon names: <A HREF="http://darwin.zoology.gla.ac.uk/~rpage/portal/">http://darwin.zoology.gla.ac.uk/~rpage/portal/</A>
+Find out what we know about a species: <A HREF="http://ispecies.org">http://ispecies.org</A>
+Rod's rants on phyloinformatics: <A HREF="http://iphylo.blogspot.com">http://iphylo.blogspot.com</A>
+Rod's rants on ants: <A HREF="http://semant.blogspot.com">http://semant.blogspot.com</A>
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="108467.html">[Taxacom] Fellowship undergraduate opportunities at the Academy of
+ Natural Sciences
+</A></li>
+        <LI>Next message: <A HREF="108469.html">[Taxacom] Fwd: WebCite -  archiving system for webreferences
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#108468">[ date ]</a>
+              <a href="thread.html#108468">[ thread ]</a>
+              <a href="subject.html#108468">[ subject ]</a>
+              <a href="author.html#108468">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

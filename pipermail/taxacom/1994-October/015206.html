@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> The DIANA Stuff
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1994-October/015206.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">The DIANA Stuff</H1>
+    <B data-pagefind-meta="author">Mauro Cavalcanti</B>
+    mauro.cavalcanti%hlbbs at AX.APC.ORG<BR>
+    <I data-pagefind-meta="date">Mon Oct 31 12:08:00 CST 1994</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="098359.html">Systematic Botanist job at RBG Melbourne
+</A></li>
+        <LI>Next message: <A HREF="050998.html">The DIANA Stuff
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#015206">[ date ]</a>
+              <a href="thread.html#015206">[ thread ]</a>
+              <a href="subject.html#015206">[ subject ]</a>
+              <a href="author.html#015206">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1994</span><!--beginarticle-->
+<PRE>Dear Computer Taxonomists,
+
+Hello...
+
+Some months ago, I have announced my DIANA software shell for
+editing files in DELTA format and running some of the DELTA
+programs (CONFOR, KEY, DIST, INTKEY). I have distributed copies
+of DIANA to several interested users (some of which have provided
+very useful feedback, in the form of comments and criticisms),
+and the program was subsequently made available by Gopher or
+Anonymous FTP on the regular DELTA Internet hosts.
+
+Several users have requested a Windows version, that should
+hopefully overcomes or at least minimizes the memory limitations
+of the DOS-based version. I then started working on a preliminary
+version for Windows, using Borland's Turbo Pascal for Windows. A
+crude skeleton of that version was already ready when Nicholas
+Lander (nlander at wa.erin.gov.au) announced his own DELTA shell for
+Windows (DMS), which does the same as DIANA (for DOS or Windows)
+and has no memory limitations, besides being somewhat more
+flexible than my virtual lady...
+
+However, neither the DOS or Windows versions of DIANA, nor DMS
+are really expert 'DELTA editors' in the same sense of Richard
+Pankhurst's (rjp at castle.ed.ac.uk) DEDIT or Eric Gouda's
+(gouda at cc.ruu.nl) TAXASOFT. I had already stressed that at some
+point in the future, DIANA should metamorphose herself into such
+an editor. Therefore, since the announcement of Lander's DMS, I
+stopped the development of DIANA as a shell for DELTA (both as
+DOS and Windows versions), and started transforming her in a
+fully-featured DELTA editor - easy as TAXASOFT, colorful as
+DEDIT, and hopefully more powerful and user-friendly than both...
+
+The development of such an editor had first required the writing
+of specialized routines for reading/writing ASCII files in DELTA
+format. Since such code is not readily available, I realized that
+it could also be useful to any taxonomist with programming
+skills, if available in the form of a general purpose software
+library, able to be used not only as a kernel for the development
+of the DIANA editor, but for any other DELTA management program
+too. Creating this library took me a lot of time - indeed, so
+much time that I could not yet start the development of the DIANA
+editor itself! But by using such a library, *any* interested user
+could develop his/her own DELTA management software, to best suit
+his/her own needs...
+
+Now it is just finished, and I am pleased to announce the
+availability of the first public-domain library of routines for
+managing files in the DELTA format. The current version is still
+in a preliminary stage, but already includes functions for
+reading and parsing the CHARS, ITEMS, and SPECS DELTA files, as
+well as for counting the number of characters and taxa in a
+dataset, but does not yet includes routines for writing DELTA
+files (what is by far *much* easier than reading them!!!). It is
+built-up as a Turbo Pascal unit, amenable to be compiled under
+DOS or Windows, and is available as *full source code* to any one
+interested. While the library is not yet completed, I am
+releasing it now to give interested users a chance of trying it
+and *hopefully* providing some constructive feedback! I would
+also like to hear of anyone that would like to translate them
+into C and BASIC code. Currently, there is not much documentation
+for the library, but the routines are commented and a sample
+program (VIEW) that lists a characters or items DELTA file is
+also distributed as an example of its use.
+
+I encourage anyone interested in obtaining this software library
+to contact me directly, at the e-mail/snail-mail address below.
+
+PS: By the way, I am still interested in developing DIANA as a DELTA
+editor, but this should proceed faster now that the necessary
+routines are available...
+
+Best regards,
+
+###########################################################################
+                       Prof. Mauro J. Cavalcanti
+                     Departamento de Biologia Geral
+                     Centro de Ciencias Biologicas
+                       Universidade Santa Ursula
+                  Rua Fernando Ferrari, 75 - Botafogo
+                 22231-030, Rio de Janeiro, RJ, BRASIL
+                   Phone: +55 (021) 551-5542 ext 151
+               E-Mail: mauro.cavalcanti%hlbbs at ax.apc.org
+###########################################################################
+... Documentation - The worst part of programming.
+---
+ * TLX v3.40 *
+___ Blue Wave/QWK v2.12
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="098359.html">Systematic Botanist job at RBG Melbourne
+</A></li>
+        <LI>Next message: <A HREF="050998.html">The DIANA Stuff
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#015206">[ date ]</a>
+              <a href="thread.html#015206">[ thread ]</a>
+              <a href="subject.html#015206">[ subject ]</a>
+              <a href="author.html#015206">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

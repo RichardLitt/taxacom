@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> New release of DELTA programs
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1994-June/014883.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">New release of DELTA programs</H1>
+    <B data-pagefind-meta="author">Mike Dallwitz</B>
+    miked at ENTO.CSIRO.AU<BR>
+    <I data-pagefind-meta="date">Sun Jun 19 00:23:31 CDT 1994</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="098040.html">Scorpions vs. Crayfish
+</A></li>
+        <LI>Next message: <A HREF="050675.html">New release of DELTA programs
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#014883">[ date ]</a>
+              <a href="thread.html#014883">[ thread ]</a>
+              <a href="subject.html#014883">[ subject ]</a>
+              <a href="author.html#014883">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1994</span><!--beginarticle-->
+<PRE>New versions of the DELTA programs for MS-DOS are now available by gopher or
+anonymous ftp from the following Internet hosts.
+
+     huh.harvard.edu        (directory: /pub/software/delta/msdos)
+     life.anu.edu.au        (directory: /pub/biodiversity/delta/msdos)
+     spider.ento.csiro.au   (directory: /delta/msdos)
+
+The Internet distribution package consists of text files *.1st and
+self-expanding files *.exe. Download.1st contains this information about
+downloading the files, changes.1st contains the revision history of the
+programs, and delta.1st describes the procedure for installing the programs on
+an MS-DOS computer. The files must be transmitted in binary mode, set by the
+ftp command `binary'. (Failure to do so will result in the error message
+`HeaderC Error' when the .exe files are run.)
+
+Place the files in the directory C:\DELTA on your MS-DOS computer. Then follow
+the installation procedure described in delta.1st, but omit the XCOPY command.
+
+The date of this release is 14 June 1994. The changes from the previous
+release (16 May 1994) are as follows.
+
+
+DOCUMENTATION
+
+14 June 1994. The file DOC.1ST has been replaced by a command DOCLIST (which
+displays an index to the documentation), and a `help' option in DOCPRINT.
+CLASS.1ST has been renamed CLASS.DOC. The draft TYPSET manual is now available
+through DOCPRINT, but only for PostScript printers.
+
+
+CONFOR
+
+Version 2.13, 14 June 1994. The program now places the information about
+character images in the ICHARS file. (This change was accidentally included in
+the previous release, with the result that INTKEY could not access the
+character images in newly created files.) A bug sometimes causing incorrect
+translation of attributes of 1-state characters was fixed.
+
+
+INTKEY
+
+Version 3.12, 14 June 1994. The program now reads the new data-file formats
+produced by CONFOR V2.13 (as well as the old formats). The default character
+keyword for DIFFERENCES and SIMILARITIES was changed from AVAILABLE to ALL.
+Exclusion of all characters or taxa is disallowed. Reusing a character within
+an input file does not require confirmation by the user.
+
+
+Mike Dallwitz                                 Internet md at ento.csiro.au
+CSIRO Division of Entomology                  Fax +61 6 246 4000
+GPO Box 1700, Canberra ACT 2601, Australia    Phone +61 6 246 4075
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="098040.html">Scorpions vs. Crayfish
+</A></li>
+        <LI>Next message: <A HREF="050675.html">New release of DELTA programs
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#014883">[ date ]</a>
+              <a href="thread.html#014883">[ thread ]</a>
+              <a href="subject.html#014883">[ subject ]</a>
+              <a href="author.html#014883">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

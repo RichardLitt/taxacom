@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] A little more on Species Entities
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2009-October/114462.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] A little more on Species Entities</H1>
+    <B data-pagefind-meta="author">Stephen Thorpe</B>
+    s.thorpe at auckland.ac.nz<BR>
+    <I data-pagefind-meta="date">Thu Oct  1 02:21:05 CDT 2009</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="114461.html">[Taxacom] A little more on Species Entities
+</A></li>
+        <LI>Next message: <A HREF="114463.html">[Taxacom] A little more on Species Entities
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#114462">[ date ]</a>
+              <a href="thread.html#114462">[ thread ]</a>
+              <a href="subject.html#114462">[ subject ]</a>
+              <a href="author.html#114462">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2009</span><!--beginarticle-->
+<PRE>&gt;Demonstrating the difference between a change in how these two species were seen vs. a simple mislabeling or misidentification
+In practice, a misidentification is a misidentification is a misidentification, whether or not it reflected current thinking at the time, or else was just the product of a rushed and sloppy identifier. From our point of view today, we don't need to know which. Perhaps you could start up a new discipline which studies old and defunct taxonomic concepts, but trying to add that into a database will just massively increase the complexity of the task for little or nothing of any use. Forgive the bad timing of this analogy, but think of taxonomy as like being on the crest of a wave - what we want to know is: are specimens correctly identified according to our CURRENT concepts? Seems to me that somehow the bioinfo people have lost sight of what the taxonomists actually do: when taxonomists see a published identification, they don't ask: what taxon concept is this talking about? Instead, and if they need to, they try to revisit the actual voucher specimens and see if they are correctly identified according to their present concept. In practice, this is the only way ...
+________________________________________
+From: taxacom-bounces at mailman.nhm.ku.edu [taxacom-bounces at mailman.nhm.ku.edu] On Behalf Of Peter DeVries [pete.devries at gmail.com]
+Sent: Thursday, 1 October 2009 7:59 p.m.
+To: taxacom at mailman.nhm.ku.edu
+Subject: [Taxacom] A little more on Species Entities
+
+The species entities can have many scientific names. These names are not
+concepts just the literal string.
+
+Don't assume that a given name can't be linked to several different species
+entities.
+
+The names list just says, *what are the various legitimate names that this
+species entity has had overtime.*
+
+It makes no assumptions that other species entities have not legitimately
+used that same name string.
+
+Here is a very hypothetical (incorrect) example:
+
+<A HREF="http://lod.taxonconcept.org/ses/v6n7p">http://lod.taxonconcept.org/ses/v6n7p</A> now called *Puma concolor (Linnaeus,
+1771))*
+         =&gt; <A HREF="http://lod.taxonconcept.org/scinames/v6n7p_1001">http://lod.taxonconcept.org/scinames/v6n7p_1001</A> =&gt; gni:505310
+         =&gt; <A HREF="http://lod.taxonconcept.org/scinames/v6n7p_1002">http://lod.taxonconcept.org/scinames/v6n7p_1002</A> =&gt; gni:12104361
+
+<A HREF="http://lod.taxonconcept.org/ses/kKOIv">http://lod.taxonconcept.org/ses/kKOIv</A> now called *Panthera leo* (Linnaeus,
+1758)
+         =&gt; <A HREF="http://lod.taxonconcept.org/scinames/kKOIv_1001">http://lod.taxonconcept.org/scinames/kKOIv_1001</A> =&gt; gni:20753654
+         =&gt; <A HREF="http://lod.taxonconcept.org/scinames/kKOIv_1002">http://lod.taxonconcept.org/scinames/kKOIv_1002</A> =&gt; gni:12104361
+
+This would be the case where at one time it was thought that all large cats
+were one species called Felis concolor
+
+What this hypothetical example shows is that at one time these two different
+species were known by the
+same literal name *Felis concolor* Linnaeus, 1771 (gni:12104361)
+
+Demonstrating the difference between a change in how these two species were
+seen vs. a simple mislabeling or misidentification.
+
+An old specimen might be labeled Felis concolor, but someone &quot;Joe&quot; may
+choose to tag it in their own database as
+
+Label name &quot;Felis concolor&quot; interpreted by JoeSchmoe to be an instance
+of *Panthera
+leo* se:kKOIv
+
+What if someone decides that the Lion really should be in its own genus
+(Leothera), but believes that all the specimens of Panthera leo are still
+one species?
+
+Then *Panthera leo* se:kKOIv  =&gt; *Leothera leo* se:kKOIv
+
+Now the idea &quot;this is a species&quot;  is cleanly separated from the idea that
+&quot;this is a species in a particular genus&quot;.
+
+In my opinion, this is how it should have been done in the first place.
+
+1) This is a species
+2) This species has this particular position in the tree of life
+
+Clearly two separate issues.
+
+Also:
+
+Need to know what the characters, definitive specimens, DNA barcodes etc,
+are for a given species entity?
+
+Puma concolor se:v6n7p &lt;<A HREF="http://lod.taxonconcept.org/ses/v6n7p.xhtml">http://lod.taxonconcept.org/ses/v6n7p.xhtml</A>&gt;
+*
+*
+Then click on namespaced version of the species entity URI in the line
+above.
+
+- Pete
+_______________________________________________
+
+Taxacom Mailing List
+Taxacom at mailman.nhm.ku.edu
+<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+
+The Taxacom archive going back to 1992 may be searched with either of these methods:
+
+(1) <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+
+Or (2) a Google search specified as:  site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="114461.html">[Taxacom] A little more on Species Entities
+</A></li>
+        <LI>Next message: <A HREF="114463.html">[Taxacom] A little more on Species Entities
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#114462">[ date ]</a>
+              <a href="thread.html#114462">[ thread ]</a>
+              <a href="subject.html#114462">[ subject ]</a>
+              <a href="author.html#114462">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] GenBank (was The economics of biodiversity database
+ initiatives)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-October/126177.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] GenBank (was The economics of biodiversity database
+ initiatives)</H1>
+    <B data-pagefind-meta="author">Martin Wiemers</B>
+    martin.wiemers at univie.ac.at<BR>
+    <I data-pagefind-meta="date">Mon Oct 28 09:33:55 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="126176.html">[Taxacom] GenBank (was The economics of biodiversity database
+	initiatives)
+</A></li>
+        <LI>Next message: <A HREF="126178.html">[Taxacom] GenBank (was The economics of biodiversity database
+	initiatives)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#126177">[ date ]</a>
+              <a href="thread.html#126177">[ thread ]</a>
+              <a href="subject.html#126177">[ subject ]</a>
+              <a href="author.html#126177">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>Hi Adam,
+
+the &quot;country&quot; field in GenBank can actually also be used to provide more 
+accurate information:
+
+ From the GenBank Submissions Handbook:
+
+*The /country modifier can also include province, state, region, oceans, 
+or other locality names*. The name of the country (or ocean) must be 
+provided first, followed by a colon (:) before the additional location 
+information.
+
+For example:
+/country=USA: Lancaster County, PA
+/country=Canada: SW coast of Newfoundland
+/country=USA: Syracuse State Park in upstate New York
+/country=Atlantic Ocean: 24.5 miles east of Bermuda
+/country=Pacific Ocean: Stubing Marine Station
+
+However, I agree that this is not perfect solution.
+
+GenBank now also includes a field for geographical coordinates (lat_lon) 
+in the format &quot;39.7 N 42.1 W&quot;.
+
+Although GenBank does not store voucher images, these can be stored to 
+linked databases such as MorphBank via &quot;LinkOut to external resources&quot;, 
+see e.g. <A HREF="http://www.ncbi.nlm.nih.gov/nuccore/AY556892.1">http://www.ncbi.nlm.nih.gov/nuccore/AY556892.1</A>
+
+Best wishes,
+Martin
+
+
+Am 28.10.2013 15:10, schrieb Adam Cotton:
+&gt; ----- Original Message -----
+&gt; From: &quot;Roderic Page&quot; &lt;r.page at bio.gla.ac.uk&gt;
+&gt; To: &quot;Adam Cotton&quot; &lt;adamcot at cscoms.com&gt;
+&gt; Cc: &lt;taxacom at mailman.nhm.ku.edu&gt;
+&gt; Sent: Monday, October 28, 2013 8:16 PM
+&gt; Subject: Re: [SPAM?] Re: [Taxacom] GenBank (was The economics of
+&gt; biodiversity database initiatives)
+&gt;
+&gt;
+&gt; Hi Adam,
+&gt;
+&gt; Locality data in GenBank is variable, but increasingly sequences (specially
+&gt; barcodes) are appearing with GPS-derived coordinates. Some sequences are
+&gt; linked to voucher specimens (admittedly a lot fewer than would be
+&gt; desirable), in other cases you can go to the publication that made the
+&gt; sequences available and get the data there (again, less than desirable, it
+&gt; would be nice to automate this).
+&gt;
+&gt; I disagree that
+&gt;
+&gt;&gt; There is absolutely no way to verify that a sequence belongs to taxon A
+&gt;&gt; rather than taxon B, other than the say-so of the researcher submitting
+&gt;&gt; the
+&gt;&gt; sequence to GenBank.
+&gt;&gt;
+&gt; One of the advantages of sequences is that we can build a tree and discover
+&gt; potentially misidentified sequences, indeed this is one of the quickest ways
+&gt; to discover potential problems. It won't always work, but it is more
+&gt; testable than a simple assertion that a sequence belongs to a given taxon.
+&gt;
+&gt; Regards
+&gt;
+&gt; Rod
+&gt;&gt;
+&gt;
+&gt;
+&gt; Rod,
+&gt;
+&gt; Sorry for the lack of clarity. Of course it is possible to spot erroneous
+&gt; sequences by comparing them with verified ones, and erroneous sequences
+&gt; often stand out like sore thumbs in a tree, so I should have said:
+&gt;
+&gt; &quot;There is absolutely no way to verify that a sequence belongs to taxon A
+&gt; rather than taxon B from information on the GenBank webpage for that
+&gt; sequence.&quot;
+&gt;
+&gt; The point is there will always be errors, but providing useful information
+&gt; about the specimen from which the sequence originated would actually make
+&gt; the data much more useful to more people, and mean users would have to spend
+&gt; less time verifying the identity of the actual taxon that the sequence came
+&gt; from.
+&gt;
+&gt; Just as an example, assume a sequence is added with locality &quot;Russia&quot;. That
+&gt; could be anywhere from Europe almost to Alaska, which is not very helpful.
+&gt; Of course including a GPS location is ideal, but even an approximate
+&gt; locality is more useful than just country.
+&gt;
+&gt; Adam.
+&gt;
+&gt; PS. I have had private comunication with other researchers who agree that it
+&gt; would be much more useful if GenBank entries were inputted using end-taxon
+&gt; names for identification purposes. This also works the other way, for
+&gt; samples that could only be positively identified to genus or species group
+&gt; for whatever reason.
+&gt;
+&gt;
+&gt; _______________________________________________
+&gt; Taxacom Mailing List
+&gt; Taxacom at mailman.nhm.ku.edu
+&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt;
+&gt; The Taxacom Archive back to 1992 may be searched with either of these methods:
+&gt;
+&gt; (1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt;
+&gt; (2) a Google search specified as:  site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+&gt;
+&gt; Celebrating 26 years of Taxacom in 2013.
+
+-- 
+Dr. Martin Wiemers
+Department of Community Ecology
+Helmholtz Centre for Environmental Research - UFZ
+Theodor-Lieser-Str. 4
+06120 Halle
+Germany
+Tel. +49 345 558-5322
+e-mail: martin.wiemers at ufz.de
+<A HREF="http://www.ufz.de/index.php?en=798">http://www.ufz.de/index.php?en=798</A>
+
+private:
+Wielandstr. 8
+06114 Halle
+Germany
+Tel. +49 345 27950187
+Mobile +49 157 85401271
+Fax +49 3212 6968883
+e-mail: martin at wiemers1.de
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="126176.html">[Taxacom] GenBank (was The economics of biodiversity database
+	initiatives)
+</A></li>
+        <LI>Next message: <A HREF="126178.html">[Taxacom] GenBank (was The economics of biodiversity database
+	initiatives)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#126177">[ date ]</a>
+              <a href="thread.html#126177">[ thread ]</a>
+              <a href="subject.html#126177">[ subject ]</a>
+              <a href="author.html#126177">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

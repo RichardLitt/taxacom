@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> grid based maps
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2004-October/092617.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">grid based maps</H1>
+    <B data-pagefind-meta="author">Alex Thomas</B>
+    alex at DIDG.COM<BR>
+    <I data-pagefind-meta="date">Sat Oct  9 11:22:40 CDT 2004</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="092616.html">The problem with biogeography
+</A></li>
+        <LI>Next message: <A HREF="092618.html">Ancient Measurements =&gt; Lines
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092617">[ date ]</a>
+              <a href="thread.html#092617">[ thread ]</a>
+              <a href="subject.html#092617">[ subject ]</a>
+              <a href="author.html#092617">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2004</span><!--beginarticle-->
+<PRE>*This message was transferred with a trial version of CommuniGate(tm) Pro*
+Hi 
+
+I did exactly this for 192 species.
+
+I first decided the cell size of my grids and calculated how many columns
+and rows of cells would be needed to cover my study area.
+
+I then wrote a database routine in Access that for each species created a
+species text file then in fixed steps working from top left corner I queried
+whether a record for the species existed in the database that had a lat-long
+which occurred within the cell. If there was a record I wrote a '0' and if
+there was a record of kind A I wrote a '1', of type B a '2', etc. , and
+worked down to the lower right cell.
+
+I then created a base map in PICT format.
+
+Using MacGIS (Hulse, D. and K. Larson (1992). MacGIS 2.0.1. Eugene,
+University of Oregon.) I then combined the base map with the overlay by
+importing the species text file, then exported the result to a PICT file.
+MacGIS had a scripting capability so I only had to do about three clicks per
+species, but I did have to manually process each species. 
+
+I then laid the PICT files out using Adobe PageMaker, but it could just as
+easily be done (now) in Word.
+
+
+
+Hope this helps,
+
+Alex
+
+Alex Thomas
+Director
+Didg Information Systems Pty Ltd
+220 Gertrude Street
+Fitzroy VIC 3065
+
+Mb. 61-(0)417-490-594
+Em. alex at didg.com
+WWW <A HREF="http://www.didg.com">http://www.didg.com</A>
+
+Professional applications and services for recording and brokering wildlife
+observations.
+
+
+
+-----Original Message-----
+From: Taxacom Discussion List [mailto:TAXACOM at LISTSERV.NHM.KU.EDU] On Behalf
+Of Torbj?rn Tyler
+Sent: Friday, 8 October 2004 23:39
+To: TAXACOM at LISTSERV.NHM.KU.EDU
+Subject: [TAXACOM] grid based maps
+
+*This message was transferred with a trial version of CommuniGate(tm) Pro*
+Concerning the endless problem with distribution visualization...
+
+The new version of the mapping program iMap indeed appears very promising,
+but still I have not found any program that can help me produce my
+grid-based maps (not based on lat./longitude data or US zip-codes, which are
+the formats handled by iMap). 
+
+I want a system where I a can use any empty map, put any grid upon it,
+assign a label to each grid square and then use the data in my database (in
+the simpliest case containing presence/absence information for each taxon in
+each labeled grid-square) to accordingly fill some of the squares with black
+colour. I suppose it would be very simple to write such a program and I hope
+someone has allready done it (preferably for Mac) but I have not been able
+to find any such possibility in any of the mapping programs tested so far.
+(In some programs it is possible to &quot;cheat&quot; the program by assigning a
+coordinate to each grid and then try to choose a squarical symbol that fits
+exactly in the sqare on my map but this is not very very handy and the maps
+produced this way are never perfect ...).
+
+Does anyone have a solution for this?
+
+
+-------------------------------------------------------------------
+
+Torbj?rn Tyler   /  Projekt Sk?nes Flora
+
+Department of Ecology
+Plant Ecology and Systematics
+Ecology Building                                	
+S?lvegatan 37         	
+SE-223 62 Lund                          	
+                        	
+tel. +(0)46-222 09 10
+fax + (0)46-222 44 23
+e-mail: torbjorn.tyler at ekol.lu.se
+
+Private address: Bredgatan 12B, SE-243 32 H??r (=Hoeoer), tel.
++(0)413-23123.
+___________________________________________________________________
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="092616.html">The problem with biogeography
+</A></li>
+        <LI>Next message: <A HREF="092618.html">Ancient Measurements =&gt; Lines
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092617">[ date ]</a>
+              <a href="thread.html#092617">[ thread ]</a>
+              <a href="subject.html#092617">[ subject ]</a>
+              <a href="author.html#092617">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Best phenetics software?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1997-July/021207.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Best phenetics software?</H1>
+    <B data-pagefind-meta="author">Nicholas S. Lander</B>
+    nickl at CALM.WA.GOV.AU<BR>
+    <I data-pagefind-meta="date">Tue Jul  8 09:09:43 CDT 1997</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="104364.html">autonymy hierarchy
+</A></li>
+        <LI>Next message: <A HREF="056999.html">Best phenetics software?
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#021207">[ date ]</a>
+              <a href="thread.html#021207">[ thread ]</a>
+              <a href="subject.html#021207">[ subject ]</a>
+              <a href="author.html#021207">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1997</span><!--beginarticle-->
+<PRE>Murray Dawson wrote:
+
+&gt;Would anyone like to contribute their thoughts on the &quot;best&quot; software for
+numerical taxonomy?
+
+&gt;Criteria of a prospective package: user-friendly, flexible, powerful
+(universal requirements!); relevant to taxonomists and well-suited for
+handling both qualitative and quantitative characters; capable of cluster
+analysis and ordination.
+
+&gt;PATN (Australian-developed) and NTSYS are two I have heard of - any
+others?
+
+Although not widely advertised, the DELTA system for descriptive taxonomy
+includes software for phenetics analysis, called PCLASS. The following is
+taken from the documentation CLASS.DOC
+
+&quot;The following programs work on distance matrices produced by the program
+DIST. They are currently undocumented. To run them, enter the program name
+and respond to the prompts, which request information such as the number of
+OTU's (taxa) and the name of the distance-matrix file.
+
+&quot;PCLASS  Agglomerative clustering by combinatorial sorting strategies.
+&quot;NSIM    Lists nearest neighbours of taxa.
+
+&quot;Trees produced by PCLASS can be plotted on PostScript printers, as
+follows. PCLASS produces a fusion table on a `data-transfer' file with
+extension .TRE (e.g. GRASS.TRE). Run TXPLOT, and enter the name of this
+file when the name of the `input file' is requested. Output is produced on
+a file with extension .PLT (e.g. GRASS.PLT). This file is converted to
+PostScript and printed by running PLTPRINT, e.g.PLTPRINT GRASS
+PLTPRINT.BAT, which invokes the program PLT2PS.EXE, may need to be modified
+to suit local conditions. As supplied, it defaults to A4 paper, and
+printing is done by means of a PRINT command.
+
+&quot;The public-domain program Ghostscript (not supplied) can be used to
+display PostScript files on VGA screens or to print them on various
+non-PostScript printers.&quot;
+
+The point is that data coded in DELTA can be passed immediately to PCLASS.
+Equally well it can be passed to formats suitable for input to cladistics
+programs including Hennig86, PAUP, MACLADE.  And, of course, once coded in
+DELTA format one's data can be used to generate a plethora of other outputs
+including natural language, printed keys, interactive keys, distance
+matrices, HTML, RTF, etc.
+
+
+
+-------------
+Original Text
+From: Murray Dawson &lt;DawsonM at LANDCARE.CRI.NZ&gt;, on 7/8/97 11:33 AM:
+Greetings,
+
+Would anyone like to contribute their thoughts on the &quot;best&quot; software for
+numerical taxonomy?
+
+Criteria of a prospective package: user-friendly, flexible, powerful
+(universal requirements!); relevant to taxonomists and well-suited for
+handling both qualitative and quantitative characters; capable of cluster
+analysis and ordination.
+
+PATN (Australian-developed) and NTSYS are two I have heard of - any
+others?
+
+PLEASE let us avoid the age-old arguments of phenetics versus
+cladistics!
+
+I have followed the recent string on the &quot;best&quot; herbarium DBMS software
+with interest - it is really productive to gain a rough consensus based on
+such a large pool of experience.
+
+Murray Dawson
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="104364.html">autonymy hierarchy
+</A></li>
+        <LI>Next message: <A HREF="056999.html">Best phenetics software?
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#021207">[ date ]</a>
+              <a href="thread.html#021207">[ thread ]</a>
+              <a href="subject.html#021207">[ subject ]</a>
+              <a href="author.html#021207">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

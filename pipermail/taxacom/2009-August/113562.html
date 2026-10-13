@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Wikispecies is not a database: part 3
+	(after	thinkingabout it!)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2009-August/113562.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Wikispecies is not a database: part 3
+	(after	thinkingabout it!)</H1>
+    <B data-pagefind-meta="author">Roderic Page</B>
+    r.page at bio.gla.ac.uk<BR>
+    <I data-pagefind-meta="date">Sun Aug 16 04:50:04 CDT 2009</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="113561.html">[Taxacom] Propaganda (was: Molecules vs. Morphology)
+</A></li>
+        <LI>Next message: <A HREF="113563.html">[Taxacom] Wikispecies is not a database: part 3 (after
+	thinkingabout it!)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#113562">[ date ]</a>
+              <a href="thread.html#113562">[ thread ]</a>
+              <a href="subject.html#113562">[ subject ]</a>
+              <a href="author.html#113562">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2009</span><!--beginarticle-->
+<PRE>Dear Tony,
+
+Gosh, if providing supporting evidence was a prerequisite for posting  
+to TAXACOM it'd be a pretty quiet place indeed! In the absence of  
+evidence, let me try misdirection and arm waving to encourage you to  
+avert your eyes from what must be an unpleasant sight (here in Glasgow  
+we get chilly pretty much 24/7).
+
+1. I doubt any major biodiversity informatics project is using a key- 
+value database, but that probably reflects a degree of conservatism.  
+For examples of experiments using key-value databases in  
+bioinformatics, see <A HREF="http://tinyurl.com/okq7m5">http://tinyurl.com/okq7m5</A> and <A HREF="http://tinyurl.com/ce92qs">http://tinyurl.com/ce92qs</A> 
+  .
+
+My sense is that big social network sites, such as FaceBook, Digg,  
+Last.fm are all using some form of key-value databases (see <A HREF="http://www.metabrew.com/article/anti-rdbms-a-list-of-distributed-key-value-stores/">http://www.metabrew.com/article/anti-rdbms-a-list-of-distributed-key-value-stores/</A> 
+  ). And if we think of linked data (AKA semantic web), then triple  
+stores are key-value databases.
+
+2. Many people use relational databases, but I'd suggest they use them  
+primarily for persistent storage rather than for things such as  
+referential integrity. For example, Catalogue of Life uses MySQL but  
+has no foreign keys, nor does it use the MySQL database engine that  
+supports referential integrity.
+
+3.  Referential integrity won't ensure all the kinds of integrity we  
+care about, such as whether a classification is a tree. I discovered  
+this the hard way when I first started playing with the ITIS database  
+(which does have foreign keys).
+
+Regards
+
+Rod
+
+
+On 15 Aug 2009, at 22:12, &lt;Tony.Rees at csiro.au&gt; &lt;Tony.Rees at csiro.au&gt;  
+wrote:
+
+&gt; Dear Rod,
+&gt;
+&gt; I note we have not exactly been overwhelmed with evidence supporting  
+&gt; your claim. Methinks the emperor may be feeling a little chilly in  
+&gt; the evenings.
+&gt;
+&gt; See <A HREF="http://www.ffrf.org/awards/emperor/">http://www.ffrf.org/awards/emperor/</A> or elsewhere...
+&gt;
+&gt; Regards - Tony
+&gt;
+&gt; ________________________________________
+&gt;
+&gt; -----Original Message-----
+&gt; From: Tony.Rees at csiro.au [mailto:Tony.Rees at csiro.au]
+&gt; Sent: 14 August 2009 06:40
+&gt; To: r.page at bio.gla.ac.uk
+&gt; Cc: Mike Sadka; taxacom at mailman.nhm.ku.edu
+&gt; Subject: RE: [Taxacom] Wikispecies is not a database: part 3 (after
+&gt; thinkingabout it!)
+&gt;
+&gt; Rod Page wrote...
+&gt;
+&gt; &lt;snip&gt;
+&gt;
+&gt; 1. The notion of a database espoused by Tony and Mike (i.e.,
+&gt; relational databases with tables with columns and rows) is but one
+&gt; view of databases, and a view some might say is old fashioned (key-
+&gt; value databases are the new hotness, there is a generation of
+&gt; programmers emerging for whom relational databases seem as relevant as
+&gt; FORTRAN).
+&gt;
+&gt; &lt;/snip&gt;
+&gt;
+&gt; Maybe ... but tell me this: is there a single major database-driven
+&gt; biodiversity informatics provider that is NOT using a &quot;conventional&quot;
+&gt; relational database? My suspicion is that you are talking [b]leading
+&gt; edge here (if not vapourware) in the present context...
+&gt;
+&gt; Just my 2 cents...
+&gt;
+&gt; Tony
+&gt; _______________________________________________
+&gt;
+&gt; Taxacom Mailing List
+&gt; Taxacom at mailman.nhm.ku.edu
+&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt;
+&gt; The Taxacom archive going back to 1992 may be searched with either  
+&gt; of these methods:
+&gt;
+&gt; (1) <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt;
+&gt; Or (2) a Google search specified as:  site:mailman.nhm.ku.edu/ 
+&gt; pipermail/taxacom  your search terms here
+&gt;
+
+---------------------------------------------------------
+Roderic Page
+Professor of Taxonomy
+DEEB, FBLS
+Graham Kerr Building
+University of Glasgow
+Glasgow G12 8QQ, UK
+
+Email: r.page at bio.gla.ac.uk
+Tel: +44 141 330 4778
+Fax: +44 141 330 2792
+AIM: rodpage1962 at aim.com
+Facebook: <A HREF="http://www.facebook.com/profile.php?id=1112517192">http://www.facebook.com/profile.php?id=1112517192</A>
+Twitter: <A HREF="http://twitter.com/rdmpage">http://twitter.com/rdmpage</A>
+Blog: <A HREF="http://iphylo.blogspot.com">http://iphylo.blogspot.com</A>
+Home page: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+
+
+
+
+
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="113561.html">[Taxacom] Propaganda (was: Molecules vs. Morphology)
+</A></li>
+        <LI>Next message: <A HREF="113563.html">[Taxacom] Wikispecies is not a database: part 3 (after
+	thinkingabout it!)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#113562">[ date ]</a>
+              <a href="thread.html#113562">[ thread ]</a>
+              <a href="subject.html#113562">[ subject ]</a>
+              <a href="author.html#113562">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

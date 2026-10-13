@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Taxonomic Name Extraction | TaxonGrab v1.1
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2005-June/093837.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Taxonomic Name Extraction | TaxonGrab v1.1</H1>
+    <B data-pagefind-meta="author">Drew Koning</B>
+    drew at AMNH.ORG<BR>
+    <I data-pagefind-meta="date">Tue Jun  7 21:08:36 CDT 2005</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="093835.html">52nd Annual Systematics Symposium at the Missouri Botanical Garden
+</A></li>
+        <LI>Next message: <A HREF="093836.html">Taxonomic Name Extraction | TaxonGrab v1.1
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#093837">[ date ]</a>
+              <a href="thread.html#093837">[ thread ]</a>
+              <a href="subject.html#093837">[ subject ]</a>
+              <a href="author.html#093837">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2005</span><!--beginarticle-->
+<PRE>I'm glad you appreciated the application. As for the various issues you
+raised, syntax will always be an issue. I tried to create rules that would
+adhere to the majority of scientific publications, but individual tweaking
+will always be needed for more 'unusual' formatting.
+
+Also, the fragment of PHP code available is the nuts and bolts of the
+system, but the rest of the source code will be available on SourceForge,
+as soon as I finalize the current version.
+
+Best,
+Drew Koning
+
+
+
+&gt; This looks nice, and there is a great need for this sort of tool. For
+&gt; example, in the recent ECAT e-conference, I suggested using text
+&gt; extraction tools to get names from PubMed, as almost every week there
+&gt; are new taxon names appearing in PubMed, all tied to a publication.
+&gt;
+&gt; As one example, consider this paper:
+&gt; <A HREF="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?">http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?</A>
+&gt; cmd=Retrieve&amp;db=pubmed&amp;dopt=Abstract&amp;list_uids=15928992&amp;query_hl=4
+&gt;
+&gt; The abstract is:
+&gt;
+&gt; Aploparaksis demshini n. sp. is described from a woodcock Scolopax
+&gt; rusticola L. from different parts of the Palaearctic (Lithuania,
+&gt; Karelia, the Urals, Primorskiy Kray). It differs from the most similar
+&gt; species A. belopolskajae Bondarenko, 1988, a parasite of snipes
+&gt; Gallinago spp., in the form and length of the rostellar hooks and the
+&gt; smaller cirrus, and from two other similar species, A. clavata
+&gt; Spasskaya, 1966 and A. schilleri Webster, 1955, by having an
+&gt; embryophore with polar thickenings and a spindle-shaped cirrus. The
+&gt; life-cycle of the parasite was studied under experimental conditions.
+&gt; The metacestodes were commonly located under the chlorogogenous tissue
+&gt; of the intestine of the earthworms Eisenia foetida(Savigny),
+&gt; Dendrobaena octaedra (Savigny) and E. nordenskioldi(Eisen), and in the
+&gt; wall of the intestine of the enchytraeid Briodrilus arcticus(Bell). The
+&gt; metacestodes exhibit a pattern of postembryonal development typical for
+&gt; the cysticercoid modification termed an 'ovoid diplocyst'.
+&gt;
+&gt; The NLP tool results in:
+&gt; A. belopolskajae
+&gt; A. clavata
+&gt; A. schilleri
+&gt; Aploparaksis demshini
+&gt; Dendrobaena octaedra
+&gt; Scolopax rusticola
+&gt;
+&gt; Note that it missed Briodrilus arcticus(Bell), Eisenia
+&gt; foetida(Savigny), and E. nordenskioldi(Eisen) -- I guess because of the
+&gt; missing space between name and authority -- and also Gallinago (in the
+&gt; abstract as &quot;Gallinago spp.&quot;). I wonder whether it can also figure out
+&gt; that A. clavata is actually Aploparaksis clavata?
+&gt;
+&gt; Another example is
+&gt; <A HREF="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?">http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?</A>
+&gt; cmd=Retrieve&amp;db=pubmed&amp;dopt=Abstract&amp;list_uids=15928991&amp;query_hl=4
+&gt;
+&gt; Here, NLP picks up P. juxtanucleare and Plasmodium dominicana, but
+&gt; misses Diptera: Culicidae: Culicinae  [written in the oft-used format
+&gt; (Diptera: Culicidae: Culicinae)], and Galliformes.
+&gt;
+&gt; So, an impressive start, but I guess this problem will need more work.
+&gt;
+&gt; One other comment -- the site displays the OSI logo, but the software
+&gt; doesn't seem to be available (apart from a link on NLP Analysis - File
+&gt; upload window which is to a fragment of PHP code).
+&gt;
+&gt; I don't mean these comments to be negative, I think this is very timely
+&gt; work.
+&gt;
+&gt; Regards
+&gt;
+&gt; Rod
+&gt;
+&gt;
+&gt;
+&gt;
+&gt; On 7 Jun 2005, at 20:37, Drew Koning wrote:
+&gt;
+&gt;&gt; Greetings.
+&gt;&gt;
+&gt;&gt; In conjunction with the NSF, I've written a web-based NLP solution to
+&gt;&gt; extract taxonomic names from text. I would greatly appreciate any
+&gt;&gt; feedback
+&gt;&gt; your community can provide.
+&gt;&gt;
+&gt;&gt; <A HREF="http://research.amnh.org/informatics/taxlit/apps">http://research.amnh.org/informatics/taxlit/apps</A>
+&gt;&gt;
+&gt;&gt; This tool was written under a National Science Foundation Grant:
+&gt;&gt; &quot;Collaborative Research: Development of new digital library
+&gt;&gt; applications in
+&gt;&gt; the context of a basic ontology for biosystematics information using
+&gt;&gt; the
+&gt;&gt; literature of entomology&quot;
+&gt;&gt;
+&gt;&gt; Cheers,
+&gt;&gt;
+&gt;&gt; Drew Koning
+&gt;&gt; +1 212.496.3569
+&gt;&gt; Informatics - American Museum of Natural History
+&gt;&gt; Central Park West @ 79th Street
+&gt;&gt; New York, NY 10024
+&gt;&gt;
+&gt;&gt;
+&gt; Professor Roderic D. M. Page
+&gt; Editor, Systematic Biology
+&gt; DEEB, IBLS
+&gt; Graham Kerr Building
+&gt; University of Glasgow
+&gt; Glasgow G12 8QP
+&gt; United Kingdom
+&gt;
+&gt; Phone:    +44 141 330 4778
+&gt; Fax:      +44 141 330 2792
+&gt; email:    r.page at bio.gla.ac.uk
+&gt; web:      <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+&gt; reprints: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/pubs.html">http://taxonomy.zoology.gla.ac.uk/rod/pubs.html</A>
+&gt;
+&gt; Subscribe to Systematic Biology through the Society of Systematic
+&gt; Biologists Website:  <A HREF="http://systematicbiology.org">http://systematicbiology.org</A>
+&gt; Search for taxon names at <A HREF="http://darwin.zoology.gla.ac.uk/~rpage/portal/">http://darwin.zoology.gla.ac.uk/~rpage/portal/</A>
+&gt;
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="093835.html">52nd Annual Systematics Symposium at the Missouri Botanical Garden
+</A></li>
+        <LI>Next message: <A HREF="093836.html">Taxonomic Name Extraction | TaxonGrab v1.1
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#093837">[ date ]</a>
+              <a href="thread.html#093837">[ thread ]</a>
+              <a href="subject.html#093837">[ subject ]</a>
+              <a href="author.html#093837">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Taxaonomic database structure
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1997-August/021451.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Taxaonomic database structure</H1>
+    <B data-pagefind-meta="author">Stan Blum</B>
+    sblum at BISHOP.BISHOP.HAWAII.ORG<BR>
+    <I data-pagefind-meta="date">Sat Aug 30 12:23:46 CDT 1997</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="104599.html">Molecules et al
+</A></li>
+        <LI>Next message: <A HREF="057243.html">Taxaonomic database structure
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#021451">[ date ]</a>
+              <a href="thread.html#021451">[ thread ]</a>
+              <a href="subject.html#021451">[ subject ]</a>
+              <a href="author.html#021451">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1997</span><!--beginarticle-->
+<PRE>At 11:02 AM 8/29/97 -0500, Jim Bennett wrote:
+&gt;I would like to ask the readership how they deal with binomials and
+&gt;trinomials in their taxonomic databases.
+
+It is difficult to recommend a good &quot;middle ground structure&quot; without
+knowing more about your situation.  For example:
+
+What is this database intended to capture, and how is it going to be used?
+Are you capturing literature references and supporting your own revisionary
+work, or developing an authority (look-up) file for a collection (or
+observation) database, or what?
+
+Is the current list of uses likely to grow?
+
+Which DBMS are you using?
+
+How much effort can you expend in programming versus data entry and proofing?
+
+How many people are doing the data entry?
+
+&gt;Up till now I have entered the
+&gt;entire binomial or trinomial in one field, with separate fields for family
+&gt;and genus.
+
+What does a record in this table represent; a taxon, a species-level taxon,
+a valid (accepted) species-level taxon, a specimen, an identification of a
+specimen?  (There are a lot of possibilities!)  How many tables will taxa
+appear in?
+
+&gt;In some more advanced databases
+&gt;it appears that each taxonomic rank is made into a separate record with a
+&gt;field for what the rank is. I don't need this level of sophistication for my
+&gt;databases, so am looking for a middle ground structure. Any thoughts on this
+&gt;would be most appreciated.
+
+As Norm Johnson noted, a recursive (self joining) table for taxa is very
+flexible.  It accepts taxa of any rank and status, unbalanced
+classifications (e.g., incertae sedis species), etc., without requiring a
+lot &quot;work-arounds&quot;.  Unfortunately, it can also require a lot of
+programming to do data retrieval and reporting (in some systems).
+
+You should note, however, that the question &quot;how to represent a
+species-level name?&quot; is a separate from &quot;how to represent a
+classification?&quot; (= relationships among taxa).  It is possible to use a
+single field to capture the full name of a taxon (of any rank and status)
+in a single long list, and to create a classification from this list in one
+or more separate tables.  Whether you add fields for rank, status,
+abbreviation, parent taxon, TaxonID (numeric surrogate key), etc., will all
+depend on your situation and objectives.
+
+Finally, please note that the correct URL for the new &quot;ASC model&quot; is:
+
+  <A HREF="http://gizmo.lbl.gov/DM_TOOLS/OPM/BCSL/BCSL.html">http://gizmo.lbl.gov/DM_TOOLS/OPM/BCSL/BCSL.html</A>
+
+And, yes, it's still under revision (being simplified in several ways).
+
+
+Stan Blum
+
+- - - - - - - - - - - - - - - - - - - - - - - -
+Co-Chair, ASC Computerization &amp; Networking Comm.
+  <A HREF="http://www.bishop.hawaii.org/asc-cnc/">http://www.bishop.hawaii.org/asc-cnc/</A>
+Bishop Museum
+Honolulu, HI
+Tel. (808) 848-4173
+Fax. (808) 847-8252
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="104599.html">Molecules et al
+</A></li>
+        <LI>Next message: <A HREF="057243.html">Taxaonomic database structure
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#021451">[ date ]</a>
+              <a href="thread.html#021451">[ thread ]</a>
+              <a href="subject.html#021451">[ subject ]</a>
+              <a href="author.html#021451">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,232 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Characters.
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2004-June/092187.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Characters.</H1>
+    <B data-pagefind-meta="author">rjensen at SAINTMARYS.EDU</B>
+    rjensen at SAINTMARYS.EDU<BR>
+    <I data-pagefind-meta="date">Sun Jun 20 11:03:48 CDT 2004</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="092183.html">Characters.
+</A></li>
+        <LI>Next message: <A HREF="092186.html">Characters.
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092187">[ date ]</a>
+              <a href="thread.html#092187">[ thread ]</a>
+              <a href="subject.html#092187">[ subject ]</a>
+              <a href="author.html#092187">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2004</span><!--beginarticle-->
+<PRE>John,
+
+Perhaps a simple example will help clarify the problem.  Here's a data matrix for 4 taxa (A,B,C,D) and an Outgroup (X), for 10 characters.
+
+          1 2 3 4 5 6 7 8 9 10
+      A  0 1 0 1 1 1 1 0 1 0
+      B  0 1 0 1 0 1 1 0 0 1
+      C  0 1 1 0 1 1 0 0 0 1
+      D  0 1 1 0 0 1 0 1 1 1
+      X  0 0 0 1 0 1 0 0 0 0
+
+Notice that characters 1 and 6 are invariant, thus they are ignored (by any analysis).  Character 8 is a unique apomorphy for taxon D, so it is ignored by the cladistic algorithm (no-informative with respect to sister-group relationships), but it is NOT ignored by the phenetic algorithm.  If you calculate a measure of overall similarity (try the simple matching coefficients or the Manhattan distances) among all pairs of taxa, and then apply UPGMA cluster analysis, you get a single solution, summarized as  ((X,(A,B)),(C,D)).  Notice that the outgroup clusters with taxa A,B and is not really an outgroup!  Normally, outgroups are not included in phenetic analyses (after all, they are not &quot;designed&quot; to determine evolutionary relationships).  Removing X leaves one with a simple phenogram: ((A,B),(C,D)).
+
+Now subject the data to a cladistic analysis.  There are two most parsimonious trees rooted at the outgroup: (X((A,B),(C,D)) and (X,(A,(B,(C,D)))).  Neither solution is the same as the phenetic analysis containing the outgroup, although the first shows the same relationships among the ingroup taxa as does the phenetic analysis without the outgroup.
+
+Suppose you argue that character 8 has been misinterpreted and, in fact, the state in the outgroup is the derived state.  So, for character 8 you change the 0 states to 1 and the 1 state to 0: this has no effect on the phenetic results.  However, it does have an effect on the cladistic results; character 8 now becomes informative, suggesting that taxa A,B,C are a monophyletic group. The result is that there are now three most parsimonious solutions, none of which is the same as the phenetic analysis.
+
+Another important point about the difference between phenetic (overall similarity) and cladistic analyses is that in a phenetic analysis it is not possible to map character changes to precise locations (i.e., internodes) on the phenogram.  In the cladogram, every character change can be mapped to a precise internode.
+
+Dick
+
+
+
+
+----- Original Message -----
+From: John Grehan &lt;jgrehan at sciencebuff.org&gt;
+Date: Friday, June 18, 2004 3:21 pm
+Subject: RE:      Re: [TAXACOM] Characters.
+
+&gt;
+&gt; Richard Jensen wrote:
+&gt;
+&gt; It may be bad cladistics (poorly chosen
+&gt; &gt; outgroup),
+&gt; &gt; but it not based on overall similarity.
+&gt;
+&gt; I will disagree on that. If the characters were all cladistic (all
+&gt; proposed apomorphies) it seems to me that a parsimony analysis would
+&gt; result in an overall similarity of the most parsimonious set of
+&gt; synapomorphies. Since the synapomorphies are themselves
+&gt; apomorphies at
+&gt; the outset then I can see the result being cladistic (tracking
+&gt; phylogenetic sequence of differentiation). If the characters are
+&gt; phenetic (giving overall similarity due to the failure to properly
+&gt; identify and restrict characters to apomorphies) the result will be
+&gt; phenetic - a measure of overall similarity that does not have any
+&gt; necessary relationship to phylogeny. At least that's how I see the
+&gt; situation.
+&gt;
+&gt; &gt; &gt; &gt; As
+&gt; &gt; &gt; &gt; several of us have repeatedly emphasized, the same data
+&gt; matrix my
+&gt; be
+&gt; &gt; &gt; used to construct either phenetic (i.e., overall similarity) or
+&gt; cladistic
+&gt; &gt; &gt; (i.e., patterns of nested synapomorphies) relationships.
+&gt;
+&gt; Ok, but I argue that it makes a difference at the outset if the
+&gt; originaldata matrix was not restricted to apomorphies that are
+&gt; evaluatedcharacter by character.
+&gt;
+&gt; In an
+&gt; &gt; objective analysis, every character state (with the exceptions of
+&gt; those
+&gt; &gt; that
+&gt; &gt; are invariant among the taxa, and those are unique to a single
+&gt; taxon)is a
+&gt; &gt; potential synapomorphy (referring to them as &quot;predicted apomorphies&quot;
+&gt; &gt; implies
+&gt; &gt; that you are weighting characters by some exteranl criterion)
+&gt;
+&gt; I would agree with that, but my contention is that in the human
+&gt; phylogeny question there are characters that are treated as
+&gt; cladistic in
+&gt; the analysis by imposition of an outgroup while they may in actual
+&gt; factnot be apomorphic at all (i.e. they are misdiagnosed as
+&gt; apomorphies). It
+&gt; is this misdiagnosis that I suspect is the case in molecular studies.
+&gt;
+&gt; and the
+&gt; &gt; algorithm will provide a pattern of cladistic relationships in the
+&gt; ingroup
+&gt; &gt; based on the character states in the outgroup(s).  I think a problem
+&gt; here
+&gt; &gt; is
+&gt; &gt; that you are deciding, a priori, which characters are to be
+&gt; included;that
+&gt; &gt; introduces a bias that will clearly dictate the realtionships in the
+&gt; &gt; output.  I don't see such a procedure is an objective approach.
+&gt;
+&gt; In one sense there is nothing purely 'objective' in science outside
+&gt; pre-dtermined parameters should one accept those parameters in the
+&gt; firstplace. Recipes are objective once their criteria are set,
+&gt; setting those
+&gt; criteria are not objective in the sense that they are the result of
+&gt; one's judgment of the evidence and what constitutes relevant
+&gt; evidence in
+&gt; the first place.
+&gt;
+&gt; &gt; Yes, you don't have to accept it.  You appear to have an eccentric
+&gt; view of
+&gt; &gt; the &quot;real world of cladistics&quot; that is incommensurable with the way
+&gt; &gt; cladistics is practiced by most systematists.
+&gt;
+&gt; This is interesting in that eccentric is being defined as what is not
+&gt; practiced by most practitioners. I guess I would then have to
+&gt; agree that
+&gt; I am eccentric. So was Darwin in his time. So was Croizat etc. Thanks
+&gt; for the compliment!
+&gt;
+&gt; Just because you don't accept that fact that
+&gt; &gt; relationships based on overall similarity (i.e., phenetic
+&gt; relationships) are not produced
+&gt; &gt; by cladistic algorithms, that doesn't mean it isn't so.
+&gt;
+&gt; Unless it is not a fact in the first place.
+&gt;
+&gt; But it does
+&gt; &gt; suggest
+&gt; &gt; that you don't understand the fundamental differences between the
+&gt; &gt; different
+&gt; &gt; kinds of analyses.
+&gt;
+&gt; It only suggests that we have a different understanding.
+&gt;
+&gt; &gt; &gt;
+&gt; &gt; &gt; So one may take the total number of characters shared between
+&gt; humansand
+&gt; &gt; &gt; great apes and do a 'cladistic' analysis by rooting with some
+&gt; other&gt; &gt; taxon (actually a case where this was done recently using the
+&gt; orangutan
+&gt; &gt; &gt; as the outgroup because that assignment was beyond question) and
+&gt; make a
+&gt; &gt; &gt; cladogram out of it. But that cladogram does not represent a
+&gt; nestedset
+&gt; &gt; &gt; of synapomorphies even though the characters may be treated as if
+&gt; they
+&gt; &gt; &gt; were. It seems to me it would be a case of garbage in, garbage
+&gt; out.&gt;
+&gt; &gt; The cladogram does represent a hypothetical set of nested
+&gt; synapomorphies.
+&gt;
+&gt; Only if the characters are apomorphies in the first place. By
+&gt; assuming,for example, that orangutans were the outgroup,
+&gt; characters were
+&gt; polarized such that they were treated as apomorphies whereas in actual
+&gt; fact they might not be.
+&gt;
+&gt; But, if you reject them, you must be able to
+&gt; &gt; provide an objectively-based rationale for doing so.
+&gt;
+&gt; Sure, or at least provide a testable argument (i.e. identify what
+&gt; constitutes the evidence for making that decision that others can
+&gt; referto and make their determination.
+&gt;
+&gt; John Grehan
+&gt;
+&gt;
+&gt; John R. Grehan
+&gt; Director of Science and Collections
+&gt; Buffalo Museum of Science
+&gt; 1020 Humboldt Parkway
+&gt; Buffalo, NY 14211-1193
+&gt; email: jgrehan at sciencebuff.org
+&gt; Phone: (716) 896-5200 ext 372
+&gt;
+&gt; <A HREF="http://www.sciencebuff.org/biogeography/Panbiogeography/Panbiogeography-">http://www.sciencebuff.org/biogeography/Panbiogeography/Panbiogeography-</A>
+&gt; Gate.htm
+&gt; <A HREF="http://www.sciencebuff.org/primates/Human%20origins/Humanorigins.htm">http://www.sciencebuff.org/primates/Human%20origins/Humanorigins.htm</A>
+&gt; <A HREF="http://www.sciencebuff.org/HepialidaeGate.htm">http://www.sciencebuff.org/HepialidaeGate.htm</A>
+&gt;
+&gt;
+&gt;
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="092183.html">Characters.
+</A></li>
+        <LI>Next message: <A HREF="092186.html">Characters.
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092187">[ date ]</a>
+              <a href="thread.html#092187">[ thread ]</a>
+              <a href="subject.html#092187">[ subject ]</a>
+              <a href="author.html#092187">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

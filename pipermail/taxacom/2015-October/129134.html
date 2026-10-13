@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Wikidata and Wikispecies
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Wikidata%20and%20Wikispecies&In-Reply-To=%3C928FB7DE-7C3A-4285-9BE4-848C0A022C6A%40glasgow.ac.uk%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="129132.html">
+   <LINK REL="Next"  HREF="081726.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2015-October/129134.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Wikidata and Wikispecies</H1>
+    <B data-pagefind-meta="author">Roderic Page</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Wikidata%20and%20Wikispecies&In-Reply-To=%3C928FB7DE-7C3A-4285-9BE4-848C0A022C6A%40glasgow.ac.uk%3E"
+       TITLE="[Taxacom] Wikidata and Wikispecies">Roderic.Page at glasgow.ac.uk
+       </A><BR>
+    <I data-pagefind-meta="date">Thu Oct 29 09:13:49 CDT 2015</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="129132.html">[Taxacom] Wikidata and Wikispecies
+</A></li>
+        <LI>Next message: <A HREF="081726.html">[Taxacom] origin of plague bacterium (Y. pestis)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#129134">[ date ]</a>
+              <a href="thread.html#129134">[ thread ]</a>
+              <a href="subject.html#129134">[ subject ]</a>
+              <a href="author.html#129134">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2015</span><!--beginarticle-->
+<PRE>Hi Paul,
+
+I guess I have in mind the TDWG LSID vocabulary, <A HREF="http://rs.tdwg.org/ontology/voc/TaxonConcept">http://rs.tdwg.org/ontology/voc/TaxonConcept</A>
+
+So, if we have an identifier for a taxon (URL, DOI, LSID, whatever) it would have a property “hasName” that would point to a taxon name object (e.g., <A HREF="http://rs.tdwg.org/ontology/voc/TaxonName">http://rs.tdwg.org/ontology/voc/TaxonName</A> ) and any objective synonyms of that name would be linked to that name (e.g., via basionym links). Other synonyms could, presumably, be linked via circumscription.
+
+This was pretty much what Catalogue of Life had for Index Fungorum names when CoL managed to serve working LSIDs.
+
+For me a taxon identifier is really only useful if it links to some sort of evidence and/or explicit statement of what that taxon is. This means basically:
+
+GBIF (from which we get a set of specimens comprising the taxon)
+NCBI (which specifies a set of sequences that form the taxon)
+BOLD (as for NCBI, a set of sequences comprising a BIN)
+
+Pretty much everything else is arm waving. OK, to be more precise, the projects above are the ones with global scope that have explicit taxon concepts at species level. There will be the projects that I’m unaware of, or which have a more restricted taxonomic scope. I guess we could also argue that anything which has a taxonomic hierarchy (e.g., ITIS) has a not of what a taxon is above the species level (e.g., a genus is a set of species) but below that there’s no actual data.
+
+
+Regards
+
+Rod
+
+
+On 29 Oct 2015, at 13:54, Paul Kirk &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">P.Kirk at kew.org</A>&lt;mailto:<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">P.Kirk at kew.org</A>&gt;&gt; wrote:
+
+OK but ... whilst I accept that you have not defined the structure of your proposed taxon identifier there must be a mechanism, in the case that the taxon concept includes multiple name identifiers, to link these name identifiers together as a minimalist concept, and if not I fail to see the advantage of a taxon identifier in it's simplest form, e.g. 123456 ... TCS revisted (<A HREF="http://www.tdwg.org/activities/tnc/">http://www.tdwg.org/activities/tnc/</A>)?
+
+Paul
+
+________________________________________
+From: Roderic Page &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Roderic.Page at glasgow.ac.uk</A>&lt;mailto:<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Roderic.Page at glasgow.ac.uk</A>&gt;&gt;
+Sent: 29 October 2015 09:10
+To: Paul Kirk
+Cc: Andy Mabbett; Taxa com; <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">urmas.koljalg at ut.ee</A>&lt;mailto:<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">urmas.koljalg at ut.ee</A>&gt;
+Subject: Re: [Taxacom] Wikidata and Wikispecies
+
+Hi Paul,
+
+
+Your last paragraph might be interpreted by some to mean that you consider the existing resources in the domain of nomenclature and taxonomy are not useful. Since molecular data are now very important in defining taxa in the fungi perhaps Wikidata should be encouraged to duplicate the resources available from the INSDC ;-)
+
+Paul
+
+
+Not sure how you got that impression :O  Instead I’d like identifiers for taxa (NCBI, GBIF, EOL, etc., etc.) to go with taxa, and identifiers for names (ION, IPNI, ZooBank, Index Fungorum, etc., etc.) to go with names.
+
+Regards
+
+Rod
+
+
+________________________________________
+From: Taxacom &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom-bounces at mailman.nhm.ku.edu</A>&lt;mailto:<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom-bounces at mailman.nhm.ku.edu</A>&gt;&gt; on behalf of Roderic Page &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Roderic.Page at glasgow.ac.uk</A>&lt;mailto:<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Roderic.Page at glasgow.ac.uk</A>&gt;&gt;
+Sent: 27 October 2015 07:52
+To: Andy Mabbett
+Cc: Taxa com
+Subject: Re: [Taxacom] Wikidata and Wikispecies
+
+Hi Andy,
+
+Not quite. In the example you give the taxon name is a simple string, whereas I'd ague it should be an item with its own properties. In the same way that for people Wikidata can first and last names as items, e..g.  <A HREF="https://m.wikidata.org/wiki/Q272518">https://m.wikidata.org/wiki/Q272518</A>  rather than strings.
+
+Doing this will (a) avoid conflating names and taxa, and (b) make Wikidata a lot more attractive as a repository of nomenclatural facts, many of which are a good fit for Wikidata (dates, people, publications, specimens). It also means you could align Wikidata with the main repositories of nomenclature, such as ZooBank, ION, IPNI, etc.
+
+I guess I think Wikidata has an opportunity to be genuinely useful to biologists if it spends a little time to sort out how it models taxa and names, otherwise it's an opportunity missed.
+
+Regards
+
+Rod
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="129132.html">[Taxacom] Wikidata and Wikispecies
+</A></li>
+	<LI>Next message: <A HREF="081726.html">[Taxacom] origin of plague bacterium (Y. pestis)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#129134">[ date ]</a>
+              <a href="thread.html#129134">[ thread ]</a>
+              <a href="subject.html#129134">[ subject ]</a>
+              <a href="author.html#129134">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Taxonomic Name Extraction | TaxonGrab v1.1
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2005-June/093836.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Taxonomic Name Extraction | TaxonGrab v1.1</H1>
+    <B data-pagefind-meta="author">Roderic Page</B>
+    r.page at BIO.GLA.AC.UK<BR>
+    <I data-pagefind-meta="date">Tue Jun  7 22:53:40 CDT 2005</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="093837.html">Taxonomic Name Extraction | TaxonGrab v1.1
+</A></li>
+        <LI>Next message: <A HREF="093839.html">Lamarcjk is alive and well
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#093836">[ date ]</a>
+              <a href="thread.html#093836">[ thread ]</a>
+              <a href="subject.html#093836">[ subject ]</a>
+              <a href="author.html#093836">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2005</span><!--beginarticle-->
+<PRE>This looks nice, and there is a great need for this sort of tool. For
+example, in the recent ECAT e-conference, I suggested using text
+extraction tools to get names from PubMed, as almost every week there
+are new taxon names appearing in PubMed, all tied to a publication.
+
+As one example, consider this paper:
+<A HREF="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?">http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?</A>
+cmd=Retrieve&amp;db=pubmed&amp;dopt=Abstract&amp;list_uids=15928992&amp;query_hl=4
+
+The abstract is:
+
+Aploparaksis demshini n. sp. is described from a woodcock Scolopax
+rusticola L. from different parts of the Palaearctic (Lithuania,
+Karelia, the Urals, Primorskiy Kray). It differs from the most similar
+species A. belopolskajae Bondarenko, 1988, a parasite of snipes
+Gallinago spp., in the form and length of the rostellar hooks and the
+smaller cirrus, and from two other similar species, A. clavata
+Spasskaya, 1966 and A. schilleri Webster, 1955, by having an
+embryophore with polar thickenings and a spindle-shaped cirrus. The
+life-cycle of the parasite was studied under experimental conditions.
+The metacestodes were commonly located under the chlorogogenous tissue
+of the intestine of the earthworms Eisenia foetida(Savigny),
+Dendrobaena octaedra (Savigny) and E. nordenskioldi(Eisen), and in the
+wall of the intestine of the enchytraeid Briodrilus arcticus(Bell). The
+metacestodes exhibit a pattern of postembryonal development typical for
+the cysticercoid modification termed an 'ovoid diplocyst'.
+
+The NLP tool results in:
+A. belopolskajae
+A. clavata
+A. schilleri
+Aploparaksis demshini
+Dendrobaena octaedra
+Scolopax rusticola
+
+Note that it missed Briodrilus arcticus(Bell), Eisenia
+foetida(Savigny), and E. nordenskioldi(Eisen) -- I guess because of the
+missing space between name and authority -- and also Gallinago (in the
+abstract as &quot;Gallinago spp.&quot;). I wonder whether it can also figure out
+that A. clavata is actually Aploparaksis clavata?
+
+Another example is
+<A HREF="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?">http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?</A>
+cmd=Retrieve&amp;db=pubmed&amp;dopt=Abstract&amp;list_uids=15928991&amp;query_hl=4
+
+Here, NLP picks up P. juxtanucleare and Plasmodium dominicana, but
+misses Diptera: Culicidae: Culicinae  [written in the oft-used format
+(Diptera: Culicidae: Culicinae)], and Galliformes.
+
+So, an impressive start, but I guess this problem will need more work.
+
+One other comment -- the site displays the OSI logo, but the software
+doesn't seem to be available (apart from a link on NLP Analysis - File
+upload window which is to a fragment of PHP code).
+
+I don't mean these comments to be negative, I think this is very timely
+work.
+
+Regards
+
+Rod
+
+
+
+
+On 7 Jun 2005, at 20:37, Drew Koning wrote:
+
+&gt; Greetings.
+&gt;
+&gt; In conjunction with the NSF, I've written a web-based NLP solution to
+&gt; extract taxonomic names from text. I would greatly appreciate any
+&gt; feedback
+&gt; your community can provide.
+&gt;
+&gt; <A HREF="http://research.amnh.org/informatics/taxlit/apps">http://research.amnh.org/informatics/taxlit/apps</A>
+&gt;
+&gt; This tool was written under a National Science Foundation Grant:
+&gt; &quot;Collaborative Research: Development of new digital library
+&gt; applications in
+&gt; the context of a basic ontology for biosystematics information using
+&gt; the
+&gt; literature of entomology&quot;
+&gt;
+&gt; Cheers,
+&gt;
+&gt; Drew Koning
+&gt; +1 212.496.3569
+&gt; Informatics - American Museum of Natural History
+&gt; Central Park West @ 79th Street
+&gt; New York, NY 10024
+&gt;
+&gt;
+Professor Roderic D. M. Page
+Editor, Systematic Biology
+DEEB, IBLS
+Graham Kerr Building
+University of Glasgow
+Glasgow G12 8QP
+United Kingdom
+
+Phone:    +44 141 330 4778
+Fax:      +44 141 330 2792
+email:    r.page at bio.gla.ac.uk
+web:      <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+reprints: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/pubs.html">http://taxonomy.zoology.gla.ac.uk/rod/pubs.html</A>
+
+Subscribe to Systematic Biology through the Society of Systematic
+Biologists Website:  <A HREF="http://systematicbiology.org">http://systematicbiology.org</A>
+Search for taxon names at <A HREF="http://darwin.zoology.gla.ac.uk/~rpage/portal/">http://darwin.zoology.gla.ac.uk/~rpage/portal/</A>
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="093837.html">Taxonomic Name Extraction | TaxonGrab v1.1
+</A></li>
+        <LI>Next message: <A HREF="093839.html">Lamarcjk is alive and well
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#093836">[ date ]</a>
+              <a href="thread.html#093836">[ thread ]</a>
+              <a href="subject.html#093836">[ subject ]</a>
+              <a href="author.html#093836">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

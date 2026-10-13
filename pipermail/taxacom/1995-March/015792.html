@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> dichotomy
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1995-March/015792.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">dichotomy</H1>
+    <B data-pagefind-meta="author">Mr Fortuner connection modem</B>
+    fortuner at MATH.U-BORDEAUX.FR<BR>
+    <I data-pagefind-meta="date">Wed Mar 22 17:50:46 CST 1995</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="098943.html">Identification Software
+</A></li>
+        <LI>Next message: <A HREF="051584.html">dichotomy
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#015792">[ date ]</a>
+              <a href="thread.html#015792">[ thread ]</a>
+              <a href="subject.html#015792">[ subject ]</a>
+              <a href="author.html#015792">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1995</span><!--beginarticle-->
+<PRE>Mike Dallwitz wrote:
+&quot;A deterministic procedure is one in which the only
+probabilities considered are 0 and 1. A probabilistic procedure is one which
+can deal with any probabilities.&quot;
+
+OK, I can live with this. Now, you must
+agree that a procedure which can deal with ANY probabilities is by nature
+&quot;better&quot; (i.e., more general) than one which is restricted to the extreme of
+the range. This is one of the aspect of the &quot;rigidity&quot; (i.e., lack of
+flexibility) of any dichotomous system.
+
+Then you said:
+&quot;DELTA can deal with
+non-dichotomous characters - multistate characters, numeric characters, and
+text `characters'.&quot;
+
+I believe we have another problem of terminology here.
+Multistate, numeric, and text are types of characters. Dichotomy is a method
+of identification. You can use dichotomy with any type of character. For
+example, if a flower can be red, white, or blue: this is a multistate
+character. Here is a dichotomous key to go with it:
+1 - If flower is red,
+species is Red herring
+   - If flower is not red, go to line 2
+2 - If flower
+is white, species is White trash
+  - If flower is not white, go to line 3
+3 -
+If flower is blue, species is Blue funk
+  - If flower is not blue, then you
+are in trouble Mister, because I am dichotomous.
+
+Your example of how the
+red-white-blue flower character is treated in Delta is exactly what I had in
+mind when I said &quot;rigidity&quot; or lack of flexibility. If I understand correctly,
+you have to code, separately and beforehand, all possible states or
+combination of states, and you have to decide, again beforehand, if they are
+going to be used for identification or for natural language (NL) description.
+In my system, you would define the character as : structure = flower,
+descriptor = color, states = red, white, blue, pink. Then species X (all pink)
+would be coded pink (100%), and species Y would be coded white (75%), red
+(25%). It's a WYSIWYWD system: what you see is what you write down! If the
+unknown has spotted flower, the user just adds &quot;spotted&quot; to the list of
+states. The point is that all the states are entered separately, as they
+appear in a NL description or as the user sees them in the specimens, and that
+each type of metadata (here, the percentages) are in a field of their own,
+available for any algorithm that needs them.
+
+The Delta &quot;error tolerance&quot;
+parameter is a clever way to make the best of a bad method (dichotomy), but it
+is far from perfect. If the threshold is set at 2 you will have:
+first error =
+0% degradation
+second error  0% degradation
+third error = 100%
+degradation
+You have diminished the risk of having degradation occur (at the
+expense of a loss in discrimination, obviously), but when the user goes over
+the threshold, degradation is total. This is hardly what I would call
+graceful.
+
+By contrast, a similarity coefficient degrades gracefully because
+of its very nature.
+
+Another quote from Mike:
+&quot;At any stage, the user has
+access to the number of differences
+between any taxon and the specimen, and
+the actual character values which have given rise to these differences. Surely
+this is more helpful than knowing that a taxon is `99% similar' to the
+specimen.&quot;
+
+Once you know that species B is 99% similar to the unknown, of
+course the next step is to get a list of the similar and dissimilar
+characters. Such a list can be provided (should be) by any identification
+method, including similarity, so this cannot be used as an argument in favor
+of dichotomy. An argument in favor of similarity is that, in addition to the
+straight list of differences, it gives you an idea of the overall
+resemblance.
+
+Now, I want to make it clear that I do use dichotomy. It is
+great for eliminating all the taxa that are obviously wrong for the unknown,
+using the most reliable characters (of course, the system cannot know which
+are the reliable characters unless it has access to metadata about
+reliability). A typical identification session would go like this:
+Focus on a
+large group by immediate recognition, use dichotomy to eliminate the species
+obviously wrong, use similarity to rank the remaining species, and use a
+browser to check the most likely answers. Once a particular biocenosis is
+completely identified, bayesian probabilities could be used for future
+identification in the same biotope.
+
+The point is that you need an &quot;expert
+workstation&quot; for identification, i.e., a set of related and integrated tools
+which gives you the possibility of using different approaches as you wish,
+depending of what you want to do.
+
+Renaud Fortuner
+fortuner at math.u-bordeaux.fr
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="098943.html">Identification Software
+</A></li>
+        <LI>Next message: <A HREF="051584.html">dichotomy
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#015792">[ date ]</a>
+              <a href="thread.html#015792">[ thread ]</a>
+              <a href="subject.html#015792">[ subject ]</a>
+              <a href="author.html#015792">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,279 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Identification Software
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1995-March/015747.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Identification Software</H1>
+    <B data-pagefind-meta="author">Mike Dallwitz</B>
+    miked at ENTO.CSIRO.AU<BR>
+    <I data-pagefind-meta="date">Mon Mar 20 09:47:58 CST 1995</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="098917.html">Article 71
+</A></li>
+        <LI>Next message: <A HREF="051539.html">Identification Software
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#015747">[ date ]</a>
+              <a href="thread.html#015747">[ thread ]</a>
+              <a href="subject.html#015747">[ subject ]</a>
+              <a href="author.html#015747">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1995</span><!--beginarticle-->
+<PRE>                                                                 20 March 1995
+
+&gt; From: stephen gough &lt;sgough at S850.MWC.EDU&gt;
+&gt;
+&gt; To supplement traditional methods of identifying vascular plants (mostly
+&gt; trees and shrubs) in a Plant Ecology course, I would like to construct a
+&gt; software-based system for common items. I don't need the rigor of a
+&gt; DELTA-based system; rather I would like something that uses simple
+&gt; descriptive characteristics (perhaps a list of characteristics up front) and
+&gt; then determines one or more possible &quot;hits,&quot; with the option to view line
+&gt; art or photographs on screen. Does anyone know what software I might use to
+&gt; construct something like this? It should be PC-compatible, and operation
+&gt; under Windows would be nice.
+
+I'm not sure about the intended implications of the word `rigor' here. I am
+flattered that it has been closely linked with DELTA, and indeed, many users
+have commented to me that using DELTA has improved the quality of their work.
+However, let me reassure you that it is quite possible to do sloppy work with
+DELTA software (as with any database system), should you so wish.
+
+I suppose that what you really want is a rigorous system that is easy for
+students to use. There are four main aspects to ease of use for the end user
+of an interactive identification system: (1) easily understood characters; (2)
+accurate data; (3) the ability of the software to record and use effectively
+the necessary data types and structures; and (4) the user interface. The first
+two are the responsibility of the author of the data. The DELTA coding format
+and our interactive identification program INTKEY are, I believe, unmatched in
+the third area. However, some (perhaps most) potential INTKEY users seem to
+feel that the user interface of the current MS-DOS version is too difficult.
+
+In about a week we will be publicly releasing on the Internet a MS-Windows
+version of INTKEY with a greatly improved user interface (and also some
+increased functionality, particularly in relation to images). At program
+startup, the user chooses from three modes of operation. The `simplified' mode
+is strongly recommended for beginning or casual users of the program. We
+believe that this mode can be used without reference to any documentation.
+However, full instructions (190 words) for identifying specimens and
+displaying descriptions are automatically displayed in a window, and the user
+is discouraged from closing it.
+
+Although `simplified' mode is extremely easy to use, it is still underpinned
+by the powerful data-handling capabilities of INTKEY. A few months ago I
+posted a list of features which I consider desirable or essential for an
+interactive identification program. (There was no reply. Is this because of
+apathy, because it was all obviously true, or because it was too ridiculous to
+be dignified by a reply?) Here is the list again, with the features available
+in `simplified' mode indicated by *.
+
+
+    ----------------------------------------------------------------------
+
+
+            Desirable Attributes for Interactive Identification and
+                         Information Retrieval Systems
+
+                       M. J. Dallwitz  20 December 1994
+
+
+* Error tolerance. The ability to reach a correct identification after errors
+have been made, or if there are errors in the data.
+
+* Unrestricted character use. The absence of restrictions on the order in
+which characters can be used (apart from restrictions imposed by character
+dependencies - see below).
+
+* `Best' characters. Whether the program can advise on the most suitable
+characters for use at any stage of an identification. `Partial' indicates a
+lack of flexibility in this area, usually owing to the recommendations being
+built into the data, as in a key or rule-based expert system.
+
+* Multiple state selection. Whether the user can specify uncertainty by
+entering more than one state value, or a range of numeric values.
+
+(*) Character deletion/changing. Whether characters used in an identification
+can be removed, or their values changed. `Partial' indicates that removal is
+possible only in the reverse order of use. (Deletion not available in
+simplified mode.)
+
+* Character weighting. Whether character weights can be used in the
+calculation of `best' characters. `Partial' indicates that higher weights
+always imply `better' characters, regardless of other considerations.
+
+(*) Text characters. Whether free-text information about taxa can be stored
+and searched. (Can be displayed but not searched in simplified mode.)
+
+* Numeric characters. Whether numeric characters can be used directly (without
+dividing them into ranges.
+
+* Gaps for integer numeric characters. Whether recorded values for integer
+numeric character can contain gaps, e.g. `5 or 10' distinguishable from `5 to
+10'.
+
+* Uncertainty ranges. Whether single numeric values in the original data can
+be treated as ranges for identification purposes. `Partial' indicates that the
+transformation is not under the control of the interactive user (as in the
+ABSOLUTE/PERCENTAGE ERROR mechanisms in CONFOR/INTKEY).
+
+* Inapplicable/unknown. Whether inapplicable values are distiguished from
+unknown values.
+
+Control of value matching. Whether the user has control over whether
+overlapping, unknown, and inapplicable values are deemed to match other
+values. `Partial' indicates limited control, e.g. `identification' vs.
+`information retrieval' settings.
+
+* Character dependencies. Whether the program is aware of character
+dependencies, i.e., characters which are inapplicable when other characters
+take certain values.
+
+* No dependency restrictions. Whether there are restrictions on the order in
+which dependent/controlling characters may be used.
+
+Keywords. Whether there is a mechanism for referring to subsets of the
+characters and taxa. `Partial' indicates that such subsets cannot be defined
+by the user (i.e. are built into the system).
+
+* Character notes or glossaries. Whether extensive text to aid interpretation
+of characters can be conveniently available within the system.
+
+(*) Information retrieval. Whether the system can be used for information
+retrieval (e.g. displaying descriptions, finding all taxa which have certain
+combinations of attributes).
+
+Differences between taxa. Whether the program can find the differences between
+members of a set of taxa. `Partial' indicates that the set must contain only 2
+taxa.
+
+Similarities between taxa. Whether the program can find the similarities
+between members of a set of taxa.
+
+Diagnostic descriptions. Whether the program can find diagnostic descriptions.
+`Partial' indicates inability to distiguish between taxon and specimen
+diagnostic descriptions, or inability to restrict the choice of characters to
+those not used in the current identification.
+
+Character-value distributions. Whether the program can display the
+distribution of character values within a set of taxa.
+
+(*) Global restriction to subsets. Whether it is possible to specify subsets
+of characters and taxa to which all subsequent operations will be restricted.
+(In simplified mode, possible in initialization file, not interactively.)
+
+* Local restriction to subsets. Whether it is possible to specify subsets of
+characters and taxa for the operation of a single command.
+
+Searching the character list. Finding text strings in the character list.
+
+* Illustrations. Whether illustrations of character and taxa can be displayed.
+
+* Flexible display of illustrations. Whether illustrations of any size can be
+scaled, scrolled, repositioned, and displayed simultaneously.
+
+* State selection from character illustrations. Whether character state values
+can be selected from illustration screens during identification.
+
+* Text on illustrations. Whether text can be superimposed on illustrations
+(instead of being built into the illustrations).
+
+* Missing illustrations. Whether a package containing illustrations can be
+used without them.
+
+* Import DELTA format. Whether DELTA-format data can be used to create the
+interactive system.
+
+Export DELTA format. Whether DELTA-format data can be exported from the
+interactive system.
+
+* Links with description writing. Whether publication-quality descriptions can
+be generated from the same data that are used to construct the identification
+system.
+
+* Links with key generation. Whether conventional keys can be generated from
+the same data that are used to construct the identification system.
+
+* Links with classification. Whether cladistic and phenetic analyses can be
+carried out from the same data that are used to construct the identification
+system.
+
+(*) Command files or macros. Whether there is a mechanism for storing and
+repeating a series of operations. (In simplified mode, execution only.)
+
+Log files. Whether it is possible to create a file showing the history (input
+and output) of a session.
+
+Data output. Whether it is possible to output program results in forms
+suitable for input to other programs.
+
+* Online help. Whether the program has complete, built-in help. `Partial'
+indicates that the help is not context sensitive.
+
+* External program text. Whether the program text (commands, help, messages,
+etc.) is external to the program, allowing easy creation and use of different
+language versions.
+
+* Maximum field lengths. Limits (if any) on lengths of text and other fields
+(e.g. taxon names, text of characters, character notes, number of character
+states).
+
+* Maximum size of data. Maximum number of characters and taxa.
+
+* Memory requirements. Program memory requirements (including dependence on
+data size, if applicable).
+
+* Execution speed. Execution times of representative operations on a
+reasonably large data set (e.g. 200 characters, 400 taxa).
+
+
+    ----------------------------------------------------------------------
+
+
+I claim that, in simplified mode, the Windows INTKEY will outperform any other
+identification software both in ease of use and accuracy of results. If, after
+testing the program, you think otherwise, please give your reasons on this
+list. The program will be released with a toy set of data on butterflies and
+moths. These data were created for our open days, and can be used successfully
+by small children.
+
+Mike Dallwitz                                  Internet md at ento.csiro.au
+CSIRO Division of Entomology                   Fax +61 6 246 4000
+GPO Box 1700, Canberra ACT 2601, Australia     Phone +61 6 246 4075
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="098917.html">Article 71
+</A></li>
+        <LI>Next message: <A HREF="051539.html">Identification Software
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#015747">[ date ]</a>
+              <a href="thread.html#015747">[ thread ]</a>
+              <a href="subject.html#015747">[ subject ]</a>
+              <a href="author.html#015747">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

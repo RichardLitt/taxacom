@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Multivariate analyses
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2001-July/086270.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Multivariate analyses</H1>
+    <B data-pagefind-meta="author">Richard Jensen</B>
+    rjensen at SAINTMARYS.EDU<BR>
+    <I data-pagefind-meta="date">Fri Jul 13 08:46:15 CDT 2001</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="086267.html">Editorial Assistant Opening at NYBG
+</A></li>
+        <LI>Next message: <A HREF="086269.html">Multivariate analyses
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#086270">[ date ]</a>
+              <a href="thread.html#086270">[ thread ]</a>
+              <a href="subject.html#086270">[ subject ]</a>
+              <a href="author.html#086270">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2001</span><!--beginarticle-->
+<PRE>First, getting the results you like is not a suitable criterion for evaluating
+your results.
+
+Second, the arcsine transformation is used to extend the tails of the
+distribution so that it approaches normality.  If that is your goal, then go
+ahead and use it.
+
+Third, if you want each proportion to contribute equivalently to relationships
+in ordination (PCA) space, then standardize them to mean=0.0 and variance
+=1.0.  And, use the correlation matrix, not the covariance matrix, for
+extracting eignevalues (this will reduce the dominance of those characters that
+have uniformly (perhaps disproportionately) large values across the data set.
+
+Fourth, when using proportions (percentages), another problem arises:  there is
+no longer independence among variables - if I have ten percentages, once I
+enter the first 9, the last is not free to vary.  This dependence can create
+problems in multivariate analyses.
+
+Have fun!
+
+Guido Flamini wrote:
+
+&gt; Dear Taxacomers,
+&gt;
+&gt; I have a problem with the multivariate statistical analyses of my data. I
+&gt; want to perform a PCA and a Cluster Analysis on chemical data (composition
+&gt; of the essential oils from different collecting places).
+&gt; Unfortunately each sample contain values ranging   between 0.01% to 96%.
+&gt; So, when I perform the calculations, nearly all the variance is explained
+&gt; by the first axis and I am not able to obtain the dispersion of the data on
+&gt; the other axis. I have tried to convert my data using the arcsin function,
+&gt; but the graphs are still ugly.
+&gt; Can you give me some suggestions?
+&gt; Is it correct to discard the 90% values from all the samples and reconduct
+&gt; to 100% the other percentages and then perform the analysis with these new
+&gt; data? (moreover, in this way I obtain the interpretation that I like!!).
+&gt;
+&gt; Thank you in advance,
+&gt;
+&gt; Guido
+&gt;
+&gt; *******************************************
+&gt; Dr. Guido Flamini
+&gt; Dipartimento di Chimica Bioorganica e Biofarmacia
+&gt; Via Bonanno 33, 56126 Pisa, Italia
+&gt; Tel: +3905044074; Fax: +3905043321
+&gt; e-mail: flamini at farm.unipi.it
+&gt; *******************************************
+
+--
+Richard J. Jensen              TEL: 219-284-4674
+Department of Biology      FAX: 219-284-4716
+Saint Mary's College         E-mail: rjensen at saintmarys.edu
+Notre Dame, IN  46556     <A HREF="http://www.saintmarys.edu/~rjensen">http://www.saintmarys.edu/~rjensen</A>
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="086267.html">Editorial Assistant Opening at NYBG
+</A></li>
+        <LI>Next message: <A HREF="086269.html">Multivariate analyses
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#086270">[ date ]</a>
+              <a href="thread.html#086270">[ thread ]</a>
+              <a href="subject.html#086270">[ subject ]</a>
+              <a href="author.html#086270">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,210 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> DIPLOMO - Phylogenetic analysis of sequence data
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20DIPLOMO%20-%20Phylogenetic%20analysis%20of%20sequence%20data&In-Reply-To=%3Cmailman.776.1157126628.2564.taxacom%40mailman.nhm.ku.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="050128.html">
+   <LINK REL="Next"  HREF="050129.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1993-July/014337.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">DIPLOMO - Phylogenetic analysis of sequence data</H1>
+    <B data-pagefind-meta="author">David G Green</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20DIPLOMO%20-%20Phylogenetic%20analysis%20of%20sequence%20data&In-Reply-To=%3Cmailman.776.1157126628.2564.taxacom%40mailman.nhm.ku.edu%3E"
+       TITLE="DIPLOMO - Phylogenetic analysis of sequence data">David.Green at ANU.EDU.AU
+       </A><BR>
+    <I data-pagefind-meta="date">Thu Jul 15 17:54:36 CDT 1993</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="050128.html">Taxonomy and bookdealers
+</A></li>
+        <LI>Next message: <A HREF="050129.html">DIPLOMO - Phylogenetic analysis of sequence data
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#14337">[ date ]</a>
+              <a href="thread.html#14337">[ thread ]</a>
+              <a href="subject.html#14337">[ subject ]</a>
+              <a href="author.html#14337">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>1993</span><!--beginarticle-->
+<PRE>          --------------------------------------------------------------
+           DIPLOMO: A new approach to phylogeny
+          --------------------------------------------------------------
+
+          We are pleased to annouce version 1.0 of DIPLOMO
+
+
+          Questions and answers to DIPLOMO...
+          ===================================
+
+          WHAT DOES DIPLOMO DO?
+          ---------------------
+           DIPLOMO compares different distance measures with each other
+          by displaying them as a scatter plot. It then helps one
+          instantly identify all individual comparisons within the plot.
+
+
+          WHAT CAN I SEE IN DIPLOMO PLOTS?
+          --------------------------------
+           - The trends that occur in different distance measures and
+          hence in the mutational changes that gave rise to the
+          individual taxa compared.
+           - The grouping of taxa with similar characteristics.
+           - How different distance measures correlate.
+
+
+          WHAT CAN I LEARN FROM A DIPLOMO ANALYSIS?
+          -----------------------------------------
+           Depending on the distance measures used many different
+          questions can be addressed with a DIPLOMO analysis, some
+          typical examples are:
+           - Whether different (groups of) taxa exhibit specific
+          mutational constraints or preferences.
+           - Whether a group of taxa that have particular
+          characteristics when examined by one pair of distance measures
+          also stand out when different distance measures are applied.
+           As an example, DIPLOMO would readily tell one, whether
+          sequences that show a relatively high proportion of synonymous
+          mutations also show a relatively high proportion of
+          transitional changes.
+           - Whether a particular distance measure is appropriate for
+          deriving a phylogenetic tree.
+           - Whether the relative speed of the molecular clock within
+          members of a phylum is constant and hence whether the
+          evolutionary time span that can be assigned to one part of a
+          tree can be extrapolated to other parts of that tree.
+           - Whether trees derived from different data subsets or
+          obtained using different algorithms vary.
+
+
+          WHAT ARE THE PRINCIPAL STEPS INVOLVED IN A DIPLOMO ANALYSIS?
+          ------------------------------------------------------------
+           1. Generating distance matrices using different distance
+          measures and combining them in a single DIP-file.
+           2. Plotting two of the distance matrices against each other.
+           3. Visually identifying comparisons with interesting
+          characteristics in the plot, and labelling these comparisons
+          with specific colours and/or symbols. DIPLOMO will then
+          display the taxa involved together with some statistical
+          analysis.
+           4. Repeating steps 2 and 3 with different distance matrices
+          while retaining all previously assigned labels.
+
+
+          HOW DO I GET MY DATA INTO DIPLOMO?
+          ----------------------------------
+           DIPLOMO requires a main data file in DIP-format. This DIP-
+          file contains the names of all taxa and all the distance
+          matrices to be analysed.
+           We are currently developing DisCalc, a computer program that
+          produces a DIP- file by compiling distance matrices from
+          sequence alignments and other sources. Although DisCalc will
+          become available soon, virtually every program that produces
+          distance matrices can be used to produce the input data for
+          DIPLOMO. As the DIP-file format is very simple little editing
+          will be required.
+          Note: See Appendix C for the DIPLOMO file formats.
+
+
+          WHAT COMPUTER DO I NEED?
+          ------------------------
+          DIPLOMO is designed for being ported to multiple platforms
+          with a variety of different operating systems and system
+          configurations. A version for Microsoft windows is in
+          preparation. Versions for Windows NT, OSII, and UNIX with
+          Motif will follow soon.
+          Version 1.00 runs in text mode and various graphics modes
+          under DOS only.
+
+          Minimal system requirements:
+          IBM compatible computer.
+          480 K RAM
+          Floppy disk.
+
+          Desired system requirements:
+          IBM compatible computer with Intel 80286 processor or better
+          (optional math co-processor is used if installed)
+          VGA graphics compatible video card
+          600 K RAM
+          Hard disk
+          mouse
+
+
+          WHERE DO I GET DIPLOMO?
+          -----------------------
+          For non commercial use, DIPLOMO can be obtained free of charge
+          from the Australian National University.
+
+               1)  Obtaining DIPLOMO on the network
+
+          You can obtain DIPLOMO via Internet using anonymous FTP
+          Host name:     life.anu.edu.au
+          Directory:     /pub/molecular_biology/software/diplomo
+          File name:     dip100.exe
+          File type:     binary (self extraction archive)
+
+                   Gopher:
+          Name=DIPLOMO - Phylogenetic analysis
+          Host=life.anu.edu.au
+          Port=70
+          Type=1
+          Path=molecular_biology/software/diplomo
+
+
+               2)  Obtaining DIPLOMO on floppy disk
+          To obtain DIPLOMO on floppy disk, send an empty disk
+          (formatted for DOS) and a self addressed return envelope to
+          the author.
+
+
+          HOW TO CONTACT THE AUTHOR
+          -------------------------
+          You can contact the author by mail, fax or electronic mail
+          using the following address:
+
+           Dr. Georg Weiller
+           Research School of Biological Sciences
+           Australian National University
+           Canberra, ACT 0200
+           AUSTRALIA
+
+           tel.: (61) 249-5916
+           fax.: (61) 249-4437
+           e-mail:  <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">weiller at rsbs0.anu.edu.au</A>
+               <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">weiller at life.anu.edu.au</A>
+
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="050128.html">Taxonomy and bookdealers
+</A></li>
+	<LI>Next message: <A HREF="050129.html">DIPLOMO - Phylogenetic analysis of sequence data
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#14337">[ date ]</a>
+              <a href="thread.html#14337">[ thread ]</a>
+              <a href="subject.html#14337">[ subject ]</a>
+              <a href="author.html#14337">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

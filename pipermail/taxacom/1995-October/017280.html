@@ -1,0 +1,303 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> DELTA &amp; Graphical User Interfaces
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1995-October/017280.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">DELTA &amp; Graphical User Interfaces</H1>
+    <B data-pagefind-meta="author">maurobio at PUB2.LNCC.BR</B>
+    maurobio at PUB2.LNCC.BR<BR>
+    <I data-pagefind-meta="date">Mon Oct 30 13:16:06 CST 1995</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="100435.html">Electronic taxon data and publications
+</A></li>
+        <LI>Next message: <A HREF="053072.html">DELTA &amp; Graphical User Interfaces
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#017280">[ date ]</a>
+              <a href="thread.html#017280">[ thread ]</a>
+              <a href="subject.html#017280">[ subject ]</a>
+              <a href="author.html#017280">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1995</span><!--beginarticle-->
+<PRE>Posted on DELTA-L and TAXACOM
+
+Dear DELTA Users,
+
+Over the last two years or so, I've been deeply involved in
+developing GUI-based tools for DELTA, of which my DIANA shells
+(available for MS-DOS and Windows) were the first products.
+
+I've already done *a lot* of reading on the issues of user
+interface design, data models, search algorithms and data
+structures and the relevance of all this to the development of
+biological software. Perhaps more important, I've also undertaken
+several experiments with user interfaces and data structures more
+adequate to the presentation and representation (*sensu* Diederich
+&amp; Milton, 1993) of biological data. Here I intend to present some of
+the preliminary, tentative conclusions I've reached in the course of
+these experiments; I'm posting this to DELTA-L rather prematurely
+because of the recent request of Andreas Walsh for advising on
+GUI-development for DELTA. I hope to get some useful feedback from
+DELTA users and developers.
+
+Eventually, I can expand this &quot;report&quot; into an article to be
+submitted to the DELTA Newsletter. Since Walsh's request
+concerned only user interfaces, I'll not dwell here into the
+issues of data representation (ie, database structures).
+
+A key issue: portability
+========================
+
+I start from the principle that a Graphical User Interface is the
+most desirable kind of computer environment for a computer user,
+by making any system easier to grasp by the novice and faster to
+use by the experienced user (but of course even this is open to
+discussion... :-).
+
+GUI's are available on the three main computational platforms in
+use today - PC's, Macs, and UNIX workstations. The DELTA
+programs, however, are limited to PC's. Following the several
+discussions on this issue on the TAXACOM list (as well the *very
+welcome* requests of some DIANA folks), I could verify that
+perhaps more than offering a nice, intelligent, editing tool (more
+on this below), the DELTA system should be *as portable as possible*,
+not only because of the large number of both PC's and Macs users,
+but also because of the widespread (and increasing) availability of
+UNIX workstations. WWW browsers like Mosaic and Netscape offer a
+relevant analogy here, since they are both available on the three
+main platforms above mentioned.
+
+So, one of my first conclusions is that an &quot;ideal&quot; DELTA system
+should be as portable as possible.
+
+However, developing a GUI-based program is not an easy task, even
+for experienced programmers - the difficulties of writing such
+programs are often underestimated. However, there are now
+software tools that not only allow: a) to simplify the process of
+software development for each of the widely used GUI platforms:
+MS-Windows, MacIntosh, UNIX+XWindows, but also: b) to make the
+programs portable among the mentioned platforms.
+
+VIBRANT is one of these tools...
+
+VIBRANT is a high-level, multi-platform user interface
+development library written in C by Jonathan Kans
+(kans at ray.nlm.nih.gov), Information Engineering Branch, National
+Center for Biotechnology Information, NLM, NIH, Bethesda, USA. It
+is distributed as part of the NCBI Software Development Toolkit.
+VIBRANT acts as an intermediary between an application and the
+underlying windowing system toolkit. It is available for free and
+comes with full source codes. Using it, a GUI-based application can
+be written that runs *without modification* on any of the mentioned
+platforms - you just have to re-compile them on the target machine,
+using the native C compiler.
+
+Commercial software libraries based on the C language also exist
+that perform similar functions - ZINC is one of the more
+well-known of them - but these are usually very expensive and do
+not include source code.
+
+So, not only the DELTA programs themselves, but as a matter of
+fact, all DELTA &quot;third-party add-ons&quot; (like DIANA, DMSWIN, and
+TAXASOFT) should be greatly improved if (re-)written using such
+tools, by benefiting from portability and, consequently, from a
+larger user base.
+
+A user-friendly editing tool
+============================
+
+Another old request from about all DELTA users is the
+availability of a user-friendly, specialized data editor, that
+should release users of the cumbersome and error-prone creation
+and maintenance of DELTA datasets using an ordinary text editor
+or word processor.
+
+Early attempts to provide such a specialized DELTA editor were
+those by Pankhurst's DEDIT and Gouda's DDATA (distributed as part
+of his TAXASOFT package). However, none of these editors are
+GUI-based, what may become a major drawback to a user
+well-acquainted to electronic rodents... Worst, since MS-Windows
+and other GUI environments have highly standard interfaces, with
+common control objects (dialog boxes, pulldown menus, etc.), the
+authors of these editors will have to write entirely new
+applications when porting their programs to such an environment.
+
+My specialized &quot;DELTA Coding System&quot; (DELCODE) is a first attempt
+at providing a GUI-based highly interactive environment for the
+editing of DELTA datasets. A DOS version is finished and a
+Windows version is underway, but for several reasons I have not
+yet released DELCODE to the public. Among the first of these is
+that I do not consider it to be a &quot;production tool&quot;, but rather a
+teaching tool (that is the way I'm using it). It is the result of
+one of the experiments I mentioned above, and is itself
+experimental. DELCODE does *not* intend to be a rival of the
+undoubtedly powerful, Windows-based, DELTA editor currently under
+development by the DELTA development team. Its primary purpose is
+to test algorithms, data structures, and user interface ideas. It
+features pulldown menus, dialog boxes, and full mouse support,
+but the DOS version is obviously not a full &quot;GUI-based&quot;
+application (in the sense that it detaches at several points
+from the CUA/SAA [Berry, 1988] standard).
+
+Up to date, all DELTA editors implement what we could call a
+&quot;form fill-in&quot; interface (see Diederich and Milton, 1993 - this
+paper should be read by everyone wishing to develop GUI's for
+biological software!), with which the user enters data, usually
+from the keyboard, in specific fields on pre-built forms. This
+system is also used by some of the Windows versions of the DELTA
+programs (namely, INTKEY4 and INTIMATE), to get information from
+the user. However, as one DIANA user has quite rightly pointed
+out, character-by-taxon data matrices *are* the logical way to
+manage taxonomic data. A matrix is convenient, already known to
+most systematists, and is the accepted &quot;metaphor&quot; for comparative
+data on taxa.
+
+So, my second conclusion is that an &quot;ideal&quot; DELTA data entry and
+management system should provide some sort of matrix-oriented
+editor.
+
+One such a matrix editor for taxonomic data already exists - and,
+as far as I know, is not only *really wonderful* by itself, but
+should provide a relevant paradigm for further development of
+taxonomic data entry and management system. That is the editor of
+Maddison &amp; Maddison MacClade's interactive character analysis
+program, available only for the MacIntosh computer. A good
+summary description of this editor (and of MacClade itself) - for
+those who do not have access to a Mac or do not have a copy of
+MacClade - can be found in Maddison and Maddison (1989).
+
+Another of my experiments with GUI software for DELTA was the
+development of such a matrix-oriented editor for DELTA. A crude
+prototype was implemented in Visual BASIC (that provides a rather
+limited &quot;grid&quot; custom control), but I didn't develop it further.
+
+Allowing the user to control her/his own TV...
+==============================================
+
+In recent years, the demands placed on software for management of
+taxonomic data have increased dramatically in response to an
+ever-increasing (and very welcome, by the way :-))) concern that
+such data are the key to biodiversity conservation and
+sustainable use of biological resources. As a result, the very
+few software-developers engaged in the field of biodiversity
+information management (including the members of the DELTA
+development team) are being highly pressed to satisfy all user
+needs in less time and with more efficiency. As other fields of
+human activity, biodiversity data management is also facing the
+'software crisis' (Cox, 1986; Gibbs, 1994), and perhaps software
+engineering should also be enlisted as a 'crisis discipline',
+along with conservation biology and cancer biology (Soule',
+1985).
+
+Such a crisis in the development of biological software means
+that not only are better and portable software development tools
+(as the VIBRANT interface library above mentioned, or the more
+expensive commercial ones) needed, but also that a biodiversity
+information management package far more *programmable* by the
+end-user should be developed. The access to preprogrammed
+subroutines would allow systematists with limited programming
+experience to develop their own specialized programs for
+biodiversity data management (eg., in her/his own national
+language). In the future, it might be more fruitful for DELTA
+developers to put their efforts in this general direction, rather
+than trying to anticipate and meet (with scarce resources) the
+precise needs of the next generation of computer taxonomists.
+This is my third conclusion.
+
+Along this line of thinking, I've developed DELTA Library, a
+general-purpose library of routines for reading text files in
+DELTA format, designed to work with any language that supports
+Windows DLLs (Dynamic Link Libraries). They allow a programmer
+using any language that supports DLL calling, such as Borland
+Pascal/Turbo Pascal for Windows, C/C++, and Visual BASIC, to
+write an application that can access DELTA datasets without
+effort, with just one line of code for each routine's call.
+I've been able to sucessfully integrate them with LORIS, an
+experimental &quot;DELTA viewer&quot; I've written in Visual BASIC, and
+these routines are also used by the Windows version of my DELCODE
+editor for DELTA. While I had not yet released this library on a
+widespread basis, it is free and available to anyone wishing to
+try it.
+
+I hope all this will start a fruitful discussion among the
+subscribers of DELTA-L. I'm also in the process of setting up a
+WWW personal home page, to facilitate the interchange of
+information regarding this and related questions in biodiversity
+data management and conservation. The above mentioned programs will
+be put on our server and any interested user should be able to
+download them through this page.
+
+I look forward to hearing from you soon...
+
+References
+==========
+
+Berry, R.E. 1988. Common User Access - a consistent and usable
+   human-computer interface for the SAA environments. IBM Syst.
+   J., 27: 281-300.
+
+Cox, B.J. 1986. Object-Oriented Programming - An Evolutionary
+   Approach. Addison-Wesley Publishing Company.
+
+Diederich, J. and Milton, J. 1993. Expert workstations: a
+   tools-based approach. In: Advances in Computer Methods for
+   Systematic Biology: Artificial Intelligence, Databases,
+   Computer Vision, R. Fortuner (Ed.). The Johns Hopkins
+   University Press, Baltimore, Maryland, pp. 103-124.
+
+Gibbs, W.W. 1994. Software's chronic crisis. Sci. Am., 271:
+   72-81.
+
+Maddison, W.P. and Maddison, D.R. 1989. Interactive analysis of
+   phylogeny and character evolution using the computer program
+   MacClade. Folia Primatol., 53: 190-202.
+
+Soule', M.E. 1985. What is conservation biology? Bioscience, 35:
+   727-734.
+
+Warmest regards,
+
+   + - - - - - - - - - - - Prof. Mauro J. Cavalcanti - - - - - - - - - - - +
+   | Departamento de Biologia Geral              Universidade Santa Ursula |
+   | Rua Fernando Ferrari, 75, Botafogo      22231-040, Rio de Janeiro, RJ |
+   | Phone: +55 (021) 551-5542 ext 148                              BRASIL |
+   |                     Internet: maurobio at omega.lncc.br                  |
+   + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="100435.html">Electronic taxon data and publications
+</A></li>
+        <LI>Next message: <A HREF="053072.html">DELTA &amp; Graphical User Interfaces
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#017280">[ date ]</a>
+              <a href="thread.html#017280">[ thread ]</a>
+              <a href="subject.html#017280">[ subject ]</a>
+              <a href="author.html#017280">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

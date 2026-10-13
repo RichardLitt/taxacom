@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Impossible geocodes
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2015-January/128059.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Impossible geocodes</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at bishopmuseum.org<BR>
+    <I data-pagefind-meta="date">Sat Jan 24 17:06:32 CST 2015</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="128058.html">[Taxacom] Impossible geocodes
+</A></li>
+        <LI>Next message: <A HREF="128060.html">[Taxacom] Impossible geocodes
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#128059">[ date ]</a>
+              <a href="thread.html#128059">[ thread ]</a>
+              <a href="subject.html#128059">[ subject ]</a>
+              <a href="author.html#128059">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2015</span><!--beginarticle-->
+<PRE>Just to be clear... conversion of Decimal Lat/Long to DMS (and vice versa) certainly does not require a computer (or at least it shouldn't!)  Granted, it might require a pencil and a piece of paper and about 30 seconds of time; but not a computer.  
+
+Also, I wouldn't regard either DMS or decimal Lat/Long as being either more or less inclusive -- just different ways of representing the same number (like &quot;0.5&quot; vs. &quot;1/2&quot;).  UTM, TRS, and other geocoding schemes are different; but in that context, I have to agree with Alec and Mary that it not only should, but already is strongly trending towards more consistent use of Lat/Long, and moreover the trend is (and should be) towards more consistent representation as decimal degrees and using the WGS-84 datum.
+
+In any case, these are TRIVIAL problems compared to the much larger issue of historical occurrence records with textual place descriptions, but no coordinate values at all.
+
+Aloha,
+Rich
+
+&gt; -----Original Message-----
+&gt; From: Taxacom [mailto:taxacom-bounces at mailman.nhm.ku.edu] On Behalf
+&gt; Of Doug Yanega
+&gt; Sent: Saturday, January 24, 2015 11:53 AM
+&gt; To: taxacom at mailman.nhm.ku.edu
+&gt; Subject: Re: [Taxacom] Impossible geocodes
+&gt; 
+&gt; On 1/24/15 12:04 PM, Alec McClay wrote:
+&gt; &gt; It's a vain hope, I know, and there is lots of legacy data out there
+&gt; &gt; in every possible format. But can't we decide from here on just to use
+&gt; &gt; decimal degrees for latitudes and longitudes? They're just numbers,
+&gt; &gt; after all. Why do we have to treat them as being made up of weird
+&gt; &gt; multiples of 60 instead of using the decimal format that we use for
+&gt; &gt; every other unit? Pounds, shillings and pence are long gone - so
+&gt; &gt; should minutes and seconds be.
+&gt; This could turn into a long and convoluted discussion, but bear in mind just a
+&gt; few points:
+&gt; 
+&gt; (1) you'll find plenty of scientists who don't use DMS (latitude and
+&gt; longitude) at all, but instead rely on UTM or TRS (Township, Range,
+&gt; Section) coordinates, and they'll give you their own lengthy arguments as to
+&gt; why, often focusing on it being the ironclad tradition in their line of work.
+&gt; (2) you'll find plenty of people who use actual paper atlases or topo maps for
+&gt; a LOT of their work, and most such paper maps are either non-decimal DMS,
+&gt; or TRS. If someone gives you a decimal DMS value for a patch of some rare
+&gt; plant you need to collect pollinators from, and the map in your car is standard
+&gt; DMS, you may have serious trouble driving to the right spot unless you take
+&gt; the time to sit down and convert from one format to the other, which
+&gt; requires computer access. Further, the ease of reading a paper map is
+&gt; related to how easily your eye can follow the grid lines on the face of the
+&gt; map - and printed decimal maps are harder to use in that respect (the ones
+&gt; I've seen have no grid at all, just numbers along the edge, and you need a
+&gt; ruler to track vertical and horizontal lines if you want to be precise).
+&gt; (3) People who *DO* routinely use decimal DMS often do so using a
+&gt; computer, and an interface like Google Earth, meaning they typically have
+&gt; the capacity to convert different types of coordinates right there at their
+&gt; fingertips; if you give them coordinates in other formats, THOSE people have
+&gt; little or no trouble getting anything into decimal format or finding the spot on
+&gt; their digital map - but the converse is not true. They have less trouble using
+&gt; other people's data than other people have using theirs, so there is an
+&gt; asymmetrical burden if one applies a higher standard.
+&gt; 
+&gt; Even if you, personally, don't use paper maps, or work with UTMs, there is
+&gt; still something to be said for having standards that are *more* inclusive,
+&gt; rather than less. If your aim is to impose higher standards, then it is unfair to
+&gt; do so without giving a practical explanation as to how you intend to supply
+&gt; those who are still using more &quot;primitive&quot;
+&gt; systems with a replacement *they can use* (that is up to the new standard),
+&gt; and doesn't require them to invest significant time or money.
+&gt; For example, can you convince the USGS to re-issue all of their printed topo
+&gt; maps using decimal coordinates superimposed with non-decimal, and TRS, all
+&gt; on the same maps, *and* make them available for free? Can you provide an
+&gt; app that allows people to see UTM or TRS coordinates *and* decimal DMS
+&gt; displayed simultaneously on their GPS-enabled device? Once resources like
+&gt; that are freely available, then it would be reasonable to expect people to
+&gt; switch - by weaning them off their old systems gradually. Just think how
+&gt; annoyed you get when you upgrade to a new operating system, and
+&gt; suddenly a pile of your old programs stop working; if you want people to
+&gt; upgrade willingly, then give them something cheap, easy, and backwards-
+&gt; compatible, rather than forcing the upgrade down their throats. ;-)
+&gt; 
+&gt; Sincerely,
+&gt; 
+&gt; --
+&gt; Doug Yanega      Dept. of Entomology       Entomology Research Museum
+&gt; Univ. of California, Riverside, CA 92521-0314     skype: dyanega
+&gt; phone: (951) 827-4315 (disclaimer: opinions are mine, not UCR's)
+&gt;               <A HREF="http://cache.ucr.edu/~heraty/yanega.html">http://cache.ucr.edu/~heraty/yanega.html</A>
+&gt;    &quot;There are some enterprises in which a careful disorderliness
+&gt;          is the true method&quot; - Herman Melville, Moby Dick, Chap. 82
+&gt; 
+&gt; _______________________________________________
+&gt; Taxacom Mailing List
+&gt; Taxacom at mailman.nhm.ku.edu
+&gt; <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom</A>
+&gt; The Taxacom Archive back to 1992 may be searched at:
+&gt; <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt; 
+&gt; Celebrating 28 years of Taxacom in 2015.
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="128058.html">[Taxacom] Impossible geocodes
+</A></li>
+        <LI>Next message: <A HREF="128060.html">[Taxacom] Impossible geocodes
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#128059">[ date ]</a>
+              <a href="thread.html#128059">[ thread ]</a>
+              <a href="subject.html#128059">[ subject ]</a>
+              <a href="author.html#128059">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

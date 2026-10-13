@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> data sharing
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20data%20sharing&In-Reply-To=%3Cmailman.9879.1157126735.2564.taxacom%40mailman.nhm.ku.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="059240.html">
+   <LINK REL="Next"  HREF="059243.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1998-December/023451.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">data sharing</H1>
+    <B data-pagefind-meta="author">Stan Blum</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20data%20sharing&In-Reply-To=%3Cmailman.9879.1157126735.2564.taxacom%40mailman.nhm.ku.edu%3E"
+       TITLE="data sharing">sblum at CALACADEMY.ORG
+       </A><BR>
+    <I data-pagefind-meta="date">Mon Dec  7 12:17:48 CST 1998</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="059240.html">data sharing
+</A></li>
+        <LI>Next message: <A HREF="059243.html">data sharing
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#23451">[ date ]</a>
+              <a href="thread.html#23451">[ thread ]</a>
+              <a href="subject.html#23451">[ subject ]</a>
+              <a href="author.html#23451">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>1998</span><!--beginarticle-->
+<PRE>At 09:28 AM 12/7/98 -0500, Hugh Wilson wrote:
+&gt;<i>On  5 Dec 98 at 23:46, Dave Vieglais &lt;<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">vieglais at UKANS.EDU</A>&gt; wrote:
+</I>&gt;&gt;<i> 2. Specimen based information systems.
+</I>&gt;&gt;<i> Any distributed information system being developed using the WWW as the
+</I>&gt;&gt;<i> backbone (ie. the http protocol) is likely to fail.
+</I>&gt;<i>
+</I>&gt;<i>Anyone using Alta-Vista or any other web-based search engine can
+</I>&gt;<i>quickly demonstrate that this is not true.
+</I>
+Dave MAY have overstated the case against HTTP -- I'm no expert on
+state-less (e.g., HTTP) and state-ful (e.g., Z39.50) protocols -- but
+Alta-Vista and the other Web crawling-indexing have absolutely nothing to
+do with the argument.  To see how reliable full-text indexing is in
+information retrieval, all you have to do is issue the same query to
+Alta-Vista, Hotbot, Lycos, etc., and compare the results.  How come they're
+so different?  As a scientist trying to assemble a data set from
+distributed sources, would you be happy with that kind of a hit-or-miss
+approach?
+
+There are lots of &quot;horses&quot; in the race to distributed information
+retrieval, and at this point we would be wise to hedge our bets; i.e., keep
+experimenting with a variety of approaches.  In particular, we shouldn't
+dismiss what library and information science has to contribute to the
+solution.
+
+
+&gt;<i>Web technologies are
+</I>&gt;<i>pre-adapted to process and display distributed data
+</I>
+*** but only one connection at a time ***
+
+&gt;<i>and one aspect of
+</I>&gt;<i>this - full text indexing - provides a simple, fast, non-structured,
+</I>&gt;<i>and fully open option.
+</I>
+Full-text indexing has well known limitations.  Within the collections data
+context, I can't easily and reliably issue a query that distinguishes
+between &quot;Smith&quot; as the collector and &quot;Smith&quot; as the identifier
+(determiner).  I can't search for specimens collected between 200 and 500
+meters elevation.  More importantly, I can't easily do any kind of
+post-processing (re-sorting, sub-querying, etc.) on the results precisely
+because the records are either unstructured (full-text) or heterogeneously
+structured (i.e., structured, but according to different semantic standards).
+
+&gt;<i>Development has not required imposition of standards or data
+</I>&gt;<i>structures beyond creation of a simple data exchange format:
+</I>&gt;<i>
+</I>&gt;<i><A HREF="http://www.csdl.tamu.edu/FLORA/ftc/ftcffld4.htm">http://www.csdl.tamu.edu/FLORA/ftc/ftcffld4.htm</A>
+</I>
+Sorry, the FTC data exchange format is as much of a _standard_ as any other
+(e.g., HISPID &lt;<A HREF="http://www.rbgsyd.gov.au/HISCOM/HISPID3/hispidright.html">http://www.rbgsyd.gov.au/HISCOM/HISPID3/hispidright.html</A>&gt; or
+any of the TDWG standards).  The data provider, the system software, and
+the receiver ALL have to agree about a lot of stuff before a useful
+interchange of information can occur.  Which is exactly what you say here:
+
+&gt;<i> via consensus among those working to computerize their collections
+</I>      ^^^^^^^^^
+You did in fact arrive at a consensus -- or standard -- through
+negotiations among the participants.
+
+
+&gt;<i>We have estabished that specimen data development and expression
+</I>&gt;<i>systems are not comparable to the phone book.  Application of this [Z39.50]
+</I>&gt;<i>ancient 'standard' brings up the library card catalog as a model.
+</I>
+Z39.50 absolutely does NOT imply a library card catalog as a model.  Z39.50
+may have been adopted and implemented first in the library community to
+work with MARC records, but version 3 of the standard (and this is a
+communication protocol standard, NOT a conceptual or semantic standard) can
+use virtually ANY kind of data set syntax, from tag-value (e.g., MARC), to
+flat, to hierarchical.  I think even XML can be used as a data markup
+syntax (but I may be wrong on that one). And given that version 3 was
+&quot;approved&quot; this year (I think), you can hardly call this an ancient protocol.
+
+
+&gt;<i>Are biological collections data and - more important - biological
+</I>&gt;<i>collections and staff structured in a way that will allow full
+</I>&gt;<i>adoption (large and small facilities) of this standard and its
+</I>&gt;<i>associated (pre-web) infrastructure.
+</I>
+Yes. Absolutely.  Dave has very effectively developed software that
+integrates the Z30.50 protocal into the PC environment.  Put simply, if you
+have Excel on your PC you can be a user.  If you use Access or some other
+ODBC compliant database (which is just about anything) and have a dedicated
+Internet connectionm you can be a data provider.  It's not that hard to do.
+
+&gt;<i>Since this involves
+</I>&gt;<i>machine-to-machine interactions that must be conducted across a
+</I>&gt;<i>network that is becoming more congested every day, one wonders if
+</I>&gt;<i>this potential solution - which certainly appears to be popular with
+</I>&gt;<i>the U.S. Federal Government (NBII, ITIS, NSF, etc.) will function to
+</I>&gt;<i>link data resources (biodiversity collections) that differ, in many
+</I>&gt;<i>fundamental ways, from the established model (libraries).
+</I>
+The bandwidth arguments are irrelevant.  People doing distributed searches
+for biological specimen data aren't going to have a serious impact on net
+traffic; certainly nothing like streaming video, which is the kind of
+capacity the telecommunications companies are planning for.
+
+
+I am very optimistic about the suitability of Z39.50 to our community, and
+I think we're going to see some impressive results very soon.
+
+-Stan
+
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="059240.html">data sharing
+</A></li>
+	<LI>Next message: <A HREF="059243.html">data sharing
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#23451">[ date ]</a>
+              <a href="thread.html#23451">[ thread ]</a>
+              <a href="subject.html#23451">[ subject ]</a>
+              <a href="author.html#23451">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Why stability?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2015-April/128356.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Why stability?</H1>
+    <B data-pagefind-meta="author">Stephen Thorpe</B>
+    stephen_thorpe at yahoo.co.nz<BR>
+    <I data-pagefind-meta="date">Wed Apr 29 16:54:34 CDT 2015</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="128355.html">[Taxacom] Why stability?
+</A></li>
+        <LI>Next message: <A HREF="128357.html">[Taxacom] Wikispecies has gone to the dogs, best to disregard it now
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#128356">[ date ]</a>
+              <a href="thread.html#128356">[ thread ]</a>
+              <a href="subject.html#128356">[ subject ]</a>
+              <a href="author.html#128356">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2015</span><!--beginarticle-->
+<PRE>There are some potential problems arising from this example. Suppose somebody today wants information about Quercus grisea. We immediately face complication (A): Is there a single uncontroversial concept (today) for Q. grisea. If so, then all is well (so far). If not, then things become more complicated. Competing concepts for the same taxon tend to arise at different times, so one needs to know if the later one uncontroversially replaces earlier ones, or else sits in competition with it. You seem to have assumed the former in your example. Complication (B): Although it certainly helps to know if and how a concept has changed, it may just be a drop in the ocean. Incorrect information about a taxon possibly results far more from misidentified specimens, particularly for taxa that have been mentioned by many authors. Without tracking and checking vouchers (if they exist, and if they are accessible), there is no way to solve this problem. But, if all you
+ want is descriptive taxonomic information, then this might not be a problem. But if you want specimen data (or summary data thereof), then this is likely to be a significant problem.
+
+Stephen
+
+
+--------------------------------------------
+On Thu, 30/4/15, Nico Franz &lt;nico.franz at asu.edu&gt; wrote:
+
+ Subject: Re: [Taxacom] Why stability?
+ To: &quot;TAXACOM&quot; &lt;taxacom at mailman.nhm.ku.edu&gt;
+ Received: Thursday, 30 April, 2015, 9:26 AM
+ 
+ Hi Peter:
+ 
+    I hope I can
+ address this. Mind you the general notions have been
+ around
+ in the TDWG community since at least
+ the early 1990s.
+ 
+    Let's make it somewhat
+ concrete (more abstract = easier to keep
+ disagreeing).
+ 
+    SEINet currently displays two
+ circumscriptions that are labeled with the
+ name Quercus grisea:
+ <A HREF="http://swbiodiversity.org/seinet/taxa/index.php?taxon238">http://swbiodiversity.org/seinet/taxa/index.php?taxon238</A>
+ 
+    That would be,
+ more granularly identified:
+ 
+ Taxonomic concept label 1: Quercus grisea sec.
+ FNA (1997, Nixon)
+ Taxonomic concept label 2:
+ Quercus grisea sec. VPAP (1993, Landrum)
+ 
+    With that kind of identifier
+ granularity, we can express the following:
+ 
+ 1997.Quercus_arizonica
+ is_included_in 1993.Quercus_grisea
+ 1997.Quercus_grisea is_included_in
+ 1993.Quercus_grisea
+ 
+    The 1993 classification
+ recognizes more narrowly circumscribed concepts.
+ Two non-congruent theories of what the name
+ Quercus grisea refers to are in
+ play. Others
+ might be added in the future. It might well be that in
+ this
+ case synonymy can account for the
+ different degrees in resolution. In other
+ cases it cannot:
+ <A HREF="http://www.semantic-web-journal.net/content/names-are-not-good-enough-reasoning-over-taxonomic-change-andropogon-complex-1">http://www.semantic-web-journal.net/content/names-are-not-good-enough-reasoning-over-taxonomic-change-andropogon-complex-1</A>
+ 
+    SEINet currently
+ returns 1349 records for the search term &quot;Quercus
+ arizonica&quot;. And 1324 specimens for
+ &quot;Quercus grisea&quot;. I would guess that
+ some of the latter 1324 specimens are also
+ validly identifiable to Quercus
+ arizona sec.
+ VPAP (1993), whereas others are not.
+ 
+    A query that uses taxonomic
+ concept labels just looks like this:
+ 
+ Show all specimens for Quercus grisea sec. FNA
+ (1997, Nixon). =&gt; More
+ specimens, wider
+ or more dense distribution.
+ Show all
+ specimens for Quercus grisea sec. VPAP (1993, Landrum).
+ =&gt; Fewer
+ specimens, narrower or less
+ dense distribution.
+ 
+    So &quot;Quercus grisea&quot;
+ produces two non-identical distributions maps in a
+ system that handles concept-level resolution.
+ This requires that the
+ specimens are
+ identified to the concept level in the system.
+ 
+ Best, Nico
+ 
+ 
+ On Wed, Apr 29, 2015 at 1:20 PM, Peter
+ Hovenkamp &lt;phovenkamp at casema.nl&gt;
+ wrote:
+ 
+ &gt;
+ Nico,
+ &gt;
+ &gt; I still
+ wonder (and that was the main question in my previous post)
+ how
+ &gt; anyone will be able to select, for
+ any particular query on such a database,
+ &gt; the concept that is to be used in the
+ query. Do you envisage &quot;concepts of
+ &gt; concepts&quot;, allowing a querier to
+ limit the query to at least a subset of
+ &gt;
+ concepts? Or what?
+ &gt;
+ &gt;
+ Best,
+ &gt;
+ &gt; Peter
+ &gt;
+ _______________________________________________
+ Taxacom Mailing List
+ Taxacom at mailman.nhm.ku.edu
+ <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom</A>
+ The Taxacom Archive back to 1992 may be
+ searched at: <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+ 
+ Celebrating 28 years of
+ Taxacom in 2015.
+ 
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="128355.html">[Taxacom] Why stability?
+</A></li>
+        <LI>Next message: <A HREF="128357.html">[Taxacom] Wikispecies has gone to the dogs, best to disregard it now
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#128356">[ date ]</a>
+              <a href="thread.html#128356">[ thread ]</a>
+              <a href="subject.html#128356">[ subject ]</a>
+              <a href="author.html#128356">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

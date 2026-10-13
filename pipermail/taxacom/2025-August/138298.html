@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Taxacom: Evolution to Scratchpads 3.0
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2025-August/138298.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Taxacom: Evolution to Scratchpads 3.0</H1>
+    <B data-pagefind-meta="author">=?UTF-8?Q?Carlos_Alberto_Mart=C3=ADnez_Mu=C3=B1oz?=</B>
+    biotemail at gmail.com<BR>
+    <I data-pagefind-meta="date">Fri Aug 22 14:18:15 CDT 2025</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="138297.html">Taxacom: Survey on biodiversity and genomics
+</A></li>
+        <LI>Next message: <A HREF="138299.html">Taxacom: Evolution to Scratchpads 3.0
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#138298">[ date ]</a>
+              <a href="thread.html#138298">[ thread ]</a>
+              <a href="subject.html#138298">[ subject ]</a>
+              <a href="author.html#138298">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2025</span><!--beginarticle-->
+<PRE>Dear Taxacomers,
+
+I am working on developing Scratchpads 3.0 in a newer version of
+Drupal. The first task is to get the taxonomy importer up and running and
+able to ingest the Excel spreadsheets that former Scratchpads users can
+obtain through their Scratchpads importer (which is also an exporter).
+
+The first field I will be working on is &quot;Rank&quot;. That field did not have all
+the needed values in Scratchpads 2.0, and the values could not be edited
+due to the rigid implementation of the itis_term_allowed_values function.
+That limitation will be solved in Scratchpads 3.0.
+
+Regarding sources of values, the new ITIS data model does include more Rank
+values (<A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.itis.gov%2Fdata_definition.html%23rank&amp;data%7C02%7Ctaxacom%40lists.ku.edu%7C05f0f1263eca4cc691f108dde1b0acdc%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638914871113810130%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=2x5OjPrT5%2F6gk%2ByLyj5b7wZHA2%2F42jx14nWI7zIwxQg%3D&amp;reserved=0).">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.itis.gov%2Fdata_definition.html%23rank&amp;data%7C02%7Ctaxacom%40lists.ku.edu%7C05f0f1263eca4cc691f108dde1b0acdc%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638914871113810130%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=2x5OjPrT5%2F6gk%2ByLyj5b7wZHA2%2F42jx14nWI7zIwxQg%3D&amp;reserved=0).</A> Additional Rank
+values are used by WoRMS (see the advanced search and then display the Rank
+dropdown menu to read the list of values,
+<A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.marinespecies.org%2Faphia.php%3Fp%3Dsearch%26adv%3D1&amp;data%7C02%7Ctaxacom%40lists.ku.edu%7C05f0f1263eca4cc691f108dde1b0acdc%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638914871113831787%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdataKb4R8o%2FEE11XxBvX6Xk1h27ZeA8in6%2B1LRPYYhgn1E%3D&amp;reserved=0).">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.marinespecies.org%2Faphia.php%3Fp%3Dsearch%26adv%3D1&amp;data%7C02%7Ctaxacom%40lists.ku.edu%7C05f0f1263eca4cc691f108dde1b0acdc%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638914871113831787%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdataKb4R8o%2FEE11XxBvX6Xk1h27ZeA8in6%2B1LRPYYhgn1E%3D&amp;reserved=0).</A> The GBIF TaxonRank
+vocabulary contains 91 concepts (
+<A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fregistry.gbif.org%2Fvocabulary%2FTaxonRank%2Fconcepts&amp;data%7C02%7Ctaxacom%40lists.ku.edu%7C05f0f1263eca4cc691f108dde1b0acdc%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638914871113850082%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=yXsEdgbZxclPLkLiYKsRCLBz8j1vESS4edsrvRIsblg%3D&amp;reserved=0)">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fregistry.gbif.org%2Fvocabulary%2FTaxonRank%2Fconcepts&amp;data%7C02%7Ctaxacom%40lists.ku.edu%7C05f0f1263eca4cc691f108dde1b0acdc%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638914871113850082%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=yXsEdgbZxclPLkLiYKsRCLBz8j1vESS4edsrvRIsblg%3D&amp;reserved=0)</A> and may be the
+most complete resource available.
+
+I would like to hear back from the Scratchpadians among you. Which Rank
+values did you need and did not have? The ranks can be either official
+(e.g., regulated by Codes of Nomenclature), or unofficial but present in
+the literature.
+
+You can find a group of us on Facebook at Scratchpads Users (
+<A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.facebook.com%2Fgroups%2F665993564280327&amp;data%7C02%7Ctaxacom%40lists.ku.edu%7C05f0f1263eca4cc691f108dde1b0acdc%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638914871113870284%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=Qjx7RC9hxsOHPAClWV4twHCYCpO89vgFOC%2B65oz0mb0%3D&amp;reserved=0).">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.facebook.com%2Fgroups%2F665993564280327&amp;data%7C02%7Ctaxacom%40lists.ku.edu%7C05f0f1263eca4cc691f108dde1b0acdc%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C638914871113870284%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=Qjx7RC9hxsOHPAClWV4twHCYCpO89vgFOC%2B65oz0mb0%3D&amp;reserved=0).</A> Join our small community
+of survivors!
+
+Looking forward to your feedback,
+Carlos
+
+
+Carlos A. Mart?nez Mu?oz
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="138297.html">Taxacom: Survey on biodiversity and genomics
+</A></li>
+        <LI>Next message: <A HREF="138299.html">Taxacom: Evolution to Scratchpads 3.0
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#138298">[ date ]</a>
+              <a href="thread.html#138298">[ thread ]</a>
+              <a href="subject.html#138298">[ subject ]</a>
+              <a href="author.html#138298">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> More GBIF questions (was: ITIS)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2004-June/092230.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">More GBIF questions (was: ITIS)</H1>
+    <B data-pagefind-meta="author">Doug Yanega</B>
+    dyanega at UCR.EDU<BR>
+    <I data-pagefind-meta="date">Thu Jun 24 11:19:12 CDT 2004</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="092229.html">ITIS (an explanation of GBIF's data integration activities)
+</A></li>
+        <LI>Next message: <A HREF="092231.html">More GBIF questions (was: ITIS)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092230">[ date ]</a>
+              <a href="thread.html#092230">[ thread ]</a>
+              <a href="subject.html#092230">[ subject ]</a>
+              <a href="author.html#092230">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2004</span><!--beginarticle-->
+<PRE>Richard Pyle wrote:
+
+&gt;I tend to agree.  Indeed, in my grand vision of how to solve the
+&gt;informatics of nomenclature, ICZN/ICBN should play a central/leading
+&gt;role.
+
+But - and I think Richard and I agree here - not as a static entity;
+in order to best interact with the informatics people, the Codes
+themselves will require some revisions to reflect the nature of the
+changes in how we all do business.
+
+&gt;Rod Paige wrote:
+&gt;
+&gt;&gt;  I suspect the way forward is to adopt the tools and mindset
+&gt;&gt;  of the Open Source software community. Have open databases of
+&gt;&gt;  names that people can annotate (i.e., report &quot;bugs&quot;). The
+&gt;&gt;  bugs themselves can be seen by (and commented on by)
+&gt;&gt;  everybody. Hence, the error mentioned by Richard Petit (the
+&gt;&gt;  type species of the genus Cancellaria being attributed to
+&gt;&gt;  Pilsbry, 1940 instead of to Linnaeus, 1767) would be visible
+&gt;&gt;  for all to see (and comment on).
+&gt;
+&gt;To which I respond, Yes, YES, and YES!!!   This is *exactly* how I think
+&gt;the way forward should be.  Doug Yanega has made similar arguments on
+&gt;this and other lists, which is why I tried to bait him into this
+&gt;discussion.
+
+Consider me baited, then. The context in which I present those
+arguments, however, is usually regarding how to create a List of
+Accepted Names (a &quot;registry&quot;). Specifically, that such an open system
+with public comment also needs to be PRIOR to publication of any new
+names, for a great many reasons, not the least of which is to prevent
+(as much as possible) the creation of any new synonyms or homonyms,
+which relates to the following:
+
+&gt;Meredith Lane wrote:
+&gt;
+&gt;  &gt; At present, we
+&gt;&gt;  estimate that *on average* for every valid, accepted
+&gt;&gt;  scientific name, there are two synonyms. This means that
+&gt;&gt;  there are 3 X 1.75 million species names out there that need
+&gt;&gt;  to be listed, sorted and &quot;cleaned up&quot;.
+&gt;
+&gt;Indeed; but it goes beyond this.  We also have to think about the
+&gt;estimated 10-30 million or so names that have yet to be established for
+&gt;the as-yet undescribed species of the world.  It would be a real shame
+&gt;if the historical average of 3 names per later-accepted species
+&gt;continued (do we really need 100 million names for 30 million species?)
+&gt;One way to reduce (certainly not eliminate) such over-description is to,
+&gt;as Meredith has already described, provide a service to access all
+&gt;existing names. It is this goal about which I preach.
+
+Access to names *and opinions*, that is. The latter is a very
+different issue, but an absolute necessity. Along these lines, Roger
+wrote:
+
+&gt;I believe what we need, in botany, is the equivelent of a central 'meta'
+&gt;directory of names. This directory would store all published names ( could
+&gt;be based on IPNI as a starting point ) and opinions about those names. No
+&gt;data would be discarded. Interfaces (through SOAP or simple http calls)
+&gt;would be provided for other databases to reflect their opinions on the
+&gt;names, give an indication of what other data they carry on these names and
+&gt;provide a link to the data. Anyone at any time would be able to log in and
+&gt;provide a comment on a name or submit a new one. There would be no
+&gt;moderation only abuse control. The whole dataset would be served over the
+&gt;net and would be available as a download or snail-mailed CD-ROM on a monthly
+&gt;snapshot basis. There will be news feeds and watch lists so you can be
+&gt;notified of new entries in the categories you are working on.
+
+We need this for all taxa, not just plants, and (as above) on
+*proposed* taxon names, as well as those already published. But
+consider the practical consequences of trying to treat &quot;opinions
+about a name&quot; as a simple data element linked to a name, and you'll
+see one of the things that worries me about this particular approach:
+
+Pat Curator, who has just taken a position at a small institution
+whose collection hasn't been curated in 50 years, wishes to organize
+the taxa (plants, animals, whatever), and submits a set of queries
+designed to give a listing of taxa such that all synonyms are listed
+under each species, each species is in a genus, each genus is in a
+family, and each family is in an order. Not too much to ask, right?
+But if the &quot;opinions&quot; data is not used to build a classification,
+poor Pat is going to find that a substantial number of species-level
+taxon names will (a) have more than one alternative opinion whether
+they are synonyms or not, (b) have more than one alternative opinion
+what genus they belong to, (c) have more than one alternative opinion
+what family the genus belongs to, and (d) have more than one
+alternative opinion what families are in each order. Pat might need
+to sit down and plow through all the literature at each level of the
+hierarchy, for anywhere up to thousands of taxa, in order to arrive
+at a single functional classification. Let's face it: MOST users of
+names aren't themselves experts, and aren't equipped to decide for
+themselves whether to follow, say, Opus' 1933 standard versus
+Soenso's 1996 cladistic analysis versus Whozis' 2002 molecular
+phylogeny.
+
+I maintain that what may seem perfectly logical, objective, and ideal
+to those who are designing such names databases - to wit, the
+&quot;hands-off&quot; approach to opinions (and, effectively, all
+classificatory matters) - stands to leave a LOT of nomenclatural data
+almost completely worthless to a large community of potential users.
+We need something more, to address this.
+
+Part of the &quot;sociology&quot; of the taxonomic community that needs to be
+developed alongside names databases is a working consensus
+classification, and - more to the point - this needs to be an
+*interactive* and *ongoing* portion of the data resource, and not
+based solely on published classificatory opinions (I believe that
+there is much more authoritative taxonomic opinion that resides in
+the heads of living taxonomists than can ever be published, and if we
+stick with the tradition that nothing is of any merit until it is
+printed on paper, we are crippling ourselves). Without a resource
+that puts forth a consensus opinion to all users (with appropriate
+caveats, obviously), we are failing to address one of the most
+serious objections that the critics of taxonomy are (and have been)
+making: that you can almost never get a straight answer from a
+taxonomist when you want to know what the name is for something and
+where it fits in the classification. I understand why GBIF wants to
+steer clear of it, and &quot;not take sides&quot; when compiling a list of all
+taxon names, but we can't neglect the very real need to
+*simultaneously* develop a single authoritative classification
+framework into which those names will fit. Name compilation efforts
+undertaken in a classificatory vacuum aren't going to serve the
+larger user community to the degree needed, and I think a greater
+effort should be made to develop a mechanism by which taxonomists can
+arrive at a public consensus.
+
+This would not require much more than what Roger mentioned above, and
+what Rich and I have also proposed in the past: &quot;news feeds and watch
+lists so you can be notified of new entries in the categories you are
+working on&quot;. This can be applied to classificatory matters just as
+well as to purely nomenclatural ones. A single central website can
+accomplish this - the software and logistics are, in fact, trivial.
+Beyond funding, I see no serious obstacles other than tradition and
+egotism preventing us from building a single Tree of Life - with each
+taxonomist choosing the branches therein upon which they will focus
+their efforts. With active, day-to-day participation by everyone in
+the taxonomic community, this could easily become a reality.
+
+Peace,
+--
+
+Doug Yanega        Dept. of Entomology         Entomology Research Museum
+Univ. of California - Riverside, Riverside, CA 92521
+phone: (909) 787-4315 (standard disclaimer: opinions are mine, not UCR's)
+              <A HREF="http://cache.ucr.edu/~heraty/yanega.html">http://cache.ucr.edu/~heraty/yanega.html</A>
+   &quot;There are some enterprises in which a careful disorderliness
+         is the true method&quot; - Herman Melville, Moby Dick, Chap. 82
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="092229.html">ITIS (an explanation of GBIF's data integration activities)
+</A></li>
+        <LI>Next message: <A HREF="092231.html">More GBIF questions (was: ITIS)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092230">[ date ]</a>
+              <a href="thread.html#092230">[ thread ]</a>
+              <a href="subject.html#092230">[ subject ]</a>
+              <a href="author.html#092230">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,289 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Life and Literature Code Challenge
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Life%20and%20Literature%20Code%20Challenge&In-Reply-To=%3C550F34A8-775A-4821-AA57-5BE46952ED20%40bio.gla.ac.uk%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="120752.html">
+   <LINK REL="Next"  HREF="120757.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2011-September/120753.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Life and Literature Code Challenge</H1>
+    <B data-pagefind-meta="author">Roderic Page</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Life%20and%20Literature%20Code%20Challenge&In-Reply-To=%3C550F34A8-775A-4821-AA57-5BE46952ED20%40bio.gla.ac.uk%3E"
+       TITLE="[Taxacom] Life and Literature Code Challenge">r.page at bio.gla.ac.uk
+       </A><BR>
+    <I data-pagefind-meta="date">Thu Sep  1 09:25:17 CDT 2011</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="120752.html">[Taxacom] Life and Literature Code Challenge
+</A></li>
+        <LI>Next message: <A HREF="120757.html">[Taxacom] Life and Literature Code Challenge
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#120753">[ date ]</a>
+              <a href="thread.html#120753">[ thread ]</a>
+              <a href="subject.html#120753">[ subject ]</a>
+              <a href="author.html#120753">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2011</span><!--beginarticle-->
+<PRE>Dear Chris,
+
+My understanding is that nomenclators aren't really about opinions. In effect they are a truncated  index of names in literature. Typically they store only the first occurrence of a name in the literature. If a name is used more than once (e.g., homonyms) then they may have multiple occurrences of that name.
+
+I think it would be tremendously valuable to combine nomenclators and BHL so that if BHL does contain the first publication of a name it flags that. I started to play with something like this for BioStor, which is something I'm revisiting.
+
+The benefits are both ways. OCR errors mean BHL has missed some names. However, we can use nomenclators to flesh out BHL's name index. My experiment mapping NZ to BHL required fuzzy string matching to handle cases where the name was on the scanned BHL page, but OCR errors meant uBio's algorithms had missed it, see <A HREF="http://iphylo.blogspot.com/2011/03/nomenclator-zoologicus-meets.html">http://iphylo.blogspot.com/2011/03/nomenclator-zoologicus-meets.html</A>
+
+In the same way, if we have a timeline for a name's occurrence in the literature, and a date on the name, then we can quickly guage whether BHL might have the original reference. For example, if a name has the date 1832 and the earliest occurrence is 1900 then, barring OCR errors BHL doesn't have it.
+
+Regards
+
+Rod
+
+On 1 Sep 2011, at 13:33, Chris Freeland wrote:
+
+&gt;<i> Paul,
+</I>&gt;<i> 
+</I>&gt;<i> I see recording name, citation &amp; associated information as a role of a nomenclator, not the literature repository.  BHL is an accumulation of published facts, many of which are at odds with each other because of ongoing taxonomic revision.  BHL doesn't take an opinion on acceptance or validity of a publishing act, we just have the paper as printed.  Recording validity or acceptance, to my thinking, is the role of a nomenclator, while BHL's responsibility is to hold the literature &amp; serve it through UIs &amp; APIs.  Also, BHL can only report on the literature it contains, so there's no way for BHL to tell you the earliest occurrence of a name if it occurs in a document that hasn't been scanned.  Again, that to me is the role of the nomenclator.  
+</I>&gt;<i> 
+</I>&gt;<i> I would like to see more nomenclators use the APIs we've developed:
+</I>&gt;<i> <A HREF="http://biodivlib.wikispaces.com/Developer+Tools+and+API">http://biodivlib.wikispaces.com/Developer+Tools+and+API</A>
+</I>&gt;<i> 
+</I>&gt;<i> Tropicos uses the OpenURL API for connecting name records to protologues, and is the #1 referrer to BHL.
+</I>&gt;<i> 
+</I>&gt;<i> Chris
+</I>&gt;<i> Chris Freeland
+</I>&gt;<i> Technical Director, Biodiversity Heritage Library
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> -----Original Message-----
+</I>&gt;<i> From: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom-bounces at mailman.nhm.ku.edu</A> on behalf of Paul Kirk
+</I>&gt;<i> Sent: Wed 8/31/2011 4:29 PM
+</I>&gt;<i> To: Chris Thompson; John Mignault; <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> Subject: Re: [Taxacom] Life and Literature Code Challenge
+</I>&gt;<i> 
+</I>&gt;<i> Chris,
+</I>&gt;<i> 
+</I>&gt;<i> The problem is BHL can not/does not make use of data in the many nomenclators freely available ... which could provide the exact page on with the nomenclaturally significant event took place ... :-)
+</I>&gt;<i> 
+</I>&gt;<i> Paul
+</I>&gt;<i> ________________________________________
+</I>&gt;<i> From: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom-bounces at mailman.nhm.ku.edu</A> [<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom-bounces at mailman.nhm.ku.edu</A>] on behalf of Chris Thompson [<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">xelaalex at cox.net</A>]
+</I>&gt;<i> Sent: 31 August 2011 21:28
+</I>&gt;<i> To: John Mignault; <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> Subject: Re: [Taxacom] Life and Literature Code Challenge
+</I>&gt;<i> 
+</I>&gt;<i> John:
+</I>&gt;<i> 
+</I>&gt;<i> I appreciate the CHALLENGE, but I should remind ALL that &quot;supposedly&quot; the
+</I>&gt;<i> BHL literature is automatically linked to species pages of the Encyclopedia
+</I>&gt;<i> of Life (EoL). That is, as BHL literature is digitized, the contents are
+</I>&gt;<i> scanned by uBio for scientific names. And then a link is made to the
+</I>&gt;<i> appropriate species page.
+</I>&gt;<i> 
+</I>&gt;<i> So, the real challenge is getting the programmers of EoL to find a way so as
+</I>&gt;<i> to properly prioritize the order in which references to BHL literature is
+</I>&gt;<i> listed.
+</I>&gt;<i> 
+</I>&gt;<i> And that may be in part something that taxonomists must do manually. That
+</I>&gt;<i> is, make a taxonomic judgment about what are the most important references
+</I>&gt;<i> beyond the obvious first (original description) and see that the links
+</I>&gt;<i> appear in the proper order from most important to insignificant.
+</I>&gt;<i> 
+</I>&gt;<i> For you all who do not know our Encyclopedia of Life, go to www.eol.org and
+</I>&gt;<i> look, for example, at the species page for Musca domestica Linnaeus, the
+</I>&gt;<i> common house fly and click on the BHL link [beware, the EoL will be changing
+</I>&gt;<i> soon]
+</I>&gt;<i> 
+</I>&gt;<i> <A HREF="http://www.eol.org/pages/730039">http://www.eol.org/pages/730039</A>
+</I>&gt;<i> 
+</I>&gt;<i> You will see more than a hundred or so links, but none to the original
+</I>&gt;<i> description (Linnaeus 1758) simply because Linnaeus NEVER made the
+</I>&gt;<i> combination Musca domestica in the TEXT. The genus name is in the running
+</I>&gt;<i> header and the epithet is left justified in the margin! So, the combination
+</I>&gt;<i> is not picked up in the automatic scanning by the uBio people, etc.
+</I>&gt;<i> 
+</I>&gt;<i> But also just look at the mass of links. Sam six-pack who might was to learn
+</I>&gt;<i> what was buzzing about his bud would be totally confused!
+</I>&gt;<i> 
+</I>&gt;<i> Sincerely,
+</I>&gt;<i> 
+</I>&gt;<i> Chris Thompson
+</I>&gt;<i> from home
+</I>&gt;<i> 
+</I>&gt;<i> -----Original Message-----
+</I>&gt;<i> From: John Mignault
+</I>&gt;<i> Sent: Wednesday, August 31, 2011 3:40 PM
+</I>&gt;<i> To: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> Subject: [Taxacom] Life and Literature Code Challenge
+</I>&gt;<i> 
+</I>&gt;<i> The Biodiversity Heritage Library is sponsoring a Code Challenge as
+</I>&gt;<i> part of the Life and Literature conference being held in Chicago
+</I>&gt;<i> November 14-15.
+</I>&gt;<i> 
+</I>&gt;<i> The Biodiversity Heritage Library (BHL) is a consortium of 12 natural
+</I>&gt;<i> history and botanical libraries that cooperate to digitize and make
+</I>&gt;<i> accessible the legacy literature of biodiversity held in their
+</I>&gt;<i> collections and to make that literature available for open access and
+</I>&gt;<i> responsible use as a part of a global &quot;biodiversity commons.&quot; BHL also
+</I>&gt;<i> serves as the foundational literature component of the Encyclopedia of
+</I>&gt;<i> Life (EOL). BHL content may be freely viewed through the online reader
+</I>&gt;<i> or downloaded in part or as a complete work in PDF, OCR text, or
+</I>&gt;<i> JPG2000 file formats.
+</I>&gt;<i> 
+</I>&gt;<i> Your challenge is to provide
+</I>&gt;<i> 
+</I>&gt;<i>    a new, innovative way to use, disseminate or display BHL data
+</I>&gt;<i>    a description of what your project is trying to accomplish
+</I>&gt;<i>    the source code to reproduce the application
+</I>&gt;<i>    any libraries or supporting code needed to reproduce the application
+</I>&gt;<i>    any build instructions or scripts are needed to build application
+</I>&gt;<i> or instructions how to run it
+</I>&gt;<i>    any notes about your experience implementing this code: how you
+</I>&gt;<i> came up with your design, blind alleys you went up, or surprising
+</I>&gt;<i> problems you ran into or anything else you want to share.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> The dataset
+</I>&gt;<i> Through local and global digitization efforts, BHL has digitized over
+</I>&gt;<i> 32 million pages of taxonomic literature, representing over 45,000
+</I>&gt;<i> titles and 87,000 volumes (January 2011). The entire -corpus- dataset
+</I>&gt;<i> is freely available and accessible via many open methods.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Timeline
+</I>&gt;<i> 
+</I>&gt;<i> Deadline for entries is October 17, 2011. The winner will be announced
+</I>&gt;<i> on November 1, 2011.
+</I>&gt;<i> 
+</I>&gt;<i> More details are available on our website at
+</I>&gt;<i> <A HREF="http://www.lifeandliterature.org/p/code-challenge.html">http://www.lifeandliterature.org/p/code-challenge.html</A>
+</I>&gt;<i> 
+</I>&gt;<i> Thanks, and enter!
+</I>&gt;<i> 
+</I>&gt;<i> --j
+</I>&gt;<i> 
+</I>&gt;<i> --
+</I>&gt;<i> John Mignault
+</I>&gt;<i> Systems Librarian
+</I>&gt;<i> The LuEsther T Mertz Library
+</I>&gt;<i> The New York Botanical Garden
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> 
+</I>&gt;<i> Taxacom Mailing List
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;<i> 
+</I>&gt;<i> The Taxacom archive going back to 1992 may be searched with either of these
+</I>&gt;<i> methods:
+</I>&gt;<i> 
+</I>&gt;<i> (1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+</I>&gt;<i> 
+</I>&gt;<i> (2) a Google search specified as:  site:mailman.nhm.ku.edu/pipermail/taxacom
+</I>&gt;<i> your search terms here
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> 
+</I>&gt;<i> Taxacom Mailing List
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;<i> 
+</I>&gt;<i> The Taxacom archive going back to 1992 may be searched with either of these methods:
+</I>&gt;<i> 
+</I>&gt;<i> (1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+</I>&gt;<i> 
+</I>&gt;<i> (2) a Google search specified as:  site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+</I>&gt;<i> ************************************************************************
+</I>&gt;<i> The information contained in this e-mail and any files transmitted with it is confidential and is for the exclusive use of the intended recipient. If you are not the intended recipient please note that any distribution, copying or use of this communication or the information in it is prohibited.
+</I>&gt;<i> 
+</I>&gt;<i> Whilst CAB International trading as CABI takes steps to prevent the transmission of viruses via e-mail, we cannot guarantee that any e-mail or attachment is free from computer viruses and you are strongly advised to undertake your own anti-virus precautions.
+</I>&gt;<i> 
+</I>&gt;<i> If you have received this communication in error, please notify us by e-mail at <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">cabi at cabi.org</A> or by telephone on +44 (0)1491 829199 and then delete the e-mail and any copies of it.
+</I>&gt;<i> 
+</I>&gt;<i> CABI is an International Organization recognised by the UK Government under Statutory Instrument 1982 No. 1071.
+</I>&gt;<i> 
+</I>&gt;<i> **************************************************************************
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> 
+</I>&gt;<i> Taxacom Mailing List
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;<i> 
+</I>&gt;<i> The Taxacom archive going back to 1992 may be searched with either of these methods:
+</I>&gt;<i> 
+</I>&gt;<i> (1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+</I>&gt;<i> 
+</I>&gt;<i> (2) a Google search specified as:  site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> 
+</I>&gt;<i> Taxacom Mailing List
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+</I>&gt;<i> <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+</I>&gt;<i> 
+</I>&gt;<i> The Taxacom archive going back to 1992 may be searched with either of these methods:
+</I>&gt;<i> 
+</I>&gt;<i> (1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+</I>&gt;<i> 
+</I>&gt;<i> (2) a Google search specified as:  site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+</I>&gt;<i> 
+</I>
+---------------------------------------------------------
+Roderic Page
+Professor of Taxonomy
+Institute of Biodiversity, Animal Health and Comparative Medicine
+College of Medical, Veterinary and Life Sciences
+Graham Kerr Building
+University of Glasgow
+Glasgow G12 8QQ, UK
+
+Email: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">r.page at bio.gla.ac.uk</A>
+Tel: +44 141 330 4778
+Fax: +44 141 330 2792
+AIM: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">rodpage1962 at aim.com</A>
+Facebook: <A HREF="http://www.facebook.com/profile.php?id=1112517192">http://www.facebook.com/profile.php?id=1112517192</A>
+Twitter: <A HREF="http://twitter.com/rdmpage">http://twitter.com/rdmpage</A>
+Blog: <A HREF="http://iphylo.blogspot.com">http://iphylo.blogspot.com</A>
+Home page: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="120752.html">[Taxacom] Life and Literature Code Challenge
+</A></li>
+	<LI>Next message: <A HREF="120757.html">[Taxacom] Life and Literature Code Challenge
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#120753">[ date ]</a>
+              <a href="thread.html#120753">[ thread ]</a>
+              <a href="subject.html#120753">[ subject ]</a>
+              <a href="author.html#120753">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

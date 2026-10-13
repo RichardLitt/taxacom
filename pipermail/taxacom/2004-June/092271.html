@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> ITIS (an explanation of GBIF's data integration activities)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2004-June/092271.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">ITIS (an explanation of GBIF's data integration activities)</H1>
+    <B data-pagefind-meta="author">Christopher Lyal</B>
+    chcl at NHM.AC.UK<BR>
+    <I data-pagefind-meta="date">Wed Jun 30 14:17:00 CDT 2004</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="092268.html">The end of the line for taxonomists - or is it?
+</A></li>
+        <LI>Next message: <A HREF="092273.html">Research Entomologist = Hymenoptera at Systematic Entomology
+              Lab., USDA
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092271">[ date ]</a>
+              <a href="thread.html#092271">[ thread ]</a>
+              <a href="subject.html#092271">[ subject ]</a>
+              <a href="author.html#092271">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2004</span><!--beginarticle-->
+<PRE>...........................
+Doug Yanega wrote:
+
+Wouldn't it be useful to everyone if every taxonomic publication in
+existence could be found on a single website? Wouldn't it be useful
+to taxonomists if they no longer had to worry about things like
+turnaround times, or page charges, or additional costs if they want
+to use high-resolution, full-color digital images in their works?
+
+Now consider the type of system I'm proposing: taxonomist A puts up a
+draft manuscript onto the global taxonomy website, and every
+subscriber in the world who has flagged that as a taxon of interest
+is instantly notified .....
+
+...............
+
+I'm not sure I go for a single website, given the way we are developing
+distributed systems.  Nor am I sure that e-journals are necessarily the
+only way forwards for publishing taxonomy on the web.  One of the
+bottlenecks in getting taxonomy done and out where it can be used is the
+necessity of wrapping even a single species description up in a formal
+paper with all the bits and pieces that make an editor happy and carry
+on selling the journals.  Surely publication on the web can allow us to
+break this mould a little?
+
+Anna Weitzman and I have been putting together a schema over the last
+year or so that will deal with taxonomic literature - the names
+(including synonyms etc), citations, specimen lists, keys, hierarchical
+statements etc that are found in pretty well any paper. Basically, it
+covers all of the components of taxonomic publications and the taxon
+treatments contained within them other than the actual characters, which
+are dealt with by other projects. Although taxonomic literature is very
+structured there can be an amazing amount of variability, but we hope we
+have managed to cover this, (and we are counting on you and others to
+point out where we have missed things).  The schema has been written
+with a focus on both botanical and zoological taxonomic literature, and
+should also accept fungal and paleontological publications, but this has
+not been tested. It does not take into account the kinds of data needed
+for viral or bacterial publications, and if anyone is interested in
+pursuing this in the future we are very open to collaboration.
+
+So what's the point?  Part of it is interoperability - someone mentioned
+that it would be good to be able to link straight to the descriptions
+from the names; if the descriptions are marked up in the schema we are
+developing, this should be possible, since we will ensure that it can be
+mapped to the Linnean Core/Napier Schema or whatever standard is
+accepted.  Similarly, we have written it to enable mapping to ABCD, so
+links can be generated from the relevant description elements to
+specimen-level data, for example through GBIF.  Another part is
+accessibility.  Given a set of descriptions accessible in this format,
+it would be possible to pull up any subset wanted - be that
+geographically, taxonomically or temporally defined (or any other
+parameter that is accessible).  Moreover, additional descriptions and
+taxonomic acts could be added without the need for a full paper being
+prepared and going through that particular mill.  Refereeing and making
+names formally available/valid according the relevant Code are both
+issues that can be dealt with without too much trouble, we think, and in
+no sense are we suggesting that the provisions of the various Codes
+could be ignored.
+
+We have been developing the schema using the Biologia Centrali-Americana
+as a testbed, and we plan, once the schema has gone through a thorough
+review, to have the whole 58 biological volumes of the BCA marked up and
+put on the web.  This will give a starting point of over 50,000 species.
+We have also got several taxonomists to agree to add modern revisions to
+the system, thus increasing the complexity through adding multiple
+descriptions of taxa in the BCA itself, name changes, and taxa described
+since the BCA.
+
+Right now we are at the stage of sending the schema out for comment to
+our advisory group.  It will shortly be on the web at
+<A HREF="http://www.sil.si.edu/digitalcollections/bca/">http://www.sil.si.edu/digitalcollections/bca/</A> If you check out that site
+now, you will find more about the project and the full text and images
+from the BCA in JPEG format.  If anyone would like to look at the schema
+(and give us some feedback) please let either of us know and we'll send
+a copy and add you to our mailing list.
+
+
+Chris
+
+Christopher H. C. Lyal,
+Beetle Diversity and Evolution Programme,
+Department of Entomology,
+The Natural History Museum,
+Cromwell Road,
+London SW7 5BD
+UK
+tel: +44 (0) 207 942 5113
+fax: +44 (0) 207 942 5229
+e-mail chcl at nhm.ac.uk
+URL:
+personal page  - <A HREF="http://www.nhm.ac.uk/entomology/staffpages/clyal.html">http://www.nhm.ac.uk/entomology/staffpages/clyal.html</A>
+
+electronic Biologia Centrali-Americana -
+<A HREF="http://www.sil.si.edu/digitalcollections/bca/">http://www.sil.si.edu/digitalcollections/bca/</A>
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="092268.html">The end of the line for taxonomists - or is it?
+</A></li>
+        <LI>Next message: <A HREF="092273.html">Research Entomologist = Hymenoptera at Systematic Entomology
+              Lab., USDA
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092271">[ date ]</a>
+              <a href="thread.html#092271">[ thread ]</a>
+              <a href="subject.html#092271">[ subject ]</a>
+              <a href="author.html#092271">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Inappropriate accuracy of locality data
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Inappropriate%20accuracy%20of%20locality%20data&In-Reply-To=%3C4CF5825B.9040607%40achapman.org%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="118289.html">
+   <LINK REL="Next"  HREF="118294.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2010-November/118291.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Inappropriate accuracy of locality data</H1>
+    <B data-pagefind-meta="author">Arthur Chapman</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Inappropriate%20accuracy%20of%20locality%20data&In-Reply-To=%3C4CF5825B.9040607%40achapman.org%3E"
+       TITLE="[Taxacom] Inappropriate accuracy of locality data">taxacom3 at achapman.org
+       </A><BR>
+    <I data-pagefind-meta="date">Tue Nov 30 17:01:47 CST 2010</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="118289.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+        <LI>Next message: <A HREF="118294.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#118291">[ date ]</a>
+              <a href="thread.html#118291">[ thread ]</a>
+              <a href="subject.html#118291">[ subject ]</a>
+              <a href="author.html#118291">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2010</span><!--beginarticle-->
+<PRE>Thanks Richard
+
+I may talk to you off line about this sometime.
+
+One other thing we are exploring in conjunction with others is the idea 
+of foot-printed/temporal gazetteers. Most gazetteers in the past have 
+only given the one lat/long for each location, however there are some 
+gazetteers that are moving toward polygons. For our biodiversity 
+purposes, however - if we are using a collection like &quot;20 km NW of  
+Toowoomba&quot; - there is an uncertainty of what is meant by Toowoomba - the 
+centre, the Post Office, the Railway Station, or did they mean from the 
+outskirts.  So the footprint of Toowoomba adds to the uncertainty (as 
+described in the Best Practices Document).  But, now if the collection 
+was made in 1865, then Toowoomba was an entirely different entity with 
+an entirely different footprint then than it has now - so there are 
+distinct implications with respect to uncertainty.  It can be quite 
+complicated, and if people wish to continue to use the point-radius 
+method, then they can do so (I only wish they would - most of the data 
+supplied to GBIF has the uncertainty field left blank), but by using 
+foot-prints we are hopeful of being able to reduce the area implied by 
+the uncertainty.
+
+Another issue that has been discussed is the lack of documented 
+gazetteer locations for many historic collection localities.  One 
+suggestion has been to harvest these locations from GBIF and look at the 
+lat/longs given there - and modify if necessary. One such locality in 
+Australia was a certain mile peg on the Great Northern Highway in 
+Western Australia.  It was where many collectors turned off the highway 
+- so you get collections labelled things like &quot;50km NNW of Mile Peg 484 
+on Great Northern Highway&quot;  That mile peg doesn't exist any more - the 
+road may even be in a different place - and it doesn't exist in any 
+gazetteer.  It has also been suggested that we could develop a wiki-like 
+gazetteer of collecting localities that could be edited on-line by 
+individuals somewhat like Stephen's wiki approach.  Such a gazetteer 
+could then be linked into the BioGeomancer workbench for others to use.
+
+Just a few thoughts on where we may be heading
+
+Cheers
+
+Arthur Chapman
+Toowoomba, Queensland, Australia
+
+
+
+On 1/12/2010 8:22 AM, Richard Pyle wrote:
+&gt;&gt;<i> We wish to cover
+</I>&gt;&gt;<i> uncertainty in more depth, especially the possibility of using
+</I>&gt;<i> foot-printed
+</I>&gt;&gt;<i> uncertainty rather than just the point-radius method most are using now.
+</I>&gt;&gt;<i> This would use polygons and include things like buffering, roads, etc.
+</I>&gt;<i> I generated a system years ago for buffering lines and polygons. Basically,
+</I>&gt;<i> a line or polygon is defined by a sequence of points, and if each point has
+</I>&gt;<i> an error radius around it, that radius can be translated into a buffer zone
+</I>&gt;<i> around the margins of the line or polygon.  By attaching the error distance
+</I>&gt;<i> to each point (rather than abstracted to the polygon as a whole), there can
+</I>&gt;<i> be different error/buffer zones on different parts of a polygon. For
+</I>&gt;<i> example, if a terrestrial plant specimen is vaguely ascribed from some area
+</I>&gt;<i> that abuts a water body, and you can say with confidence that the plant
+</I>&gt;<i> would not have occurred over the water body, then the points along the
+</I>&gt;<i> polygon that border the water body can have relatively small error; whereas
+</I>&gt;<i> the borders of the same polygon with less distinct boundaries could have
+</I>&gt;<i> larger error values associated with the relevant points.
+</I>&gt;<i>
+</I>&gt;<i> I eventually mothballed this, for several reasons:
+</I>&gt;<i>
+</I>&gt;<i> 1) I could never decide whether the error around the border of a polygon
+</I>&gt;<i> only applied externally to the defined polygon border, or simultaneously
+</I>&gt;<i> internal and external (error values on points that describe a line would
+</I>&gt;<i> obviously apply to both sides of the line)
+</I>&gt;<i>
+</I>&gt;<i> 2) I did not have any tools for easily generating or visualizing these
+</I>&gt;<i> buffered lines&amp;  polygons
+</I>&gt;<i>
+</I>&gt;<i> 3) Nobody else seemed very interested.
+</I>&gt;<i>
+</I>&gt;<i> The value of the point-radius approach is that it's the easiest and least
+</I>&gt;<i> time-consuming way to translate the existing human-friendly locality
+</I>&gt;<i> descriptors attached to most of our data content into something that can be
+</I>&gt;<i> processed by a computer.  The only caveat is that the scale of the error
+</I>&gt;<i> radius needs to be acknowledged when interpreting the values for analytical
+</I>&gt;<i> purposes.
+</I>&gt;<i>
+</I>&gt;<i> For example, if I have a fish specimen with locality data &quot;Oahu, Hawaiian
+</I>&gt;<i> Islands&quot;, then a point-radius result would put a point at the geographic
+</I>&gt;<i> center of Oahu (where the fish was surely not captured), and describe a
+</I>&gt;<i> circle that included the entire island plus enough of the surrounding water
+</I>&gt;<i> to encompass the likely collecting place for the specimen.  Such information
+</I>&gt;<i> would be useless for modeling where on Oahu that species occurs.  But it's
+</I>&gt;<i> reasonably useful for modeling where, within the Hawaiian Archipelago, the
+</I>&gt;<i> species occurs -- and it would be very precise information on the scale of
+</I>&gt;<i> modeling where within the Pacific Ocean the species occurs.
+</I>&gt;<i>
+</I>&gt;<i> I don't fault the point-radius approach taken so far; but I agree it would
+</I>&gt;<i> be valuable to also develop a standard for describing lines and polygons
+</I>&gt;<i> that is practical to use within our community.
+</I>&gt;<i>
+</I>&gt;<i> Aloha,
+</I>&gt;<i> Rich
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="118289.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+	<LI>Next message: <A HREF="118294.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#118291">[ date ]</a>
+              <a href="thread.html#118291">[ thread ]</a>
+              <a href="subject.html#118291">[ subject ]</a>
+              <a href="author.html#118291">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

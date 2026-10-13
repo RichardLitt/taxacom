@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> ITIS (an explanation of GBIF's data integration activities)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2004-June/092216.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">ITIS (an explanation of GBIF's data integration activities)</H1>
+    <B data-pagefind-meta="author">Roderic D. M. Page</B>
+    r.page at BIO.GLA.AC.UK<BR>
+    <I data-pagefind-meta="date">Thu Jun 24 06:48:17 CDT 2004</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="092218.html">ITIS (an explanation of GBIF's data integration activities)
+</A></li>
+        <LI>Next message: <A HREF="092227.html">TAXACOM] ITIS (an explanation of GBIF's data
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092216">[ date ]</a>
+              <a href="thread.html#092216">[ thread ]</a>
+              <a href="subject.html#092216">[ subject ]</a>
+              <a href="author.html#092216">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2004</span><!--beginarticle-->
+<PRE>&gt;Although the Napier schema is perhaps daunting it is part of a concerted
+&gt;effort to make datasets of many different types interoperable.
+
+Chris makes some good points, but I think the Napier schema serves a
+fairly limited purpose -- interchange between taxonomic databases. It
+serves the community of database developers, not database users.
+
+I think there is scope for a simple, lightweight standard for
+returning some basic information about a name (rather like the
+&quot;Standard Data&quot; suggested by Species2000
+<A HREF="http://www.sp2000.org/standarddata.html">http://www.sp2000.org/standarddata.html</A> ). For example, for some
+purposes, all a user needs is a name and a database id. If I have a
+list of birds, having those names checked against a database is all I
+need. If I have a database id, then I can look up that record and get
+more information. To illustrate, if I have an albatross, all I might
+need is &quot;Diomedea&quot;, and &quot;ITIS:174514&quot; -- I have a genus name, and I
+know I got it from ITIS, and if I go to ITIS and look up record
+174514 I can get more details.
+
+&gt;  If one
+&gt;is interested only in querying databases of names then an approach such
+&gt;as Rod outlines may well work, although the multiplicity of formats will
+&gt;create problems.
+
+Regarding the multiplicity of formats, adopting a simple standard
+would fix that. My argument is not about standards, rather it is that
+the Napier schema addresses just one small aspect of the problem.
+
+Perhaps we could learn from other services. Amazon.com has some very
+successful web services that people can use to sell books through
+their own web sites. Amazon provides &quot;light&quot; and &quot;heavy&quot; versions of
+its information. I regard the Napier schema as &quot;heavy&quot; -- what I'm
+arguing is that we need a &quot;light&quot; schema so that databases like ITIS,
+GenBank, IPNI, Index Fungorum, uBio, etc. can return useful
+information easily. In a similar vein, Google also has a web service
+interface, and it's pretty simple. As a result, all kinds of tools
+have sprung up that make use of Google's technology (e.g.,
+<A HREF="http://www.googlealert.com/">http://www.googlealert.com/</A> ). Wouldn't it be nice to have something
+as simple and as elegant for taxonomic information...?
+
+Regards
+
+Rod
+
+
+--
+--------------------------------------------------------
+Professor Roderic D. M. Page
+Editor Elect, Systematic Biology
+DEEB, IBLS
+Graham Kerr Building
+University of Glasgow
+Glasgow G12 8QP
+United Kingdom
+
+
+Phone:    +44 141 330 4778
+Fax:      +44 141 330 2792
+email:    r.page at bio.gla.ac.uk
+web:      <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+reprints: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/pubs.html">http://taxonomy.zoology.gla.ac.uk/rod/pubs.html</A>
+
+Subscribe to Systematic Biology through the Society of Systematic
+Biologists Website:  <A HREF="http://systematicbiology.org">http://systematicbiology.org</A>
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="092218.html">ITIS (an explanation of GBIF's data integration activities)
+</A></li>
+        <LI>Next message: <A HREF="092227.html">TAXACOM] ITIS (an explanation of GBIF's data
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092216">[ date ]</a>
+              <a href="thread.html#092216">[ thread ]</a>
+              <a href="subject.html#092216">[ subject ]</a>
+              <a href="author.html#092216">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

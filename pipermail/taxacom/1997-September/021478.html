@@ -1,0 +1,206 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Status of plant systematics
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1997-September/021478.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Status of plant systematics</H1>
+    <B data-pagefind-meta="author">Richard Zander</B>
+    bryo at COMMTECH.NET<BR>
+    <I data-pagefind-meta="date">Sun Sep  7 13:40:06 CDT 1997</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="104630.html">Taxonomic database structure
+</A></li>
+        <LI>Next message: <A HREF="057270.html">Status of plant systematics
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#021478">[ date ]</a>
+              <a href="thread.html#021478">[ thread ]</a>
+              <a href="subject.html#021478">[ subject ]</a>
+              <a href="author.html#021478">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1997</span><!--beginarticle-->
+<PRE>Daniel Barker wrote:
+&gt;
+&gt;
+&gt; There are optimization problems in all fields of science, and the ways to
+&gt; solve them are basically independent of the problem and optimality
+&gt; criterion. It doesn't matter whether you want to minimize air resistance
+&gt; of a car, minimize total wire length in a microchip or minimize potential
+&gt; energy in 3 dimensional protein structure. In the case of parsimony, we
+&gt; try and minimize the length of a phylogenetic tree. As with the problems
+&gt; of design and biophysics, we can find a reasonable solution using standard
+&gt; approaches such as greedy algorithms, hill climbing, simulated annealing
+&gt; or a combination of any of these. For example, typically Phylip's DNAPARS
+&gt; uses a greedy algorithm to propose a tree, which it then optimizes using
+&gt; hill climbing.
+&gt;
+&gt; It does not matter if there is more evidence against the solution than for
+&gt; it. I have never heard anyone use this reason to suggest that other
+&gt; optimality criteria are irrelevant. For example, it would be unreasonable
+&gt; to scrap a microchip on the grounds that the probability its use of wire
+&gt; is optimal is just 1%. It would be even less reasonable to abandon
+&gt; computerized simulation in microchip design because of this figure. All
+&gt; that matters is that what we have a good guess, and computer programs can
+&gt; help us guess fairly well.
+
+Again: Occam's Razor and parsimony work fine in producing solutions that
+are best of many, though of low probability in themselves. In other
+sciences, these &quot;best guesses&quot; can be checked immediately, but there is
+no such provision in systematics. Low probability solutions remain just
+that, low probability.
+
+&gt;
+&gt; Some parts of the solution to an optimization problem may be better than
+&gt; others. This is certainly true of phylogeny: few phylogeneticists would
+&gt; claim to have EVER published a cladogram that is wholly correct. But few
+&gt; would claim (even privately) to have ever published one that is wholly
+&gt; incorrect, either. The hope is that a cladogram is reasonable overall, and
+&gt; beyond doubt correct in some places.  Measures like the CI and RI tell us
+&gt; the overall quality of the tree: if, after minimizing homoplasy, there is
+&gt; still a lot of homoplasy, we should not place faith in the reconstruction.
+
+To be partly correct in some acceptable, reasonable way, and an advance
+in knowledge the cladogram has to be, gee, I'd expect it to be more than
+half right. The several likeliest cladograms would have to agree in more
+than half their topologies, AND their posterior probabilities that they
+are correct must add to &gt;.5. Demonstrate this in any published
+phylogenetic analysis of more than a very few terminal taxa, and...well,
+I'll have other complaints, I'm sure.
+
+&gt; We might decide to find some data that better matches the optimality
+&gt; criterion (i.e. characters with a lower rate of evolution), or change the
+&gt; optimality criterion to better match our data (i.e. correct for multiple
+&gt; hits). Anyway, apart from such measures of overall tree quality, quality
+&gt; of specific clades in a tree can be checked using the bootstrap.  If a
+&gt; clade has high bootstrap support, we believe in it, even if the rest of
+&gt; the tree is rather dire.
+
+Not me. The bootstrap requires the potential of infinite information. No
+such thing is possible. Sanderson has published pointed objections to
+the bootstrap.
+
+&gt;
+&gt; &gt; [cut to keep my reply fairly short ...]
+&gt; &gt; Phylogeneticists of any stripe are getting away with maybe one paper
+&gt; &gt; in ten having a good chance of a correct result, and which paper that is
+&gt; &gt; is unknown. (The intuited regularity assumptions of Bayesian analysis
+&gt; &gt; are another problem which I won't even bring up...) Simplicity is useful
+&gt;
+&gt; This frequentist (not Bayesian) attitude to confidence is fine for simple
+&gt; hypothesis testing, for example testing the effect of treatments on
+&gt; disease, or fertilizer on yield. In such cases we want to know the answers
+&gt; to basic questions like 'Does this work? Is it worthwhile?' But trees are
+&gt; not hypotheses that are to be rejected or accepted with absolute
+&gt; certaintly. The probability indicates how much we should believe the tree
+&gt; overall, and is in this respect similar to the RI and CI.
+
+No, no. I require no absolute certainty. A chance of a cladogram being
+right 1 in 10 times means, in the frequentist sense, that if the data
+set occurred many times, 1 in 10 of the true trees would be the same as
+the max parsimony or max likelihood solution. You don't know which, and
+will never know.
+
+&gt;
+&gt; &gt; in other sciences where the &quot;least wrong&quot; answer(s) out of many can be
+&gt; &gt; immediately checked for correctness, but we have no such tests in
+&gt; &gt; systematics.
+&gt;
+&gt; I think, with the CI, RI, tree probability, bootstrap and at least half a
+&gt; dozen other statistics, parsimony has more immediate checks for
+&gt; correctness than most optimization problems. We do have such tests, and we
+&gt; have so many of them that few people can keep up with developments and
+&gt; understand them all.
+
+Nope. Farris pointed out long ago that synapomorphies imply homoplasy
+(just one more step and a synapomorphy deconstructs into homoplasy).
+These tests you mention generally only test for the presence of
+information put there already by systematists. The data on the terminal
+taxa are data on mental constructs, which reflect apprehensions of
+nature &quot;out there.&quot; In addition to being necessarily one step removed
+from reality, these assume that the shortest tree is ALREADY the best
+solution, and largely just compare shortest trees or potentially
+shortest trees, whereas the true tree is most probably (almost
+certainly) one of the longer trees.
+&gt;
+&gt; &gt;   This will be abundantly evident someday as maximum likelihood analyses
+&gt; &gt; become more prevalent and posterior probabilities are published, and
+&gt; &gt; then it's back to monography for systematists.
+&gt;
+&gt; maybe back to monography, but cetainly not for the reasons you give.
+
+Exactly for the reasons I give.
+
+&gt;
+&gt; Further reading:
+&gt;
+&gt; Buck, B. &amp; Macaulay, V. A. (eds) 1991. Maximum entropy in action (Oxford &amp;
+&gt; New york: Clarendon Press)
+&gt;
+&gt; Kirkpatrick, S., Gelatt, C. D. &amp; Vecci, M. P. 1983.  Optimization by
+&gt; simulated annealing. Science 220(4598): 671-680
+&gt;
+&gt; &gt;
+&gt; &gt; --
+&gt; &gt;
+&gt; &gt; *******************************************************
+&gt; &gt; Richard H. Zander, Buffalo Museum of Science
+&gt; &gt; 1020 Humboldt Pkwy, Buffalo, NY 14211 USA bryo at commtech.net
+&gt; &gt; *******************************************************
+&gt; &gt;
+&gt;
+&gt; Daniel Barker,
+&gt; Institute of Cell and Molecular Biology,
+&gt; University of Edinburgh,
+&gt; Daniel Rutherford Building,
+&gt; King's Buildings,
+&gt; Mayfield Road,
+&gt; Edinburgh
+&gt; EH9 3JH
+&gt; UK
+&gt;
+&gt; <A HREF="http://www.icmb.ed.ac.uk/sokal.html">http://www.icmb.ed.ac.uk/sokal.html</A>
+
+--
+
+*******************************************************
+Richard H. Zander, Buffalo Museum of Science
+1020 Humboldt Pkwy, Buffalo, NY 14211 USA bryo at commtech.net
+*******************************************************
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="104630.html">Taxonomic database structure
+</A></li>
+        <LI>Next message: <A HREF="057270.html">Status of plant systematics
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#021478">[ date ]</a>
+              <a href="thread.html#021478">[ thread ]</a>
+              <a href="subject.html#021478">[ subject ]</a>
+              <a href="author.html#021478">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

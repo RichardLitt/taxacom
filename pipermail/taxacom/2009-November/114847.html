@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Scientific name vs Scientific name string
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2009-November/114847.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Scientific name vs Scientific name string</H1>
+    <B data-pagefind-meta="author">Wolfgang Lorenz</B>
+    faunaplan at googlemail.com<BR>
+    <I data-pagefind-meta="date">Mon Nov 23 07:32:16 CST 2009</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="114846.html">[Taxacom] How good open access can be! - ZooKeys paper on National
+	Geographic and world news
+</A></li>
+        <LI>Next message: <A HREF="114848.html">[Taxacom] =?iso-8859-1?q?_Curator_Natural_Life_=28Botany=29_Leice?=
+ =?iso-8859-1?q?stershire_=A325=2C497_-_=A328=2C638?=
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#114847">[ date ]</a>
+              <a href="thread.html#114847">[ thread ]</a>
+              <a href="subject.html#114847">[ subject ]</a>
+              <a href="author.html#114847">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2009</span><!--beginarticle-->
+<PRE>Dear all,
+Peter asked &quot;Maybe someone can make a proposal, or describe what they use?&quot;
+
+Let me expand the topic a bit by asking: What are we doing with names in
+databases?
+
+First, we want to store information that we get from primary or secondary
+sources (specimen labels, literature, databases, web pages, observation
+notes...). Names attached as accepted names to such information can be
+termed &quot;chresonyms&quot; (in a wide sense), or &quot;VerbatimNameUsage&quot;.
+I would enter such names as verbatim as possible while, of course, they need
+to be readable. For example, when a species name is cited as an epithet
+only, but the genus is mentioned in the publication title, the implied
+complete binomen should be entered. Author and date can be entered verbatim,
+if given. Some databasers might want to annotate the corrected spelling of a
+misspelled name, but this should be made explicit.
+
+Second, we need to interpret names entered from data sources, so we need our
+own accepted set (or alternative sets) of names. The best we can do here is
+stay with perfectly Code-compliant names based on up-to-date
+classifications. Such names do not include author and year, but as an
+additional information (e.g., in a separate data field) such info is often
+very useful.
+
+Error-free interpretation of all names is very much a handwork of the taxon
+specialist, so far.
+Misspellings and misapplied names are not the only impediment for automated
+interpretation. One more reason is the considerable number of species-group
+names that are alternative generic combinations. Such (mainly zoological)
+names are not easily found, even in many recent catalogues.
+Biodiversity informaticians are seeking to develop tools that can, at least,
+perform a reasonable pre-interpretation. In my opinion, there is a way to
+support development of such tools, - and I have already mentioned the idea
+in previous postings:
+
+It's because each available taxonomic name has an &quot;anchor&quot; name, that is the
+binomen attached to the type material. Hence, Unique Name Anchor Strings
+(UNAS if you like) can be given for each name that is governed by the Code.
+
+So, in summary, we could have the following,
+e.g.:
+
+&lt;VerbatimNameUsage&gt;Idiochroma dorsale Pont.&lt;/VerbatimNameUsage&gt;
+
+&lt;AcceptedName&gt;Anchomenus dorsalis&lt;/AcceptedName&gt;
+&lt;AcceptedNameAuthorDate&gt;
+Anchomenus dorsalis (Pontoppidan, 1763)&lt;/AcceptedNameAuthorDate&gt;
+
+... and the complete inventary of &quot;UNAS&quot; for the above example would read
+something like:
+&lt;UNAS&gt;ZS-Carabus_dorsalis&lt;/UNAS&gt;
+&lt;UNAS&gt;ZS-Carabus_dorsalis/Idiochroma_dorsale&lt;/UNAS&gt;
+&lt;UNAS&gt;ZS-Carabus_dorsalis/Platynus_dorsalis&lt;/UNAS&gt;
+&lt;UNAS&gt;ZS-Carabus_dorsalis/Agonum_dorsale&lt;/UNAS&gt;
+&lt;UNAS&gt;ZS-Carabus_dorsalis/Anchomenus_dorsalis&lt;/UNAS&gt;
+
+Best wishes,
+Wolfgang
+-------------------------------------------
+
+Wolfgang Lorenz, Tutzing, Germany
+
+
+
+2009/11/22 Peter DeVries &lt;pete.devries at gmail.com&gt;
+
+&gt; Maybe someone can make a proposal, or describe what they use?
+&gt;
+&gt; Not a rule that everyone has to follow, but a suggested form that people
+&gt; can
+&gt; use in conversation and when naming their database fields.
+&gt;
+&gt; So what so you call these forms of the name:
+&gt;
+&gt; Puma concolor (Linnaeus, 1771)
+&gt; Felis concolor Linnaeus, 1771
+&gt;
+&gt; and what do you call these forms of the name:
+&gt;
+&gt; Puma concolor
+&gt; Felis concolor
+&gt;
+&gt; So they can be properly understood in conversation and in this form
+&gt;
+&gt; &lt;whatevernameforthis&gt;Puma concolor (Linnaeus, 1771)&lt;/whatevernameforthis&gt;
+&gt;
+&gt; &lt;whatevernameforthis&gt;Felis concolor&lt;/whatevernameforthis&gt;
+&gt;
+&gt; - Pete
+&gt;
+&gt;
+&gt; On Mon, Nov 16, 2009 at 5:04 AM, Dmitry Mozzherin &lt;dmozzherin at eol.org
+&gt; &gt;wrote:
+&gt;
+&gt; &gt; I would like to illustrate how Biodiversity Q/A works, and also get a
+&gt; clear
+&gt; &gt; clear understanding of terms used in GNI. What is the difference between
+&gt; &gt; 'Scientific name' and 'Scientific name string'?
+&gt; &gt;
+&gt; &gt; Here is the question in full:
+&gt; &gt;
+&gt; &gt;
+&gt; <A HREF="http://biodiversity.stackexchange.com/questions/5/what-is-the-difference-between-scientific-name-string-and-scientific-name-ter">http://biodiversity.stackexchange.com/questions/5/what-is-the-difference-between-scientific-name-string-and-scientific-name-ter</A>
+&gt; &gt;
+&gt; &gt; Thanks
+&gt; &gt;
+&gt; &gt; Dima
+&gt; &gt; _______________________________________________
+&gt; &gt;
+&gt; &gt; Taxacom Mailing List
+&gt; &gt; Taxacom at mailman.nhm.ku.edu
+&gt; &gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt; &gt;
+&gt; &gt; The Taxacom archive going back to 1992 may be searched with either of
+&gt; these
+&gt; &gt; methods:
+&gt; &gt;
+&gt; &gt; (1) <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt; &gt;
+&gt; &gt; Or (2) a Google search specified as:  site:
+&gt; &gt; mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+&gt; &gt;
+&gt;
+&gt;
+&gt;
+&gt; --
+&gt; ----------------------------------------------------------------
+&gt; Pete DeVries
+&gt; Department of Entomology
+&gt; University of Wisconsin - Madison
+&gt; 445 Russell Laboratories
+&gt; 1630 Linden Drive
+&gt; Madison, WI 53706
+&gt; GeoSpecies Knowledge Base
+&gt; About the GeoSpecies Knowledge Base
+&gt; ------------------------------------------------------------
+&gt; _______________________________________________
+&gt;
+&gt; Taxacom Mailing List
+&gt; Taxacom at mailman.nhm.ku.edu
+&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt;
+&gt; The Taxacom archive going back to 1992 may be searched with either of these
+&gt; methods:
+&gt;
+&gt; (1) <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt;
+&gt; Or (2) a Google search specified as:  site:
+&gt; mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+&gt;
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="114846.html">[Taxacom] How good open access can be! - ZooKeys paper on National
+	Geographic and world news
+</A></li>
+        <LI>Next message: <A HREF="114848.html">[Taxacom] =?iso-8859-1?q?_Curator_Natural_Life_=28Botany=29_Leice?=
+ =?iso-8859-1?q?stershire_=A325=2C497_-_=A328=2C638?=
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#114847">[ date ]</a>
+              <a href="thread.html#114847">[ thread ]</a>
+              <a href="subject.html#114847">[ subject ]</a>
+              <a href="author.html#114847">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

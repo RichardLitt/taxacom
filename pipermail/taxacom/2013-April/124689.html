@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Source data (was Re: Data quality in aggregated datasets)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-April/124689.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Source data (was Re: Data quality in aggregated datasets)</H1>
+    <B data-pagefind-meta="author">Doug Yanega</B>
+    dyanega at ucr.edu<BR>
+    <I data-pagefind-meta="date">Wed Apr 24 13:48:22 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="124688.html">[Taxacom] Data quality in aggregated datasets
+</A></li>
+        <LI>Next message: <A HREF="124690.html">[Taxacom] Invitation to serve on the NEON Collections Technical
+	Working Group
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124689">[ date ]</a>
+              <a href="thread.html#124689">[ thread ]</a>
+              <a href="subject.html#124689">[ subject ]</a>
+              <a href="author.html#124689">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>On 4/24/13 8:47 AM, David Campbell wrote:
+&gt;&gt; Unlike (generally) the collector and the museum (and often the
+&gt; knowledgeable end-user as well), the aggregators do not do their best to
+&gt; ensure that the information they're passing on is correct. &lt;
+&gt;
+&gt; There are also a number of museum databases up online that conspicuously
+&gt; relied on taxonomically untrained help to put lots of stuff into a
+&gt; database.  Given museum funding, that may be the best they can do, but it's
+&gt; often not good (major groups of snails identified as clams, for example).
+&gt; Aggregators provide a very good opportunity to flag similar but discrepant
+&gt; records, if that feature gets programmed into them.  But definitely the
+&gt; fact that a record from a museum database exists online does not mean that
+&gt; it has been examined to see if it is accurate.
+&gt;
+This gets back to a point I made earlier in this thread; the low quality of data being aggregated. People really, truly, do not have any idea just how bad online data actually are, and if they did know, they'd be appalled - not only at the frequency of errors, but how *opaque* the errors are to automated error-checking. How many people examine original specimen labels critically to see if the labels themselves are erroneous? How many people have hired help doing data entry, but then *personally* screen every single record to look for errors? How often have you seen someone take the material collected by several different researchers on a single collecting expedition, and compared the label data that they each generated independently? How often have you seen someone take a large online data source, critically re-analyze every single record, and do a side-by-side analysis of the discrepancies? I've done all of these, the latter specifically in the context of georeferences, and the results are not pretty. I freely admit that since I work with insect specimens, there is an intrinsic bias, due to the generally inferior standards for original labeling; just the physical limitation of the teeny tiny labels leads to a tremendous reduction in the amount of detail recorded in the label data. Of course, since insects comprise the vast majority of all biological specimens in existence, the challenges they pose arguably set the standard for natural history data.
+
+Based on a sample size of hundreds of thousands of specimens from over a dozen different institutions, over 30 years, the baseline is this: between 10 and 20% of all unique original data labels contain (1) outright errors and/or (2) omissions that result in ambiguity. Yes, that is an empirical value, and it is the same for all institutions, though the distribution of errors/omissions is very strongly skewed to older legacy material (all collections I've worked with contain significant legacy holdings, going back at least 100 years). No institution is immune, no collector is immune, it's all just a matter of frequency. Even collectors using hand-held GPS units make errors on their labels. Despite this very significant baseline error level, virtually every single data capture enterprise I've seen assumes that the original label data are correct. As such, people providing data are already starting on shaky foundations.
+
+Now consider a georeferencing analysis I did using &gt;3400 records from almost 600 localities that a data provider had georeferenced (mostly through automated and semi-automated protocols), and omitting all other types of errors (of which there were many) in dates and localities and collector names, etc. Out of 590 georeferenced points with pairwise comparisons:
+
+360 (61%) were within one mile of one another, and thus the provider's georefs for these would qualify as &quot;accurate&quot; in the general sense. However, only 233 (39%) were within 1/4 mile, which is roughly the level at which the records could be said to be genuinely the*same*  (as in, people standing in those two spots could actually see one another, and might label their specimens the same way). In other words, only about a third of the plotted locations were functionally the same as what a human using detailed satellite images would determine. That is a pretty fundamental difference. What was also remarkable was that the data set included several cases where multiple collectors had been at the exact same locality but wrote their own labels (which were not identical) - and virtually all of these were assigned slightly different georeferences in the provider's dataset, despite being from the same places.
+
+149 (25%) were from 1-5 miles off, which is about as far as one could normally allow for on even moderately vague localities (a 2-5 km error radius is typical for legacy localities), so in the very broadest sense of &quot;overlap&quot;, we could be generous and say that something around 3/4 of the points had at least some degree of overlap, and might be allowable as georeferencer variation. Bear in mind also that for analyses involving habitats, this degree of error is enough to commonly cross habitat boundaries, and thus compromise the analysis.
+
+However, discrepancies greater than 5 miles still make up 14% of the total (81 points), and that is a very high proportion, virtually all of them representing completely non-overlapping points. There are 24 cases where the discrepancy exceeded 25 miles; 9 of those were over 100 miles off, and one was over 2000 miles off.
+
+All in all, this exercise in quality control was very instructive, but not encouraging; roughly 1/4 of all the provider's georeferences can be classified as genuinely erroneous (or 1/3rd if you simply want to use &quot;inaccurate&quot;), and that dataset is no doubt typical of what people call a &quot;first pass&quot;. I'm quite certain that folks engaged in georeferencing have been assuming that the typical error rate for even the first pass is much, much lower - AND folks have been assuming that the discrepancies between two people georeferencing the same labels would be negligible. Neither assumption is supported empirically here.
+
+Perhaps the most important two points to make are these: (1) quality control isVERY  time-consuming, but (2) the process of error-checking is EXACTLY the same process one would follow in order to do georeferencing error-free in the first place. The latter point is crucial: it helps no one to do a &quot;first pass&quot; on a dataset and then go back and re-examine all those points using more careful protocols, whether this is done by the provider, an aggregator, or by a third party. If you use careful protocols initially, then there won't be any need to go back and re-do anything. The first pass is psychologically gratifying, but is of zero practical value, and realistically it is of*negative*  value since it reduces one's efficiency overall, given that not only is ALL of the time spent on the first pass ultimately wasted, but it adds extra time. If you're scratching your heads asking why I would say it's ALL wasted when (e.g.) 1/3rd of the mapped points came out exactly the same, just realize that there was no way*in advance*  to know which of those 590 points were accurate; accordingly,*every single point*  had to be checked. In principle, a point that is 0.001 miles off is just as time-consuming to confirm as a point that is 100 miles off, but in practice, points that fail to match up when checked add EXTRA time, since *they must then be corrected* - which would not have been necessary if there had been no &quot;first pass&quot; performed. Showing the math is straightforward: if the original semi-automated first pass generated 600 georefs after 2 hours of labor (parsing out and running the label data through some lookup routines, then incorporating the result), then one would be tempted to say &quot;We averaged 300 localities georeferenced per hour of labor&quot;. But that dataset is 25% erroneous. In order to clean it, it took 20 hours of manual georeferencing, plus another hour to change all the records that were either slightly or severely off. Therefore, the total effort spent to get a clean dataset was 23 hours - but a clean dataset could have been produced in only 20 hours total if the first pass had been skipped.
+
+Here's the final twist: if the data provider performs only the first pass, and it takes them only a few hours, what is *their* incentive to invest 20 more hours in cleaning up the data, if they can just dump it online and have someone else do those 20 hours of labor for free?
+
+Sincerely,
+
+-- 
+Doug Yanega      Dept. of Entomology       Entomology Research Museum
+Univ. of California, Riverside, CA 92521-0314     skype: dyanega
+phone: (951) 827-4315 (disclaimer: opinions are mine, not UCR's)
+              <A HREF="http://cache.ucr.edu/~heraty/yanega.html">http://cache.ucr.edu/~heraty/yanega.html</A>
+   &quot;There are some enterprises in which a careful disorderliness
+         is the true method&quot; - Herman Melville, Moby Dick, Chap. 82
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="124688.html">[Taxacom] Data quality in aggregated datasets
+</A></li>
+        <LI>Next message: <A HREF="124690.html">[Taxacom] Invitation to serve on the NEON Collections Technical
+	Working Group
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124689">[ date ]</a>
+              <a href="thread.html#124689">[ thread ]</a>
+              <a href="subject.html#124689">[ subject ]</a>
+              <a href="author.html#124689">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

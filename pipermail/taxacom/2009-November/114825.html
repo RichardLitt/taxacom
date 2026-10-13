@@ -1,0 +1,201 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Scientific name vs Scientific name string
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2009-November/114825.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Scientific name vs Scientific name string</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at bishopmuseum.org<BR>
+    <I data-pagefind-meta="date">Thu Nov 19 09:42:32 CST 2009</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="114824.html">[Taxacom] Scientific name vs Scientific name string
+</A></li>
+        <LI>Next message: <A HREF="031509.html">[Taxacom] Scientific name vs Scientific name string
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#114825">[ date ]</a>
+              <a href="thread.html#114825">[ thread ]</a>
+              <a href="subject.html#114825">[ subject ]</a>
+              <a href="author.html#114825">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2009</span><!--beginarticle-->
+<PRE>
+Hi Francisco,
+
+I don't know what you mean by &quot;inaccurate&quot;, but many of us have been
+reasonably consistent (at least in recent years) in what we mean by the term
+&quot;name-string&quot; in the context of scientific names.  I don't know that we use
+the full term &quot;scientific name string&quot;; but if one were to use such a term
+in the context of biodiversity informatics, I would feel confident that in
+interpreting it at &quot;a text-string purported to represent a scientific name&quot;.
+
+We started using the term &quot;name-string&quot; several years ago precisely to
+distinguish what you define below as a &quot;scientific name&quot; from &quot;a text-string
+purported to represent a scientific name&quot;.  The main problem is that people
+would simply use the term &quot;name&quot; or &quot;scientific name&quot; without quailfying
+what they meant, and as such led to much confusion and misunderstanding.  In
+my experience, conversations about how to manage taxonomic information
+(e.g., within the context of GNA) has been markedly improved by the
+relatively broad adoption and consistent usage of the term &quot;name-string&quot;,
+which is shorter to type than &quot;a text-string purported to represent a
+scientific name&quot;.
+
+As for the ICZN Code, here are some useful definitions from the glossary:
+
+name, n.
+    (1) (general) A word, or ordered sequence of words, conventionally used
+to denote and identify a particular entity (e.g. a person, place, object,
+concept). (2) Equivalent to scientific name (q.v.). (3) An element of the
+name of a species-group taxon: see generic name, subgeneric name, specific
+name, subspecific name.
+
+scientific name
+    Of a taxon: a name that conforms to Article 1, as opposed to a
+vernacular name. The scientific name of a taxon at any rank above the
+species group consists of one name; that of a species, two names (a
+binomen); and that of a subspecies, three names (a trinomen) [Arts. 4 and
+5]. A scientific name is not necessarily available.
+
+A couple of points are worth noting here:
+
+1) There are actually no fewer than *FORTY ONE* definitions for the word
+&quot;name&quot; qualified in one way or another within the glossary of the ICZN Code.
+This illustrates the confusion that can result when people talk about
+&quot;names&quot; without qualifying what they specifically mean.  This ambiguity
+alone has probably cost us at least a year or more in sorting out systems
+for managing taxonomic information.
+
+2) In both of the definitions above (#3 of &quot;name&quot;, and the qualifcation of
+binomial and trinomial names of &quot;scientific name&quot;), the ICZN Code makes it
+clear that the term &quot;name&quot; or &quot;scientific name&quot; applies to the individual
+element of a compound name.  In other words, &quot;Homo sapiens&quot; is two names:
+one genus-group name and one species-group name (the latter often referred
+to as an &quot;epithet&quot;).  This is in stark contrast to how a botanist defines
+the word &quot;scientific name&quot;, in that &quot;Homo sapiens&quot; is *one* name.  I don't
+know which of these senses of &quot;name&quot; the bacteriological community follows.
+
+The discrepancy between botanincal tradition and zoological tradition has
+likewise created a great deal of confusion when trying to discuss taxonomic
+information management systems.  The introduction of qualified terms such as
+&quot;name-string&quot; and &quot;name element&quot; (among others) has helped to facilitate
+less ambiguous communication in this regard.
+
+When we were developing the &quot;Linnean Core&quot; (later embedded within TCS), we
+defined the term &quot;name-string&quot; in accordance with your prefrence to exclude
+the authorship information (See:
+<A HREF="http://wiki.tdwg.org/twiki/bin/view/UBIF/LinneanCoreDefinitions).">http://wiki.tdwg.org/twiki/bin/view/UBIF/LinneanCoreDefinitions).</A>  We
+established the term &quot;Name-string with authorship&quot; to refer to the complete
+string with authorship information.  However, as we began developing the
+Global Names Index, it was clear that we were mostly discussing text strings
+that (potentially) included authorship information as well, and for better
+or for worse, we began using the short-hand term &quot;name-string&quot; to refer to
+the text string that includes the authorship information.
+
+I suppose it's not too late for the GNA/GNI community to return to the terms
+as defined in the LinneanCore definitions, and perhaps it would avoid
+confusion if we did so.  Do the GNA developers on this list have an opinion
+either way?
+
+Aloha,
+Rich
+
+P.S. What &quot;given web page&quot; were you referring to at the end of your post?
+
+&gt; -----Original Message-----
+&gt; From: taxacom-bounces at mailman.nhm.ku.edu 
+&gt; [mailto:taxacom-bounces at mailman.nhm.ku.edu] On Behalf Of 
+&gt; Francisco Welter-Schultes
+&gt; Sent: Thursday, November 19, 2009 2:39 AM
+&gt; To: taxacom at mailman.nhm.ku.edu
+&gt; Subject: Re: [Taxacom] Scientific name vs Scientific name string
+&gt; 
+&gt; A &quot;string&quot; is a technical term used in electronic 
+&gt; environments describing a combination containing letters and 
+&gt; eventually numbers. 
+&gt; 
+&gt; A &quot;scientific name&quot; as used here is a name of an organism 
+&gt; established in a scientific context. This includes also 
+&gt; unavailable names and polynominal names of the 1600s, given 
+&gt; that they were established for the use in sciences. A 
+&gt; scientific name is opposed to a vernacular name.
+&gt; 
+&gt; &quot;Scientific name string&quot; is an inaccurate term which I do not 
+&gt; use because it is not defined and can have a broad range of 
+&gt; meanings. For educational purposes I would never use this term.
+&gt; 
+&gt; In the ICZN Code the term &quot;name&quot; (of a taxon) refers to Parus 
+&gt; major, and does not include author and year (ICZN Code Art. 
+&gt; 51.1). Author and year are attached to the name, this is 
+&gt; recommended by the IZCN Code, which also provides rules how 
+&gt; to do that consistently.
+&gt; 
+&gt; The combination genus-species-author-year used in electronic 
+&gt; environments has been called &quot;taxon name author string&quot; since 
+&gt; the 1990s. I find this term useful and apply it also myself 
+&gt; because since the time when it was established it has been 
+&gt; restricted to modern scientific names under one of the 
+&gt; currently accepted Codes, and includes more than the pure 
+&gt; name, at least author, usually also year.
+&gt; 
+&gt; Francisco
+&gt; 
+&gt; (My browser is not technically able to post this answer to 
+&gt; the given wiki page. If somebody likes to post my answer 
+&gt; there I have no problems with it).
+&gt; 
+&gt; 
+&gt; University of Goettingen, Germany
+&gt; www.animalbase.org
+&gt; 
+&gt; _______________________________________________
+&gt; 
+&gt; Taxacom Mailing List
+&gt; Taxacom at mailman.nhm.ku.edu
+&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt; 
+&gt; The Taxacom archive going back to 1992 may be searched with 
+&gt; either of these methods:
+&gt; 
+&gt; (1) <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt; 
+&gt; Or (2) a Google search specified as:  
+&gt; site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="114824.html">[Taxacom] Scientific name vs Scientific name string
+</A></li>
+        <LI>Next message: <A HREF="031509.html">[Taxacom] Scientific name vs Scientific name string
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#114825">[ date ]</a>
+              <a href="thread.html#114825">[ thread ]</a>
+              <a href="subject.html#114825">[ subject ]</a>
+              <a href="author.html#114825">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

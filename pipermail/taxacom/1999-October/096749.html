@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> reweighting characters, few and many
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20reweighting%20characters%2C%20few%20and%20many&In-Reply-To=%3CTAXACOM%251999102920335963%40USOBI.ORG%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="096737.html">
+   <LINK REL="Next"  HREF="096720.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1999-October/096749.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">reweighting characters, few and many</H1>
+    <B data-pagefind-meta="author">John Trueman</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20reweighting%20characters%2C%20few%20and%20many&In-Reply-To=%3CTAXACOM%251999102920335963%40USOBI.ORG%3E"
+       TITLE="reweighting characters, few and many">trueman at RSBS.ANU.EDU.AU
+       </A><BR>
+    <I data-pagefind-meta="date">Sat Oct 30 11:38:37 CDT 1999</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="096737.html">reweighting characters, few and many
+</A></li>
+        <LI>Next message: <A HREF="096720.html">reweighting characters, few and many
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#96749">[ date ]</a>
+              <a href="thread.html#96749">[ thread ]</a>
+              <a href="subject.html#96749">[ subject ]</a>
+              <a href="author.html#96749">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>1999</span><!--beginarticle-->
+<PRE>Congratulations to Thomas Schlemmermeyer for providing a real example of
+phylogenetics in action.
+
+&gt;<i>From his post it is clear that Thomas's data are insufficient to provide a
+</I>fully resolved and robustly determined tree. As well, his &quot;intuitive&quot; tree
+is somewhat similar to the most-parsimonious tree (mpt) in that at least
+some nodes are common to both trees. Neither of these features should
+surprise us. First, any good taxonomist will have a reasonably good idea of
+how their data may pan out, at least most of the time. The informed
+observer is not likely to be totally wrong when it comes to &quot;intuiting&quot; a
+tree.
+
+Second, any dataset created to address a real problem in phylogeny
+estimation (as opposed to some &quot;demo&quot; problem concerning already
+well-determined relationships) typically will produce one or both of two
+results.
+(1) Some nodes will be undetermined, either because no data addresses the
+relevant split(s) among taxa or what data there are suggest mutually
+incompatible solutions. A likely result under the parsimony method is
+multiple mpts.
+(2) Some nodes are underdetermined. Although they appear determined in the
+parsimony (or likelihood, lets not be partisan here) analysis, they are not
+determined with sufficient rigor to achieve statistical significance.
+
+To expand on point (2), if there are N taxa there are N-1 internal nodes.
+Supposing we want to establish only the topology of the tree not the branch
+lengths, we have to put in enough information to determine these. Now, in a
+typical statistics problem where we are estimating a single parameter,
+conventional random sampling schemes would have us seek not one or two but
+at least 20 data points in order to get a robust solution. The nodes in a
+tree are not independent so we don't need 20x(N-1) observations but we do
+still need many (it's almost impossible to say how many) items of data,
+including some which bear on each node. Unfortunately, our data selection
+criterion in phylogenetics is a scattergun with respect to nodes and
+potential nodes. We simply grab what characters we can which vary across
+the whole taxon set. In any real data set some nodes typically will get to
+be supported more strongly than others.
+
+Put these two features together and we arrive at what should be the nub of
+any phylogenetic analysis. It is not sufficient to stop when our selected
+method applied to our selected data gives this, that or the other tree.
+Sure, to get such a tree is the first step. However, the really interesting
+question, and the only place where scientific method (as opposed to an
+ability with technological button-pressing) comes in, is when we start to
+ask &quot;What does this analysis tell us which we did not know before?&quot;
+
+Strong support for an expected node or set of nodes (pre-existing tree
+hypothesis) can be seen as a test of that hypothesis. It provides us with
+corroboration sensu Popper. Support for a rival node may amount to
+refutation. Support (perhaps less strong) for whatever arrangement also may
+send our research off in some entirely new direction. So far so good, we
+have learned something. A mere weak failure to establish the pre-existing
+hypothesis is, in and of itself, nowhere near so exciting.
+
+Thomas's example will be all too familiar to many of us. We may not have
+met it in quite the same way, but we all know the feeling when our data
+gives a tree on which the key branches are unresolved, or else they appear
+at first to be resolved but later collapse in a bootstrap resampling of the
+data or when we tweak the parsimony or likelihood model in some trivial
+way. If we can show that the presence/absence of our favourite group is
+reliant on whether we treated character &quot;X&quot; as ordered or unordered,
+whether we downweighted 3rd positions 2:1 or 3:1, whether we assumed that
+all or only 60% of positions are free to vary, etc., we don't have much of
+a leg to stand on when it comes to asserting that the data do or do not
+corroborate/refute our favourite tree.
+
+Thomas tweaked his tree-estimation method in a (novel) trivial way. The
+resulting change in tree indicates that his data are not strongly
+supportive either of the &quot;intuitive&quot; tree or any from a number of plausible
+alternatives.
+
+A cladist might say &quot;the untweaked method is the one true method and the
+untweaked tree is the best estimate of the true phylogeny&quot; (or, more
+charitably,  &quot;of the tree which this method gives&quot; -- since some take the
+getting of that tree itself as their goal).
+
+But a scientist would be asking &quot;Do these data corroborate my prior
+(intuitive) hypothesis?&quot;, &quot;Do they refute it?&quot;, and &quot;What does this mean
+for my research program/what do I look to next?&quot;  The answer to both the
+first and the second of these scientific questions is that all-too-familiar
+&quot;No.&quot;
+
+John Trueman
+
+
+
+======================================================================
+John Trueman
+Faculties Research Fellow
+Bioinformatics Group
+Research School of Biological Sciences
+Australian National University
+Canberra, ACT 0200,  AUSTRALIA
+
+
+ph: +61 2 6249 4840
+fax: +61 2 6279 8525
+email: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">trueman at rsbs.anu.edu.au</A>
+
+Reason is a tool. Try to remember where you left it.
+=======================================================================
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="096737.html">reweighting characters, few and many
+</A></li>
+	<LI>Next message: <A HREF="096720.html">reweighting characters, few and many
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#96749">[ date ]</a>
+              <a href="thread.html#96749">[ thread ]</a>
+              <a href="subject.html#96749">[ subject ]</a>
+              <a href="author.html#96749">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Language tags for scientific names
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2008-June/110650.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Language tags for scientific names</H1>
+    <B data-pagefind-meta="author">Jim Croft</B>
+    jim.croft at gmail.com<BR>
+    <I data-pagefind-meta="date">Sat Jun 28 18:44:09 CDT 2008</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="110651.html">[Taxacom] Language tags for scientific names
+</A></li>
+        <LI>Next message: <A HREF="110652.html">[Taxacom] Language tags for scientific names
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#110650">[ date ]</a>
+              <a href="thread.html#110650">[ thread ]</a>
+              <a href="subject.html#110650">[ subject ]</a>
+              <a href="author.html#110650">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2008</span><!--beginarticle-->
+<PRE>This does not seam reasonable at all...  but that is just the sort of
+person I am...
+
+Apart from the fact that the representation might be non
+scientifically rigourous in that it might introduce names and concepts
+that may not have been part of the original text stream, but assuming
+that all the data is valid and could be made part of the text stream,
+how about something like:
+
+&lt;Representation&gt;
+    &lt;Label xml:lang=&quot;en&quot;&gt;Japanese Maple&lt;/Label&gt;
+    &lt;Label xml:lang=&quot;de&quot;&gt;F?cher-Ahorn&lt;/Label&gt;
+    &lt;taxon_name lsid=&quot;yadda.yadda.yadda&quot;&gt;Acer palmatum&lt;/taxon_name&gt;
+    &lt;taxon_concept lsid=&quot;bhah.blah.blah&quot;&gt;Acer palmatum&lt;/taxon_concept&gt;
+ &lt;/Representation&gt;
+
+or
+
+&lt;Representation&gt;
+    &lt;Label xml:lang=&quot;en&quot;&gt;Japanese Maple&lt;/Label&gt;
+    &lt;Label xml:lang=&quot;de&quot;&gt;F?cher-Ahorn&lt;/Label&gt;
+    &lt;Label name_lsid=&quot;yadda.yadda.yadda&quot;&gt;Acer palmatum&lt;/Label&gt;
+    &lt;Label concept_lsid=&quot;bhaj.blah.blah&quot;&gt;Acer palmatum&lt;/Label&gt;
+ &lt;/Representation&gt;
+
+or silimar
+
+Each of these handles is unambiguous and an application could
+conceivably be written to do meaningful things with each.
+
+jim
+
+On Sun, Jun 29, 2008 at 5:14 AM, Andy Mabbett &lt;andy at pigsonthewing.org.uk&gt; wrote:
+&gt; In message
+&gt; &lt;5ebbead70806280937p7087e3f0ne81839cf67749693 at mail.gmail.com&gt;, Gregor
+&gt; Hagedorn &lt;g.m.hagedorn at gmail.com&gt; writes
+&gt;
+&gt;&gt;&gt; become retrospectively added to a language, such as the many garden
+&gt;&gt;&gt; plants (like &quot;Acer palmatum&quot;) lacking vernacular names, and so commonly
+&gt;&gt;&gt; referred to by their scientific names, in everyday English, by people
+&gt;&gt;&gt; who wouldn't recognise them as biological taxa.
+&gt;&gt;
+&gt;&gt;That is one reason I would like to be able to express the following
+&gt;&gt;Representation for human consumption for a Taxon Object :
+&gt;&gt; &lt;Representation&gt;
+&gt;&gt;    &lt;Label xml:lang=&quot;en&quot;&gt;Acer palmatum&lt;/Label&gt;
+&gt;&gt;    &lt;Label xml:lang=&quot;de&quot;&gt;F?cher-Ahorn&lt;/Label&gt;
+&gt;&gt;    &lt;Label xml:lang=&quot;zxx-taxon&quot;&gt;Acer palmatum&lt;/Label&gt;
+&gt;&gt; &lt;/Representation&gt;
+&gt;
+&gt; That seems perfectly reasonable to me.
+&gt;
+&gt; --
+&gt; Andy Mabbett
+&gt;
+&gt; _______________________________________________
+&gt; Taxacom mailing list
+&gt; Taxacom at mailman.nhm.ku.edu
+&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt;
+
+
+
+-- 
+_________________
+Jim Croft
+jim.croft at gmail.com
+
+&quot;I don't know why we are here, but I'm pretty sure that it is not in
+order to enjoy ourselves.&quot;
+- Ludwig Wittgenstein, philosopher (1889-1951)
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="110651.html">[Taxacom] Language tags for scientific names
+</A></li>
+        <LI>Next message: <A HREF="110652.html">[Taxacom] Language tags for scientific names
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#110650">[ date ]</a>
+              <a href="thread.html#110650">[ thread ]</a>
+              <a href="subject.html#110650">[ subject ]</a>
+              <a href="author.html#110650">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] People and databases - an example
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2009-August/113540.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] People and databases - an example</H1>
+    <B data-pagefind-meta="author">Bob Mesibov</B>
+    mesibov at southcom.com.au<BR>
+    <I data-pagefind-meta="date">Fri Aug 14 18:45:15 CDT 2009</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="113539.html">[Taxacom] Congruence of gene trees
+</A></li>
+        <LI>Next message: <A HREF="113541.html">[Taxacom] People and databases
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#113540">[ date ]</a>
+              <a href="thread.html#113540">[ thread ]</a>
+              <a href="subject.html#113540">[ subject ]</a>
+              <a href="author.html#113540">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2009</span><!--beginarticle-->
+<PRE>In an earlier post I contrasted the naming and classification of two gigantic sets of natural entities: organic molecules and species. I pointed out that taxonomy might look chaotic to an outsider, and suggested that an important difference was that the entities being named and classified in taxonomy did not have fixed boundaries.
+
+I don't think this point is adequately appreciated by many database builders, although Roger Hyam in his nice draft chapter and Rich Pyle in many places have emphasised the plasticity and ephemerality of linkages between names, types, taxon circumscriptions, specimens, PUTNIs, etc. There are many, many examples of taxonomic complexities known to taxonomists on this list. Such complexities might be unfamiliar to some in the biodiversity informatics world, some of whom - I stress 'some' - think that a species is a natural entity waiting to be discovered and pigeon-holed, and all the taxonomic blather surrounding this fundamental truth only needs to be recorded for historical purposes. Once you've got the primary key - the species - all the rest sorts itself out in the linked tables in the database.
+
+The following arbitrarily chosen example shows why this approach is misguided.
+
+The latest synonymy for the millipede Ophyiulus targionii Silvestri, 1898 contains 45 entries and is incomplete. Ignoring spelling variants, it shows that the original name has accreted 1 species synonym, 8 subspecies and 2 varieties, and that at various times one of the subspecies names has been elevated to species and synonymised with targionii. There is a 110-year history of splitting and lumping, and of shuffling of types between different names. There have been numerous misidentifications, and many innocent uses of non-diagnostic characters in diagnoses.
+
+No one has yet sat down with every specimen from the synonymy, plus an adequately broad sampling of possible O. targionii from across a very large range, which now includes introductions in Australia and New Zealand. It is unclear whether these animals exist as a geographical mosaic of potentially interbreeding forms specialised for life in different regions, or as a cline of such forms, or whether there are reproductive barriers in different parts of the range. It might be possible to answer these some of these questions. In other words, a human taxonomist in 2009 might decide to re-examine all the data, get new data (e.g., mtDNA sequences) and come up with a plausible taxonomic scheme, valid for 2009, which reassigns names to the hypothetical entities we call species.
+
+But there is no way a machine can sort out this mess. And &quot;O. targionii&quot; is a relatively *well-studied* entity. The vast majority of arthropod species haven't had anywhere near this much attention. A biodiversity informatician might be satisfied that a taxonomic database satisfactorily represents what's known about biodiversity, but from a taxonomist's point of view all that's happened is that a gigantic mess has been stuffed into a box out of which non-taxonomists plan to serve out portions of 'fact' to anyone interested.
+
+The more traditional and pragmatic approach is to encourage humans to become experts. Anyone interested can then go to an expert for answers, one of which will always be 'We don't know yet', and that's a response very difficult to program into a database interface.
+-- 
+Dr Robert Mesibov
+Honorary Research Associate
+Queen Victoria Museum and Art Gallery, and
+School of Zoology, University of Tasmania
+Home contact: PO Box 101, Penguin, Tasmania, Australia 7316
+(03) 64371195; 61 3 64371195
+Website: <A HREF="http://www.qvmag.tas.gov.au/mesibov.html">http://www.qvmag.tas.gov.au/mesibov.html</A>
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="113539.html">[Taxacom] Congruence of gene trees
+</A></li>
+        <LI>Next message: <A HREF="113541.html">[Taxacom] People and databases
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#113540">[ date ]</a>
+              <a href="thread.html#113540">[ thread ]</a>
+              <a href="subject.html#113540">[ subject ]</a>
+              <a href="author.html#113540">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

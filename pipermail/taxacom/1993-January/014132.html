@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> TDWG - more ITF notes from the ASBS newsletter...
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1993-January/014132.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">TDWG - more ITF notes from the ASBS newsletter...</H1>
+    <B data-pagefind-meta="author">Jim Croft</B>
+    jrc at ANBG.GOV.AU<BR>
+    <I data-pagefind-meta="date">Tue Jan 26 22:40:35 CST 1993</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="097285.html">TDWG - ITF note ex ASBS Newsletter...
+</A></li>
+        <LI>Next message: <A HREF="049924.html">TDWG - more ITF notes from the ASBS newsletter...
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#014132">[ date ]</a>
+              <a href="thread.html#014132">[ thread ]</a>
+              <a href="subject.html#014132">[ subject ]</a>
+              <a href="author.html#014132">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1993</span><!--beginarticle-->
+<PRE>    Scanned in from the:
+    Austral. Syst. Bot. Soc. Newsletter 73 (December 1992) 15
+
+
+    International Transfer Format-- further news
+    --------------------------------------------
+
+    A computer workshop on &quot;Plant documentation and records in botanic
+    gardens&quot; was held on 23 October 1993, at the Third Intemational
+    Botanic Gardens Conservation Congress, in Rio de Janeiro, Brazil.
+
+    Diane Wyse Jackson (Information Systems Officer, Botanic Gardens
+    Conservation Intemational) stated (in a letter to me) that the
+    Workshop turned out to be more of a training and information workshop
+    than a problem solving one.
+
+    However, it was decided that variable length fields would be
+    acceptable in ITF as long as the fields were appropriately defined.
+    Note that the same 32 fields in record type 2 would remain unchanged.
+    This could be done by making the first record compulsory, and in
+    position 73 record type I entering the extended ASCII character that
+    was being used to denote the end of a field, and in position 74
+    record type I the extended ASCII character used to denote the end of
+    a record.
+
+    The free text contents would then begin at position 75, and
+    would be 288 characters long only. This record (record type 1) would
+    be the only fixed length record, and even that is not necessary with
+    the right program--only the first 8 fields would have to be the fixed
+    length. Alternatively, the first character (position 1) would be the
+    Record type (as already defined), followed by the end-of-field
+    character (position 2) and then the end of record character (position
+    3). I assume that all fields after these could be of variable length.
+    Agreement as to where these two extra characters are to be situated
+    is necessary in the first record.
+
+    Record type 2 would obviously not have a fixed number of characters,
+    but one could read in a string of text and denot the end of each
+    record. Those sending data should make sure that record type 2
+    contains 32 field characters for each record.  These fields are to
+    coincide with the original ITF.
+
+    This modification of ITF, after agreement, could be formalized by
+    publication of the variable length ITF version as an addendum to the
+    ITF 01.00, available from the Hunt Institute.
+
+
+    Barry Conn
+    TDWG Regional Secretary (Australia)
+
+
+______________________________________________________________________________
+Jim Croft                  [Herbarium CBG]           internet: jrc at anbg.gov.au
+Australian National Botanic Gardens                     voice:  +61-6-2509 490
+GPO Box 1777, Canberra, ACT 2601, AUSTRALIA               fax:  +61-6-2509 599
+____Biodiversity Directorate, Australian National Parks &amp; Wildlife Service____
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="097285.html">TDWG - ITF note ex ASBS Newsletter...
+</A></li>
+        <LI>Next message: <A HREF="049924.html">TDWG - more ITF notes from the ASBS newsletter...
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#014132">[ date ]</a>
+              <a href="thread.html#014132">[ thread ]</a>
+              <a href="subject.html#014132">[ subject ]</a>
+              <a href="author.html#014132">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

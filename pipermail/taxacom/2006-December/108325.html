@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] FW: Wikipedia and Geonames. was: AW: ANN: RDF Book Mashup
+	- IntegratingWeb 2.0 data sources like Amazon and Google into
+	the Semantic Web
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2006-December/108325.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] FW: Wikipedia and Geonames. was: AW: ANN: RDF Book Mashup
+	- IntegratingWeb 2.0 data sources like Amazon and Google into
+	the Semantic Web</H1>
+    <B data-pagefind-meta="author">Donat Agosti</B>
+    agosti at amnh.org<BR>
+    <I data-pagefind-meta="date">Sat Dec  2 04:37:52 CST 2006</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="108324.html">[Taxacom] Species Pages &amp; OpenSearch
+</A></li>
+        <LI>Next message: <A HREF="108326.html">[Taxacom] Species Pages &amp; OpenSearch
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#108325">[ date ]</a>
+              <a href="thread.html#108325">[ thread ]</a>
+              <a href="subject.html#108325">[ subject ]</a>
+              <a href="author.html#108325">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2006</span><!--beginarticle-->
+<PRE>Here a new thread in simile, a semantic web list serve, which might interest
+those involved in extracting geographic names.
+
+Donat
+
+
+-----Original Message-----
+From: general-bounces at simile.mit.edu [mailto:general-bounces at simile.mit.edu]
+On Behalf Of Chris Bizer
+Sent: Saturday, December 02, 2006 10:36 AM
+To: Richard Cyganiak; Richard Newman
+Cc: semantic-web at w3.org; 'Damian Steer'; general at simile.mit.edu; 'Karl
+Dubost'
+Subject: Wikipedia and Geonames. was: AW: ANN: RDF Book Mashup -
+IntegratingWeb 2.0 data sources like Amazon and Google into the Semantic Web
+
+
+&gt;&gt;&gt; I wish that wikipedia had a fully exportable database
+&gt;&gt;&gt; <A HREF="http://en.wikipedia.org/wiki/Lists_of_films">http://en.wikipedia.org/wiki/Lists_of_films</A>
+&gt;&gt;&gt;
+&gt;&gt;&gt; For example, being able to export all data of this movie as RDF,
+&gt;&gt;&gt; maybe a templating issue at least for the box on the right.
+&gt;&gt;&gt; <A HREF="http://en.wikipedia.org/wiki/2046_%28film%29">http://en.wikipedia.org/wiki/2046_%28film%29</A>
+&gt;&gt;
+&gt;&gt; Should be an easy job for a SIMILE like screen scraper.
+&gt;&gt;
+&gt;&gt; If you start scraping down from the Wikipedia film list, you  should get 
+&gt;&gt; a fair amount of data.
+
+Some further ideas along these lines. What about scraping information about 
+geograpic places like countries and cities from Wikipedia and linking the 
+data to geonames (<A HREF="http://www.geonames.org/ontology/)?">http://www.geonames.org/ontology/)?</A>
+
+Something like <A HREF="http://XXX/wikipedia/Embrun">http://XXX/wikipedia/Embrun</A> owl:sameAs 
+<A HREF="http://sws.geonames.org/3020251/">http://sws.geonames.org/3020251/</A>
+
+The Wikipedia articles about countries and cities all follow relatively 
+similar structures (for instance <A HREF="http://en.wikipedia.org/wiki/Berlin)">http://en.wikipedia.org/wiki/Berlin)</A> so it 
+should be easy to scrape them. They already contain links to other places, 
+like the Boroughs and localities in Berlin, which could easily be 
+transformed to RDF links.
+
+Many places have geo-coordinates which together with the place name allow 
+scrapers to automatically create links to localities from geonames.
+
+Wikipedia is GNU, thus there aren't any problems with licensing as with the 
+Google and Amazon data.
+
+As most articles follow the same structure, an approach to implement such a 
+information service could be to:
+
+- Use a crawling/screenscraping framework that fills a relational database 
+with the information from Wikipedia.
+- Use D2R Server (<A HREF="http://sites.wiwiss.fu-berlin.de/suhl/bizer/d2r-server/)">http://sites.wiwiss.fu-berlin.de/suhl/bizer/d2r-server/)</A> 
+to publish the database on the Web and to provide a SPARQL end-point for 
+querying.
+
+I once read about some pretty sophisticated screen-scraping frameworks that 
+fill relational databases with data from websites but forgot the exact 
+links. Does anybody know?
+
+Cheers,
+
+Chris
+
+----- Original Message ----- 
+From: &quot;Richard Cyganiak&quot; &lt;richard at cyganiak.de&gt;
+To: &quot;Richard Newman&quot; &lt;r.newman at reading.ac.uk&gt;
+Cc: &quot;Chris Bizer&quot; &lt;chris at bizer.de&gt;; &quot;'Karl Dubost'&quot; &lt;karl at w3.org&gt;; &quot;'Damian 
+Steer'&quot; &lt;damian.steer at hp.com&gt;; &lt;semantic-web at w3.org&gt;
+Sent: Friday, December 01, 2006 7:19 PM
+Subject: Re: AW: ANN: RDF Book Mashup - Integrating Web 2.0 data sources 
+like Amazon and Google into the Semantic Web
+
+
+&gt;
+&gt; On 1 Dec 2006, at 18:27, Richard Newman wrote:
+&gt;&gt; Systemone have Wikipedia dumped monthly into RDF:
+&gt;&gt;
+&gt;&gt; <A HREF="http://labs.systemone.at/wikipedia3">http://labs.systemone.at/wikipedia3</A>
+&gt;&gt;
+&gt;&gt; A public SPARQL endpoint is on their roadmap, but it's only 47  million 
+&gt;&gt; triples, so you should be able to load it in a few minutes  on your 
+&gt;&gt; machine and run queries locally.
+&gt;
+&gt; Unfortunately this only represents the hyperlink structure and basic 
+&gt; article metadata in RDF. It does no scraping of data from info boxes  or 
+&gt; article content. Might be interesting for analyzing Wikipedia's  link 
+&gt; structure or social dynamics, but not for content extraction.
+&gt;
+&gt; Richard
+&gt;
+&gt;
+&gt;
+&gt;&gt;
+&gt;&gt; -R
+&gt;&gt;
+&gt;&gt;
+&gt;&gt; On  1 Dec 2006, at 4:30 AM, Chris Bizer wrote:
+&gt;&gt;
+&gt;&gt;&gt;&gt; I wish that wikipedia had a fully exportable database
+&gt;&gt;&gt;&gt; <A HREF="http://en.wikipedia.org/wiki/Lists_of_films">http://en.wikipedia.org/wiki/Lists_of_films</A>
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt; For example, being able to export all data of this movie as RDF,
+&gt;&gt;&gt;&gt; maybe a templating issue at least for the box on the right.
+&gt;&gt;&gt;&gt; <A HREF="http://en.wikipedia.org/wiki/2046_%28film%29">http://en.wikipedia.org/wiki/2046_%28film%29</A>
+&gt;&gt;&gt;
+&gt;&gt;&gt; Should be an easy job for a SIMILE like screen scraper.
+&gt;&gt;&gt;
+&gt;&gt;&gt; If you start scraping down from the Wikipedia film list, you  should get
+
+&gt;&gt;&gt; a
+&gt;&gt;&gt; fair amount of data.
+&gt;&gt;&gt;
+&gt;&gt;&gt; To all the Semantic Wiki guys: Has anybody already done something  like 
+&gt;&gt;&gt; this?
+&gt;&gt;&gt; Are there SPARQL end-points/repositories for Wikipedia-scraped data?
+&gt;&gt;
+&gt;&gt;
+&gt;&gt;
+&gt;
+&gt; 
+
+_______________________________________________
+General mailing list
+General at simile.mit.edu
+<A HREF="http://simile.mit.edu/mailman/listinfo/general">http://simile.mit.edu/mailman/listinfo/general</A>
+
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="108324.html">[Taxacom] Species Pages &amp; OpenSearch
+</A></li>
+        <LI>Next message: <A HREF="108326.html">[Taxacom] Species Pages &amp; OpenSearch
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#108325">[ date ]</a>
+              <a href="thread.html#108325">[ thread ]</a>
+              <a href="subject.html#108325">[ subject ]</a>
+              <a href="author.html#108325">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

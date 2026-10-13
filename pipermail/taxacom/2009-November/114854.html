@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Scientific name vs Scientific name string
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2009-November/114854.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Scientific name vs Scientific name string</H1>
+    <B data-pagefind-meta="author">Wolfgang Lorenz</B>
+    faunaplan at googlemail.com<BR>
+    <I data-pagefind-meta="date">Tue Nov 24 03:56:44 CST 2009</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="114853.html">[Taxacom] Scientific name vs Scientific name string
+</A></li>
+        <LI>Next message: <A HREF="114855.html">[Taxacom] Scientific name vs Scientific name string
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#114854">[ date ]</a>
+              <a href="thread.html#114854">[ thread ]</a>
+              <a href="subject.html#114854">[ subject ]</a>
+              <a href="author.html#114854">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2009</span><!--beginarticle-->
+<PRE>Well yes, I'm working with zoological names but maybe there's no substantial
+barrier for developments .... and yes probably there's no need for a lot
+more terms to communicate theroretical standards and issues of biodiversity
+informatics. TDWG people seem to have done a great job already, in my
+opinion. However, I can't see such  convincing progress in contents of
+databases, - namely progress concerning the central issue of taxonomic names
+in the major name aggregators! Don't you all think we are running into
+serious trouble with that massive load of unresolved misspellings, homonyms,
+phantom names out there??...
+Just take a look, for example, into GBIF's &quot;Kingdom unknown&quot; dump (and be
+aware that  GBIF is the messenger of too many data errors right now). Even
+such ridiculous things like the following can still slip in and stay there
+for years without being noticed (instruments misidentified as taxa):
+
+<A HREF="http://data.gbif.org/datasets/resource/8174">http://data.gbif.org/datasets/resource/8174</A>
+
+It makes me believe something essential is still missing. If it is true that
+computers can &quot;learn to understand&quot; what human brains have successfully used
+for a quarter millenium, that is Linnean nomenclature, I imagine it could be
+useful to have a computer-digestible &amp; human-readable format for pure
+nomenclatural information.
+That's why I'm testing that &quot;UNAS&quot; idea on my set of names in Coleoptera
+Carabidae (36.000 species, ca. 100.000 available names when I include
+secondary generic combinations). Some months ago, David Remsen posted an
+important question and didn't get an answer because nobody knows: How many
+available names do we have? Based on my dataset, I'd say some 5-6 million
+names, - and we really need to know them if we want to make progress, sort
+out misspellings, etc.!
+Yes, the &quot;protonym&quot; idea is flawed because of homonyms, but you can set up a
+unique NameAnchorString where you add the precedence information to all
+homonyms, - something like this (the initial &quot;ZS-&quot;, by the way, stands for
+Zoological Species-group name, because of cross-kingdom homonyms):
+
+&quot;ZS-Carabus_gyllenhalii/
+Nebria_gyllenhalii&quot;
+&quot;ZS-Carabus_gyllenhalii(2)=Carabus_blakistoni&quot;
+
+Such unique name anchor strings could be stored and resolved with additional
+information (author, date, publication, type material, etc.) in a central
+place, ideally in an authoritative ZooBank for zoological names, etc. In
+this way, it could become the complete inventary of all available names, -
+something that all other players can rely upon.
+That is, of course, nothing but a vague idea and a little experiment at this
+moment, - but maybe worth half a cent... (I can show more examples to
+colleagues who might be interested).
+
+regards,
+
+Wolfgang
+--------------------------------------------
+Wolfgang Lorenz, Tutzing, Germany
+
+
+2009/11/24 &lt;dipteryx at freeler.nl&gt;
+
+&gt; Van: taxacom-bounces at mailman.nhm.ku.edu namens Wolfgang Lorenz
+&gt; Verzonden: ma 23-11-2009 14:32
+&gt;
+&gt; It's because each available taxonomic name has an &quot;anchor&quot; name, that is
+&gt; the
+&gt; binomen attached to the type material. Hence, Unique Name Anchor Strings
+&gt; (UNAS if you like) can be given for each name that is governed by the Code.
+&gt;
+&gt; ***
+&gt; For safety's sake I had better point out that this statement is only true
+&gt; for those who regard &quot;taxonomy&quot; and &quot;zoology&quot; as interchangable
+&gt; equivalents.
+&gt;
+&gt; Paul
+&gt;
+&gt; _______________________________________________
+&gt;
+&gt; Taxacom Mailing List
+&gt; Taxacom at mailman.nhm.ku.edu
+&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt;
+&gt; The Taxacom archive going back to 1992 may be searched with either of these
+&gt; methods:
+&gt;
+&gt; (1) <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt;
+&gt; Or (2) a Google search specified as:  site:
+&gt; mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+&gt;
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="114853.html">[Taxacom] Scientific name vs Scientific name string
+</A></li>
+        <LI>Next message: <A HREF="114855.html">[Taxacom] Scientific name vs Scientific name string
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#114854">[ date ]</a>
+              <a href="thread.html#114854">[ thread ]</a>
+              <a href="subject.html#114854">[ subject ]</a>
+              <a href="author.html#114854">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Character states 'present by misinterpretation'
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2006-March/094993.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Character states 'present by misinterpretation'</H1>
+    <B data-pagefind-meta="author">Alessandra &lt;R. at &lt;baptist at WAM.UMD.EDU&gt;.bitnet&gt;</B>
+    Alessandra &lt;R. at &lt;baptist at WAM.UMD.EDU&gt;.bitnet&gt;<BR>
+    <I data-pagefind-meta="date">Mon Mar 20 10:34:36 CST 2006</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="094998.html">Petition to the ICZN Commission.
+</A></li>
+        <LI>Next message: <A HREF="094994.html">Delta first
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#094993">[ date ]</a>
+              <a href="thread.html#094993">[ thread ]</a>
+              <a href="subject.html#094993">[ subject ]</a>
+              <a href="author.html#094993">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2006</span><!--beginarticle-->
+<PRE>My personal experience is that the advantages of writing the database in
+DELTA and then importing it into LUCID far outweighs the disadvantages.
+During the course of building the database, people often add, delete, and
+change characters and their states. Dependencies also change, in part due
+to that.  As Mike pointed out, this is most important when you have a
+large database. It is nearly impossible to check for all inconsistencies
+one by one. Delta will do it for you and it will not skip but one.
+
+Even though the present by misinterpretation of LUCID is a great idea in
+theory, we have used it only sparingly in our keys. A data abase
+containing such information is only useful for the functioning of the key
+itself. There is no other use for a character that is present by
+misinterpretation. And it gets really confusing when it generates logical
+inconsistencies as in the case of dependencies. For example, if a certain
+category of ducts is present by misinterpretation, then a projection of
+these ducts (dependent character) will be coded as absent? Absent by
+misinterpretation also? Present or absent by misinterpretation is a
+counter intuitive way of coding characters that generates a certain level
+of confusion when you are building the database. It is better left to the
+end anyway, if you are going to use it at all. DELTA is also a more
+powerful tool to (1) generate descriptions to check your coding, because
+you can better manipulate the way these descriptions will be exported (2)
+Intkey will readily tell you when two or more taxa cannot be further
+separated by the data. Lucid allows you to go on and on and on until you
+figure it out. Of course you can also ask LUCID to give you a list
+differences between the taxa remaining, but this is less efficient,
+because you have to ask. I have
+a personal bias towards DELTA as a tool to store and manipulate
+taxonomical information. There is yet no substitute for it. As far as the
+key itself, I greatly miss the option to weight characters when building
+keys in LUCID. If LUCID is to persist and continue to grow, it ought to
+incorporate that option.
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="094998.html">Petition to the ICZN Commission.
+</A></li>
+        <LI>Next message: <A HREF="094994.html">Delta first
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#094993">[ date ]</a>
+              <a href="thread.html#094993">[ thread ]</a>
+              <a href="subject.html#094993">[ subject ]</a>
+              <a href="author.html#094993">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

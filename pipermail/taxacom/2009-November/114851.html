@@ -1,0 +1,279 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Scientific name vs Scientific name string
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2009-November/114851.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Scientific name vs Scientific name string</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at bishopmuseum.org<BR>
+    <I data-pagefind-meta="date">Mon Nov 23 12:53:35 CST 2009</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="114850.html">[Taxacom] Clinton Correspondence of Macowan, South Africa
+</A></li>
+        <LI>Next message: <A HREF="114852.html">[Taxacom] Scientific name vs Scientific name string
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#114851">[ date ]</a>
+              <a href="thread.html#114851">[ thread ]</a>
+              <a href="subject.html#114851">[ subject ]</a>
+              <a href="author.html#114851">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2009</span><!--beginarticle-->
+<PRE>
+I have to admit that I'm a bit unclear on where this thread is going.  Are
+we simply trying to come up with a new set of terms to help remove ambiguity
+in our conversations?  If so, I'd suggest that we start with the glossary
+here:
+
+<A HREF="http://wiki.tdwg.org/twiki/bin/view/UBIF/LinneanCoreDefinitions">http://wiki.tdwg.org/twiki/bin/view/UBIF/LinneanCoreDefinitions</A>
+
+...and refine/expand as needed.
+
+Or, are we specifically trying to facilitate communication and/or data
+presentation from electronic indexes and other taxonomic databases (i.e.,
+the markup tags people have been proposing)?
+
+In either case, many of us have begun using the term &quot;Protonym&quot; to refer to
+what Wolfgang describes as &quot;UNAS&quot; below. &quot;Unique Name Anchor Strings&quot; isn't
+really good for this purpose because they are not unique (homonyms), and
+they imply more than just &quot;strings&quot; (i.e., they are more in the &quot;data
+object&quot; end of the specrum, not the &quot;sequence of text characters&quot; end of the
+spectrum).
+
+Granted, the word &quot;Protonym&quot; (defined as &quot;The first person or thing of the
+name; that from which another is named.&quot;) has at one time been used with a
+different meaning within the fungi community (see comment by F. Bungartz on
+the LinneanCoreDefinitions page linked above).  However, Paul Kirk has
+assured me that this definition is not widespread, and that the word
+&quot;Protonym&quot; is more appropriate in the context described here.
+
+Aloha,
+Rich
+ 
+
+&gt; -----Original Message-----
+&gt; From: taxacom-bounces at mailman.nhm.ku.edu 
+&gt; [mailto:taxacom-bounces at mailman.nhm.ku.edu] On Behalf Of 
+&gt; Wolfgang Lorenz
+&gt; Sent: Monday, November 23, 2009 3:32 AM
+&gt; To: taxacom at mailman.nhm.ku.edu
+&gt; Subject: Re: [Taxacom] Scientific name vs Scientific name string
+&gt; 
+&gt; Dear all,
+&gt; Peter asked &quot;Maybe someone can make a proposal, or describe 
+&gt; what they use?&quot;
+&gt; 
+&gt; Let me expand the topic a bit by asking: What are we doing 
+&gt; with names in databases?
+&gt; 
+&gt; First, we want to store information that we get from primary 
+&gt; or secondary sources (specimen labels, literature, databases, 
+&gt; web pages, observation notes...). Names attached as accepted 
+&gt; names to such information can be termed &quot;chresonyms&quot; (in a 
+&gt; wide sense), or &quot;VerbatimNameUsage&quot;.
+&gt; I would enter such names as verbatim as possible while, of 
+&gt; course, they need to be readable. For example, when a species 
+&gt; name is cited as an epithet only, but the genus is mentioned 
+&gt; in the publication title, the implied complete binomen should 
+&gt; be entered. Author and date can be entered verbatim, if 
+&gt; given. Some databasers might want to annotate the corrected 
+&gt; spelling of a misspelled name, but this should be made explicit.
+&gt; 
+&gt; Second, we need to interpret names entered from data sources, 
+&gt; so we need our own accepted set (or alternative sets) of 
+&gt; names. The best we can do here is stay with perfectly 
+&gt; Code-compliant names based on up-to-date classifications. 
+&gt; Such names do not include author and year, but as an 
+&gt; additional information (e.g., in a separate data field) such 
+&gt; info is often very useful.
+&gt; 
+&gt; Error-free interpretation of all names is very much a 
+&gt; handwork of the taxon specialist, so far.
+&gt; Misspellings and misapplied names are not the only impediment 
+&gt; for automated interpretation. One more reason is the 
+&gt; considerable number of species-group names that are 
+&gt; alternative generic combinations. Such (mainly zoological) 
+&gt; names are not easily found, even in many recent catalogues.
+&gt; Biodiversity informaticians are seeking to develop tools that 
+&gt; can, at least, perform a reasonable pre-interpretation. In my 
+&gt; opinion, there is a way to support development of such tools, 
+&gt; - and I have already mentioned the idea in previous postings:
+&gt; 
+&gt; It's because each available taxonomic name has an &quot;anchor&quot; 
+&gt; name, that is the binomen attached to the type material. 
+&gt; Hence, Unique Name Anchor Strings (UNAS if you like) can be 
+&gt; given for each name that is governed by the Code.
+&gt; 
+&gt; So, in summary, we could have the following,
+&gt; e.g.:
+&gt; 
+&gt; &lt;VerbatimNameUsage&gt;Idiochroma dorsale Pont.&lt;/VerbatimNameUsage&gt;
+&gt; 
+&gt; &lt;AcceptedName&gt;Anchomenus dorsalis&lt;/AcceptedName&gt; 
+&gt; &lt;AcceptedNameAuthorDate&gt; Anchomenus dorsalis (Pontoppidan, 
+&gt; 1763)&lt;/AcceptedNameAuthorDate&gt;
+&gt; 
+&gt; ... and the complete inventary of &quot;UNAS&quot; for the above 
+&gt; example would read something like:
+&gt; &lt;UNAS&gt;ZS-Carabus_dorsalis&lt;/UNAS&gt;
+&gt; &lt;UNAS&gt;ZS-Carabus_dorsalis/Idiochroma_dorsale&lt;/UNAS&gt;
+&gt; &lt;UNAS&gt;ZS-Carabus_dorsalis/Platynus_dorsalis&lt;/UNAS&gt;
+&gt; &lt;UNAS&gt;ZS-Carabus_dorsalis/Agonum_dorsale&lt;/UNAS&gt;
+&gt; &lt;UNAS&gt;ZS-Carabus_dorsalis/Anchomenus_dorsalis&lt;/UNAS&gt;
+&gt; 
+&gt; Best wishes,
+&gt; Wolfgang
+&gt; -------------------------------------------
+&gt; 
+&gt; Wolfgang Lorenz, Tutzing, Germany
+&gt; 
+&gt; 
+&gt; 
+&gt; 2009/11/22 Peter DeVries &lt;pete.devries at gmail.com&gt;
+&gt; 
+&gt; &gt; Maybe someone can make a proposal, or describe what they use?
+&gt; &gt;
+&gt; &gt; Not a rule that everyone has to follow, but a suggested form that 
+&gt; &gt; people can use in conversation and when naming their 
+&gt; database fields.
+&gt; &gt;
+&gt; &gt; So what so you call these forms of the name:
+&gt; &gt;
+&gt; &gt; Puma concolor (Linnaeus, 1771)
+&gt; &gt; Felis concolor Linnaeus, 1771
+&gt; &gt;
+&gt; &gt; and what do you call these forms of the name:
+&gt; &gt;
+&gt; &gt; Puma concolor
+&gt; &gt; Felis concolor
+&gt; &gt;
+&gt; &gt; So they can be properly understood in conversation and in this form
+&gt; &gt;
+&gt; &gt; &lt;whatevernameforthis&gt;Puma concolor (Linnaeus, 
+&gt; &gt; 1771)&lt;/whatevernameforthis&gt;
+&gt; &gt;
+&gt; &gt; &lt;whatevernameforthis&gt;Felis concolor&lt;/whatevernameforthis&gt;
+&gt; &gt;
+&gt; &gt; - Pete
+&gt; &gt;
+&gt; &gt;
+&gt; &gt; On Mon, Nov 16, 2009 at 5:04 AM, Dmitry Mozzherin 
+&gt; &lt;dmozzherin at eol.org
+&gt; &gt; &gt;wrote:
+&gt; &gt;
+&gt; &gt; &gt; I would like to illustrate how Biodiversity Q/A works, 
+&gt; and also get 
+&gt; &gt; &gt; a
+&gt; &gt; clear
+&gt; &gt; &gt; clear understanding of terms used in GNI. What is the difference 
+&gt; &gt; &gt; between 'Scientific name' and 'Scientific name string'?
+&gt; &gt; &gt;
+&gt; &gt; &gt; Here is the question in full:
+&gt; &gt; &gt;
+&gt; &gt; &gt;
+&gt; &gt; 
+&gt; <A HREF="http://biodiversity.stackexchange.com/questions/5/what-is-the-differen">http://biodiversity.stackexchange.com/questions/5/what-is-the-differen</A>
+&gt; &gt; ce-between-scientific-name-string-and-scientific-name-ter
+&gt; &gt; &gt;
+&gt; &gt; &gt; Thanks
+&gt; &gt; &gt;
+&gt; &gt; &gt; Dima
+&gt; &gt; &gt; _______________________________________________
+&gt; &gt; &gt;
+&gt; &gt; &gt; Taxacom Mailing List
+&gt; &gt; &gt; Taxacom at mailman.nhm.ku.edu
+&gt; &gt; &gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt; &gt; &gt;
+&gt; &gt; &gt; The Taxacom archive going back to 1992 may be searched 
+&gt; with either 
+&gt; &gt; &gt; of
+&gt; &gt; these
+&gt; &gt; &gt; methods:
+&gt; &gt; &gt;
+&gt; &gt; &gt; (1) <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt; &gt; &gt;
+&gt; &gt; &gt; Or (2) a Google search specified as:  site:
+&gt; &gt; &gt; mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+&gt; &gt; &gt;
+&gt; &gt;
+&gt; &gt;
+&gt; &gt;
+&gt; &gt; --
+&gt; &gt; ----------------------------------------------------------------
+&gt; &gt; Pete DeVries
+&gt; &gt; Department of Entomology
+&gt; &gt; University of Wisconsin - Madison
+&gt; &gt; 445 Russell Laboratories
+&gt; &gt; 1630 Linden Drive
+&gt; &gt; Madison, WI 53706
+&gt; &gt; GeoSpecies Knowledge Base
+&gt; &gt; About the GeoSpecies Knowledge Base
+&gt; &gt; ------------------------------------------------------------
+&gt; &gt; _______________________________________________
+&gt; &gt;
+&gt; &gt; Taxacom Mailing List
+&gt; &gt; Taxacom at mailman.nhm.ku.edu
+&gt; &gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt; &gt;
+&gt; &gt; The Taxacom archive going back to 1992 may be searched with 
+&gt; either of 
+&gt; &gt; these
+&gt; &gt; methods:
+&gt; &gt;
+&gt; &gt; (1) <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt; &gt;
+&gt; &gt; Or (2) a Google search specified as:  site:
+&gt; &gt; mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+&gt; &gt;
+&gt; _______________________________________________
+&gt; 
+&gt; Taxacom Mailing List
+&gt; Taxacom at mailman.nhm.ku.edu
+&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt; 
+&gt; The Taxacom archive going back to 1992 may be searched with 
+&gt; either of these methods:
+&gt; 
+&gt; (1) <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt; 
+&gt; Or (2) a Google search specified as:  
+&gt; site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="114850.html">[Taxacom] Clinton Correspondence of Macowan, South Africa
+</A></li>
+        <LI>Next message: <A HREF="114852.html">[Taxacom] Scientific name vs Scientific name string
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#114851">[ date ]</a>
+              <a href="thread.html#114851">[ thread ]</a>
+              <a href="subject.html#114851">[ subject ]</a>
+              <a href="author.html#114851">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

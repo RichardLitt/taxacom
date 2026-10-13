@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Data quality in aggregated datasets
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-April/124665.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Data quality in aggregated datasets</H1>
+    <B data-pagefind-meta="author">Doug Yanega</B>
+    dyanega at ucr.edu<BR>
+    <I data-pagefind-meta="date">Fri Apr 19 19:23:53 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="124664.html">[Taxacom] Data quality in aggregated datasets
+</A></li>
+        <LI>Next message: <A HREF="124666.html">[Taxacom] Data quality in aggregated datasets
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124665">[ date ]</a>
+              <a href="thread.html#124665">[ thread ]</a>
+              <a href="subject.html#124665">[ subject ]</a>
+              <a href="author.html#124665">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>On 4/19/13 3:04 PM, Robert Mesibov wrote:
+&gt; In this particular case, an interested third party (me) finds problems and alerts the data provider directly. The data provider fixes the errors and in the fullness of time sends corrected records to the aggregator. (Although I found evidence that erroneous records can persist through an update.)
+&gt;
+&gt; What about aggregated datasets in general? What mechanisms are there for detecting and fixing errors besides (interested third party) &gt; (data provider) &gt; aggregator?
+&gt;
+I'm not sure that *fixing* can ever work any other way, since the 
+original data source is generally going to be where something needs TO 
+be fixed. I don't know of any data aggregators that will ignore input 
+from a provider whenever that new input contains an error that would 
+overrwrite a correct record already in place (this is not the same as an 
+aggregator that flags or excludes suspicious records, which is a 
+safeguard many already have in place). That is, if I *were* able to go 
+into an aggregator and correct an error, then the next time data was 
+uploaded from that provider, the correction would be overwritten by the 
+erroneous original.
+
+In that respect, if aggregators made an &quot;external comments&quot; field that 
+was linked to records, and the contents of that field were maintained 
+regardless of any alterations (or lack thereof) made by the provider, it 
+would be helpful, but it would still not be a true &quot;fix&quot; because one 
+would have to read the external comments field every time one tried to 
+use data, and manually make corrections whenever those comments said to 
+do so (and that also presupposes that whoever made those external 
+comments knew what they were doing - they could be mistaken, or they 
+could even be vandals).
+
+Ultimately, I can't see any alternatives other than having the data 
+provider make the corrections, so the corrections propagate downstream. 
+That means that being a data provider is a far longer-term commitment 
+than most institutions/individuals are generally prepared for. After 
+all, if you hired a data entry technician on soft money, created a few 
+thousand records and put them online, and corrections need to be made 
+three years after that technician (and the soft money) is gone, you may 
+not be able to accomodate.
+
+As for detecting errors, I've seen examples of automated protocols, and 
+I'm not impressed; the classes of errors they catch are a tiny fraction 
+of the actual errors present, and all of them are things the data 
+provider should have *easily* detected before uploading (e.g., 
+misspelled country names [like &quot;Columbia&quot;], terrestrial records plotting 
+in oceans, points in the wrong hemisphere, lat/long values that are 
+impossible, etc.). &lt;rant&gt;Maybe I'm in a minority on this issue, but I 
+consider it a dereliction of scientific responsibility when a provider 
+uploads data that have not been absolutely scrubbed clean of errors, 
+simply because they only budgeted for data entry, and nothing for 
+human-provided quality control. It should never be necessary for an 
+&quot;interested third party&quot; to make corrections to someone else's data set; 
+if errors can be found after uploading, then they COULD have been found 
+prior to uploading, e.g., if that same third party had been hired to 
+check the data set. In effect, what is happening is that people are 
+saving money by skimping on quality control and leaving it to 
+&quot;interested third parties&quot; that will do it for free. I'm not claiming 
+that it's a devious and deliberate plan to cheat the system (and 
+goodness knows that in many cases, data entry itself is not funded), but 
+third-party intervention is not the way that quality control should be 
+accomplished, even if it's by accident rather than design. When funding 
+agencies don't rate data quality as a primary concern, then it's not 
+really surprising when all anyone budgets for is quantity.&lt;/rant&gt;
+
+Sincerely,
+
+-- 
+Doug Yanega      Dept. of Entomology       Entomology Research Museum
+Univ. of California, Riverside, CA 92521-0314     skype: dyanega
+phone: (951) 827-4315 (disclaimer: opinions are mine, not UCR's)
+              <A HREF="http://cache.ucr.edu/~heraty/yanega.html">http://cache.ucr.edu/~heraty/yanega.html</A>
+   &quot;There are some enterprises in which a careful disorderliness
+         is the true method&quot; - Herman Melville, Moby Dick, Chap. 82
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="124664.html">[Taxacom] Data quality in aggregated datasets
+</A></li>
+        <LI>Next message: <A HREF="124666.html">[Taxacom] Data quality in aggregated datasets
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#124665">[ date ]</a>
+              <a href="thread.html#124665">[ thread ]</a>
+              <a href="subject.html#124665">[ subject ]</a>
+              <a href="author.html#124665">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

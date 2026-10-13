@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Data query
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-June/125337.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Data query</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at bishopmuseum.org<BR>
+    <I data-pagefind-meta="date">Tue Jun 25 05:06:39 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="125336.html">[Taxacom] Data query
+</A></li>
+        <LI>Next message: <A HREF="125338.html">[Taxacom] Data query
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#125337">[ date ]</a>
+              <a href="thread.html#125337">[ thread ]</a>
+              <a href="subject.html#125337">[ subject ]</a>
+              <a href="author.html#125337">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>The only reason a human is needed at all in the process is that homonyms and misspellings exist.  If they didn?t, then the whole thing could be automatic.  And there would be two fewer reasons why taxon names are a really, really, really, REALLY, REALLY, REALLY bad idea as identifiers for computers.
+
+(got it right that time?.)
+
+ 
+
+Homonyms (or, more generally, homographs) apply to something like 10% of all names; and misspellings probably apply to something like 50% (or more!) of all names.  This is hardly a trivial issue.  Clean buckets don?t like to have that rate of error.
+
+ 
+
+Names are great for allowing humans to disambiguate two records as being different (using fuzzy-match algorithms to find the names and present them to the human).  But computers work more reliably if they don?t force the user to disambiguate every 10th name (or every other name).
+
+ 
+
+You captured it right here: ?a link to Wikispecies using a homonym will go to a disambiguation page from which you can choose which homonym you want.?  The word ?you? applies to a human ? meaning a human can do the disambiguation.  That?s fine when a human wants to look at one web page.  But if you?re building services that involve reasoning across hundreds of thousands of names (e.g., ?How many species of Diptera were named in the 19th Century, and how many in the 20th Century??), you can?t stop at every 10th (or ever other) record to allow a human to disambiguate something.  
+
+ 
+
+Bottom line:  for use-cases involving human eyeballs looking at one page at a time, I think you?re absolutely right.  But for more robust analysis across many records, it just doesn?t scale. Oh, and by the way, once you have the proper identifiers, it?s really, really, really, REALLY, REALLY, REALLY easy to render pages in a human-friendly way (like WikiSpecies does).  
+
+ 
+
+There is a similar issue with XML vs PDF for publications.  It?s really, really, really, REALLY, REALLY, REALLY easy to create a nicely formatted PDF from an XML file. But going in the reverse direction (from PDF to XML) has been compared to re-assembling a functioning cow from the bits that come out of a slaughter house. 
+
+ 
+
+Rich
+
+ 
+
+P.S. Variable identifier length has almost nothing to do with it.
+
+ 
+
+ 
+
+From: Stephen Thorpe [mailto:stephen_thorpe at yahoo.co.nz] 
+Sent: Monday, June 24, 2013 11:44 PM
+To: Richard Pyle; Tony.Rees at csiro.au; mesibov at southcom.com.au
+Cc: taxacom at mailman.nhm.ku.edu
+Subject: Re: [Taxacom] Data query
+
+ 
+
+I still don't quite understand! If a human has to make the link between two identifiers, then why not just use the name, Wikispecies style, which would be completely automatic in all but a very few cases of homonymy, where a human could then intervene. The net result would be far less human work, surely! If all linked databases used the name as the identifier, then they could talk to each other quite happily! I really don't buy that variable identifier length would be a big problem. If everything is done correctly, a link to Wikispecies using a homonym will go to a disambiguation page from which you can choose which homonym you want. The individual URLs for the homonyms may have an arbitrary bit, but the numbers of cases is very small compared to the total, so only these relatively few would require human matching between databases, not the whole bloody lot!
+
+ 
+
+Stephen
+
+ 
+
+From: Richard Pyle &lt;deepreef at bishopmuseum.org&gt;
+To: 'Stephen Thorpe' &lt;stephen_thorpe at yahoo.co.nz&gt;; Tony.Rees at csiro.au; mesibov at southcom.com.au 
+Cc: taxacom at mailman.nhm.ku.edu 
+Sent: Tuesday, 25 June 2013 9:30 PM
+Subject: RE: [Taxacom] Data query
+
+
+&gt; I may be wrong, but in order to record mappings of the kind 
+&gt; ?ZB: 8BDC0735-FEA4-4298-83FA-D04F67C3FBEC maps to WoRMS:345844?
+&gt;, doesn't this have to be done manually and painstakingly?
+
+It certainly *can* be done manually, but it usually is not painstaking in any way.  The vast majority of cross links can be done automatically, such as when a dataset is bulk imported.  For example, when I imported all the names from Eschmeyer's Catalog of Fishes database, all the cross links for the names AND the references AND the Journals came automatically.  Likewise, I built a routine that cross-links to ITIS TSNs (when they exist) more or less automatically as well.  In doing so, I can now bridge CoF to ITIS.  Meanwhile, FishBase already has links to CoF and to CoL.  This means we can automatically cross-link ZooBank to FB (and therefore automatically link ITIS to FB), and conversely link CoL back to CoF, ITIS, and ZB.  This is the magic of persistent identifiers.  Once a cross-link is established *once*, it can be automatically inherited.
+
+Even the manual process can be streamlined.  For example, the plan with the GNI service is to put check boxes next to each link in the GNI resultset on ZB.  After a human confirms that the match is good, they can just check the boxes for the confirmed links and press a single button to capture all the cross-links.  It wouldn't be too hard to come up with a metric for name-match confidence, such that when the confidence is above a certain threshold, the links are created automatically.
+
+The cool thing about this process is that it is accelerative.  That is, the more links you make, the faster new links are established.  It also moves in the direction of what Tony was getting at -- that is, once someone makes a link or data update on one database, the update should be propagated to all linked databases.  This doesn't mean that the records in the other databases are automatically updated, but rather than the managers of the other databases get a notification along the lines of &quot;Stephen Thorpe just corrected the spelling of &quot;Aus buus&quot; to &quot;Aus bus&quot; on ZooBank.  Click here to make this change in your database.&quot; ... or some such thing (the FilteredPush team is already building this sort of service).
+
+The real painstaking process is the reconciliation bit.  That is, comparing two separate databases to see the overlap.  This is not so hard for taxon names, but is a bear for literature citations.  I've spent MANY hours manually cross-linking Journal names between and among 76 different data sources of Journal names.  It's slow going at first, but as I add more and more links, the process becomes easier and easier (and faster and faster).  Donat did this for HNS Jounrals against ZooBank journals.  I'm now doing this between ZooBank and BHL. When I'm done, that means I'll have also created links between BHL and HNS (as well as many of the other journal sources).
+
+Rich
+
+
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="125336.html">[Taxacom] Data query
+</A></li>
+        <LI>Next message: <A HREF="125338.html">[Taxacom] Data query
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#125337">[ date ]</a>
+              <a href="thread.html#125337">[ thread ]</a>
+              <a href="subject.html#125337">[ subject ]</a>
+              <a href="author.html#125337">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

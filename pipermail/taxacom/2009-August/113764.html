@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] formation of zoological names with Mc, Mac, etc.
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2009-August/113764.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] formation of zoological names with Mc, Mac, etc.</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at bishopmuseum.org<BR>
+    <I data-pagefind-meta="date">Mon Aug 31 06:40:21 CDT 2009</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="113762.html">[Taxacom] scratchpads eu
+</A></li>
+        <LI>Next message: <A HREF="030446.html">[Taxacom] formation of zoological names with Mc, Mac, etc.
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#113764">[ date ]</a>
+              <a href="thread.html#113764">[ thread ]</a>
+              <a href="subject.html#113764">[ subject ]</a>
+              <a href="author.html#113764">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2009</span><!--beginarticle-->
+<PRE>
+I've been avoiding this thread, but seeing as it's 01:30, and I have to be
+at work in a few hours, I figured now would be as good a time as any to
+comment.... :-)
+
+I think it's useful to think of three kinds of identifiers:
+
+1) Human identifiers.  In this case, a sufficient identifier would provide
+enough information that a reasonably intelligent human could discern the
+specific name in question.  Even in the case of a same-publication
+genus-group homonym, then the human could probably get by with Genus name,
+author(s), Year, Page number.  In the vast majority of cases, the genus name
+alone would probably do it; and adding the author (any variant) would
+probably take care of most of the rest.  Only a few pesky/annoying cases
+would need more information for a human to resolve.
+
+2) Natural Keys.  In a database, this is field or set of fields that will
+uniquely identify all records.  The main point is that these are
+data-bearing fields; not random numbers or anything like that.  The value of
+natural keys is that the data attributes (fields) themesleves will uniquely
+identify each record. Because we're now talking about computer databases, we
+can't easily apply fuzzy logic to uniqueness like we can for Human
+identifiers.  The database wants absolutely unique combinations of fields.
+To accommodate every known idiodic instance of within-publication
+(within-page?) homonym, you need a bunch of different fields. This is what
+this thread was on about a few days ago, when there was talk of 9 or 10
+fields and such.  But linking or matching up two different tables using
+natural keys for taxon names is a MAJOR pain in the backside.  Not only is
+it as cumbersome as hell to link 4 or 6 or 10 fields between two tables
+(watch out for the Null values!!!) just by itself, you also need perfect
+consistency of how each field was entered in each table.  All the talk on
+variants on author name spellings and such is a real killier for this
+approach.  You end up getting about half the records to link OK (if you're
+lucky!), and then you're back to a human being (making use of Human
+Identifiers) dealing with the rest.
+
+3) Surrogate keys. Very often for data as complex and variable as taxon
+names (or literature citations, or specimens, or even just people names),
+it's much more convenient to satisfy the database uniqueness &amp; linking needs
+with a single primary key field that is some sort of arbitrary identifier.
+This is exactly why Museums assign catalog numbers to specimens.  But
+usually even those are imperfect (duplicates, etc.), so often a database
+developer will create a dedicated primary key field that is usually some
+sort of integer, even for tables that have seemingly straightforward Natural
+Keys like a specimen catalog number.  The problem with integers, however, is
+that many different databases start at &quot;1&quot; and increment upwards -- so those
+numbers are not *globally* unique -- they're only unique within context
+(i.e., a certain table in a certain database).  If you want true global
+uniqueness, you need to either come up with appropriately unique qualifiers
+(like the DarwinCore InstitutionCode-CollectionCode-CatalogNumber triplet --
+but this is actually more of a Natural Key than a Surrogate Key), or you use
+something like a UUID (which is guaranteed to be globally unique, when
+properly issued).
+
+In the world of taxonomic data and databases, I think the general situation
+is:
+
+- Human Identifiers work fine for 99% of human taxonomists, 99% of the time.
+
+- Natural Keys are best used when trying to reconcile two different data
+tables purported to have the same or overlapping content.
+
+- Surrogate keys are the only way in hell we're ever going to mobilize and
+integrate biodiversity data over the internet.
+
+Since you brought up ZooBank; actually, ZooBank uses UUIDs for its
+identifiers.  These are embedded within an LSID &quot;wrapper&quot; so that they can
+be resolved through LSID services (if those ever really catch on in our
+community).
+
+OK, now it's really time for bed.
+
+Aloha,
+Rich
+
+
+&gt; -----Original Message-----
+&gt; From: taxacom-bounces at mailman.nhm.ku.edu 
+&gt; [mailto:taxacom-bounces at mailman.nhm.ku.edu] On Behalf Of 
+&gt; Francisco Welter-Schultes
+&gt; Sent: Monday, August 31, 2009 1:55 AM
+&gt; To: taxacom at mailman.nhm.ku.edu
+&gt; Subject: Re: [Taxacom] formation of zoological names with Mc, 
+&gt; Mac, etc.
+&gt; 
+&gt; Tony,
+&gt; This is interesting. I never knew that there were cases like 
+&gt; these you were citing from Walker's publications. It seems 
+&gt; that this author established quite a number of homonymous 
+&gt; genus names, also in mixed constellations Lepidoptera/Hemiptera.
+&gt; 
+&gt; &gt; I did not say they were both available (clearly at least 
+&gt; one in each 
+&gt; &gt; case is a junior homonym)
+&gt; Your cited examples seem to refer to available names. A 
+&gt; junior homonym is an available name too, just it usually 
+&gt; cannot be used as a name. But it is an availabl name. It can 
+&gt; be substituted by a new replacement name, which then takes 
+&gt; the same type species as the junior homonym. It is important 
+&gt; for taxonomists to record junior homonyms.
+&gt; 
+&gt; It seems that taxon name author strings provide unique 
+&gt; identifiers only for currently used genera, but not for 
+&gt; original names. In the species we have the same situation. 
+&gt; So if taxonomists would like/need an electronic data resource 
+&gt; and not other identifier is used, there must be an additional 
+&gt; field to provide uniqueness for the identifier. 
+&gt; ZooBank sems to prefer LSIDs as unique identifiers, but even 
+&gt; if so, they would need to explain how to use the correct LSID 
+&gt; for the correct name. A central and reliable data resource 
+&gt; would be needed to provide information to know which one of 
+&gt; Walker's Amydona would have which LSID. This central data 
+&gt; source would need to provide more information than only 
+&gt; genus-author-year, they would need a 4th field and then they 
+&gt; could use the genus-author-year-4thfield string equally as a 
+&gt; unique identifier and no LSID would be needed.
+&gt; 
+&gt; Francisco
+&gt; 
+&gt; 
+&gt; 
+&gt; University of Goettingen, Germany
+&gt; www.animalbase.org
+&gt; 
+&gt; _______________________________________________
+&gt; 
+&gt; Taxacom Mailing List
+&gt; Taxacom at mailman.nhm.ku.edu
+&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt; 
+&gt; The Taxacom archive going back to 1992 may be searched with 
+&gt; either of these methods:
+&gt; 
+&gt; (1) <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt; 
+&gt; Or (2) a Google search specified as:  
+&gt; site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="113762.html">[Taxacom] scratchpads eu
+</A></li>
+        <LI>Next message: <A HREF="030446.html">[Taxacom] formation of zoological names with Mc, Mac, etc.
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#113764">[ date ]</a>
+              <a href="thread.html#113764">[ thread ]</a>
+              <a href="subject.html#113764">[ subject ]</a>
+              <a href="author.html#113764">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] the hurdle for all biodiv informatics initiatives
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2010-February/115627.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] the hurdle for all biodiv informatics initiatives</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at bishopmuseum.org<BR>
+    <I data-pagefind-meta="date">Wed Feb 17 20:41:34 CST 2010</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="115626.html">[Taxacom] Quacks like a duck
+</A></li>
+        <LI>Next message: <A HREF="115628.html">[Taxacom] In defense of DOIs
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#115627">[ date ]</a>
+              <a href="thread.html#115627">[ thread ]</a>
+              <a href="subject.html#115627">[ subject ]</a>
+              <a href="author.html#115627">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2010</span><!--beginarticle-->
+<PRE>&gt; A string is a string is a string to a computer. The string 
+&gt; 'Feronia sodalis LeConte 1848' is just as good an identifier 
+&gt; as the string 'urn:lsid:ubio.org:namebank:6755946', from the 
+&gt; machine's perspective, surely? There seems to be a redundancy here ...
+
+Well...two things.  First, we don't know whether the computer is resolving
+GUIDs as strings, or as binaries.  For example, the UUID
+&quot;44530E74-95E2-4F58-B1F0-9816AFD37772&quot; is really just a
+less-human-unfriendly (I hesitate to say &quot;more human friendly&quot;!) way of
+representing 128 consecutive 1's and 0's.  I don't know whether UUIDs are
+resolved by computers in their textual form, or in their binary form.
+Personally, I don't care -- I just want the computer to do whatever is most
+efficient for its own purposes.  I, as a human, never want to see
+&quot;44530E74-95E2-4F58-B1F0-9816AFD37772&quot; -- I only want to see &quot;Corydoras
+sodalis  Nijssen &amp; Isbr?cker 1986&quot;.
+
+Second, it seems to us humans that &quot;Feronia sodalis LeConte 1848&quot; is an
+adequatley unique identification string.  But it's a lousy GUID, for the
+following reasons:
+- There may be homonyms (even when you include authorship &amp; year)
+- There may be different ways of rendering the author name &quot;LeConte&quot; (e.g.,
+&quot;Le Conte&quot;, &quot;Leconte&quot;, &quot;leConte&quot;, etc.)
+- Later research may reveal a change in the information (e.g., maybe it was
+really published in 1849), which will lead to a temptation to change the
+text identifier (e.g.) &quot;Feronia_sodalis_LeConte_1848&quot; to
+&quot;Feronia_sodalis_LeConte_1849&quot;.  This defeats one of the main properties of
+a GUID (i.e., they don't ever change).
+
+There are other reasons as well.  But my general feeling is that it's best
+to rely on taxonomists to sort out the subtlties of taxonomy, and it's best
+to rely on computer scientists to sort out the subtlties of identifiers that
+make sense for computer-computer communication.  If I've learned anything
+over the past 2+ decades as a taxonomist with one foot in the computer
+database world, it is that, as a general rule, biologists are terrible
+database developers (I include myself as Exhibit &quot;A&quot;).
+
+Aloha,
+Rich
+
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="115626.html">[Taxacom] Quacks like a duck
+</A></li>
+        <LI>Next message: <A HREF="115628.html">[Taxacom] In defense of DOIs
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#115627">[ date ]</a>
+              <a href="thread.html#115627">[ thread ]</a>
+              <a href="subject.html#115627">[ subject ]</a>
+              <a href="author.html#115627">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

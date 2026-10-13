@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> distribution maps
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1998-November/012239.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">distribution maps</H1>
+    <B data-pagefind-meta="author">Stuart G. Poss</B>
+    sgposs at SEAHORSE.IMS.USM.EDU<BR>
+    <I data-pagefind-meta="date">Fri Nov 20 08:51:03 CST 1998</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="095389.html">Compactor users
+</A></li>
+        <LI>Next message: <A HREF="048031.html">distribution maps
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#012239">[ date ]</a>
+              <a href="thread.html#012239">[ thread ]</a>
+              <a href="subject.html#012239">[ subject ]</a>
+              <a href="author.html#012239">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1998</span><!--beginarticle-->
+<PRE>Peter,
+
+We have investigated a number of different approaches to this problem.
+One package we have tried has been to use Autocad in conjunction with
+DXF files derived from digital data provided by the CIA.  One
+disadvantage is that Autocad is a very expensive package, of which 99%
+is directed to industrial/architectural engineering.  Although it has
+its own internal Lisp-like scripting language to do almost any
+conceivable computer-based vector graphics, this requires a considerable
+investment in time to use effectively.  I have been generating many
+scorpionfish distributions in orthographic projection to help me keep
+track of existing materials and their provenance.  The newer versions
+run under Windows.
+
+For use in conjunction with web we have found GMT (Generic Mapping Tool)
+to be especially effective to map the distribution of various fish
+species (eg. see <A HREF="http://www.ims.usm.edu/~musweb/hipzomap.htm">http://www.ims.usm.edu/~musweb/hipzomap.htm</A> and others
+on the site).  GMT runs under Linux can be obtained at no cost (as can
+the OS, which is one of the reasons we found this combination
+particularly attractive) at the GMT homepage:
+<A HREF="http://www.soest.hawaii.edu/gmt/.">http://www.soest.hawaii.edu/gmt/.</A>  You will need a compiler (which can
+be also obtained free of charge from GNU) since the freely provided
+source code is freely available.  This is a very painless process that
+only takes a few minutes.  It is excellent at handling vector graphics.
+
+More recently we have become interested in utilizing more integrated GIS
+packages.  ArcView, a relatively inexpensive windows based package will
+makes it quite easy to integrate database file data and GIS-related
+graphics and build maps.  It is very widely used and can be employed for
+mapping marine species.  There are a number of similar packages, but I
+have not used them personally.  ArcView GIS is produced by ERSI, out of
+Redlands, California, which also produces a very high end product
+ArcInfo that allows far more analytic analysis of geographical data.
+The latter  also comes with a very high end price.  One can get some of
+this functionality through various extensions of ArcView (Spatial
+Analyst, etc).  If you simply want to create dot distribution maps, or
+simple anlaytic queries you will not need these.  However, more
+complicated spatial analytic functions relating various graphic objects
+will require you to either add these packages or move up to ArcInfo.
+
+A GIS package that we have employed from time to time is IDRSI developed
+by Clark University Graduate School of Geography.  It is written in
+Pascal and runs under Windows and is available at a modest cost.  It has
+been widely used in coastal studies.
+
+Another complex package with extensive capabilities is ENVI produced by
+Research Systems Inc. in Boulder, Colorado.  It is written entirely in
+their IDL (Interactive Data Language) scientific visualization product
+(which you don't actually have to purchase to run ENVI).  This product
+is widely used in oceanographic circles and can run on many platforms
+including Linux and Windows.  We are currently using this package to
+investigate the potential of incorporating its hyperspectral scanning
+analytic functions that will allow information from multispectral remote
+sensing scanners to be associated and utilzied in the analysis of
+distributions (ie, associations with specific signatures of
+photosynthetic pigments of various algae, sea surface temperatures,
+dredge spoils, etc).  It also permits one to create automated series of
+images that can essentially generate a &quot;movie&quot; of a changing scene
+(distribution).  Like ArcInfo it comes with a hefty price and would be
+overkill if all you want to do is plot point distributions.
+
+An alternative would be to download GRASS, another complex GIS packaged
+developed by the US Army Corp of Engineers and freely available over the
+internet.  It can be obtained at: <A HREF="http://www.cecer.army.mil/grass/">http://www.cecer.army.mil/grass/</A>  It
+doen't runs on a Windows platform, but a commercial version GRASSLAND,
+can be obtained (see cited website).  However, GRASS does run on Linux
+(OS free + GIS free makes a nice combination).  I have not used it
+myself, although a colleage nearby is doing some excellent work on
+fishes within the lower reaches of the Mississippi River with this
+package.  There are other impressive demonstrations of this package
+available via the website given.
+
+I would be interested to learn of other packages being used by the
+taxonomic community and their experience.  Perhaps you can summarize
+some of the responses you receive.
+
+Stuart
+
+
+
+Peter Schuchert wrote:
+&gt;
+&gt; can anyone recommend software (database programs) to generate
+&gt; distribution maps for marine animals?
+&gt; I saw Linneus 2 from ETI, but don't know how it is
+&gt; available.
+&gt;
+&gt; cheers,
+&gt; Peter
+
+--
+_____________________________________________________________________
+Stuart G. Poss                       E-mail: sgposs at seahorse.ims.usm.edu
+Senior Research Scientist &amp; Curator  Tel: (228)872-4238
+Gulf Coast Research Laboratory       FAX: (228)872-4204
+P.O. Box 7000
+Ocean Springs, MS  39566-7000
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="095389.html">Compactor users
+</A></li>
+        <LI>Next message: <A HREF="048031.html">distribution maps
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#012239">[ date ]</a>
+              <a href="thread.html#012239">[ thread ]</a>
+              <a href="subject.html#012239">[ subject ]</a>
+              <a href="author.html#012239">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

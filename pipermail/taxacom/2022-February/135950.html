@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Taxacom: Data security with backups
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2022-February/135950.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Taxacom: Data security with backups</H1>
+    <B data-pagefind-meta="author">Richard Zander</B>
+    Richard.Zander at mobot.org<BR>
+    <I data-pagefind-meta="date">Fri Feb 25 17:02:50 CST 2022</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="135949.html">Taxacom: Subspecies PROBABLY described
+</A></li>
+        <LI>Next message: <A HREF="135951.html">Taxacom: Data security with backups
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#135950">[ date ]</a>
+              <a href="thread.html#135950">[ thread ]</a>
+              <a href="subject.html#135950">[ subject ]</a>
+              <a href="author.html#135950">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2022</span><!--beginarticle-->
+<PRE>We all have biological data that the Russians, Chinese, North Koreans, Iranians, hi-tech hackers, and bad children would like to destroy or kidnap for ransom.
+
+If your institution has something like tempest-level security <A HREF="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FTempest_&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C994aafc62c844789005308d9f8b2f475%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637814269915113728%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&amp;amp;sdata=h%2Bhb27n5sKrsaZZyGA%2FsScqNUbJeWXZvwKn5Nhh7AZ8%3D&amp;amp;reserved=0(codename)">https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FTempest_&amp;amp;data%7C01%7Ctaxacom%40lists.ku.edu%7C994aafc62c844789005308d9f8b2f475%7C3c176536afe643f5b96636feabbe3c1a%7C0%7C0%7C637814269915113728%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&amp;amp;sdata=h%2Bhb27n5sKrsaZZyGA%2FsScqNUbJeWXZvwKn5Nhh7AZ8%3D&amp;amp;reserved=0(codename)</A> then no problem when they back up your computer nightly. This might consist of three full backup drives, switched often, and with one always in a Faraday cage and unplugged.
+
+If not, you might consider what I did. Two 2-terabyte hard drives can be had from Amazon for US$60.00 each. Backup every couple evenings to one of the drives, keep the other at home unplugged, and switch every month or so. If you don't have a backup program, a batch file will work fine. Mine is:
+
+REM /F /M /D /R means backup any file with an earlier date
+REM /Y means don't ask to okay overwriting
+REM /S /Z means and all subdirectories (watch out you don't use for root)
+xcopy c:\desktop\*.* e:\desktop2021\ /f  /d /r /s /z /y
+xcopy G:\#vol29-HepAnth\*.tif e:\FNA\Vol29allillos\ /F /D /R  /Y /Z
+xcopy G:\#vol29-HepAnth\*.tif h:\FNA\Vol29allillos\ /F /D /R  /Y /Z
+xcopy G:\*.* e:\ /F /D /R  /Y /S /Z
+xcopy c:\GP\*.* e:\GPbackup\ /F /D /R  /Y /S /Z
+REM        &quot;DONE!&quot;
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="135949.html">Taxacom: Subspecies PROBABLY described
+</A></li>
+        <LI>Next message: <A HREF="135951.html">Taxacom: Data security with backups
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#135950">[ date ]</a>
+              <a href="thread.html#135950">[ thread ]</a>
+              <a href="subject.html#135950">[ subject ]</a>
+              <a href="author.html#135950">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Catching lat lon in wrong country errors
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Catching%20lat%20lon%20in%20wrong%20country%20errors&In-Reply-To=%3C41C89B83.30021.29D3E7A%40localhost%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="092932.html">
+   <LINK REL="Next"  HREF="092935.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2004-December/092934.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Catching lat lon in wrong country errors</H1>
+    <B data-pagefind-meta="author">Steve Ginzbarg</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Catching%20lat%20lon%20in%20wrong%20country%20errors&In-Reply-To=%3C41C89B83.30021.29D3E7A%40localhost%3E"
+       TITLE="Catching lat lon in wrong country errors">SGINZBAR at BIOLOGY.AS.UA.EDU
+       </A><BR>
+    <I data-pagefind-meta="date">Tue Dec 21 21:54:10 CST 2004</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="092932.html">ICBN Rec 60C.2
+</A></li>
+        <LI>Next message: <A HREF="092935.html">Bonne Année, Happy New Year, Feliz 2005
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#92934">[ date ]</a>
+              <a href="thread.html#92934">[ thread ]</a>
+              <a href="subject.html#92934">[ subject ]</a>
+              <a href="author.html#92934">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2004</span><!--beginarticle-->
+<PRE>Mary Barkworth brought up the problem of how to catch errors where
+the lat lon for a specimen doesn't fall within the country where it
+was said to have been collected.
+
+The Alexandria Digital Library has fields w_b_coord, e_b_coord,
+n_b_coord, and s_b_coord. ADL Catalog records give
+
+titles:
+Alabama
+geographic-locations:
+Lat/Lon Bounding Box: North=35.07 South=29.76 East=-84.87 West=-88.5
+
+Is anyone who is using ADL as their geographic authority file making use
+of the bounding boxes of countries and their political subdivisions
+to check if a lat lon for a specimen actually falls within a
+rectangle containing the country and political subdivisions it is
+reported for?
+
+The Getty Thesaurus of Geographic Names
+<A HREF="http://www.getty.edu/research/conducting_research/vocabularies/tgn/ind">http://www.getty.edu/research/conducting_research/vocabularies/tgn/ind</A>
+ex.html gives only the centroid and not a bounding box.
+
+MicroCam for Windows by Scott A. Loomer, <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">loomer at att.net</A>, has the
+latitude and longitude of each point in the polygon forming the
+border of a country or political subdivision. One could calculate the
+area's bounding box by finding the maximum and minimum latitude and
+longitude of all the points forming the border. Is there a way to
+determine whether a latitude and longitude from a specimen is within
+the &quot;fill&quot; area of the polygon?
+
+Does anyone know of other geographic authority files that include
+bounding boxes for political subdivisions?
+
+The following response is from the HERBARIA list:
+
+From:   &quot;Mary Barkworth&quot; &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Mary at biology.usu.edu</A>&gt;
+        To:     &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">herbaria at scarab.science.oregonstate.edu</A>&gt;
+        Subject:        [HERBARIA] Map problems
+        Date sent:      Mon, 20 Dec 2004 16:03:30 -0700
+
+Further to my question/comments about lat lon errors in our database
+(and the majority are correct, despite my phrasing in the message that
+triggered Steve's comment:
+The following from Russell, the student to whom I sent the email that
+started the thread:
+
+Steve asked:  Is there a way to determine whether a latitude and
+longitude from a specimen is within the &quot;fill&quot; area of the polygon?
+Yes, it's called the point-in-polygon algorithm.  Depending on how
+accessible the data in Microcam turn out to be, I'm looking forward to
+implementing it.  It's quite exciting to think that something I learned
+in a CS class will actually be put to use in the `real' world!
+Once we get it working, it won't be hard at all to stitch it into a
+lat/lon data entry form, so we will be able to flag all the current
+errors as well as prevent some future headaches.
+
+Hmm.  Herbaria are part of the real world? What a lovely thought!
+
+Mary
+
+_______________________________________________
+HERBARIA mailing list
+<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">HERBARIA at scarab.science.oregonstate.edu</A>
+<A HREF="http://scarab.science.oregonstate.edu/mailman/listinfo/herbaria">http://scarab.science.oregonstate.edu/mailman/listinfo/herbaria</A>
+
+-Steve Ginzbarg
+
+Steve Ginzbarg, Assistant Curator
+Herbarium (UNA)
+Department of Biological Sciences
+Box 870345
+The University of Alabama
+Tuscaloosa, AL 35487-0345
+
+(205) 348-1829, FAX: (205) 348-6460
+<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">sginzbar at bsc.as.ua.edu</A>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="092932.html">ICBN Rec 60C.2
+</A></li>
+	<LI>Next message: <A HREF="092935.html">Bonne Année, Happy New Year, Feliz 2005
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#92934">[ date ]</a>
+              <a href="thread.html#92934">[ thread ]</a>
+              <a href="subject.html#92934">[ subject ]</a>
+              <a href="author.html#92934">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

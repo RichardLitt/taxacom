@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Inappropriate accuracy of locality data
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2010-December/118317.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Inappropriate accuracy of locality data</H1>
+    <B data-pagefind-meta="author">Bob Mesibov</B>
+    mesibov at southcom.com.au<BR>
+    <I data-pagefind-meta="date">Fri Dec  3 15:03:32 CST 2010</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="118316.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+        <LI>Next message: <A HREF="118318.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#118317">[ date ]</a>
+              <a href="thread.html#118317">[ thread ]</a>
+              <a href="subject.html#118317">[ subject ]</a>
+              <a href="author.html#118317">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2010</span><!--beginarticle-->
+<PRE>Apologies for the long post.
+
+Dusty wrote:
+
+&quot;Just to make sure I understand this..&quot;
+
+Well, you don't, so I'll spell it out again. A position declared by a GPS unit is a measurement. Like any measurement, it's subject to error. For a typical handheld GPS unit that error is minimally what the manufacturer says it is, which in the case of the Garmin eTrex is 15 m RMS. That means (approximately) that 2/3rds of the time the declared position will be within 15 m of the true position, and 1/3rd of the time the declared position will be more than 15 m from the true position. Under non-ideal conditions, the error will be larger.
+
+This thread has nothing whatsoever to do with the size of points. It started out with advice on how to *report* GPS positions. It moved into position uncertainty with my second post. The positions you record with a GPS are uncertain. They have an associated error. Your statement
+
+&quot;41 N, 87 W is exactly the same size, accuracy, and precision as 41 52 38.840000 N, 87 39 08.480000 W&quot;
+
+is true for hypothetical positions, but not for measurements. Measurements have error. Got that? You can record whatever you like in your own records. You can write down 41 52 38.840000 N, 87 39 08.480000 W, for all I care. It's when you get around to reporting your positions, e.g. publishing them in a journal, that you should tell the rest of us how much uncertainty there is in those positions.
+
+Most authors do that with implied precision. In other words, they don't offer a separate estimate of the error in their GPS position. The implied precision in 41 52 38.84 N is 0.005s, whether treated as average error, se or sd. The actual error (see above for eTrex) is at least 50 times larger. If you round that latitude off to 41 52 39, the implied precision is 0.5s. You are saying that within the error of the GPS measurement, the real latitude is closer to 41 52 39 than to either 41 52 38 or 41 52 40.
+
+The rounded-off 41 52 39 is *not an entirely new point*. It is an estimate with an implied error, just as 41 52 38.84 is an estimate with an implied error. You are not introducing an error when you round off this way. The error already exists in the measurement. If you believe that the real, true latitude is 41 52 38.84 N, then you have a religious faith that Garmin and the rest of us would find touching, but would be out of place in a scientific journal.
+
+Most contributors to this discussion agree that positions should be reported together with an explicit uncertainty. Under ideal conditions for the eTrex, you would report your single measurement as 41 52 38.84 N, 87 39 08.48 W +/- 15 m. (You could also report the uncertainty in seconds, but the longitude error increases dramatically with latitude.) Normally, however, you don't know whether the measurement was or was not under ideal conditions, so that uncertainty is a guess.
+
+You can improve on the uncertainty by taking multiple readings at the same point, and *averaging* them and reporting the variation in the sample. Dusty, I hate to say this, but that average position might be different from all the individual readings - it could be an *entirely new point*! OMG! It might not even be an improvement, because there could be a systematic bias in the GPS reading, and the average might be further from the true position than your first, single reading.
+
+Because you don't know the true uncertainty, the safest way to proceed is to estimate it conservatively. For GPS readings where the unit's declared 'accuracy' is less than 20 m, I personally use 25 m. This is a point-radius uncertainty. I am saying that the real location is within a circle of 25 m radius centered on the GPS-estimated position. Now please tell me how this:
+
+41 52 38.84 N 87 39 08.48 W +/- 25 m
+
+is different from this:
+
+41 52 39 N 87 39 08 W +/- 25 m
+
+as an *estimate* of the true position.
+-- 
+Dr Robert Mesibov
+Honorary Research Associate
+Queen Victoria Museum and Art Gallery, and
+School of Zoology, University of Tasmania
+Home contact: PO Box 101, Penguin, Tasmania, Australia 7316
+Ph: (03) 64371195; 61 3 64371195
+Webpage: <A HREF="http://www.qvmag.tas.gov.au/?articleID=570">http://www.qvmag.tas.gov.au/?articleID=570</A>
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="118316.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+        <LI>Next message: <A HREF="118318.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#118317">[ date ]</a>
+              <a href="thread.html#118317">[ thread ]</a>
+              <a href="subject.html#118317">[ subject ]</a>
+              <a href="author.html#118317">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

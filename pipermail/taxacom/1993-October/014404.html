@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> New release of DELTA programs
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=New%20release%20of%20DELTA%20programs&In-Reply-To=">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   
+   <LINK REL="Next"  HREF="050196.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1993-October/014404.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">New release of DELTA programs</H1>
+    <B data-pagefind-meta="author">Mike Dallwitz</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=New%20release%20of%20DELTA%20programs&In-Reply-To="
+       TITLE="New release of DELTA programs">miked at ENTO.CSIRO.AU
+       </A><BR>
+    <I data-pagefind-meta="date">Fri Oct  1 14:57:26 CDT 1993</I>
+    <P><UL data-pagefind-ignore>
+        
+        <LI>Next message: <A HREF="050196.html">New release of DELTA programs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#14404">[ date ]</a>
+              <a href="thread.html#14404">[ thread ]</a>
+              <a href="subject.html#14404">[ subject ]</a>
+              <a href="author.html#14404">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>1993</span><!--beginarticle-->
+<PRE>New versions of the DELTA programs for MS-DOS are now available on the
+following Internet hosts.
+     huh.harvard.edu        (directory: /pub/software/delta/msdos)
+     life.anu.edu.au        (directory: /pub/biodiversity/delta/msdos)
+     spider.ento.csiro.au   (directory: /delta/msdos)
+Access is by anonymous ftp from any of these hosts, or by Gopher from the first
+two.
+
+The Internet distribution package consists of text files *.1st and
+self-expanding files *.exe. Download.1st contains this information about
+downloading the files, changes.1st contains the revision history of the
+programs, and delta.1st describes the procedure for installing the programs on
+an MS-DOS computer. The files must be transmitted in binary mode, set by the
+ftp command `binary'. (Failure to do so will result in the error message
+`HeaderC Error' when the .exe files are run.)
+
+Place the files in the directory C:\DELTA on your MS-DOS computer. Then follow
+the installation procedure described in delta.1st, but omit the XCOPY command.
+
+The date of this release is 30 September 1993. The changes from the previous
+release (26 July 1993) are as follows.
+
+
+DOCUMENTATION
+
+28 September 1993. Final versions of Edition 4 of the User's Guide and Edition
+3 of the Primer are included with the distribution.
+
+CONFOR
+
+Version 2.10, 24 September 1993. The methods of translating ordered multistate
+and numeric characters into DIST, PAUP, HENNIG and NEXUS formats were changed
+(see User's Guide). The main change is that means are calculated after the
+application of KEY STATES, rather than before (so that KEY STATES can be used
+more effectively to remove skewness of distributions). A new directive, USE
+MEAN VALUES, can be used to modify the calculations for PAUP, HENNIG, and NEXUS
+formats. A bug which caused STOP AFTER ITEM to produce an empty output file
+with TRANSLATE INTO HENNIG FORMAT was fixed.
+
+DELFOR
+
+Version 2.08, 9 September 1993. An input tab character is now converted to a
+single blank. Error messages for the character list were improved.
+
+INTKEY
+
+Version 3.07, 17 September 1993. The program can now run on a read-only or
+write-protected drive. It searches for a writable directory for scratch files,
+as follows: current disk and directory; environment variable TMP; enviroment
+variable TEMP; default directory on the C: drive. A method of changing the
+length of the pause when displaying images in continuous mode was implemented:
+the default value is 3 seconds; pressing `+' or `-' while the images are being
+displayed increments or decrements the pause by 0.5 seconds. When displaying
+images in continuous mode, messages are now output to the main display (to
+facilitate checking of the images). Some bugs relating to error messages for
+missing images were fixed. A bug in the formatting of help was fixed. A bug
+causing the program to run out of memory when certain operations were repeated
+was fixed. A bug in the SUMMARY command was fixed.
+
+SAMPLE
+
+Version 2.02, 21 September 1993. Now works correctly when DELTA files are on a
+Novell network drive.
+
+TED
+
+Version 2.04, 30 September 1993. A directory for temporary storage is now
+selected as the first writeable directory of the following: current directory
+at program start; environment variable TMP; enviroment variable TEMP; default
+directory of drive C: at program start. This directory holds temporary files
+for the journal file, cut/paste buffer, box saves during copy, and virtual
+memory swap file. The name of the temporary-storage directory is available via
+the TDIR status word. The box-save during copy is skipped if no temporary
+storage is available. The C command emulates the DOS CD command if its argument
+ends with : or \. The complete path name of the file being edited is now stored
+(this ensures that M always writes the correct file after a directory
+change); the path is available via the SPEC status word. The prompt was
+modified for spawned DOS sessions. A status word FREE was added to get the
+amount of free space on the current drive. A bug which caused the directory-
+make command to save the directory name as the current file name was fixed.
+
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="050196.html">New release of DELTA programs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#14404">[ date ]</a>
+              <a href="thread.html#14404">[ thread ]</a>
+              <a href="subject.html#14404">[ subject ]</a>
+              <a href="author.html#14404">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

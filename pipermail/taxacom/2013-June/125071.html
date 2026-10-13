@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] BioNames and others names
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-June/125071.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] BioNames and others names</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at bishopmuseum.org<BR>
+    <I data-pagefind-meta="date">Sun Jun  2 13:28:35 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="125070.html">[Taxacom] BioNames
+</A></li>
+        <LI>Next message: <A HREF="125072.html">[Taxacom] BioNames and others names
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#125071">[ date ]</a>
+              <a href="thread.html#125071">[ thread ]</a>
+              <a href="subject.html#125071">[ subject ]</a>
+              <a href="author.html#125071">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>&gt; Given that what most databases (the 'aggregators') appear to be doing is
+&gt; beyond my comprehension, this is unsurprising. This is caused by the
+&gt; 'database mentality', and does not mean that there is a genuine problem
+...
+
+Part of it is &quot;database mentality&quot;; part of it is how the ICNafp view
+differs from the ICZN view; and part of it is genuinely different data
+needs.  The real problem is that the term &quot;taxon name&quot; is legitimately used
+in different ways in different contexts.  For example, if your goal is to
+discover appearances of taxonomic names within, say, large volumes of
+scanned/OCR'd literature, then what you need is a comprehensive index of
+every text string that has ever been purported to represent the scientific
+name of an organism.  Examples are uBio and GNI -- where the count is now up
+to something like 22M unique text strings.  It's very natural to think of
+these different unique text strings as &quot;taxon names&quot;.  At the other extreme
+is GNUB, which tracks unique &quot;name objects&quot;.  In that context, each unique
+&quot;name&quot; is a protonym, and was created in a single usage instance.  Binomens
+and trinomens are just different collections of these names, used to
+represent a terminal epithet in a classification.
+
+I made a very strong push a number of years ago when LinneanCore/TCS was
+being developed to forbid the unqualified use of &quot;name&quot; or &quot;taxon name&quot;, and
+always provide a qualification to express what one means when one refers to
+a &quot;name&quot;.  We even started a glossary, that eventually ended up here:
+<A HREF="http://wiki.tdwg.org/twiki/bin/view/UBIF/LinneanCoreDefinitions">http://wiki.tdwg.org/twiki/bin/view/UBIF/LinneanCoreDefinitions</A> 
+
+But, alas, the confusion and ambiguity continue today.
+
+&gt; ***
+&gt; Well, when it comes to &quot;scientific names of taxa&quot;, this comes to eight
+(with
+&gt; perhaps no more than three types being involved). If you want to talk
+about
+&gt; 'names' you can make it as complicated as you like.
+
+Yes, exactly.  And because different people (both taxonomists and database
+developers) have different perceptions of what a &quot;name&quot; is -- some guided by
+the Codes, some guided by the specific needs of the informatics project,
+etc. -- we end up with a plethora of units all described as &quot;taxon name&quot;.
+It's very easy to blame this on &quot;database mentality&quot;.  However, I think it's
+a bit more subtle than that.  Before computer databases, there was no need
+for a precise definition of what a &quot;taxon name&quot; is.  All the communication
+was between human - human, and like all conversations between humans, a
+reasonable understanding can emerge even though both parties have slightly
+different interpretations of the words.  In other words, sloppy terminology
+does not impede communication so much.
+
+However, computers and computer databases deal with much higher precision.
+This can be both a strength and a weakness, but usually it's a strength.  In
+any case, computers need a more precise definition of what a &quot;name&quot; is,
+because that determines whether you create a new record (with a new
+identifier) for something, vs. add a new property to an existing record.
+
+For example, in one context, &quot;Pseudanthias ventralis&quot;, &quot;P. ventralis&quot;, and
+&quot;Pseudanthias ventralus&quot; all need to be tracked separately, so all three
+would get a distinct database row.  In another context, all of these
+represent lexical variants of the &quot;same&quot; name, so there would be one record
+in the database, with a structure that tracks alternate spellings of the
+&quot;same&quot; name.  You can't blame the database for this, because there are
+different use-cases that require different informatics needs, and these
+differences are legitimate.  A different perspective might see two names
+(&quot;Pseudanthias ventralis&quot; and &quot;Pseudanthias ventralus&quot;), where the
+abbreviated genus does not need to be tracked separately.  Yet another
+perspective might also see two names, but as protonyms (&quot;Pseudanthias&quot; and
+&quot;ventralis&quot;).
+
+&gt; &gt;&gt; But under the ICNafp there is no confusion on these points, so these
+&gt; &gt;&gt; are strictly localized sources of confusion.
+&gt; &gt;
+&gt; &gt; Too bad that botanical names represent such a small fraction of the
+&gt; &gt; taxa that are out there....
+&gt; 
+&gt; ***
+&gt; Don't blame me. Not my doing ...
+
+I'm not blaming you for that.  But your attitude seemed to be &quot;Well, the
+ICNafp has a clear definition for what a taxon name is, so Rich is a
+candidate for 'Most Gross Exaggeration of the Year'&quot;.  My counter-point to
+that is that ICNafp is just one of several Codes, and the Codes in general
+represent only part of the informatics needs for broader
+taxonomic/biological communication.  This is why our broader community (not
+just botanists who are focused on what a particular Code says) has a problem
+of meaning many different things by the term &quot;taxon name&quot;. 
+
+Aloha,
+Rich
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="125070.html">[Taxacom] BioNames
+</A></li>
+        <LI>Next message: <A HREF="125072.html">[Taxacom] BioNames and others names
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#125071">[ date ]</a>
+              <a href="thread.html#125071">[ thread ]</a>
+              <a href="subject.html#125071">[ subject ]</a>
+              <a href="author.html#125071">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

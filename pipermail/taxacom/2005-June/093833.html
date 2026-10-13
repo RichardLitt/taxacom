@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> name server coverage
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2005-June/093833.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">name server coverage</H1>
+    <B data-pagefind-meta="author">Roderic Page</B>
+    r.page at BIO.GLA.AC.UK<BR>
+    <I data-pagefind-meta="date">Tue Jun  7 10:48:04 CDT 2005</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="093831.html">name server coverage
+</A></li>
+        <LI>Next message: <A HREF="093834.html">Taxonomic Name Extraction | TaxonGrab v1.1
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#093833">[ date ]</a>
+              <a href="thread.html#093833">[ thread ]</a>
+              <a href="subject.html#093833">[ subject ]</a>
+              <a href="author.html#093833">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2005</span><!--beginarticle-->
+<PRE>Doug's email raises some interesting issue about data access and
+comparing results of queries.
+
+If taxonomic name databases did provide information in a standard
+fashion, and in bulk, then some of these could be tackled. The
+Taxonomic Search Engine essentially takes information from each
+database and translates it internally in a consistent format (XML). In
+the same way, when it serves LSIDs for a name, the metadata is in the
+same format regardless of database. So, one way to compare databases
+would be to compare the metadata generated for the &quot;same&quot; name in each
+dataset. Of course, the limitation here is that the metadata is only as
+good as the source database -- if the database doesn't provide an easy
+way to retrieve synonyms then those will be absent from the metadata.
+Some make this relatively easy, in other cases it might not be
+provided, or may require extensive screen scraping.
+
+There are standards being developed for serving taxonomic name
+information, although from my own perspective I find these somewhat
+unwieldy.
+
+The other aspect of this is bulk access to data. The Taxonomic Search
+Engine has a web service interface, so that with a script one could
+automate the process of reading a list of names in a file, querying
+each database TSE supports, and comparing the information returned for
+each name.
+
+One issue in all this is what constitutes an error. In many cases
+differences among databases might simply be variation in completeness
+(i.e., one database records a pair of names as synonyms whereas another
+doesn't). This will depend in part on the aims of the database. I guess
+that for a nomenclator, failing to record two names as synonyms is not
+an error but an omission, but if a database such as ITIS fails to
+report such a relationship it may result in an error (i.e., the two
+&quot;accepted&quot; taxa will appear in the ITIS classification as distinct
+taxa, whereas they are synonyms).
+
+Clearly, there is a lot of scope for some work on developing tools to
+automate the comparison of taxonomic data.
+
+On the other issue of submitting corrections, for a single record it
+would be straightforward for the database web site to populate a form
+with the current details of the record, then provide fields for the
+user to make their suggested changes. This would avoid the issue of
+parsing email messages. To correct names in bulk, probably the way
+forward is for users to have a tool (perhaps a standalone program) that
+they can use to download a bunch of names, make their changes, then
+submit those to the database curator. None of this is rocket science,
+it just(!) needs time, effort, and money...
+
+Regards
+
+Rod
+
+Professor Roderic D. M. Page
+Editor, Systematic Biology
+DEEB, IBLS
+Graham Kerr Building
+University of Glasgow
+Glasgow G12 8QP
+United Kingdom
+
+Phone:    +44 141 330 4778
+Fax:      +44 141 330 2792
+email:    r.page at bio.gla.ac.uk
+web:      <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+reprints: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/pubs.html">http://taxonomy.zoology.gla.ac.uk/rod/pubs.html</A>
+
+Subscribe to Systematic Biology through the Society of Systematic
+Biologists Website:  <A HREF="http://systematicbiology.org">http://systematicbiology.org</A>
+Search for taxon names at <A HREF="http://darwin.zoology.gla.ac.uk/~rpage/portal/">http://darwin.zoology.gla.ac.uk/~rpage/portal/</A>
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="093831.html">name server coverage
+</A></li>
+        <LI>Next message: <A HREF="093834.html">Taxonomic Name Extraction | TaxonGrab v1.1
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#093833">[ date ]</a>
+              <a href="thread.html#093833">[ thread ]</a>
+              <a href="subject.html#093833">[ subject ]</a>
+              <a href="author.html#093833">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

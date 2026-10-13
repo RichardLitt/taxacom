@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Recent DiGIR service disruption
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2008-October/111149.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Recent DiGIR service disruption</H1>
+    <B data-pagefind-meta="author">Dave Vieglais</B>
+    vieglais at ku.edu<BR>
+    <I data-pagefind-meta="date">Wed Oct  8 01:06:38 CDT 2008</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="111148.html">[Taxacom] Race and taxonomy
+</A></li>
+        <LI>Next message: <A HREF="111150.html">[Taxacom] Race and taxonomy
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#111149">[ date ]</a>
+              <a href="thread.html#111149">[ thread ]</a>
+              <a href="subject.html#111149">[ subject ]</a>
+              <a href="author.html#111149">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2008</span><!--beginarticle-->
+<PRE>Apologies for cross posting.
+
+Hopefully, most of you did not notice this, but if you did, here's  
+what happened.  A problem with resolving the digir.net domain was  
+recently identified by John Wieczorek and possibly others.  This  
+problem would have affected most, if not all DiGIR providers currently  
+operating.  Once identified, the issue was promptly resolved, and  
+ongoing problems are unlikely.
+
+This message provides further information about the problem, how it  
+was resolved, and how recurrence will be avoided to ensure continued  
+operation of the DiGIR infrastructure.
+
+
+= Problem =
+
+The DNS entry &quot;digir.net&quot; is an A record that must point to an IP  
+address.  For several years digir.net resolved to the ip address of  
+&quot;66.35.250.210&quot; which is a Source Forge machine that is configured as  
+a VHOST for digir.net.  At some point in the last 48hrs, 66.35.250.210  
+ceased to respond as a VHOST for digir.net.  This meant that any web  
+service that was expecting to retrieve content from digir.net (e.g. <A HREF="http://digir.net/schema/protocol/2003/1.0/digir.xsd">http://digir.net/schema/protocol/2003/1.0/digir.xsd</A> 
+  ) failed, with significant operational repercussions.  For technical  
+reasons, most other digir.net DNS entries were unaffected (e.g. www.digir.net 
+).
+
+
+= Resolution =
+
+The new Source Forge VHOST servicing www.digir.net was identified as  
+&quot;216.34.181.97&quot;, and the DNS entry for digir.net was updated  
+appropriately.  Since the TTL on that DNS record was set relatively  
+short (600 seconds), the DNS infrastructure picked up the new  
+information fairly quickly, and testing indicates that digir.net URLs  
+are now being correctly resolved from several locations around the  
+world.
+
+
+= What You Need To Do =
+
+Nothing.  You should not notice any ongoing disruption.
+
+
+= Ensuring Continued Operation =
+
+There are three major issues that lead to this malfunction (#2 and #3  
+are informational only for developers of new services and tools):
+
+  1. We have no control over Source Forge, and nor should digir.net  
+infrastructure be dependent on them
+
+  2. Much of the existing installed DiGIR infrastructure references  
+&quot;digir.net&quot; directly and so DNS level indirection is not practical.
+
+  3. HTTP redirects need to be supported in service implementations  
+and their clients.  I suspect that a lot of DiGIR software services  
+and clients do not follow redirects properly.
+
+
+== Issue #1 ==
+
+A DNS monitoring service is now in place that will update the DNS  
+entries if the source forge machine changes again.
+
+Also, a replica of the DiGIR web material currently hosted by Source  
+Forge is being created on a machine that we have complete control over  
+and is located on a fast internet backbone.  The replica machine will  
+be monitored with a system that will provide automatic notification to  
+appropriate contacts in the event of failure.  This machine will be  
+located at the University of Kansas at least initially.  Once  
+operational, the DNS entry for digir.net will be modified to point to  
+this machine.
+
+DNS services are handled by dyndns.org.  Since their inception they  
+have provided a 100% uptime for their clients which includes domains  
+such as CNN, Mozilla, and Twitter.  Since digir.net was an early  
+adopter of their services, the DNS service provided by DynDNS does not  
+expire.  DNS registration does expire however, and this relatively  
+minor expense is covered by the University of Kansas with assistance  
+from the National Science Foundation.
+
+
+== Issue #2 ==
+
+In retrospect, something like &quot;<A HREF="http://schema.digir.net">http://schema.digir.net</A>&quot; rather than &quot;<A HREF="http://digir.net">http://digir.net</A> 
+&quot; should have been used.  This would have provided a low level (DNS)  
+mechanism for indirection that would have been unaffected by this  
+unanticipated hardware change.  Altering these entries in DiGIR  
+providers and tools is really not practical at this stage, so it is  
+unlikely that this issue can be directly addressed.
+
+
+== Issue #3 ==
+
+HTTP offers a mechanism for temporary and permanent redirection.  In  
+order to take advantage of this functionality, it is necessary for  
+HTTP clients to properly interpret the HTTP 301 and 307 status codes  
+and the respective response headers to determine the new location of  
+the resource being resolved.  This is the mechanism employed by PURLs  
+and TinyURL for example.  Unfortunately, many developers take short  
+cuts when building tools to retrieve content from URLs and avoid the  
+additional small amount of work necessary to handle redirect  
+messages.  Where ever possible, developers of services and clients  
+should use libraries that at least properly handle HTTP redirects  
+which will allow the use of PURLs and other mechanisms for providing  
+an additional level of indirection in URL resolution where necessary.
+
+
+regards,
+   Dave Vieglais
+
+---
+Biodiversity Research Center
+University of Kansas
+
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="111148.html">[Taxacom] Race and taxonomy
+</A></li>
+        <LI>Next message: <A HREF="111150.html">[Taxacom] Race and taxonomy
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#111149">[ date ]</a>
+              <a href="thread.html#111149">[ thread ]</a>
+              <a href="subject.html#111149">[ subject ]</a>
+              <a href="author.html#111149">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] TAXAMATCH
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2008-November/111342.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] TAXAMATCH</H1>
+    <B data-pagefind-meta="author">Tony.Rees at csiro.au</B>
+    Tony.Rees at csiro.au<BR>
+    <I data-pagefind-meta="date">Tue Nov 25 16:32:26 CST 2008</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="111341.html">[Taxacom] Fwd: Re: EuroGard congress
+</A></li>
+        <LI>Next message: <A HREF="111343.html">[Taxacom] new job position in Frankfurt, Germany
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#111342">[ date ]</a>
+              <a href="thread.html#111342">[ thread ]</a>
+              <a href="subject.html#111342">[ subject ]</a>
+              <a href="author.html#111342">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2008</span><!--beginarticle-->
+<PRE>Dear all,
+
+Have you ever entered &quot;Caelorinchus&quot; into a species search page, only to discover that the data you want is held under the name &quot;Coelorinchus&quot; (or even Coelorynchus, Coelorhynchis, etc...), or typed &quot;Panulirus&quot; when you really meant &quot;Palinurus&quot; (or vice versa)? Or can you really remember the correct spelling for &quot;Syzygotettix boettcheri&quot;? (I know I can't...)
+
+If any of the above seems applicable to you, you may be interested in work I have been doing to develop TAXAMATCH - a fuzzy matching algorithm for species (and / or genus) scientific names; as a bonus it also does authority comparisons as well. My initial experiments in this area started from the premise that users looking for data could not always spell their search terms correctly, however over time (the last 7 years of experience) I have also realised that many stored names also vary in spelling from a single canonical form, either through mis-typing, phonetic errors, OCR errors, or other, or indeed relevant experts may disagree over what the correct canonical form is (or the latter changes through time - e.g. the Caelorinchus / Coelorinchus case cited above), so the algorithm is also useful for comparing names on stored lists to find candidate approximate matches, and/or for deduplication of existing data systems (ensuring that the same taxon or name is only included once, or alternatively, linking variant instances of the same name to each other to avoid double counting, etc.).
+
+I have had prototype versions of TAXAMATCH in operation on my own system for over 12 months now (accessible via <A HREF="http://www.cmar.csiro.au/datacentre/irmng/)">http://www.cmar.csiro.au/datacentre/irmng/)</A> and recently (last week) produced the first distributable version for others to look at and, if sufficiently impressed, install on their own system. Currently this initial version is written in the Oracle PL/SQL programming language so is only useable &quot;as is&quot; with Oracle databases, however a small group of interested parties has expressed the intention to port it to other languages and database environments as well (probably PHP and mySQL in the first instance, others possibly to follow).
+
+If you would like a copy of the present &quot;version 1.0&quot; of TAXAMATCH (for Oracle), or have an interest in participating in ongoing code development activities, please contact me at the email address below. Some further information about TAXAMATCH is also available via the following URL:
+
+<A HREF="http://www.cmar.csiro.au/datacentre/biodiversity.htm#taxamatch">http://www.cmar.csiro.au/datacentre/biodiversity.htm#taxamatch</A>
+
+Regards - Tony
+
+Tony Rees
+Manager, Divisional Data Centre,
+CSIRO Marine and Atmospheric Research,
+GPO Box 1538,
+Hobart, Tasmania 7001, Australia
+Ph: 0362 325318 (Int: +61 362 325318)
+Fax: 0362 325000 (Int: +61 362 325000)
+e-mail: Tony.Rees at csiro.au&lt;mailto:Tony.Rees at csiro.au&gt;
+Biodiversity informatics research activities: <A HREF="http://www.cmar.csiro.au/datacentre/biodiversity.htm">http://www.cmar.csiro.au/datacentre/biodiversity.htm</A>
+Personal info: <A HREF="http://www.fishbase.org/collaborators/collaboratorsummary.cfm?id66">http://www.fishbase.org/collaborators/collaboratorsummary.cfm?id66</A>
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="111341.html">[Taxacom] Fwd: Re: EuroGard congress
+</A></li>
+        <LI>Next message: <A HREF="111343.html">[Taxacom] new job position in Frankfurt, Germany
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#111342">[ date ]</a>
+              <a href="thread.html#111342">[ thread ]</a>
+              <a href="subject.html#111342">[ subject ]</a>
+              <a href="author.html#111342">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Markov chain Monte Carlo
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2012-April/122301.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Markov chain Monte Carlo</H1>
+    <B data-pagefind-meta="author">Richard Zander</B>
+    Richard.Zander at mobot.org<BR>
+    <I data-pagefind-meta="date">Thu Apr 19 10:29:58 CDT 2012</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="122300.html">[Taxacom] Markov chain Monte Carlo
+</A></li>
+        <LI>Next message: <A HREF="122302.html">[Taxacom] Markov chain Monte Carlo
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#122301">[ date ]</a>
+              <a href="thread.html#122301">[ thread ]</a>
+              <a href="subject.html#122301">[ subject ]</a>
+              <a href="author.html#122301">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2012</span><!--beginarticle-->
+<PRE>
+Carl:
+I much appreciate the clear short response. I was wrong to use &quot;tree.&quot;
+And also &quot;clade&quot; is wrong in place of &quot;tree&quot; since one is not looking
+for the &quot;best&quot; clade but the one that appears most often.
+
+Yes, each tree must be improbable (multiply the posterior probabilities
+of each branch to get the probability of the entire tree). 
+
+So when the posterior is given as 0.95, it means that branch
+configuration (clade) appears 0.95 of the time in the sample, which if
+large enough implies that it also appears 0.95 of the time in the
+unsampled population.
+
+Dang. 
+
+Many thanks,
+Richard
+
+* * * * * * * * * * * *
+Richard H. Zander
+Missouri Botanical Garden, PO Box 299, St. Louis, MO 63166-0299 USA  
+Web sites: <A HREF="http://www.mobot.org/plantscience/resbot/">http://www.mobot.org/plantscience/resbot/</A> and
+<A HREF="http://www.mobot.org/plantscience/bfna/bfnamenu.htm">http://www.mobot.org/plantscience/bfna/bfnamenu.htm</A>
+Modern Evolutionary Systematics Web site:
+<A HREF="http://www.mobot.org/plantscience/resbot/21EvSy.htm">http://www.mobot.org/plantscience/resbot/21EvSy.htm</A>
+UPS and FedExpr -  MBG, 4344 Shaw Blvd, St. Louis 63110 USA
+
+
+-----Original Message-----
+From: Carl Rothfels [mailto:crothfels at yahoo.ca] 
+Sent: Wednesday, April 18, 2012 5:45 PM
+To: Richard Zander
+Subject: Re: [Taxacom] Markov chain Monte Carlo
+Very short superficial response -- your initial description of MCMC is
+correct -- it attempts to sample from the posterior distribution in
+proportion to its probability density. But you're going astray when you
+start thinking about there being one tree that has a .95 posterior -- in
+any dataset with more than a handful of taxa any single tree will have
+an extremely low posterior (which may be what you're trying to say). In
+fact, with many taxa, the chances of sampling any tree even twice is
+low, even if you take very many samples from the posterior. So that's
+why folks concentrate on elements of the posterior, rather than on
+complete trees -- in what proportion of the sample is a given split in
+the tree supported (the posterior support for that branch)? What's the
+average length of this branch in the posterior? etc. The presence of a
+huge number of unique and extremely unlikely trees doesn't affect these
+measures (not in a way that is not already captured by the MCMC,
+provided the MCMC has sampled the posterior well, as it should if the
+researchers did a good job..).
+
+carl rothfels
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="122300.html">[Taxacom] Markov chain Monte Carlo
+</A></li>
+        <LI>Next message: <A HREF="122302.html">[Taxacom] Markov chain Monte Carlo
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#122301">[ date ]</a>
+              <a href="thread.html#122301">[ thread ]</a>
+              <a href="subject.html#122301">[ subject ]</a>
+              <a href="author.html#122301">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

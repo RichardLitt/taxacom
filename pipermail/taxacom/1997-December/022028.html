@@ -1,0 +1,239 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Who is the postivist?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1997-December/022028.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Who is the postivist?</H1>
+    <B data-pagefind-meta="author">Ted Schultz</B>
+    schultz at ONYX.SI.EDU<BR>
+    <I data-pagefind-meta="date">Thu Dec 11 14:58:01 CST 1997</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="105180.html">Positivism vs Realism
+</A></li>
+        <LI>Next message: <A HREF="057820.html">Who is the postivist?
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#022028">[ date ]</a>
+              <a href="thread.html#022028">[ thread ]</a>
+              <a href="subject.html#022028">[ subject ]</a>
+              <a href="author.html#022028">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1997</span><!--beginarticle-->
+<PRE>&gt;Richard Zander wrote:
+&gt;Not as such. One might view, however, subclades that are identical in
+&gt;all trees with posterior probabilities that add to .5 or to, say, .95,
+&gt;as the equivalent (the first for more evidence for than against, the
+&gt;second to maybe actually call it a good estimation). Perhaps this would
+&gt;not work, what do you think?
+
+I think you could do this in the same way as has been suggested for
+bootstrap confidence tree &quot;clouds&quot; (see below).  However, I don't think it
+would be fair to calculate this by giving equal prior probability to all
+possible trees.
+
+&gt;Zander:
+&gt;&gt; Any number of ways have been
+&gt;&gt; proposed for calculating &quot;confidence limits&quot; around subtopologies have been
+&gt;&gt; suggested (e.g., the Kishino-Hasegawa parametric test, Page's median trees,
+&gt;&gt; parametric and non-parametric bootstraps).
+&gt;
+&gt;Interesting...can you supply a short bibliography? This seems to be a
+&gt;critical area we should all know more about.
+
+OK, I'll try.  I hope no one will think I'm necessarily advocating any of
+these methods, but I cite them as examples of how people are struggling
+with the problem of assessing the posterior probabilities of various trees
+and subtrees.
+
+As far as branch support goes, everybody knows about decay indices (Bremer
+supports) and bootstraps.  Both have problems, of course: How big of a
+decay value is &quot;good enough&quot;?  What does the bootstrap mean?  (In a
+separate thread in this group the point has been made that the bootstrap
+does not tell us anything about how close to the &quot;truth&quot; our results are.)
+If we think that in some way these measures are correlated with the
+posterior probability of a monophyletic group, then trees in which branches
+are collapsed when they fall below a certain critical value are actually
+conglomerates of many multiple trees.  All of these possible trees together
+form a &quot;confidence set&quot; such as you seem to be recommending.
+
+Sanderson (1989.  Cladistics 5: 113) suggested that the parsimony tree be
+regarded as a central tree around which there is an &quot;error cloud&quot;
+(confidence set) of trees that includes all trees containing groups
+occurring in 95% of the bootstrap replicates.  Page (1996. Cladistics 12:
+83) suggested that the central tree should be the majority-rule bootstrap
+consensus, and that some tree-distance metric (e.g., the partition metric)
+be used to construct the error cloud around the central tree.  (This entire
+scheme is applicable to ML as well as to parsimony trees.)
+
+These approaches are unlikely to satisfy you, however, because the 95% set
+of bootstrap trees is still a small subset of all possible trees, and you
+seem to want to calculate probability as a function of all possible trees.
+
+Confidence levels on decay indices have also been suggested by Faith
+(Faith, D.P.  1991.  Cladistic permutation tests for monophyly and
+nonmonophyly.  Systematic Zoology 40: 366-375.).  In this scheme, a null
+distribution of possible length differences for a given branch is generated
+based on a null of random character correlation.  Number and frequency of
+character states is preserved within characters, but characters are
+randomly assigned to taxa; many (100 or more) such permutations are used to
+generate the null distribution, and the position of the observed length
+difference (decay index) is found in this null distribution.  If it is
+found to be significantly longer than our chance expectation, it is deemed
+to have significantly high support.  A number of criticisms have been
+leveled against the premise of this test (e.g., Carpenter in Cladistics,
+Swofford et al. in Systematic Biology).  One practical reason is that it is
+simply too easy for a decay index value to pass the test (i.e., the null of
+&quot;this is a sufficiently large support value&quot; is subject to Type 2 error),
+but this can be remedied by making it a two-tailed rather than a one-tailed
+test.
+
+Again, aside from its other problems this test will not satisfy you if you
+want to afford any significant prior probability to trees beyond those that
+could possibly be generated by any permutation of the particular data
+matrix being considered.
+
+There are a variety of other tests for assessing the significance of the
+difference in support for two topologies (e.g., the &quot;best&quot; topology in
+which a group is monophyletic vs. the &quot;best&quot; topology in which it is not).
+These tests essentially put confidence limits on the two solutions and ask
+if those limits overlap.  One such nonparametric test is Templeton's &quot;T&quot;
+test (Templeton 1983. Evolution 37:221; modified by Larson 1994 in
+Shierwater et al., eds. Molecular Ecoloty and Evolution: Approaches and
+Applications. Birkhauser) that uses Wilcoxon ranked sums to decide whether
+the data are significantly more parsimonious on one tree than another.
+Another test is the Kishino-Hasegawa parametric test (1989. J. of Molec.
+Evol. 29:170) that tries to get at the same thing by assuming a parametric
+distribution of character-by-character length/likelihood differences that
+is centered on 0 for trees that are not significantly different.  A
+variation on Faith's permutation test (implemented in PAUP as &quot;compare 2
+trees&quot;), cited above, contrasts the difference in any two topologies in
+much the same way; again, it can be made more stringent by making it
+two-tailed.  Recently Huelsenbeck, Hillis, and Jones (in Ferraris and
+Palumbi, eds. Molecular Zoology.  1996.  Wiley.) have proposed a
+&quot;parametric bootstrap&quot; under the likelihood framework in which a null
+distribution of ranomized data sets is produced in which the &quot;observed&quot;
+model and model parameters (i.e., the model and parameters inferred from
+the observed data) are held constant.  This distribution is then used to
+assess the significance of various results inferred from the observed data.
+
+
+A comment: There is probably a compromise between affording all possible
+trees equal a priori probability vs. affording a single (most
+parsimonious/most likely) tree all of the posterior probability.  For
+instance, every character implies a tree.  Trees implied by a single
+character are usually largely unresolved when lots of taxa are involved.
+If only the resolved parts of these trees are considered, we could come up
+with a set of resolved trees (including all possibilities in subtrees where
+no character affords resolution, or in which characters conflict about
+topology) that is implied by all the characters considered individually.
+Add to this subset all possible trees that can be generated by the
+Archie/Faith permutation method (which probably includes the first set; I'd
+have to think about that) and all trees that have ever been proposed by any
+taxonomist, and you will have a subset of all possible trees where,
+arguably, the majority of prior probability should reside.  Now perform
+analyses and let the data suggest how the probability should be distributed
+a posteriori.
+
+&gt;Zander:
+&gt;The frequentist statistical explanation is copasetic. So is the
+&gt;Bayesian, but we must remember that we are assigning probabilities to
+&gt;one event that happened in the past, one throw of the dice (worse, a
+&gt;concatenated series of throws of the dice). So here we go with
+&gt;statistical relevance again. An increase in probability does not
+&gt;necessarily confer on a theory more evidence for than against. In
+&gt;medicine, an increase in probability of disease is cause for concern but
+&gt;I for one would like to see *real good* confidence in a null, not just
+&gt;an increase in probability. How is your confidence measured?
+&gt;
+
+&quot;Probability&quot; in the context of phylogeny reconstruction cannot mean how
+close we are to obtaining the &quot;true&quot; tree.  It seems like, instead, it is a
+measure of error + belief.  Under certain assumptions, the probability can
+tell us how likely it is that a given result is due to random (sampling or
+observation) error.  Under other assumptions, it can tell us how much we
+ought to alter our prior belief in something given new data and given the
+methods by which we extract patterns from those data.  To the extent that
+patterns can provide reliable clues about the processes that generated
+them, and to the extent that our methods allow us to distinguish among
+those patterns, the probabilities might be telling us something about how
+well we have reconstructed phylogeny, but that is pretty far removed.  For
+example, we expect that only correlation due to phylogeny will produce
+congruent patterns across diverse character systems.  We go out and we
+measure the amount of congruence and compare it to some null distribution
+that we expect due to chance and/or to some other distribution that we
+expect from alternative processes (say, your example of convergence due to
+parallel selection) and we draw a conclusion.  Statistics can tell us how
+far our observations depart from the alternative expectations, once we have
+defined them.  Whether this departure corresponds to our confidence that we
+have accurately reconstructed phylogeny depends on whether we've covered
+all possible sources of patterning and whether we've accurately modeled the
+kinds of patterns they'd produce . . . quite a stretch.  So much of a
+stretch, in fact, that our conclusion is undoubtedly sensitive to Bayesian
+prior belief based on &quot;background knowledge.&quot;
+
+&gt;&gt;
+&gt;I must not be reading the right journals. Would you kindly cite me one
+&gt;or two papers that come up with a tree that is not obvious but which
+&gt;shows how massive congruence of lots of data from different systems has
+&gt;solved a problem in phylogeny? This is where we should be traveling, but
+&gt;along the way I see too many claims of having got there already.
+
+I will readily agree with you that there are too many papers using scanty
+(usually molecular) data to superficially &quot;overturn&quot; traditional systematic
+groupings.  However, one series of studies that comes to mind in which a
+group of researchers has recovered largely congruent phylogenies from
+morphology and multiple genes is represented most recently by Fang et al.
+1997.  Systematic Biology 46:269.  Regier, Mitter, Poole, and various grad
+students and postdocs have explored particular taxa and character systems
+deeply.  This contrasts markedly with the more common approach of using
+whatever genes (primers) are available, producing a study, and moving on,
+and is much more likely to benefit phylogenetics in the long run.
+
+___________________________________
+Ted Schultz, Research Entomologist
+Department of Entomology, MRC 165
+National Museum of Natural History
+Smithsonian Institution
+Washington, DC 20560
+U.S.A.
+
+schultz at onyx.si.edu
+Phone (voice and fax): 202-357-1311
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="105180.html">Positivism vs Realism
+</A></li>
+        <LI>Next message: <A HREF="057820.html">Who is the postivist?
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#022028">[ date ]</a>
+              <a href="thread.html#022028">[ thread ]</a>
+              <a href="subject.html#022028">[ subject ]</a>
+              <a href="author.html#022028">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

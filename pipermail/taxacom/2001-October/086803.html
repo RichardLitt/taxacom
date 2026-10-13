@@ -1,0 +1,179 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> unique numbers for species
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2001-October/086803.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">unique numbers for species</H1>
+    <B data-pagefind-meta="author">Doug Yanega</B>
+    dyanega at POP.UCR.EDU<BR>
+    <I data-pagefind-meta="date">Thu Oct 11 14:52:21 CDT 2001</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="086778.html">More on Biogeographic memory
+</A></li>
+        <LI>Next message: <A HREF="086779.html">More on Biogeographic memory
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#086803">[ date ]</a>
+              <a href="thread.html#086803">[ thread ]</a>
+              <a href="subject.html#086803">[ subject ]</a>
+              <a href="author.html#086803">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2001</span><!--beginarticle-->
+<PRE>Markku Savela wrote:
+
+&gt;Why numbers? Why not just use the &quot;the unique identifier&quot; which
+&gt;already exists: the original published name with author and year.
+&gt;
+&gt;For example, the unique id of the current _Danaus plexippus_ is
+&gt;
+&gt;  &quot;Papilio plexippus Linnaeus, 1758&quot;
+
+In addition to what Robin panza pointed out, there's also problems
+like the following:
+
+Rhopalophora cupricollis Gu?rin-M?neville 1844
+
+and
+
+Rhopalophora cupricollis Guerin 1845
+
+or
+
+Clytus marginicollis Laporte &amp; Gory 1835
+
+and
+
+Clytus marginicollis Castelneau &amp; Gory 1835
+
+*We* may recognize that those pairs are the same, but will a
+computer? Those &quot;unique&quot; identifiers (extracted straight from the
+literature), after all, list different authors and/or different years
+- but will the computer KNOW that there are frequently discrepancies
+in the literature regarding when a name was actually published, and
+regarding how an author should be referred to? I also would suspect
+that - for all the worry over transposition and typos - that people
+are more likely to mis-type a long name PLUS author PLUS year than a
+single 8-digit number.
+
+And. in case you think that even the above examples could be resolved
+by better programming, what about these:
+
+Ochodaeus Serville 1825
+
+versus
+
+Ochodaeus Lepeletier &amp; Serville 1828
+
+and
+
+Polycesta Solier 1833
+
+versus
+
+Polycesta Serville in Dejean 1833
+
+Are those the same taxon? (I'd actually like to know, incidentally -
+I don't know which is correct in either case).
+
+Nomenclatural work CANNOT be converted into a simple algorithm.
+
+Eric Dunbar wrote:
+
+&gt;I suppose the most difficult aspect to all of this is creating and funding
+&gt;an organisation (or modifying an existing one) to oversee such a registry.
+
+There is already an organization, called the &quot;All Species Foundation&quot;
+(www.all-species.org), *independently* funded, with the ostensible
+goal of developing a catalog of all the world's species. You just
+have to convince THEM to act as a master registry. It's a perfectly
+logical, simple extension of their mission statement. I doubt they'd
+go for the idea (since the ICZN voted down name registration), though
+it would certainly be nice if they'd at least *consider* it -
+however, to date (after over a year since its formal inception) they
+haven't even set an agenda. I don't know if anyone on Taxacom is on
+their advisory board, but maybe a registry of names should be
+something put on the table when they finally do sit down to make a
+plan.
+
+This relates to Richard Pyle's comment:
+
+&gt;I share your pain....but I don't think we necessarily need to be thinking
+&gt;about our own hard drives here. In theory, the internet should allow us to
+&gt;use an authority file stored on a hard disk half-way around the world as a
+&gt;direct, real-time authority for our local needs.  Conceivably, if the master
+&gt;authority is stored on a $upercomputer with ultra-fast internet access, (and
+&gt;assuming most taxonomists and curators have access to a reasonably fast
+&gt;internet connection) then it can pump the data we need to us even faster
+&gt;than our own single-processor desktops could with the data resident on a
+&gt;local hard drive. Maybe internet technology isn't quite &quot;there&quot; yet -- but I
+&gt;imagine it will be soon (likely sooner than it will take to gain widespread
+&gt;acceptance among the taxonomic community for universal registration of taxon
+names).
+
+The problem is that you (and I) are explicitly envisioning a single
+master authority file. We have the technlogy NOW to do remote
+look-ups, but we've got multiple online authority files (for example,
+if you ask about a North American species of Asilid fly, there are
+the Nomina, the CDWD, and Fritz Geller-Grimm's list, at least), and
+they each may refer to the same taxon differently. So, which name
+does your little remote look-up software feed back to you when
+there's a discrepancy in classifications? Remote look-ups, therefore,
+will require a SINGLE standard listing, as Richard indicates, but we
+are a very long way from agreeing on such a thing. The Tree of Life
+project, for example, hoped to get there, but relies on volunteers.
+Accordingly, that project likely won't ever see completion - unless
+it gets the kind of no-strings-attached funding that allspecies.org
+has at its disposal. There's yet another thing the latter
+organization might consider: come to the rescue of the Tree of Life
+folks, and tap into their expertise, rather than starting from
+scratch. What we need more than anything is cooperation, if for no
+other reason than avoiding the constant proverbial re-invention of
+the wheel.
+
+On we go,
+--
+
+Doug Yanega        Dept. of Entomology         Entomology Research Museum
+Univ. of California - Riverside, Riverside, CA 92521
+phone: (909) 787-4315 (standard disclaimer: opinions are mine, not UCR's)
+            <A HREF="http://entmuseum9.ucr.edu/staff/yanega.html">http://entmuseum9.ucr.edu/staff/yanega.html</A>
+   &quot;There are some enterprises in which a careful disorderliness
+         is the true method&quot; - Herman Melville, Moby Dick, Chap. 82
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="086778.html">More on Biogeographic memory
+</A></li>
+        <LI>Next message: <A HREF="086779.html">More on Biogeographic memory
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#086803">[ date ]</a>
+              <a href="thread.html#086803">[ thread ]</a>
+              <a href="subject.html#086803">[ subject ]</a>
+              <a href="author.html#086803">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] formation of zoological names with Mc, Mac, etc.
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2009-August/030425.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] formation of zoological names with Mc, Mac, etc.</H1>
+    <B data-pagefind-meta="author">Francisco Welter-Schultes</B>
+    fwelter at gwdg.de<BR>
+    <I data-pagefind-meta="date">Thu Aug 27 15:39:25 CDT 2009</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="113744.html">[Taxacom] formation of zoological names with Mc, Mac, etc.
+</A></li>
+        <LI>Next message: <A HREF="066380.html">[Taxacom] formation of zoological names with Mc, Mac, etc.
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#030425">[ date ]</a>
+              <a href="thread.html#030425">[ thread ]</a>
+              <a href="subject.html#030425">[ subject ]</a>
+              <a href="author.html#030425">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2009</span><!--beginarticle-->
+<PRE>Dick,
+it is certainly very interesting from the point of view of historical 
+biology, to distinguish exactly between the authors of 
+important publications, and not to confound two authors with similar 
+names. You are right that in most (not all) cases, initials will help 
+us to recognise which author is exactly meant.
+
+&gt; &quot;There is a strong recommendation not to use initials of first names
+&gt; in a taxon name author string, never and nowhere.&quot; 
+
+This concerns only the use of initials in taxon name author strings, 
+which are used as identifiers in computer environments. Not the use 
+of initials in other contexts.
+Never means that no author should be combined with initials. 
+Nowhere means that initials should not be used in taxon name author 
+strings regardless of where they were mentioned, in journal articles 
+or databases. Everything is electronical today.
+
+Taxon name author strings (genus-species-author-year) are used as 
+global unique identifiers for species. In such a string, initials are 
+a serious problem. A computer cannot automatically see that O. F. 
+M?ller and M?ller are the same authors, and that the two taxon name 
+author strings refer to the same taxon. Manual input is necessary to 
+lump the identifiers, this is really a serious problem in electronic 
+environments.
+
+So if you write a text for a journal article, of course you can use 
+initials to distinguish two authors with identical surnames, in the 
+text or in literature citations. But it is not necessary to do this 
+in a taxon name author string. 
+
+A uniform commonly applied practice is necessary if connecting 
+electronic biodiversity related information should work more 
+efficiently. Some databases use initials, some not. Those who use 
+initials, like you, can quickly remove the initials from their files 
+and everything is fine. Those who don't use initials cannot add the 
+initials, because they do not know them. So the only possible 
+solution is to remove them everywhere. This is why this 
+recommendation is so strong.
+
+This is not a problem in botany where a TDWG-like standard for 
+authors was created. Zoologists are currently being requested to 
+solve the problems of their authors, because they provide obstacles, 
+and other identifiers (LSIDs or other barcoding systems) have not 
+provided a solution for the problem. Linnean names seem to be the 
+electronic identifier system of the future, so there is some pressure 
+coming from this side.
+
+Your example Adams is one of the best and outstanding cases to 
+demonstrate that initials in taxon name author strings are really 
+serious problems for computers.
+
+If you upload a file with 10,000 names of species to say a GBIF or 
+whatever database, the GBIF recipient can manually (under high costs) 
+recognize that all your O. F. M?ller author names will most 
+probably correspond to M?ller author names of other GBIF database 
+entries, and teach (under high costs) a program to understand this.
+
+But now take a genus 
+Elona H. &amp; A. Ad., 1855
+or a species
+Virpazaria aspectulabeatidis A., P. L. Reisch?tz &amp; Subai 2009.
+
+Neither a computer program not a GBIF databaser, only an insider is 
+able to understand and decode such strings.
+
+Without initials:
+Elona Adams &amp; Adams, 1855
+Virpazaria aspectulabeatidis Reisch?tz, Reisch?tz &amp; Subai 2009.
+
+Your example concerning the Sowerby names would be converted to:
+
+Conus catenatus Sowerby, 1850 
+and 
+Conus catenatus Sowerby, 1875
+
+These two taxon name author strings differ perfectly from each other, 
+you gave an excellent example why is it important to include the 
+year in a taxon name author string. No computer will ask you 
+why genus, species and author are identical. This is a very good 
+example of how useful the year is.
+
+In the following examples:
+
+Clausilia calcarea Boettger, 1878 
+Clausilia calcarea Boettger, 1880  
+
+Clausilia chia Boettger, 1878  
+Clausilia chia Boettger, 1889  
+
+Helix balcanica Kobelt, 1876  
+Helix balcanica Kobelt, 1903  
+
+Helix praetexta Pfeiffer, 1848  
+Helix praetexta Pfeiffer, 1871  
+
+we have the same situation. The computer will not have a 
+problem in understanding that these are always different strings. And 
+the computer will not ask how many Boettgers, Kobelts or 
+Pfeiffers were actually involved.
+
+Best regards
+Francisco
+
+University of Goettingen, Germany
+www.animalbase.org
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="113744.html">[Taxacom] formation of zoological names with Mc, Mac, etc.
+</A></li>
+        <LI>Next message: <A HREF="066380.html">[Taxacom] formation of zoological names with Mc, Mac, etc.
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#030425">[ date ]</a>
+              <a href="thread.html#030425">[ thread ]</a>
+              <a href="subject.html#030425">[ subject ]</a>
+              <a href="author.html#030425">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

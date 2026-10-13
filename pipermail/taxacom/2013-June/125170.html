@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] BioNames (slurp)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2013-June/125170.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] BioNames (slurp)</H1>
+    <B data-pagefind-meta="author">Erik Rijkers</B>
+    er at xs4all.nl<BR>
+    <I data-pagefind-meta="date">Sat Jun  8 14:03:42 CDT 2013</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="125169.html">[Taxacom] BioNames
+</A></li>
+        <LI>Next message: <A HREF="125171.html">[Taxacom] BioNames (slurp)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#125170">[ date ]</a>
+              <a href="thread.html#125170">[ thread ]</a>
+              <a href="subject.html#125170">[ subject ]</a>
+              <a href="author.html#125170">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2013</span><!--beginarticle-->
+<PRE>On Mon, June 3, 2013 15:24, Roderic Page wrote:
+&gt; Hi Erik,
+&gt;
+&gt; Sorry for the delay in replying. I need to do a bit of work on this, but for now there are a coupe of ways to get the data.
+&gt;
+&gt; 1. There is a crude Darwin Core Archive dump at <A HREF="http://bionames.org/data/darwincore/bionames.zip">http://bionames.org/data/darwincore/bionames.zip</A> (warning, ~144 Mb) This
+&gt; has names, references, and map between names and reference.
+&gt;
+
+Thank you, that is really nice to play with.
+
+The data was easy to load locally, and no doubt, I'll end up using the JSON api too. Much appreciated.
+
+
+It also raises some questions:
+
+ - Three zipfile contains three .tsv files:
+
+$ unzip -l /tmp/bionames.zip
+Archive:  /tmp/bionames.zip
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+154968043  05-30-2013 21:15   taxa.tsv
+717387476  05-30-2013 21:16   media.tsv
+129913824  05-30-2013 21:10   references.tsv
+     3255  05-29-2013 19:16   meta.xml
+---------                     -------
+1002272598                     4 files
+
+Two of the .tsv files (taxa.tsv and media.tsv) end with a line that looks like an error message:
+
+$ unzip -p /tmp/bionames.zip taxa.tsv | tail -1
+failed [/Users/rpage/Desktop/bionames-data/darwincore/doi/simple_taxa.php:50]: SELECT * FROM names WHERE id=  LIMIT 1
+
+unzip -p /tmp/bionames.zip media.tsv | tail -1
+failed [/Users/rpage/Desktop/bionames-data/darwincore/doi/simple_media.php:83]: SELECT * FROM names WHERE id=  LIMIT 1
+
+Now, it's easy enough to grep out those lines, but of course one wonders if those files are truncated and would be
+larger, had the error not occurred?
+
+The imported tables rowcounts are now:
+            taxa  1,520,483
+ references     393,552
+        media   1,520,487
+which corresponds to number of lines in the .tsv files.  Are these correct?
+
+
+ - Is it worthwhile to check regularly on <A HREF="http://bionames.org/data/darwincore/bionames.zip?">http://bionames.org/data/darwincore/bionames.zip?</A>  ( Will it get updated?
+(weekly, monthly, yearly))
+
+
+Thank you!
+
+Erik Rijkers
+
+
+PS
+and TWIMC, here is a (pretty basic) bash/perl script for loading the .tsv files into postgres.
+
+
+slurp_bionames.sh:
+
+--------------8&lt;----------------------------
+#!/bin/sh
+
+zipfile=/tmp/bionames.zip
+
+schema=public
+
+time for x in  &quot;4  taxa.tsv      taxa&quot;  \
+              &quot;21 references.tsv refs&quot;  \
+              &quot;12 media.tsv      media&quot; ;
+do
+  set -- $x; ncols=$1; slurp_file=$2; t=$schema.$3;
+  echo &quot; [$ncols];  [$slurp_file];  [$t]&quot;
+
+  # create table from header line:
+  unzip -p $zipfile $slurp_file | head -n 1 | perl -ne '
+    chomp; my @arr = map { $_ .= &quot; text&quot; } split(/\t/);
+    print &quot;drop table if exists '$t';\ncreate table '$t'(\n  &quot;,
+          lc(join(&quot;\n, &quot;, @arr)), &quot;\n);\n&quot;;' | psql -qX;
+
+  # then read file into that table:
+  unzip -p $zipfile $slurp_file | perl -MEncode -ne '
+    next if (/^failed/);
+    chomp;
+    s{\&quot;}{DOUBLEQUOTE}g;
+    my @arr = split(/\t/, $_ );
+    while (scalar(@arr) &lt; '$ncols' ) { push(@arr, &quot;&quot;); }
+    print encode(&quot;UTF8&quot;, (join(&quot;\t&quot;, at arr).&quot;\n&quot;), Encode::FB_CROAK);
+  ' | psql -qXc &quot;copy $t from stdin csv header delimiter E'\t';&quot;
+
+  # quick check: linenumber and rownumber be (almost) the same
+  echo -n &quot;file lines: &quot;; unzip -p $zipfile $slurp_file  | grep -c '^'
+  echo -n &quot;table rows: &quot;; echo &quot;select count(*) from $t&quot; | psql -qtAX
+done
+--------------8&lt;----------------------------
+
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="125169.html">[Taxacom] BioNames
+</A></li>
+        <LI>Next message: <A HREF="125171.html">[Taxacom] BioNames (slurp)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#125170">[ date ]</a>
+              <a href="thread.html#125170">[ thread ]</a>
+              <a href="subject.html#125170">[ subject ]</a>
+              <a href="author.html#125170">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

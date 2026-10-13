@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Statistical power of KH and SH tests?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Statistical%20power%20of%20KH%20and%20SH%20tests%3F&In-Reply-To=%3C004601c43c16%24af5d7060%24d351c950%40oemcomputer%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="091928.html">
+   <LINK REL="Next"  HREF="091929.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2004-May/091934.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Statistical power of KH and SH tests?</H1>
+    <B data-pagefind-meta="author">Laurent at </B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Statistical%20power%20of%20KH%20and%20SH%20tests%3F&In-Reply-To=%3C004601c43c16%24af5d7060%24d351c950%40oemcomputer%3E"
+       TITLE="Statistical power of KH and SH tests?">Laurent at 
+       </A><BR>
+    <I data-pagefind-meta="date">Mon May 17 15:55:59 CDT 2004</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="091928.html">Statistical power of KH and SH tests?
+</A></li>
+        <LI>Next message: <A HREF="091929.html">Statistical power of KH and SH tests?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#91934">[ date ]</a>
+              <a href="thread.html#91934">[ thread ]</a>
+              <a href="subject.html#91934">[ subject ]</a>
+              <a href="author.html#91934">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2004</span><!--beginarticle-->
+<PRE>Peter -
+
+&gt;<i> Ideally, you want both alpha and beta to be low.
+</I>
+With everything else fixed, beta decreases with the degree of falseness of
+your null hypothesis, which you usually don't know (unless you are making a
+simulation). In a real test, there won't be a single value for beta, but a
+beta function.
+In some cases, it is possible to compute this function analytically. For
+example, in the simple case of testing the equality of two means, it is
+relatively straightforward to express beta as a function of the (unknown)
+actual difference between these two means. As beta is the probability that
+you don't detect an existing difference, it will quite logically be high if
+the existing difference is small, and low if this difference is large.
+
+
+&gt;<i> However,
+</I>&gt;<i> if beta is sufficiently low, when you fail to reject the null
+</I>&gt;<i> hypothesis, you can actually go so far as to accept the null
+</I>&gt;<i> hypothesis, since the chance of Type II error is sufficiently low.
+</I>
+I think there's a problem with the way you express your null.
+Null hypotheses usually don't sound like &quot;A and B are not significantly
+different&quot;, but rather like &quot;A and B are identical&quot;...which is why you can't
+accept them.
+If you (or your test) can detect a clear difference between A and B, you
+will reject the null hypothesis. But when you can't see a difference, this
+does not (never!) mean that there is none... Possibly the difference is
+there, but it's just too small and you didn't look hard enough ; it's
+always possible to look harder.
+
+What you can do, of course, is to check the values of beta for departures
+from the null hypothesis small enough that you would consider them
+unimportant in the context of the problem you are studying. Then you could
+possibly accept that A and B, if they differ, do it &quot;negligibly&quot;. But this
+would not involve accepting the null hypothesis.
+
+
+Regarding your original question, though I'm afraid I'm very unfamiliar with
+the practice of KH or SH tests, you might perhaps find the following paper
+interesting :
+
+Aris-Brosou S. (2003) : Least and most powerful phylogenetic tests to
+elucidate the origin of the seed plants in presence of conflicting signals
+under misspecified models. Syst. Biol. 52 (6) : 781 - 793.
+
+In case you don't have access to this journal, a preprint can be downloaded
+from here :
+<A HREF="http://statgen.ncsu.edu/stephane/papers.htm">http://statgen.ncsu.edu/stephane/papers.htm</A>
+
+
+'Hope this is of some help...
+Cheers,
+Laurent
+
+
+Laurent Raty
+<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">l.raty at skynet.be</A>
+Brussels, Belgium
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="091928.html">Statistical power of KH and SH tests?
+</A></li>
+	<LI>Next message: <A HREF="091929.html">Statistical power of KH and SH tests?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#91934">[ date ]</a>
+              <a href="thread.html#91934">[ thread ]</a>
+              <a href="subject.html#91934">[ subject ]</a>
+              <a href="author.html#91934">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

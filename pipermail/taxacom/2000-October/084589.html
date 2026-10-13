@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Separating Nomenclature and Classification (use of rank the
+              rank
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2000-October/084589.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Separating Nomenclature and Classification (use of rank the
+              rank</H1>
+    <B data-pagefind-meta="author">Jim Croft</B>
+    jrc at ANBG.GOV.AU<BR>
+    <I data-pagefind-meta="date">Sat Oct  7 09:44:35 CDT 2000</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="084593.html">Separating Nomenclature and Classification
+</A></li>
+        <LI>Next message: <A HREF="084591.html">Separating Nomenclature and Classification (use of rank the
+              rank
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#084589">[ date ]</a>
+              <a href="thread.html#084589">[ thread ]</a>
+              <a href="subject.html#084589">[ subject ]</a>
+              <a href="author.html#084589">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2000</span><!--beginarticle-->
+<PRE>&gt; During the preparation of the Prometheus taxonomic model (Pullan
+&gt; et al.,Taxon 49(1): 55-75 (2000)) we thrashed out these issues, and
+&gt; resulted in a model that truely separated nomenclature from
+&gt; classification. Thomas Lammers rightly comments that these are
+&gt; distinct and should be treated as such.
+
+The situation is actually a little more complicated that this when
+dealing with plant names in botanical databases, especially those that
+have to be used for the real purposes we apply names to organisms, such
+as managing bilogical collections, etc.
+
+We need the names themselves and all their components (ie. nomenclature)
+and publication details, whether the name is currently useable or what
+is the useable equivalent (ie. taxonomy, synonymy), where the name fits
+in the scheme of things (ie. classification, with alternatives), when
+the taxon fits in the scheme of things (ie. phylogeny)
+
+And for collections management, we need to know where we ended up
+putting the bloody thing on the shelves (which may or may not
+correspond to any of the above).
+
+&gt; We also arrived at the same decision as IPNI, in that names below
+&gt; the rank of species are, for nomenclatural purposes, trinomials,
+&gt; irrespective of how they were published. Susan Farmer gave more
+&gt; details on this, again confirmed by Thomas Lammers.
+
+We too arrived at this decision for the databases at the Australian
+National herbarium and Australian National Botanic Gardens, (and fed
+this ideology into the IPNI database design process) relieved that
+the International Code of Botanical of Botanical Nomenclature had at
+last done something useful in an informatics sense and provided a
+mechanism and justification to simplify data models, application
+design, information management and the tasks to be done in the
+herbarium.
+
+&gt; In Prometheus we link the infraspecific epithet to the specific
+&gt; epithet, which itself is linked to the generic name (these are termed
+&gt; 'name elements' in our model). This three-level hierarchy necessary
+&gt; for the construction (concatination) of the name, and is the only
+&gt; hierarchy present on the nomenclatural side.
+
+Yep...  this seemed the way to go...
+
+Impressed the the elegance of this solution, the wisdom of the crafters
+of the Code, the imprimatur of the combined might of the international
+botanical community, and the unquestionable authority of the published
+Code, we removed all infraspecific ranks and data from the database and
+presented this remarkable and succinct labour-saving device to the
+users.
+
+Well, rather than congratulating us and bestowing us with accolades and
+unimaginable wealth, the users were outraged and demonstrated that they
+were indeed motherless luddites with no appreciation for beauty or
+truth.  These followers of Onan claimed that they could no longer find
+genus X species Y subspecies A variety B subvariety C forma D subforma E
+in the collection.  It was pointed out that under the Code that this was
+the same as genus X species Y subforma E and could be filed as such and
+found just as easily.  Rather than change our database, they should
+rearrange their collection.
+
+But they would not have it.  And we put a complete infraspecific
+hierachy back in.  And now the database and herbarium are both a
+complicated, inconsistent and partially populated mess, and botanists
+continue to have a lot of meaningless trivia to talk about over morning
+tea.  But apparently this is good, because real life is like that...
+
+&gt; Other links (to other
+&gt; infraspecific names, to infra generic names, or to names above
+&gt; genus) purely convey classification information. This data SHOULD
+&gt; NOT be included in the nomenclatural side (even ascribing a name
+&gt; to a family), but represented in the classification side of the
+&gt; database.
+
+IPNI tries hard to avoid making statements of taxonomy and
+classification (even though this is what most users want) because the
+tasks involved would be completely overwhelming.  But simply assigning
+genera to families so we can find them is taxonomic and classificatory
+so it is difficult to be totally pure in this area.
+
+&gt; The exception to this is that there needs to be a
+&gt; nomenclatural link the highest rank (to the kingdom etc.) to
+&gt; indicate which code you should be using, ICBN, ICZN, etc. So to
+&gt; answer Curtis Clark, the various ranks of infraspecific 'names' are
+&gt; not hierarchic for nomenclatural purposes, but they should be used
+&gt; in a hierarchy when constructing a classification.
+
+This always give me a headache and I am sure the problem is the binomial
+system, but I am not sure why, nor what to do about it.  Coming down the
+hierarchy, there seems to be an illogical paradigm shift just after you
+hit the genus...
+
+Ah, heck... it is just a name...
+
+-- jim
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="084593.html">Separating Nomenclature and Classification
+</A></li>
+        <LI>Next message: <A HREF="084591.html">Separating Nomenclature and Classification (use of rank the
+              rank
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#084589">[ date ]</a>
+              <a href="thread.html#084589">[ thread ]</a>
+              <a href="subject.html#084589">[ subject ]</a>
+              <a href="author.html#084589">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

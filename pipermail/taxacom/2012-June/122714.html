@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Does the species name have to change when it
+	moves	genus?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2012-June/122714.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Does the species name have to change when it
+	moves	genus?</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at bishopmuseum.org<BR>
+    <I data-pagefind-meta="date">Tue Jun 19 15:02:30 CDT 2012</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="122713.html">[Taxacom] Does the species name have to change when it moves
+	genus?
+</A></li>
+        <LI>Next message: <A HREF="122715.html">[Taxacom] LSID versus names
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#122714">[ date ]</a>
+              <a href="thread.html#122714">[ thread ]</a>
+              <a href="subject.html#122714">[ subject ]</a>
+              <a href="author.html#122714">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2012</span><!--beginarticle-->
+<PRE>&gt; I'm not actually suggesting we change the code, merely
+&gt; the convention to automatically  change the genus name
+&gt; if a species moves.
+
+I never said anything about changing the Code.  I was talking about 250
+years of conventional practice.
+
+&gt; Trivial in the sense that if we had all the information on names
+&gt; (synonyms included) linked to types we could resolve synonyms
+&gt; computationally, but we don't, certainly not at the scale of the
+&gt; 10x5 - 10x6 names that databases such as NCBI taxonomy and
+&gt; GBIF deal with. Yes, in principle, it is tractable, but why do
+&gt; we contribute to creating the situation in the first place?
+
+The &quot;situation&quot; is only as such because of the advent of computer systems.
+Prior to computers, people had no issue with it.  Now that we have
+technology that lets us mine vast volumes of historical literature, the
+situation appears problematic because we are now doing at a much larger
+scale something that hasn't really been done before, other than by Sherborn,
+Neave, Linneaus, and a few others.
+
+I've always maintained that this period in history -- starting in the mid-
+to late 1990s and ending probably around 2020-2025 -- is a somewhat awkward
+one because it represents the transition between a centuries-long era when
+paper was the primary mode of information dissemination and documentation
+among humans, and the era when information is mostly documented and
+disseminated via electronic signals.  It's awkward in general because not
+all systems are moving in parallel and at the same pace, so various systems
+get out of phase (e.g., the desire by modern taxonomists to publishe new
+scientific names in electronic journals, vs. -- until recently -- the
+requirements of the various Codes).  Specific to this topic, the awkwardness
+relates to the fact that we have computer systems that index large numbers
+of taxonomic name-strings (messy things, that don't always make it clear
+which binomials are homotypic), but don't yet have computer systems that
+index large numbers of taxonomic name &quot;objects&quot; (where homotypic binomials
+are easily identified -- plus much, much more).  By about 2050 or so, this
+period of awkwardness will warrant only a footnote.
+
+&gt; Personally I suspect the taxon concept issue isn't going to be worth
+&gt; the effort expended, unless tackled with some clever tools for inferring
+&gt; context from citation, etc. it's simply unscalable.
+
+I'm not so sure about that.  Consider that we're rapidly shifting from
+paper-based publication to electronic publication.  To make a major change
+in practice in how we render text strings to human eyeballs (i.e., your
+proposal to stop changing binomial combinations so we can maintain more
+stable text-string labels) seems like using a Ferrari to drive down the
+block to the local grocery store a little faster than the Toyota used to get
+us there.  I imagine a world (not hard to imagine, really -- given journals
+like ZooKeys) where the text string name is something just to render on the
+computer monitor for the benefit of human eyeballs.  Behind that text-string
+name would be the necessary electronic link (or links) to the taxonomic
+object, complete with all the metadata any taxonomist would ever want (type
+specimens, concept definitions, literature citations, historical trends in
+usages, etc., etc., etc.).
+
+You're talking about changing how we do things going forward, right?  Why
+not focus on the brave new world of electronic publication, where the
+included information is not limited to what is seen by the human eyeballs,
+and where all this stuff can be harvested seamlessly via unambiguous GUIDs
+(rather than via crude OCR and fuzzy text matching of messy text-string
+names)?  To me, that's where the answer lies going forward.  Not putting a
+band-aid on a centuries-old practice that is still trying to use text-string
+names as unique identifiers.
+
+&gt; Why not focus on what is tractable and will add immediate value?
+
+It would appear that you and I have different ideas about what is tractable
+(or maybe we define the word differently?)
+
+&gt; I'm not proposing a change in how we cite names,
+
+Yes, you are.  Since Linnaeus, we have cite species names in the form of a
+species epithet preceded by a genus name, and the genus name is selected to
+reflect the classification of the epithet.  You're proposing that we strip
+the classification information from the binomial, and treat it as though
+it's a single text string that happens to include a space within it.  That's
+a change in how we cite names.  Maybe we're operating on different
+definitions of the word &quot;cite&quot;?
+
+&gt; and suggestions that embed more semantics in names (such as author, date,
+first name)
+&gt; are just asking for trouble <A HREF="http://bit.ly/KQ6o46">http://bit.ly/KQ6o46</A>
+
+Perhaps.  But why not instead leverage the move towards electronically
+published works by embedding GUIDs (which are themselves hidden from human
+eyeballs), rather than continue to overload the feeble text string with more
+information than it's capable of representing?
+
+&gt; Citing a reference for &quot;what I mean by&quot; is useful, but I'd be
+&gt; happier if that was linked to actual data.
+
+We're in agreement on this one -- the key word being &quot;linked&quot;.
+
+&gt; Ironically, if you read the tea leaves the way I do, we are
+&gt; moving to a biodiversity science without names, where
+&gt; specimens will be the unit of choice, and taxa will be
+&gt; computational inferences, not vague assertions supported
+&gt; by a citation at best. But that's another story...
+
+...and I wouldn't necessarily disagree with that story.  So in that context
+(if you really believe that's where it's heading), why try to change one of
+the core principles of binomial nomenclature right at the twilight of its
+tenure in science?
+
+Aloha,
+Rich
+
+
+Richard L. Pyle, PhD
+Database Coordinator for Natural Sciences
+Associate Zoologist in Ichthyology
+Dive Safety Officer
+Department of Natural Sciences, Bishop Museum
+1525 Bernice St., Honolulu, HI 96817
+Ph: (808)848-4115, Fax: (808)847-8252
+email: deepreef at bishopmuseum.org
+<A HREF="http://hbs.bishopmuseum.org/staff/pylerichard.html">http://hbs.bishopmuseum.org/staff/pylerichard.html</A>
+
+Note: This disclaimer formally apologizes for the disclaimer below, over
+which I have no control.
+
+
+
+
+This message is only intended for the addressee named above.  Its contents may be privileged or otherwise protected.  Any unauthorized use, disclosure or copying of this message or its contents is prohibited.  If you have received this message by mistake, please notify us immediately by reply mail or by collect telephone call.  Any personal opinions expressed in this message do not necessarily represent the views of the Bishop Museum.
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="122713.html">[Taxacom] Does the species name have to change when it moves
+	genus?
+</A></li>
+        <LI>Next message: <A HREF="122715.html">[Taxacom] LSID versus names
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#122714">[ date ]</a>
+              <a href="thread.html#122714">[ thread ]</a>
+              <a href="subject.html#122714">[ subject ]</a>
+              <a href="author.html#122714">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> `Dichotomy', DELTA, and INTKEY
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1995-March/015786.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">`Dichotomy', DELTA, and INTKEY</H1>
+    <B data-pagefind-meta="author">Mike Dallwitz</B>
+    miked at ENTO.CSIRO.AU<BR>
+    <I data-pagefind-meta="date">Wed Mar 22 10:06:43 CST 1995</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="098937.html">Experiences with teaching DELTA
+</A></li>
+        <LI>Next message: <A HREF="051578.html">`Dichotomy', DELTA, and INTKEY
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#015786">[ date ]</a>
+              <a href="thread.html#015786">[ thread ]</a>
+              <a href="subject.html#015786">[ subject ]</a>
+              <a href="author.html#015786">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1995</span><!--beginarticle-->
+<PRE>                                                                 22 March 1995
+
+&gt; From: Renaud Fortuner &lt;fortuner at math.u-bordeaux.fr&gt;
+&gt;
+&gt; Rigidity of Delta: I was thinking of the way the characters are defined,
+&gt; this cumbersome coding in particular, which looks as simple as an English
+&gt; zip code!
+
+Here's an example.
+
+    #4. culms/
+           1. woody and persistent/
+           2. herbaceous/
+
+This differs from what you would ordinarily write only in the extra symbols
+`#' and `/', which are there to allow programs to identify the components of
+the character. (A person can do this without the extra symbols, by
+understanding the meaning.)
+
+&gt; You say : By `dichotomous' I presume you mean `deterministic' or
+&gt; `non-probabilistic'.
+&gt;
+&gt; No, not really, because any identification system IS probabilistic. What you
+&gt; call deterministic would be a probabilistic system with a 100% probability.
+&gt;
+&gt; Identification is always a probabilistic process. Unless you are a pompous
+&gt; egotistic fool, you can never be 100% sure that you have correctly
+&gt; identified a species. (In the previous sentence, the word &quot;never&quot; should be
+&gt; taken with a probability of 95.4% as there are cases when you ARE 100% sure,
+&gt; e.g., when you identify H.sapiens sapiens Q although there are times when I
+&gt; wonder). I prefer a similarity program which tells me that the unknown is
+&gt; 100% similar to species A and 99% similar to species B to a key which tells
+&gt; me that it IS species A (with species B 50 lines below).
+&gt;
+&gt; No, by dichotomous key I mean a key which works by dichotomy (in logic,
+&gt; dividing a class into 2 opposed subclasses), a key which asks me if the
+&gt; flowers are red or white, and too bad if my specimen is pink or if my
+&gt; population includes 75% red flowers and 25% white ones (Mendel was there).
+
+OK. Let's try to agree on terminology first.
+
+A deterministic procedure is one in which the only probabilities considered
+are 0 and 1. A probabilistic procedure is one which can deal with any
+probabilities. Of course, I intend these terms to apply to the algorithms used
+by the program, not to the results achieved by the user.
+
+I would like to make it clear to non-users that DELTA can deal with
+non-dichotomous characters - multistate characters, numeric characters, and
+text `characters'. Renaud is referring to dichotomous identification
+procedures, in which, at each step, the remaining taxa are divided into those
+which match the specimen, and those which don't.
+
+INTKEY is dichotomous in this sense, but this does not affect its usefulness
+for the non-probabilistic data which it handles. Let's consider the above
+example of flower colour, and assume that the character is
+
+    #6. flowers/
+           1. white/
+           2. blue/
+           3. red/
+
+Depending on the circumstances, the data might be coded in one of these ways.
+
+    6,1/3 (i.e. character 6, state 1 or state 3)
+    6,1&lt;25%&gt;/2&lt;75%&gt;
+    6,1-3&lt;pink&gt;
+    6,1-3&lt;depending on soil acidity&gt;
+    6,1&amp;3&lt;spotted&gt;
+    6,1/1-3&lt;pink&gt;/1&amp;3&lt;spotted&gt;/3
+    etc.
+
+These variants are (currently) useful only for generating natural-language
+descriptions - they are all treated the same in INTKEY. (If the distinctions
+are important for indentification, you should define a separate character
+state for `pink', and probably a separate character for `spotted'.)
+
+Again depending on circumstances, the INTKEY user attempting to identify a
+specimen from this taxon might enter 6,1 or 6,3 or 6,1/3. (I am putting it
+this way for brevity; it would normally be done via menus.) The first would
+eliminate taxa coded 6,2 or 6,3 or 6,2/3. The last would eliminate only taxa
+coded 6,2, but is the safest option, and should be used if the user is in any
+doubt.
+
+INTKEY accomodates errors by the user AND errors in the data by means of an
+`error tolerance' parameter, which defaults to 0. Taxa are eliminated as
+possible identifications only if they differ from the specimen in more
+characters than the currently set tolerance. The tolerance may be altered
+manually (up and down) during an identification, and, if the `autotolerance'
+feature is set (as it is in the `simplified' and `automatic' modes of the
+Windows INTKEY), the program automatically changes the value as appropriate.
+By this means, the user can make any number of errors, yet still go on to a
+correct identification, provided the correct information eventually outweighs
+the incorrect. At any stage, the user has access to the number of differences
+between any taxon and the specimen, and the actual character values which have
+given rise to these differences. Surely this is more helpful than knowing that
+a taxon is `99% similar' to the specimen.
+
+Mike Dallwitz                                  Internet md at ento.csiro.au
+CSIRO Division of Entomology                   Fax +61 6 246 4000
+GPO Box 1700, Canberra ACT 2601, Australia     Phone +61 6 246 4075
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="098937.html">Experiences with teaching DELTA
+</A></li>
+        <LI>Next message: <A HREF="051578.html">`Dichotomy', DELTA, and INTKEY
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#015786">[ date ]</a>
+              <a href="thread.html#015786">[ thread ]</a>
+              <a href="subject.html#015786">[ subject ]</a>
+              <a href="author.html#015786">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

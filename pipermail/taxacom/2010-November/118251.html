@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Inappropriate accuracy of locality data
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Inappropriate%20accuracy%20of%20locality%20data&In-Reply-To=%3C4CF411F7.2050207%40nmsu.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="118245.html">
+   <LINK REL="Next"  HREF="118272.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2010-November/118251.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Inappropriate accuracy of locality data</H1>
+    <B data-pagefind-meta="author">Patrick Alexander</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Inappropriate%20accuracy%20of%20locality%20data&In-Reply-To=%3C4CF411F7.2050207%40nmsu.edu%3E"
+       TITLE="[Taxacom] Inappropriate accuracy of locality data">paalexan at nmsu.edu
+       </A><BR>
+    <I data-pagefind-meta="date">Mon Nov 29 14:49:59 CST 2010</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="118245.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+        <LI>Next message: <A HREF="118272.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#118251">[ date ]</a>
+              <a href="thread.html#118251">[ thread ]</a>
+              <a href="subject.html#118251">[ subject ]</a>
+              <a href="author.html#118251">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2010</span><!--beginarticle-->
+<PRE>
+I agree in general principle, but there are some minor errors here.
+
+Tom Schweich wrote:
+&gt;<i> I use a Garmin 76csx for location data collection.  It's native 
+</I>&gt;<i> geographic system is WGS 1984 and it collects in decimal degrees.   I 
+</I>&gt;<i> suspect this is true of nearly all common GPS receivers we use in the 
+</I>&gt;<i> sciences.   Yes, the Garmin 76 can report location in 
+</I>&gt;<i> degrees-minutes-seconds, or in meters using a UTM system.  However, all 
+</I>&gt;<i> of those other numbers are calculated from the GPS' native coordinates 
+</I>&gt;<i> via algorithms that may be simplified and give less accurate results 
+</I>&gt;<i> than the native system.  You're adding error to your data.    Secondly, 
+</I>&gt;<i> if some wants to use your data in a different system it will now have 
+</I>&gt;<i> been transformed twice: once by your GPS and once by your user.  Each 
+</I>&gt;<i> transformation has the potential of adding error.
+</I>&gt;<i>   
+</I>
+Translating from degrees-minutes-seconds to decimal degrees isn't a 
+lossy approximation, it's just simple arithmetic.  For instance, the 
+formula to get from DMS to DD is just D + M/60 + S/3600.  If you don't 
+trust your GPS with such simple math, you shouldn't be trusting it to 
+give you a location in the first place!
+
+Translating to and from UTM, on the other hand, is a more complicated 
+procedure.  I don't know if it is reasonable to expect error to be added 
+by the process, but it seems plausible.
+
+&gt;<i> Always keep the datum with the original collection data.  In my case, 
+</I>&gt;<i> it's WGS 1984.   In North America, some like to use NAD 1983.  They're 
+</I>&gt;<i> both good systems.  At Mono Lake, though, the same coordinates in WGS 
+</I>&gt;<i> 1984 and NAD 1983 are 86 meters apart.  If the location is simply &quot;Mono 
+</I>&gt;<i> Lake,&quot; then it's no big deal.  However, if the location is the highly 
+</I>&gt;<i> faulted terrain south of the lake, the 86 meter difference could easily 
+</I>&gt;<i> put you in the wrong drainage.
+</I>&gt;<i>   
+</I>
+Specifying the datum is certainly an important point that is often 
+missed; most herbarium specimens I have seen that include UTM or 
+lat/long coordinates do not specify the datum and have relatively high 
+uncertainty as a result.  However, NAD83 &amp; WGS84 are for most purposes 
+interchangeable.  The difference between the two is on the order of a 
+meter at most, and most of us aren't using GPS receivers that are 
+accurate enough to ever tell the difference.  The problem in the US is 
+typically whether NAD 27 or NAD83/WGS84 is being used.  The difference 
+here is often on the order of 86 meters.
+
+Patrick Alexander
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="118245.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+	<LI>Next message: <A HREF="118272.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#118251">[ date ]</a>
+              <a href="thread.html#118251">[ thread ]</a>
+              <a href="subject.html#118251">[ subject ]</a>
+              <a href="author.html#118251">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

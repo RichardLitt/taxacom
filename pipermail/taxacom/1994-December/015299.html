@@ -1,0 +1,238 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Desirable attributes for interactive identification programs
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Desirable%20attributes%20for%20interactive%20identification%20programs&In-Reply-To=%3Cmailman.1727.1157126640.2564.taxacom%40mailman.nhm.ku.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="051095.html">
+   <LINK REL="Next"  HREF="051091.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1994-December/015299.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Desirable attributes for interactive identification programs</H1>
+    <B data-pagefind-meta="author">Mike Dallwitz</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Desirable%20attributes%20for%20interactive%20identification%20programs&In-Reply-To=%3Cmailman.1727.1157126640.2564.taxacom%40mailman.nhm.ku.edu%3E"
+       TITLE="Desirable attributes for interactive identification programs">miked at ENTO.CSIRO.AU
+       </A><BR>
+    <I data-pagefind-meta="date">Wed Dec 14 16:40:04 CST 1994</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="051095.html">Desirable attributes for interactive identification programs
+</A></li>
+        <LI>Next message: <A HREF="051091.html">Desirable attributes for interactive identification programs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#15299">[ date ]</a>
+              <a href="thread.html#15299">[ thread ]</a>
+              <a href="subject.html#15299">[ subject ]</a>
+              <a href="author.html#15299">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>1994</span><!--beginarticle-->
+<PRE>                                                               14 December 1994
+
+
+
+Would anyone be prepared to do comparative reviews of some of the interactive
+identification programs now available? The reviews could be published on
+Taxacom and/or in the DELTA Newsletter.
+
+As a basis for such reviews, I am appending a list of attributes which I
+consider desirable for interactive identification and information retrieval
+programs. The list probably has a bias towards our own program, INTKEY, and I
+would be happy to make any additions necessary to allow good features of other
+programs to be recorded.
+
+Please post any comments to <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">delta-l at uvvm.uvic.ca</A> or Taxacom. I will later post
+a revised list and consolidated discussion on Taxacom.
+
+Mike Dallwitz                                  Internet <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">md at ento.csiro.au</A>
+CSIRO Division of Entomology                   Fax +61 6 246 4000
+GPO Box 1700, Canberra ACT 2601, Australia     Phone +61 6 246 4075
+
+
+
+            Desirable Attributes for Interactive Identification and
+                         Information Retrieval Systems
+
+                        M. J. Dallwitz  14 December 1994
+
+
+The possible scores are usually `Yes', `Partial', and `No'.
+
+Error tolerance. The ability to reach a correct identification after errors
+have been made, or if there are errors in the data.
+
+Unrestricted character use. The absence of restrictions on the order in which
+characters can be used (apart from restrictions imposed by character
+dependencies - see below).
+
+`Best' characters. Whether the program can advise on the most suitable
+characters for use at any stage of an identification. `Partial' indicates a
+lack of flexibility in this area, usually owing to the recommendations being
+built into the data, as in a key or rule-based expert system.
+
+Multiple state selection. Whether the user can specify uncertainty by entering
+more than one state value, or a range of numeric values.
+
+Character deletion/changing. Whether characters used in an identification can
+be removed, or their values changed. `Partial' indicates that removal is
+possible only in the reverse order of use.
+
+Character weighting. Whether character weights can be used in the calculation
+of `best' characters. `Partial' indicates that higher weights always imply
+`better' characters, regardless of other considerations.
+
+Text characters. Whether free-text information about taxa can be stored and
+searched.
+
+Numeric characters. Whether numeric characters can be used directly (without
+dividing them into ranges.
+
+Gaps for integer numeric characters. Whether recorded values for integer
+numeric character can contain gaps, e.g. `5 or 10' distinguishable from `5 to
+10'.
+
+Uncertainty ranges. Whether single numeric values in the original data can be
+treated as ranges for identification purposes. `Partial' indicates that the
+transformation is not under the control of the interactive user (as in the
+ABSOLUTE/PERCENTAGE ERROR mechanisms in CONFOR/INTKEY).
+
+Inapplicable/unknown. Whether inapplicable values are distiguished from unknown
+values.
+
+Control of value matching. Whether the user has control over whether
+overlapping, unknown, and inapplicable values are deemed to match other values.
+`Partial' indicates limited control, e.g. `identification' vs. `information
+retrieval' settings.
+
+Character dependencies. Whether the program is aware of character dependencies,
+i.e., characters which are inapplicable when other characters take certain
+values.
+
+No dependency restrictions. Whether there are restrictions on the order in
+which dependent/controlling characters may be used.
+
+Keywords. Whether there is a mechanism for referring to subsets of the
+characters and taxa. `Partial' indicates that such subsets cannot be defined by
+the user (i.e. are built into the system).
+
+Character notes or glossaries. Whether extensive text to aid interpretation of
+characters can be conveniently available within the system.
+
+Information retrieval. Whether the system can be used for information retrieval
+(e.g. displaying descriptions, finding all taxa which have certain combinations
+of attributes).
+
+Differences between taxa. Whether the program can find the differences between
+members of a set of taxa. `Partial' indicates that the set must contain only 2
+taxa.
+
+Similarities between taxa. Whether the program can find the similarities
+between members of a set of taxa.
+
+Diagnostic descriptions. Whether the program can find diagnostic descriptions.
+`Partial' indicates inability to distiguish between taxon and specimen
+diagnostic descriptions, or inability to restrict the choice of characters to
+those not used in the current identification.
+
+Character-value distributions. Whether the program can display the distribution
+of character values within a set of taxa.
+
+Global restriction to subsets. Whether it is possible to specify subsets of
+characters and taxa to which all subsequent operations will be restricted.
+
+Local restriction to subsets. Whether it is possible to specify subsets of
+characters and taxa for the operation of a single command.
+
+Searching the character list. Finding text strings in the character list.
+
+Illustrations. Whether illustrations of character and taxa can be displayed.
+
+Flexible display of illustrations. Whether illustrations of any size can be
+scaled, scrolled, repositioned, and displayed simultaneously.
+
+State selection from character illustrations. Whether character state values
+can be selected from illustration screens during identification.
+
+Text on illustrations. Whether text can be superimposed on illustrations
+(instead of being built into the illustrations).
+
+Import DELTA format. Whether DELTA-format data can be used to create the
+interactive system.
+
+Export DELTA format. Whether DELTA-format data can be exported from the
+interactive system.
+
+Links with description writing. Whether publication-quality descriptions can be
+generated from the same data that are used to construct the identification
+system.
+
+Links with key generation. Whether conventional keys can be generated from the
+same data that are used to construct the identification system.
+
+Links with classification. Whether cladistic and phenetic analyses can be
+carried out from the same data that are used to construct the identification
+system.
+
+Command files or macros. Whether there is a mechanism for storing and repeating
+a series of operations.
+
+Log files. Whether it is possible to create a file showing the history (input
+and output) of a session.
+
+Data output. Whether it is possible to output program results in forms suitable
+for input to other programs.
+
+Online help. Whether the program has complete, built-in help. `Partial'
+indicates that the help is not context sensitive.
+
+External program text. Whether the program text (commands, help, messages,
+etc.) is external to the program, allowing easy creation and use of different
+language versions.
+
+Maximum field lengths. Limits (if any) on lengths of text and other fields
+(e.g. taxon names, text of characters, character notes, number of character
+states).
+
+Maximum size of data. Maximum number of characters and taxa.
+
+Memory requirements. Program memory requirements (including dependence on data
+size, if applicable).
+
+Execution speed. Execution times of representative operations on a reasonably
+large data set (e.g. 200 characters, 400 taxa).
+
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="051095.html">Desirable attributes for interactive identification programs
+</A></li>
+	<LI>Next message: <A HREF="051091.html">Desirable attributes for interactive identification programs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#15299">[ date ]</a>
+              <a href="thread.html#15299">[ thread ]</a>
+              <a href="subject.html#15299">[ subject ]</a>
+              <a href="author.html#15299">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

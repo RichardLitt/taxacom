@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> FASTER TREEFINDER
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2004-November/092779.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">FASTER TREEFINDER</H1>
+    <B data-pagefind-meta="author">Gangolf Jobb</B>
+    gangolf at TREEFINDER.DE<BR>
+    <I data-pagefind-meta="date">Thu Nov 18 10:51:16 CST 2004</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="092782.html">The nature of cladistics [...]
+</A></li>
+        <LI>Next message: <A HREF="092780.html">The nature of cladistics [was: Whooper; Canadian geese
+              split; paraphyly]
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092779">[ date ]</a>
+              <a href="thread.html#092779">[ thread ]</a>
+              <a href="subject.html#092779">[ subject ]</a>
+              <a href="author.html#092779">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2004</span><!--beginarticle-->
+<PRE>Here is the new world's fastest maximum likelihood phylogeny program on a PC:
+
+www.treefinder.de
+
+TREEFINDER has a new tree search algorithm. In my simulations, the new
+TREEFINDER is three times faster than PHYML, which is the second fastest
+program. The results are in the manual.
+
+Tree calibration has been extended. Now, TREEFINDER supports multiple
+calibration points and time intervals. One can specify time boundaries for
+tips as well as for internal nodes in a tree. I have invented and added two
+new flavours of rate smoothing to overcome some problems with Sanderson's
+NPRS: The Global Rate Minimum Deformation method (GRMD), and the Local Rate
+Minimum Deformation method (LRMD).
+
+I have also improved the utility to check for compositional equilibrium in a
+sequence alignment. In addition to computing p-values for individual
+sequences, the tool now visualizes the distribution of base frequencies over
+sites as well as over species.
+
+Maximum likelihood optimization under the molecular clock is no longer
+supported. In my opinion, the underlying assumtion of a constant rate is
+unrealistic and not really worth the huge effort on the algorithmic side.
+For calibration purposes, rate smoothing can achieve the same much easier
+and has the merit of distinguishing clearly between the time scale and the
+distance scale. Moreover, one can incorporate explicit assumptions about the
+rate evolution into the objective function. If you feel that my opinion is
+wrong, you may try convincing me to re-implement the clock constraint in a
+future release.
+
+As usual, the program is available for Windows, Linux, MacOS X and Solaris.
+
+Did you know that a German scientist earns less than a worker in car
+industry, but has studied for years? Obviously, cars are much more useful
+than most of science. Please note, that I am currently not being paid for my
+work. I am looking for a position in Munich, where I can continue the
+TREEFINDER project.
+
+Cheers,
+Gangolf
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="092782.html">The nature of cladistics [...]
+</A></li>
+        <LI>Next message: <A HREF="092780.html">The nature of cladistics [was: Whooper; Canadian geese
+              split; paraphyly]
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092779">[ date ]</a>
+              <a href="thread.html#092779">[ thread ]</a>
+              <a href="subject.html#092779">[ subject ]</a>
+              <a href="author.html#092779">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

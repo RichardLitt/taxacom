@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Updated Species Occurrence RDF Examples, Dynamic Browsing of Records via Pivot Interface
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Updated%20Species%20Occurrence%20RDF%20Examples%2C%0A%20Dynamic%20Browsing%20of%20Records%20via%20Pivot%20Interface&In-Reply-To=%3CAANLkTimiaV_T6aF1TqN7754gwGC67eaUTF1XbGZVTDSE%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="119296.html">
+   <LINK REL="Next"  HREF="119302.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2011-March/119298.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Updated Species Occurrence RDF Examples, Dynamic Browsing of Records via Pivot Interface</H1>
+    <B data-pagefind-meta="author">Peter DeVries</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Updated%20Species%20Occurrence%20RDF%20Examples%2C%0A%20Dynamic%20Browsing%20of%20Records%20via%20Pivot%20Interface&In-Reply-To=%3CAANLkTimiaV_T6aF1TqN7754gwGC67eaUTF1XbGZVTDSE%40mail.gmail.com%3E"
+       TITLE="[Taxacom] Updated Species Occurrence RDF Examples, Dynamic Browsing of Records via Pivot Interface">pete.devries at gmail.com
+       </A><BR>
+    <I data-pagefind-meta="date">Fri Mar 11 18:36:42 CST 2011</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="119296.html">[Taxacom] Postdoc: Phylogeny of the fern genus Polystichum	(Dryopteridaceae)
+</A></li>
+        <LI>Next message: <A HREF="119302.html">[Taxacom] Updated Species Occurrence RDF Examples, Dynamic Browsing of Records via Pivot Interface
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#119298">[ date ]</a>
+              <a href="thread.html#119298">[ thread ]</a>
+              <a href="subject.html#119298">[ subject ]</a>
+              <a href="author.html#119298">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2011</span><!--beginarticle-->
+<PRE>I have new occurrence records RDF examples that include the identified TDWG
+BioBlitz 2010 records along with my earlier examples.
+
+In the listing of the occurrence records here
+<A HREF="http://ocs.taxonconcept.org/ocs/index.html">http://ocs.taxonconcept.org/ocs/index.html</A>
+
+The occurrence HTML and RDF are linked at the end of each row.
+
+The species names on the table link to the species concepts (the most
+interesting thing there is the RDF structure and LOD representations)
+
+Some maybe confused as to why these are not in DarwinCore.
+
+I thought I should be clear that my point is not that there is something
+wrong with the DarwinCore for what it is good for, it is that I think we
+should develop some additional form that works well as LOD data.
+
+Perhaps expressed after processing by GBIF?
+
+Here is a possible data flow that I think makes sense original provider
+(DarwinCore) =&gt; GBIF (cleaning etc.) =&gt;
+
+ =&gt; Cleaned Darwin Core
+ =&gt; Some LOD friendly format
+
+Also my web applications linked to below just serve as a framework for
+exposing the data structure.
+
+I would *not* suggest that my occurrence example  web app is ideal for
+showing / editing BioBlitz records.
+
+The idea I am trying to get across is meshups and possibilities of
+structured LOD data
+
+For example this view from Sig.ma
+<A HREF="http://sig.ma/search?pid=ba0db41b7772e1b06231a8975dcf903b">http://sig.ma/search?pid=ba0db41b7772e1b06231a8975dcf903b</A>
+
+&lt;<A HREF="http://sig.ma/search?pid=ba0db41b7772e1b06231a8975dcf903b">http://sig.ma/search?pid=ba0db41b7772e1b06231a8975dcf903b</A>&gt;I recently
+changed the occurrence RDF slightly and ID'd two previously unidentified
+wasps.
+
+<A HREF="http://ocs.taxonconcept.org/ocs/9f0fc9c7-a522-44d8-a0c3-327fea9351f0.html">http://ocs.taxonconcept.org/ocs/9f0fc9c7-a522-44d8-a0c3-327fea9351f0.html</A>
+
+<A HREF="http://ocs.taxonconcept.org/ocs/e08c6f06-ee59-4f2b-8f46-a3f66a65431e.html">http://ocs.taxonconcept.org/ocs/e08c6f06-ee59-4f2b-8f46-a3f66a65431e.html</A>
+
+Here are two bit.ly links to MS Pivot data browsing examples (You will need
+MS Silverlight installed for these to work)
+* I have attached example screenshots below to give you and idea of what
+these look like if the links below don't work for you.
+
+This interface allows you to dynamically browse the data. (Sometimes the
+images load slowly)
+
+   Map based view <A HREF="http://t.co/GROIlkH">http://t.co/GROIlkH</A>
+
+
+Image based view <A HREF="http://t.co/5Y17dDp">http://t.co/5Y17dDp</A>
+
+The entire dataset is described with a void file and CKAN description
+<A HREF="http://ckan.net/package/taxonconcept">http://ckan.net/package/taxonconcept</A>
+
+I am sorry if some had problems with the earlier Pivot SPARQL query.
+
+The bit.ly link runs a live SPARQL query on URIburner.com which feeds into
+MS Pivot for viewing. For some people Pivot had problems parsing the results
+of the SPARQL query.
+
+In the future the current working Pivot example will be available here:
+<A HREF="http://www.delicious.com/taxonconcept.org">http://www.delicious.com/taxonconcept.org</A>
+
+&lt;<A HREF="http://www.delicious.com/taxonconcept.org">http://www.delicious.com/taxonconcept.org</A>&gt;This and other Pivot example can
+be found here: <A HREF="http://www.delicious.com/kidehen/pivot_collection_app">http://www.delicious.com/kidehen/pivot_collection_app</A>
+
+* The MS Pivot example require Silverlight, which you might already have if
+you use netflix or similar apps, but they won't work on iPhone or iPad. :-(
+
+Respectfully,
+
+- Pete
+
+---------------------------------------------------------------
+Pete DeVries
+Department of Entomology
+University of Wisconsin - Madison
+445 Russell Laboratories
+1630 Linden Drive
+Madison, WI 53706
+TaxonConcept Knowledge Base &lt;<A HREF="http://www.taxonconcept.org/">http://www.taxonconcept.org/</A>&gt; / GeoSpecies
+Knowledge Base &lt;<A HREF="http://lod.geospecies.org/">http://lod.geospecies.org/</A>&gt;
+About the GeoSpecies Knowledge Base &lt;<A HREF="http://about.geospecies.org/">http://about.geospecies.org/</A>&gt;
+------------------------------------------------------------
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="119296.html">[Taxacom] Postdoc: Phylogeny of the fern genus Polystichum	(Dryopteridaceae)
+</A></li>
+	<LI>Next message: <A HREF="119302.html">[Taxacom] Updated Species Occurrence RDF Examples, Dynamic Browsing of Records via Pivot Interface
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#119298">[ date ]</a>
+              <a href="thread.html#119298">[ thread ]</a>
+              <a href="subject.html#119298">[ subject ]</a>
+              <a href="author.html#119298">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

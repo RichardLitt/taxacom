@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> More on the 'cladistics' of sequences
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2004-June/092027.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">More on the 'cladistics' of sequences</H1>
+    <B data-pagefind-meta="author">pierre deleporte</B>
+    pierre.deleporte at UNIV-RENNES1.FR<BR>
+    <I data-pagefind-meta="date">Mon Jun  7 13:58:47 CDT 2004</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="092035.html">More on the 'cladistics' of sequences
+</A></li>
+        <LI>Next message: <A HREF="092038.html">FW:      Re: [TAXACOM] More on the 'cladistics' of sequences
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092027">[ date ]</a>
+              <a href="thread.html#092027">[ thread ]</a>
+              <a href="subject.html#092027">[ subject ]</a>
+              <a href="author.html#092027">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2004</span><!--beginarticle-->
+<PRE>A 18:34 06/06/2004 -1100, John Grehan wrote :
+&gt;I did not say character states are determined in the absence of knowledge
+&gt;of phylogenetic relationships! To the contrary, I am always referring to
+&gt;evaluation of each character with respect to an outgroup before the analsis.
+
+And you now know that this is exactly what programs do when they perform 
+cladistic analysis of molecular data like for any other data. I know that 
+you know that. Via the outgroup criterion, each and every molecular 
+character state (i.e. a given base at a given site in aligned sequences) 
+has an a priori polarization in putative plesio-apomorphy (for each and 
+every character = site).
+
+And you also know that there is nothing like &quot;rooting after the analysis&quot;, 
+or &quot;rooting during the analysis&quot;, because you know that one can perform the 
+analysis the following way and get exactly the same result:
+
+- first, root optimally all possible topologies according to the data and 
+outgroup criterion
+- second, pick out the optimal topology (maximizing homology).
+
+You'll get exactly the same result than with applying the following procedure:
+
+- first, pick out the optimal unrooted topology (maximizing homology)
+- second, root it optimally using the outgroup criterion.
+
+And you also know that the program begins with discarding cladistically 
+non-informative characters. This is the first thing it does. Thus, only 
+cladistically putatively informative characters remain in the analysis, 
+i.e. characters with putative plesiomorphic state and apomorphic ones. The 
+data matix is effectively reduced to these characters, and they are not 
+treated phenetically (i.e. grouping otaxa on the basis of overall 
+similarity). And only apomorphies play a role for polarizing the tree : 
+this is what optimal outgroup rooting does.
+
+Hence, all outgroup-polarized molecular characters are &quot;cladistic&quot; in your 
+(very peculiar) acception of the term, i.e. they are individually, 
+putatively polarized a priori, via the outgroup criterion, and the analysis 
+is performed the classic cladistic way for molecules just like for 
+morphology. Same criteria, same procedures.
+
+Of course Hennig did not use a computer, and did not apply systematically 
+(via an algorithm) his &quot;auxiliary principle&quot; of preferring interpretation 
+in terms of homology rather than homoplasy (what is implemented through the 
+&quot;congruence criterion&quot; for choosing the optimal unrooted topology).
+
+But this doesn't make modern cladistics &quot;non-hennigian&quot; in this respect, 
+and molecularists &quot;know&quot; their ingroups and outgroups just like the 
+morphologists do, no more no less, and they face the same problems in this 
+respect (possible problem of multiple rooting for multiple outgroups, whose 
+solution consist in enlarging the phylogenetic scope of the analysis and 
+using more data), and I still cannot understand why you persist in taxing 
+molecular cladistic phylogeny of being non-cladistic.
+
+&gt;One can document each character for the outgroup and ingroup. By this
+&gt;documentation it is possible for each character to be independently
+&gt;verified or refuted by another individual
+
+This you can do, exactly this, with molecular data as treated by modern 
+programs. Just try it, as I suggested you repeatedly. But apparently you 
+don't try... Why don't you try and verify by yourself that this is all the 
+same approach? Same logic giving same result?
+I admit that the fact that everybody tells you the same thing will not 
+change your mind the slightest way, for it's quite imaginable that the 
+whole community of specialists of morphological and molecular cladistic 
+analysis on earth is wrong and you are right. Science is not a democraty. 
+But why don't you try and verify? Because it's also imaginable that you are 
+wrong, and this you can check by yourself:
+- take some molecular data
+- root them a priori character by character via the outgroup criterion
+- throw away putatively cladistically non-informative characters (obvious 
+autapomorphies and unchanging characters)
+- find the optimal tree your own cladistic way
+- try with the program PAUP using the same assumptions (costs of changes...)
+- check if you get the same result.
+
+&gt;No, but if one cannot polarize the characters and determine which are
+&gt;potential synapomorphies before the analysis then the implication is that
+&gt;such individuals do not know their group very well.
+
+But this is exactly what the program does, and of course the program itself 
+does not even knows whether the data you feed it are morphological or 
+molecular. How could molecular cladistics be different from morphological 
+cladistics ? Any molecular analysist can tell a priori what are the 
+potential apomorphies: just like for morphology, they are the character 
+states not present in the outgroup(s). You said &quot;potential&quot;: this is the 
+rigth term (or &quot;putative&quot;), because some putative plesiomorphies in the 
+outgroup(s) may finally appear as autapomoprphies of this outgroup. But 
+this doesn't change anything to the optimal rooting of the optimal topology 
+for a given data set.
+If you're not convinced, just try it, once again, and check.
+
+&gt;I would start with some critical evaluation before the analysis to restrict
+&gt;the data set to potential synapomorphies.
+
+All characters with more than one state have potential plesio-apomorphy 
+polarity. The outgroup provides the support for polarizing. And the program 
+makes no use of cladistically potentially non-informative characters. So, 
+where is the problem?
+
+&gt;Then the evaluation after the
+&gt;analysis can take place with respect to one's initial determination.
+
+This is what contemporaneous computer-assisted cladistic analysis, followed 
+by secondary checking of optimal scenarios for characters, is all about. 
+Once more, where is there any problem with molecular data?
+
+Best,
+Pierre
+
+
+Pierre Deleporte
+CNRS UMR 6552 - Station Biologique de Paimpont
+F-35380 Paimpont   FRANCE
+T?l?phone : 02 99 61 81 66
+T?l?copie : 02 99 61 81 88
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="092035.html">More on the 'cladistics' of sequences
+</A></li>
+        <LI>Next message: <A HREF="092038.html">FW:      Re: [TAXACOM] More on the 'cladistics' of sequences
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#092027">[ date ]</a>
+              <a href="thread.html#092027">[ thread ]</a>
+              <a href="subject.html#092027">[ subject ]</a>
+              <a href="author.html#092027">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

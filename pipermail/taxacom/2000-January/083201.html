@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> &lt;fwd&gt; [Heads Up]: MICROSOFT SQL SERVER VERSION 7.0 FIX
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%3Cfwd%3E%20%5BHeads%20Up%5D%3A%20MICROSOFT%20SQL%20SERVER%20VERSION%207.0%20FIX&In-Reply-To=%3Cv04020a02b4acd1137748%40%5B130.126.91.97%5D%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="083199.html">
+   <LINK REL="Next"  HREF="083204.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2000-January/083201.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">&lt;fwd&gt; [Heads Up]: MICROSOFT SQL SERVER VERSION 7.0 FIX</H1>
+    <B data-pagefind-meta="author">Gail E. Kampmeier</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%3Cfwd%3E%20%5BHeads%20Up%5D%3A%20MICROSOFT%20SQL%20SERVER%20VERSION%207.0%20FIX&In-Reply-To=%3Cv04020a02b4acd1137748%40%5B130.126.91.97%5D%3E"
+       TITLE="&lt;fwd&gt; [Heads Up]: MICROSOFT SQL SERVER VERSION 7.0 FIX">gkamp at UIUC.EDU
+       </A><BR>
+    <I data-pagefind-meta="date">Thu Jan 20 08:51:38 CST 2000</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="083199.html">News on trace fossils
+</A></li>
+        <LI>Next message: <A HREF="083204.html">Stolen tortoises
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#83201">[ date ]</a>
+              <a href="thread.html#83201">[ thread ]</a>
+              <a href="subject.html#83201">[ subject ]</a>
+              <a href="author.html#83201">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2000</span><!--beginarticle-->
+<PRE>FYI for those of you using MS Access for your databases.  --Gail
+
+&gt;<i>Date: Wed, 19 Jan 2000 18:21:13 -0800
+</I>&gt;<i>Subject: [Heads Up]: MICROSOFT SQL SERVER VERSION 7.0 FIX
+</I>&gt;<i>From: Jimmy Jones &lt;<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">jimmy_jones at filemaker.com</A>&gt;
+</I>&gt;<i>
+</I>&gt;<i>MICROSOFT SQL SERVER VERSION 7.0 FIX
+</I>&gt;<i>
+</I>&gt;<i>Microsoft has identified a potential problem you may experience with SQL
+</I>&gt;<i>version 7.0. Under rare conditions a malformed Tabular Data Stream (TDS)
+</I>&gt;<i>packet, which is submitted using Remote Procedure Call (RPC) protocol, can
+</I>&gt;<i>cause various Access Violations (AVs). The AV may result in a server
+</I>&gt;<i>shutdown if it occurs within the Open Data Services (ODS) layer. If
+</I>&gt;<i>occurring outside ODS, the AV may cause instability that results in a server
+</I>&gt;<i>hang.
+</I>&gt;<i>
+</I>&gt;<i>The cause of the malformed packet is usually a network-layer factor such as
+</I>&gt;<i>the Network Interface Card (NIC), NIC device driver, or network router. Much
+</I>&gt;<i>less frequently a bug in the ODBC, OLE-DB, or DB-Library client libraries
+</I>&gt;<i>may cause the problem.
+</I>&gt;<i>
+</I>&gt;<i>This hot fix improves the server-side robustness for handling these
+</I>&gt;<i>malformed packets. In some situations (but not all), it will avoid the AV.
+</I>&gt;<i>Instead you may see error 17805: &quot;Invalid buffer received from client.&quot;
+</I>&gt;<i>
+</I>&gt;<i>A supported fix that corrects this problem is now available from Microsoft,
+</I>&gt;<i>but it has not been fully regression tested and should be applied only to
+</I>&gt;<i>systems experiencing this specific problem. If this specific problem does
+</I>&gt;<i>not severely affect you, Microsoft recommends that you wait for the next SQL
+</I>&gt;<i>Server Service Pack containing this fix.
+</I>&gt;<i>
+</I>&gt;<i>To resolve this problem immediately, contact Microsoft Product Support
+</I>&gt;<i>Services to obtain the fix. For a complete list of Microsoft Product Support
+</I>&gt;<i>Services phone numbers and information on support costs, go to the following
+</I>&gt;<i>Web address:
+</I>&gt;<i>
+</I>&gt;<i><A HREF="http://www.microsoft.com/support/supportnet/overview/overview.asp">http://www.microsoft.com/support/supportnet/overview/overview.asp</A>
+</I>&gt;<i>
+</I>&gt;<i>Q246612 - FIX: Malformed RPC TDS Packet Causes Various AVs
+</I>&gt;<i>
+</I>&gt;<i>--
+</I>&gt;<i>Regards,
+</I>&gt;<i>Jimmy Jones
+</I>&gt;<i>
+</I>&gt;<i>P.S. for anyone using a Windows NT system and experiencing 'Access
+</I>&gt;<i>Violations' this might be something to check into.
+</I>&gt;<i>
+</I>&gt;<i>------------------
+</I>&gt;<i>PLEASE NOTE:
+</I>&gt;<i>For mailing list archives and information on how to subscribe
+</I>&gt;<i>or unsubscribe to this list visit:
+</I>&gt;<i><A HREF="http://www.filemakerworld.com/fmweb-talk/">http://www.filemakerworld.com/fmweb-talk/</A>
+</I>&gt;<i>
+</I>&gt;<i>NEWS: <A HREF="http://www.fmnewswire.com">http://www.fmnewswire.com</A>
+</I>&gt;<i>SEARCH: <A HREF="http://www.fmsearch.com">http://www.fmsearch.com</A>
+</I>&gt;<i>PLUGINS: <A HREF="http://www.fmplugins.com">http://www.fmplugins.com</A>
+</I>&gt;<i>LEARN: <A HREF="http://www.fmclasses.com">http://www.fmclasses.com</A>
+</I>&gt;<i>------------------
+</I>&gt;<i>
+</I>=======
+Gail E. Kampmeier, Research Entomologist, Illinois Natural History Survey,
+Box 5 NSRL-EASB, MC-637, 1101 W. Peabody, Urbana, IL 61801 USA
+ph. 217-333-2824; fax 217-333-6784; email: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">gkamp at uiuc.edu</A>
+<A HREF="http://www.inhs.uiuc.edu/cee/therevid/gkamp.html">http://www.inhs.uiuc.edu/cee/therevid/gkamp.html</A>
+=======
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="083199.html">News on trace fossils
+</A></li>
+	<LI>Next message: <A HREF="083204.html">Stolen tortoises
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#83201">[ date ]</a>
+              <a href="thread.html#83201">[ thread ]</a>
+              <a href="subject.html#83201">[ subject ]</a>
+              <a href="author.html#83201">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

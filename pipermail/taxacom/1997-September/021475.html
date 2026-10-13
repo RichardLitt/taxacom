@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Status of plant systematics
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1997-September/021475.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Status of plant systematics</H1>
+    <B data-pagefind-meta="author">James Francis Lyons-Weiler</B>
+    weiler at ERS.UNR.EDU<BR>
+    <I data-pagefind-meta="date">Sat Sep  6 14:06:16 CDT 1997</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="104627.html">Taxonomic database structure
+</A></li>
+        <LI>Next message: <A HREF="057267.html">Status of plant systematics
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#021475">[ date ]</a>
+              <a href="thread.html#021475">[ thread ]</a>
+              <a href="subject.html#021475">[ subject ]</a>
+              <a href="author.html#021475">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1997</span><!--beginarticle-->
+<PRE>On Sat, 6 Sep 1997, Daniel Barker wrote (in response to R. Zander):
+
+&gt; There are optimization problems in all fields of science, and the ways to
+&gt; solve them are basically independent of the problem and optimality
+&gt; criterion. It doesn't matter whether you want to minimize air resistance
+&gt; of a car, minimize total wire length in a microchip or minimize potential
+&gt; energy in 3 dimensional protein structure. In the case of parsimony, we
+&gt; try and minimize the length of a phylogenetic tree. As with the problems
+&gt; of design and biophysics, we can find a reasonable solution using standard
+&gt; approaches such as greedy algorithms, hill climbing, simulated annealing
+&gt; or a combination of any of these. For example, typically Phylip's DNAPARS
+&gt; uses a greedy algorithm to propose a tree, which it then optimizes using
+&gt; hill climbing.
+
+        This is all well and good, but you are referring to ways to
+        optimize the process of filling a criterion - i.e,. there is
+        a difference between an algorithm and a criterion.
+        The alternatives you list are ways to go about meeting the
+        criterion which is in question.  Following your analogy,
+        there may be many ways to increase the speed of a car, but
+        the question is whether speed is what needs to be
+        optimized.
+&gt;
+&gt; It does not matter if there is more evidence against the solution than for
+&gt; it. I have never heard anyone use this reason to suggest that other
+&gt; optimality criteria are irrelevant. For example, it would be unreasonable
+&gt; to scrap a microchip on the grounds that the probability its use of wire
+&gt; is optimal is just 1%. It would be even less reasonable to abandon
+&gt; computerized simulation in microchip design because of this figure. All
+&gt; that matters is that what we have a good guess, and computer programs can
+&gt; help us guess fairly well.
+
+        But this is exactly what the positivists who push parsimony
+        rely upon most.  Again, to take the analog route, it would
+        be unreasonable to scrap a monophyletic group on the
+        grounds that it does not exist on a tree that is one step
+        shorter than 10,000 trees where it does exist - and such
+        a conclusion uncovers a shortcoming of the criterion (more
+        evidence in tree length alone).  Parsimony has been to some
+        degree generalized with the decay index (a.k.a. Bremer support)
+        and for Paup users, go to Joe Felsenstein's web page and
+        follow the link to Autodecay, written by Torsten Eriksson
+        and Niklas Wilkstr:om.
+&gt;
+&gt; Some parts of the solution to an optimization problem may be better than
+&gt; others. This is certainly true of phylogeny: few phylogeneticists would
+&gt; claim to have EVER published a cladogram that is wholly correct. But few
+&gt; would claim (even privately) to have ever published one that is wholly
+&gt; incorrect, either. The hope is that a cladogram is reasonable overall, and
+&gt; beyond doubt correct in some places.  Measures like the CI and RI tell us
+&gt; the overall quality of the tree: if, after minimizing homoplasy, there is
+&gt; still a lot of homoplasy, we should not place faith in the reconstruction.
+&gt; We might decide to find some data that better matches the optimality
+&gt; criterion (i.e. characters with a lower rate of evolution), or change the
+&gt; optimality criterion to better match our data (i.e. correct for multiple
+&gt; hits). Anyway, apart from such measures of overall tree quality, quality
+&gt; of specific clades in a tree can be checked using the bootstrap.  If a
+&gt; clade has high bootstrap support, we believe in it, even if the rest of
+&gt; the tree is rather dire.
+
+        Again, the question of suitability of a measure is cogent -
+        the homoplasy we measure through CI, HI, and any tree-
+        based measure of information is dreadfully confounded
+        when errors exist in the optimal tree - evolutionary homoplasy,
+        i.e., true homoplasy, can give us the wrong tree, and then
+        what do these measures mean?  They may under these conditions
+        underestimate the level of homoplasy.  I heartily recommend two
+        chapters in the book Homoplasy (eds. Sanderson and Hufford):
+        one by Archie (&quot;Measures of homoplasy&quot;), the second by
+        Chang and Kim (&quot;The measurement of homoplasy: a stochastic view&quot;)
+        1996.
+&gt;
+&gt; I think, with the CI, RI, tree probability, bootstrap and at least half a
+&gt; dozen other statistics, parsimony has more immediate checks for
+&gt; correctness than most optimization problems. We do have such tests, and we
+&gt; have so many of them that few people can keep up with developments and
+&gt; understand them all.
+
+        I try, and I agree, it can be overwhelming.
+
+        See above comments on CI and HI.  The homoplasy excess ratio
+        comes closest to being free of the confounding, in my humble
+        estimation.  On the boostrap, re-sampling a character state
+        matrix that has noise, and say a long branch, might lead to
+        just this result - and the group with the highest
+        bs value may be artefactual in every parsimony tree found
+        during resampling owing to branch attraction..  The bs does not
+        take care of this and other problems.  It is, again in my humble
+        estimation, a method that provides some indication of how decided
+        the data are about the result we would &quot;likely&quot; get with
+        exact enumeration; i.e., it reflect more about the tree that
+        the data appear to support, and as such is more of an indicator
+        of how well the bs resampling approximates the tree(s) that the
+        data support, i.e., goodness of fit to the specified criterion,
+        namely parsimony.  This is not the same as saying it is
+        a good estimate of the phylogeny; for that, the robustness of
+        parsimony must again be scrutinized.
+
+        James Lyons-Weiler
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="104627.html">Taxonomic database structure
+</A></li>
+        <LI>Next message: <A HREF="057267.html">Status of plant systematics
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#021475">[ date ]</a>
+              <a href="thread.html#021475">[ thread ]</a>
+              <a href="subject.html#021475">[ subject ]</a>
+              <a href="author.html#021475">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

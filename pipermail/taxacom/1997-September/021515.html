@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Probabilities on Phylogenetic Trees
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1997-September/021515.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Probabilities on Phylogenetic Trees</H1>
+    <B data-pagefind-meta="author">Curtis Clark</B>
+    jcclark at CSUPOMONA.EDU<BR>
+    <I data-pagefind-meta="date">Thu Sep 11 07:50:49 CDT 1997</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="104663.html">Probabilities on Phylogenetic Trees
+</A></li>
+        <LI>Next message: <A HREF="057307.html">Probabilities on Phylogenetic Trees
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#021515">[ date ]</a>
+              <a href="thread.html#021515">[ thread ]</a>
+              <a href="subject.html#021515">[ subject ]</a>
+              <a href="author.html#021515">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1997</span><!--beginarticle-->
+<PRE>At 07:40 AM 9/11/97 -0700, Richard Zander wrote:
+&gt; Simply put, I'd like a
+&gt;measure of when my shortest tree has more evidence for than against. I
+&gt;think there is a mathematical measure, though not exactly sure what it
+&gt;is.
+
+Aha! I've been puzzling over this thread, knowing that there was something
+important here, but not clear enough on the discussion to know what was
+going on. Now maybe I do.
+
+&gt;  Also, if my shortest tree isn't well-supported, I'd like to identify
+&gt;portions of the cladogram that have more evidence for than against. (I
+&gt;think this is what people mean by &quot;we don't think our cladograms are
+&gt;necessarily exactly right, but they are probably mostly right.&quot;
+
+I wonder if you are maybe not asking the right questions. Certainly knowing
+whether a tree has more evidence for than against must be dependent on the
+size of the tree. If we look at phylogenetic information in a
+&quot;signal-to-noise&quot; fashion, we might postulate as a null hypothesis that
+noise is evenly distributed, but a lot of evidence would lead us to believe
+otherwise. So any tree will include &quot;noisy&quot; areas as well as &quot;signally&quot;
+areas. Any measure of the probability of the tree ignores that.
+
+Identifying the portions of the cladogram that have the most support seems
+to be more relevant to what we are trying to do. As an analogy, let's say
+you want to determine if there is any pattern in the first appearance of
+the sun each day. You have a very accurate clock, and you note each day the
+time at which the full disk of the sun is apparent. But you live in a
+cloudy climate. Sometimes the sun appears from the horizon, sometimes from
+a cloud. Let's say that you know the difference between the horizon and a
+cloud, but for some reason or another you are not able to identify which is
+which. What you want to know is the portion of the data that corresponds to
+the sun appearing over the horizon. The probability of all the data
+representing that is very low, and that is not the right way to look at the
+data. What you want instead is an estimate of which part of the data is
+more reliable.
+
+That's what bootstrap, jackknife, decay indices, and the like are supposed
+to do. For reasons that are not yet clear to me, there are detractors of
+all these methods, but it seems to me that people who make these methods
+are on the right track.
+
+I've recently and somewhat tongue-in-cheek suggested that nodes in a
+cladogram without at least 50% bootstrap support should be collapsed into
+polytomies, since in a sense they don't really exist. If bootstrap analysis
+doesn't do what it is supposed to do, so be it, but if we find a method
+that does, my technique at least focuses us on what we *know*.
+
+On a perhaps more humorous note, I've finally put on the web a spoof I did
+some years ago on the Statistics Cops:
+<A HREF="http://www.intranet.csupomona.edu/~jcclark/more/meanstr.html">http://www.intranet.csupomona.edu/~jcclark/more/meanstr.html</A>
+
+
+------------------------------------------------------------------------
+Curtis Clark                 <A HREF="http://www.intranet.csupomona.edu/~jcclark/">http://www.intranet.csupomona.edu/~jcclark/</A>
+Biological Sciences Department                     Voice: (909) 869-4062
+California State Polytechnic University, Pomona    FAX:   (909) 869-4078
+Pomona CA 91768-4032  USA                          jcclark at csupomona.edu
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="104663.html">Probabilities on Phylogenetic Trees
+</A></li>
+        <LI>Next message: <A HREF="057307.html">Probabilities on Phylogenetic Trees
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#021515">[ date ]</a>
+              <a href="thread.html#021515">[ thread ]</a>
+              <a href="subject.html#021515">[ subject ]</a>
+              <a href="author.html#021515">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

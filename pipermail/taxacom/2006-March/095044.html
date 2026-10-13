@@ -1,0 +1,250 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> interactive keys
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2006-March/095044.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">interactive keys</H1>
+    <B data-pagefind-meta="author">David Remsen</B>
+    dremsen at MBL.EDU<BR>
+    <I data-pagefind-meta="date">Thu Mar 23 13:51:00 CST 2006</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="095042.html">BioOne Journals added to uBioRSS
+</A></li>
+        <LI>Next message: <A HREF="095035.html">Survey: Feedback and Requirements for Use of GBIF Data Portal
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#095044">[ date ]</a>
+              <a href="thread.html#095044">[ thread ]</a>
+              <a href="subject.html#095044">[ subject ]</a>
+              <a href="author.html#095044">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2006</span><!--beginarticle-->
+<PRE>X:ID is still in development.  In fact, we have been developed a  
+version for the National Marine Fisheries division here in Woods Hole  
+to use for fish identifications at sea.   This will form the basis  
+for version .67.
+
+The critique of some of the functions is warranted, however the  
+functions are not required to actually use a key.  We will however,  
+address at least some of the issues with the functions particularly  
+&quot;Best.&quot;   Development lags because this isn't our primary area of  
+development and I'm trying to stay targeted (not easy for me).   I am  
+very appreciative that Mike Dallwitz took the time to review it.
+
+I appreciate too that he mentioned that it has many good features.    
+I think X:ID works very nicely, aside from some of the non-critical  
+functions.   Keys can be authored entirely via the web interface.  It  
+is XML-based and keys can be styled to integrate with databased  
+content.  It's open source and freely available.   We built it  
+because we liked Lucid and wanted something like it we could use on  
+the web as well as give away.   It meets our needs.  If you like it,  
+try it.  It runs on all platforms.  If you don't there are many other  
+options and that kind of diversity is healthy and refreshing to see.
+
+David Remsen
+_____________________________________________
+David Remsen
+uBio Project Manager
+Marine Biological Laboratory
+Woods Hole, MA 02543
+508-289-7632
+
+
+On Mar 23, 2006, at 3:35 AM, Mike Dallwitz wrote:
+
+&gt; Rudy Jocqu? wrote:
+&gt;
+&gt;&gt; Apparently nobody mentioned X:ID. Does someone have experience  
+&gt;&gt; with that
+&gt;&gt; package?
+&gt;
+&gt; This program is free, and is available at
+&gt; <A HREF="http://uio.mbl.edu/services/key.html.">http://uio.mbl.edu/services/key.html.</A> The current version is shown  
+&gt; on the
+&gt; main page as 0.66 (July 2004). I don't think it has been updated  
+&gt; since then,
+&gt; although when you click on a link to a key you get the message 'You  
+&gt; are
+&gt; looking at an old version of X:ID; in 1 second you will be  
+&gt; automatically
+&gt; re-directed to the current version'. The link to the X:ID forum,  
+&gt; which might
+&gt; have clarified this, doesn't work.
+&gt;
+&gt; The system lacks some important features, such as error tolerance and
+&gt; character reliabilities, and the 'Best characters' algorithm is  
+&gt; worse than
+&gt; useless (see below).
+&gt;
+&gt; An interesting feature is the ability to change the appearance of  
+&gt; the user
+&gt; interface by means of style sheets. However, the examples currently
+&gt; available are unsatisfactory in various ways. The style sheet that  
+&gt; emulates
+&gt; the Lucid2 interface is probably the best, except for a serious bug  
+&gt; -  the
+&gt; 'feature' description is not shown in the 'Character States Chosen'  
+&gt; pane.
+&gt; This often results in meaningless lines such as 'triangular'  
+&gt; instead of
+&gt; 'Stem shape in cross section triangular'.
+&gt;
+&gt; At the request of the authors, I made some comments on the program  
+&gt; in May
+&gt; 2005. These are reproduced below, except for some rather detailed  
+&gt; ones on
+&gt; the user interfaces. I tested only the player, not the builder.
+&gt;
+&gt; Note that these comments don't constitute a review of the program,  
+&gt; which has
+&gt; many good features. I mentioned only the faults, so that they could  
+&gt; be fixed.
+&gt;
+&gt; ---------------------------------------------------------------------- 
+&gt; -----
+&gt;
+&gt; 'Misinterpretation'
+&gt;
+&gt; The default setting should be 'Allow uncertainties and  
+&gt; misinterpretation',
+&gt; and it should be possible to change this while using a key.
+&gt;
+&gt; Bingo
+&gt;
+&gt; The Lucid 'Bingo' option is harmful in the context of  
+&gt; identification - see
+&gt; 'Principles of Interactive Keys' at
+&gt; <A HREF="http://delta-intkey.com/www/interactivekeys.htm">http://delta-intkey.com/www/interactivekeys.htm</A> under the heading
+&gt; 'Differentiating attributes'.
+&gt;
+&gt; Best
+&gt;
+&gt; The X:ID 'Best' is a extension of 'Bingo', and isn't suitable for  
+&gt; finding
+&gt; the best characters for use in an identification.
+&gt;
+&gt; The problem with 'Bingo' and the X:ID implementation of  
+&gt; 'Best' (which is
+&gt; also used in MEKA) is not just that they are unhelpful for  
+&gt; identification -
+&gt; they are actually harmful. You would do better by selecting  
+&gt; characters at
+&gt; random, provided you used the 'Prune Redundants' option (if it worked
+&gt; correctly, which it doesn't in X:ID).
+&gt;
+&gt; For example, in the 'Aquatic Plants' key, suppose that your  
+&gt; specimen is
+&gt; Alternanthera. In the 'Best' list, the first character state that is
+&gt; exhibited by Alternanthera is 'Leaf arrangement on stem  
+&gt; (phyllotaxis I):
+&gt; opposite distichous 17'. This is 142nd in the list. Thus, you have to
+&gt; examine and reject 141 character states before arriving at the  
+&gt; correct one,
+&gt; and the probability of doing this without error is almost zero. If  
+&gt; you do
+&gt; manage to do this correctly, you still have 17 taxa remaining. In  
+&gt; the new
+&gt; 'Best' list, the first character state exhibited by Alternanthera  
+&gt; (Leaf
+&gt; venation: pinnate 4) is 87th on the list, and 4 taxa remain. And so  
+&gt; on.
+&gt;
+&gt; By comparison, using the 'Best' character found by Intkey at each  
+&gt; step, and
+&gt; selecting the first state exhibited by Alternanthera, results in an
+&gt; identification after 5 characters have been used.
+&gt;
+&gt; Prune Redundants
+&gt;
+&gt; I don't see the point of this option as it is currently implemented  
+&gt; in X:ID.
+&gt; Also, it's confusing because it puts into 'Character states chosen'  
+&gt; states
+&gt; that are not necessarily exhibited by the specimen.
+&gt;
+&gt; As implemented in Lucid, the option has two effects, which I  
+&gt; describe in
+&gt; 'Principles of Interactive Keys' under the headings 'Removing  
+&gt; redundant
+&gt; characters' and 'Removing redundant character states'. The former  
+&gt; effect is
+&gt; useful, but the latter is harmful. In Intkey, redundant characters are
+&gt; automatically removed in the 'Best' calculation. I think that  
+&gt; having it
+&gt; available separately is an unnecessary complication for most users.
+&gt;
+&gt; Similar Taxa
+&gt;
+&gt; The results given by X:ID are substantially different from those  
+&gt; given by
+&gt; Lucid. I haven't investigated the reason for this.
+&gt;
+&gt; Similarities and Differences
+&gt;
+&gt; The output from this option is almost unintelligible. For  
+&gt; comparison, I've
+&gt; attached the differences between the genera of Cyperaceae, as  
+&gt; output by
+&gt; Intkey (diff_intkey.rtf) and X:ID (diff_xid.txt). [These files are not
+&gt; attached to this posting.] The X:ID output is seemingly in almost  
+&gt; random
+&gt; order (even the states of a given character are not necessarily  
+&gt; contiguous),
+&gt; and there is no indication of which taxa exhibit the states. In the  
+&gt; Intkey
+&gt; output, notice the bold parts; these indicate characters for which  
+&gt; at least
+&gt; two of the taxa have non-overlapping states.
+&gt;
+&gt; Numeric Characters
+&gt;
+&gt; I gather from the forum that X:ID can handle numeric characters, but I
+&gt; couldn't find any examples in the keys at the Web site.
+&gt;
+&gt; ---------------------------------------------------------------------- 
+&gt; -----
+&gt;
+&gt; --
+&gt; Mike Dallwitz
+&gt; Contact information: <A HREF="http://delta-intkey.com/contact/dallwitz.htm">http://delta-intkey.com/contact/dallwitz.htm</A>
+&gt; DELTA home page: <A HREF="http://delta-intkey.com">http://delta-intkey.com</A>
+
+__
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="095042.html">BioOne Journals added to uBioRSS
+</A></li>
+        <LI>Next message: <A HREF="095035.html">Survey: Feedback and Requirements for Use of GBIF Data Portal
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#095044">[ date ]</a>
+              <a href="thread.html#095044">[ thread ]</a>
+              <a href="subject.html#095044">[ subject ]</a>
+              <a href="author.html#095044">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

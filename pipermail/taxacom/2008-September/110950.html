@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Why character-tracking doesn't happen?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Why%20character-tracking%20doesn%27t%20happen%3F&In-Reply-To=%3C48CC605E.7080408%40flmnh.ufl.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="110949.html">
+   <LINK REL="Next"  HREF="110960.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2008-September/110950.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Why character-tracking doesn't happen?</H1>
+    <B data-pagefind-meta="author">Mario Blanco</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20Why%20character-tracking%20doesn%27t%20happen%3F&In-Reply-To=%3C48CC605E.7080408%40flmnh.ufl.edu%3E"
+       TITLE="[Taxacom] Why character-tracking doesn't happen?">mblanco at flmnh.ufl.edu
+       </A><BR>
+    <I data-pagefind-meta="date">Sat Sep 13 19:52:46 CDT 2008</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="110949.html">[Taxacom] Why character-tracking doesn't happen?
+</A></li>
+        <LI>Next message: <A HREF="110960.html">[Taxacom] Why character-tracking doesn't happen?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#110950">[ date ]</a>
+              <a href="thread.html#110950">[ thread ]</a>
+              <a href="subject.html#110950">[ subject ]</a>
+              <a href="author.html#110950">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2008</span><!--beginarticle-->
+<PRE>Bob Mesibov wrote:
+&quot;I used to think that each position in a nucleic acid sequence was a
+character. In fact, this is not how molecular phylogeny programs work. A
+multiple sequence alignment program first does its best to find matching
+patterns around indels. The five character states then analysed (A,T,G,C
+and missing) are states of an artificially created character - a
+vertical column in a multiple sequence alignment. This 'column'
+character varies from analysis to analysis, depending on which sequences
+are used. How can you test the independence of such things? Aren't all
+the columns covering an indel really a single entity, so that the A,T,G
+and C's in the 'non-indel' sequences at this point are non-independent?&quot;
+
+This is analogous to the situation in which you score morphological data 
+(e.g., color of petals), and then you hava a species with no petals.  
+For this species, the character state here becomes &quot;missing&quot;, and you 
+effectively create a gap in the matrix (and indels are simply gaps in an 
+aligned matrix).  The use of gaps as characters has been discussed at 
+length [for example, by Simmons &amp; Ochoterena (2000) Gaps as characters 
+in sequence-based phylogenetic analyses. Systematic Biology 49: 369-381].
+
+Now, the secondary structure of both coding and non-coding DNA (and also 
+that of transcripts and protein sequences) probably renders many 
+adjacent nucleic acid positions non-independent, and this is a whole 
+different can of worms...
+
+
+
+_______________________________________________
+Taxacom mailing list
+<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">Taxacom at mailman.nhm.ku.edu</A>
+<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="110949.html">[Taxacom] Why character-tracking doesn't happen?
+</A></li>
+	<LI>Next message: <A HREF="110960.html">[Taxacom] Why character-tracking doesn't happen?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#110950">[ date ]</a>
+              <a href="thread.html#110950">[ thread ]</a>
+              <a href="subject.html#110950">[ subject ]</a>
+              <a href="author.html#110950">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

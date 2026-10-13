@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] Inappropriate accuracy of locality data
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2010-December/118307.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] Inappropriate accuracy of locality data</H1>
+    <B data-pagefind-meta="author">Doug Yanega</B>
+    dyanega at ucr.edu<BR>
+    <I data-pagefind-meta="date">Wed Dec  1 17:53:03 CST 2010</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="118306.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+        <LI>Next message: <A HREF="118308.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#118307">[ date ]</a>
+              <a href="thread.html#118307">[ thread ]</a>
+              <a href="subject.html#118307">[ subject ]</a>
+              <a href="author.html#118307">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2010</span><!--beginarticle-->
+<PRE>Arthur Chapman wrote:
+
+&gt;Somebody mentioned the difference between different DATUMs, and
+&gt;especially NAD83 and WGS84.  Indeed - for North America, there is little
+&gt;difference between these, however, the further you move away from
+&gt;continental North America, the greater the difference.  As far away as
+&gt;Hawaii - there may not be a great difference - I've never checked it,
+&gt;but NAD was never intended for use so far out into the Pacific. Many
+&gt;older maps, and older lats and longs would have been produced prior to
+&gt;1983, and in North America probably used NAD27 (North American Datum
+&gt;1927), and this can be up to hundreds of meters out (around 480 around
+&gt;the Aleutian Islands).  Indeed - on a recent trip to Alaska, I regularly
+&gt;found the map used in my GPS showed the road I was on to be consistently
+&gt;about 80 meters from my position.  As one reached a town, the maps had
+&gt;obviously been updated and I was back on the road.  This is a DATUM
+&gt;problem in the maps being used by the GPS company. More and more
+&gt;institutions are locking their GPSs to WGS84 or the local equivalent
+&gt;(NAD83 in North America; AGD84 in Australia), but I often see people
+&gt;using GPSs and have no idea what Datum they are using.  In the Guide to
+&gt;Best Practices for Georeferencing we provide a table showing some the
+&gt;variations between a number of DATUMs.  We also refer to the MANIS
+&gt;Georeferencing Calculator which will calculate the error for any
+&gt;position using a large range of different DATUMs.
+
+This is, in a practical sense, rarely likely to be important for any 
+vagile terrestrial organisms; something like a single plant, or 
+something occurring in a body of water, might indeed require one to 
+be precise and careful about one's coordinates, but for the vast 
+majority of organisms, if you can come within 100m radius of the true 
+collecting point, this is more than sufficient for virtually any 
+conceivable purpose. An error of 80m is insignificant, with few 
+exceptions. Dealing with legacy data makes the issue even _less_ 
+important, because the uncertainty on a typical legacy record (of 
+which I have processed well over 100,000 at this point) is between 1 
+and 2 km - which utterly swamps out any miniscule* uncertainty 
+associated with changing map datums. And when one gets to legacy data 
+such as &quot;Chicago, IL&quot; and you're looking at a radius of 25 km or 
+more, worrying about which map datum one uses is meaningless. That's 
+why the uncertainty parameter is THE essential element without which 
+one cannot have a properly georeferenced database. Giving the 
+&quot;center&quot; of Chicago to the nearest centimeter is theoretically 
+possible, and it may certainly look that way if one has an entry in 
+one's database that reads
+
+41 52 38.84 N, 87 39 08.48 W
+
+but it would be a serious mistake to imply or infer that a given 
+specimen was actually collected in that particular square centimeter 
+- a mistake that can be avoided only by including an uncertainty 
+parameter.
+
+*<A HREF="http://www.barnsdle.demon.co.uk/spell/mini.html">http://www.barnsdle.demon.co.uk/spell/mini.html</A> ;-)
+
+Peace,
+-- 
+
+Doug Yanega        Dept. of Entomology         Entomology Research Museum
+Univ. of California, Riverside, CA 92521-0314        skype: dyanega
+phone: (951) 827-4315 (standard disclaimer: opinions are mine, not UCR's)
+              <A HREF="http://cache.ucr.edu/~heraty/yanega.html">http://cache.ucr.edu/~heraty/yanega.html</A>
+   &quot;There are some enterprises in which a careful disorderliness
+         is the true method&quot; - Herman Melville, Moby Dick, Chap. 82
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="118306.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+        <LI>Next message: <A HREF="118308.html">[Taxacom] Inappropriate accuracy of locality data
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#118307">[ date ]</a>
+              <a href="thread.html#118307">[ thread ]</a>
+              <a href="subject.html#118307">[ subject ]</a>
+              <a href="author.html#118307">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

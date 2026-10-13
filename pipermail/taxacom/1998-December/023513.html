@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> data sharing
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20data%20sharing&In-Reply-To=%3Cmailman.9941.1157126736.2564.taxacom%40mailman.nhm.ku.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="106668.html">
+   <LINK REL="Next"  HREF="059305.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1998-December/023513.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">data sharing</H1>
+    <B data-pagefind-meta="author">Hugh Wilson</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20data%20sharing&In-Reply-To=%3Cmailman.9941.1157126736.2564.taxacom%40mailman.nhm.ku.edu%3E"
+       TITLE="data sharing">wilson at BIO.TAMU.EDU
+       </A><BR>
+    <I data-pagefind-meta="date">Thu Dec 10 11:19:55 CST 1998</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="106668.html">Compositae/insect mystery
+</A></li>
+        <LI>Next message: <A HREF="059305.html">data sharing
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#23513">[ date ]</a>
+              <a href="thread.html#23513">[ thread ]</a>
+              <a href="subject.html#23513">[ subject ]</a>
+              <a href="author.html#23513">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>1998</span><!--beginarticle-->
+<PRE>On 10 Dec 98 at 7:11, Dave Vieglais &lt;<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">vieglais at UKANS.EDU</A>&gt; wrote:
+
+&gt;<i> large amounts of unstructured textual information.  But I doubt any of the
+</I>&gt;<i> developers of thse search engines would suggest using them for ordered
+</I>&gt;<i> access to structured data (certainly their marketing folks might have
+</I>&gt;<i> another opinion), and would probably be amused at the suggestion.  The
+</I>&gt;<i> reason is quite simple- by exporting to a text file, and providing access
+</I>&gt;<i> via web search engines......
+</I>
+My reference to full text indexing was not intended to imply that we
+should set up text indices for Alta-vista to search.  The general
+notion is to create a structured text file, index it, and then create
+a 'front end' that sends queries to it.  For users able to frame up a
+query URL, the front end can be bypassed.
+
+&gt;<i> Processing time is not typically an issue with properly setup DBMS systems.
+</I>&gt;<i> Certainly, text searching will usually be faster, but at the loss of a
+</I>&gt;<i> tremendous amount of functionality.  And yes, text files can be generated
+</I>&gt;<i> from any development system, but in doing so, it is widely recognized that
+</I>&gt;<i> information loss is inevitable.
+</I>
+Take a look at the membership directory query system at the ASPT
+website at:
+
+<A HREF="http://www.csdl.tamu.edu/FLORA/aspt/aspthome.htm">http://www.csdl.tamu.edu/FLORA/aspt/aspthome.htm</A>
+(select 'membership')
+
+The query page carries links to 'front end' systems that allow the
+user to query a full text index using a mouse.  The index originates
+as a DbaseIV file sent to me by the ASPT treasurer.  I convert it to
+a data table using an archaic, cheap, DOS-based database program and,
+using a simple (150 lines of code), home-built program, generate a
+structured text file (2 min. run - 1300+ records).  This is shipped
+to a UNIX server and indexed by me using a locally built webpage.
+There is *no* loss of information in this process and programed
+output allows the base data to be enhanced via insertion of
+browser-based email links and functional web links for ASPT members
+that cite a web page.  I update the system on almost a daily basis
+and full updates (new file from the treasurer) take about 10 minutes.
+ Also, the index is available for open URL query (avoiding the 'front
+end') if a user has an interest.  The URL:
+
+<A HREF="http://www.csdl.tamu.edu/FLORA/cgi/aspt_query?focus=Amaranthaceae">http://www.csdl.tamu.edu/FLORA/cgi/aspt_query?focus=Amaranthaceae</A>
+
+will pull a listing of those ASPT members listing this family as an
+item research interest.
+
+
+&gt;<i> search engine or a real DBMS).  Personally I wouldn't mind waiting a few
+</I>&gt;<i> seconds for the information to flow straight into my spreadsheet or GIS app
+</I>&gt;<i> or whatever in a nice orderly fashion, rather than having to cut and paste
+</I>&gt;<i> oddly formatted lumps out of my web browser screen (with the associated risk
+</I>&gt;<i> of messing things up).
+</I>
+A 'real' DBMS requires 'real' server based DBMS costs, complexity,
+and administrative overhead that is beyond most collection managers.
+No doubt, for small applications - such as the ASPT membership
+directory cited above - Bill Gates and others will have local systems
+available that can be used by the general public, but larger datasets
+with broader functionality, if DBMS-based, will require a 'wait' at
+two levels, 1) on-line response time (seconds), and 2) development
+time (years and years, with endless symposia, workshops, and
+'standards' debate so far).
+
+In terms of relative on-line response time, three systems carry
+roughly similar sets of data and returns (text/map) for North
+American vascular plants:
+
+server-based DBMS:
+
+<A HREF="http://www.mip.berkeley.edu/bonap/checklist_intro.html">http://www.mip.berkeley.edu/bonap/checklist_intro.html</A>
+<A HREF="http://plants.usda.gov/plants/">http://plants.usda.gov/plants/</A>
+
+and full text indexing (both text and map returns):
+
+<A HREF="http://www.csdl.tamu.edu/FLORA/b98/check98.htm">http://www.csdl.tamu.edu/FLORA/b98/check98.htm</A>
+
+a few queries to each will demonstrate differences in responses to
+the client with regard to both speed and content
+
+Hugh D. Wilson
+Texas A&amp;M University - Biology
+<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">h-wilson at tamu.edu</A> (409-845-3354)
+<A HREF="http://www.csdl.tamu.edu/FLORA/Wilson/homepage.html">http://www.csdl.tamu.edu/FLORA/Wilson/homepage.html</A>
+
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="106668.html">Compositae/insect mystery
+</A></li>
+	<LI>Next message: <A HREF="059305.html">data sharing
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#23513">[ date ]</a>
+              <a href="thread.html#23513">[ thread ]</a>
+              <a href="subject.html#23513">[ subject ]</a>
+              <a href="author.html#23513">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

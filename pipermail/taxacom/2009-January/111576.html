@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] ESA 2008 Talk Using Semantic Web technologies to tie	together disparate data about species .. Unique URI for each taxon
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20ESA%202008%20Talk%20Using%20Semantic%20Web%20technologies%20to%20tie%0A%09together%20disparate%20data%20about%20species%20..%20Unique%20URI%20for%20each%20taxon&In-Reply-To=%3C3833bf630901221857w2579945ds984816de6feecf03%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="111578.html">
+   <LINK REL="Next"  HREF="111595.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2009-January/111576.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] ESA 2008 Talk Using Semantic Web technologies to tie	together disparate data about species .. Unique URI for each taxon</H1>
+    <B data-pagefind-meta="author">Peter DeVries</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20ESA%202008%20Talk%20Using%20Semantic%20Web%20technologies%20to%20tie%0A%09together%20disparate%20data%20about%20species%20..%20Unique%20URI%20for%20each%20taxon&In-Reply-To=%3C3833bf630901221857w2579945ds984816de6feecf03%40mail.gmail.com%3E"
+       TITLE="[Taxacom] ESA 2008 Talk Using Semantic Web technologies to tie	together disparate data about species .. Unique URI for each taxon">pete.devries at gmail.com
+       </A><BR>
+    <I data-pagefind-meta="date">Thu Jan 22 20:57:44 CST 2009</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="111578.html">[Taxacom] Polar bears as subspecies or species
+</A></li>
+        <LI>Next message: <A HREF="111595.html">[Taxacom] [tdwg] ESA 2008 Talk Using Semantic Web technologies	to tie	together disparate data about species .. Unique URI	for each taxon
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#111576">[ date ]</a>
+              <a href="thread.html#111576">[ thread ]</a>
+              <a href="subject.html#111576">[ subject ]</a>
+              <a href="author.html#111576">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2009</span><!--beginarticle-->
+<PRE>I don't know how many of you are working with Semantic Web technologies, but
+I did a talk at the2008 Meeting of the Entomological Society of America
+Meeting in Reno.
+
+You can see it here :
+<A HREF="http://esa.confex.com/esa/2008/webprogram/Paper39190.html">http://esa.confex.com/esa/2008/webprogram/Paper39190.html</A>
+
+One of the issues that I have been struggling with is the need for a unique
+identifier for a species
+concept that stays the same despite changes in taxonomic hypotheses. When I
+brought this up
+earlier some mentioned that many considered the taxonomic hypothesis to be
+the species concept.
+
+I thought that this approach was wrong because it unnecessarily required me
+to convince one of my
+collaborators to adopt my taxonomic hypothesis when it was clear we were
+talking about the same
+species.
+
+To me a species is a real thing to which different taxonomic hypothesis are
+applied.
+
+With this in mind I implemented a system where each species has a unique URI
+which resolves according
+to the recommendations of the linked data community.
+
+You can see this service at:  <A HREF="http://species.geospecies.org/">http://species.geospecies.org/</A>
+
+Here is the page for Culicidae
+<A HREF="http://species.geospecies.org/families/Culicidae">http://species.geospecies.org/families/Culicidae</A>
+
+Here is an example of the URI for Aedes vexans
+
+<A HREF="http://species.geospecies.org/spec_concept_uuid/0fcb5b7e-bcfc-4b56-b565-e1e38768badd/">http://species.geospecies.org/spec_concept_uuid/0fcb5b7e-bcfc-4b56-b565-e1e38768badd/</A>
+
+
+For a web browser this will resolve to the human readable page, for a
+semantic web crawler
+it will respond with RDF data.
+
+Here is journal reference marked up using the two major bibliography
+ontologies that includes
+what species concepts are included in the article. This allows publications
+to retain links to
+species concepts despite changes in nomenclature.
+
+<A HREF="http://rdf.geospecies.org/refs/sucaet2008wbr/index.rdf">http://rdf.geospecies.org/refs/sucaet2008wbr/index.rdf</A>
+
+Here is an RDF file of species observation records (the web version is
+currently password protected)
+
+<A HREF="http://rdf.geospecies.org/observations/index.rdf">http://rdf.geospecies.org/observations/index.rdf</A>
+
+I have chosen the UUID as the mechanism to make unique URI's not because of
+their inherent beauty,
+but because the allow anyone on almost any platform to create a unique id
+without worrying about to
+identical id's being created.
+
+For those interested, I can send you a PDF of my talk slides and text.
+
+I would also appreciate any feedback or suggestions :-)
+
+- Pete
+
+---------------------------------------------------------------
+Pete DeVries
+Department of Entomology
+University of Wisconsin - Madison
+445 Russell Laboratories
+1630 Linden Drive
+Madison, WI 53706
+Email: <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">pdevries at wisc.edu</A>
+Insects of Wisconsin &lt;<A HREF="http://insects.entomology.wisc.edu/">http://insects.entomology.wisc.edu/</A>&gt;
+Spiders of Wisconsin &lt;<A HREF="http://spiders.entomology.wisc.edu/">http://spiders.entomology.wisc.edu/</A>&gt;
+------------------------------------------------------------
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="111578.html">[Taxacom] Polar bears as subspecies or species
+</A></li>
+	<LI>Next message: <A HREF="111595.html">[Taxacom] [tdwg] ESA 2008 Talk Using Semantic Web technologies	to tie	together disparate data about species .. Unique URI	for each taxon
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#111576">[ date ]</a>
+              <a href="thread.html#111576">[ thread ]</a>
+              <a href="subject.html#111576">[ subject ]</a>
+              <a href="author.html#111576">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

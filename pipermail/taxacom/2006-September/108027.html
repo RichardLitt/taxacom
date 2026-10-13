@@ -1,0 +1,351 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] PygmyBrowse
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2006-September/108027.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] PygmyBrowse</H1>
+    <B data-pagefind-meta="author">Roderic Page</B>
+    r.page at bio.gla.ac.uk<BR>
+    <I data-pagefind-meta="date">Sun Sep 24 09:05:37 CDT 2006</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="108026.html">[Taxacom] PygmyBrowse
+</A></li>
+        <LI>Next message: <A HREF="108029.html">[Taxacom] SpiralFrog
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#108027">[ date ]</a>
+              <a href="thread.html#108027">[ thread ]</a>
+              <a href="subject.html#108027">[ subject ]</a>
+              <a href="author.html#108027">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2006</span><!--beginarticle-->
+<PRE>Dear Alex,
+
+On 23 Sep 2006, at 17:18, Chapman, Alex wrote:
+
+&gt;
+&gt; Hyperbolic trees would be of some advantage here - if I could find  
+&gt; one that was XML-based and as readily programmable as TouchGraph.   
+&gt; My particular aim was to add a visual navigation tool for  
+&gt; phylogenies that link via real-time database queries into the deep  
+&gt; content in FloraBase.  (Many of the tools I surveyed would have  
+&gt; required the links to content to be statically embedded in the  
+&gt; graph file itself.)
+
+The one I've had experience with is Treebolic (http:// 
+treebolic.sourceforge.net/en/index.html), which is Open Source and  
+uses XML input files. I'm not sure how well this would meet your  
+requirements.
+
+&gt;
+&gt; Finally, I would concur that it is difficult to invent a browser  
+&gt; for classifications or phylogenies that suits all classes of user.   
+&gt; Defining these user classes, developing a set of use-cases, and  
+&gt; evaluating the growing range of tools attempting to grapple with  
+&gt; representing (taxonomic/evolutionary) hierarchies are all  
+&gt; necessary.  Considerable work has already been done - Rebecca  
+&gt; Shapley's 2004 research project (<A HREF="http://www.rebeccashapley.com/">http://www.rebeccashapley.com/</A> 
+&gt; cipres/gallery.htm) summarises a good deal of it concisely.  I have  
+&gt; some hope that this sort of work might be included within the scope  
+&gt; of TDWG's Taxon Concept Schema subgroup (<A HREF="http://wiki.tdwg.org/twiki/">http://wiki.tdwg.org/twiki/</A> 
+&gt; bin/view/TCS/WebHome).
+
+I agree this is a difficult problem, and much of the Computer Science  
+literature isn't much help for phylogenies (trees that are often  
+binary and deep), whereas it is relevant to classifications (trees  
+that are shallow and have nodes of high degree - i.e., lots of  
+children). I've seen Rebecca's work -- I had hoped to get her to  
+write this up for Systematic Biology, but she got hired by Google  
+and, not surprisingly, other things got in the way.
+
+My own view on this topic is that, ironically, our obsession with  
+phylogeny makes our task of navigation much harder than if we were  
+content to use classifications.
+
+Regards
+
+Rod
+
+
+&gt;
+&gt; Alex
+&gt; ____
+&gt; Alex R. Chapman                    Email: alexc at dec.wa.gov.au
+&gt; TDWG Oceania Regional Secretary           <A HREF="http://www.tdwg.org">http://www.tdwg.org</A>  
+&gt; &lt;<A HREF="https://webmail.calm.wa.gov.au/exchweb/bin/redir.asp?URL=http://">https://webmail.calm.wa.gov.au/exchweb/bin/redir.asp?URL=http://</A> 
+&gt; www.tdwg.org/&gt;
+&gt; Research Scientist           Voice/Fax: +61 8 9334 0513 /0515
+&gt; WA Herbarium   -   Department of Environment and Conservation
+&gt; Locked Bag 104 Bentley Delivery Centre Western Australia 6983
+&gt;
+&gt; ________________________________
+&gt;
+&gt; From: taxacom-bounces at mailman.nhm.ku.edu on behalf of Roderic Page
+&gt; Sent: Sat 23/09/2006 8:50 PM
+&gt; To: TAXACOM
+&gt; Subject: Re: [Taxacom] PygmyBrowse
+&gt;
+&gt;
+&gt;
+&gt; XML trees are a nice approach, although the example you give is still
+&gt; vertically pretty large (i.e., it doesn't fit on screen, although
+&gt; this could be solved by putting it in a DIV tag that scrolls). The
+&gt; other issue is how deep is the hierarchy that you want to display.
+&gt; The spider tree is fairly shallow (3 levels: family-genus-species).
+&gt; Loading the entire ITIS classification into an XML document for
+&gt; display would result in a very large file to download to the browser.
+&gt; I've played a little with options such as loading a tree that is at
+&gt; most three levels deep, then fetching deeper levels on the fly.
+&gt;
+&gt; I think in practice some combination of approaches may prove best. I
+&gt; guess what I like about PygmyBrowse is that it occupies very little
+&gt; space, and can handle very large hierarchies. Adding some depth to
+&gt; the list of children it displays (e.g., showing both genus and
+&gt; species level) may enhance it.
+&gt;
+&gt; What would be useful is doing some usability studies on  different
+&gt; approaches. For instance, I find hyperbolic trees (as used in my old
+&gt; Glasgow Name Server - <A HREF="http://darwin.zoology.gla.ac.uk/~rpage/MyToL/">http://darwin.zoology.gla.ac.uk/~rpage/MyToL/</A>
+&gt; www/) to be fun, but not always intuitive.
+&gt;
+&gt; In the same way, find the Phylogeny Browser for APGII mentioned on
+&gt; this list by Alex Chapman (<A HREF="http://florabase.calm.wa.gov.au/">http://florabase.calm.wa.gov.au/</A>
+&gt; phylogeny/ ) to be almost impossible to use because it doesn't retain
+&gt; any context when browsing - click on a node and everything changes
+&gt; (shape and content of tree, and orientation).
+&gt;
+&gt; There's scope for doing some serious work in this area, especially if
+&gt; it connects to the large literature in the Computer Science community.
+&gt;
+&gt; Regards
+&gt;
+&gt; Rod
+&gt;
+&gt;
+&gt;
+&gt; On 22 Sep 2006, at 17:59, Shorthouse, David wrote:
+&gt;
+&gt;&gt; An alternative solution if the tree isn't too large (e.g. for a
+&gt;&gt; subset of
+&gt;&gt; taxonomic groups) is to make use of the raw xml with a stylesheet
+&gt;&gt; like the
+&gt;&gt; following: <A HREF="http://www.devx.com/getHelpOn/Article/11874/0/page/5">http://www.devx.com/getHelpOn/Article/11874/0/page/5</A> and
+&gt;&gt; available for Nearctic spiders here:
+&gt;&gt; <A HREF="http://canadianarachnology.dyndns.org/data/canada_spiders/xmltree/">http://canadianarachnology.dyndns.org/data/canada_spiders/xmltree/</A>
+&gt;&gt; xmltree2.x
+&gt;&gt; ml. What you might also want to consider Rod is how to have different
+&gt;&gt; branches of the tree expanded at the same time. ZooBank's rather
+&gt;&gt; trivial
+&gt;&gt; problem can be solved if they just used &lt;&lt; onClick=&quot;whatever;
+&gt;&gt; return false&quot;
+&gt;&gt;&gt;&gt; to prevent the page from jumping up to the top with every click
+&gt;&gt;&gt;&gt; event.
+&gt;&gt;
+&gt;&gt; David P. Shorthouse
+&gt;&gt; ------------------------------------------------------
+&gt;&gt; Department of Biological Sciences
+&gt;&gt; CW-403, Biological Sciences Centre
+&gt;&gt; University of Alberta
+&gt;&gt; Edmonton, AB   T6G 2E9
+&gt;&gt; Phone: 1-780-492-3080
+&gt;&gt; mailto:dps1 at ualberta.ca
+&gt;&gt; <A HREF="http://canadianarachnology.webhop.net">http://canadianarachnology.webhop.net</A> &lt;http:// 
+&gt;&gt; canadianarachnology.webhop.net/&gt;
+&gt;&gt; <A HREF="http://arachnidforum.webhop.net">http://arachnidforum.webhop.net</A> &lt;<A HREF="http://arachnidforum.webhop.net/">http://arachnidforum.webhop.net/</A>&gt;
+&gt;&gt; ------------------------------------------------------
+&gt;&gt;
+&gt;&gt; -----Original Message-----
+&gt;&gt; From: taxacom-bounces at mailman.nhm.ku.edu
+&gt;&gt; [mailto:taxacom-bounces at mailman.nhm.ku.edu] On Behalf Of Roderic Page
+&gt;&gt; Sent: Friday, September 22, 2006 10:28 AM
+&gt;&gt; To: TAXACOM
+&gt;&gt; Subject: [Taxacom] PygmyBrowse
+&gt;&gt;
+&gt;&gt; After being so rude about ZooBank, I've decided to try and be a
+&gt;&gt; little more
+&gt;&gt; constructive.
+&gt;&gt;
+&gt;&gt; One thing which did annoy me about ZooBank's web site was the way the
+&gt;&gt; taxonomic tree was displayed (constructive stuff coming, promise). It
+&gt;&gt; rapidly became huge, and every time the node was clicked on the page
+&gt;&gt; reloaded, and bounced you back to the top. Trying to navigate through
+&gt;&gt; chordates, for example, was a nightmare.
+&gt;&gt;
+&gt;&gt; I stumbled across the PygmyBrowse tree browser (see
+&gt;&gt; <A HREF="http://iphylo.blogspot.com/2006/09/pygmybrowse.html">http://iphylo.blogspot.com/2006/09/pygmybrowse.html</A> for details and
+&gt;&gt; links to
+&gt;&gt; the original work), and thought this might be a useful approach to  
+&gt;&gt; the
+&gt;&gt; difficult problem of navigating large trees.
+&gt;&gt;
+&gt;&gt; You can view a demo online at
+&gt;&gt; <A HREF="http://linnaeus.zoology.gla.ac.uk/~rpage/pygmy/">http://linnaeus.zoology.gla.ac.uk/~rpage/pygmy/</A> . It's at the toy
+&gt;&gt; stage, but
+&gt;&gt; is &quot;live&quot; and is displaying a real classification (in this case the
+&gt;&gt; ITIS
+&gt;&gt; animal classification). It has limitations (after all, it was knocked
+&gt;&gt; together in a coffee shop while avoiding actual work). The search
+&gt;&gt; only works
+&gt;&gt; for taxa whose name comprises a single word (i.e., you won't find
+&gt;&gt; species
+&gt;&gt; names), and not all it's features work in Microsoft Internet
+&gt;&gt; Explorer (which
+&gt;&gt; manages to follow most, but not all web standards). It works fine
+&gt;&gt; in Firefox
+&gt;&gt; and Safari.
+&gt;&gt;
+&gt;&gt; It doesn't actually do much (you'll see the taxon and ITIS tsn number
+&gt;&gt; displayed for each taxon you click on), but what I'm interested in
+&gt;&gt; is any
+&gt;&gt; comments on whether this is a useful approach to navigating trees,
+&gt;&gt; which is
+&gt;&gt; a common task in our area.
+&gt;&gt;
+&gt;&gt; For the technically minded, it's written in PHP, uses AJAX, and
+&gt;&gt; ITIS is
+&gt;&gt; stored in a MySQL database. If that means anything to you you'll
+&gt;&gt; realise how
+&gt;&gt; easy it is to do this. If, however, it reads like gibberish, then
+&gt;&gt; you'll
+&gt;&gt; realise that I'm just trying to show off by drowning you in acronyms.
+&gt;&gt;
+&gt;&gt; Regards
+&gt;&gt;
+&gt;&gt; Rod
+&gt;&gt;
+&gt;&gt; --------------------------------------------------------------------- 
+&gt;&gt; -
+&gt;&gt; --
+&gt;&gt; ----------------------------------------
+&gt;&gt; Professor Roderic D. M. Page
+&gt;&gt; Editor, Systematic Biology
+&gt;&gt; DEEB, IBLS
+&gt;&gt; Graham Kerr Building
+&gt;&gt; University of Glasgow
+&gt;&gt; Glasgow G12 8QP
+&gt;&gt; United Kingdom
+&gt;&gt;
+&gt;&gt; Phone:    +44 141 330 4778
+&gt;&gt; Fax:      +44 141 330 2792
+&gt;&gt; email:    r.page at bio.gla.ac.uk
+&gt;&gt; web:      <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+&gt;&gt; iChat:    aim://rodpage1962
+&gt;&gt; reprints: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/pubs.html">http://taxonomy.zoology.gla.ac.uk/rod/pubs.html</A>
+&gt;&gt;
+&gt;&gt; Subscribe to Systematic Biology through the Society of Systematic
+&gt;&gt; Biologists Website:  <A HREF="http://systematicbiology.org">http://systematicbiology.org</A> &lt;http:// 
+&gt;&gt; systematicbiology.org/&gt;
+&gt;&gt; Search for taxon names: <A HREF="http://darwin.zoology.gla.ac.uk/~rpage/">http://darwin.zoology.gla.ac.uk/~rpage/</A> 
+&gt;&gt; portal/
+&gt;&gt; Find out what we know about a species: <A HREF="http://ispecies.org">http://ispecies.org</A> &lt;http:// 
+&gt;&gt; ispecies.org/&gt;
+&gt;&gt; Rod's rants on phyloinformatics: <A HREF="http://iphylo.blogspot.com">http://iphylo.blogspot.com</A>  
+&gt;&gt; &lt;<A HREF="http://iphylo.blogspot.com/">http://iphylo.blogspot.com/</A>&gt;
+&gt;&gt; Rod's rants on ants: <A HREF="http://semant.blogspot.com">http://semant.blogspot.com</A> &lt;http:// 
+&gt;&gt; semant.blogspot.com/&gt;
+&gt;&gt;
+&gt;&gt;
+&gt;&gt; _______________________________________________
+&gt;&gt; Taxacom mailing list
+&gt;&gt; Taxacom at mailman.nhm.ku.edu
+&gt;&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt;&gt;
+&gt;&gt;
+&gt;
+&gt; ----------------------------------------
+&gt; Professor Roderic D. M. Page
+&gt; Editor, Systematic Biology
+&gt; DEEB, IBLS
+&gt; Graham Kerr Building
+&gt; University of Glasgow
+&gt; Glasgow G12 8QP
+&gt; United Kingdom
+&gt;
+&gt; Phone: +44 141 330 4778
+&gt; Fax: +44 141 330 2792
+&gt; email: r.page at bio.gla.ac.uk
+&gt; web: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+&gt; iChat: aim://rodpage1962
+&gt; reprints: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/pubs.html">http://taxonomy.zoology.gla.ac.uk/rod/pubs.html</A>
+&gt;
+&gt; Subscribe to Systematic Biology through the Society of Systematic
+&gt; Biologists Website: <A HREF="http://systematicbiology.org">http://systematicbiology.org</A> &lt;http:// 
+&gt; systematicbiology.org/&gt;
+&gt; Search for taxon names: <A HREF="http://darwin.zoology.gla.ac.uk/~rpage/portal/">http://darwin.zoology.gla.ac.uk/~rpage/portal/</A>
+&gt; Find out what we know about a species: <A HREF="http://ispecies.org">http://ispecies.org</A> &lt;http:// 
+&gt; ispecies.org/&gt;
+&gt; Rod's rants on phyloinformatics: <A HREF="http://iphylo.blogspot.com">http://iphylo.blogspot.com</A> &lt;http:// 
+&gt; iphylo.blogspot.com/&gt;
+&gt;
+&gt;
+&gt;
+&gt;
+&gt; _______________________________________________
+&gt; Taxacom mailing list
+&gt; Taxacom at mailman.nhm.ku.edu
+&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt;
+&gt;
+&gt;
+
+----------------------------------------
+Professor Roderic D. M. Page
+Editor, Systematic Biology
+DEEB, IBLS
+Graham Kerr Building
+University of Glasgow
+Glasgow G12 8QP
+United Kingdom
+
+Phone: +44 141 330 4778
+Fax: +44 141 330 2792
+email: r.page at bio.gla.ac.uk
+web: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+iChat: aim://rodpage1962
+reprints: <A HREF="http://taxonomy.zoology.gla.ac.uk/rod/pubs.html">http://taxonomy.zoology.gla.ac.uk/rod/pubs.html</A>
+
+Subscribe to Systematic Biology through the Society of Systematic
+Biologists Website: <A HREF="http://systematicbiology.org">http://systematicbiology.org</A>
+Search for taxon names: <A HREF="http://darwin.zoology.gla.ac.uk/~rpage/portal/">http://darwin.zoology.gla.ac.uk/~rpage/portal/</A>
+Find out what we know about a species: <A HREF="http://ispecies.org">http://ispecies.org</A>
+Rod's rants on phyloinformatics: <A HREF="http://iphylo.blogspot.com">http://iphylo.blogspot.com</A>
+
+
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="108026.html">[Taxacom] PygmyBrowse
+</A></li>
+        <LI>Next message: <A HREF="108029.html">[Taxacom] SpiralFrog
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#108027">[ date ]</a>
+              <a href="thread.html#108027">[ thread ]</a>
+              <a href="subject.html#108027">[ subject ]</a>
+              <a href="author.html#108027">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

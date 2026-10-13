@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> latitude and longitude designation and collection data
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1995-October/017054.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">latitude and longitude designation and collection data</H1>
+    <B data-pagefind-meta="author">Konstantin Savov</B>
+    kps at FLORIN.MSK.SU<BR>
+    <I data-pagefind-meta="date">Tue Oct  3 03:08:39 CDT 1995</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="100209.html">latitude and longitude designation and collection data
+</A></li>
+        <LI>Next message: <A HREF="052846.html">latitude and longitude designation and collection data
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#017054">[ date ]</a>
+              <a href="thread.html#017054">[ thread ]</a>
+              <a href="subject.html#017054">[ subject ]</a>
+              <a href="author.html#017054">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1995</span><!--beginarticle-->
+<PRE>On Sep 29, 18:55, Library wrote:
+k&gt; Subject: latitude and longitude designation and collection data
+k&gt;           The California Academy of Sciences has recently acquired
+k&gt;           GIS software.  It is of great interest to us to use this
+k&gt;           software in conjunction with our existing collection's data.
+k&gt;           However, much of our existing data is without latitudinal
+k&gt;           and longitudinal designations.  Has anyone already
+k&gt;           undertaken the huge job of retrospectively assigning
+k&gt;           latitude and longitude to their collections data.  If so,
+k&gt;           what was done to maximize the speed and accuracy of the job?
+k&gt;
+k&gt;           Karen Cebra
+k&gt;           Collections Manager
+k&gt;           Department of Ornithology and Mammalogy
+k&gt;           California Academy of Sciences
+k&gt;           kcebra at calacademy.org
+k&gt;-- End of excerpt from Library
+
+
+
+I've had similar problems with asian specimens of Tiliaceae (China,
+Malesia) and collections from central part of Russia.  Currently I have
+got a software designed for such purposes.  It integrates database to
+store data on collections (herbarium labels, localities, etc.) and
+GIS-like interface to prepare and produce maps based on herbarium
+collections.  I save a lot of time using it.
+
+You usually have several problems working with coordinates of collected
+material.
+
+1.  You always should find a proper sources to get coordinates of
+localities (gazeteers, maps, etc.).  For example, ten years ago I had a
+lot of problems with collections even from central part of Russia
+(proper maps was not available here, anybody had to get special
+permission to work with true maps).  When I received good maps, it
+became much easier to make labels for my own collections and find
+coordinates for old herbarium.
+
+It's very useful to get a digital map with settlements, rivers, etc.
+But it is more important to have good maps and gazeteers in any form,
+from my point of view.  In any case, you should spent a lot of time
+searching for a point needed on a map or checking gazeteers - it is very
+hard to automate the process.
+
+&gt;From the other side, if you want to have rather detailed digital maps
+managed by your GIS software, you will need huge amount of disk space
+and other hardware resources.  Detailed digital map (1:1000000) I'm
+using for South-East Asia occupies several megabytes of disk space with
+coast lines, administrative boundaries and main rivers only.  The same
+map of the world needs more than 10 MB.  If you try to add small rivers
+and settlements there, you will need much more disk space and some
+tricks to accelerate drawing that map on the screen (or you should get
+more powerful hardware and software than ordinary Intel machines with
+DOS/Windows :-).
+
+So, I often prefer to use detailed maps (1:1000000 and 1:100000 for
+detailed work) in paper form and rather simple digital map (1:1000000 in
+slightly reduced form) loaded in my GIS application.
+
+2.  If you have collections with localities indicated as 'Borneo',
+'Caucasus' or 'Moscow province' (I've seen a lot of such stuff!), you
+get very difficult problem in any case.  You would need a lot of time
+examining some additional information in order to localize that
+collections.  In some cases you can use such material for analysis, but
+your software should support areas, lines, sets of points as a spatial
+representation of localities.  Localities of such kind will never have
+coordinates.  However, you would draw those on a digital map.
+
+3.  If you have problems with maps, or you have badly documented
+collections, any software will not help you.  If you have good maps and
+your collections are documented well enough, good software would help
+you significantly.
+
+Structure of your collection database and integration between database
+and GIS are the most important things.  You should avoid any duplication
+in your data.  For example, your software should support a situation,
+when the same locality has several descriptions.  If you have
+coordinates for locality, it's very useful to create points for all
+specimens collected there automatically.  Your software should support
+that feature.  If I can get coordinates of a point created on a digital
+map and enter them in a label automatically, it's also very useful.  If
+you want to keep coordinates written by a collector, you often should
+keep in a database both coordinates entered from label and those of a
+point created on a digital map.  It's not a good idea to replace
+coordinates originally written on a label by new ones - you would lost
+useful data.  There are a lot of other things we'd discuss here.  If you
+have any questions, please, contact me directly.
+
+All features mentioned above are not related to GIS or collection
+database only.  So, integration between GIS and database is very
+important.  Unfortunately, I've seen many systems with powerful GIS
+(fine maps and pictures, etc.) and too simple database.  You can get
+just additional problems in this case.  A collection database is not
+simple, if it is properly designed.
+
+
+
+SY,
+
+Konstantin Savov
+
+--
++------------------------------------------------------------------------------+
+|        Konstantin Savov        |     DataX/FLORIN, Inc.    Moscow, Russia    |
+|                                |       Advanced Data Management Systems      |
+|   E-mail:  kps at florin.msk.su   |   Voice: (095)158-9520  Fax: (095)158-5700  |
++------------------------------------------------------------------------------+
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="100209.html">latitude and longitude designation and collection data
+</A></li>
+        <LI>Next message: <A HREF="052846.html">latitude and longitude designation and collection data
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#017054">[ date ]</a>
+              <a href="thread.html#017054">[ thread ]</a>
+              <a href="subject.html#017054">[ subject ]</a>
+              <a href="author.html#017054">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

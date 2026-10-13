@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Taxaonomic database structure
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1997-August/021444.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Taxaonomic database structure</H1>
+    <B data-pagefind-meta="author">Norman F. Johnson</B>
+    nfj at IRIS.BIOSCI.OHIO-STATE.EDU<BR>
+    <I data-pagefind-meta="date">Fri Aug 29 15:43:08 CDT 1997</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="104597.html">Molecules et al
+</A></li>
+        <LI>Next message: <A HREF="057236.html">Taxaonomic database structure
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#021444">[ date ]</a>
+              <a href="thread.html#021444">[ thread ]</a>
+              <a href="subject.html#021444">[ subject ]</a>
+              <a href="author.html#021444">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>1997</span><!--beginarticle-->
+<PRE>Here's another option for encoding taxonomic names (no matter what kingdom
+you're dealing with).  Since we're dealing with a hierarchy, it's possible to
+get by with just a single table.  It needs only have the taxon identifier
+(name, id number, whatever) and the corresponding identifier for its parent.
+ Of course, that parent has a parent, on down/up to the most inclusive taxon in
+your database.  We're using Oracle as our RDBMS and it has a nice SQL add-on
+feature that facilitates traversing such hierarchies.
+
+With the hierarchy represented in this manner, it seemed easiest to have
+species names represented as the combination of Genus + species. (Trinomials
+would work the same way.)  I went in this direction because the genus in which
+a species is classified may change.  This, in turn, may require modification of
+the ending of the specific epithet.  Rather than try to program in grammatical
+rules, I thought it would be easier to have it just typed in the way the name
+was used.  This also makes it possible to use names in which the gender of the
+genus and species names were incorrectly matched.
+
+You may view our database structure (most of it anyway) at
+<A HREF="http://iris.biosci.ohio-state.edu/projects/tpp/tables.html">http://iris.biosci.ohio-state.edu/projects/tpp/tables.html</A>
+This was based on the original Association of Systematics Collections
+information model (<A HREF="http://www.keil.ukans.edu:70/11/standards/asc).">http://www.keil.ukans.edu:70/11/standards/asc).</A>  The newer
+and still developing model may be seen at
+<A HREF="http://gizmo.lbl.gov/DM_TOOLS/OPM/BPSL/LIB/ASC.html">http://gizmo.lbl.gov/DM_TOOLS/OPM/BPSL/LIB/ASC.html</A>
+
+Norm Johnson
+-------------------
+Norman F. Johnson        Johnson.2 at osu.edu
+Associate Professor      phone: (614) 292-6595
+Director, Ohio State     fax: (614) 292-7774
+  Insect Collection
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="104597.html">Molecules et al
+</A></li>
+        <LI>Next message: <A HREF="057236.html">Taxaonomic database structure
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#021444">[ date ]</a>
+              <a href="thread.html#021444">[ thread ]</a>
+              <a href="subject.html#021444">[ subject ]</a>
+              <a href="author.html#021444">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,860 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Responses to Geocoding ??
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Responses%20to%20Geocoding%20%3F%3F&In-Reply-To=%3Cmailman.5197.1157126679.2564.taxacom%40mailman.nhm.ku.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="101922.html">
+   <LINK REL="Next"  HREF="054561.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/1996-June/018769.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Responses to Geocoding ??</H1>
+    <B data-pagefind-meta="author">Chrissyvan Hilst</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Responses%20to%20Geocoding%20%3F%3F&In-Reply-To=%3Cmailman.5197.1157126679.2564.taxacom%40mailman.nhm.ku.edu%3E"
+       TITLE="Responses to Geocoding ??">CVANHILS at SIVM.SI.EDU
+       </A><BR>
+    <I data-pagefind-meta="date">Mon Jun  3 15:28:59 CDT 1996</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="101922.html">Molecular work on Odonata
+</A></li>
+        <LI>Next message: <A HREF="054561.html">Responses to Geocoding ??
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#18769">[ date ]</a>
+              <a href="thread.html#18769">[ thread ]</a>
+              <a href="subject.html#18769">[ subject ]</a>
+              <a href="author.html#18769">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>1996</span><!--beginarticle-->
+<PRE>EMAIL RESPONSES TO GEOCODING QUESTION
+These are the reponses to the post I put on TAXACOM and FWIM, inquiring
+about thoughts other museums or individuals had about dealing with
+&quot;value added&quot; lat/long data attached to specimen localities. This is an
+extensive post, I apologize, but the responses were informative and good
+reading so I felt it necessary to share.
+
+Thank you to everyone who responded,
+Chrissy van Hilst
+
+
+From: &quot;Rod Tuloss&quot; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">ret at pluto.njcc.com</A>
+There is a worldwide data base of military origin that will give a
+lat/long in exchange for a place name.  The list of place names (I
+understand) is quite extensive including geologic/hydrologic
+features as well as bridges, roads, railways, etc.
+
+From: &quot;Melissa C. Winans&quot; &lt;<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">mcwinans at MAIL.UTEXAS.EDU</A>&gt;
+I agree with you that the precision of your data is a serious
+issue, and that it is important to do something to inform the user
+of differences in precision from site to site.  We had to deal with
+the same question when we set up a GIS for our fossil specimen
+sites about 4 years ago; some sites (especially the ones from the
+late 1800's and early 1900's) could not be spotted precisely due to
+inadequate data, and others covered a large enough area that it was
+not possible to represent them with a single point at the 1:24,000
+map resolution we were using.  We solved this by doing three
+things:  1) We marked sites that were too large to represent as a
+single point with polygons outlining the extent of the site; 2) for
+sites where the location was uncertain, but an educated guess could
+be made, we outlined the most probable area and digitized that as
+a polygon; 3) we attached an attribute to each point or polygon
+indicating the degree of reliability of the plotting on a 5-step
+scale ranging from &quot;Exact&quot; at the top to &quot;Wild guess&quot; at the
+bottom.
+
+This still leaves you with the question of what to do about
+coordinates for the sites that can't be represented as points.
+Depending on how you do your distribution analyses, you still may
+have to represent the large or uncertain sites by a single
+coordinate pair (probably the centroid of the polygon), but if your
+GIS attribute tables have a reliability attribute you at least will
+be able to take whatever steps seem to be called for to indicate
+the degree of certainty of each location.
+  ****************************************************************
+  Melissa C. Winans, Collection Manager (<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">mcwinans at mail.utexas.edu</A>)
+  Vertebrate Paleontology Laboratory      Phone: 512-471-6087
+  J.J. Pickle Research Campus               Fax: 512-471-5973
+  University of Texas, Austin, TX 78712
+
+From:         Don Kirkup &lt;<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">d.kirkup at LION.RBGKEW.ORG.UK</A>&gt;
+Organization: The Royal Botanic Gardens, Kew, UK
+
+We have c. 15,000 collections records in the Brunei Checklist
+database (MS ACCESS). Most of the records are georeferenced and
+each set of coordinates is assigned an error-code (in meters)
+depending on how they were derived. Our scale of errors varies from
+c. +/-100m for GPS derived coordinates, to locations given to the
+nearest minute, to gazetteer derived localities for which we assign
+an arbitrary error of +/-2,500m. We also have some collections for
+which the only geographical information is 'Brunei', but thankfully
+not too many!  For a pictorial representation of species ranges a
+map with different symbols for the different error codes is
+probably enough to convey the message. For analytical purposes
+however we felt that the georeference could not satisfactorily be
+treated as a point, but should be treated as a polygon.
+The first step of our approach was to simply draw a circle with a
+radius  for each collection point equivalent to that of the
+error-code value in the database.
+
+The precision of a locality was then further refined by finding the
+intersection of the error-circle with graphical coverages related
+to observations in our database. For example, collection
+observations in the database includes forest and soil types. We
+also have graphical coverages for both of these. The refined
+locality is calculated by overlaying the error-circle with the
+forest type and soils coverages and finding the intersection
+between these three graphical layers and the tabulated values in
+the database. For collections along 'linear' features such as roads
+and rivers rather than draw an error-circle, we create a 50m buffer
+around the feature then overlay and link to the database in the
+same way..  This involves a fair amount of work even though we have
+managed to  semi-automate the process (using PC and Workstation
+ArcInfo).  We felt that this was the best we could achieve and this
+was necessary if we were to incorporate as many collection
+observations as possible for  the interpretation of our
+remote-sensed data.
+
+  Don Kirkup
+  Brunei Checklist Project
+  Herbarium
+  RBG Kew.
+
+From:         Jorge Soberon Mainero
+&lt;<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">jsoberon at MIRANDA.ECOLOGIA.UNAM.MX</A>&gt;
+
+The subject of geocoding label information is really huge. In
+CONABIO we  have been helping Mexican taxonomists to geocode tens
+and tens of thousands of specimens, and there are all kinds of
+unexpected problems. There are problems with trying to decide
+whether names of localities are really different, (Chauntempan,
+Chiauntempan, Santa Ana Chauntempan, Tuxpan Ver., Tuxpan Mich.,
+Tuxpan Pue.); problems with information as &quot;5km north east of&quot;
+means straight line, along a road, along a path? Problems with
+inconsistent within-record information, like the label text
+specifying the record to be within certain state but the geocoding
+turning out to be outside it, or in  the border. And what is the
+border? Remember this is a fractal concept,  depending on the
+scale. The precise location of the border between two  states
+depends on the scale of the maps you use. Problems of inconsistent
+among-fields information, for example, the altitude reported in the
+label  inconsistent with the corresponding altitude from the
+digital elevation  model, or inconsistent with the ecoregion your
+GIS believes the locality belongs to, etc...
+
+In CONABIO we have a team working on the above problems, trying
+to conceptualize them as well as to provide algorithms and
+practical solutions. I believe this a very interesting and
+underdeveloped subject. Many people are now georeferencing label
+information, which in our experience is worth all the effort,
+because the interface with the GIS allows modelling, extrapolation
+and all sorts of interesting analysis. However, the exercise is
+fraught with methodological (and some conceptual) problems and I
+would love to hear about some of the experiences of you people out
+there.
+
+From: <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">Greg.Chandler at anu.edu.au</A> (Greg Chandler)
+Hello I  read your message on TAXACOM, and can at least supply you
+with some sort of feedback. I worked for a while (c. 2 yrs)
+databasing the collection at the Australian National Herbarium and
+the Australian National Botanic Gardens.  It gave me a lot of
+experience in lat/longing. I'll address the biggest problem first,
+that of augmenting imprecise localities with precise lat/longs.
+This is very difficult, and for most of them it is impossible, and
+better to give no lat/long than a dubious one, eg. I struck a
+number of specimens marked as NW Australia or Central Australia. I
+some cases (rare) I could go and look up diaries for collectors and
+get some sort of idea where they were, but the lat/long was still
+imprecise. What we do at the herbarium is to give it a precision
+code (eg. 4 is within a radius of 25 km, 3 is within 10 km, etc).
+Then, when you want to pull out localities for precise purposes
+(eg. GIS), you can ignore certain precision codes (which still
+makes your data mappable, because you ignore the more dubious
+localities).  So augmenting dubious localities is difficult, and
+can be misleading.
+
+Other than that, lat/longs are very useful. I find this now that I
+am a research assistant, if collections have lat/longs it is
+quicker and easier to look them up on a map, for example, and for
+creating maps (using computer softwear). Anyway, there are my
+comments. Not many, but it is a worthwhile exercise, and good luck!
+________________________________________________________________
+ Greg Chandler
+ Division of Botany and Zoology
+ School of Life Sciences
+ Australian National University
+ Canberra, ACT, 0200
+ Ph. 06 249 3828 Fax. 06 249 5573
+
+From: &quot;Thomas  E. Yancey&quot;  &lt;<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">tey7004 at geopsun.tamu.edu</A>&gt;
+
+The topic of recording geographic information and of recapturing
+this type of info on older collections was discussed in this list
+about a year ago. Look up the Taxacom archive and check those
+messages for good discussions and insights.  I would add that lat
+&amp; long is good for purposes of location, but that placing the
+collections in a UTM metric grid location is better. I do both
+types of determination with our own collections and find it much
+easier to do UTM grid locations. Off the shelf computer programs
+that use geographic data generally employ lat &amp; long, but you
+should consider the need for accuracy and greater ease of use that
+UTM grid offers and not let that constrain you. If you get into the
+matter of recapturing locality data, be cautious and accept the
+fact that real accuracy is impossible, unless the locality can be
+physically relocated for checking.
+
+  Tom Yancey
+  Dept. Geology Texas A&amp;M University
+
+From:         Jeff Waldon &lt;<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">fwiexchg at VT.EDU</A>&gt;
+
+It is possible to geocode place names using the USGS gazetteer
+data, however, our experience with museum collections (especially
+ones prior to 1960) have not been very good.  The problem of
+overstating accuracy is real, but more so than that, you may very
+well have problems with the recorded location on the museum tag not
+being the place where it was collected, but  rather where the tag
+was filled out, e.g., at the train station, nearest  town, etc.
+Quite a few place names don't appear in the USGS gazetteer
+especially towns, and in some cases multiple occurrences of town
+names can  be confusing (how many Pleasant Valleys does CA have?
+Virginia has several.)   Given the problems inherent in this, we
+have still used museum collections  extensively, but only for
+fairly large area presence/absence coding like  hydrologic unit or
+county and only after verfication by someone that has a  good
+handle on the species in question.  We've also played around with
+accuracy modifiers for distribution, but that runs the risk that
+users won't  pay attention and get into problems because of it.
+
+Jeff Waldon, Project Leader
+Fish and Wildlife Information Exchange
+Dept. of Fisheries and Wildlife Sciences, Virginia Tech
+205B Washington St.
+Blacksburg, VA 24060
+(540) 231-7348 voice,
+(540) 231-7019 fax,
+<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">fwiexchg at vt.edu</A> email
+
+From: James Lyons-Weiler &lt;<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">weiler at ers.unr.edu</A>&gt;
+
+Your concern for precision is correct, however, IMHO it is a matter
+of scale.  If you will be inferring changes in species
+distributions at a scale that is gross (continental or regional)
+lat/long should suffice. Also, stating your concerns in the
+publication, and making explicit the consequences of imprecision on
+the validity of your inferences should satisfy.  If you can
+determine that the inferences don't change when you make them with
+your &quot;imprecise&quot; locations alone  (as compared to more precise
+locations, if you have them), you've shown that the data are good
+enough.
+ Hope my perspective helps.
+ James
+
+From: Suzanne McLaren &lt;<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">mclarens at clpgh.org</A>&gt;
+I work on the Committee on Information Retrieval of the  American
+Society of Mammalogists.  We have had a set of documentation
+standards  in print since 1979.  However, we recently have
+published an update which  includes some suggested new fields for
+collection databases.  As with the  previous edition, some fields
+are considered &quot;essential&quot; to have while others ar  called
+&quot;preferred,&quot; and there is a third tier called &quot;optional.&quot;  One of
+the  newly added &quot;optional&quot; fields is called &quot;Coordinate Precision
+Index.&quot;   It is  used to indicate the reliability of  coordinates
+that have been applied to a  collecting locality.  One designation
+indicates lat/long provided by the  original collector using GIS
+technology; several other designations are for  collectors using
+maps of different scale.  However, there are further layers of
+designations for localities derived from look-up tables, etc.  I
+think the idea fits very well for &quot;value added&quot; localities. I think
+this idea could address your  concerns by providing a mechanism by
+which users of the data could be made  aware of your concerns about
+accuracy but without using a huge amount of space.
+  Sue
+  Suzanne B. McLaren
+  Collection Manager, Section of Mammals
+  Carnegie Museum of Natural History
+  Edward O'Neil Research Center
+  5800 Baum Blvd
+  Pittsburgh PA 15206-3706   phone 412-665-2615; FAX: 412-665-2751
+
+From: &quot;Patricia Jennings&quot; &lt;<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">JENNINGP at cncpe.ecape.gov.za</A>&gt;
+
+We have a possibly related problem, in that on our reserves we need
+to map locations of infrastructure (precise) and observations of
+animals (imprecise).  O.K. so we don't map them on the same layer,
+but somewhere/somehow the user must be informed of the
+accuracy/precision of each layer = metadata file.  Would it not be
+some way towards a solution if you were to split your data into
+layers of increasing precision, such that your metadata file could
+classify them according to their precision.  For example layer 1
+province level, layer 2 magisterial district, layer 3 within 50 km
+radius, etc.  Or is this far too simplistic a solution?
+
+ Cheers
+ Pat
+ Patricia Jennings
+ <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">jenningp at cncpe.ecape.gov.za</A>
+ Tel:  0027-41-3902127
+ Fax:  0027-41-337468
+ East Cape Nature Conservation
+ P. Bag X1126
+ Port Elizabeth
+ 6000
+ Republic of South Africa
+
+From: Metzler &lt;<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">spruance at infinet.com</A>&gt;
+
+You might want to consider a scale of relative uncertainty
+(fuzziness scale) as described below.  This was also printed in the
+ACS newsletter a couple years ago
+
+  Eric H. Metzler
+  Ohio Department of Natural Resources
+  614 265 6501
+  <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">spruance at infinet.com</A>
+
+
+
+       THE COMPREHENSIVE SURVEY OF OHIO MOTHS AND BUTTERFLIES
+                completed by The Ohio Lepidopterists
+                      Project No. NGSCW-91-11
+
+     Information pertinent to the concept of RELATIVE CERTAINTY
+                    in the final report to ODNR
+                         30 September 1992
+
+
+The Ohio Lepidopterists strived to provide detail about the capture
+localities of the records in the collective databases.  The detail
+included all information from the locality labels associated with
+each specimen.  In addition, The Ohio Lepidopterists sought to
+provide the latitudinal and longitudinal coordinates for as many of
+the collecting localities as possible.  The purpose of this report
+is to provide information pertinent the  methods used to calculate
+those coordinates.
+
+Two thousand one hundred fourteen discrete collecting locations
+were regi  stered for specimens collected in Ohio.  The exactness
+of the localities varied from vague, such as someplace within the
+state of Ohio, to extremely specific, whereby the stated location
+is a few feet.  The center of each location was used to record the
+latitude and longitude, but given the unequal size of the recorded
+locations, a method was developed to stipulate the size of the
+geographical area represented by each locality.
+
+A SCALE OF RELATIVE CERTAINTY was conceived to represented the size
+of the area for each locality. The Scale of Relative Certainty was
+designed to reflect the precision of the data labels.  Since some
+labels indicate a linear site, i.e. &quot;along highway 82&quot;, the Scale
+of Relative Certainty has two scales, one for square area, S1, S2,
+etc., and one for linear sites, L1, L2, etc.  The Scale of Relative
+Certainty is printed at the end of the report.
+
+The method of plotting Latitude and Longitude is straight forward.
+If the collector knew the latitude and longitude, those
+calculations were used.  For most other sites, county maps as
+published by the Ohio Department of Transportation (ODOT) were
+used.  Occassionally the ODOT maps were supplanted by 7.5'
+topographic maps, other county maps, or other city maps.
+
+The ODOT county maps included tick marks for latitude and
+longitude.  In a few cases, i.e. Lake County and Ottawa County, the
+tick marks were found to be in error, thus The Ohio Lepidopterists
+used topographic maps to replace the ODOT tick marks with correct
+coordinates.
+
+The locations written on the specimen data/locality labels were
+located on the county maps, and a rule was used to calculate the
+latitude and longitude to degrees, minutes, and tenths of minutes.
+For locations that indicated an area, i.e. Vinton County, Brown
+Township, Section 11, the center of the area was used as the
+precise spot for the latitude and longitude.  For linear sites, the
+exact center of the linear site was used to  calculate the latitude
+and longitude.  The Scale of Relative Certainty was employed to
+determine the correct uncertainty code.
+
+The uncertainty codes were applied starting from largest area to
+smallest area.  Localities were not made to fit into the most
+precise code.  For example, the square area of the City of Columbus
+is larger than a township but smaller than a county.  Rather than
+make the square area of the City of Columbus more precise than
+stated on the label, the code for county, S7, was used.  Given the
+diversity of habitats in an area the size of  Columbus, accuracy
+greater than what is stated on the data label creates precision
+that is unwarranted.  As the sizes of the localities get larger,
+useful detail about the habitat requirements of the species are
+lost.  Future researchers can use the database to access the
+specimen if they need to know more about the sample.
+
+The codes of relative certainty were recorded in the database in
+degrees, minutes, and tenths of minutes.  The computer used these
+data to calculate the coordinates in degrees, tenths, hundredths,
+and thousandths of degrees.
+
+  The Scale of Relative Certainty follows:
+
+
+
+                    SCALE OF RELATIVE CERTAINTY
+                         September 28, 1992
+
+  CODE DEFINITION
+
+  S1        Precise location, plus or minus 200 ', is known.
+  S2        Location is known to be within a circle 1/4 mile in
+            diameter.
+  S3        Location is known to be within a circle 1/2 mile in
+            diameter.
+  S4        Location is known to be within a Section or
+                 equivalent.
+  S5        Location is known to be within a circle 2 miles in
+            diameter.
+  S6        Location is known within one township (about 36 sq.
+            miles) or equivalent.
+  S7        Location is known to be within a County.
+  S8        Location is known to be within 1/2 of the State of
+            Ohio.
+  S9        Location is known to be within the State of Ohio.
+
+  L1        The linear site is known to be no more than 1/2 mile
+            long.
+  L2        The linear site is known to be no more than 1 mile
+            long.
+  L3        The linear site is known to be no more than 2 miles
+            long.
+  L4        The linear site is known to be no more than 6 miles
+            long.
+  L5        The linear site is known to be no more than 36 miles
+            long.
+  L6        The linear site does not exceed a distance equal to
+            1/2 of the State of Ohio.
+  L7        The linear site does not exceed a distance equal to
+            the diameter of the State of Ohio.
+
+
+
+
+From:         Una Smith &lt;<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">una at DOLIOLUM.BIOLOGY.YALE.EDU</A>&gt;
+In order to relocate a number of old (1800's) localities, I started
+by plugging the locality names and what little other information I
+had at the time into an online geographic names server.  That was
+good enough  to narrow my search to one or two local area maps.  I
+used the maps to  determine more precise AND more accurate
+coordinates than were obtained from the GNS.
+
+Use of a GNS is fast and easy to automate.  But I think it is
+important to annotate any records containing such data so that the
+provenance of the coordinates can be retraced and, if necessary,
+the coodinates can be corrected or improved in the future.
+
+The SMASCH &lt;<A HREF="http://ucjeps.herb.berkeley.edu/smasch/index.html">http://ucjeps.herb.berkeley.edu/smasch/index.html</A>&gt; data
+model tries to capture the provenance of individual data points
+such as coordinates.
+
+          Una Smith
+          Department of Biology
+          Yale University
+
+
+From: &quot;Lawrence F. Gall&quot; &lt;<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">lfg at george.peabody.yale.edu</A>&gt;
+
+ Thought I'd reply off-list and say we have some experience here at
+ Peabody with the GNIS, and are mounting an effort to backfill
+ lat/lon data (with simplistic precision attribution) into some of
+ our datasets for older collections using GNIS town/place names
+ (which is very often the only entity in question available from
+ the specimens).
+
+ No doubt you've already seen the USGS' GNIS web offerings at
+ <A HREF="http://www-nmd-usgs.gov/www/gnis.">http://www-nmd-usgs.gov/www/gnis.</A>  Peabody has also kept a copy of
+ the GNIS online since 1994ish at <A HREF="gopher://gopher.peabody.yale.edu">gopher://gopher.peabody.yale.edu</A>
+ (it'll be migrating into an html context in June of this year).
+
+ Happy data-ing...
+
+Larry
+Lawrence F. Gall                 internet:  <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">lawrence.gall at yale.edu</A>
+Systems Office                      voice:  203-432-9892
+Peabody Museum, Yale University       FAX:  203-432-9816
+New Haven, CT 06520-8118 USA
+
+From: Arthur Chapman &lt;<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">arthur at erin.gov.au</A>&gt;
+
+There are a number of programs developed in this way - I am not
+sure how successful each has been.
+The most promising seemed to be one developed under a National
+Science Foundation grant by Matthew McGranaghan from the University
+of Hawaii. This was very complicated as they wrote their own GIS
+for it. Basically, you typed in your locality and a map would pop
+up on the screen and then you could grab the point with the mouse
+and move it (&quot;I was actually on the road&quot;), etc.  We were given an
+early draft version some 18 months or so ago to evaluate, however
+we have never had the time to do so - there were problems with
+loading Australian maps into the system.
+<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">matt at uhunix.uhcc.Hawaii.edu.</A>  One of the other researchers was a
+graduate student called Nayak (<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">nayak at uhics.ics.Hawaii.Edu</A>)
+
+A second was one that we had developed, however it was a very
+&quot;buggy&quot; program and we have never got around to fixing it.  I had
+heard someone else was attempting to, but not heard how this went.
+(I have just emailed him to check, I will let you know if there is
+anything favourable to report).
+
+A third was one I have never seen - it was a PC program developed
+in Canada that I heard about from Larry Spears at the Canadian
+Department of Agriculture (<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">speersli at em.agr.ca</A>).  This was quite a
+few years ago, and I never found out more from Larry, so perhaps it
+wasn't any good.
+
+A fourth is one being used by the Western Australian Herbarium -
+for that, they have to have their database set up to have fields
+such as &quot;nearest named place&quot; &quot;distance&quot;, &quot;direction&quot;.  This seems
+to work for them with their gazeteer including old collection
+localities such as &quot;the 485 Mile Peg on Great Northern Highway&quot;,
+etc.
+
+A fifth possibility further down the line is some thought that when
+USOBI gets off the ground thatthey will attempt to develop one.
+This will be well down the line, however.
+
+There are some problems in all this, and any attempt should include
+a field on accuracy.  For example - some collectors, when they say
+45 miles N of XXXX, mean 45 miles along the road; others mean 45
+miles as the crow flies (sorry, an Australian expression).  In each
+case there is a degree of error that SHOULD be recorded.  Also &quot;N&quot;
+would generally be an arc somewhere between NNE and NNW and the
+greater the distance from the origin,
+the greater the error.  Any program that doesn't include such an
+error figure would, to my mind, be difficient.
+
+Some of us are looking at the possible use of &quot;Java&quot; on the World
+Wide Web to quickly ascertain a lat/long.  This shouldn't be too
+hard - but again, the error factor is a problem.
+
+Sorry that I cannot be of more help in this, but the quickest
+solution would seem to be something along the liens of the WA
+Herbarium (4 above) unless the Hawaiian University one works.  I
+have heard recently that it seemed to be a failure, but I have not
+had that directly.
+Being NSF funded, it is, of course, public domain and was set up to
+use USA maps.
+
+I would appreciate any additional information you may find in your
+search, as I am still interested in persuing this.
+
+Sorry I can't be of more help
+Regards, arthur
+
+Arthur D. Chapman
+&#186;Scientific Coordinator, Biogeographic Information, ERIN&#186;
+Environmental Resources Information Network
+internet: <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">arthur at erin.gov.au</A>
+GPO Box 787, Canberra,    voice: +61-6-274 1066
+ACT 2601, AUSTRALIA       fax: +61-6-274 1333
+
+From: Kelly Cassidy &lt;<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">kelly at cqs.washington.edu</A>&gt;
+
+For the Washington State Gap Project, we put the herp data in as
+point locations, i.e., as a digital cover.  We dealt with the
+precision problem by having an attribute for precision for each
+point.  We had 3 levels: within 1/4 mile, within 1 mile (I think;
+vicinity.
+
+The hardest thing about inputting lat/longs is that they are often
+difficult to derive from a map and the risk of error is high.  You
+might consider digitizing the point, then letting the software
+determine lat/long.
+
+Kelly Cassidy
+
+From: <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">Blair_Csuti at mail.fws.gov</A>
+
+      The project you describe is a very good idea.  GIS point
+localities of specimen records will have many useful applications.
+I suggest you send your inquiry to Dr. Larry Master
+(<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">lmaster at tnc.org</A>), chief zoologist for The Nature Conservancy.
+Larry can provide you with more details on TNC's past and present
+approaches to the same issue. Despite past friction between TNC and
+ASC, I believe TNC has a lot to offer on this topic.  I come from
+a museum background (MVZ) and worked as California zoologist for
+TNC for four years, so appreciate the task you are facing,
+especially since many of the USNM specimens are old and have very
+general locality information.  TNC classifies localities into three
+catagories, represented on maps by circles of about 1/8th mile, 2
+miles, and 10 miles, reflecting precision of the locality
+information.  If a locality can't be pinned down to plus or minus
+5 miles (10 mile diamater), they don't use it.  Making the jump
+from point localities (which can generate dot distribution maps) to
+range maps is more complicated.  In a GIS environment, points can
+be displayed but are not readily analyzed.  You need to convert the
+distributions to either a rastor or vector format.  My program Gap
+Analysis) recommends using the EPA EMAP 635 square km hexagonal
+grid system as spatial accounting unit.  In cooperation with TNC,
+we have consulted state reference works and experts to then assign
+a probability of occurrence of the species to hexagons for which
+there are no specimens, but which are within the distributional
+limits of a species.  Many old-school zoologists object to this in
+principle, but in reality, the range maps in their own publications
+do the same thing:  draw a polygon around marginal records and
+assume the species is likely to be present in appropriate habitat
+within that polygon.
+For even more resolution, GAP intersects the hexagonal
+representation of species distribution with a vegetation (habitat)
+map, selecting polygons of appropriate habitat and rejecting
+inappropriate habitat. This brings up a number of scale problems
+(e.g., we can't map microhabitats that are important to many
+species), but at landscape scales (tens to hundreds of square km)
+it provides reasonable predictions of species presence.  See
+Edwards et al., 1995,Conservation Biology 10:263-270, for a
+discussion of accuracy of this approach.  If you are interested in
+more details, I can send some reprints and manscripts on the topic.
+Larry can provide details on TNC's rationale for coding locality
+precision as well.  Another use of GIS locality display is picking
+out extra-limital records as candidates for re-confirmation of
+their identification.  Often records that come from unusual
+localities are simply mis-identified!
+
+Blair Csuti
+
+From: &quot;Panian, Mike&quot; &lt;<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">mpanian at NELSON.env.gov.bc.ca</A>&gt;
+
+Here in BC we are working on consolidating data as well.  We
+translate utm coordinates from an excel spreadsheet to our GIS
+(ArcInfo) quite readily.  Historical information about species is
+often focused on a watershed and often the names are mispelled et
+cetera.  In such cases we first error check the data and then
+attach the location name to the name of a watershed that exists in
+our database under another theme that is readily mapped..our
+watershed atlas.   Then we can attach sightings directly to the
+name and accumulate them accordingly.  Still another scenario is
+having such things as sightings and hunter stats connected to
+artificial managment units.
+
+All of this begs the question of metadata and relaibility in
+general. I keep wishing for some mappable indication of confidence!
+Blurry lines = lack of confidence?
+
+Mike Panian, Regional Inventory Specialist
+Ministry of Environment, Nelson BC
+
+----------------------------------------------------------------
+From: Jim Reichel &lt;<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">jreichel at nris.mt.gov</A>&gt;
+
+Easy.  Put a code in another field to indicate precision.  Heritage
+Programs nationally use S= within a 3 second radius; M= within a
+minute radius or about a mile; G = General Within 5 miles; U =
+unmappable.
+For a coverage of herp specimens and observations we also
+approximately used this and it worked quite well.  We did add one
+more catagory of 5-10 miles. Then in GIS you can buffer the point
+lat-long with the appropriate precision level and get a circle
+which will include the actual (presumably) point of collection.
+We've actually done this for USNM amphibians and reptiles (from
+MT).
+It's not easy to do, even for a geographic area you're familar
+with, especially old material with outdated place names.
+
+Cheers!
+Jim Reichel
+Montana Natural Heritage Program
+1515 East Sixth Avenue
+PO Box 201800
+Helena, MT  59620-1800
+(406) 444-2546
+FAX (406) 444-0581
+home page: <A HREF="http://nris.msl.mt.gov/">http://nris.msl.mt.gov/</A>
+
+ From: Gary Waggoner
+
+
+       The question of geocoding is difficult because I presume you
+have (at least) some pretty reliable locations, some medium
+precision ones and then some shot in the dark ones.  Therefore, you
+don't want to overstate precision on all points but by the same
+token you don't want to degrade all points either.  I would advise
+&quot;classifying&quot; all your points into X (3-5) number of bins depending
+on your perception of the degree of precision.
+       This would be kept as an attribute (or additional data
+field) of each  point.  The best approach would be to probably do
+an individual, independent estimate of the potential error for each
+point, e.g., +/- 100 meters, +/- 10 kilometers, and enter that
+estimate in a data field of that particular specimen record.  After
+entering all points, look at the data and see if you can lump
+error/precision into classes.
+
+Gary
+
+From: <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">jennings at uidaho.edu</A> (Mike Jennings)
+The Gap Analysis state project vertebrate specialists have spent
+quite a bit of time thinking about this problem.  For starters, see
+our home page at <A HREF="http://www.nr.usu.edu/gap,">http://www.nr.usu.edu/gap,</A> especially the &quot;How To&quot;
+manual section (you may find the entire vertebrate distribution
+modeling section of interest), and the general vertebrate section.
+There should be a short article in there by Masters and Jennings on
+using 635 sq. km. hexagons to tesselate the land area for recording
+specimen localities (smaller hexagons can be used too, and a
+georegistered grid is available; let me know if you do not find the
+article; also see the 1994-1995 GAP Status Report).  We found the
+hexegon configuration works best because it fits with the curve of
+the earth, like the hexegons on a soccer ball -you cannot do that
+with squares.
+
+I will post your query in the GAP vertebrate area of our home page.
+You may also want to contact some of the GAP state project folks
+directly, as they have done / are doing a lot of plotting of
+collection records on a per-state basis.
+
+You may also want to ask advise from Larry Master, TNC vertebrate
+ecologist:  <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">lmaster at tnc.org</A> (Larry is at the TNC Northeastern
+Regional Office in Boston).
+
+Good luck,
+
+Michael D. Jennings
+Gap Analysis Program National Coordinator
+National Biological Service
+530 S. Asbury, Suite 1
+Moscow, Idaho  83843
+voice:  208-885-3555
+fax:      208-885-3618
+
+From:         &quot;James K. Jarvie&quot; &lt;<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">jjarvie at OEB.HARVARD.EDU</A>&gt;
+
+Just dealt with this issue here.  We have about 3,500 specimens
+databased from Borneo, collected with GPS readings by Alison Church
+and myself.  We also have about 3,500 tree and shrub historical
+collections databased from the herbarium in Bogor. These labels
+varied greatly in detail. Data are held in MS-Access and we've just
+managed to map them in ArcView.
+What I've done is to extract and send the Church/Jarvie collections
+as one file to ArcView, mapped as a red-dotted theme.  Thus red
+dots denote accurate locations.
+
+Historical collections, without lat/long data, have been linked to
+a file called &quot;Nearest town&quot;.  This is a list of the populated
+areas of Kalimantan with lats and longs (the original data were
+downloaded from the Defense Mapping Agency).  The tables are linked
+and a file is output to ArcView as another theme, mapped with black
+dots.  Thus black dots indicate approximate locations.
+
+The last theme contains points of varying accuracy; state capitals
+and villages are &quot;equal&quot; on the resulting maps.  We are looking
+into ways of enhancing the accuracy conveyed here.
+
+Bottom line is that data from a single Access database are used to
+createdifferent themes in ArcView, with the themes denoting
+different levels of accuracy.
+
+  Hope this helps,
+
+  Jim
+  James K. Jarvie, Ph.D.
+  The Arnold Arboretum of Harvard University
+  22 Divinity Avenue
+  Cambridge
+  MA 02138
+  Tel: (617) 495 3260  Fax: (617) 496 6460
+  E-mail: <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">jjarvie at oeb.harvard.edu</A>
+
+From: Stan Blum &lt;<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">sblum at violet.berkeley.edu</A>&gt;
+With regard to strategies for recording &quot;accruacy/precision&quot;:  it
+seems that a lot of GIS people just recommend that lat-Long be
+expressed in decimal degrees and that precision simply be a
+function of how many significant digits you record; i.e., -89.2
+degrees latitude implies somewhere between -89.15 and -89.25; where
+as -89.2146 implies somewhere between -89.21455 and -89.21465.  The
+problem I see with this approach is that in the computer database
+world numeric data types cannot distinguish between 89, 89.0, and
+89.000000.  Anytime a decimal number ends in a zero digit, this
+strategy for handling precision breaks down; i.e., the number can't
+be distinguished from one that has any more zeroes appended to
+express a greater precision.
+The bottom line:  I have yet to hear of a strategy that is
+universal.
+
+Cheers,
+
+ Stan
+
+ -----------------------------------------------------------------
+ Stanley D. Blum                  e-mail: <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">sblum at violet.berkeley.edu</A>
+ Museum of Vertebrate Zoology     Office phone 510/643-0352
+ 3101 Valley Life Sciences Building
+ Univ of Calif, Berkeley        MVZ front desk: 510/642-3567
+ Berkeley, CA 94720             MVZ Fax:        510/643-8238
+
+
+From: WCS Gallon Jug &lt;<A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">galljug at btl.net</A>&gt;
+
+We have developed the Belize Biodiversity Information System which
+has linked both Advanced Revelation Textual Data to our GIS.  We
+are working on re-patriating all museum data gathered from Belize
+in accordance with the Treaty on biodiversity.
+
+We have mammal data and bird data from many major museums as well
+as the NEODAT freshwater fish data from Phil Acad. Sci. I would
+like to get data from specimens collected in Belize.  The ROM has
+provided a great amount of data and what I am doing is checking all
+locations in the gazetteer database we are building and once data
+are entered here I update locality data by species into our GIS and
+this is providing species by species overlays for Belize.  What I
+do for the museums is return a copy of the data with suggested
+corrections/ additions to localities so it can be correctly
+geo-referenced when data permit. If desired a Lat/Long data field
+can be added to each record when data permit. If you have digital
+catalog data for vertebrates collected in Belize I would like to
+incorporate the collections as well and the locality data can be
+returned with corrections.  We have seen many erroneous locations
+due to transliteration of place names from Spanish/King's
+English/local Creole English/Maya etc. etc.  We have most place
+names geo-referenced and as early collectors where limited to the
+few roads in the country it is not too difficult to figure out
+where they really collected.  This applies to spelling errors such
+as Chan Chin River which is really Chan Chich Creek, the old maps
+had errors as well, but one can not find Chan Chin River on any
+map. Let me know how/if you would like to proceed and at least for
+a small subset of the data you can have help.
+
+Cheers from Gallon Jug
+B.W. Miller &amp; C. M. Miller
+Tropical Forest Planning Project, Belize
+Wildlife Conservation Society
+Founded 1895 as New York Zoological Society
+Mail: P.O. Box 37, Belize City, Belize, Central America
+Ph/Fax/Ans Mach. country code&#186;501&#186;-21-2002
+
+
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="101922.html">Molecular work on Odonata
+</A></li>
+	<LI>Next message: <A HREF="054561.html">Responses to Geocoding ??
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#18769">[ date ]</a>
+              <a href="thread.html#18769">[ thread ]</a>
+              <a href="subject.html#18769">[ subject ]</a>
+              <a href="author.html#18769">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

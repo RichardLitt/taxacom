@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Who needs author names? (was Re: abbreviations for author
+              names)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2006-March/094927.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Who needs author names? (was Re: abbreviations for author
+              names)</H1>
+    <B data-pagefind-meta="author">Richard Pyle</B>
+    deepreef at BISHOPMUSEUM.ORG<BR>
+    <I data-pagefind-meta="date">Fri Mar 10 00:31:35 CST 2006</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="094922.html">PROTISTA - let's move on
+</A></li>
+        <LI>Next message: <A HREF="094926.html">Who needs author names? (was Re: abbreviations for author
+              names)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#094927">[ date ]</a>
+              <a href="thread.html#094927">[ thread ]</a>
+              <a href="subject.html#094927">[ subject ]</a>
+              <a href="author.html#094927">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2006</span><!--beginarticle-->
+<PRE>Hello Wolfgang,
+
+The majority of your post resonnates well with my own perspective.  However,
+even if taxonomists come to a mutual agreement of &quot;VALID&quot; names (which I
+seriously doubt will happen in my lifetime, if ever -- we'll probably move
+away from the Linnaean system of nomenclature before this happens), it is
+not correct to think of taxon names as GLOBALLY unique identifiers, because
+many of them are not GLOBALLY unique (the genus Phalus comes to mind, but
+there many, many are others).  Rather, a complete listing of &quot;valid&quot; names
+would at best be &quot;Contextually Unique Identifiers&quot; -- the context being
+zological names within the domain of the ICZN (botanical names having
+allowable &quot;valid&quot; names that are homonymous with Zoological names).
+
+&gt; As for LSIDs and GUIDs, a related issue which has turned up repeatedly in
+&gt; recent postings: what about the role of VALID NAMES as
+&gt; human-readable elements
+&gt; within LSIDs or GUIDs? In my point of view, codes instead of
+&gt; taxonomic names are
+&gt; user-unfriendly to such an extent that I would strongly wish to stay with
+&gt; human-readable name strings, as far as possible.
+&gt; Would be interesting to know what the bioinformatics community think about
+&gt; this issue.
+
+Just to be clear, the point of GUIDs &amp; LSIDs (the latter being a particular
+type of the former) is **NOT** to replace traditional textual names used for
+human communication.  A requirement of LSIDs (and strongly desired
+characteristic of GUIDs in general) is that they be considered &quot;semantically
+opaque&quot; -- which is fancy compu-geek-speak for &quot;containing no inherent
+information&quot;.  LSIDs *seem* to contain information, but in fact they do not
+(the Authority and Namespace components being convenient ways to achieve
+uniqueness, not actual information content). The reason for this &quot;opacity&quot;
+of GUIDs is that information content can sometimes be wrong (even if only in
+the form of inadvertent typographical errors), and therefore people might be
+tempted to change them (or might accidentally duplicate them).  Another
+fundamental aspect of GUIDs is that they should NEVER be changed or
+re-assigned.
+
+The reason we want GUIDs is to allow computers to communicate with other
+computers; *not* for communication among humans, or between humans and
+computers.  I personally think it would be a mistake if anyone other than
+IT-professionals and database managers ever see GUIDs. They should remain
+hidden, behind the scenes, in the realm of computers communicating with
+other computers.
+
+Whenever one of us &quot;machines made of meat&quot; is involved, the traditional
+taxonomic name (with whatever appropriate contextual information is
+necessary to minimize ambiguity) should continue to be the mechanism of
+taxonomic communication.
+
+Aloha,
+Rich
+
+Richard L. Pyle, PhD
+Ichthyology, Bishop Museum
+1525 Bernice St., Honolulu, HI 96817
+Ph: (808)848-4115, Fax: (808)847-8252
+email: deepreef at bishopmuseum.org
+<A HREF="http://hbs.bishopmuseum.org/staff/pylerichard.html">http://hbs.bishopmuseum.org/staff/pylerichard.html</A>
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="094922.html">PROTISTA - let's move on
+</A></li>
+        <LI>Next message: <A HREF="094926.html">Who needs author names? (was Re: abbreviations for author
+              names)
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#094927">[ date ]</a>
+              <a href="thread.html#094927">[ thread ]</a>
+              <a href="subject.html#094927">[ subject ]</a>
+              <a href="author.html#094927">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

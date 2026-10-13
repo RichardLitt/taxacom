@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Imprecise locality records
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2000-August/084417.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Imprecise locality records</H1>
+    <B data-pagefind-meta="author">Doug Yanega</B>
+    dyanega at POP.UCR.EDU<BR>
+    <I data-pagefind-meta="date">Tue Aug 22 15:56:18 CDT 2000</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="084410.html">EVOLUTION FOES SHALL NEVER SUCCEED
+</A></li>
+        <LI>Next message: <A HREF="084404.html">Converting Township Range Section data to lat/lon
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#084417">[ date ]</a>
+              <a href="thread.html#084417">[ thread ]</a>
+              <a href="subject.html#084417">[ subject ]</a>
+              <a href="author.html#084417">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2000</span><!--beginarticle-->
+<PRE>Bob Mesibov wrote:
+
+&gt;A widely used procedure for dealing with uncertain locality records in
+&gt;databases is to specify them as well-defined points in the main locator
+&gt;fields, then to add an appropriate uncertainty to a precision field.
+&gt;This uncertainty entry can be something like (plus or minus) '1 mile' or
+&gt;(plus or minus) '50 miles', and details (as Peter Rauch says) can be
+&gt;spelled out in the metadata.
+
+You *can* do this, but does everyone actually go to the trouble? Isn't
+there anyone here with a database of collection localities that does NOT
+have some sort of &quot;precision&quot; field? I know at least one MAJOR collection
+of this type, and there must be others. &quot;Widely used&quot; and &quot;universal&quot; are
+two very different things, especially when ambitious folks talk of
+integrating all the collection databases in the world into one functional
+whole. They CANNOT be integrated if some databases lack fields such as
+this, which are essential for certain highly-desirable purposes such as
+actual/theoretical distribution maps. Obviously, a record such as &quot;Palm
+Canyon&quot; may well incorporate a variety of habitat types, elevations, etc.,
+and simply choosing an arbitrary lat/long could be quite misleading - a
+record such as this is better excluded from certain types of analyses, and
+my question was along the lines of can we come up with a standard way of
+indicating this sort of thing. A &quot;linear displacement error&quot; field will
+*NOT* necessarily accomplish this - points 1 mile apart in the middle of a
+homogenous habitat at a uniform elevation are not likely to represent a
+problem, while points 1 mile apart in an area of high topographic relief
+can be like night and day. You can't just look at linear error and make an
+arbitrary cutoff. Sure, for MOST purposes an error of a mile is probably
+okay, including simple plots of distribution, but not for ALL purposes.
+To do it right requires that you look at everything within that error zone
+and evaluate the possible values for parameters you might assume to be
+uniform (if they are, then it's safe to include that point). But that's an
+incredible LOT of work. It's extremely hard to accommodate, but there's a
+whole planet full of potential database users for whom this could all be
+important, so it's worth thinking about whether we'll ever be able to deal
+with this practically, and if not, what sort of practical solution *can* we
+come up with to maximize the utility of these databases and simultaneously
+minimize the errors that can arise from using them &quot;as is&quot;.
+
+&gt;A harder but more satisfactory approach is to upgrade the precision of
+&gt;the original record. The taxonomic literature is rich in instances of
+&gt;locality corrections and clarifications, the result of taxonomists
+&gt;chasing up information in expedition reports, field notebooks and
+&gt;people's memories. It's the kind of tedious, nit-picking work that should only
+&gt;be done when precise locality information is taxonomically important.
+
+That's one of the most important aspects: getting accurately georeferenced
+data, even when the locality info is nearly exact, is still not a process
+that can be automated. I have yet to see a program that can take a label
+like &quot;23 km S Tamazanchale&quot; and do what a human can do: first catch the
+typo in the town name (essential), then look at a road map, trace the road
+(which in this case goes more W than S), and give a close match. Most of us
+do not have the personnel to devote to this sort of time-consuming
+detective work, and we also might not have (in the present example) a map
+of Mexico that indicates minutes of lat/long, only degrees, so even if we
+DO the legwork, our resources may be inadequate to give a *precise* data
+point (does anyone know of any on-line or *easily-acquired* printed maps of
+Mexico that go to minutes, incidentally? I could REALLY use some...).
+
+&gt;You're out of luck if the collector is long dead, there were never any
+&gt;field notes and the label says something like 'Brushy Creek', which
+&gt;wanders for 100 miles through a landscape lacking any other named
+&gt;features to which the collector could have referred. I've seen published
+&gt;maps in which such localities are shown as very large question marks
+&gt;over arbitrary points!
+
+As well it should be - if a point is arbitrary, the users of that data need
+to know it.
+
+Peace,
+
+
+Doug Yanega        Dept. of Entomology         Entomology Research Museum
+Univ. of California - Riverside, Riverside, CA 92521
+phone: (909) 787-4315 (standard disclaimer: opinions are mine, not UCR's)
+           <A HREF="http://insects.ucr.edu/staff/yanega.html">http://insects.ucr.edu/staff/yanega.html</A>
+  &quot;There are some enterprises in which a careful disorderliness
+        is the true method&quot; - Herman Melville, Moby Dick, Chap. 82
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="084410.html">EVOLUTION FOES SHALL NEVER SUCCEED
+</A></li>
+        <LI>Next message: <A HREF="084404.html">Converting Township Range Section data to lat/lon
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#084417">[ date ]</a>
+              <a href="thread.html#084417">[ thread ]</a>
+              <a href="subject.html#084417">[ subject ]</a>
+              <a href="author.html#084417">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

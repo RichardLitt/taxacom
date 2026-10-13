@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> MS Access 2/2
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2000-August/084399.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">MS Access 2/2</H1>
+    <B data-pagefind-meta="author">Gail E. Kampmeier</B>
+    gkamp at UIUC.EDU<BR>
+    <I data-pagefind-meta="date">Mon Aug 21 13:16:08 CDT 2000</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="084398.html">MSAccess 1/2
+</A></li>
+        <LI>Next message: <A HREF="084397.html">EVOLUTION FOES SHALL NEVER SUCCEED
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#084399">[ date ]</a>
+              <a href="thread.html#084399">[ thread ]</a>
+              <a href="subject.html#084399">[ subject ]</a>
+              <a href="author.html#084399">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2000</span><!--beginarticle-->
+<PRE>III. Solution
+
+Apply the patch provided by Microsoft
+
+   Microsoft has released the following patch which addresses the &quot;IE
+   Script&quot; vulnerability, as well as others:
+
+        <A HREF="http://www.microsoft.com/windows/ie/download/critical/patch11.htm">http://www.microsoft.com/windows/ie/download/critical/patch11.htm</A>
+
+   Please see MS00-055 &quot;Patch Available for 'Scriptlet Rendering'
+   Vulnerability&quot; for additional information regarding other issues
+   addressed by this patch:
+
+        <A HREF="http://www.microsoft.com/technet/security/bulletin/ms00-055.asp">http://www.microsoft.com/technet/security/bulletin/ms00-055.asp</A>
+
+   Note that the OBJECT tag issues addressed by MS00-049, MS00-055, and
+   this advisory are separate from those addressed by the recently
+   released MS00-056: &quot;Patch Available for 'Microsoft Office HTML Object
+   Tag' Vulnerability.&quot;
+
+   Microsoft's initial workaround for this issue was for users to set the
+   Admin password for Access. Since Access does not allow a user to
+   disable VBA code embedded in Access data and project files, the CERT
+   Coordination Center recommends that users follow the suggested
+   workaround and set the Admin password even after the patch for this
+   vulnerability has been applied.
+
+   Appendix A contains information provided by vendors for this advisory.
+   We will update the appendix as we receive more information. If you do
+   not see your vendor's name, the CERT/CC did not hear from that vendor.
+   Please contact your vendor directly.
+
+Appendix A. Vendor Information
+
+Microsoft Corporation
+
+   Microsoft has published the following documents regarding this issue:
+
+        <A HREF="http://www.microsoft.com/technet/security/bulletin/ms00-049.asp">http://www.microsoft.com/technet/security/bulletin/ms00-049.asp</A>
+        <A HREF="http://www.microsoft.com/technet/security/bulletin/fq00-049.asp">http://www.microsoft.com/technet/security/bulletin/fq00-049.asp</A>
+        <A HREF="http://www.microsoft.com/technet/support/kb.asp?ID=269368">http://www.microsoft.com/technet/support/kb.asp?ID=269368</A>
+
+Appendix B. Additional Information
+
+   The full list of OBJECT tag extensions which may be used to exploit
+   this vulnerability is listed below:
+
+     * .adp - Microsoft Access project file
+     * .ade - ADP file with all modules compiled and all editable source
+              code removed
+
+     * .mdb - Microsoft Access database file
+     * .mde - MDB file with all modules compiled and all editable source
+              code removed
+     * .mda - Microsoft Access VBA add-in
+
+     * .mdw - Microsoft Access workgroup information file synonym for
+              the system database used to store group and user account
+              names and the passwords used to authenticate users when
+              they log on to an Access database or MDE file secured
+              with user-level security
+
+   The patch provided by Microsoft addresses all the file extensions
+   identified above.
+
+   Please consult the following resources for further information
+   regarding the other file types involved in exploited this
+   vulnerability:
+
+     * <A HREF="http://www.microsoft.com/office/ork/2000/appndx/glossary.htm#adefile">http://www.microsoft.com/office/ork/2000/appndx/glossary.htm#adefile</A>
+     * <A HREF="http://www.microsoft.com/office/ork/2000/appndx/glossary.htm#adpfile">http://www.microsoft.com/office/ork/2000/appndx/glossary.htm#adpfile</A>
+     * <A HREF="http://msdn.microsoft.com/library/officedev/off2000/defAddIn.htm">http://msdn.microsoft.com/library/officedev/off2000/defAddIn.htm</A>
+     * <A HREF="http://www.microsoft.com/office/ork/2000/appndx/glossary.htm#mdbfile">http://www.microsoft.com/office/ork/2000/appndx/glossary.htm#mdbfile</A>
+     * <A HREF="http://www.microsoft.com/office/ork/2000/appndx/glossary.htm#mdefile">http://www.microsoft.com/office/ork/2000/appndx/glossary.htm#mdefile</A>
+     *
+
+<A HREF="http://www.microsoft.com/office/ork/2000/appndx/glossary.htm#workgroupinformatio">http://www.microsoft.com/office/ork/2000/appndx/glossary.htm#workgroupinformatio</A>
+nfile
+       _____________________________________________________________
+
+       The CERT Coordination Center thanks Timothy Mullen, Alan Paller
+       and the SANS Research Office, and the Microsoft Security Response
+       Center for their help in developing this advisory.
+       _____________________________________________________________
+
+       Author: Jeffrey S. Havrilla
+       __________________________________________________________________
+
+       This document is available from:
+
+            <A HREF="http://www.cert.org/advisories/CA-2000-16.html">http://www.cert.org/advisories/CA-2000-16.html</A>
+       __________________________________________________________________
+
+CERT/CC Contact Information
+
+       Email: cert at cert.org
+                Phone: +1 412-268-7090 (24-hour hotline)
+                Fax: +1 412-268-6989
+                Postal address:
+                CERT Coordination Center
+                Software Engineering Institute
+                Carnegie Mellon University
+                Pittsburgh PA 15213-3890
+                U.S.A.
+
+       CERT personnel answer the hotline 08:00-20:00 EST(GMT-5) /
+       EDT(GMT-4) Monday through Friday; they are on call for emergencies
+       during other hours, on U.S. holidays, and on weekends.
+
+Using encryption
+
+       We strongly urge you to encrypt sensitive information sent by
+       email. Our public PGP key is available from
+
+        <A HREF="http://www.cert.org/CERT_PGP.key">http://www.cert.org/CERT_PGP.key</A>
+
+       If you prefer to use DES, please call the CERT hotline for more
+       information.
+
+Getting security information
+
+       CERT publications and other security information are available
+       from our web site
+
+        <A HREF="http://www.cert.org/">http://www.cert.org/</A>
+
+       To be added to our mailing list for advisories and bulletins,
+       send email to cert-advisory-request at cert.org and include
+       SUBSCRIBE your-email-address in the subject of your message.
+
+ * &quot;CERT&quot; and &quot;CERT Coordination Center&quot; are registered in the U.S.
+   Patent and Trademark Office.
+   ______________________________________________________________________
+
+   NO WARRANTY
+   Any material furnished by Carnegie Mellon University and the Software
+   Engineering Institute is furnished on an &quot;as is&quot; basis. Carnegie
+   Mellon University makes no warranties of any kind, either expressed or
+   implied as to any matter including, but not limited to, warranty of
+   fitness for a particular purpose or merchantability, exclusivity or
+   results obtained from use of the material. Carnegie Mellon University
+   does not make any warranty of any kind with respect to freedom from
+   patent, trademark, or copyright infringement.
+     _________________________________________________________________
+
+   Conditions for use, disclaimers, and sponsorship information
+
+   Copyright 2000 Carnegie Mellon University.
+
+   Revision History
+
+   August 11, 2000:  Initial release
+=======
+Gail E. Kampmeier, Research Entomologist, Illinois Natural History Survey,
+Box 5 NSRC, MC-637, 1101 W. Peabody, Urbana, IL 61801 USA
+ph. 217-333-2824; fax 217-333-6784; email: gkamp at uiuc.edu
+<A HREF="http://www.inhs.uiuc.edu/cee/therevid/gkamp.html">http://www.inhs.uiuc.edu/cee/therevid/gkamp.html</A>
+=======
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="084398.html">MSAccess 1/2
+</A></li>
+        <LI>Next message: <A HREF="084397.html">EVOLUTION FOES SHALL NEVER SUCCEED
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#084399">[ date ]</a>
+              <a href="thread.html#084399">[ thread ]</a>
+              <a href="subject.html#084399">[ subject ]</a>
+              <a href="author.html#084399">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

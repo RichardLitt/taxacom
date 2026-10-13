@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> XML, etc. [was Re: a grandiose but (hopefully) practical idea]
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2001-March/085648.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">XML, etc. [was Re: a grandiose but (hopefully) practical idea]</H1>
+    <B data-pagefind-meta="author">Robert A. (Bob) Morris</B>
+    ram at CS.UMB.EDU<BR>
+    <I data-pagefind-meta="date">Wed Mar 14 21:48:42 CST 2001</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="085649.html">Distribution information for Tiaris
+</A></li>
+        <LI>Next message: <A HREF="085650.html">Distribution information for Tiaris
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#085648">[ date ]</a>
+              <a href="thread.html#085648">[ thread ]</a>
+              <a href="subject.html#085648">[ subject ]</a>
+              <a href="author.html#085648">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2001</span><!--beginarticle-->
+<PRE>Doug Yanega writes:
+ &gt; Date:         Wed, 14 Mar 2001 17:51:27 -0800
+ &gt; From: Doug Yanega &lt;dyanega at pop.ucr.edu&gt;
+ &gt; To: TAXACOM at usobi.org
+ &gt; Subject:      XML, etc. [was Re: a grandiose but (hopefully) practical idea]
+ &gt;...
+
+ &gt; In case it wasn't clear: SEARCHING databases and generating on-screen
+ &gt; reports is not the issue - for a taxonomist that might be enough in many
+ &gt; cases, but for a museum person doing a specimen-based inventory or species
+ &gt; list, the only practical approach to taxonomic authority data is to have
+ &gt; the entire database on one's own computer, so taxonomic lookups can be
+ &gt; *automated*. I can enter a species and my database automatically fills in
+ &gt; all the hierarchical data up to order; but that procedure only works if I
+ &gt; have the hierarchical data already on my computer, NOT if the data is on a
+ &gt; website. I need authority file downloads.
+
+This is a statement about your database, not about software in
+general. It is perfectly possible to write interesting database
+applications that can not tell the difference between local and
+network accessible files. In particular it is completely possible to
+fetch taxonomy hierarchy---or anything else that might be offered by
+remote sites--automatically. See for example the links about database
+federation at <A HREF="http://www.cs.umb.edu/efg/xml1/ram/xmldemos.html.">http://www.cs.umb.edu/efg/xml1/ram/xmldemos.html.</A> Those
+applications examine static pages for species names and queries
+taxonomy servers for the full taxonomy. The control software is
+Javascript and since these are demos, we did not take the time to make
+them work in Netscape, but only in MSIE, but the underlying queries
+are http cgi so could be made by any interface, whether browser
+mediated or not.
+
+Practicality arguments will come down to several things:
+
+-whether you and the remote server have the network bandwidth to accomplish what
+you want to do in the time you want to do it
+
+-whether you can get an application smart enough to find and query
+remote databases
+
+What you get in exchange for what distributed queries may cost you in
+a given circumstance is that your data is by definition always
+current.
+
+Bob Morris
+
+
+
+ &gt;
+ &gt; Don't get me wrong: I think folks have done some great things - but there's
+ &gt; a lot yet to be done in making data *available* to everyone, and until
+ &gt; something changes, I'm for file-swapping. Beats cutting and pasting from
+ &gt; screen reports.
+ &gt;
+ &gt; Peace,
+ &gt;
+ &gt;
+ &gt; Doug Yanega        Dept. of Entomology         Entomology Research Museum
+ &gt; Univ. of California - Riverside, Riverside, CA 92521
+ &gt; phone: (909) 787-4315 (standard disclaimer: opinions are mine, not UCR's)
+ &gt;            <A HREF="http://entmuseum9.ucr.edu/staff/yanega.html">http://entmuseum9.ucr.edu/staff/yanega.html</A>
+ &gt;   &quot;There are some enterprises in which a careful disorderliness
+ &gt;         is the true method&quot; - Herman Melville, Moby Dick, Chap. 82
+ &gt;
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="085649.html">Distribution information for Tiaris
+</A></li>
+        <LI>Next message: <A HREF="085650.html">Distribution information for Tiaris
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#085648">[ date ]</a>
+              <a href="thread.html#085648">[ thread ]</a>
+              <a href="subject.html#085648">[ subject ]</a>
+              <a href="author.html#085648">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

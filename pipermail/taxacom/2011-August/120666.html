@@ -1,0 +1,312 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] cladistics
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2011-August/120666.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] cladistics</H1>
+    <B data-pagefind-meta="author">Richard Jensen</B>
+    rjensen at saintmarys.edu<BR>
+    <I data-pagefind-meta="date">Tue Aug 23 10:00:27 CDT 2011</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="120665.html">[Taxacom] cladistics
+</A></li>
+        <LI>Next message: <A HREF="120667.html">[Taxacom] what an orangutan does on a hot day
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#120666">[ date ]</a>
+              <a href="thread.html#120666">[ thread ]</a>
+              <a href="subject.html#120666">[ subject ]</a>
+              <a href="author.html#120666">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2011</span><!--beginarticle-->
+<PRE>Regardless of the algorithm used, an operation that creates subsets of a 
+collection of objects may be called cluster analysis.  It may be based 
+on a matrix of similarities (or distances among the objects) or it may 
+be based on the basic data matrix itself.  The objects clustered may be 
+OTUs or the characters comprising the data matrix.
+
+In the old days, parsimony algorithms were recognized as a type of 
+cluster analysis; however, because they were meant to be interpreted as 
+approximations to phylogenetic trees, that usage was dropped because it 
+made it seem as if these were simply another tool for what was called 
+numerical taxonomy (i.e., phenetics).  This distinction was important 
+because phenetic analyses were not intended to be interpreted as 
+phylogenetic trees, although in many instances they produced results 
+consistent with phylogenetic trees and, in fact, were often used as 
+first approximations of phylogenetic trees.
+
+There's much more to the story than this, but I see no reason not to 
+include parsimony methods under the broader heading of cluster analysis; 
+after all, the OTUs in the data set are partitioned into subsets 
+interpreted as clades, i.e., clusters.
+
+Cheers,
+
+Dick J
+
+On 8/23/2011 5:21 AM, Sergio Vargas wrote:
+&gt; pffff,
+&gt;
+&gt; I guess this will be another never ending debate;-)
+&gt;
+&gt;   From the email thread on parsimony, orangs et al. etc. I think we were
+&gt; using clustering in the sense of &quot;hierarchical clustering&quot; as if one
+&gt; calculates a pair-wise distance matrix and uses this matrix to draw a
+&gt; tree using an agglomerative or divisive algorithms. I think Maximum
+&gt; parsimony (MP) and Maximum Likelihood (ML) phylogenetic reconstructions
+&gt; are not clustering algorithms in this sense.
+&gt;
+&gt; Using a broader definition from wikipedia: clustering = &quot;the assignment
+&gt; of a set of observation into subsets=clusters&quot;. I'm still not sure one
+&gt; could say MP or ML are actually doing this. One could argue, perhaps,
+&gt; you are assigning taxa to clades and MP and ML are some form of
+&gt; unsupervised learning... not sure too.
+&gt;
+&gt; Enlightenment from other taxacomers, pointers to relevant literature,
+&gt; etc. much appreciated.
+&gt;
+&gt; sergio
+&gt;
+&gt; On 8/23/11 4:24 AM, Herbert Jacobson wrote:
+&gt;&gt; I don't think clustering is &quot;...grouping by a data matix.&quot; Quite the
+&gt;&gt; opposite, it grouping by the &quot;coefficient matrix&quot; which is the result
+&gt;&gt; of some sort of data matrix manipulation.
+&gt;&gt;
+&gt;&gt; Herb
+&gt;&gt;
+&gt;&gt;&gt; Date: Sat, 20 Aug 2011 12:36:30 -0500
+&gt;&gt;&gt; From: Richard.Zander at mobot.org
+&gt;&gt;&gt; To: morris.bob at gmail.com; sevragorgia at gmail.com
+&gt;&gt;&gt; CC: taxacom at mailman.nhm.ku.edu
+&gt;&gt;&gt; Subject: Re: [Taxacom] cladistics (was: clique analysis in textbooks)
+&gt;&gt;&gt;
+&gt;&gt;&gt; I think taxacomers who lack decisive training in phenetic analysis,
+&gt;&gt; which is most of us, figure clustering is grouping by a data matrix
+&gt;&gt; that compares one taxon and one variable and then some similarity
+&gt;&gt; algorithm. Thus, Sergio is correct that an instant similarity or
+&gt;&gt; distance tree is different from a parsimony tree, in terms of what we
+&gt;&gt; have been told: i.e. that phenetics and parsimony are different.
+&gt;&gt;&gt; On the other hand, I took a tutorial course (3 days) in clustering
+&gt;&gt; techniques (didn't learn much, of course) at a meeting of the
+&gt;&gt; Classification Socity from the then president of the Society and
+&gt;&gt; Pierre Legendre. I asked, ahem, if parsimony was a clustering
+&gt;&gt; technique. The two glanced at each other furtively, then opined that
+&gt;&gt; indeed parsimony is a clustering technique. Thus, authority says it is.
+&gt;&gt;&gt; Yes, parsimony does calculate a bunch of distance trees and selects
+&gt;&gt; recursively (I think) the shortest tree because it is NP-complete
+&gt;&gt; (NP-hard), i.e., can't complete an exact solution in polynomial time.
+&gt;&gt; So...does the fact that we have to do heuristic sampling to get any
+&gt;&gt; sort of tree make parsimony not clustering? I think this is what this
+&gt;&gt; thread is about.
+&gt;&gt;&gt; Surely the product is a distance tree based on shortest
+&gt;&gt; transformation set?
+&gt;&gt;&gt;
+&gt;&gt;&gt;
+&gt;&gt;&gt; * * * * * * * * * * * *
+&gt;&gt;&gt; Richard H. Zander
+&gt;&gt;&gt; Missouri Botanical Garden, PO Box 299, St. Louis, MO 63166-0299 USA
+&gt;&gt;&gt; Web sites: <A HREF="http://www.mobot.org/plantscience/resbot/">http://www.mobot.org/plantscience/resbot/</A> and
+&gt;&gt; <A HREF="http://www.mobot.org/plantscience/bfna/bfnamenu.htm">http://www.mobot.org/plantscience/bfna/bfnamenu.htm</A>
+&gt;&gt;&gt; Modern Evolutionary Systematics Web site:
+&gt;&gt; <A HREF="http://www.mobot.org/plantscience/resbot/21EvSy.htm">http://www.mobot.org/plantscience/resbot/21EvSy.htm</A>
+&gt;&gt;&gt; -----Original Message-----
+&gt;&gt;&gt; From: taxacom-bounces at mailman.nhm.ku.edu
+&gt;&gt; [mailto:taxacom-bounces at mailman.nhm.ku.edu] On Behalf Of Bob Morris
+&gt;&gt;&gt; Sent: Friday, August 19, 2011 10:53 PM
+&gt;&gt;&gt; To: Sergio Vargas
+&gt;&gt;&gt; Cc: taxacom at mailman.nhm.ku.edu
+&gt;&gt;&gt; Subject: Re: [Taxacom] cladistics (was: clique analysis in textbooks)
+&gt;&gt;&gt;
+&gt;&gt;&gt; On Fri, Aug 19, 2011 at 2:32 PM, Sergio Vargas
+&gt;&gt; &lt;sevragorgia at gmail.com&gt;  wrote:
+&gt;&gt;&gt; &quot;...because clustering can be done (computationally) efficiently
+&gt;&gt;&gt; whereas searching for an optimal tree using phylogenetic methods
+&gt;&gt;&gt; cannot.&quot;
+&gt;&gt;&gt;
+&gt;&gt;&gt; It's fair enough that some or even all biologists might have a usage
+&gt;&gt;&gt; of &quot;clustering&quot; that meet all of your explanation, and perhaps even
+&gt;&gt;&gt; that this should be agreed to by all of the readership of taxacom. I
+&gt;&gt;&gt; wouldn't know. But in statistical pattern recognition and datamining,
+&gt;&gt;&gt; not everything called clustering can be done computationally
+&gt;&gt;&gt; efficiently. Many techniques those disciplines call clustering are
+&gt;&gt;&gt; intractable in the sense that they are NP-hard. Informally, this means
+&gt;&gt;&gt; that (with presently understood computational complexity theory),
+&gt;&gt;&gt; they fundamentally scale at least exponentially with size of the data
+&gt;&gt;&gt; and no algorithm can circumvent that, just as for optimal tree
+&gt;&gt;&gt; induction problems. So I can only understand your text as meaning
+&gt;&gt;&gt; &quot;...because clustering as meant by all practicing phylogeneticists can
+&gt;&gt;&gt; be done (computationally) efficiently...&quot;, and that is why you are
+&gt;&gt;&gt; prepared to subsequently say that the rest of your explanation &quot;[...]
+&gt;&gt;&gt; is so basic I cannot believe I am explaining it&quot;.
+&gt;&gt;&gt;
+&gt;&gt;&gt; I do wonder a little whether in fact all practicing phylogeneticist
+&gt;&gt;&gt; readers of taxacom understand by &quot;clustering&quot; only tractable
+&gt;&gt;&gt; algorithms.
+&gt;&gt;&gt;
+&gt;&gt;&gt; Bob Morris
+&gt;&gt;&gt;
+&gt;&gt;&gt; Robert A. Morris
+&gt;&gt;&gt; Emeritus Professor  of Computer Science
+&gt;&gt;&gt; UMASS-Boston
+&gt;&gt;&gt; 100 Morrissey Blvd
+&gt;&gt;&gt; Boston, MA 02125-3390
+&gt;&gt;&gt; IT Staff
+&gt;&gt;&gt; Filtered Push Project
+&gt;&gt;&gt; Harvard University Herbaria
+&gt;&gt;&gt;
+&gt;&gt;&gt;
+&gt;&gt;&gt;
+&gt;&gt;&gt; email: morris.bob at gmail.com
+&gt;&gt;&gt; web: <A HREF="http://efg.cs.umb.edu/">http://efg.cs.umb.edu/</A>
+&gt;&gt;&gt; web: <A HREF="http://etaxonomy.org/mw/FilteredPush">http://etaxonomy.org/mw/FilteredPush</A>
+&gt;&gt;&gt; <A HREF="http://www.cs.umb.edu/~ram">http://www.cs.umb.edu/~ram</A>
+&gt;&gt;&gt;
+&gt;&gt;&gt;
+&gt;&gt;&gt;
+&gt;&gt;&gt; On Fri, Aug 19, 2011 at 2:32 PM, Sergio Vargas
+&gt;&gt; &lt;sevragorgia at gmail.com&gt;  wrote:
+&gt;&gt;&gt;&gt; Hi,
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt;&gt; Clustering is clustering is clustering. Group some things
+&gt;&gt; together and
+&gt;&gt;&gt;&gt; you are clustering - however it is done.
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt; no you are not. Grouping is not clustering, there are many ways to
+&gt;&gt; group
+&gt;&gt;&gt;&gt; things together not involving clustering. Maximum parsimony, maximum
+&gt;&gt;&gt;&gt; likelihood and bayesian analysis are not clustering. It is simply
+&gt;&gt;&gt;&gt; incorrect to call to these methods clustering. When you run either of
+&gt;&gt;&gt;&gt; the above analyses you are not clustering, despite the result being
+&gt;&gt;&gt;&gt; something similar to a cluster. If you could reduce phylogenetic
+&gt;&gt;&gt;&gt; inference to clustering everything would be so easy (computationally
+&gt;&gt;&gt;&gt; speaking) because clustering can be done (computationally) efficiently
+&gt;&gt;&gt;&gt; whereas searching for an optimal tree using phylogenetic methods
+&gt;&gt; cannot.
+&gt;&gt;&gt;&gt; Taxa are only &quot;clustered&quot; (randomly or sequentially) together to build
+&gt;&gt;&gt;&gt; the first tree, afterwards entire topologies are evaluated, taxa
+&gt;&gt; are not
+&gt;&gt;&gt;&gt; clustered. This is so basic I cannot believe I am explaining it.
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt; sergio
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt; --
+&gt;&gt;&gt;&gt; Sergio Vargas R., M.Sc.
+&gt;&gt;&gt;&gt; Dept. of Earth&amp;   Environmental Sciences
+&gt;&gt;&gt;&gt; Palaeontology&amp;   Geobiology
+&gt;&gt;&gt;&gt; Ludwig-Maximilians-Universit?t M?nchen
+&gt;&gt;&gt;&gt; Richard-Wagner-Str. 10
+&gt;&gt;&gt;&gt; 80333 M?nchen
+&gt;&gt;&gt;&gt; Germany
+&gt;&gt;&gt;&gt; tel. +49 89 2180 17929
+&gt;&gt;&gt;&gt; s.vargas at lrz.uni-muenchen.de
+&gt;&gt;&gt;&gt; sevra at marinemolecularevolution.org
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt; check my webpage:
+&gt;&gt;&gt;&gt; <A HREF="http://www.marinemolecularevolution.org">http://www.marinemolecularevolution.org</A>
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt; check my research ID:
+&gt;&gt;&gt;&gt; <A HREF="http://www.researcherid.com/rid/A-5678-2011">http://www.researcherid.com/rid/A-5678-2011</A>
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt; _______________________________________________
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt; Taxacom Mailing List
+&gt;&gt;&gt;&gt; Taxacom at mailman.nhm.ku.edu
+&gt;&gt;&gt;&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt; The Taxacom archive going back to 1992 may be searched with either
+&gt;&gt; of these methods:
+&gt;&gt;&gt;&gt; (1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt;&gt;&gt;&gt;
+&gt;&gt;&gt;&gt; (2) a Google search specified as:
+&gt;&gt;   site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+&gt;&gt;&gt;
+&gt;&gt;&gt;
+&gt;&gt;&gt; --
+&gt;&gt;&gt; Robert A. Morris
+&gt;&gt;&gt;
+&gt;&gt;&gt; Emeritus Professor  of Computer Science
+&gt;&gt;&gt; UMASS-Boston
+&gt;&gt;&gt; 100 Morrissey Blvd
+&gt;&gt;&gt; Boston, MA 02125-3390
+&gt;&gt;&gt; IT Staff
+&gt;&gt;&gt; Filtered Push Project
+&gt;&gt;&gt; Department of Organismal and Evolutionary Biology
+&gt;&gt;&gt; Harvard University
+&gt;&gt;&gt;
+&gt;&gt;&gt;
+&gt;&gt;&gt; email: morris.bob at gmail.com
+&gt;&gt;&gt; web: <A HREF="http://efg.cs.umb.edu/">http://efg.cs.umb.edu/</A>
+&gt;&gt;&gt; web: <A HREF="http://etaxonomy.org/mw/FilteredPush">http://etaxonomy.org/mw/FilteredPush</A>
+&gt;&gt;&gt; <A HREF="http://www.cs.umb.edu/~ram">http://www.cs.umb.edu/~ram</A>
+&gt;&gt;&gt; phone (+1) 857 222 7992 (mobile)
+&gt;&gt;&gt;
+&gt;&gt;&gt; _______________________________________________
+&gt;&gt;&gt;
+&gt;&gt;&gt; Taxacom Mailing List
+&gt;&gt;&gt; Taxacom at mailman.nhm.ku.edu
+&gt;&gt;&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt;&gt;&gt;
+&gt;&gt;&gt; The Taxacom archive going back to 1992 may be searched with either
+&gt;&gt; of these methods:
+&gt;&gt;&gt; (1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt;&gt;&gt;
+&gt;&gt;&gt; (2) a Google search specified as:
+&gt;&gt; site:mailman.nhm.ku.edu/pipermail/taxacom your search terms here
+&gt;&gt;&gt; _______________________________________________
+&gt;&gt;&gt;
+&gt;&gt;&gt; Taxacom Mailing List
+&gt;&gt;&gt; Taxacom at mailman.nhm.ku.edu
+&gt;&gt;&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt;&gt;&gt;
+&gt;&gt;&gt; The Taxacom archive going back to 1992 may be searched with either
+&gt;&gt; of these methods:
+&gt;&gt;&gt; (1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt;&gt;&gt;
+&gt;&gt;&gt; (2) a Google search specified as:
+&gt;&gt; site:mailman.nhm.ku.edu/pipermail/taxacom your search terms here
+
+-- 
+Richard J. Jensen, Professor
+Department of Biology
+Saint Mary's College
+Notre Dame, IN 46556
+Tel: 574-284-4674
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="120665.html">[Taxacom] cladistics
+</A></li>
+        <LI>Next message: <A HREF="120667.html">[Taxacom] what an orangutan does on a hot day
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#120666">[ date ]</a>
+              <a href="thread.html#120666">[ thread ]</a>
+              <a href="subject.html#120666">[ subject ]</a>
+              <a href="author.html#120666">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

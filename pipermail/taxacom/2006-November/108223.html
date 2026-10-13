@@ -1,0 +1,213 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] New Interactive Key to Wetland Monocots
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20New%20Interactive%20Key%20to%20Wetland%20Monocots&In-Reply-To=%3C455DDECC.90008%40netspeed.com.au%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="108213.html">
+   <LINK REL="Next"  HREF="108225.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2006-November/108223.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] New Interactive Key to Wetland Monocots</H1>
+    <B data-pagefind-meta="author">Mike Dallwitz</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20%5BTaxacom%5D%20New%20Interactive%20Key%20to%20Wetland%20Monocots&In-Reply-To=%3C455DDECC.90008%40netspeed.com.au%3E"
+       TITLE="[Taxacom] New Interactive Key to Wetland Monocots">M.J.Dallwitz at netspeed.com.au
+       </A><BR>
+    <I data-pagefind-meta="date">Fri Nov 17 10:09:48 CST 2006</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="108213.html">[Taxacom] New Interactive Key to Wetland Monocots
+</A></li>
+        <LI>Next message: <A HREF="108225.html">[Taxacom] New Interactive Key to Wetland Monocots
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#108223">[ date ]</a>
+              <a href="thread.html#108223">[ thread ]</a>
+              <a href="subject.html#108223">[ subject ]</a>
+              <a href="author.html#108223">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2006</span><!--beginarticle-->
+<PRE>&gt;<i> There is a new Interactive Key to Wetland Monocots of the US (ca. 2400 taxa) 
+</I>&gt;<i> available. See <A HREF="http://npdc.usda.gov/technical/plantid_wetland_mono.html">http://npdc.usda.gov/technical/plantid_wetland_mono.html</A> ... 
+</I>&gt;<i> The automated plant key runs in a new version of SLIKS.
+</I>
+This software has serious design flaws, as well as serious (and obvious) bugs.
+
+Why waste resources writing, or preparing data for, software that is 
+inferior in many ways to software that was available 35 years ago? Why not 
+build on known techniques, rather than reinventing the square wheel?
+
+Here are a few specific comments.
+
+
+DATA STRUCTURES
+
+SLIKS uses isolated character states, not characters. This approach was used 
+in punched-card keys, but is seldom used in computer keys (Meka is a notable 
+exception). Some problems with this approach are:
+
+     (1) It's more difficult for the user to understand the character states
+     without comparing them with contrasting states. Contrasting states may
+     or may not be available; even if some are available, it may be difficult
+     for the user to know which ones they are, or whether _all_ contrasting
+     states are available.
+
+     (2) If a contrasting state is not explicitly available, a complicated
+     interface is needed to allow the user to indicate that the available
+     state is _not_ exhibited by the specimen. SLIKS doesn't allow this (Meka
+     does).
+
+     (3) A complicated interface is needed to allow the user to express
+     uncertainty. For example, the user might want to say 'I'm not sure
+     whether the petals are yellow or greenish (but I know they're not white,
+     blue, orange, or brownish)'. SLIKS doesn't allow this (Meka does).
+
+     A user familiar with more conventional programs might select both
+     states, but this doesn't have the desired effect - in fact, it will ruin
+     the identification.
+
+     (4) Because there are no true characters, it's impossible to calculate
+     the 'best' characters, i.e., those that would tend to lead to shorter
+     and more reliable identifications. It's not just that this isn't
+     currently implemented in SLIKS - it _can't_ be implemented without
+     drastic changes in the interface and, more importantly, in the data.
+
+     (5) Large numbers of character states have to be examined and rejected
+     (because they don't match the specimen), while trying to find states
+     that do match the specimen. With each state examined, there is a
+     possibility of error. This can make the probability of a correct
+     identification very small. See worked example below.
+
+There's no provision for numeric characters (at least, I didn't see any 
+examples of them).
+
+It's not clear whether there's provision for missing values (I didn't see any).
+
+
+LACK OF IMPORTANT FEATURES
+
+Many features important for quick and reliable identification are lacking. 
+For example:
+
+     Finding the 'best' characters to use.
+     Expressing uncertainty.
+     Error tolerance.
+     Locating errors if they are made.
+     Explanatory notes and illustrations for the characters. (There is
+         a kind of glossary feature, using Google searches, but characters
+         often can't be fully understood just from definitions of the words
+         used in them.)
+
+
+BUGS OR DEFICIENCIES IN THE IMPLEMENTATION
+
+Alterations to the layout of the panes aren't preserved when the key is 
+restarted. This is particularly annoying because the default layout is bad: 
+the 'Keep all characters visible' option can't be seen without scrolling, 
+and the right-hand pane is much narrower than the left.
+
+The right-hand pane is used for the list of remaining taxa _and_ for 
+descriptions. It doesn't scroll automatically, and new information is 
+appended, rather than replacing the current information. As a result, it's 
+easy to think that things aren't working at all. For example, if you ask for 
+a description of a taxon, usually nothing seems to happen, because the 
+description is out of sight at the bottom of the pane. (If you're alert, you 
+can notice a change in the size of the thumb in the scroll bar.) If you ask 
+for another description, it's appended, and, for good measure, an identical 
+list of the remaining taxa is appended too.
+
+There is a similar problem with identification. Usually, when you select 
+states and press the 'Matching Taxa' button, nothing seems to happen. The 
+only exception is the _first_ time you do this at the start of an 
+identification, _provided_ that you haven't already asked for a description. 
+As before, the reason is that the new information (the states used and the 
+new list of remaining taxa) is appended, instead of replacing the previous 
+information.
+
+When the 'Matching Taxa' button is pressed, the refreshed list of character 
+states is displayed from the top, so that you usually have to scroll to get 
+back to the position where you were perusing the states.
+
+
+EXAMPLE OF AN IDENTIFICATION
+
+The Poaceae key has 282 character states and 705 taxa. Instead of using a 
+specimen, we can work from a description generated from the key, say 
+Agrostis idahoensis (which I chose at random). After scanning the first 50 
+states, 'checking' (i.e. selecting) the ones corresponding to the 
+'specimen', and pressing 'Matching Taxa', we proceed by examining the 
+remaining states, which start:
+
+     51. Leaf sheath more or less hairy or prickly on surface
+     52. Leaf sheath hairy at summit, throat, or collar
+     53. Leaf sheath or blade prominently keeled
+     54. Leaf sheath and blade differentiated
+     55. Leaf sheath inflated or distended
+     59. Leaf blades disarticulating from sheath, deciduous at ligule
+     60. Leaf blades very short, 1-2 cm long
+
+We have to compare these states, one by one, with the specimen. (This is 
+presumably more difficult with a real specimen than with the description.) 
+If we make no mistake, state 54 is the only one which should be checked. The 
+other 6 states have been laboriously examined FOR NO POSSIBLE GAIN, but 
+always with the risk of making a mistake, any one of which would be fatal; 
+that is, if we check any of these states, the 'correct' taxon will be 
+eliminated. (And as there is no error tolerance, there is no possibility of 
+recovery.)
+
+Thus we proceed up to, say, state 100, and then press 'Matching Taxa'. And 
+so on. We arrive at the answer after checking 26 states, and examining but 
+not checking 78. (The number examined but not checked depends on how 
+frequently you press 'Matching Taxa', and also whether you skip any of the 
+states that you could correctly check.)
+
+Experiments have shown that the probability of error in using a character 
+(or, in this case, a state) is around 0.05-0.1, but let's be optimistic and 
+assume it's 0.02. Then the probability of getting the right answer is 
+0.98^78 = 0.21 - a decidedly 'lightweight' result. Also, a lot of valuable 
+time has been used.
+
+For comparison, using the (roughly) corresponding subset of Clayton's 'Grass 
+Species of the World', and using the characters of highest separating power, 
+the same identification requires 6 characters. The probability of getting 
+the right answer is 0.98^6 = 0.89.
+
+-- 
+Mike Dallwitz
+Contact information: <A HREF="http://delta-intkey.com/contact/dallwitz.htm">http://delta-intkey.com/contact/dallwitz.htm</A>
+DELTA home page: <A HREF="http://delta-intkey.com">http://delta-intkey.com</A>
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="108213.html">[Taxacom] New Interactive Key to Wetland Monocots
+</A></li>
+	<LI>Next message: <A HREF="108225.html">[Taxacom] New Interactive Key to Wetland Monocots
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#108223">[ date ]</a>
+              <a href="thread.html#108223">[ thread ]</a>
+              <a href="subject.html#108223">[ subject ]</a>
+              <a href="author.html#108223">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

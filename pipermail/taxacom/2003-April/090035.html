@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Human and ape phylogeny
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Human%20and%20ape%20phylogeny&In-Reply-To=%3C5.0.2.1.2.20030404185836.01d1ce08%40mailhost.univ-rennes1.fr%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="090097.html">
+   <LINK REL="Next"  HREF="090044.html">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2003-April/090035.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Human and ape phylogeny</H1>
+    <B data-pagefind-meta="author">pierre deleporte</B> 
+    <A HREF="mailto:taxacom%40mailman.nhm.ku.edu?Subject=Re%3A%20Human%20and%20ape%20phylogeny&In-Reply-To=%3C5.0.2.1.2.20030404185836.01d1ce08%40mailhost.univ-rennes1.fr%3E"
+       TITLE="Human and ape phylogeny">pierre.deleporte at UNIV-RENNES1.FR
+       </A><BR>
+    <I data-pagefind-meta="date">Fri Apr  4 19:08:58 CST 2003</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="090097.html">3TA (was Human and ape phylogeny)
+</A></li>
+        <LI>Next message: <A HREF="090044.html">Human and ape phylogeny
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#90035">[ date ]</a>
+              <a href="thread.html#90035">[ thread ]</a>
+              <a href="subject.html#90035">[ subject ]</a>
+              <a href="author.html#90035">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<span data-pagefind-filter="year" hidden>2003</span><!--beginarticle-->
+<PRE>Hi John,
+
+the current way to deal with cladistic analysis of morphological data is as 
+follows :
+
+built a data matrix of terminal taxa X characters  -  you have to define 
+the characters and delineate their character states (generally a headache)
+
+set one or several &quot;outgroup&quot; taxa in the series of taxa contained in this 
+data matrix (in other words, introduce some putative &quot;outgroup&quot; taxa in the 
+data matrix)
+
+the analysis will find the shortest tree(s), and root the tree(s) according 
+to your a priori choice of outgroup(s), i.e. manage to make them appear 
+&quot;outside&quot; the clade constituted by the remaining taxa, i.e. place the root 
+between outgroup and ingroup
+
+this is always possible with only one outgroup taxon, this is not always 
+possible if you have set several putative outgroup taxa (if they don't 
+appear contiguous on the tree, you will have no unique solution to root 
+your tree, and this will indicate that you have made a mistake in your a 
+priori ingroup / outgroup delineation).
+
+as you describe the method in the Gibbs et al. paper, they have fixed 
+Hylobates as outgroup, so they are in fact analysing the relationships 
+between the remaining anthropoids, implicitly assuming that Hylobates is 
+effectively outside the clade constituted by the remaining species
+
+this &quot;arbitrariness&quot; in the choice of outgroup(s) is inherent to all 
+cladistic analyses
+so the choice should be argued (explain what external evidence support the 
+a priori out/in group decision)
+
+an obvious limit of the method is the difficulty to find any outgroup in 
+order to root the whole tree of life in the first place... you should 
+introduce a non-living thing in the data matrix (!)...
+
+thus this way of rooting cladograms is obligatorily based on some previous 
+decision about a larger scale phylogeny (who is in, who is out), but this 
+does not constrain the internal structure of the cladogram, which will 
+result from the analysis (most parsimonious tree)
+
+in the present case, setting Hylobates as outgroup does not influence in 
+itself the relative connections between Gorilla, Pans, Pongo and Homo
+
+the &quot;old fashion&quot; procedure consisted in trying to a priori polarize at 
+least some of the characters, which could be done either by an implicit 
+&quot;outgroup rooting&quot; applied to these characters, or assuming a particular 
+polarity of the evolutionary process for these characters
+
+Gibbs et al. cannot be said &quot;pheneticists&quot; just because they use the 
+outgroup criterion for tree rooting. They would be pheneticicts if they 
+computed an overall similarity index to perform a cluster analysis instead 
+of minimising the evolutionary events (character changes or &quot;steps&quot;) on the 
+tree (parsimony criterion applied to choose the optimal tree under a 
+&quot;minimum evolution&quot; model = &quot;minimising homoplasy&quot; = &quot;maximising homology&quot;).
+
+maybe a difficulty comes from a possible &quot;presence/absence&quot; coding of some 
+characters. The two states of a character may be &quot;present&quot; and &quot;absent&quot;, 
+but this will not make the result of the cladistic analysis similar to that 
+of the phenetic analysis of the same data matrix. In case of regular 
+divergence on all branches, the result will be the same (&quot;clocklike&quot; 
+evolutionary process); but in case of differences in evolutionary rates on 
+the branches (&quot;acceleration&quot; and &quot;slowing down&quot; of evolution), the 
+cladistic (parsimony) analysis will tend to group by synapomorphies only, 
+when the phenetic analysis will happen to group on symplesiomorphies when 
+they match overall similarity between two taxa.
+
+this remains true in the general case, wherever your outgroup will happen 
+to be situated and &quot;root&quot; the tree... and there stands also a difficulty I 
+guess, for people not familiar with the approach: identifying the shortest 
+tree and rooting it by trhe oyut rgroup criterioj provides exactly the same 
+result as polarizing every character on an outgroup basis and performing a 
+traditional phylogenetic analysis by hand &quot;Hennig's fashion&quot;.
+
+hope this helps,
+best,
+Pierre
+
+---------------------------------
+A 09:55 04/04/2003 -0500, John Grehan wrote :
+Here's a question for all the cladistic experts on this list. I admit to
+having a relatively superficial expertise with cladistics so I want to
+measure my current perceptions against any responses on this list. My
+question concerns the 'cladistic' quality of an article cited on this list
+as increasing the support for a human-chimp/african ape clade vs human
+orangutan by S. Gibbs, M. Collard, and B. Wood (2002) Soft-tissue anatomy
+of the extant hominids: a review and phylogenetic analysis. Journal of
+Anatomy 200: 3-49.
+
+At first glance the paper seemed very impressive. The authors utilized 171
+characters and a cladistic analysis. The number of taxa was limited to
+humans and extant apes only which did make me wonder if some of their
+characters might not qualify as synapomorphies with further comparison
+including at least the old world monkeys. Then I read that &quot;No a priori
+judgements were made as to the primitive or derived condition of
+characters&quot;. My reading of that statement is that the characters were not
+'cladistic' in the sense of each standing as proposed synapomorphies.
+Instead they were phenetic.
+
+The authors then state that &quot;Hylobates was assumed to be the basal hominoid
+genus and the cladograms were rooted accordingly&quot;. Since the characters
+were not defined as synapomorphies with respect to an outgroup, making one
+of the taxa the basal lineage seems to be an externally imposed criterion
+rather than being generated from the characters themselves. With this root
+the characters were subject to 'cladistic' analysis.
+
+Am I correct to view this paper as a 'cladistic' analysis of phenetic
+characters with an arbitrary rooting of one of the taxa being analyzed. If
+I am then this paper hardly seems to me to stand up as a reliable support
+for the human-chimp clade. I am getting old and perhaps my understanding of
+cladistics based on what I read by Hennig, Nelson where cladistics was all
+about the analysis of proposed synaomorphies is now out of date and I
+missed the boat where cladistics is now all about the analysis of phenetic
+characters.
+
+John
+
+Dr. John Grehan
+Director of Science and Collections
+Buffalo Museum of Science
+1020 Humboldt Parkway
+Buffalo, New York 14211-1293
+Voice 716-896-5200 x372
+Fax 716-897-6723
+<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">jgrehan at sciencebuff.org</A>
+
+Pierre Deleporte
+CNRS UMR 6552 - Station Biologique de Paimpont
+F-35380 Paimpont   FRANCE
+Téléphone : 02 99 61 81 66
+Télécopie : 02 99 61 81 88
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+	<LI>Previous message: <A HREF="090097.html">3TA (was Human and ape phylogeny)
+</A></li>
+	<LI>Next message: <A HREF="090044.html">Human and ape phylogeny
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#90035">[ date ]</a>
+              <a href="thread.html#90035">[ thread ]</a>
+              <a href="subject.html#90035">[ subject ]</a>
+              <a href="author.html#90035">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

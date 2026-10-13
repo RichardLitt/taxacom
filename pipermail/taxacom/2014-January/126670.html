@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] recursive SQL database for taxonomy available?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2014-January/126670.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] recursive SQL database for taxonomy available?</H1>
+    <B data-pagefind-meta="author">Kim van der Linde</B>
+    kim at kimvdlinde.com<BR>
+    <I data-pagefind-meta="date">Tue Jan 14 19:49:05 CST 2014</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="126669.html">[Taxacom] Release of The Plant List v 1.1 with changed data access
+ (was: Open, Free / The economics of biodiversity database initiatives)
+</A></li>
+        <LI>Next message: <A HREF="126671.html">[Taxacom] recursive SQL database for taxonomy available?
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#126670">[ date ]</a>
+              <a href="thread.html#126670">[ thread ]</a>
+              <a href="subject.html#126670">[ subject ]</a>
+              <a href="author.html#126670">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2014</span><!--beginarticle-->
+<PRE>Rod,
+
+Does any of the databases include super and sub families, tribes, and 
+other ranks other than regnum, phylum, ordo, familia, genus and (sub) 
+species?
+
+Kim
+
+On 1/14/2014 12:02 PM, Roderic Page wrote:
+&gt; Hi Kim,
+&gt;
+&gt; Not sure what you mean by ?open source?, do you have a specific license in mind? (licensing data is something of a minefield, none of the options below have an explicit license).
+&gt;
+&gt; The Catalogue of Life is a MySQL database, the ?taxa? table is structured as a list of parent-child relationships (I assume this is what you mean by recursive?). You download the database from <A HREF="http://www.catalogueoflife.org/content/annual-checklist-archive">http://www.catalogueoflife.org/content/annual-checklist-archive</A> (it?s packaged as a web app, but the data is in a MySQL database).
+&gt; The GBIF classification is available from <A HREF="http://uat.gbif.org/dataset/d7dddbf4-2cf0-4f39-9b2a-bb099caae36c">http://uat.gbif.org/dataset/d7dddbf4-2cf0-4f39-9b2a-bb099caae36c</A> as a Darwin Core Archive (you can import the data into MySQL).
+&gt;
+&gt; The NCBI taxonomy can also be imported into MySQL (with a little fussing, see <A HREF="http://darwin.zoology.gla.ac.uk/~rpage/tbmap/downloads/ncbi/">http://darwin.zoology.gla.ac.uk/~rpage/tbmap/downloads/ncbi/</A> for one approach).
+&gt;
+&gt; Regards
+&gt;
+&gt; Rod
+&gt;
+&gt; On 14 Jan 2014, at 16:28, Kim van der Linde &lt;kim at kimvdlinde.com&gt; wrote:
+&gt;
+&gt;&gt; Hi,
+&gt;&gt;
+&gt;&gt; I am wondering if there is an open source recursive taxonomic SQL (MySQL
+&gt;&gt; or other) database available that contains a substantial number of
+&gt;&gt; species and higher taxa?
+&gt;&gt;
+&gt;&gt; Kim
+&gt;&gt;
+&gt;&gt; _______________________________________________
+&gt;&gt; Taxacom Mailing List
+&gt;&gt; Taxacom at mailman.nhm.ku.edu
+&gt;&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt;&gt;
+&gt;&gt; The Taxacom Archive back to 1992 may be searched with either of these methods:
+&gt;&gt;
+&gt;&gt; (1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt;&gt;
+&gt;&gt; (2) a Google search specified as:  site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+&gt;&gt;
+&gt;&gt; Celebrating 26 years of Taxacom in 2013.
+&gt;&gt;
+&gt; ---------------------------------------------------------
+&gt; Roderic Page
+&gt; Professor of Taxonomy
+&gt; Institute of Biodiversity, Animal Health and Comparative Medicine
+&gt; College of Medical, Veterinary and Life Sciences
+&gt; Graham Kerr Building
+&gt; University of Glasgow
+&gt; Glasgow G12 8QQ, UK
+&gt;
+&gt; Email: 		r.page at bio.gla.ac.uk
+&gt; Tel: 			+44 141 330 4778
+&gt; Fax: 		+44 141 330 2792
+&gt; Skype: 		rdmpage
+&gt; Facebook: 	<A HREF="http://www.facebook.com/rdmpage">http://www.facebook.com/rdmpage</A>
+&gt; LinkedIn: 	<A HREF="http://uk.linkedin.com/in/rdmpage">http://uk.linkedin.com/in/rdmpage</A>
+&gt; Twitter: 		<A HREF="http://twitter.com/rdmpage">http://twitter.com/rdmpage</A>
+&gt; Blog: 		<A HREF="http://iphylo.blogspot.com">http://iphylo.blogspot.com</A>
+&gt; Home page: 	<A HREF="http://taxonomy.zoology.gla.ac.uk/rod/rod.html">http://taxonomy.zoology.gla.ac.uk/rod/rod.html</A>
+&gt; Wikipedia: 	<A HREF="http://en.wikipedia.org/wiki/Roderic_D._M._Page">http://en.wikipedia.org/wiki/Roderic_D._M._Page</A>
+&gt; Citations: 	<A HREF="http://scholar.google.co.uk/citations?hl=en&amp;user=4Z5WABAAAAAJ">http://scholar.google.co.uk/citations?hl=en&amp;user=4Z5WABAAAAAJ</A>
+&gt; ORCID: 		<A HREF="http://orcid.org/0000-0002-7101-9767">http://orcid.org/0000-0002-7101-9767</A>
+&gt;
+&gt; _______________________________________________
+&gt; Taxacom Mailing List
+&gt; Taxacom at mailman.nhm.ku.edu
+&gt; <A HREF="http://mailman.nhm.ku.edu/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/mailman/listinfo/taxacom</A>
+&gt;
+&gt; The Taxacom Archive back to 1992 may be searched with either of these methods:
+&gt;
+&gt; (1) by visiting <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+&gt;
+&gt; (2) a Google search specified as:  site:mailman.nhm.ku.edu/pipermail/taxacom  your search terms here
+&gt;
+&gt; Celebrating 26 years of Taxacom in 2013.
+&gt;
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="126669.html">[Taxacom] Release of The Plant List v 1.1 with changed data access
+ (was: Open, Free / The economics of biodiversity database initiatives)
+</A></li>
+        <LI>Next message: <A HREF="126671.html">[Taxacom] recursive SQL database for taxonomy available?
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#126670">[ date ]</a>
+              <a href="thread.html#126670">[ thread ]</a>
+              <a href="subject.html#126670">[ subject ]</a>
+              <a href="author.html#126670">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

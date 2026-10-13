@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> Darwin core
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2005-March/093468.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">Darwin core</H1>
+    <B data-pagefind-meta="author">Stan Blum</B>
+    sblum at CALACADEMY.ORG<BR>
+    <I data-pagefind-meta="date">Tue Mar 22 16:43:15 CST 2005</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="093465.html">Hieracium publ. by Arvet-Touvet
+</A></li>
+        <LI>Next message: <A HREF="093467.html">Darwin core
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#093468">[ date ]</a>
+              <a href="thread.html#093468">[ thread ]</a>
+              <a href="subject.html#093468">[ subject ]</a>
+              <a href="author.html#093468">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2005</span><!--beginarticle-->
+<PRE>On Tue, 22 Mar 2005 17:16:55 +0530, Shubhada Nagarkar
+&lt;shubha at BIOINFO.ERNET.IN&gt; wrote:
+[...]
+&gt;Is there any software which helps to create Darwin Core.
+
+The DarwinCore is used as a data transfer schema, so it is &quot;created&quot; from an
+existing database as an export format.  How you create it depends on the
+database you exporting from.  Some tools exist to help with this, but none
+are completely automatic.
+
+It is also important to realize that the only reason to export data in a
+DarwinCore format is for combination with other data sets exported from
+similar databases; i.e., to participate in a federation of data providers.
+At the moment, the software that enables this sort of distributed query and
+on-the-fly data set building, using the DarwinCore, is DiGIR.  ( See
+<A HREF="http://digir.net">http://digir.net</A> and <A HREF="http://www.gbif.org/DataProviders/HowTo">http://www.gbif.org/DataProviders/HowTo</A> )  The DiGIR
+provider software installs on a web server and creates DarwinCore datasets
+from your database in response to queries it receives from a DiGIR client or
+portal.  A DarwinCore extract is created only as a response to a DiGIR query.
+
+DiGIR can be installed on a Windows and Linux servers, but some familiarity
+with server adminstration is necessary and some configuration steps are
+manual. I believe some collection database packages, such as Specify and
+Biota, either now have, or soon will have, DiGIR providers built into them.
+
+Finally, please be aware that the DiGIR-DarwinCore combination is not the
+only way to be a provider in the GBIF network or federation.  The BioCASE
+protocol is available and works with the much more extensive ABCD export
+format (schema).  Links to BioCASE can be found at the GBIF reference above.
+
+-Stan
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="093465.html">Hieracium publ. by Arvet-Touvet
+</A></li>
+        <LI>Next message: <A HREF="093467.html">Darwin core
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#093468">[ date ]</a>
+              <a href="thread.html#093468">[ thread ]</a>
+              <a href="subject.html#093468">[ subject ]</a>
+              <a href="author.html#093468">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

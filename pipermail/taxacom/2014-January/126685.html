@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> [Taxacom] recursive SQL database for taxonomy available?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2014-January/126685.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">[Taxacom] recursive SQL database for taxonomy available?</H1>
+    <B data-pagefind-meta="author">=?iso-8859-1?Q?Markus_D=F6ring?=</B>
+    mdoering at gbif.org<BR>
+    <I data-pagefind-meta="date">Fri Jan 17 10:08:53 CST 2014</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="126684.html">[Taxacom] Graduate Course_Costa Rica: Tropical Plant Systematics
+</A></li>
+        <LI>Next message: <A HREF="126686.html">[Taxacom] recursive SQL database for taxonomy available?
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#126685">[ date ]</a>
+              <a href="thread.html#126685">[ thread ]</a>
+              <a href="subject.html#126685">[ subject ]</a>
+              <a href="author.html#126685">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2014</span><!--beginarticle-->
+<PRE>Hi Kim &amp; Erik,
+
+I've dumped the GBIF backbone from our postgres 9.3 server and placed it here (427MB):
+<A HREF="https://dl.dropboxusercontent.com/u/457027/nub.sql.zip">https://dl.dropboxusercontent.com/u/457027/nub.sql.zip</A>
+
+The tables should be fairly straight forward with taxa being in &quot;name_usage&quot; and names in &quot;name&quot;.
+A simple join to get the core properties for a taxon would be this sql:
+
+	select u.id, parent_fk,n.scientific_name, rank, status, p.citation as publlishedIn from name_usage u join name n on name_fk=n.id left join citation p on name_published_in_fk=p.id order by rank limit 100;
+
+The backbone is the current live one with the higher classification coming from the Catalog of Life.
+Quick facts:
+
+  taxa incl synonyms:  4.416.347
+  synonyms:  1.143.026
+  names: 4.410.899
+  accepted taxa by rank:
+	KINGDOM: 9
+	PHYLUM: 111
+	CLASS: 272
+	ORDER: 1183
+	SUPERFAMILY: 356
+	FAMILY: 20760
+	GENUS: 390790
+	SPECIES: 2497114
+	SUBSPECIES: 171473
+	VARIETY: 149011
+	SUBVARIETY: 1070
+	FORM: 40473
+
+
+best,
+Markus
+
+
+--
+Markus D?ring
+Software Developer
+Global Biodiversity Information Facility (GBIF)
+mdoering at gbif.org
+<A HREF="http://www.gbif.org">http://www.gbif.org</A>
+
+
+On 15 Jan 2014, at 10:59, Markus D?ring &lt;mdoering at gbif.org&gt; wrote:
+
+&gt; Ok, I will prepare a dump over the next days then.
+&gt; Regular dumps are currently out of scope I am afraid as I manually need to remove other data which we keep in the same database. But if postgres dumps would be a useful thing for more people we can try to setup a process in the long run.
+&gt; 
+&gt; best,
+&gt; Markus
+&gt; 
+&gt; 
+&gt; On 15 Jan 2014, at 01:39, Erik Rijkers &lt;er at xs4all.nl&gt; wrote:
+&gt; 
+&gt;&gt; On Wed, January 15, 2014 01:20, Markus D?ring wrote:
+&gt;&gt;&gt; Hi Kim,
+&gt;&gt;&gt; if useful I could also provide a postgresql dump of the GBIF backbone in addition to the dwc archive already available.
+&gt;&gt;&gt; We use a parent child relationship in GBIF with an additional nested set index to support quick descendants queries.
+&gt;&gt;&gt; 
+&gt;&gt; 
+&gt;&gt; Good to hear GBIF is using a real database system (postgres) :-)
+&gt;&gt; 
+&gt;&gt; But seriously, I would be very interested to be able to use dowload such a dump and use it locally.  And it would be
+&gt;&gt; absolutely fantastic if some sort of regular download of updated dumps could be made available.   But I would already be
+&gt;&gt; very thankful for a one-off download.
+&gt;&gt; 
+&gt;&gt; thanks,
+&gt;&gt; 
+&gt;&gt; Erik Rijkers
+&gt;&gt; Utrecht, Netherlands
+&gt;&gt; 
+&gt;&gt; 
+&gt; 
+
+
+
+
+
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="126684.html">[Taxacom] Graduate Course_Costa Rica: Tropical Plant Systematics
+</A></li>
+        <LI>Next message: <A HREF="126686.html">[Taxacom] recursive SQL database for taxonomy available?
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#126685">[ date ]</a>
+              <a href="thread.html#126685">[ thread ]</a>
+              <a href="subject.html#126685">[ subject ]</a>
+              <a href="author.html#126685">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>

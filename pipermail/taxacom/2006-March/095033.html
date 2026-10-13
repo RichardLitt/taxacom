@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en">
+ <HEAD>
+   <TITLE> interactive keys
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="canonical" href="https://taxacom.org/pipermail/taxacom/2006-March/095033.html">
+</HEAD>
+ <BODY BGCOLOR="#ffffff" data-pagefind-body><div data-pagefind-ignore="all" style="font:14px sans-serif;background:#f3f1ea;border-bottom:1px solid #ccc;padding:6px 10px;margin:-8px -8px 12px"><a href="/">Search the Taxacom archive</a> &middot; <a href="/pipermail/taxacom/">Browse by month</a> &middot; Mirror of the former lists.ku.edu archive (1992&ndash;2025)</div>
+   <H1 data-pagefind-meta="title">interactive keys</H1>
+    <B data-pagefind-meta="author">Mike Dallwitz</B>
+    M.J.Dallwitz at NETSPEED.COM.AU<BR>
+    <I data-pagefind-meta="date">Thu Mar 23 19:35:46 CST 2006</I>
+    <P><UL data-pagefind-ignore>
+        <LI>Previous message: <A HREF="095041.html">Google for Internet Database / unique classification?
+</A></li>
+        <LI>Next message: <A HREF="095047.html">Consensus
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#095033">[ date ]</a>
+              <a href="thread.html#095033">[ thread ]</a>
+              <a href="subject.html#095033">[ subject ]</a>
+              <a href="author.html#095033">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>
+<span data-pagefind-filter="year" hidden>2006</span><!--beginarticle-->
+<PRE>Rudy Jocqu? wrote:
+
+&gt; Apparently nobody mentioned X:ID. Does someone have experience with that
+&gt; package?
+
+This program is free, and is available at
+<A HREF="http://uio.mbl.edu/services/key.html.">http://uio.mbl.edu/services/key.html.</A> The current version is shown on the
+main page as 0.66 (July 2004). I don't think it has been updated since then,
+although when you click on a link to a key you get the message 'You are
+looking at an old version of X:ID; in 1 second you will be automatically
+re-directed to the current version'. The link to the X:ID forum, which might
+have clarified this, doesn't work.
+
+The system lacks some important features, such as error tolerance and
+character reliabilities, and the 'Best characters' algorithm is worse than
+useless (see below).
+
+An interesting feature is the ability to change the appearance of the user
+interface by means of style sheets. However, the examples currently
+available are unsatisfactory in various ways. The style sheet that emulates
+the Lucid2 interface is probably the best, except for a serious bug -  the
+'feature' description is not shown in the 'Character States Chosen' pane.
+This often results in meaningless lines such as 'triangular' instead of
+'Stem shape in cross section triangular'.
+
+At the request of the authors, I made some comments on the program in May
+2005. These are reproduced below, except for some rather detailed ones on
+the user interfaces. I tested only the player, not the builder.
+
+Note that these comments don't constitute a review of the program, which has
+many good features. I mentioned only the faults, so that they could be fixed.
+
+---------------------------------------------------------------------------
+
+'Misinterpretation'
+
+The default setting should be 'Allow uncertainties and misinterpretation',
+and it should be possible to change this while using a key.
+
+Bingo
+
+The Lucid 'Bingo' option is harmful in the context of identification - see
+'Principles of Interactive Keys' at
+<A HREF="http://delta-intkey.com/www/interactivekeys.htm">http://delta-intkey.com/www/interactivekeys.htm</A> under the heading
+'Differentiating attributes'.
+
+Best
+
+The X:ID 'Best' is a extension of 'Bingo', and isn't suitable for finding
+the best characters for use in an identification.
+
+The problem with 'Bingo' and the X:ID implementation of 'Best' (which is
+also used in MEKA) is not just that they are unhelpful for identification -
+they are actually harmful. You would do better by selecting characters at
+random, provided you used the 'Prune Redundants' option (if it worked
+correctly, which it doesn't in X:ID).
+
+For example, in the 'Aquatic Plants' key, suppose that your specimen is
+Alternanthera. In the 'Best' list, the first character state that is
+exhibited by Alternanthera is 'Leaf arrangement on stem (phyllotaxis I):
+opposite distichous 17'. This is 142nd in the list. Thus, you have to
+examine and reject 141 character states before arriving at the correct one,
+and the probability of doing this without error is almost zero. If you do
+manage to do this correctly, you still have 17 taxa remaining. In the new
+'Best' list, the first character state exhibited by Alternanthera (Leaf
+venation: pinnate 4) is 87th on the list, and 4 taxa remain. And so on.
+
+By comparison, using the 'Best' character found by Intkey at each step, and
+selecting the first state exhibited by Alternanthera, results in an
+identification after 5 characters have been used.
+
+Prune Redundants
+
+I don't see the point of this option as it is currently implemented in X:ID.
+Also, it's confusing because it puts into 'Character states chosen' states
+that are not necessarily exhibited by the specimen.
+
+As implemented in Lucid, the option has two effects, which I describe in
+'Principles of Interactive Keys' under the headings 'Removing redundant
+characters' and 'Removing redundant character states'. The former effect is
+useful, but the latter is harmful. In Intkey, redundant characters are
+automatically removed in the 'Best' calculation. I think that having it
+available separately is an unnecessary complication for most users.
+
+Similar Taxa
+
+The results given by X:ID are substantially different from those given by
+Lucid. I haven't investigated the reason for this.
+
+Similarities and Differences
+
+The output from this option is almost unintelligible. For comparison, I've
+attached the differences between the genera of Cyperaceae, as output by
+Intkey (diff_intkey.rtf) and X:ID (diff_xid.txt). [These files are not
+attached to this posting.] The X:ID output is seemingly in almost random
+order (even the states of a given character are not necessarily contiguous),
+and there is no indication of which taxa exhibit the states. In the Intkey
+output, notice the bold parts; these indicate characters for which at least
+two of the taxa have non-overlapping states.
+
+Numeric Characters
+
+I gather from the forum that X:ID can handle numeric characters, but I
+couldn't find any examples in the keys at the Web site.
+
+---------------------------------------------------------------------------
+
+--
+Mike Dallwitz
+Contact information: <A HREF="http://delta-intkey.com/contact/dallwitz.htm">http://delta-intkey.com/contact/dallwitz.htm</A>
+DELTA home page: <A HREF="http://delta-intkey.com">http://delta-intkey.com</A>
+
+
+
+
+</PRE>
+<!--endarticle-->
+    <HR>
+    <P><UL data-pagefind-ignore>
+        <!--threads-->
+        <LI>Previous message: <A HREF="095041.html">Google for Internet Database / unique classification?
+</A></li>
+        <LI>Next message: <A HREF="095047.html">Consensus
+</A></li>
+         <LI> <B>Messages sorted by:</B>
+              <a href="date.html#095033">[ date ]</a>
+              <a href="thread.html#095033">[ thread ]</a>
+              <a href="subject.html#095033">[ subject ]</a>
+              <a href="author.html#095033">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+mailing list</a><br>
+</body></html>
