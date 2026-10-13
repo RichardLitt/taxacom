@@ -9,6 +9,7 @@ exits non-zero if any check fails. Checks are written against the raw
 backup (mbox text, Pipermail databases, original HTML) rather than reusing
 the renderer, so a rendering bug shows up as a failure.
 """
+import copy
 import email
 import gzip
 import html
@@ -85,7 +86,7 @@ allowed = re.compile(r"^(index\.html|CNAME|\.nojekyll|pagefind/.*|pipermail/taxa
                      r"(index\.html|\d{4}-[A-Z][a-z]+\.txt\.gz|\d{4}-[A-Z][a-z]+/[a-z0-9]+\.html))$")
 check("only expected files are published (no .pck, database/, lists/, raw .txt)",
       (p for p in (f.relative_to(SITE).as_posix() for f in SITE.rglob("*") if f.is_file())
-       if not allowed.match(p)))
+       if not allowed.match(p) and not p.startswith(".git/")))  # .git: the gh-pages checkout itself
 
 added = []
 for p in out_messages:
@@ -161,7 +162,13 @@ def mbox_body(msg):
 
 
 # The mbox can repeat a message under one filename, so a page passes if any copy matches.
-matches, checked = {}, 0
+# The database's encoding label is not trusted: a body counts as correct if it
+# matches the raw mbox text either as stored or decoded per the label.
+def ascii_share(t):
+    return sum(32 <= ord(c) < 127 or c in "\r\n\t" for c in t) / max(len(t), 1)
+
+
+matches, checked, garbled = {}, 0, []
 for m in all_months:
     db = load_articles(SRC / "database" / f"{m}-article")
     for msg in read_mbox(SRC / f"{m}.txt"):
@@ -169,20 +176,29 @@ for m in all_months:
         if mid not in db or f"{m}/{db[mid]['filename']}" in src_pages:
             continue
         p = f"{m}/{db[mid]['filename']}"
-        for h, k in (("Content-Transfer-Encoding", "cenc"), ("Content-Type", "ctype")):
-            if db[mid].get(k) and h not in msg:
-                msg[h] = db[mid][k]
         page = out_html.get(resolve(p), "")
-        body = " ".join(EMAIL_RE.sub(lambda e: e.group().replace("@", " at "), mbox_body(msg)).split())
+        raw = msg.get_payload() if not msg.is_multipart() else ""
+        if db[mid].get("ctype") and "Content-Type" not in msg:
+            msg["Content-Type"] = db[mid]["ctype"]
+        candidates = [mbox_body(msg)]
+        if db[mid].get("cenc") and "Content-Transfer-Encoding" not in msg:
+            labelled = copy.deepcopy(msg)
+            labelled["Content-Transfer-Encoding"] = db[mid]["cenc"]
+            candidates.append(mbox_body(labelled))
+        text = plain(article(page))
+        if raw.strip() and ascii_share(raw) > 0.98 and ascii_share(text) < 0.9:
+            garbled.append(f"{p}: mbox body is plain ASCII but page is {ascii_share(text):.0%} ASCII")
+        bodies = [" ".join(EMAIL_RE.sub(lambda e: e.group().replace("@", " at "), b).split()) for b in candidates]
         subj = " ".join(EMAIL_RE.sub(lambda e: e.group().replace("@", " at "), db[mid]["subject"]).split())[:40]
         if p in stubs:  # a duplicate copy: the kept page must hold (nearly) the same text
-            ok = body in plain(article(page)) or similarity(body, plain(article(page))) >= 0.85
+            ok = any(b in text or similarity(b, text) >= 0.85 for b in bodies)
         else:
-            ok = body in plain(article(page)) and subj in plain(page.split("</H1>")[0])
+            ok = any(b in text for b in bodies) and subj in plain(page.split("</H1>")[0])
         matches[p] = matches.get(p, False) or ok
         checked += 1
 check(f"regenerated pages ({checked} mbox messages) contain their mbox body and subject",
       sorted(p for p, ok in matches.items() if not ok))
+check("regenerated pages are readable where the mbox text is plain ASCII (no mis-decoding)", sorted(set(garbled)))
 
 # --- Duplicates and search ---------------------------------------------------
 own = '<link rel="canonical" href="https://taxacom.org/pipermail/taxacom/{}">'
@@ -230,6 +246,17 @@ src_broken = broken_links(((p, (SRC / p).read_bytes().decode("latin1")) for p in
 out_broken = broken_links(out_html.items(), ARCH)
 check(f"no new broken internal links ({len(src_broken)} were already broken in the backup, "
       f"{len(src_broken - out_broken)} of those now fixed)", sorted(out_broken - src_broken))
+
+def outside_article(h):
+    a, b = h.find("<!--beginarticle-->"), h.find("<!--endarticle-->")
+    return h[:a] + h[b:] if a >= 0 and b >= 0 else h
+
+
+dead = re.compile(r'(?:href|HREF)="(mailto:[^"]*|https?://(?:lists|mailman\.nhm)\.ku\.edu/[^"]*listinfo[^"]*)"')
+check("no mailto: or old listinfo links outside message text",
+      (f"{p}: {m.group(1)[:60]}" for p, h in out_html.items() for m in [dead.search(outside_article(h))] if m))
+check("home page has the 'list today' section the listinfo links point to",
+      [] if 'id="the-list-today"' in (SITE / "index.html").read_text() else ["missing #the-list-today"])
 
 # --- Encoding --------------------------------------------------------------
 spots = {

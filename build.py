@@ -60,8 +60,26 @@ def set_lang(html: str) -> str:
     return re.sub(r"<HTML>", '<HTML lang="en">', html, count=1, flags=re.I)
 
 
+LISTINFO_RE = re.compile(r'https?://(?:lists\.ku\.edu|mailman\.nhm\.ku\.edu)/(?:cgi-bin/)?(?:mailman/)?listinfo/taxacom/?')
+MAILTO_RE = re.compile(r'<A\s+HREF="mailto:[^"]*"[^>]*>(.*?)</A>', re.S | re.I)
+MADE_RE = re.compile(r'\s*<LINK REL="made" HREF="mailto:[^"]*"\s*>', re.I)
+
+
+def retarget_links(html: str) -> str:
+    """Outside the message text: point the dead listinfo links at the home
+    page, and unlink mailto: reply links to the defunct list address."""
+    a, b = html.find("<!--beginarticle-->"), html.find("<!--endarticle-->")
+    if a < 0 or b < 0:
+        a = b = len(html)
+    def fix(part):
+        part = LISTINFO_RE.sub("/#the-list-today", part)
+        part = MADE_RE.sub("", part)
+        return MAILTO_RE.sub(r"\1", part)
+    return fix(html[:a]) + html[a:b] + fix(html[b:])
+
+
 def message_page(html: str, year: str, canonical: str, searchable: bool) -> str:
-    html = set_lang(fix_charset(html))
+    html = retarget_links(set_lang(fix_charset(html)))
     html = re.sub(r"</HEAD>", f'<link rel="canonical" href="https://{DOMAIN}{canonical}">\n</HEAD>',
                   html, count=1, flags=re.I)
     # Only canonical message pages carry data-pagefind-body, so index pages
@@ -87,15 +105,18 @@ def stub_page(title: str, canonical: str) -> str:
 
 
 def index_page(html: str) -> str:
-    html = set_lang(fix_charset(html))
+    html = retarget_links(set_lang(fix_charset(html)))
     return re.sub(r"<BODY([^>]*)>", lambda m: f"<BODY{m.group(1)}>" + BANNER, html, count=1, flags=re.I)
 
 
 def main():
     src, out = Path(sys.argv[1]), Path(sys.argv[2])
     dest = out / "pipermail" / "taxacom"
-    if out.exists():
-        shutil.rmtree(out)
+    # Empty the output, keeping .git: out/ may be a checkout of the gh-pages branch.
+    out.mkdir(parents=True, exist_ok=True)
+    for child in out.iterdir():
+        if child.name != ".git":
+            shutil.rmtree(child) if child.is_dir() else child.unlink()
     dest.mkdir(parents=True)
 
     # month -> {filename: html}, from the backup's HTML or regenerated from mbox + database.

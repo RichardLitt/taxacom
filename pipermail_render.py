@@ -11,7 +11,7 @@ from datetime import datetime
 from email.header import decode_header, make_header
 from zoneinfo import ZoneInfo
 
-from pipermail_db import load_articles, read_mbox
+from pipermail_db import load_articles, read_mbox, restore_headers
 
 TZ = ZoneInfo("America/Chicago")  # lists.ku.edu server time, as in the original pages
 EMAIL_RE = re.compile(r"([A-Za-z0-9._%+-]+)@([A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,})")
@@ -203,11 +203,7 @@ def articles_for_month(txt_path, db_path, next_free):
             continue  # the mbox repeats some messages; one page each
         d = db.get(mid)
         if d:
-            # The .txt dropped these headers; the database kept them.
-            if d.get("cenc") and "Content-Transfer-Encoding" not in msg:
-                msg["Content-Transfer-Encoding"] = d["cenc"]
-            if d.get("ctype") and "Content-Type" not in msg:
-                msg["Content-Type"] = d["ctype"]
+            restore_headers(msg, d)
             a = {"filename": d["filename"], "subject": obscure(d["subject"]), "author": obscure(d["author"]),
                  "email": obscure(d["email"]), "epoch": int(d["date"]), "threadKey": d["threadKey"]}
         else:
