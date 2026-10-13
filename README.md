@@ -49,3 +49,13 @@ Both print PASS/FAIL for each check and exit non-zero on failure. `test_search.m
 ## Deploy
 
 GitHub Pages serves the built `public/` directory from the `gh-pages` branch, with `CNAME` set to `taxacom.org`. The site is about 700 MB in about 160k files, under GitHub Pages' 1 GB limit.
+
+## License
+
+The code is licensed under MIT. That having been said, this code has been run using Claude Opus 5.5, which means that the license may not be enforceable.
+
+The content is not licensed by me. All submitters to the list accepted that it would be publicly available on the TAXACOM LISTSERV. Each user maintains copyright over their own content. I and my coorganizers recieved permission from the list owners to share these files as part of the TAXACOM reboot.
+
+### Request deletion of files
+
+If you would like your own emails to be removed from this archive, let us know.
