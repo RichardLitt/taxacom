@@ -32,7 +32,85 @@
        </UL>
     <HR>
 <span data-pagefind-filter="year" hidden>2014</span><!--beginarticle-->
-<PRE>GenBank records that comply with the BARCODE data standard have the reserved keyword BARCODE.  Each of these records includes an identifier for the voucher specimen (it's in the specimen_voucher field in the FEATURES table).  The data standard requires that the voucherID be in the form of the Darwin Core triplet (InstitutionCode:CollectionCode:CatalogNumber) but only about half of the ~475,000 BARCODE records are in the proper format.  Many records just have field numbers or the identifier provided by BOLD, the workbench at the University of Guelph from which records were submitted to GenBank.  For reasons I can't explain, BOLD never implemented a system for storing and submitting the properly formatted voucherID.  The Consortium for the Barcode of Life (CBOL) is responsible for the data standard and we will soon be broadcasting a message to the community with instructions for bringing the non-compliant voucherIDs into compliance.Fortunately there are several 100,000s of records that have properly formatted voucherIDs (or very nearly so) and these will guide you to specimen data in museum databases.   For example, I contributed to a barcoding project on birds in the US National Museum and all 2816 resulting BARCODE records have Darwin Core triplets that are hyperlinked to a record resolver that finds the specimen record in the Museum's EMu database.  You can find all the records by searching on my last name in GenBank (<A HREF="http://www.ncbi.nlm.nih.gov/nuccore/?term=schindel)">http://www.ncbi.nlm.nih.gov/nuccore/?term=schindel)</A> and more information is provided in ZooKeys 152: 87-91 (08 Dec 2011) doi: 10.3897/zookeys.152.2473.David SchindelCBOL, USNM, Smithsonian-----Original Message-----From: Taxacom [mailto:taxacom-bounces at mailman.nhm.ku.edu] On Behalf Of Urmas KõljalgSent: Friday, November 14, 2014 10:57 AMTo: taxacom at mailman.nhm.ku.eduSubject: Re: [Taxacom] Specimen database that works with sequence data Hi, PlutoF cloud (<A HREF="http://plutof.ut.ee">http://plutof.ut.ee</A> ) provides such services where you can develope combined datasets of different taxon occurrences (including specimen and DNA data). Sequence data can be downloaded as a Fasta file through the Clipboard system provided by the online workbench. Probably most well known such dataset hosted by PlutoF is UNITE fungal rDNA ITS database (<A HREF="http://unite.ut.ee">http://unite.ut.ee</A> ) which is utilized by many NGS pipelines like QIIME, mothur, SCATA, UTAX, etc. Best wishes, Urmas Kõljalg 13-11-2014 14:35 kirjutas Eric Chapman: &gt; Hello,&gt; &gt; I was wondering if anyone could tell me if there is a database &gt; available that houses both collection information and DNA sequences of &gt; multiple genes such that I could query that database in this way:&gt; &gt; For all specimens that are from the US with COI sequences, give me a &gt; FASTA (or other DNA format) file containing all of the sequences.&gt; &gt; I don't care if the sequences are aligned - I can do that part. I have &gt; been working with a data file and selecting a subset of sequences by &gt; hand in MacClade or Mesquite, which has become very time consuming as &gt; the data set has grown to well over 1000 sequences. I am not skilled &gt; at writing scripts, so extracting them that way is not practical for &gt; me. I have never used Sequencher - does it have this capability?&gt; &gt; I would appreciate any input any of you can give me.&gt; &gt; Regards,&gt; Eric Chapman&gt; &gt; --&gt; Eric G. Chapman, PhD&gt; Research Analyst, Collections Manager&gt; Department of Entomology&gt; University of Kentucky&gt; S225 Agricultural Science Center N&gt; Lexington KY 40546-0091 USA&gt; (859) 257-3169 (lab)&gt; (330) 221-7812 (mobile)&gt; _______________________________________________&gt; Taxacom Mailing List&gt; Taxacom at mailman.nhm.ku.edu&gt; <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom</A> [1] The &gt; Taxacom Archive back to 1992 may be searched at: &gt; <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A> [2]&gt; &gt; Celebrating 27 years of Taxacom in 2014. Links:------[1] <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom[2]">http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom[2]</A> <A HREF="http://taxacom.markmail.org_______________________________________________Taxacom">http://taxacom.markmail.org_______________________________________________Taxacom</A> Mailing ListTaxacom at mailman.nhm.ku.edu<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacomThe">http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacomThe</A> Taxacom Archive back to 1992 may be searched at: <A HREF="http://taxacom.markmail.orgCelebrating">http://taxacom.markmail.orgCelebrating</A> 27 years of Taxacom in 2014.
+<PRE>GenBank records that comply with the BARCODE data standard have the reserved keyword BARCODE.  Each of these records includes an identifier for the voucher specimen (it's in the specimen_voucher field in the FEATURES table).  The data standard requires that the voucherID be in the form of the Darwin Core triplet (InstitutionCode:CollectionCode:CatalogNumber) but only about half of the ~475,000 BARCODE records are in the proper format.  Many records just have field numbers or the identifier provided by BOLD, the workbench at the University of Guelph from which records were submitted to GenBank.  For reasons I can't explain, BOLD never implemented a system for storing and submitting the properly formatted voucherID.  The Consortium for the Barcode of Life (CBOL) is responsible for the data standard and we will soon be broadcasting a message to the community with instructions for bringing the non-compliant voucherIDs into compliance.
+
+Fortunately there are several 100,000s of records that have properly formatted voucherIDs (or very nearly so) and these will guide you to specimen data in museum databases.   For example, I contributed to a barcoding project on birds in the US National Museum and all 2816 resulting BARCODE records have Darwin Core triplets that are hyperlinked to a record resolver that finds the specimen record in the Museum's EMu database.  You can find all the records by searching on my last name in GenBank (<A HREF="http://www.ncbi.nlm.nih.gov/nuccore/?term=schindel)">http://www.ncbi.nlm.nih.gov/nuccore/?term=schindel)</A> and more information is provided in ZooKeys 152: 87-91 (08 Dec 2011) doi: 10.3897/zookeys.152.2473.
+
+David Schindel
+CBOL, USNM, Smithsonian
+
+-----Original Message-----
+From: Taxacom [mailto:taxacom-bounces at mailman.nhm.ku.edu] On Behalf Of Urmas Kõljalg
+Sent: Friday, November 14, 2014 10:57 AM
+To: taxacom at mailman.nhm.ku.edu
+Subject: Re: [Taxacom] Specimen database that works with sequence data
+
+ 
+
+Hi, 
+
+PlutoF cloud (<A HREF="http://plutof.ut.ee">http://plutof.ut.ee</A> ) provides such services where you can develope combined datasets of different taxon occurrences (including specimen and DNA data). Sequence data can be downloaded as a Fasta file through the Clipboard system provided by the online workbench. Probably most well known such dataset hosted by PlutoF is UNITE fungal rDNA ITS database (<A HREF="http://unite.ut.ee">http://unite.ut.ee</A> ) which is utilized by many NGS pipelines like QIIME, mothur, SCATA, UTAX, etc. 
+
+Best wishes, 
+
+Urmas Kõljalg 
+
+13-11-2014 14:35 kirjutas Eric Chapman: 
+
+&gt; Hello,
+&gt; 
+&gt; I was wondering if anyone could tell me if there is a database 
+&gt; available that houses both collection information and DNA sequences of 
+&gt; multiple genes such that I could query that database in this way:
+&gt; 
+&gt; For all specimens that are from the US with COI sequences, give me a 
+&gt; FASTA (or other DNA format) file containing all of the sequences.
+&gt; 
+&gt; I don't care if the sequences are aligned - I can do that part. I have 
+&gt; been working with a data file and selecting a subset of sequences by 
+&gt; hand in MacClade or Mesquite, which has become very time consuming as 
+&gt; the data set has grown to well over 1000 sequences. I am not skilled 
+&gt; at writing scripts, so extracting them that way is not practical for 
+&gt; me. I have never used Sequencher - does it have this capability?
+&gt; 
+&gt; I would appreciate any input any of you can give me.
+&gt; 
+&gt; Regards,
+&gt; Eric Chapman
+&gt; 
+&gt; --
+&gt; Eric G. Chapman, PhD
+&gt; Research Analyst, Collections Manager
+&gt; Department of Entomology
+&gt; University of Kentucky
+&gt; S225 Agricultural Science Center N
+&gt; Lexington KY 40546-0091 USA
+&gt; (859) 257-3169 (lab)
+&gt; (330) 221-7812 (mobile)
+&gt; _______________________________________________
+&gt; Taxacom Mailing List
+&gt; Taxacom at mailman.nhm.ku.edu
+&gt; <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom</A> [1] The 
+&gt; Taxacom Archive back to 1992 may be searched at: 
+&gt; <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A> [2]
+&gt; 
+&gt; Celebrating 27 years of Taxacom in 2014.
+
+ 
+
+Links:
+------
+[1] <A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom</A>
+[2] <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+_______________________________________________
+Taxacom Mailing List
+Taxacom at mailman.nhm.ku.edu
+<A HREF="http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom">http://mailman.nhm.ku.edu/cgi-bin/mailman/listinfo/taxacom</A>
+The Taxacom Archive back to 1992 may be searched at: <A HREF="http://taxacom.markmail.org">http://taxacom.markmail.org</A>
+
+Celebrating 27 years of Taxacom in 2014.
+
+
 </PRE>
 <!--endarticle-->
     <HR>
@@ -51,6 +129,6 @@
        </UL>
 
 <hr>
-<a href="https://lists.ku.edu/listinfo/taxacom">More information about the Taxacom
+<a href="/#the-list-today">More information about the Taxacom
 mailing list</a><br>
 </body></html>
