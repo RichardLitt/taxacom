@@ -50,6 +50,12 @@ Both print PASS/FAIL for each check and exit non-zero on failure. `test_search.m
 
 GitHub Pages serves the built `public/` directory from the `gh-pages` branch, with `CNAME` set to `taxacom.org`. The site is about 700 MB in about 160k files, under GitHub Pages' 1 GB limit.
 
+## Citation
+
+This archive is available on Zenodo. If you are citing the archive, please cite:
+
+> TAXACOM. (2026). TAXACOM 1992-2025 Backup [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.23352322
+
 ## License
 
 The code is licensed under MIT. That having been said, this code has been run using Claude Opus 5.5, which means that the license may not be enforceable.
