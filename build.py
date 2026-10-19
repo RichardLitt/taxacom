@@ -21,6 +21,7 @@ import re
 import shutil
 import sys
 from pathlib import Path
+from xml.sax.saxutils import escape
 
 from dedupe import drop_index_entries, find_canonical
 from pipermail_render import articles_for_month, render_month
@@ -109,6 +110,38 @@ def index_page(html: str) -> str:
     return re.sub(r"<BODY([^>]*)>", lambda m: f"<BODY{m.group(1)}>" + BANNER, html, count=1, flags=re.I)
 
 
+SITEMAP_MAX = 50000  # URLs per sitemap file, the protocol's limit
+
+
+def write_sitemaps(out: Path, message_urls) -> int:
+    """Write robots.txt, sitemap.xml (an index) and sitemap-N.xml files.
+
+    The month and sort pages are noindex, so without a sitemap crawlers can
+    reach messages only through pages they are told not to keep. The
+    sitemaps list the home page, the month list and every kept message;
+    redirect stubs are left out because they are canonical to another URL.
+    Returns the number of sitemap files written."""
+    urls = ["/", "/pipermail/taxacom/"] + sorted(message_urls)
+    chunks = [urls[i:i + SITEMAP_MAX] for i in range(0, len(urls), SITEMAP_MAX)]
+    for old in out.glob("sitemap*.xml"):
+        old.unlink()
+    for i, chunk in enumerate(chunks, 1):
+        body = "".join(f"<url><loc>https://{DOMAIN}{escape(u)}</loc></url>\n" for u in chunk)
+        (out / f"sitemap-{i}.xml").write_text(
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+            f"{body}</urlset>\n", encoding="utf-8")
+    index = "".join(f"<sitemap><loc>https://{DOMAIN}/sitemap-{i}.xml</loc></sitemap>\n"
+                    for i in range(1, len(chunks) + 1))
+    (out / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        f"{index}</sitemapindex>\n", encoding="utf-8")
+    (out / "robots.txt").write_text(
+        f"User-agent: *\nAllow: /\n\nSitemap: https://{DOMAIN}/sitemap.xml\n", encoding="utf-8")
+    return len(chunks)
+
+
 def main():
     src, out = Path(sys.argv[1]), Path(sys.argv[2])
     dest = out / "pipermail" / "taxacom"
@@ -181,8 +214,9 @@ def main():
         shutil.copy2(gz, dest / gz.name)
     (dest / "index.html").write_text(index_page(decode((src / "index.html").read_bytes())), encoding="utf-8")
     shutil.copytree(STATIC, out, dirs_exist_ok=True)
+    maps = write_sitemaps(out, (u for u in messages if u not in removed))
     print(f"wrote {n} pages across {len(months)} months: {len(messages) - len(removed)} messages, "
-          f"{len(removed)} duplicate copies as redirects, to {dest}")
+          f"{len(removed)} duplicate copies as redirects, to {dest}; {maps} sitemap file(s)")
 
 
 if __name__ == "__main__":

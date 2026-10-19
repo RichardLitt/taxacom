@@ -82,7 +82,7 @@ def similarity(a, b):
     return sm.quick_ratio() and sm.ratio()
 
 # --- Privacy ---------------------------------------------------------------
-allowed = re.compile(r"^(index\.html|CNAME|\.nojekyll|pagefind/.*|pipermail/taxacom/"
+allowed = re.compile(r"^(index\.html|CNAME|\.nojekyll|robots\.txt|sitemap(-\d+)?\.xml|pagefind/.*|pipermail/taxacom/"
                      r"(index\.html|\d{4}-[A-Z][a-z]+\.txt\.gz|\d{4}-[A-Z][a-z]+/[a-z0-9]+\.html))$")
 check("only expected files are published (no .pck, database/, lists/, raw .txt)",
       (p for p in (f.relative_to(SITE).as_posix() for f in SITE.rglob("*") if f.is_file())
@@ -274,6 +274,28 @@ check("landing page loads the Pagefind UI",
       [] if "pagefind-ui.js" in (SITE / "index.html").read_text() else ["no search UI"])
 check("Pagefind index exists (run pagefind first if this fails)",
       [] if (SITE / "pagefind" / "pagefind-entry.json").exists() else ["missing pagefind/pagefind-entry.json"])
+
+# --- Crawling --------------------------------------------------------------
+robots = (SITE / "robots.txt").read_text() if (SITE / "robots.txt").exists() else ""
+check("robots.txt allows crawling and points to the sitemap",
+      [] if "Sitemap: https://taxacom.org/sitemap.xml" in robots and "Disallow: /" not in robots
+      else ["robots.txt missing, blocking, or without a Sitemap line"])
+index_xml = (SITE / "sitemap.xml").read_text() if (SITE / "sitemap.xml").exists() else ""
+map_files = re.findall(r"<loc>https://taxacom\.org/(sitemap-\d+\.xml)</loc>", index_xml)
+check("sitemap index lists only sitemap files that exist",
+      [f for f in map_files if not (SITE / f).exists()] or ([] if map_files else ["no sitemaps listed"]))
+listed, too_big = [], []
+for f in map_files:
+    locs = re.findall(r"<loc>https://taxacom\.org(/[^<]*)</loc>", (SITE / f).read_text())
+    listed += locs
+    if len(locs) > 50000 or (SITE / f).stat().st_size > 50 * 1024 * 1024:
+        too_big.append(f"{f}: {len(locs)} URLs")
+check("each sitemap is within the 50,000-URL / 50 MB limits", too_big)
+want = {"/", "/pipermail/taxacom/"} | {f"/pipermail/taxacom/{p}" for p in full}
+got = set(listed)
+check(f"sitemaps list exactly the home page, month list and {len(full)} kept messages, once each",
+      [f"missing {u}" for u in sorted(want - got)] + [f"unexpected {u}" for u in sorted(got - want)]
+      + ([f"{len(listed) - len(got)} duplicate entries"] if len(listed) != len(got) else []))
 
 print(f"\n{len(failures)} check(s) failed" if failures else "\nAll checks passed")
 sys.exit(1 if failures else 0)
