@@ -16,6 +16,7 @@ Old links keep working if you swap the domain:
 - **Lost pages:** restores individual message pages that were missing from surviving months, such as most of 2006-June.
 - **Duplicates:** repeat imports left up to three copies of many messages. The build keeps one copy of each and turns the others into small redirect pages, so every old URL still works (`dedupe.py`, issue #1).
 - **Search:** adds a banner linking to search and browse, and marks message pages for [Pagefind](https://pagefind.app) full-text search.
+- **Crawling:** writes `robots.txt` and a sitemap index (`sitemap.xml` → `sitemap-N.xml`, 50,000 URLs each) listing the home page, the month list and every kept message. The month and sort pages are `noindex`, so without the sitemap search engines could reach messages only through pages they are told not to keep. Redirect copies are left out of the sitemap.
 
 Email addresses stay obscured (`user at domain`), as in the original public archive. The archive was public on `lists.ku.edu` (`archive_private = 0`).
 
